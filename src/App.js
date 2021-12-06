@@ -29,12 +29,12 @@ function Box(props) {
 
 function App() {
   return (
-    <Canvas>
-      <ambientLight />
-      <pointLight position={[10, 10, 10]} />
+    <Canvas camera={{ fov: 60 }}>
+      <spotLight intensity={0.5} position={[-15, 10, -10]} angle={1.5} rotation={[90, 90, 90]} />
+      <spotLight intensity={0.5} position={[15, -10, -10]} angle={1.5} rotation={[90, 90, 90]} />
+      <spotLight intensity={0.5} position={[0, 20, -10]} angle={1.5} rotation={[90, 90, 90]} />
+      <pointLight position={[0, 0, 0]} />
       <BackgroundShapes />
-      {/*<Box position={[-1.2, 0, 0]} />
-      <Box position={[1.2, 0, 0]} />*/}
     </Canvas>
   )
 }
