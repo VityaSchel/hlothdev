@@ -1,12 +1,13 @@
-import { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { Canvas, useFrame } from '@react-three/fiber'
 import BackgroundShapes from './BackgroundShapes'
+import Light from './Light'
 import { connect } from 'react-redux'
 
 function Box(props) {
   // This reference will give us direct access to the mesh
-  const mesh = useRef()
+  const mesh = React.useRef()
   // Set up state for the hovered and active state
   const [hovered, setHover] = useState(false)
   const [active, setActive] = useState(false)
@@ -31,14 +32,18 @@ App.propTypes = {
   theme: PropTypes.string,
 }
 function App(props) {
+  const spotLightTarget = React.useRef()
+  const lightRef = React.useRef()
+
+  React.useEffect(() => {
+    if(!lightRef.current || !spotLightTarget.current) return
+    lightRef.current.target = spotLightTarget.current
+  }, [lightRef, spotLightTarget])
+
   return (
     <Canvas camera={{ fov: 60 }}>
       {props.theme === 'dark' && <color attach='background' args={['black']} />}
-      <spotLight intensity={0.5} position={[-15, 10, -10]} angle={1.5} rotation={[90, 90, 90]} />
-      <spotLight intensity={0.7} position={[15, -10, -10]} angle={1.5} rotation={[90, 90, 90]} />
-      <spotLight intensity={0.5} position={[0, 20, -10]} angle={1.5} rotation={[90, 90, 90]} />
-      <pointLight position={[0, 0, 0]} intensity={0.7} />
-      <pointLight position={[-15, -15, -10]} intensity={0.2} />
+      <Light />
       <BackgroundShapes />
     </Canvas>
   )

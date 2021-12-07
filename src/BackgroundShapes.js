@@ -51,10 +51,19 @@ function Shape(props) {
     store.subscribe(() => getTheme)
   }, [])
 
+  const material = Object.values(shape.materials)[0]
   React.useEffect(() => {
-    const colors = Object.values(shape.materials)[0].color
+    const colors = material.color
     colors.r = colors.g = colors.b = theme === 'light' ? 2.5 : 0.05
   }, [theme])
+
+  React.useEffect(() => {
+    material.opacity = 0
+    const interval = setInterval(() => {
+      material.opacity += 0.01
+      if(material.opacity >= 1) clearInterval(interval)
+    }, 10)
+  }, [])
 
   const accelerationLimit = 0.001
   useFrame(({ camera }) => {
