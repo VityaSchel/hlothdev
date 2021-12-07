@@ -6,6 +6,9 @@ import { useGLTF } from '@react-three/drei'
 import { Suspense } from 'react'
 import { Raycaster } from 'three'
 import { useWindowSize } from '@react-hook/window-size'
+import { connect } from 'react-redux'
+import store from './store'
+import { transition } from './utils.js'
 
 const generateSwitches = () => [
   Math.round(Math.random()),
@@ -36,9 +39,22 @@ function Shape(props) {
   const object = React.useRef()
   const shape = useLoader(GLTFLoader, props.url)
   const raycaster = React.useMemo(() => new Raycaster(), [])
+  const [theme, setTheme] = React.useState()
 
-  const colors = Object.values(shape.materials)[0].color
-  colors.r = colors.g = colors.b = 2.5
+  React.useEffect(() => {
+    const getTheme = () => {
+      const theme = store.getState().theme
+      setTheme(theme)
+    }
+
+    getTheme()
+    store.subscribe(() => getTheme)
+  }, [])
+
+  React.useEffect(() => {
+    const colors = Object.values(shape.materials)[0].color
+    colors.r = colors.g = colors.b = theme === 'light' ? 2.5 : 0.05
+  }, [theme])
 
   const accelerationLimit = 0.001
   useFrame(({ camera }) => {

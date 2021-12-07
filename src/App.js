@@ -1,7 +1,8 @@
-import React, { useRef, useState } from 'react'
+import { useRef, useState } from 'react'
+import PropTypes from 'prop-types'
 import { Canvas, useFrame } from '@react-three/fiber'
 import BackgroundShapes from './BackgroundShapes'
-// import Cards from './Cards'
+import { connect } from 'react-redux'
 
 function Box(props) {
   // This reference will give us direct access to the mesh
@@ -17,7 +18,6 @@ function Box(props) {
       {...props}
       ref={mesh}
       scale={active ? 1.5 : 1}
-      onClick={(event) => setActive(!active)}
       onPointerOver={(event) => setHover(true)}
       onPointerOut={(event) => setHover(false)}
     >
@@ -27,16 +27,21 @@ function Box(props) {
   )
 }
 
-function App() {
+App.propTypes = {
+  theme: PropTypes.string,
+}
+function App(props) {
   return (
     <Canvas camera={{ fov: 60 }}>
+      {props.theme === 'dark' && <color attach='background' args={['black']} />}
       <spotLight intensity={0.5} position={[-15, 10, -10]} angle={1.5} rotation={[90, 90, 90]} />
-      <spotLight intensity={0.5} position={[15, -10, -10]} angle={1.5} rotation={[90, 90, 90]} />
+      <spotLight intensity={0.7} position={[15, -10, -10]} angle={1.5} rotation={[90, 90, 90]} />
       <spotLight intensity={0.5} position={[0, 20, -10]} angle={1.5} rotation={[90, 90, 90]} />
-      <pointLight position={[0, 0, 0]} />
+      <pointLight position={[0, 0, 0]} intensity={0.7} />
+      <pointLight position={[-15, -15, -10]} intensity={0.2} />
       <BackgroundShapes />
     </Canvas>
   )
 }
 
-export default App
+export default connect(state => ({ theme: state.theme }))(App)
