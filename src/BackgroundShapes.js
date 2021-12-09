@@ -3,8 +3,9 @@ import PropTypes from 'prop-types'
 import { useLoader, useFrame } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { Raycaster } from 'three'
-import store from './store'
+// import store from './store'
 import { transition } from './utils.js'
+import { useRedux } from './utils'
 
 const generateSwitches = () => [
   Math.round(Math.random()),
@@ -35,17 +36,7 @@ function Shape(props) {
   const object = React.useRef()
   const shape = useLoader(GLTFLoader, props.url)
   const raycaster = React.useMemo(() => new Raycaster(), [])
-  const [theme, setTheme] = React.useState()
-
-  React.useEffect(() => {
-    const getTheme = () => {
-      const theme = store.getState().theme
-      setTheme(theme)
-    }
-
-    getTheme()
-    store.subscribe(getTheme)
-  }, [store])
+  const { theme } = useRedux(state => ({ theme: state.theme }))
 
   const material = Object.values(shape.materials)[0]
   React.useEffect(() => {

@@ -44,6 +44,8 @@ function App(props) {
     lightRef.current.target = spotLightTarget.current
   }, [lightRef, spotLightTarget])
 
+  React.useEffect(() => props.dispatch({ type: 'locale/update' }), [navigator.language])
+
   return (
     <Canvas camera={{ fov: 60 }}>
       <Background theme={props.theme} />

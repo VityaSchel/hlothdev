@@ -1,3 +1,6 @@
+import React from 'react'
+import store from './store'
+
 const easeOutCubic = progress => 1 - Math.pow(1 - progress, 3)
 
 const transitions = new Map()
@@ -34,7 +37,24 @@ function prog(from, to, progress) {
   const proportion = current/max
   return backwards ? 1-proportion : proportion
 }
+
 export function transitionReact(currentValue, from, to) {
   const progress = prog(from, to, currentValue)
   return (Math.min(1, progress+0.05))*(to-from)+from
+}
+
+export function useRedux(mapping) {
+  const [mappedStore, setMappedStore] = React.useState({})
+
+  React.useEffect(() => {
+    const update = () => {
+      const newState = store.getState()
+      setMappedStore(mapping(newState ?? {}) ?? {})
+    }
+
+    update()
+    store.subscribe(update)
+  }, [store])
+
+  return mappedStore
 }
