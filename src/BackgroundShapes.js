@@ -1,12 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { useLoader, useFrame, useCamera } from '@react-three/fiber'
+import { useLoader, useFrame } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
-import { useGLTF } from '@react-three/drei'
 import { Suspense } from 'react'
 import { Raycaster } from 'three'
-import { useWindowSize } from '@react-hook/window-size'
-import { connect } from 'react-redux'
 import store from './store'
 import { transition } from './utils.js'
 
@@ -48,13 +45,13 @@ function Shape(props) {
     }
 
     getTheme()
-    store.subscribe(() => getTheme)
-  }, [])
+    store.subscribe(getTheme)
+  }, [store])
 
   const material = Object.values(shape.materials)[0]
   React.useEffect(() => {
     const colors = material.color
-    colors.r = colors.g = colors.b = theme === 'light' ? 2.5 : 0.05
+    transition(colors, ['r', 'g', 'b'], theme === 'light' ? 2.5 : 0.05)
   }, [theme])
 
   React.useEffect(() => {

@@ -3,7 +3,10 @@ import PropTypes from 'prop-types'
 import { Canvas, useFrame } from '@react-three/fiber'
 import BackgroundShapes from './BackgroundShapes'
 import Light from './Light'
+import Background from './Background'
+import Menu from './Menu'
 import { connect } from 'react-redux'
+import { useHotkeys } from 'react-hotkeys-hook'
 
 function Box(props) {
   // This reference will give us direct access to the mesh
@@ -34,6 +37,7 @@ App.propTypes = {
 function App(props) {
   const spotLightTarget = React.useRef()
   const lightRef = React.useRef()
+  useHotkeys('space', () => props.dispatch({ type: 'theme/switch' }))
 
   React.useEffect(() => {
     if(!lightRef.current || !spotLightTarget.current) return
@@ -42,9 +46,10 @@ function App(props) {
 
   return (
     <Canvas camera={{ fov: 60 }}>
-      {props.theme === 'dark' && <color attach='background' args={['black']} />}
+      <Background theme={props.theme} />
       <Light />
       <BackgroundShapes />
+      <Menu />
     </Canvas>
   )
 }
