@@ -1,0 +1,24 @@
+{
+  "ru-RU": {
+    "CARD_ABOUT": "О сайте",
+    "CARD_DONATE": "Донаты",
+    "CARD_ME_FIRST_NAME": "Виктор",
+    "CARD_ME_LAST_NAME": "Щелочков",
+    "CARD_ME_SPECIALIZATION": "Веб-разработчик",
+    "CARD_ME_CITY": "Самара",
+    "CARD_PROJECTS": ["проект", "проекта", "проектов"],
+    "CARD_PROJECTS_IN_PORTFOLIO": "в портфолио",
+    "CARD_SERVICES": "Услуги"
+  },
+  "_DEFAULT_": {
+    "CARD_ABOUT": "About",
+    "CARD_DONATE": "Donate",
+    "CARD_ME_FIRST_NAME": "Viktor",
+    "CARD_ME_LAST_NAME": "Shchelochkov",
+    "CARD_ME_SPECIALIZATION": "Web-developer",
+    "CARD_ME_CITY": "Samara",
+    "CARD_PROJECTS": "projects",
+    "CARD_PROJECTS_IN_PORTFOLIO": "in portfolio",
+    "CARD_SERVICES": "Services"
+  }
+}
