@@ -11,6 +11,7 @@ export default function Light() {
       <LightSource from={[10, 10, 0]} to={[0, 0, -10]} intensity={0.25} />
       <LightSource from={[-10, 10, 0]} to={[0, 0, -10]} intensity={0.5} />
       <LightSource from={[10, -10, 0]} to={[0, 0, -10]} intensity={0.25} />
+      <LightSource from={[-10, -10, 0]} to={[0, 0, -10]} intensity={0.25} />
     </>
   )
 }
