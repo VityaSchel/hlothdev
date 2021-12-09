@@ -33,6 +33,8 @@ function Box(props) {
 
 App.propTypes = {
   theme: PropTypes.string,
+  cursor: PropTypes.object,
+  dispatch: PropTypes.func,
 }
 function App(props) {
   const spotLightTarget = React.useRef()
@@ -45,9 +47,11 @@ function App(props) {
   }, [lightRef, spotLightTarget])
 
   React.useEffect(() => props.dispatch({ type: 'locale/update' }), [navigator.language])
+  
+  const raytracedCursor = Object.values(props.cursor).sort((a,b) => b.added - a.added)[0]?.cursor
 
   return (
-    <Canvas camera={{ fov: 60 }}>
+    <Canvas camera={{ fov: 60 }} style={{ cursor: raytracedCursor ?? 'auto' }}>
       <Background theme={props.theme} />
       <Light />
       <BackgroundShapes />
@@ -56,4 +60,4 @@ function App(props) {
   )
 }
 
-export default connect(state => ({ theme: state.theme }))(App)
+export default connect(state => ({ theme: state.theme, cursor: state.cursor }))(App)

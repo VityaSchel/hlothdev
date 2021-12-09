@@ -5,6 +5,7 @@ const easeOutCubic = progress => 1 - Math.pow(1 - progress, 3)
 
 const transitions = new Map()
 export function transition(object, properties, value, setValue) {
+  if(properties.every(prop => object[prop] === value)) return
   const transition = transitions.get(object)
   if(transition) clearInterval(transition.interval)
   const interval = setInterval(() => {
@@ -38,7 +39,12 @@ function prog(from, to, progress) {
   return backwards ? 1-proportion : proportion
 }
 
-export function transitionReact(currentValue, from, to) {
+export function transitionReact(currentValue, notInverse, from, to) {
+  if(!notInverse) {
+    let from_ = from
+    from = to
+    to = from_
+  }
   const progress = prog(from, to, currentValue)
   return (Math.min(1, progress+0.05))*(to-from)+from
 }

@@ -13,11 +13,23 @@ Text.propTypes = {
   size: PropTypes.number,
   color: PropTypes.string,
   font: PropTypes.string,
+  bevelEnabled: PropTypes.bool,
 }
-export default function Text({ children, vAlign = 'top', hAlign = 'right', size = 1.5, color = '#000000', ...props }) {
+export default function Text({ children, vAlign = 'top', hAlign = 'right', size = 15, color = '#000000', bevelEnabled = false, ...props }) {
+  size /= 100
   const font = useLoader(FontLoader, props.font)
   const config = useMemo(
-    () => ({ font, size: 40, height: 30, curveSegments: 32, bevelEnabled: true, bevelThickness: 6, bevelSize: 2.5, bevelOffset: 0, bevelSegments: 8 }),
+    () => ({
+      font,
+      size: 40,
+      height: 30,
+      curveSegments: 32,
+      bevelEnabled,
+      bevelThickness: 6,
+      bevelSize: 2.5,
+      bevelOffset: 0,
+      bevelSegments: 8
+    }),
     [font]
   )
   const mesh = useRef()
@@ -32,7 +44,7 @@ export default function Text({ children, vAlign = 'top', hAlign = 'right', size 
     <group {...props} scale={[0.1 * size, 0.1 * size, 0.05 * size]}>
       <mesh ref={mesh}>
         <textGeometry args={[children, config]} />
-        <meshNormalMaterial />
+        <meshStandardMaterial color={color} metalness={0} roughness={1} />
       </mesh>
     </group>
   )

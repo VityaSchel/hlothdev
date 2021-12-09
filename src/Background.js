@@ -10,7 +10,7 @@ export default function Background(props) {
   const [bg, setBg] = React.useState(255)
 
   useFrame(() => {
-    const newBgValue = transitionReact(bg, props.theme === 'dark' ? 255 : 0, props.theme === 'light' ? 255 : 0)
+    const newBgValue = transitionReact(bg, props.theme === 'light', 0, 255)
     bg !== newBgValue && setBg(Math.round(newBgValue))
   })
 
