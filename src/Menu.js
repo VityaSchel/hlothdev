@@ -3,14 +3,17 @@ import PropTypes from 'prop-types'
 import { useLoader } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import Text from './Text'
-import SFBlack from './assets/SFBlack.blob'
-import SFHeavy from './assets/SFHeavy.blob'
-import SFBold from './assets/SFBold.blob'
 import { useRedux } from './utils'
 import localization from './localization.json'
 import { transition, transitionReact } from './utils.js'
 import { useFrame } from '@react-three/fiber'
 import store from './store'
+
+import SFBlack from './assets/SFBlack.blob'
+import SFHeavy from './assets/SFHeavy.blob'
+import SFLight from './assets/SFLight.blob'
+import SFBold from './assets/SFBold.blob'
+import SFMedium from './assets/SFMedium.blob'
 
 export default function Menu() {
   return (
@@ -60,7 +63,7 @@ function MenuItem(props) {
     console.log(card.materials)
 
     const cubeColor = card.materials.cube.color
-    transition(cubeColor, ['r', 'g', 'b'], theme === 'light' ? 2.5 : 0.01)
+    transition(cubeColor, ['r', 'g', 'b'], theme === 'light' ? 1.8 : 0.01)
 
     const iconBgColor = card.materials.iconbg?.color
     iconBgColor && transition(iconBgColor, ['r', 'g', 'b'], theme === 'light' ? 1.5 : 0.05)
@@ -111,7 +114,19 @@ function MenuItem(props) {
         </Text>
         : {
           me: <>
-            <Text position={[position[0]+3.17, position[1]+0.28, textZ+0.04]} font={SFBold} size={2.35}>
+            <Text position={[position[0]+2, position[1]+1.4, textZ+0.02]} font={SFBlack} size={5.4}>
+              {translation.CARD_ME_FIRST_NAME}
+            </Text>
+            <Text position={[position[0]+2, position[1]+1.13, textZ+0.02]} font={SFBlack} size={5.4}>
+              {translation.CARD_ME_LAST_NAME}
+            </Text>
+            <Text position={[position[0]+3.65, position[1]+0.87, textZ+0.02]} font={SFBold} size={3.2} hAlign='left'>
+              @hloth
+            </Text>
+            <Text position={[position[0]+2, position[1]+0.63, textZ+0.01]} font={SFMedium} size={3.6}>
+              {translation.CARD_ME_SPECIALIZATION}
+            </Text>
+            <Text position={[position[0]+3.18, position[1]+0.29, textZ+0.025]} font={SFLight} size={2.4}>
               {translation.CARD_ME_CITY}
             </Text>
           </>
