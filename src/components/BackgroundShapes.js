@@ -3,8 +3,7 @@ import PropTypes from 'prop-types'
 import { useLoader, useFrame } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { Raycaster } from 'three'
-import { transition } from './utils.js'
-import { useRedux } from './utils'
+import { useRedux, transition } from 'utils'
 
 const generateSwitches = () => [
   Math.round(Math.random()),

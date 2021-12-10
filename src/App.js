@@ -1,40 +1,20 @@
-import React, { useState } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
-import { Canvas, useFrame } from '@react-three/fiber'
-import BackgroundShapes from './BackgroundShapes'
-import Light from './Light'
-import Background from './Background'
-import Menu from './Menu'
+import { Canvas } from '@react-three/fiber'
 import { connect } from 'react-redux'
 import { useHotkeys } from 'react-hotkeys-hook'
 
-function Box(props) {
-  // This reference will give us direct access to the mesh
-  const mesh = React.useRef()
-  // Set up state for the hovered and active state
-  const [hovered, setHover] = useState(false)
-  const [active, setActive] = useState(false)
-  // Subscribe this component to the render-loop, rotate the mesh every frame
-  useFrame((state, delta) => (mesh.current.rotation.x += 0.01))
-  // Return view, these are regular three.js elements expressed in JSX
-  return (
-    <mesh
-      {...props}
-      ref={mesh}
-      scale={active ? 1.5 : 1}
-      onPointerOver={(event) => setHover(true)}
-      onPointerOut={(event) => setHover(false)}
-    >
-      <boxGeometry args={[1, 1, 1]} />
-      <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />
-    </mesh>
-  )
-}
+import BackgroundShapes from './components/BackgroundShapes'
+import Light from './components/Light'
+import Background from './components/Background'
+import Menu from './components/Menu'
+import SiteSettings from './components/SiteSettings'
 
 App.propTypes = {
   theme: PropTypes.string,
   cursor: PropTypes.object,
   dispatch: PropTypes.func,
+  locale: PropTypes.string,
 }
 function App(props) {
   const spotLightTarget = React.useRef()
@@ -46,18 +26,25 @@ function App(props) {
     lightRef.current.target = spotLightTarget.current
   }, [lightRef, spotLightTarget])
 
-  React.useEffect(() => props.dispatch({ type: 'locale/update' }), [navigator.language])
-  
+  React.useEffect(() => props.locale === null && props.dispatch({ type: 'locale/update' }), [navigator.language])
+
   const raytracedCursor = Object.values(props.cursor).sort((a,b) => b.added - a.added)[0]?.cursor
 
   return (
-    <Canvas camera={{ fov: 60 }} style={{ cursor: raytracedCursor ?? 'auto' }}>
-      <Background theme={props.theme} />
-      <Light />
-      <BackgroundShapes />
-      <Menu />
-    </Canvas>
+    <>
+      <Canvas camera={{ fov: 60 }} style={{ cursor: raytracedCursor ?? 'auto' }} id='canvas'>
+        <Background theme={props.theme} />
+        <Light />
+        <BackgroundShapes />
+        <Menu />
+      </Canvas>
+      <SiteSettings />
+    </>
   )
 }
 
-export default connect(state => ({ theme: state.theme, cursor: state.cursor }))(App)
+export default connect(state => ({
+  theme: state.theme,
+  cursor: state.cursor,
+  locale: state.locale
+}))(App)

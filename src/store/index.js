@@ -15,7 +15,7 @@ const rootReducer = combineReducers({
 const persistConfig = {
   key: 'root',
   storage,
-  blacklist: ['cursor', 'locale']
+  blacklist: ['cursor']
 }
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)

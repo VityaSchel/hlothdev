@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { useFrame } from '@react-three/fiber'
-import { transitionReact } from './utils.js'
+import { transitionReact } from 'utils'
 
 Background.propTypes = {
   theme: PropTypes.string,
