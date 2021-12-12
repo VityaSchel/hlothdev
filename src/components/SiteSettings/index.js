@@ -1,18 +1,29 @@
 import PropTypes from 'prop-types'
 import styles from './styles.module.scss'
 import { connect } from 'react-redux'
+import IconButton from '@mui/material/IconButton'
+import { MdWbSunny } from 'react-icons/md'
+import { IoMdMoon } from 'react-icons/io'
 
 SiteSettings.propTypes = {
   locale: PropTypes.string,
   theme: PropTypes.string,
+  dispatch: PropTypes.func,
 }
 function SiteSettings(props) {
-  console.log(props);
+  const themeSwitch = () => props.dispatch({ type: 'theme/switch' })
+
   return (
     <div className={styles.container}>
-      <button>
-        Hello world
-      </button>
+      {props.theme === 'dark' ? (
+        <IconButton aria-label='Включить светлую тему' onClick={themeSwitch}>
+          <MdWbSunny />
+        </IconButton>
+      ) : (
+        <IconButton aria-label='Включить темную тему' onClick={themeSwitch}>
+          <IoMdMoon />
+        </IconButton>
+      )}
     </div>
   )
 }

@@ -7,6 +7,7 @@ import { useRedux, transition, transitionReact } from 'utils'
 import localization from '../localization.json'
 import { useFrame } from '@react-three/fiber'
 import store from '../store'
+import { useSpring, animated } from '@react-spring/three'
 
 import SFBlack from 'assets/SFBlack.blob'
 import SFHeavy from 'assets/SFHeavy.blob'
@@ -54,13 +55,12 @@ function MenuItem(props) {
     else if(coordinate === 'y') coord -= 1
     return coord
   })
-  const [textColor, setTextColor] = React.useState(51)
+  // const [textColor, setTextColor] = React.useState(0)
 
   const { theme } = useRedux(state => ({ theme: state.theme }))
+  const { textColor } = useSpring({ textColor: theme === 'light' ? '#393939' : '#626161' })//120 : 90 })
 
   React.useEffect(() => {
-    console.log(card.materials)
-
     const cubeColor = card.materials.cube.color
     transition(cubeColor, ['r', 'g', 'b'], theme === 'light' ? 1.8 : 0.01)
 
@@ -75,17 +75,18 @@ function MenuItem(props) {
     }
   }, [theme])
 
-  useFrame(() => {
-    const newColor = transitionReact(textColor, theme === 'light', 70, 120)
-    textColor !== newColor && setTextColor(Math.round(newColor))
-  })
+  // useFrame(() => {
+  //   const newColor = transitionReact(textColor, theme === 'light', 90, 120)
+  //   // console.log(textColor, newColor);
+  //   textColor !== newColor && setTextColor(Math.round(newColor))
+  // })
 
   const translation = localization[locale ?? '_DEFAULT_']
   const textZ = -3.06
 
   return (
     <Suspense fallback={null}>
-      <primitive
+      <animated.primitive
         ref={ref}
         object={card.scene}
         position={[...position, -3]}
@@ -100,7 +101,7 @@ function MenuItem(props) {
           font={SFBold}
           size={5.5}
           hAlign='center'
-          color={`rgb(${new Array(3).fill(textColor).join(', ')})`}
+          color={textColor}
           bevelEnabled
         >
           {

@@ -3,12 +3,16 @@ import PropTypes from 'prop-types'
 import { Canvas } from '@react-three/fiber'
 import { connect } from 'react-redux'
 import { useHotkeys } from 'react-hotkeys-hook'
+import { ThemeProvider, createTheme } from '@mui/material/styles'
 
 import BackgroundShapes from './components/BackgroundShapes'
 import Light from './components/Light'
 import Background from './components/Background'
 import Menu from './components/Menu'
 import SiteSettings from './components/SiteSettings'
+
+const lightTheme = createTheme({ palette: { mode: 'light' } })
+const darkTheme = createTheme({ palette: { mode: 'dark' } })
 
 App.propTypes = {
   theme: PropTypes.string,
@@ -30,8 +34,9 @@ function App(props) {
 
   const raytracedCursor = Object.values(props.cursor).sort((a,b) => b.added - a.added)[0]?.cursor
 
+
   return (
-    <>
+    <ThemeProvider theme={props.theme === 'light' ? lightTheme : darkTheme}>
       <Canvas camera={{ fov: 60 }} style={{ cursor: raytracedCursor ?? 'auto' }} id='canvas'>
         <Background theme={props.theme} />
         <Light />
@@ -39,7 +44,7 @@ function App(props) {
         <Menu />
       </Canvas>
       <SiteSettings />
-    </>
+    </ThemeProvider>
   )
 }
 
