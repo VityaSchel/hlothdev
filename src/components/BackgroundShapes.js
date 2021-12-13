@@ -15,12 +15,12 @@ const generateSwitches = () => [
 export default function BackgroundShapes() {
   return (
     <Suspense fallback={null}>
-      <Shape url='/models/background/icosphere.glb' position={{ x: 0.6, y: -0.6, z: 10 }} />
-      <Shape url='/models/background/cube.glb' position={{ x: 0.2, y: -0.8 }} />
+      <Shape url='/models/background/icosphere.glb' position={{ x: 0.7, y: -0.6, z: 10 }} />
+      <Shape url='/models/background/cube.glb' position={{ x: 0.3, y: -0.8 }} />
       <Shape url='/models/background/palka.glb' position={{ x: -0.3, y: 0.8 }} />
       <Shape url='/models/background/pyramid.glb' position={{ x: 0.7, y: 0.6 }} />
-      <Shape url='/models/background/sphere.glb' position={{ x: -0.75, y: 0.5 }} />
-      <Shape url='/models/background/tetris.glb' position={{ x: -0.7, y: -0.8, z: 12 }} />
+      <Shape url='/models/background/sphere.glb' position={{ x: -0.8, y: 0.5 }} />
+      <Shape url='/models/background/tetris.glb' position={{ x: -0.75, y: -0.8, z: 12 }} />
     </Suspense>
   )
 }
@@ -36,7 +36,7 @@ function Shape(props) {
   const shape = useLoader(GLTFLoader, props.url)
   const raycaster = React.useMemo(() => new Raycaster(), [])
   const { theme } = useRedux(state => ({ theme: state.theme }))
-  const { shapeColor } = useSpring({ shapeColor: theme === 'light' ? 2.5 : 0.05 })
+  const { shapeColor } = useSpring({ shapeColor: theme === 'light' ? 2.5 : 0.06 })
   const { shapeOpacity } = useSpring({ from: { shapeOpacity: 0 }, to: { shapeOpacity: 1 } })
 
   const accelerationLimit = 0.001
