@@ -32,6 +32,10 @@
           -webkit-user-select: none;
           -ms-user-select: none;
         }
+
+        .focused {
+          background-color: rgba(100, 100, 100, 0.3);
+        }
       }
     }
   }

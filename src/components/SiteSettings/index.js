@@ -7,6 +7,7 @@ import { MdWbSunny, MdOutlineTranslate } from 'react-icons/md'
 import { IoMdMoon } from 'react-icons/io'
 import { useSpring, animated } from 'react-spring'
 import useResizeObserver from 'use-resize-observer'
+import cx from 'classnames'
 
 import ruRU from './flags/ru-RU.png'
 import enUS from './flags/en-US.png'
@@ -35,7 +36,7 @@ function SiteSettings({ translation, ...props }) {
   )
 }
 
-const mapState = state => ({ translation: state.translation, theme: state.theme })
+const mapState = state => ({ translation: state.translation, locale: state.locale, theme: state.theme })
 export default connect(mapState)(SiteSettings)
 
 const SiteLanguage = connect(mapState)(function({ translation, ...props }) {
@@ -55,10 +56,16 @@ const SiteLanguage = connect(mapState)(function({ translation, ...props }) {
     >
       <animated.div className={styles.languages} style={{ width: listWidth }}>
         <div className={styles.languagesInner} ref={ref}>
-          <IconButton aria-label={translation.LANGUAGE_RUSSIAN} onClick={setLang('ru-RU')}>
+          <IconButton aria-label={translation.LANGUAGE_RUSSIAN}
+            onClick={setLang('ru-RU')}
+            className={cx([], { [styles.focused]: props.locale === 'ru-RU' })}
+          >
             <img src={ruRU} />
           </IconButton>
-          <IconButton aria-label={translation.LANGUAGE_ENGLISH} onClick={setLang('en-US')}>
+          <IconButton aria-label={translation.LANGUAGE_ENGLISH}
+            onClick={setLang('en-US')}
+            className={cx([], { [styles.focused]: props.locale === 'en-US' })}
+          >
             <img src={enUS} />
           </IconButton>
         </div>
