@@ -8,15 +8,15 @@ import { useSpring, animated } from '@react-spring/three'
 
 export default function Light() {
   const { theme } = useRedux(state => ({ theme: state.theme }))
-  const { intensisty } = useSpring({ intensisty: theme === 'light' ? 0.5 : 0.2 })
+  const { intensisty } = useSpring({ intensisty: theme === 'light' ? 0.3 : 1 })
 
   return (
     <>
       <LightSource from={[0, 0, 0]} to={[0, 0, -10]} intensity={intensisty} />
-      <LightSource from={[10, 10, 0]} to={[0, 0, -10]} intensity={0.25} />
-      <LightSource from={[-10, 10, 0]} to={[0, 0, -10]} intensity={0.5} />
-      <LightSource from={[10, -10, 0]} to={[0, 0, -10]} intensity={0.25} />
-      <LightSource from={[-10, -10, 0]} to={[0, 0, -10]} intensity={0.25} />
+      <LightSource from={[10, 10, 0]} to={[0, 0, -10]} intensity={1.15} />
+      <LightSource from={[-10, 10, 0]} to={[0, 0, -10]} intensity={1.25} />
+      <LightSource from={[10, -10, 0]} to={[0, 0, -10]} intensity={1.15} />
+      <LightSource from={[-10, -10, 0]} to={[0, 0, -10]} intensity={1.15} />
     </>
   )
 }
@@ -27,7 +27,7 @@ LightSource.propTypes = {
   angle: PropTypes.number,
   distance: PropTypes.number,
   debug: PropTypes.bool,
-  intensity: PropTypes.number,
+  intensity: PropTypes.any,
 }
 function LightSource(props) {
   const lightRef = React.useRef()

@@ -8,11 +8,10 @@ import { useRedux } from '../../utils'
 import { useSpring } from '@react-spring/three'
 import Text from '../Text'
 
-MeCardText.propTypes = { position: PropTypes.object }
+MeCardText.propTypes = { position: PropTypes.array }
 export function MeCardText({ position }) {
-  const { locale, theme } = useRedux(state => ({ locale: state.locale, theme: state.theme }))
+  const { translation, theme } = useRedux(state => ({ translation: state.translation, theme: state.theme }))
   const { textColor } = useSpring({ textColor: theme === 'light' ? '#272727' : '#a09f9f' })
-  const translation = localization[locale ?? '_DEFAULT_']
   const textZ = -3.08
 
   return (

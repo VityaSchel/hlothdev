@@ -4,6 +4,7 @@ import { Canvas } from '@react-three/fiber'
 import { connect } from 'react-redux'
 import { useHotkeys } from 'react-hotkeys-hook'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
+import localization from './localization.json'
 
 import BackgroundShapes from './components/BackgroundShapes'
 import Light from './components/Light'
@@ -30,14 +31,19 @@ function App(props) {
     lightRef.current.target = spotLightTarget.current
   }, [lightRef, spotLightTarget])
 
-  React.useEffect(() => props.locale === null && props.dispatch({ type: 'locale/update' }), [navigator.language])
+  React.useEffect(() => {
+    if(props.locale === null) {
+      const locale = Object.keys(localization).includes(navigator.language) ? navigator.language : '_DEFAULT_'
+      props.dispatch({ type: 'locale/update', locale })
+      props.dispatch({ type: 'translation/set', language: locale })
+    }
+  }, [navigator.language])
 
   const raytracedCursor = Object.values(props.cursor).sort((a,b) => b.added - a.added)[0]?.cursor
 
-
   return (
     <ThemeProvider theme={props.theme === 'light' ? lightTheme : darkTheme}>
-      <Canvas camera={{ fov: 60 }} style={{ cursor: raytracedCursor ?? 'auto' }} id='canvas'>
+      <Canvas camera={{ fov: 60 }} style={{ cursor: raytracedCursor ?? 'auto' }} id='canvas' linear>
         <Background theme={props.theme} />
         <Light />
         <BackgroundShapes />

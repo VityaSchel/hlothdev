@@ -39,19 +39,8 @@ function prog(from, to, progress) {
   return backwards ? 1-proportion : proportion
 }
 
-// use spring
-// export function transitionReact(currentValue, notInverse, from, to) {
-//   if(!notInverse) {
-//     let from_ = from
-//     from = to
-//     to = from_
-//   }
-//   const progress = prog(from, to, currentValue)
-//   return (Math.min(1, progress+0.05))*(to-from)+from
-// }
-
 export function useRedux(mapping) {
-  const [mappedStore, setMappedStore] = React.useState({})
+  const [mappedStore, setMappedStore] = React.useState(mapping(store.getState() ?? {}) ?? {})
 
   React.useEffect(() => {
     const update = () => {
@@ -98,7 +87,7 @@ export const applyMaterial = (scene, materials) => {
         if(child.children.length) {
           const searchResult = recursiveSearch(child)
           if(searchResult) return `children-${childIndex}-${searchResult}`
-          else return
+          else continue
         } else {
           if(child?.material?.name === materialName) {
             return `children-${childIndex}-material`
@@ -106,6 +95,7 @@ export const applyMaterial = (scene, materials) => {
         }
       }
     }
+
 
     const template = recursiveSearch(scene)
     if(template) {

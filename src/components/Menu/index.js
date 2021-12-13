@@ -4,16 +4,16 @@ import { useLoader } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import Text from '../Text'
 import { useRedux, applyMaterial, rgbColor } from 'utils'
-import localization from '../../localization.json'
 import store from '../../store'
 import { useSpring, animated } from '@react-spring/three'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
 
-import SFBold from 'assets/fonts/SFBold.blob'
 import project1logo from 'assets/images/projectsLogos/aboba.png'
 import project2logo from 'assets/images/projectsLogos/gadzas.png'
 import project3logo from 'assets/images/projectsLogos/masha-simulator.png'
 import project4logo from 'assets/images/projectsLogos/sipacker.png'
+
+import SFBold from 'assets/fonts/SFBold.blob'
 
 import { MeCardText } from './MeCard'
 import { ProjectsCardText } from './ProjectsCard'
@@ -46,9 +46,10 @@ MenuItem.propTypes = {
   cardID: PropTypes.string,
 }
 function MenuItem(props) {
-  const { locale, theme } = useRedux(state => ({ locale: state.locale, theme: state.theme }))
-  const card = useLoader(GLTFLoader, `/models/cards/card_${props.cardID}.glb`)
+  const { translation, theme } = useRedux(state => ({ translation: state.translation, theme: state.theme }))
+  const [isPointerOver, setIsPointerOver] = React.useState(false)
 
+  const card = useLoader(GLTFLoader, `/models/cards/card_${props.cardID}.glb`)
   const project1ImageMap = useLoader(TextureLoader, project1logo)
   const project2ImageMap = useLoader(TextureLoader, project2logo)
   const project3ImageMap = useLoader(TextureLoader, project3logo)
@@ -63,17 +64,36 @@ function MenuItem(props) {
     else if(coordinate === 'y') coord -= 1
     return coord
   })
+  const textZ = -3.06
 
   const { textColor, cubeColor, iconBgColor, iconColor, locationIconColor } = useSpring({
-    textColor: theme === 'light' ? '#8e8e8e' : '#626161',
-    cubeColor: theme === 'light' ? 1.8 : 0.01,
-    iconBgColor: theme === 'light' ? 1.5 : 0.05,
-    iconColor: theme === 'light' ? 1.5 : 0.05,
+    textColor: theme === 'light' ? '#545454' : '#191919',
+    cubeColor: theme === 'light' ? (isPointerOver ? 1.3 : 1.8) : (isPointerOver ? 0.02 : 0.012),
+    iconBgColor: theme === 'light' ? 1.2 : 0.05,
+    iconColor: theme === 'light' ? 1.4 : 0.05,
     locationIconColor: theme === 'light' ? 0.05 : 1.5
   })
 
-  const translation = localization[locale ?? '_DEFAULT_']
-  const textZ = -3.06
+  const materials = applyMaterial(card.scene, {
+    cube: { roughness: 1, ...rgbColor(cubeColor) },
+    iconbg: rgbColor(iconBgColor),
+    '': rgbColor(iconColor),
+    Location: rgbColor(locationIconColor),
+    Project1Image: { map: project1ImageMap },
+    Project2Image: { map: project2ImageMap },
+    Project3Image: { map: project3ImageMap },
+    Project4Image: { map: project4ImageMap },
+  })
+
+  const handlePointerOver = () => {
+    store.dispatch({ type: 'cursor/setCursor', id: props.cardID, cursor: 'pointer' })
+    setIsPointerOver(true)
+  }
+
+  const handlePointerOut = () => {
+    store.dispatch({ type: 'cursor/reset', id: props.cardID })
+    setIsPointerOver(false)
+  }
 
   return (
     <Suspense fallback={null}>
@@ -81,18 +101,9 @@ function MenuItem(props) {
         object={card.scene}
         position={[...position, -3]}
         scale={new Array(3).fill(0.97)}
-        onPointerOver={() => store.dispatch({ type: 'cursor/setCursor', id: props.cardID, cursor: 'pointer' })}
-        onPointerOut={() => store.dispatch({ type: 'cursor/reset', id: props.cardID })}
-        {...applyMaterial(card.scene, {
-          cube: { roughness: 1, ...rgbColor(cubeColor) },
-          iconbg: rgbColor(iconBgColor),
-          '': rgbColor(iconColor),
-          Location: rgbColor(locationIconColor),
-          Project1Image: { map: project1ImageMap },
-          Project2Image: { map: project2ImageMap },
-          Project3Image: { map: project3ImageMap },
-          Project4Image: { map: project4ImageMap },
-        })}
+        onPointerOver={handlePointerOver}
+        onPointerOut={handlePointerOut}
+        {...materials}
         {...props}
       />
       {!wideCard
@@ -109,7 +120,7 @@ function MenuItem(props) {
               about: 'CARD_ABOUT',
               donate: 'CARD_DONATE',
               services: 'CARD_SERVICES',
-            }[props.cardID]].toUpperCase()
+            }[props.cardID]]?.toUpperCase()
           }
         </Text>
         : {
