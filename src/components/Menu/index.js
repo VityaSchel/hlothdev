@@ -2,12 +2,14 @@ import React, { Suspense } from 'react'
 import PropTypes from 'prop-types'
 import { useLoader } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
-import Text from './Text'
-import { useRedux, transition, transitionReact } from 'utils'
-import localization from '../localization.json'
-import { useFrame } from '@react-three/fiber'
-import store from '../store'
+import Text from '../Text'
+import { useRedux, transition } from 'utils'
+import localization from '../../localization.json'
+import store from '../../store'
 import { useSpring, animated } from '@react-spring/three'
+
+import MeCard from './MeCard'
+import ProjectsCard from './ProjectsCard'
 
 import SFBlack from 'assets/SFBlack.blob'
 import SFHeavy from 'assets/SFHeavy.blob'
@@ -31,7 +33,7 @@ const layouts = {
   wide: {
     me: [1, 1],
     projects: [0, 0],
-    services: [2, 0],
+    services: [1.97, 0],
     donate: [0, -1],
     about: [1, -1],
   },
@@ -43,7 +45,7 @@ MenuItem.propTypes = {
   cardID: PropTypes.string,
 }
 function MenuItem(props) {
-  const { locale } = useRedux(state => ({ locale: state.locale }))
+  const { locale, theme } = useRedux(state => ({ locale: state.locale, theme: state.theme }))
   const ref = React.useRef()
   const card = useLoader(GLTFLoader, `/models/cards/card_${props.cardID}.glb`)
   const wideCard = !['services', 'donate', 'about'].includes(props.cardID)
@@ -55,13 +57,13 @@ function MenuItem(props) {
     else if(coordinate === 'y') coord -= 1
     return coord
   })
-  // const [textColor, setTextColor] = React.useState(0)
 
-  const { theme } = useRedux(state => ({ theme: state.theme }))
-  const { textColor } = useSpring({ textColor: theme === 'light' ? '#393939' : '#626161' })//120 : 90 })
+  const { textColor } = useSpring({ textColor: theme === 'light' ? '#8e8e8e' : '#626161' })
 
   React.useEffect(() => {
-    const cubeColor = card.materials.cube.color
+    const cube = card.materials.cube
+    cube.roughness = 1
+    const cubeColor = cube.color
     transition(cubeColor, ['r', 'g', 'b'], theme === 'light' ? 1.8 : 0.01)
 
     const iconBgColor = card.materials.iconbg?.color
@@ -74,12 +76,6 @@ function MenuItem(props) {
       transition(iconColor, ['r', 'g', 'b'], theme === 'light' ? 1.5 : 0.05)
     }
   }, [theme])
-
-  // useFrame(() => {
-  //   const newColor = transitionReact(textColor, theme === 'light', 90, 120)
-  //   // console.log(textColor, newColor);
-  //   textColor !== newColor && setTextColor(Math.round(newColor))
-  // })
 
   const translation = localization[locale ?? '_DEFAULT_']
   const textZ = -3.06
@@ -113,23 +109,8 @@ function MenuItem(props) {
           }
         </Text>
         : {
-          me: <>
-            <Text position={[position[0]+2, position[1]+1.4, textZ+0.02]} font={SFBlack} size={5.4}>
-              {translation.CARD_ME_FIRST_NAME}
-            </Text>
-            <Text position={[position[0]+2, position[1]+1.13, textZ+0.02]} font={SFBlack} size={5.4}>
-              {translation.CARD_ME_LAST_NAME}
-            </Text>
-            <Text position={[position[0]+3.65, position[1]+0.87, textZ+0.02]} font={SFBold} size={3.2} hAlign='left'>
-              @hloth
-            </Text>
-            <Text position={[position[0]+2, position[1]+0.63, textZ+0.01]} font={SFMedium} size={3.6}>
-              {translation.CARD_ME_SPECIALIZATION}
-            </Text>
-            <Text position={[position[0]+3.18, position[1]+0.29, textZ+0.025]} font={SFLight} size={2.4}>
-              {translation.CARD_ME_CITY}
-            </Text>
-          </>
+          me: <MeCard position={position} />,
+          projects: <ProjectsCard position={position} />
         }[props.cardID]
       }
     </Suspense>

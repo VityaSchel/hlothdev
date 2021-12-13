@@ -3,11 +3,16 @@ import PropTypes from 'prop-types'
 import { useThree } from '@react-three/fiber'
 import { useHelper } from '@react-three/drei'
 import { SpotLightHelper } from 'three'
+import { useRedux } from '../utils'
+import { useSpring, animated } from '@react-spring/three'
 
 export default function Light() {
+  const { theme } = useRedux(state => ({ theme: state.theme }))
+  const { intensisty } = useSpring({ intensisty: theme === 'light' ? 0.5 : 0.2 })
+
   return (
     <>
-      <LightSource from={[0, 0, 0]} to={[0, 0, -10]} intensity={0.5} />
+      <LightSource from={[0, 0, 0]} to={[0, 0, -10]} intensity={intensisty} />
       <LightSource from={[10, 10, 0]} to={[0, 0, -10]} intensity={0.25} />
       <LightSource from={[-10, 10, 0]} to={[0, 0, -10]} intensity={0.5} />
       <LightSource from={[10, -10, 0]} to={[0, 0, -10]} intensity={0.25} />
@@ -34,7 +39,7 @@ function LightSource(props) {
 
   return (
     <>
-      <spotLight
+      <animated.spotLight
         position={props.from}
         ref={lightRef}
         angle={props.angle ?? 10}

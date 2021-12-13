@@ -39,15 +39,16 @@ function prog(from, to, progress) {
   return backwards ? 1-proportion : proportion
 }
 
-export function transitionReact(currentValue, notInverse, from, to) {
-  if(!notInverse) {
-    let from_ = from
-    from = to
-    to = from_
-  }
-  const progress = prog(from, to, currentValue)
-  return (Math.min(1, progress+0.05))*(to-from)+from
-}
+// use spring
+// export function transitionReact(currentValue, notInverse, from, to) {
+//   if(!notInverse) {
+//     let from_ = from
+//     from = to
+//     to = from_
+//   }
+//   const progress = prog(from, to, currentValue)
+//   return (Math.min(1, progress+0.05))*(to-from)+from
+// }
 
 export function useRedux(mapping) {
   const [mappedStore, setMappedStore] = React.useState({})
@@ -64,3 +65,5 @@ export function useRedux(mapping) {
 
   return mappedStore
 }
+
+export const stringEnding = a => (a%10 === 1 && a !== 11) ? 0 : (a%10 >= 2 && a%10 <= 4 && !(a >= 12 && a <= 14)) ? 1 : 2
