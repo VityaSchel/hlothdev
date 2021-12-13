@@ -68,16 +68,6 @@ export function useRedux(mapping) {
 
 export const stringEnding = a => (a%10 === 1 && a !== 11) ? 0 : (a%10 >= 2 && a%10 <= 4 && !(a >= 12 && a <= 14)) ? 1 : 2
 
-// export const material = (objectMaterialName, value) => {
-//   return Object.fromEntries(
-//     new Array(3)
-//       .fill()
-//       .map(
-//         (_,i) => [`materials-${objectMaterialName}-color-${['r','g','b'][i]}`, value]
-//       )
-//   )
-// }
-
 export const flattenObject = obj => {
   const toReturn = {}
 
@@ -118,10 +108,22 @@ export const applyMaterial = (scene, materials) => {
     }
 
     const template = recursiveSearch(scene)
-    // const properties = flattenObject(value) Breaks if useSpring used
-    for(let [propertyName, propertyValue] of Object.entries(value)){
-      props[`${template}-${propertyName}`] = propertyValue
+    if(template) {
+      // const properties = flattenObject(value) Breaks if useSpring used
+      for(let [propertyName, propertyValue] of Object.entries(value)){
+        props[`${template}-${propertyName}`] = propertyValue
+      }
     }
   }
   return props
+}
+
+export const rgbColor = color => {
+  return Object.fromEntries(
+    new Array(3)
+      .fill()
+      .map(
+        (_,i) => [`color-${['r','g','b'][i]}`, color]
+      )
+  )
 }

@@ -1,10 +1,9 @@
 import * as THREE from 'three'
 import PropTypes from 'prop-types'
-import React, { useMemo, useRef, useLayoutEffect } from 'react'
-import { extend, useLoader, useFrame } from '@react-three/fiber'
+import { useMemo, useRef, useLayoutEffect } from 'react'
+import { extend, useLoader } from '@react-three/fiber'
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader'
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry'
-import { useRedux, transitionReact } from 'utils'
 import { animated } from '@react-spring/three'
 
 extend({ TextGeometry })
@@ -18,15 +17,6 @@ Text.propTypes = {
   bevelEnabled: PropTypes.bool,
 }
 export default function Text({ children, vAlign = 'top', hAlign = 'right', color, size = 15, bevelEnabled = false, ...props }) {
-  // const [color, setColor] = React.useState(props.color ?? 0)
-  const { theme } = useRedux(state => ({ theme: state.theme }))
-
-  // useFrame(() => {
-  //   if(props.color) return
-  //   const newColor = transitionReact(color, theme === 'light', 120, 0)
-  //   color !== newColor && setColor(Math.round(newColor))
-  // })
-
   size /= 100
   const font = useLoader(FontLoader, props.font)
   const config = useMemo(

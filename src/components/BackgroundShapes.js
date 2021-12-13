@@ -3,7 +3,8 @@ import PropTypes from 'prop-types'
 import { useLoader, useFrame } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { Raycaster } from 'three'
-import { useRedux, transition } from 'utils'
+import { useRedux, applyMaterial, rgbColor } from 'utils'
+import { animated, useSpring } from '@react-spring/three'
 
 const generateSwitches = () => [
   Math.round(Math.random()),
@@ -35,20 +36,8 @@ function Shape(props) {
   const shape = useLoader(GLTFLoader, props.url)
   const raycaster = React.useMemo(() => new Raycaster(), [])
   const { theme } = useRedux(state => ({ theme: state.theme }))
-
-  const material = Object.values(shape.materials)[0]
-  React.useEffect(() => {
-    const colors = material.color
-    transition(colors, ['r', 'g', 'b'], theme === 'light' ? 2.5 : 0.05)
-  }, [theme])
-
-  React.useEffect(() => {
-    material.opacity = 0
-    const interval = setInterval(() => {
-      material.opacity += 0.01
-      if(material.opacity >= 1) clearInterval(interval)
-    }, 10)
-  }, [])
+  const { shapeColor } = useSpring({ shapeColor: theme === 'light' ? 2.5 : 0.05 })
+  const { shapeOpacity } = useSpring({ from: { shapeOpacity: 0 }, to: { shapeOpacity: 1 } })
 
   const accelerationLimit = 0.001
   useFrame(({ camera }) => {
@@ -77,9 +66,12 @@ function Shape(props) {
   })
 
   return (
-    <primitive
+    <animated.primitive
       ref={object}
       object={shape.scene}
+      {...applyMaterial(shape.scene, {
+        '': { opacity: shapeOpacity, ...rgbColor(shapeColor) }
+      })}
       {...props}
     />
   )
