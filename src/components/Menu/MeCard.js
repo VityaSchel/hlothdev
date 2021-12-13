@@ -10,16 +10,16 @@ import Text from '../Text'
 
 MeCardText.propTypes = { position: PropTypes.array }
 export function MeCardText({ position }) {
-  const { translation, theme } = useRedux(state => ({ translation: state.translation, theme: state.theme }))
+  const { translation, locale, theme } = useRedux(state => ({ translation: state.translation, locale: state.locale, theme: state.theme }))
   const { textColor } = useSpring({ textColor: theme === 'light' ? '#272727' : '#a09f9f' })
   const textZ = -3.08
 
   return (
     <>
-      <Text position={[position[0]+2, position[1]+1.4, textZ]} font={SFBlack} size={5.4} color={textColor}>
+      <Text position={[position[0]+2, position[1]+1.4, textZ+0.05]} font={SFBlack} size={5.4} color={textColor}>
         {translation.CARD_ME_FIRST_NAME}
       </Text>
-      <Text position={[position[0]+2, position[1]+1.13, textZ]} font={SFBlack} size={5.4} color={textColor}>
+      <Text position={[position[0]+2, position[1]+1.13, textZ+0.05]} font={SFBlack} size={locale === 'en-US' ? 5.0 : 5.4} color={textColor}>
         {translation.CARD_ME_LAST_NAME}
       </Text>
       <Text position={[position[0]+3.65, position[1]+0.87, textZ]} font={SFBold} size={3.2} hAlign='left' color={textColor}>

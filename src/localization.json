@@ -11,7 +11,9 @@
     "CARD_SERVICES": "Услуги",
     "THEME_SWITCH_TO_LIGHT": "Включить светлую тему",
     "THEME_SWITCH_TO_DARK": "Включить темную тему",
-    "CHANGE_LANGUAGE": "Сменить язык"
+    "CHANGE_LANGUAGE": "Сменить язык",
+    "LANGUAGE_RUSSIAN": "Русский язык",
+    "LANGUAGE_ENGLISH": "Английский язык"
   },
   "_DEFAULT_": {
     "CARD_ABOUT": "About",
@@ -25,6 +27,8 @@
     "CARD_SERVICES": "Services",
     "THEME_SWITCH_TO_LIGHT": "Switch to light theme",
     "THEME_SWITCH_TO_DARK": "Switch to dark theme",
-    "CHANGE_LANGUAGE": "Change language"
+    "CHANGE_LANGUAGE": "Change language",
+    "LANGUAGE_RUSSIAN": "Russian language",
+    "LANGUAGE_ENGLISH": "English language"
   }
 }

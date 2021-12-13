@@ -12,7 +12,7 @@ Text.propTypes = {
   vAlign: PropTypes.string,
   hAlign: PropTypes.string,
   size: PropTypes.number,
-  color: PropTypes.string,
+  color: PropTypes.any,
   font: PropTypes.string,
   bevelEnabled: PropTypes.bool,
 }
@@ -44,7 +44,7 @@ export default function Text({ children, vAlign = 'top', hAlign = 'right', color
   return (
     <animated.group scale={[0.1 * size, 0.1 * size, 0.05 * size]} {...props}>
       <animated.mesh ref={mesh}>
-        <textGeometry args={[children, config]} />
+        <textGeometry args={[children ?? '', config]} />
         <animated.meshStandardMaterial color={color} metalness={0} roughness={1} />
       </animated.mesh>
     </animated.group>

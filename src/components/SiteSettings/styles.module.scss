@@ -6,4 +6,33 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  align-items: flex-end;
+
+  .languageChange {
+    display: flex;
+    justify-content: flex-end;
+
+    .languages {
+      overflow: hidden;
+      display: flex;
+      justify-content: flex-start;
+
+      .languagesInner {
+        width: fit-content;
+        display: flex;
+        gap: 10px;
+        box-sizing: border-box;
+
+        img {
+          width: 24px;
+          user-drag: none;
+          -webkit-user-drag: none;
+          user-select: none;
+          -moz-user-select: none;
+          -webkit-user-select: none;
+          -ms-user-select: none;
+        }
+      }
+    }
+  }
 }

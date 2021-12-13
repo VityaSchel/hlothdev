@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 import SFBlack from 'assets/fonts/SFBlack.blob'
 import SFBold from 'assets/fonts/SFBold.blob'
 
-ProjectsCardText.propTypes = { position: PropTypes.object }
+ProjectsCardText.propTypes = { position: PropTypes.array }
 export function ProjectsCardText({ position }) {
   const { translation, theme } = useRedux(state => ({ translation: state.translation, theme: state.theme }))
   const { textColor } = useSpring({ textColor: theme === 'light' ? '#313131' : '#565656' })
@@ -29,28 +29,6 @@ export function ProjectsCardText({ position }) {
       <Text position={[0.25, 0.25, 0.05]} font={SFBold} size={3.2} color={textColor}>
         {translation.CARD_PROJECTS_IN_PORTFOLIO}
       </Text>
-      {/*<ProjectImage position={[0, 0]} texture={project1logo} />
-      <ProjectImage position={[1, 0]} texture={project2logo} />
-      <ProjectImage position={[0, 1]} texture={project3logo} />
-      <ProjectImage position={[1, 1]} texture={project4logo} />*/}
     </group>
   )
 }
-
-// ProjectImage.propTypes = {
-//   position: PropTypes.array,
-//   texture: PropTypes.string,
-// }
-// function ProjectImage(props) {
-//   const { nodes: { ProjectImage } } = useLoader(GLTFLoader, '/models/cards/card_projects_logo.glb')
-//   const imageMap = useLoader(TextureLoader, props.texture)
-//   const size = 0.2
-//
-//   return (
-//     <group position={[...position, 0.09]} scale={[size, -size, size/100]} rotation={[0, 0, 1.55]}>
-//       <mesh geometry={ProjectImage.geometry}>
-//         <meshBasicMaterial map={imageMap} />
-//       </mesh>
-//     </group>
-//   )
-// }

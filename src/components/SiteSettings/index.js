@@ -1,9 +1,15 @@
+import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './styles.module.scss'
 import { connect } from 'react-redux'
 import IconButton from '@mui/material/IconButton'
 import { MdWbSunny, MdOutlineTranslate } from 'react-icons/md'
 import { IoMdMoon } from 'react-icons/io'
+import { useSpring, animated } from 'react-spring'
+import useResizeObserver from 'use-resize-observer'
+
+import ruRU from './flags/ru-RU.png'
+import enUS from './flags/en-US.png'
 
 SiteSettings.propTypes = {
   theme: PropTypes.string,
@@ -24,11 +30,42 @@ function SiteSettings({ translation, ...props }) {
           <IoMdMoon />
         </IconButton>
       )}
-      <IconButton aria-label={translation.CHANGE_LANGUAGE} onClick={themeSwitch}>
-        <MdOutlineTranslate />
-      </IconButton>
+      <SiteLanguage />
     </div>
   )
 }
 
-export default connect(state => ({ translation: state.translation, theme: state.theme }))(SiteSettings)
+const mapState = state => ({ translation: state.translation, theme: state.theme })
+export default connect(mapState)(SiteSettings)
+
+const SiteLanguage = connect(mapState)(function({ translation, ...props }) {
+  const [listOpen, setListOpen] = React.useState(false)
+  const { width, ref } = useResizeObserver()
+  const { listWidth } = useSpring({ listWidth: listOpen ? width+10 : 0 })
+
+  const setLang = locale => () => {
+    props.dispatch({ type: 'locale/update', locale })
+    props.dispatch({ type: 'translation/set', language: locale })
+  }
+
+  return (
+    <div className={styles.languageChange}
+      onPointerOver={() => setListOpen(true)}
+      onPointerOut={() => setListOpen(false)}
+    >
+      <animated.div className={styles.languages} style={{ width: listWidth }}>
+        <div className={styles.languagesInner} ref={ref}>
+          <IconButton aria-label={translation.LANGUAGE_RUSSIAN} onClick={setLang('ru-RU')}>
+            <img src={ruRU} />
+          </IconButton>
+          <IconButton aria-label={translation.LANGUAGE_ENGLISH} onClick={setLang('en-US')}>
+            <img src={enUS} />
+          </IconButton>
+        </div>
+      </animated.div>
+      <IconButton aria-label={translation.CHANGE_LANGUAGE}>
+        <MdOutlineTranslate />
+      </IconButton>
+    </div>
+  )
+})

@@ -32,11 +32,9 @@ function App(props) {
   }, [lightRef, spotLightTarget])
 
   React.useEffect(() => {
-    if(props.locale === null) {
-      const locale = Object.keys(localization).includes(navigator.language) ? navigator.language : '_DEFAULT_'
-      props.dispatch({ type: 'locale/update', locale })
-      props.dispatch({ type: 'translation/set', language: locale })
-    }
+    const locale = props.locale ?? navigator.language//Object.keys(localization).includes(navigator.language) ? navigator.language : '_DEFAULT_'
+    props.dispatch({ type: 'locale/update', locale })
+    props.dispatch({ type: 'translation/set', language: locale })
   }, [navigator.language])
 
   const raytracedCursor = Object.values(props.cursor).sort((a,b) => b.added - a.added)[0]?.cursor
