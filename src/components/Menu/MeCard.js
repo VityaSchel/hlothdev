@@ -1,15 +1,15 @@
 import PropTypes from 'prop-types'
-import SFBlack from 'assets/SFBlack.blob'
-import SFLight from 'assets/SFLight.blob'
-import SFBold from 'assets/SFBold.blob'
-import SFMedium from 'assets/SFMedium.blob'
+import SFBlack from 'assets/fonts/SFBlack.blob'
+import SFLight from 'assets/fonts/SFLight.blob'
+import SFBold from 'assets/fonts/SFBold.blob'
+import SFMedium from 'assets/fonts/SFMedium.blob'
 import localization from '../../localization.json'
 import { useRedux } from '../../utils'
 import { useSpring } from '@react-spring/three'
 import Text from '../Text'
 
-MeCard.propTypes = { position: PropTypes.object }
-export default function MeCard({ position }) {
+MeCardText.propTypes = { position: PropTypes.object }
+export function MeCardText({ position }) {
   const { locale, theme } = useRedux(state => ({ locale: state.locale, theme: state.theme }))
   const { textColor } = useSpring({ textColor: theme === 'light' ? '#272727' : '#a09f9f' })
   const translation = localization[locale ?? '_DEFAULT_']

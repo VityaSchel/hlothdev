@@ -1,15 +1,14 @@
-import PropTypes from 'prop-types'
-import SFBlack from 'assets/SFBlack.blob'
-import SFLight from 'assets/SFLight.blob'
-import SFBold from 'assets/SFBold.blob'
-import SFMedium from 'assets/SFMedium.blob'
 import localization from '../../localization.json'
 import { useRedux, stringEnding } from '../../utils'
 import { useSpring } from '@react-spring/three'
 import Text from '../Text'
 
-ProjectsCard.propTypes = { position: PropTypes.object }
-export default function ProjectsCard({ position }) {
+import PropTypes from 'prop-types'
+import SFBlack from 'assets/fonts/SFBlack.blob'
+import SFBold from 'assets/fonts/SFBold.blob'
+
+ProjectsCardText.propTypes = { position: PropTypes.object }
+export function ProjectsCardText({ position }) {
   const { locale, theme } = useRedux(state => ({ locale: state.locale, theme: state.theme }))
   const { textColor } = useSpring({ textColor: theme === 'light' ? '#616161' : '#a09f9f' })
   const translation = localization[locale ?? '_DEFAULT_']

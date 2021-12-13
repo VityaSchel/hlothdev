@@ -1,4 +1,4 @@
-import { Suspense } from 'react'
+import React, { Suspense } from 'react'
 import PropTypes from 'prop-types'
 import { useLoader } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
@@ -7,11 +7,16 @@ import { useRedux, applyMaterial, rgbColor } from 'utils'
 import localization from '../../localization.json'
 import store from '../../store'
 import { useSpring, animated } from '@react-spring/three'
+import { TextureLoader } from 'three/src/loaders/TextureLoader'
 
-import SFBold from 'assets/SFBold.blob'
+import SFBold from 'assets/fonts/SFBold.blob'
+import project1logo from 'assets/images/projectsLogos/aboba.png'
+import project2logo from 'assets/images/projectsLogos/gadzas.png'
+import project3logo from 'assets/images/projectsLogos/masha-simulator.png'
+import project4logo from 'assets/images/projectsLogos/sipacker.png'
 
-import MeCard from './MeCard'
-import ProjectsCard from './ProjectsCard'
+import { MeCardText } from './MeCard'
+import { ProjectsCardText } from './ProjectsCard'
 
 export default function Menu() {
   return (
@@ -43,6 +48,12 @@ MenuItem.propTypes = {
 function MenuItem(props) {
   const { locale, theme } = useRedux(state => ({ locale: state.locale, theme: state.theme }))
   const card = useLoader(GLTFLoader, `/models/cards/card_${props.cardID}.glb`)
+
+  const project1ImageMap = useLoader(TextureLoader, project1logo)
+  const project2ImageMap = useLoader(TextureLoader, project2logo)
+  const project3ImageMap = useLoader(TextureLoader, project3logo)
+  const project4ImageMap = useLoader(TextureLoader, project4logo)
+
   const wideCard = !['services', 'donate', 'about'].includes(props.cardID)
   const layout = 'wide'
   const position = layouts[layout][props.cardID].map((coord, i) => {
@@ -76,7 +87,11 @@ function MenuItem(props) {
           cube: { roughness: 1, ...rgbColor(cubeColor) },
           iconbg: rgbColor(iconBgColor),
           '': rgbColor(iconColor),
-          Location: rgbColor(locationIconColor)
+          Location: rgbColor(locationIconColor),
+          Project1Image: { map: project1ImageMap },
+          Project2Image: { map: project2ImageMap },
+          Project3Image: { map: project3ImageMap },
+          Project4Image: { map: project4ImageMap },
         })}
         {...props}
       />
@@ -98,8 +113,8 @@ function MenuItem(props) {
           }
         </Text>
         : {
-          me: <MeCard position={position} />,
-          projects: <ProjectsCard position={position} />
+          me: <MeCardText position={position} />,
+          projects: <ProjectsCardText position={position} />
         }[props.cardID]
       }
     </Suspense>
