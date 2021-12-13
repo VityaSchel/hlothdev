@@ -67,3 +67,61 @@ export function useRedux(mapping) {
 }
 
 export const stringEnding = a => (a%10 === 1 && a !== 11) ? 0 : (a%10 >= 2 && a%10 <= 4 && !(a >= 12 && a <= 14)) ? 1 : 2
+
+// export const material = (objectMaterialName, value) => {
+//   return Object.fromEntries(
+//     new Array(3)
+//       .fill()
+//       .map(
+//         (_,i) => [`materials-${objectMaterialName}-color-${['r','g','b'][i]}`, value]
+//       )
+//   )
+// }
+
+export const flattenObject = obj => {
+  const toReturn = {}
+
+  for (var i in obj) {
+    if (!Object.hasOwnProperty.call(obj, i)) continue
+
+    if ((typeof obj[i]) == 'object') {
+      var flatObject = flattenObject(obj[i])
+      for (var x in flatObject) {
+        if (!Object.hasOwnProperty.call(flatObject, x)) continue
+
+        toReturn[i + '-' + x] = flatObject[x]
+      }
+    } else {
+      toReturn[i] = obj[i]
+    }
+  }
+  return toReturn
+}
+
+export const applyMaterial = (scene, materials) => {
+  const props = {}
+  for(let [materialName, value] of Object.entries(materials)) {
+    const recursiveSearch = obj => {
+      for(let childIndex in obj.children) {
+        const child = obj.children[childIndex]
+
+        if(child.children.length) {
+          const searchResult = recursiveSearch(child)
+          if(searchResult) return `children-${childIndex}-${searchResult}`
+          else return
+        } else {
+          if(child?.material?.name === materialName) {
+            return `children-${childIndex}-material`
+          }
+        }
+      }
+    }
+
+    const template = recursiveSearch(scene)
+    // const properties = flattenObject(value) Breaks if useSpring used
+    for(let [propertyName, propertyValue] of Object.entries(value)){
+      props[`${template}-${propertyName}`] = propertyValue
+    }
+  }
+  return props
+}

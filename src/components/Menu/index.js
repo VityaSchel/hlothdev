@@ -3,10 +3,11 @@ import PropTypes from 'prop-types'
 import { useLoader } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import Text from '../Text'
-import { useRedux, transition } from 'utils'
+import { useRedux, transition, applyMaterial } from 'utils'
 import localization from '../../localization.json'
 import store from '../../store'
 import { useSpring, animated } from '@react-spring/three'
+import AnimatedMaterialPrimitive from '../AnimatedMaterialPrimitive'
 
 import MeCard from './MeCard'
 import ProjectsCard from './ProjectsCard'
@@ -21,10 +22,10 @@ export default function Menu() {
   return (
     <Suspense fallback={null}>
       <MenuItem cardID='me' />
-      <MenuItem cardID='projects' />
+      {/*<MenuItem cardID='projects' />
       <MenuItem cardID='services' />
       <MenuItem cardID='donate' />
-      <MenuItem cardID='about' />
+      <MenuItem cardID='about' />*/}
     </Suspense>
   )
 }
@@ -46,7 +47,6 @@ MenuItem.propTypes = {
 }
 function MenuItem(props) {
   const { locale, theme } = useRedux(state => ({ locale: state.locale, theme: state.theme }))
-  const ref = React.useRef()
   const card = useLoader(GLTFLoader, `/models/cards/card_${props.cardID}.glb`)
   const wideCard = !['services', 'donate', 'about'].includes(props.cardID)
   const layout = 'wide'
@@ -58,23 +58,21 @@ function MenuItem(props) {
     return coord
   })
 
-  const { textColor } = useSpring({ textColor: theme === 'light' ? '#8e8e8e' : '#626161' })
+  const { textColor, cubeColor } = useSpring({
+    textColor: theme === 'light' ? '#8e8e8e' : '#626161',
+    cubeColor: theme === 'light' ? 1.8 : 0.01
+  })
 
   React.useEffect(() => {
-    const cube = card.materials.cube
-    cube.roughness = 1
-    const cubeColor = cube.color
-    transition(cubeColor, ['r', 'g', 'b'], theme === 'light' ? 1.8 : 0.01)
-
-    const iconBgColor = card.materials.iconbg?.color
-    iconBgColor && transition(iconBgColor, ['r', 'g', 'b'], theme === 'light' ? 1.5 : 0.05)
-
-    if(wideCard) {
-
-    } else {
-      const iconColor = card.materials[''].color
-      transition(iconColor, ['r', 'g', 'b'], theme === 'light' ? 1.5 : 0.05)
-    }
+    // const iconBgColor = card.materials.iconbg?.color
+    // iconBgColor && transition(iconBgColor, ['r', 'g', 'b'], theme === 'light' ? 1.5 : 0.05)
+    //
+    // if(wideCard) {
+    //
+    // } else {
+    //   const iconColor = card.materials[''].color
+    //   transition(iconColor, ['r', 'g', 'b'], theme === 'light' ? 1.5 : 0.05)
+    // }
   }, [theme])
 
   const translation = localization[locale ?? '_DEFAULT_']
@@ -82,13 +80,24 @@ function MenuItem(props) {
 
   return (
     <Suspense fallback={null}>
+      {/*<group
+        position={[...position, -3]}
+        scale={new Array(3).fill(0.97)}
+        onPointerOver={() => store.dispatch({ type: 'cursor/setCursor', id: props.cardID, cursor: 'pointer' })}
+        onPointerOut={() => store.dispatch({ type: 'cursor/reset', id: props.cardID })}
+        {...props}
+      >
+        <mesh material={card.materials.cube} geometry={card.scene} />
+      </group>*/}
       <animated.primitive
-        ref={ref}
         object={card.scene}
         position={[...position, -3]}
         scale={new Array(3).fill(0.97)}
         onPointerOver={() => store.dispatch({ type: 'cursor/setCursor', id: props.cardID, cursor: 'pointer' })}
         onPointerOut={() => store.dispatch({ type: 'cursor/reset', id: props.cardID })}
+        {...applyMaterial(card.scene, {
+          'cube': { roughness: 1, 'color-r': cubeColor, 'color-g': cubeColor, 'color-b': cubeColor }
+        })}
         {...props}
       />
       {!wideCard
