@@ -146,6 +146,9 @@ function useProjectsCardStyles() {
     Project2Image: { map: project2ImageMap },
     Project3Image: { map: project3ImageMap },
     Project4Image: { map: project4ImageMap },
-    Project1Extruding: color('')
+    Project1Extruding: color('#d30101'),
+    Project2Extruding: color('#d30101'),
+    Project3Extruding: color('#d30101'),
+    Project4Extruding: color('#d30101'),
   }
 }

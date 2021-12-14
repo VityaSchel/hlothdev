@@ -117,11 +117,11 @@ export const color = (colorOrRed, g, b) => {
       'color-b': b,
     }
   } else if (typeof colorOrRed === 'string' && colorOrRed[0] === '#') {
-    const [r, g, b] = hexRgb(colorOrRed)
+    const { red, green, blue } = hexRgb(colorOrRed)
     return {
-      'color-r': r,
-      'color-g': g,
-      'color-b': b,
+      'color-r': red,
+      'color-g': green,
+      'color-b': blue,
     }
   } else {
     return Object.fromEntries(
