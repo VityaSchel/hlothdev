@@ -1,6 +1,13 @@
-import { useRedux, stringEnding } from '../../utils'
+import { useRedux, stringEnding, color } from 'utils'
+import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import { useSpring } from '@react-spring/three'
+import { useLoader } from '@react-three/fiber'
 import Text from '../Text'
+
+import project1logo from 'assets/images/projectsLogos/aboba.png'
+import project2logo from 'assets/images/projectsLogos/gadzas.png'
+import project3logo from 'assets/images/projectsLogos/masha-simulator.png'
+import project4logo from 'assets/images/projectsLogos/sipacker.png'
 
 import SFBlack from 'assets/fonts/SFBlack.blob'
 import SFBold from 'assets/fonts/SFBold.blob'
@@ -29,4 +36,25 @@ export function ProjectsCardText() {
       </Text>
     </group>
   )
+}
+
+export function useProjectsCardStyles(theme) {
+  const project1ImageMap = useLoader(TextureLoader, project1logo)
+  const project2ImageMap = useLoader(TextureLoader, project2logo)
+  const project3ImageMap = useLoader(TextureLoader, project3logo)
+  const project4ImageMap = useLoader(TextureLoader, project4logo)
+
+  const { extrudingColor } = useSpring({ extrudingColor: theme === 'light' ? 1 : 0.05 })
+  const extrudingMaterial = { roughness: 1, ...color(extrudingColor) }
+
+  return {
+    Project1Image: { map: project1ImageMap },
+    Project2Image: { map: project2ImageMap },
+    Project3Image: { map: project3ImageMap },
+    Project4Image: { map: project4ImageMap },
+    Project1Mat: extrudingMaterial,
+    Project2Mat: extrudingMaterial,
+    Project3Mat: extrudingMaterial,
+    Project4Mat: extrudingMaterial,
+  }
 }

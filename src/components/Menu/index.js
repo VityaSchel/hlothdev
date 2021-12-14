@@ -6,27 +6,27 @@ import Text from '../Text'
 import { useRedux, applyMaterial, color } from 'utils'
 import store from '../../store'
 import { useSpring, animated } from '@react-spring/three'
-import { TextureLoader } from 'three/src/loaders/TextureLoader'
 
-import project1logo from 'assets/images/projectsLogos/aboba.png'
-import project2logo from 'assets/images/projectsLogos/gadzas.png'
-import project3logo from 'assets/images/projectsLogos/masha-simulator.png'
-import project4logo from 'assets/images/projectsLogos/sipacker.png'
+import { MeCardText } from './MeCard'
+import { ProjectsCardText, useProjectsCardStyles } from './ProjectsCard'
 
 import SFBold from 'assets/fonts/SFBold.blob'
 
-import { MeCardText } from './MeCard'
-import { ProjectsCardText } from './ProjectsCard'
-
 export default function Menu() {
   return (
-    <Suspense fallback={null}>
-      <MenuItem cardID='me' />
-      <MenuItem cardID='projects' />
-      <MenuItem cardID='services' />
-      <MenuItem cardID='donate' />
-      <MenuItem cardID='about' />
-    </Suspense>
+    <>
+      <Suspense fallback={null}>
+        <MenuItem cardID='me' />
+      </Suspense>
+      <Suspense fallback={null}>
+        <MenuItem cardID='projects' />
+        <MenuItem cardID='services' />
+      </Suspense>
+      <Suspense fallback={null}>
+        <MenuItem cardID='donate' />
+        <MenuItem cardID='about' />
+      </Suspense>
+    </>
   )
 }
 
@@ -42,28 +42,22 @@ const layouts = {
 
   }
 }
-MenuItem.propTypes = {
-  cardID: PropTypes.string,
-}
+
+MenuItem.propTypes = { cardID: PropTypes.string }
 function MenuItem(props) {
   const card = useLoader(GLTFLoader, `/models/cards/card_${props.cardID}.glb`)
   const [isPointerOver, setIsPointerOver] = React.useState(false)
-  const projectsCardStyles = useProjectsCardStyles()
   const { translation, theme, route } = useRedux(state => ({
     translation: state.translation,
     theme: state.theme,
     route: state.route
   }))
-  const { rotation } = useSpring({
-    to: { rotation: route === props.cardID ? 3.18 : 0 },
-    config: { friction: 150 }
-  })
 
-  const wideCard = !['services', 'donate', 'about'].includes(props.cardID)
-  const layout = 'wide'
-  let position = layouts[layout][props.cardID]
-  position = [position[0]*2 - 3, position[1]*2 - 0.5]
-  const textZ = -0.06
+  const projectsCardStyles = useProjectsCardStyles(theme)
+  const { rotation } = useSpring({
+    to: { rotation: route === props.cardID ? 3.2 : 0 },
+    config: { friction: 60 }
+  })
 
   const { textColor, cubeColor, iconBgColor, iconColor, locationIconColor } = useSpring({
     textColor: theme === 'light' ? '#545454' : '#191919',
@@ -72,6 +66,12 @@ function MenuItem(props) {
     iconColor: theme === 'light' ? 1.4 : 0.05,
     locationIconColor: theme === 'light' ? 0.05 : 1.5
   })
+
+  const wideCard = !['services', 'donate', 'about'].includes(props.cardID)
+  const layout = 'wide'
+  let position = layouts[layout][props.cardID]
+  position = [position[0]*2 - 3, position[1]*2 - 0.5]
+  const textZ = -0.06
 
   const materials = applyMaterial(card.scene, {
     cube: { roughness: 1, ...color(cubeColor) },
@@ -134,21 +134,4 @@ function MenuItem(props) {
       </animated.group>
     </group>
   )
-}
-
-function useProjectsCardStyles() {
-  const project1ImageMap = useLoader(TextureLoader, project1logo)
-  const project2ImageMap = useLoader(TextureLoader, project2logo)
-  const project3ImageMap = useLoader(TextureLoader, project3logo)
-  const project4ImageMap = useLoader(TextureLoader, project4logo)
-  return {
-    Project1Image: { map: project1ImageMap },
-    Project2Image: { map: project2ImageMap },
-    Project3Image: { map: project3ImageMap },
-    Project4Image: { map: project4ImageMap },
-    Project1Extruding: color('#d30101'),
-    Project2Extruding: color('#d30101'),
-    Project3Extruding: color('#d30101'),
-    Project4Extruding: color('#d30101'),
-  }
 }

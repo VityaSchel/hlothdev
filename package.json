@@ -17,6 +17,7 @@
     "@testing-library/user-event": "^12.1.10",
     "classnames": "^2.3.1",
     "hex-rgb": "^5.0.0",
+    "history": "^5.1.0",
     "immer": "^9.0.7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
