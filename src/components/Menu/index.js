@@ -46,8 +46,11 @@ MenuItem.propTypes = {
   cardID: PropTypes.string,
 }
 function MenuItem(props) {
-  const { translation, theme } = useRedux(state => ({ translation: state.translation, theme: state.theme }))
+  const { translation, theme, route } = useRedux(state => ({
+    translation: state.translation, theme: state.theme, route: state.route
+  }))
   const [isPointerOver, setIsPointerOver] = React.useState(false)
+  const { rotation } = useSpring({ rotation: route === props.cardID ? 3.18 : 0 })
 
   const card = useLoader(GLTFLoader, `/models/cards/card_${props.cardID}.glb`)
   const project1ImageMap = useLoader(TextureLoader, project1logo)
@@ -61,10 +64,10 @@ function MenuItem(props) {
     coord *= 2
     const coordinate = ['x','y'][i]
     if(coordinate === 'x') coord -= 3
-    else if(coordinate === 'y') coord -= 1
+    else if(coordinate === 'y') coord -= 0.5
     return coord
   })
-  const textZ = -3.06
+  const textZ = -0.06
 
   const { textColor, cubeColor, iconBgColor, iconColor, locationIconColor } = useSpring({
     textColor: theme === 'light' ? '#545454' : '#191919',
@@ -95,39 +98,48 @@ function MenuItem(props) {
     setIsPointerOver(false)
   }
 
+  const handleClick = () => {
+    store.dispatch({ type: 'route/set', route: props.cardID })
+  }
+  const zz = -0.5
+
   return (
-    <Suspense fallback={null}>
-      <animated.primitive
-        object={card.scene}
-        position={[...position, -3]}
-        scale={new Array(3).fill(0.97)}
-        onPointerOver={handlePointerOver}
-        onPointerOut={handlePointerOut}
-        {...materials}
-        {...props}
-      />
-      {!wideCard
-        ? <Text
-          position={[position[0]+0.97, position[1]+0.3, textZ]}
-          font={SFBold}
-          size={5.5}
-          hAlign='center'
-          color={textColor}
-          bevelEnabled
-        >
-          {
-            translation[{
-              about: 'CARD_ABOUT',
-              donate: 'CARD_DONATE',
-              services: 'CARD_SERVICES',
-            }[props.cardID]]?.toUpperCase()
+    <group position={[...position, -4.5]}>
+      <animated.group position={[0, 0.5, 0.5]} rotation-x={rotation}>
+        <group position={[0, -1, 1]}>
+          <animated.primitive
+            object={card.scene}
+            scale={new Array(3).fill(0.97)}
+            onPointerOver={handlePointerOver}
+            onPointerOut={handlePointerOut}
+            onClick={handleClick}
+            {...materials}
+            {...props}
+          />
+          {!wideCard
+            ? <Text
+              position={[0.97, 0.3, textZ]}
+              font={SFBold}
+              size={5.5}
+              hAlign='center'
+              color={textColor}
+              bevelEnabled
+            >
+              {
+                translation[{
+                  about: 'CARD_ABOUT',
+                  donate: 'CARD_DONATE',
+                  services: 'CARD_SERVICES',
+                }[props.cardID]]?.toUpperCase()
+              }
+            </Text>
+            : {
+              me: <MeCardText position={position} />,
+              projects: <ProjectsCardText position={position} />
+            }[props.cardID]
           }
-        </Text>
-        : {
-          me: <MeCardText position={position} />,
-          projects: <ProjectsCardText position={position} />
-        }[props.cardID]
-      }
-    </Suspense>
+        </group>
+      </animated.group>
+    </group>
   )
 }

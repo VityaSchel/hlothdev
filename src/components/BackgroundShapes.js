@@ -14,22 +14,28 @@ const generateSwitches = () => [
 
 export default function BackgroundShapes() {
   return (
-    <Suspense fallback={null}>
+    <>
       <Shape url='/models/background/icosphere.glb' position={{ x: 0.7, y: -0.6, z: 10 }} />
       <Shape url='/models/background/cube.glb' position={{ x: 0.3, y: -0.8 }} />
       <Shape url='/models/background/palka.glb' position={{ x: -0.3, y: 0.8 }} />
       <Shape url='/models/background/pyramid.glb' position={{ x: 0.7, y: 0.6 }} />
       <Shape url='/models/background/sphere.glb' position={{ x: -0.8, y: 0.5 }} />
       <Shape url='/models/background/tetris.glb' position={{ x: -0.75, y: -0.8, z: 12 }} />
-    </Suspense>
+    </>
   )
 }
 
-Shape.propTypes = {
+const Shape = props => (
+  <Suspense fallback={null}>
+    <ShapeModel {...props} />
+  </Suspense>
+)
+
+ShapeModel.propTypes = {
   position: PropTypes.object,
   url: PropTypes.string,
 }
-function Shape(props) {
+function ShapeModel(props) {
   const [accelerationSwitch, setAccelerationSwitch] = React.useState(generateSwitches())
   const [acceleration, setAcceleration] = React.useState([0, 0, 0])
   const object = React.useRef()

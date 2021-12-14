@@ -5,6 +5,7 @@ import themeReducer from './themeReducer'
 import localeReducer from './localeReducer'
 import cursorReducer from './cursorReducer'
 import translationReducer from './translationReducer'
+import routeReducer from './routeReducer'
 import { combineReducers } from 'redux'
 
 const rootReducer = combineReducers({
@@ -12,12 +13,13 @@ const rootReducer = combineReducers({
   locale: localeReducer,
   cursor: cursorReducer,
   translation: translationReducer,
+  route: routeReducer
 })
 
 const persistConfig = {
   key: 'root',
   storage,
-  blacklist: ['cursor', 'translation']
+  blacklist: ['cursor', 'translation', 'route']
 }
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)

@@ -32,7 +32,7 @@ function App(props) {
   }, [lightRef, spotLightTarget])
 
   React.useEffect(() => {
-    const locale = props.locale ?? navigator.language//Object.keys(localization).includes(navigator.language) ? navigator.language : '_DEFAULT_'
+    const locale = props.locale ?? navigator.language
     props.dispatch({ type: 'locale/update', locale })
     props.dispatch({ type: 'translation/set', language: locale })
   }, [navigator.language])

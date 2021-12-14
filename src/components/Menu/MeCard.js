@@ -11,10 +11,10 @@ MeCardText.propTypes = { position: PropTypes.array }
 export function MeCardText({ position }) {
   const { translation, locale, theme } = useRedux(state => ({ translation: state.translation, locale: state.locale, theme: state.theme }))
   const { textColor } = useSpring({ textColor: theme === 'light' ? '#272727' : '#a09f9f' })
-  const textZ = -3.08
-  
+  const textZ = -0.08
+
   return (
-    <group position={[position[0], position[1], textZ]}>
+    <group position={[0, 0, textZ]}>
       <Text position={[2, 1.4, 0.05]} font={SFBlack} size={5.4} color={textColor}>
         {translation.CARD_ME_FIRST_NAME}
       </Text>
