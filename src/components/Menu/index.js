@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { useLoader } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import Text from '../Text'
-import { useRedux, applyMaterial, rgbColor } from 'utils'
+import { useRedux, applyMaterial, color } from 'utils'
 import store from '../../store'
 import { useSpring, animated } from '@react-spring/three'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
@@ -46,27 +46,23 @@ MenuItem.propTypes = {
   cardID: PropTypes.string,
 }
 function MenuItem(props) {
-  const { translation, theme, route } = useRedux(state => ({
-    translation: state.translation, theme: state.theme, route: state.route
-  }))
-  const [isPointerOver, setIsPointerOver] = React.useState(false)
-  const { rotation } = useSpring({ rotation: route === props.cardID ? 3.18 : 0 })
-
   const card = useLoader(GLTFLoader, `/models/cards/card_${props.cardID}.glb`)
-  const project1ImageMap = useLoader(TextureLoader, project1logo)
-  const project2ImageMap = useLoader(TextureLoader, project2logo)
-  const project3ImageMap = useLoader(TextureLoader, project3logo)
-  const project4ImageMap = useLoader(TextureLoader, project4logo)
+  const [isPointerOver, setIsPointerOver] = React.useState(false)
+  const projectsCardStyles = useProjectsCardStyles()
+  const { translation, theme, route } = useRedux(state => ({
+    translation: state.translation,
+    theme: state.theme,
+    route: state.route
+  }))
+  const { rotation } = useSpring({
+    to: { rotation: route === props.cardID ? 3.18 : 0 },
+    config: { friction: 150 }
+  })
 
   const wideCard = !['services', 'donate', 'about'].includes(props.cardID)
   const layout = 'wide'
-  const position = layouts[layout][props.cardID].map((coord, i) => {
-    coord *= 2
-    const coordinate = ['x','y'][i]
-    if(coordinate === 'x') coord -= 3
-    else if(coordinate === 'y') coord -= 0.5
-    return coord
-  })
+  let position = layouts[layout][props.cardID]
+  position = [position[0]*2 - 3, position[1]*2 - 0.5]
   const textZ = -0.06
 
   const { textColor, cubeColor, iconBgColor, iconColor, locationIconColor } = useSpring({
@@ -78,14 +74,11 @@ function MenuItem(props) {
   })
 
   const materials = applyMaterial(card.scene, {
-    cube: { roughness: 1, ...rgbColor(cubeColor) },
-    iconbg: rgbColor(iconBgColor),
-    '': rgbColor(iconColor),
-    Location: rgbColor(locationIconColor),
-    Project1Image: { map: project1ImageMap },
-    Project2Image: { map: project2ImageMap },
-    Project3Image: { map: project3ImageMap },
-    Project4Image: { map: project4ImageMap },
+    cube: { roughness: 1, ...color(cubeColor) },
+    iconbg: color(iconBgColor),
+    '': color(iconColor),
+    Location: color(locationIconColor),
+    ...projectsCardStyles
   })
 
   const handlePointerOver = () => {
@@ -101,7 +94,6 @@ function MenuItem(props) {
   const handleClick = () => {
     store.dispatch({ type: 'route/set', route: props.cardID })
   }
-  const zz = -0.5
 
   return (
     <group position={[...position, -4.5]}>
@@ -142,4 +134,18 @@ function MenuItem(props) {
       </animated.group>
     </group>
   )
+}
+
+function useProjectsCardStyles() {
+  const project1ImageMap = useLoader(TextureLoader, project1logo)
+  const project2ImageMap = useLoader(TextureLoader, project2logo)
+  const project3ImageMap = useLoader(TextureLoader, project3logo)
+  const project4ImageMap = useLoader(TextureLoader, project4logo)
+  return {
+    Project1Image: { map: project1ImageMap },
+    Project2Image: { map: project2ImageMap },
+    Project3Image: { map: project3ImageMap },
+    Project4Image: { map: project4ImageMap },
+    Project1Extruding: color('')
+  }
 }

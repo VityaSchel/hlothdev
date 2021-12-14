@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { useLoader, useFrame } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { Raycaster } from 'three'
-import { useRedux, applyMaterial, rgbColor } from 'utils'
+import { useRedux, applyMaterial, color } from 'utils'
 import { animated, useSpring } from '@react-spring/three'
 
 const generateSwitches = () => [
@@ -76,7 +76,7 @@ function ShapeModel(props) {
       ref={object}
       object={shape.scene}
       {...applyMaterial(shape.scene, {
-        '': { opacity: shapeOpacity, ...rgbColor(shapeColor) }
+        '': { opacity: shapeOpacity, ...color(shapeColor) }
       })}
       {...props}
     />

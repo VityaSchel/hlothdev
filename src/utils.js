@@ -1,5 +1,6 @@
 import React from 'react'
 import store from './store'
+import hexRgb from 'hex-rgb'
 
 const easeOutCubic = progress => 1 - Math.pow(1 - progress, 3)
 
@@ -108,12 +109,27 @@ export const applyMaterial = (scene, materials) => {
   return props
 }
 
-export const rgbColor = color => {
-  return Object.fromEntries(
-    new Array(3)
-      .fill()
-      .map(
-        (_,i) => [`color-${['r','g','b'][i]}`, color]
-      )
-  )
+export const color = (colorOrRed, g, b) => {
+  if(g !== undefined && b !== undefined) {
+    return {
+      'color-r': colorOrRed,
+      'color-g': g,
+      'color-b': b,
+    }
+  } else if (typeof colorOrRed === 'string' && colorOrRed[0] === '#') {
+    const [r, g, b] = hexRgb(colorOrRed)
+    return {
+      'color-r': r,
+      'color-g': g,
+      'color-b': b,
+    }
+  } else {
+    return Object.fromEntries(
+      new Array(3)
+        .fill()
+        .map(
+          (_,i) => [`color-${['r','g','b'][i]}`, colorOrRed]
+        )
+    )
+  }
 }
