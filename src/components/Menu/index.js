@@ -30,7 +30,7 @@ export default function Menu() {
   )
 }
 
-const layouts = {
+export const layouts = {
   wide: {
     me: [1, 1],
     projects: [0, 0],
@@ -47,15 +47,16 @@ MenuItem.propTypes = { cardID: PropTypes.string }
 function MenuItem(props) {
   const card = useLoader(GLTFLoader, `/models/cards/card_${props.cardID}.glb`)
   const [isPointerOver, setIsPointerOver] = React.useState(false)
-  const { translation, theme, route } = useRedux(state => ({
+  const { translation, theme, route, layout } = useRedux(state => ({
     translation: state.translation,
     theme: state.theme,
-    route: state.route
+    route: state.route,
+    layout: state.layout
   }))
 
   const projectsCardStyles = useProjectsCardStyles(theme)
   const { rotation } = useSpring({
-    to: { rotation: route === props.cardID ? 3.2 : 0 },
+    to: { rotation: route === props.cardID ? 3.16 : 0 },
     config: { friction: 60 }
   })
 
@@ -68,7 +69,6 @@ function MenuItem(props) {
   })
 
   const wideCard = !['services', 'donate', 'about'].includes(props.cardID)
-  const layout = 'wide'
   let position = layouts[layout][props.cardID]
   position = [position[0]*2 - 3, position[1]*2 - 0.5]
   const textZ = -0.06
