@@ -13,15 +13,33 @@ const generateSwitches = () => [
 ]
 
 export default function BackgroundShapes() {
+  const { layout } = useRedux(state => ({
+    layout: state.layout
+  }))
+
+  const shapes = {
+    wide: {
+      icosphere: { x: 0.7, y: -0.6, z: 10 },
+      cube: { x: 0.3, y: -0.8 },
+      palka: { x: -0.3, y: 0.8 },
+      pyramid: { x: 0.7, y: 0.6 },
+      sphere: { x: -0.8, y: 0.5 },
+      tetris: { x: -0.75, y: -0.8, z: 12 },
+    },
+    tall: {
+      icosphere: { x: 0.65, y: -0.9, z: 12 },
+      cube: { x: 0, y: -0.9 },
+      palka: { x: 0, y: 0.9 },
+      pyramid: { x: 0.65, y: 0.9 },
+      sphere: { x: -0.8, y: 0.9 },
+      tetris: { x: -1, y: -0.9, z: 12 },
+    }
+  }
+
   return (
-    <>
-      <Shape url='/models/background/icosphere.glb' position={{ x: 0.7, y: -0.6, z: 10 }} />
-      <Shape url='/models/background/cube.glb' position={{ x: 0.3, y: -0.8 }} />
-      <Shape url='/models/background/palka.glb' position={{ x: -0.3, y: 0.8 }} />
-      <Shape url='/models/background/pyramid.glb' position={{ x: 0.7, y: 0.6 }} />
-      <Shape url='/models/background/sphere.glb' position={{ x: -0.8, y: 0.5 }} />
-      <Shape url='/models/background/tetris.glb' position={{ x: -0.75, y: -0.8, z: 12 }} />
-    </>
+    Object.entries(shapes[layout]).map(([url, position], i) =>
+      <Shape url={`/models/background/${url}.glb`} position={position} key={i} />
+    )
   )
 }
 

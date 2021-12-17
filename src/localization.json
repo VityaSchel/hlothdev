@@ -13,7 +13,15 @@
     "THEME_SWITCH_TO_DARK": "Включить темную тему",
     "CHANGE_LANGUAGE": "Сменить язык",
     "LANGUAGE_RUSSIAN": "Русский язык",
-    "LANGUAGE_ENGLISH": "Английский язык"
+    "LANGUAGE_ENGLISH": "Английский язык",
+    "BACK": "Вернуться назад в главное меню",
+    "PAGES_TITLES": {
+      "me": "Обо мне",
+      "projects": "Портфолио",
+      "services": "Услуги",
+      "donate": "Донаты",
+      "about": "О сайте"
+    }
   },
   "_DEFAULT_": {
     "CARD_ABOUT": "About",
@@ -29,6 +37,14 @@
     "THEME_SWITCH_TO_DARK": "Switch to dark theme",
     "CHANGE_LANGUAGE": "Change language",
     "LANGUAGE_RUSSIAN": "Russian language",
-    "LANGUAGE_ENGLISH": "English language"
+    "LANGUAGE_ENGLISH": "English language",
+    "BACK": "Return back to the main menu",
+    "PAGES_TITLES": {
+      "me": "About me",
+      "projects": "Portfolio",
+      "services": "Services",
+      "donate": "Donates",
+      "about": "About this web-site"
+    }
   }
 }

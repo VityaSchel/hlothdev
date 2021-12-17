@@ -1,11 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Canvas, useThree } from '@react-three/fiber'
-import { useSpring, animated } from '@react-spring/three'
+import { Canvas } from '@react-three/fiber'
 import { connect } from 'react-redux'
 import { useHotkeys } from 'react-hotkeys-hook'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
 import { createBrowserHistory } from 'history'
+import useMediaQuery from '@mui/material/useMediaQuery'
+import WebFont from 'webfontloader'
 
 import Camera from './components/Camera'
 import Light from './components/Light'
@@ -13,17 +14,33 @@ import BackgroundShapes from './components/BackgroundShapes'
 import Background from './components/Background'
 import Menu from './components/Menu'
 import SiteSettings from './components/SiteSettings'
+import CardsContent from './components/CardsContent'
 
-const lightTheme = createTheme({ palette: { mode: 'light' } })
-const darkTheme = createTheme({ palette: { mode: 'dark' } })
+const defaultTheme = {
+  typography: {
+    h4: {
+      fontFamily: 'Oswald, Arial, sans-serif',
+      fontWeight: 400
+    }
+  }
+}
+const lightTheme = createTheme({ palette: { mode: 'light' }, ...defaultTheme })
+const darkTheme = createTheme({ palette: { mode: 'dark' }, ...defaultTheme })
 
 export const history = createBrowserHistory()
+
+WebFont.load({
+  google: {
+    families: ['Oswald:400']
+  }
+})
 
 App.propTypes = {
   theme: PropTypes.string,
   cursor: PropTypes.object,
+  locale: PropTypes.string,
+  translation: PropTypes.object,
   dispatch: PropTypes.func,
-  locale: PropTypes.string
 }
 function App(props) {
   const spotLightTarget = React.useRef()
@@ -43,12 +60,20 @@ function App(props) {
 
   React.useEffect(() => {
     history.listen(({ action, location }) => {
-      if(action !== 'POP') return
-      props.dispatch({ type: 'route/pop', route: location.pathname.substring(1) })
+      const newLocation = location.pathname.substring(1)
+      if(action === 'POP') props.dispatch({ type: 'route/pop', route: newLocation })
     })
   }, [])
 
+  React.useEffect(() => {
+    const newLocation = window.location.pathname.substring(1)
+    document.title = `Viktor Shchelochkov (@hloth) ${newLocation === '' ? '' : `— ${props.translation.PAGES_TITLES?.[newLocation]}`}`
+  }, [props.translation, window.location.pathname])
+
   const raytracedCursor = Object.values(props.cursor).sort((a,b) => b.added - a.added)[0]?.cursor
+
+  const tallLayout = useMediaQuery('(max-width:768px)')
+  React.useEffect(() => props.dispatch({ type: 'layout/set', layout: tallLayout ? 'tall' : 'wide' }), [tallLayout])
 
   return (
     <ThemeProvider theme={props.theme === 'light' ? lightTheme : darkTheme}>
@@ -60,6 +85,7 @@ function App(props) {
         <Menu />
       </Canvas>
       <SiteSettings />
+      <CardsContent />
     </ThemeProvider>
   )
 }
@@ -67,5 +93,6 @@ function App(props) {
 export default connect(state => ({
   theme: state.theme,
   cursor: state.cursor,
-  locale: state.locale
+  locale: state.locale,
+  translation: state.translation
 }))(App)

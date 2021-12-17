@@ -37,9 +37,15 @@ export const layouts = {
     services: [1.97, 0],
     donate: [0, -1],
     about: [1, -1],
+    offset: [0, 0]
   },
   tall: {
-
+    me: [0, 1],
+    projects: [0, 0],
+    services: [1, -1],
+    donate: [0, -1],
+    about: [0, -2],
+    offset: [0.525, 0.5]
   }
 }
 
@@ -68,9 +74,10 @@ function MenuItem(props) {
     locationIconColor: theme === 'light' ? 0.05 : 1.5
   })
 
-  const wideCard = !['services', 'donate', 'about'].includes(props.cardID)
-  let position = layouts[layout][props.cardID]
-  position = [position[0]*2 - 3, position[1]*2 - 0.5]
+  const wideCard = ['me', 'projects'].includes(props.cardID)
+  let position = layouts[layout][props.cardID],
+    offset = layouts[layout].offset
+  position = [(position[0] + offset[0])*2 - 3, (position[1] + offset[1])*2 - 0.5]
   const textZ = -0.06
 
   const materials = applyMaterial(card.scene, {
