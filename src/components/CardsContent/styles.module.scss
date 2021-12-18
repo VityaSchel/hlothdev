@@ -13,5 +13,12 @@
 
   .title {
     width: 100%;
+    margin-bottom: 20px;
   }
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }

@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { Canvas } from '@react-three/fiber'
 import { connect } from 'react-redux'
 import { useHotkeys } from 'react-hotkeys-hook'
-import { ThemeProvider, createTheme } from '@mui/material/styles'
 import { createBrowserHistory } from 'history'
+import { ThemeProvider, createTheme } from '@mui/material/styles'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import WebFont from 'webfontloader'
 
@@ -24,8 +24,20 @@ const defaultTheme = {
     }
   }
 }
-const lightTheme = createTheme({ palette: { mode: 'light' }, ...defaultTheme })
-const darkTheme = createTheme({ palette: { mode: 'dark' }, ...defaultTheme })
+const lightTheme = createTheme({
+  palette: { mode: 'light' }, ...defaultTheme,
+  components: {
+    MuiTypography: { styleOverrides: { root: { color: '#000' } } },
+    MuiSvgIcon: { styleOverrides: { root: { color: '#000' } } },
+  }
+})
+const darkTheme = createTheme({
+  palette: { mode: 'dark' }, ...defaultTheme,
+  components: {
+    MuiTypography: { styleOverrides: { root: { color: '#fff' } } },
+    MuiSvgIcon: { styleOverrides: { root: { color: '#fff' } } },
+  }
+})
 
 export const history = createBrowserHistory()
 

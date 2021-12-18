@@ -1,0 +1,32 @@
+.card {
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 15px;
+
+  .avatar {
+    margin-right: 10px;
+  }
+
+  .content {
+    display: flex;
+
+    .title {
+
+    }
+
+    .subtitle {
+
+    }
+
+    .caption {
+
+    }
+
+  }
+
+  &.darkTheme {
+    background: linear-gradient(90deg, #2f2f2f, #2f2f2f);
+  }
+}

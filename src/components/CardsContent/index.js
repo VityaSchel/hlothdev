@@ -3,6 +3,7 @@ import styles from './styles.module.scss'
 import { animated, useSpring } from 'react-spring'
 import { connect } from 'react-redux'
 import { MdArrowBack } from 'react-icons/md'
+import Services from './services'
 
 import { useTheme } from '@mui/styles'
 import Grid from '@mui/material/Grid'
@@ -24,7 +25,7 @@ function CardsContent(props) {
   return (
     <animated.div className={styles.container}
       style={{
-        opacity,
+        opacity: opacity.interpolate(o => o > 0.5 ? (o-0.5)*2 : 0),
         display: opacity.interpolate(o => o === 0 ? 'none' : 'initial'),
         backgroundColor
       }}
@@ -41,6 +42,10 @@ function CardsContent(props) {
           </Typography>
         </Grid>
       </Grid>
+      {{
+        me: <></>,
+        services: <Services />
+      }[props.route]}
     </animated.div>
   )
 }
