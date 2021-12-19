@@ -1,32 +1,66 @@
-.card {
-  padding: 25px;
-  display: flex;
-  align-items: center;
-  background-color: #fff;
+.container {
   border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 30px 0 hsla(0, 0%, 0%, 0.2);
 
-  .avatar {
-    margin-right: 10px;
-  }
-
-  .content {
+  .card {
+    padding: 25px;
     display: flex;
+    gap: 20px;
+    align-items: center;
+    background-color: #fff;
+    text-decoration: none;
 
-    .title {
+    .avatar {
+      margin-right: 10px;
+      background-color: #eee;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 999px;
+      box-shadow: inset -2px -2px 8px 0 hsla(0, 0%, 0%, 0.2);
+
+      svg {
+        $size: 48px;
+        width: $size;
+        height: $size;
+      }
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+
+      .title {
+
+      }
+
+      .subtitle {
+
+      }
+
+      .caption {
+
+      }
 
     }
 
-    .subtitle {
-
+    .chevron > svg {
+      $size: 30px;
+      width: $size;
+      height: $size;
+      color: #fff;
     }
 
-    .caption {
+    &.darkTheme {
+      background: linear-gradient(125deg, #282828, #1e1e1e);
 
+      .avatar {
+        background: linear-gradient(139deg, hsl(0, 0%, 23%), hsl(0, 0%, 19%));
+        color: #fff;
+      }
     }
-
-  }
-
-  &.darkTheme {
-    background: linear-gradient(90deg, #2f2f2f, #2f2f2f);
   }
 }
