@@ -7,7 +7,7 @@ import { MdChevronRight } from 'react-icons/md'
 import Typography from '@mui/material/Typography'
 import ButtonBase from '@mui/material/ButtonBase'
 
-Card.propTypes = {
+Card.propTypes = CardContainer.propTypes = {
   children: PropTypes.node,
   avatar: PropTypes.node,
   title: PropTypes.string,
@@ -19,37 +19,56 @@ Card.propTypes = {
 
 function Card(props) {
   return (
-    <ButtonBase className={styles.container}>
-      <a className={cx(styles.card, { [styles.darkTheme]: props.theme === 'dark' })} href={props.link}>
-        <div className={styles.avatar}>
-          {props.avatar}
-        </div>
-        <div className={styles.content}>
-          <div className={styles.title}>
-            <Typography variant='h6' gutterBottom component='div'>
-              {props.title}
-            </Typography>
+    <>
+      {props.avatar && <div className={styles.avatar} style={props.avatarStyles}>
+        {props.avatar}
+      </div>}
+      <div className={[styles.content, props.className].join(' ')}>
+        {props.title && <div className={styles.title}>
+          <Typography variant='h6' gutterBottom component='div'>
+            {props.title}
+          </Typography>
+        </div>}
+        {props.subtitle && <div className={styles.subtitle}>
+          <Typography variant='subtitle1' gutterBottom component='div'>
+            {props.subtitle}
+          </Typography>
+        </div>}
+        {props.children}
+        {props.caption && <div className={styles.caption}>
+          <Typography variant='overline' gutterBottom display='block'>
+            {props.caption}
+          </Typography>
+        </div>}
+      </div>
+      {props.link && <div className={styles.chevron}>
+        <MdChevronRight />
+      </div>}
+    </>
+  )
+}
+
+function CardContainer(props) {
+  const containerClassName = cx(styles.card, { [styles.darkTheme]: props.theme === 'dark' })
+
+  return (
+    props.link
+      ? (
+        <ButtonBase className={styles.container}>
+          <a className={containerClassName} href={props.link}>
+            <Card {...props} />
+          </a>
+        </ButtonBase>
+      ) : (
+        <div className={styles.container}>
+          <div className={containerClassName}>
+            <Card {...props} />
           </div>
-          <div className={styles.subtitle}>
-            <Typography variant='subtitle1' gutterBottom component='div'>
-              {props.subtitle}
-            </Typography>
-          </div>
-          {props.children}
-          <div className={styles.caption}>
-            <Typography variant='overline' gutterBottom display='block'>
-              {props.caption}
-            </Typography>
-          </div>
         </div>
-        <div className={styles.chevron}>
-          <MdChevronRight />
-        </div>
-      </a>
-    </ButtonBase>
+      )
   )
 }
 
 export default connect(state => ({
   theme: state.theme
-}))(Card)
+}))(CardContainer)

@@ -1,0 +1,54 @@
+.me {
+  display: flex;
+  $gap: 15px;
+  gap: $gap;
+
+  .info {
+    flex: 1;
+
+    .about {
+      width: 100%;
+      line-height: 1.65;
+      display: flex;
+      align-items: center;
+
+      .text {
+        width: 560px;
+        font-size: calc(15/16*1rem);
+      }
+
+      ul {
+        li {
+          margin: 20px 0;
+        }
+      }
+    }
+  }
+
+  .rightCol {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+
+    .topRow {
+      display: flex;
+      gap: $gap;
+
+      .contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .link {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+      }
+    }
+
+    .experience {
+      flex: 1;
+    }
+  }
+}

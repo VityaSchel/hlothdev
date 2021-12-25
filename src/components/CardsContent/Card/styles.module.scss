@@ -4,6 +4,9 @@
   box-shadow: 0 5px 30px 0 hsla(0, 0%, 0%, 0.2);
 
   .card {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
     padding: 25px;
     display: flex;
     gap: 20px;
@@ -32,6 +35,7 @@
       display: flex;
       flex-direction: column;
       text-align: left;
+      flex: 1;
 
       .title {
 
@@ -54,12 +58,33 @@
       color: #fff;
     }
 
+    a {
+      color: #585858;
+      font-weight: 600;
+      font-size: 0.9em;
+      text-decoration: none;
+      transition: color 0.2s ease-in-out;
+
+      &:hover {
+        color: #000;
+      }
+    }
+
     &.darkTheme {
       background: linear-gradient(125deg, #282828, #1e1e1e);
+      color: #fff;
 
       .avatar {
         background: linear-gradient(139deg, hsl(0, 0%, 23%), hsl(0, 0%, 19%));
         color: #fff;
+      }
+
+      a {
+        color: #c5c5c5;
+
+        &:hover {
+          color: #fff;
+        }
       }
     }
   }

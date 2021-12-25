@@ -1,4 +1,4 @@
-import localization from '../localization.json'
+import localization from '../localization'
 
 export default function translationReducer(state = {}, action) {
   switch (action.type) {

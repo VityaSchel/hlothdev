@@ -3,6 +3,8 @@ import styles from './styles.module.scss'
 import { animated, useSpring } from 'react-spring'
 import { connect } from 'react-redux'
 import { MdArrowBack } from 'react-icons/md'
+
+import Me from './me'
 import Services from './services'
 
 import { useTheme } from '@mui/styles'
@@ -43,7 +45,7 @@ function CardsContent(props) {
         </Grid>
       </Grid>
       {{
-        me: <></>,
+        me: <Me />,
         services: <Services />
       }[props.route]}
     </animated.div>
