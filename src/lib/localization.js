@@ -78,6 +78,7 @@ export default {
         <li>Разработал несколько сайтов для российского блоггера-стримера, сайты (Президент Абоба, Гадзы Глада Валакаса) сейчас имеют сотни уникальных посетителей в месяц</li>
         <li>Разработал плагин Figma для быстрой верстки кросс-платформерных макетов для Joom</li>
         <li>Работал в команде над онлайн-школой английского языка на Electron.js</li>
+        <li>Разработал несколько проектов на Tauri, чтобы создать нативное кросс-платформенное приложение</li>
         <li>Разработал бота с панелью управления, установкой на сервер для канала AtmosSeries в телеграме, который имеет
             охват в десятки тысяч пользователей, затем мы продолжили работать и совместно создали сервер для игры
             Minecraft с сайтом с оплатой для него</li>
@@ -169,6 +170,7 @@ export default {
         <li>I have developed several websites for the Russian blogger and streamer (President Aboba, Gadzas of Glad Valakas), which now have hundreds of unique visitors per month</li>
         <li>I have developed Figma plugin for a fast cross-platform layout design for Joom</li>
         <li>I worked in a team on an online English school with the Electron.js app</li>
+        <li>I have developed several projects on Tauri, to create native cross-platforming app</li>
         <li>I have developed a bot with an admin control panel, installed on a customer's server for the AtmosSeries
             channel in Telegram, which has a reach of tens of thousands of users. Then we continued to work and created
             a server for the Minecraft video game and a website with payments processing</li>
