@@ -1,12 +1,30 @@
 import reactLogo from '../assets/images/technologiesLogos/react.svg'
-import reactNativeLogo from '../assets/rimages/technologiesLogos/eact-native.svg'
 import nextLogo from '../assets/images/technologiesLogos/next.svg'
+import reactNativeLogo from '../assets/rimages/technologiesLogos/react-native.svg'
+import preactLogo from '../assets/rimages/technologiesLogos/preact.svg'
 import createReactAppLogo from '../assets/images/technologiesLogos/create-react-app.svg'
 import viteLogo from '../assets/images/technologiesLogos/vite.svg'
 import javaScriptLogo from '../assets/images/technologiesLogos/javascript.svg'
 import mongoDBLogo from '../assets/images/technologiesLogos/mongodb.svg'
 import redisLogo from '../assets/images/technologiesLogos/redis.svg'
 import levelDBLogo from '../assets/images/technologiesLogos/leveldb.svg'
+import kubernetesLogo from '../assets/images/technologiesLogos/kubernetes.svg'
+import dockerLogo from '../assets/images/technologiesLogos/docker.svg'
+import nginxLogo from '../assets/images/technologiesLogos/nginx.svg'
+import apacheLogo from '../assets/images/technologiesLogos/apache.svg'
+import mysqlLogo from '../assets/images/technologiesLogos/mysql.svg'
+import postgresqlLogo from '../assets/images/technologiesLogos/postgresql.svg'
+import expressLogo from '../assets/images/technologiesLogos/postgresql.svg'
+import fastifyLogo from '../assets/images/technologiesLogos/fastify.svg'
+import reduxLogo from '../assets/images/technologiesLogos/redux.svg'
+import webpackLogo from '../assets/images/technologiesLogos/webpack.svg'
+import jestLogo from '../assets/images/technologiesLogos/jest.svg'
+import threejsLogo from '../assets/images/technologiesLogos/threejs.svg'
+import nodejsLogo from '../assets/images/technologiesLogos/nodejs.svg'
+import typescriptLogo from '../assets/images/technologiesLogos/typescript.svg'
+import babelLogo from '../assets/images/technologiesLogos/babel.svg'
+import materialUILogo from '../assets/images/technologiesLogos/material-ui.svg'
+import reactstrapLogo from '../assets/images/technologiesLogos/reactstrap.svg'
 
 export default {
   react: {
@@ -29,7 +47,7 @@ export default {
   },
   preact: {
     name: 'Preact',
-    logo: reactNativeLogo,
+    logo: preactLogo,
     startedLearning: new Date(2021, 12, 25),
     category: 'frontend'
   },
@@ -57,63 +75,63 @@ export default {
     startedLearning: new Date(2020, 5, 3),
     category: 'backend'
   },
-  Redis: {
+  redis: {
     name: 'Redis',
     logo: redisLogo,
     startedLearning: new Date(2021, 8, 26),
     category: 'backend'
   },
-  LevelDB: {
+  levelDB: {
     name: 'LevelDB',
     logo: levelDBLogo,
     startedLearning: new Date(2021, 5, 23),
     category: 'backend'
   },
-  Kubernetes: {
+  kubernetes: {
     name: 'Kubernetes',
     logo: kubernetesLogo,
     startedLearning: new Date(2021, 6, 13),
     category: 'backend'
   },
-  Docker: {
+  docker: {
     name: 'Docker',
     logo: dockerLogo,
     startedLearning: new Date(2021, 6, 13),
     category: 'backend'
   },
-  Nginx: {
+  nginx: {
     name: 'Nginx',
     logo: nginxLogo,
     startedLearning: new Date(2021, 11, 15),
     category: 'backend'
   },
-  Apache: {
+  apache: {
     name: 'Apache',
     logo: apacheLogo,
     startedLearning: new Date(2019, 4, 20),
     category: 'backend'
   },
-  MySQL: {
+  mySQL: {
     name: 'MySQL',
     logo: mysqlLogo,
     startedLearning: new Date(2019, 4, 26),
     category: 'backend'
   },
-  PostgreSQL: {
+  postgreSQL: {
     name: 'PostgreSQL',
     logo: postgresqlLogo,
     startedLearning: new Date(2020, 7, 2),
     category: 'backend'
   },
-  Express: {
+  express: {
     name: 'Express',
     logo: expressLogo,
     startedLearning: new Date(2020, 7, 27),
     category: 'backend'
   },
-  Fastify: {
+  fastify: {
     name: 'Fastify',
-    logo: mongoDBLogo,
+    logo: fastifyLogo,
     startedLearning: new Date(2021, 5, 23),
     category: 'backend'
   },
@@ -125,19 +143,19 @@ export default {
   },
   reduxToolkit: {
     name: 'redux-toolkit',
-    logo: reduxToolkitLogo,
+    logo: reduxLogo,
     startedLearning: new Date(2021, 12, 6),
     category: 'frontend'
   },
   reactRedux: {
     name: 'react-redux',
-    logo: reactReduxLogo,
+    logo: reduxLogo,
     startedLearning: new Date(2021, 9, 19),
     category: 'frontend'
   },
   rtkQuery: {
     name: 'rtk-query',
-    logo: rtkQueryLogo,
+    logo: reduxLogo,
     startedLearning: new Date(2021, 12, 6),
     category: 'frontend'
   },
@@ -161,7 +179,7 @@ export default {
   },
   reactThreeFiber: {
     name: 'react-three-fiber',
-    logo: reactThreeFiberLogo,
+    logo: threejsLogo,
     startedLearning: new Date(2021, 6, 5),
     category: 'frontend'
   },
