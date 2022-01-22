@@ -14,6 +14,11 @@ import lisNceLogo from '../assets/images/projectsLogos/lis-nce.png'
 import ogeGeneratorLogo from '../assets/images/projectsLogos/oge-generator.png'
 import fitVsFelLogo from '../assets/images/projectsLogos/fit-vs-fel.png'
 import czechLivingCostsLogo from '../assets/images/projectsLogos/czech-living-costs.png'
+import homirrorLogo from '../assets/images/projectsLogos/homirror.png'
+import niolySchoolLogo from '../assets/images/projectsLogos/niolyschool.png'
+import educoLogo from '../assets/images/projectsLogos/educo.png'
+import bitProtectLogo from '../assets/images/projectsLogos/bitprotect.png'
+import foodStuffLogo from '../assets/images/projectsLogos/foodstuff.png'
 
 // scope: 1=verysmall 2=small 3=average 4=big 5=huge
 
@@ -465,7 +470,8 @@ export default [
     description: 'Лендинг про интерьер для дома',
     public: true,
     hidden: false,
-    category: 'Веб-сайт'
+    category: 'Веб-сайт',
+    logo: homirrorLogo
   },
   {
     name: 'NiolySchool лендинг',
@@ -482,7 +488,8 @@ export default [
     description: 'Лендинг про обучение тильде (CMS)',
     public: true,
     hidden: false,
-    category: 'Веб-сайт'
+    category: 'Веб-сайт',
+    logo: niolySchoolLogo
   },
   {
     name: 'Educo лендинг',
@@ -499,7 +506,8 @@ export default [
     description: 'Лендинг про обучающую школу',
     public: true,
     hidden: false,
-    category: 'Веб-сайт'
+    category: 'Веб-сайт',
+    logo: educoLogo
   },
   {
     name: 'Bitprotect лендинг',
@@ -516,7 +524,8 @@ export default [
     description: 'Лендинг про кибербезопасность сайтов',
     public: true,
     hidden: false,
-    category: 'Веб-сайт'
+    category: 'Веб-сайт',
+    logo: bitProtectLogo
   },
   {
     name: 'FoodStuff лендинг',
@@ -533,7 +542,8 @@ export default [
     description: 'Лендинг про интернет магазин еды',
     public: true,
     hidden: false,
-    category: 'Веб-сайт'
+    category: 'Веб-сайт',
+    logo: foodStuffLogo
   },
   {
     name: 'Доброе утро и хорошего дня',
