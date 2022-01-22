@@ -23,6 +23,15 @@ import goodmorningBotLogo from '../assets/images/projectsLogos/goodmorning-bot.p
 import mcDonaldsOffersLogo from '../assets/images/projectsLogos/mcdonaldsoffersbot.png'
 import rusWordConBotLogo from '../assets/images/projectsLogos/ruswordconbot.png'
 import vityaschelSiteLogo from '../assets/images/projectsLogos/vityaschel.png'
+import igroruporLogo from '../assets/images/projectsLogos/igrorupor.png'
+import cleanerLogo from '../assets/images/projectsLogos/cleaner.png'
+import noSquidGameLogo from '../assets/images/projectsLogos/no-squid-game.png'
+import gettrDarkThemeLogo from '../assets/images/projectsLogos/gettr-dark-theme.png'
+import probablyKrolLogo from '../assets/images/projectsLogos/probablykrol-bot.jpeg'
+import skysmartHelperLogo from '../assets/images/projectsLogos/skysmart-helper.png'
+import mypronLogo from '../assets/images/projectsLogos/mypron.png'
+import panicButtonLogo from '../assets/images/projectsLogos/panic-button.png'
+import asursoCustomNamesLogo from '../assets/images/projectsLogos/asurso-custom-names.png'
 
 // scope: 1=verysmall 2=small 3=average 4=big 5=huge
 
@@ -827,7 +836,8 @@ export default [
     description: 'Бот Алисы, который афиширует новости из мира игр и может угадать игру по описанию',
     public: true,
     hidden: false,
-    category: 'Бот Алисы'
+    category: 'Бот Алисы',
+    logo: igroruporLogo
   },
   {
     name: 'Уборщица',
@@ -844,7 +854,8 @@ export default [
     description: 'Расширение удаляющее сообщения Кирилла Смирнова из бесед ВКонтакте',
     public: true,
     hidden: false,
-    category: 'Расширение Chrome'
+    category: 'Расширение Chrome',
+    logo: cleanerLogo
   },
   {
     name: 'No Squid Game',
@@ -860,7 +871,8 @@ export default [
     description: 'Расширение, которое удаляет все новости и видео об Игре в Кальмара',
     public: true,
     hidden: false,
-    category: 'Расширение Chrome'
+    category: 'Расширение Chrome',
+    logo: noSquidGameLogo
   },
   {
     name: 'Stigfinnare 3D adventure',
@@ -925,7 +937,8 @@ export default [
     description: 'Расширение для добавления темной темы в соц. сеть Gettr',
     public: false,
     hidden: false,
-    category: 'Веб-сайт'
+    category: 'Веб-сайт',
+    logo: gettrDarkThemeLogo
   },
   {
     name: 'ProbablyKrolBot',
@@ -942,7 +955,8 @@ export default [
     description: 'Бот в телеграме отправляющий гифки кролика в чат по текстовому запросу',
     public: true,
     hidden: false,
-    category: 'Бот Telegram'
+    category: 'Бот Telegram',
+    logo: probablyKrolLogo
   },
   {
     name: 'react-graphic-key',
@@ -1026,7 +1040,8 @@ export default [
     description: 'Помощник к сайту SkySmart чтобы списывать было легче',
     public: true,
     hidden: false,
-    category: 'Расширение Chrome'
+    category: 'Расширение Chrome',
+    logo: skysmartHelperLogo
   },
   {
     name: 'mypron',
@@ -1046,7 +1061,8 @@ export default [
     description: 'Нативное приложение, позволяющее находить торренты с контентом для взрослых',
     public: false,
     hidden: false,
-    category: 'Нативное приложение'
+    category: 'Нативное приложение',
+    logo: mypronLogo
   },
   {
     name: 'Panic Button',
@@ -1063,7 +1079,8 @@ export default [
     description: 'Сайт, где женщина громко кричит, если нажать на кнопку (первый сайт на React)',
     public: true,
     hidden: false,
-    category: 'Веб-сайт'
+    category: 'Веб-сайт',
+    logo: panicButtonLogo
   },
   {
     name: 'АСУ РСО кастомные названия предметов',
@@ -1079,7 +1096,8 @@ export default [
     description: 'Расширение создающее свои названия для предметов в асу рсо',
     public: false,
     hidden: false,
-    category: 'Расширение Chrome'
+    category: 'Расширение Chrome',
+    logo: asursoCustomNamesLogo
   },
   {
     name: 'hiddenID_5',
