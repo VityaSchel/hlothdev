@@ -32,6 +32,11 @@ import skysmartHelperLogo from '../assets/images/projectsLogos/skysmart-helper.p
 import mypronLogo from '../assets/images/projectsLogos/mypron.png'
 import panicButtonLogo from '../assets/images/projectsLogos/panic-button.png'
 import asursoCustomNamesLogo from '../assets/images/projectsLogos/asurso-custom-names.png'
+import uselessCanvasBasedTextEditorLogo from '../assets/images/projectsLogos/useless-canvas-based-text-editor.png'
+import wikipediaSpeedrunLogo from '../assets/images/projectsLogos/wikipedia-speedrun.png'
+import py3ExecLogo from '../assets/images/projectsLogos/py3exec.png'
+import roflCallsOrderWebsiteLogo from '../assets/images/projectsLogos/rofl-calls-order-website.png'
+import wantToBeAProgrammerLogo from '../assets/images/projectsLogos/want-to-be-a-programmer.png'
 
 // scope: 1=verysmall 2=small 3=average 4=big 5=huge
 
@@ -1117,22 +1122,6 @@ export default [
     category: 'Веб-сайт'
   },
   {
-    name: 'Useless canvas based editor',
-    stack: [
-      'Vanilla JS'
-    ],
-    supported: false,
-    dates: {
-      devStart: '2020',
-      release: '2020'
-    },
-    scope: 2,
-    description: 'Редактор текста на основе canvas',
-    public: true,
-    hidden: false,
-    category: 'Веб-сайт'
-  },
-  {
     name: 'Wikipedia Speedrun',
     stack: [
       'Vanilla JS',
@@ -1147,7 +1136,8 @@ export default [
     description: 'Игра про спидраннинг википедии (от случайной статьи до гитлера)',
     public: true,
     hidden: false,
-    category: 'Веб-сайт'
+    category: 'Веб-сайт',
+    logo: wikipediaSpeedrunLogo
   },
   {
     name: 'Py3Exec',
@@ -1166,7 +1156,8 @@ export default [
     description: 'Сайт для тренировки написания кода на питоне, решая задачи',
     public: true,
     hidden: false,
-    category: 'Веб-сайт'
+    category: 'Веб-сайт',
+    logo: py3ExecLogo
   },
   {
     name: 'Dragon Quests',
@@ -1199,7 +1190,8 @@ export default [
     description: 'Сайт для заказа пранк звонков от Глада Валакаса',
     public: true,
     hidden: false,
-    category: 'Веб-сайт'
+    category: 'Веб-сайт',
+    logo: roflCallsOrderWebsiteLogo
   },
   {
     name: 'Stigfinnare Stats',
@@ -1218,7 +1210,8 @@ export default [
     description: 'Статистика из моей игры Stigfinnare',
     public: true,
     hidden: false,
-    category: 'Веб-сайт'
+    category: 'Веб-сайт',
+    logo: wikipediaSpeedrunLogo
   },
   {
     name: 'Хочешь стать программистом?',
@@ -1234,7 +1227,8 @@ export default [
     description: 'Сайт мем про "Хочешь стать программистом?"',
     public: false,
     hidden: false,
-    category: 'Веб-сайт'
+    category: 'Веб-сайт',
+    logo: wantToBeAProgrammerLogo
   },
   {
     name: 'bridgedb-tgbot',
@@ -1290,6 +1284,23 @@ export default [
     public: true,
     hidden: false,
     category: 'Веб-сайт'
+  },
+  {
+    name: 'Useless canvas based editor',
+    stack: [
+      'Vanilla JS'
+    ],
+    supported: false,
+    dates: {
+      devStart: '2020',
+      release: '2020'
+    },
+    scope: 2,
+    description: 'Редактор текста на основе canvas',
+    public: true,
+    hidden: false,
+    category: 'Веб-сайт',
+    logo: uselessCanvasBasedTextEditorLogo
   },
   {
     name: 'StreamDO',
