@@ -25,6 +25,13 @@ import typescriptLogo from '../assets/images/technologiesLogos/typescript.svg'
 import babelLogo from '../assets/images/technologiesLogos/babel.svg'
 import materialUILogo from '../assets/images/technologiesLogos/material-ui.svg'
 import reactstrapLogo from '../assets/images/technologiesLogos/reactstrap.svg'
+import telegramBotAPILogo from '../assets/images/technologiesLogos/telegram.svg'
+
+// How to count projects for each technology:
+// 1. Go to loop with each project, continue if any of these conditions meet:
+// 2. If project stack includes key of technology
+// 3. If project stack includes name of technology
+// 4. If project stack includes any of aliases of technology
 
 export default {
   react: {
@@ -43,7 +50,8 @@ export default {
     name: 'React Native',
     logo: reactNativeLogo,
     startedLearning: new Date(2021, 8, 30),
-    category: 'mobile'
+    category: 'mobile',
+    aliases: ['react-native']
   },
   preact: {
     name: 'Preact',
@@ -55,7 +63,8 @@ export default {
     name: 'Create React App',
     logo: createReactAppLogo,
     startedLearning: new Date(2021, 8, 30),
-    category: 'frontend'
+    category: 'frontend',
+    aliases: ['React']
   },
   vite: {
     name: 'Vite',
@@ -67,9 +76,10 @@ export default {
     name: 'JavaScript',
     logo: javaScriptLogo,
     startedLearning: new Date(2020, 4, 2),
-    category: 'frontend'
+    category: 'frontend',
+    aliases: ['Vanilla JS', 'React', 'NodeJS']
   },
-  mongodb: {
+  mongoDB: {
     name: 'MongoDB',
     logo: mongoDBLogo,
     startedLearning: new Date(2020, 5, 3),
@@ -151,7 +161,8 @@ export default {
     name: 'react-redux',
     logo: reduxLogo,
     startedLearning: new Date(2021, 9, 19),
-    category: 'frontend'
+    category: 'frontend',
+    aliases: ['redux']
   },
   rtkQuery: {
     name: 'rtk-query',
@@ -163,7 +174,8 @@ export default {
     name: 'webpack',
     logo: webpackLogo,
     startedLearning: new Date(2021, 2, 1),
-    category: 'frontend'
+    category: 'frontend',
+    aliases: ['React']
   },
   jest: {
     name: 'Jest',
@@ -181,7 +193,8 @@ export default {
     name: 'react-three-fiber',
     logo: threejsLogo,
     startedLearning: new Date(2021, 6, 5),
-    category: 'frontend'
+    category: 'frontend',
+    aliases: ['ThreeJS']
   },
   nodejs: {
     name: 'nodejs',
@@ -199,18 +212,26 @@ export default {
     name: 'babel',
     logo: babelLogo,
     startedLearning: new Date(2021, 2, 2),
-    category: 'backend'
+    category: 'backend',
+    aliases: ['React']
   },
   materialUI: {
     name: 'Material UI',
     logo: materialUILogo,
     startedLearning: new Date(2021, 2, 24),
-    category: 'frontend'
+    category: 'frontend',
+    aliases: ['MUI']
   },
   reactstrap: {
     name: 'Reactstrap',
     logo: reactstrapLogo,
     startedLearning: new Date(2021, 4, 5),
     category: 'frontend'
+  },
+  telegramBotAPI: {
+    name: 'Telegram Bot API',
+    logo: telegramBotAPILogo,
+    startedLearning: new Date(2018, 7, 14),
+    category: 'backend'
   },
 }

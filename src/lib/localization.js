@@ -71,6 +71,9 @@ export default {
         браузеров, плагины для Figma, инструменты для разработчиков, такие как библиотеки и другие полезные инструменты.
         Сейчас я учу Kubernetes, знаю <b>Docker</b> и по вашему желанию создать образ/контейнер вместо архива с проектом, для
         быстрого масштабирования и развертки между серверами.
+        Также в последнее время я начал увлекаться врапперами API, скрин-скрейпингом и парсингом данных: я создал уже несколько
+        библиотек JS для работы с закрытым API некоторых сайтов, причем они включают в себя как работу с голым HTML, так и
+        работу напрямую с SignalR.
       </p>
 
       <h3>Опыт работы</h3>
@@ -163,6 +166,9 @@ export default {
         browser extensions, plugins for Figma, developer tools such as libraries, and other useful instruments. Now I am
         learning Kubernetes, already have significant experience of working with <b>Docker</b>, and, at your request, I could
         create a container instead of a ZIP archive with a project, for quick scaling and deployment between your servers.
+        Also lately I've started getting into API wrappers, screen-scraping and data parsing: I've already created several
+        JS libraries to work with the closed API of some websites, and they include working with bare HTML, working with
+        SignalR directly and other things.
       </p>
 
       <h3>Work Experience</h3>
