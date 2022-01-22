@@ -19,6 +19,10 @@ import niolySchoolLogo from '../assets/images/projectsLogos/niolyschool.png'
 import educoLogo from '../assets/images/projectsLogos/educo.png'
 import bitProtectLogo from '../assets/images/projectsLogos/bitprotect.png'
 import foodStuffLogo from '../assets/images/projectsLogos/foodstuff.png'
+import goodmorningBotLogo from '../assets/images/projectsLogos/goodmorning-bot.png'
+import mcDonaldsOffersLogo from '../assets/images/projectsLogos/mcdonaldsoffersbot.png'
+import rusWordConBotLogo from '../assets/images/projectsLogos/ruswordconbot.png'
+import vityaschelSiteLogo from '../assets/images/projectsLogos/vityaschel.png'
 
 // scope: 1=verysmall 2=small 3=average 4=big 5=huge
 
@@ -561,7 +565,8 @@ export default [
     description: 'Бот, отправляющий каждое утро гифку с добрым утром',
     public: true,
     hidden: false,
-    category: 'Бот ВКонтакте'
+    category: 'Бот ВКонтакте',
+    logo: goodmorningBotLogo
   },
   {
     name: 'McDonaldsOffersBot',
@@ -578,7 +583,8 @@ export default [
     description: 'Бот, который парсит сайт макдональдса и пишет в чат об акциях',
     public: true,
     hidden: false,
-    category: 'Бот Telegram'
+    category: 'Бот Telegram',
+    logo: mcDonaldsOffersLogo
   },
   {
     name: 'RussianWordConjugationBot',
@@ -599,7 +605,8 @@ export default [
     description: 'Бот для тренировки спряжений, осенью 2021 был переписан для использования LevelDB и Fastify вместо MongoDB и Express',
     public: true,
     hidden: false,
-    category: 'Бот Telegram'
+    category: 'Бот Telegram',
+    logo: rusWordConBotLogo
   },
   {
     name: 'hiddenID_7',
@@ -636,7 +643,8 @@ export default [
     category: 'Веб-сайт',
     tags: [
       'personalsite'
-    ]
+    ],
+    logo: vityaschelSiteLogo
   },
   {
     name: 'VityaSchel Site: terminal версия (hostinger)',
@@ -655,7 +663,8 @@ export default [
     category: 'Веб-сайт',
     tags: [
       'personalsite'
-    ]
+    ],
+    logo: vityaschelSiteLogo
   },
   {
     name: 'VityaSchel Site: карта проектов',
@@ -674,7 +683,8 @@ export default [
     category: 'Веб-сайт',
     tags: [
       'personalsite'
-    ]
+    ],
+    logo: vityaschelSiteLogo
   },
   {
     name: 'VityaSchel Site: лаймовая галлерея',
@@ -694,7 +704,8 @@ export default [
     category: 'Веб-сайт',
     tags: [
       'personalsite'
-    ]
+    ],
+    logo: vityaschelSiteLogo
   },
   {
     name: 'VityaSchel Site: космический параллакс',
@@ -714,7 +725,8 @@ export default [
     category: 'Веб-сайт',
     tags: [
       'personalsite'
-    ]
+    ],
+    logo: vityaschelSiteLogo
   },
   {
     name: 'VityaSchel Site: hloth.dev с 3D-фигурами',
@@ -737,7 +749,8 @@ export default [
     category: 'Веб-сайт',
     tags: [
       'personalsite'
-    ]
+    ],
+    logo: vityaschelSiteLogo
   },
   {
     name: 'hiddenID_2',
