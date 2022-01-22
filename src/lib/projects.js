@@ -7,6 +7,13 @@ import rJolygolfLogo from '../assets/images/projectsLogos/rJolygolf.png'
 import shizonyanLogo from '../assets/images/projectsLogos/shizonyan.png'
 import atmosCraftLogo from '../assets/images/projectsLogos/atmoscraft.png'
 import samaracoinLogo from '../assets/images/projectsLogos/samaracoin.png'
+import atmosSeriesBotLogo from '../assets/images/projectsLogos/atmosseriesbot.png'
+import mashaSimulatorLogo from '../assets/images/projectsLogos/masha-simulator.png'
+import remafiaLogo from '../assets/images/projectsLogos/remafia.png'
+import lisNceLogo from '../assets/images/projectsLogos/lis-nce.png'
+import ogeGeneratorLogo from '../assets/images/projectsLogos/oge-generator.png'
+import fitVsFelLogo from '../assets/images/projectsLogos/fit-vs-fel.png'
+import czechLivingCostsLogo from '../assets/images/projectsLogos/czech-living-costs.png'
 
 // scope: 1=verysmall 2=small 3=average 4=big 5=huge
 
@@ -283,7 +290,8 @@ export default [
     category: 'Бот Telegram',
     tags: [
       'order'
-    ]
+    ],
+    logo: atmosSeriesBotLogo
   },
   {
     name: 'Симулятор Маши из GoStudy',
@@ -301,7 +309,8 @@ export default [
     description: 'Мобильная игра про Машу из GoStudy, которая шуршит микрофоном и мешает стриму',
     public: true,
     hidden: false,
-    category: 'Игра Android'
+    category: 'Игра Android',
+    logo: mashaSimulatorLogo
   },
   {
     name: 'Ремафия',
@@ -323,7 +332,8 @@ export default [
     description: 'Карточная игра Мафия, но онлайн. Ремейк легендарной Мафии Онлайн на React Native. Задумывалась как конкурент, который поглотит Мафию Онлайн и Мафию GO',
     public: true,
     hidden: false,
-    category: 'Игра Android'
+    category: 'Игра Android',
+    logo: remafiaLogo
   },
   {
     name: 'LIS NCE',
@@ -347,7 +357,8 @@ export default [
     category: 'Веб-сайт',
     tags: [
       'order'
-    ]
+    ],
+    logo: lisNceLogo
   },
   {
     name: 'destream-api',
@@ -399,7 +410,8 @@ export default [
     description: 'Генератор вариантов огэ по информатике 2021',
     public: true,
     hidden: false,
-    category: 'Веб-сайт'
+    category: 'Веб-сайт',
+    logo: ogeGeneratorLogo
   },
   {
     name: 'FIT vs FEL',
@@ -417,7 +429,8 @@ export default [
     description: 'Шуточный сайт, где можно покрутить колесо удачи и узнать куда поступать (всегда будет ČZU)',
     public: true,
     hidden: false,
-    category: 'Веб-сайт'
+    category: 'Веб-сайт',
+    logo: fitVsFelLogo
   },
   {
     name: 'czech-living-costs',
@@ -434,7 +447,8 @@ export default [
     description: 'Шуточный сайт, где можно посчитать, сколько стоит учеба в Чехии для студента + расходы',
     public: true,
     hidden: false,
-    category: 'Веб-сайт'
+    category: 'Веб-сайт',
+    logo: czechLivingCostsLogo
   },
   {
     name: 'Homirror лендинг',
