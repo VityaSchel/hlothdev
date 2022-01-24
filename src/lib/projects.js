@@ -58,7 +58,8 @@ export default [
     public: true,
     hidden: false,
     category: 'Игра Windows 10',
-    logo: stigfinnareLogo
+    logo: stigfinnareLogo,
+    links: ['https://stigfinnare.utidteam.com/']
   },
   {
     name: 'Roller-ride',
@@ -76,7 +77,8 @@ export default [
     public: true,
     hidden: false,
     category: 'Игра Android',
-    logo: rollerRideLogo
+    logo: rollerRideLogo,
+    links: ['https://play.google.com/store/apps/details?id=com.VityaSchel.RollerRide']
   },
   {
     name: 'АБОБА 2024 Кандидат в президенты',
@@ -95,7 +97,8 @@ export default [
     public: true,
     hidden: false,
     category: 'Веб-сайт',
-    logo: abobaLogo
+    logo: abobaLogo,
+    links: ['https://aboba.utidteam.com/', 'https://freelance.habr.com/projects/244049']
   },
   {
     name: 'Гадзы Глада Валакаса (1.0)',
@@ -114,7 +117,8 @@ export default [
     public: true,
     hidden: false,
     category: 'Веб-сайт',
-    logo: gadzasOldLogo
+    logo: gadzasOldLogo,
+    links: ['https://godzilla.utidteam.com/']
   },
   {
     name: 'Гадзы Глада Валакаса (2.0)',
@@ -131,7 +135,8 @@ export default [
     public: true,
     hidden: false,
     category: 'Веб-сайт',
-    logo: gadzasNewLogo
+    logo: gadzasNewLogo,
+    links: ['https://godzilla.utidteam.com/']
   },
   {
     name: 'SIPacker',
@@ -149,7 +154,8 @@ export default [
     description: 'Онлайн-редактор паков для игры SiGame (Своя Игра)',
     public: true,
     hidden: false,
-    category: 'Веб-сайт'
+    category: 'Веб-сайт',
+    links: ['https://github.com/VityaSchel/SIPacker']
   },
   {
     name: 'r/Jolygolf',
@@ -167,7 +173,8 @@ export default [
     public: true,
     hidden: false,
     category: 'Бот Reddit',
-    logo: rJolygolfLogo
+    logo: rJolygolfLogo,
+    links: ['https://github.com/VityaSchel/RedditJolygolfBot', 'https://freelance.habr.com/projects/216865']
   },
   {
     name: 'Шизоньян',
@@ -187,7 +194,8 @@ export default [
     public: true,
     hidden: false,
     category: 'Веб-сайт',
-    logo: shizonyanLogo
+    logo: shizonyanLogo,
+    links: ['https://shizonyan.utidteam.com/']
   },
   {
     name: 'AtmosCraft',
@@ -210,7 +218,8 @@ export default [
     tags: [
       'order'
     ],
-    logo: atmosCraftLogo
+    logo: atmosCraftLogo,
+    links: ['https://freelance.habr.com/projects/249937']
   },
   {
     name: 'JSwitcher',
@@ -233,7 +242,8 @@ export default [
     category: 'Плагин Figma',
     tags: [
       'order'
-    ]
+    ],
+    links: ['https://freelance.habr.com/projects/259285']
   },
   {
     name: 'SAMARACOIN',
@@ -252,7 +262,8 @@ export default [
     public: true,
     hidden: false,
     category: 'Бот Telegram',
-    logo: samaracoinLogo
+    logo: samaracoinLogo,
+    links: ['https://t.me/samaracoinbot']
   },
   {
     name: 'asurso',
@@ -270,7 +281,8 @@ export default [
     description: 'Библиотека для взаимодействия с закрытым API сайта АСУ РСО (электронный дневник)',
     public: true,
     hidden: false,
-    category: 'Библиотека js'
+    category: 'Библиотека js',
+    links: ['https://www.npmjs.com/package/asurso']
   },
   {
     name: 'reuploader',
@@ -291,7 +303,8 @@ export default [
     description: 'Инструмент для автоматической записи и перезалива стримов с YouTube',
     public: true,
     hidden: false,
-    category: 'Приложение'
+    category: 'Приложение',
+    links: ['https://github.com/VityaSchel/reuploader']
   },
   {
     name: 'AtmosSeriesBot',
@@ -314,7 +327,8 @@ export default [
     tags: [
       'order'
     ],
-    logo: atmosSeriesBotLogo
+    logo: atmosSeriesBotLogo,
+    links: ['https://freelance.habr.com/projects/244063']
   },
   {
     name: 'Симулятор Маши из GoStudy',
@@ -333,7 +347,8 @@ export default [
     public: true,
     hidden: false,
     category: 'Игра Android',
-    logo: mashaSimulatorLogo
+    logo: mashaSimulatorLogo,
+    links: ['https://play.google.com/store/apps/details?id=com.VityaSchel.GoStudyMashaSimulator']
   },
   {
     name: 'Ремафия',
@@ -381,7 +396,8 @@ export default [
     tags: [
       'order'
     ],
-    logo: lisNceLogo
+    logo: lisNceLogo,
+    links: ['https://freelance.habr.com/projects/259287']
   },
   {
     name: 'destream-api',
@@ -397,7 +413,8 @@ export default [
     description: 'Враппер для API DeStream на NodeJS',
     public: true,
     hidden: false,
-    category: 'Библиотека js'
+    category: 'Библиотека js',
+    links: ['https://www.npmjs.com/package/destream-api']
   },
   {
     name: 'alerts-api',
@@ -414,7 +431,8 @@ export default [
     description: 'Враппер для API DonationAlerts на NodeJS',
     public: true,
     hidden: false,
-    category: 'Библиотека js'
+    category: 'Библиотека js',
+    links: ['https://www.npmjs.com/package/alerts-api']
   },
   {
     name: 'ОГЭ Генератор',
@@ -434,7 +452,8 @@ export default [
     public: true,
     hidden: false,
     category: 'Веб-сайт',
-    logo: ogeGeneratorLogo
+    logo: ogeGeneratorLogo,
+    links: ['https://oge.utidteam.com/']
   },
   {
     name: 'FIT vs FEL',
@@ -453,7 +472,8 @@ export default [
     public: true,
     hidden: false,
     category: 'Веб-сайт',
-    logo: fitVsFelLogo
+    logo: fitVsFelLogo,
+    links: ['https://utidteam.com/FITvsFEL/']
   },
   {
     name: 'czech-living-costs',
@@ -471,7 +491,8 @@ export default [
     public: true,
     hidden: false,
     category: 'Веб-сайт',
-    logo: czechLivingCostsLogo
+    logo: czechLivingCostsLogo,
+    links: ['https://utidteam.com/gostudy/']
   },
   {
     name: 'Homirror лендинг',
@@ -489,7 +510,8 @@ export default [
     public: true,
     hidden: false,
     category: 'Веб-сайт',
-    logo: homirrorLogo
+    logo: homirrorLogo,
+    links: ['https://portfolio.utidteam.com/homirror']
   },
   {
     name: 'NiolySchool лендинг',
@@ -507,7 +529,8 @@ export default [
     public: true,
     hidden: false,
     category: 'Веб-сайт',
-    logo: niolySchoolLogo
+    logo: niolySchoolLogo,
+    links: ['https://portfolio.utidteam.com/niolyschool']
   },
   {
     name: 'Educo лендинг',
@@ -525,7 +548,8 @@ export default [
     public: true,
     hidden: false,
     category: 'Веб-сайт',
-    logo: educoLogo
+    logo: educoLogo,
+    links: ['https://portfolio.utidteam.com/educo']
   },
   {
     name: 'Bitprotect лендинг',
@@ -543,7 +567,8 @@ export default [
     public: true,
     hidden: false,
     category: 'Веб-сайт',
-    logo: bitProtectLogo
+    logo: bitProtectLogo,
+    links: ['https://portfolio.utidteam.com/bitprotect']
   },
   {
     name: 'FoodStuff лендинг',
@@ -561,7 +586,8 @@ export default [
     public: true,
     hidden: false,
     category: 'Веб-сайт',
-    logo: foodStuffLogo
+    logo: foodStuffLogo,
+    links: ['https://portfolio.utidteam.com/foodstuff']
   },
   {
     name: 'Доброе утро и хорошего дня',
@@ -580,7 +606,8 @@ export default [
     public: true,
     hidden: false,
     category: 'Бот ВКонтакте',
-    logo: goodmorningBotLogo
+    logo: goodmorningBotLogo,
+    links: ['https://github.com/VityaSchel/goodmorning-bot']
   },
   {
     name: 'McDonaldsOffersBot',
@@ -598,7 +625,8 @@ export default [
     public: true,
     hidden: false,
     category: 'Бот Telegram',
-    logo: mcDonaldsOffersLogo
+    logo: mcDonaldsOffersLogo,
+    links: ['https://t.me/macsamarabot']
   },
   {
     name: 'RussianWordConjugationBot',
@@ -620,7 +648,8 @@ export default [
     public: true,
     hidden: false,
     category: 'Бот Telegram',
-    logo: rusWordConBotLogo
+    logo: rusWordConBotLogo,
+    links: ['https://t.me/ruswordconbot']
   },
   {
     name: 'hiddenID_7',
@@ -740,7 +769,8 @@ export default [
     tags: [
       'personalsite'
     ],
-    logo: vityaschelSiteLogo
+    logo: vityaschelSiteLogo,
+    links: ['https://vityaschel.utidteam.com']
   },
   {
     name: 'VityaSchel Site: hloth.dev с 3D-фигурами',
@@ -764,7 +794,8 @@ export default [
     tags: [
       'personalsite'
     ],
-    logo: vityaschelSiteLogo
+    logo: vityaschelSiteLogo,
+    links: ['https://hloth.dev']
   },
   {
     name: 'hiddenID_2',
@@ -807,7 +838,8 @@ export default [
     description: 'Мой первый даркнет-сайт и первый проект на Vite с рулеткой CS:GO',
     public: true,
     hidden: false,
-    category: 'Веб-сайт Tor Hidden Services'
+    category: 'Веб-сайт Tor Hidden Services',
+    links: ['https://github.com/VityaSchel/vitejs-csgo-case-simulator']
   },
   {
     name: 'random-steam-avatar',
@@ -823,7 +855,8 @@ export default [
     description: 'Библиотека для получения случайной аватарки из steam',
     public: true,
     hidden: false,
-    category: 'Библиотека js'
+    category: 'Библиотека js',
+    links: ['https://www.npmjs.com/package/random-steam-avatar']
   },
   {
     name: 'Бот Алисы: Игрорупор',
@@ -860,7 +893,8 @@ export default [
     public: true,
     hidden: false,
     category: 'Расширение Chrome',
-    logo: cleanerLogo
+    logo: cleanerLogo,
+    links: ['https://chrome.google.com/webstore/detail/%D1%83%D0%B1%D0%BE%D1%80%D1%89%D0%B8%D1%86%D0%B0/pbkimmanmhebbfdphpkjpdkolihanmah?hl=ru']
   },
   {
     name: 'No Squid Game',
@@ -877,7 +911,8 @@ export default [
     public: true,
     hidden: false,
     category: 'Расширение Chrome',
-    logo: noSquidGameLogo
+    logo: noSquidGameLogo,
+    links: ['https://chrome.google.com/webstore/detail/no-squid-game/enmgknhljpalgmfclkinhglkkpgjogdd']
   },
   {
     name: 'Stigfinnare 3D adventure',
@@ -925,7 +960,8 @@ export default [
     description: 'Сайт где надо угадать чья цитата: соловьева или гитлера',
     public: true,
     hidden: false,
-    category: 'Веб-сайт'
+    category: 'Веб-сайт',
+    links: ['https://github.com/VityaSchel/vladimir-solovyev']
   },
   {
     name: 'Gettr Dark Theme',
@@ -943,7 +979,8 @@ export default [
     public: false,
     hidden: false,
     category: 'Веб-сайт',
-    logo: gettrDarkThemeLogo
+    logo: gettrDarkThemeLogo,
+    links: ['https://chrome.google.com/webstore/detail/gettr-dark-theme/jcjmdpdahejbjiopgedoljllckbmmekc']
   },
   {
     name: 'ProbablyKrolBot',
@@ -961,7 +998,8 @@ export default [
     public: true,
     hidden: false,
     category: 'Бот Telegram',
-    logo: probablyKrolLogo
+    logo: probablyKrolLogo,
+    links: ['https://t.me/probablykrolbot']
   },
   {
     name: 'react-graphic-key',
@@ -977,7 +1015,8 @@ export default [
     description: 'Компонент графического ключа для реакта',
     public: true,
     hidden: false,
-    category: 'Библиотека js'
+    category: 'Библиотека js',
+    links: ['https://www.npmjs.com/package/react-graphic-key']
   },
   {
     name: 'Навальный арестован?',
@@ -995,7 +1034,8 @@ export default [
     description: 'Сайт где написано, арестован ли Алексей Навальный',
     public: true,
     hidden: false,
-    category: 'Бот Telegram'
+    category: 'Бот Telegram',
+    links: ['https://navalnyarrested.utidteam.com/']
   },
   {
     name: '#СвободуНавальному стрим',
@@ -1012,7 +1052,8 @@ export default [
     description: 'Стрим, длившийся неделю, где писалось кол-во зарегистрированных людей на митинг 21 апреля 2021',
     public: true,
     hidden: false,
-    category: 'Стрим'
+    category: 'Стрим',
+    links: ['https://www.youtube.com/watch?v=eUpy5KzF8XY&list=PLog2oYXiWbm0lYL_q86UIT2FzfrmDm1cT']
   },
   {
     name: 'Ruscript',
@@ -1028,7 +1069,8 @@ export default [
     description: 'Псевдо язык на JS полностью на русском языке',
     public: true,
     hidden: false,
-    category: 'Компилятор языка'
+    category: 'Компилятор языка',
+    links: ['https://github.com/vityaschel/ruscript']
   },
   {
     name: 'SkySmart helper',
@@ -1046,7 +1088,8 @@ export default [
     public: true,
     hidden: false,
     category: 'Расширение Chrome',
-    logo: skysmartHelperLogo
+    logo: skysmartHelperLogo,
+    links: ['https://chrome.google.com/webstore/detail/skysmart-helper/jedfnnibgbfgmcjbibkfbjclbicdfoim?hl=ru']
   },
   {
     name: 'mypron',
@@ -1067,7 +1110,8 @@ export default [
     public: false,
     hidden: false,
     category: 'Нативное приложение',
-    logo: mypronLogo
+    logo: mypronLogo,
+    links: ['https://github.com/VityaSchel/mypron']
   },
   {
     name: 'Panic Button',
@@ -1085,7 +1129,8 @@ export default [
     public: true,
     hidden: false,
     category: 'Веб-сайт',
-    logo: panicButtonLogo
+    logo: panicButtonLogo,
+    links: ['https://github.com/VityaSchel/panic-button']
   },
   {
     name: 'АСУ РСО кастомные названия предметов',
@@ -1102,7 +1147,8 @@ export default [
     public: false,
     hidden: false,
     category: 'Расширение Chrome',
-    logo: asursoCustomNamesLogo
+    logo: asursoCustomNamesLogo,
+    links: ['https://github.com/VityaSchel/asurso-custom-names']
   },
   {
     name: 'hiddenID_5',
@@ -1137,7 +1183,8 @@ export default [
     public: true,
     hidden: false,
     category: 'Веб-сайт',
-    logo: wikipediaSpeedrunLogo
+    logo: wikipediaSpeedrunLogo,
+    links: ['https://wikipedia.utidteam.com']
   },
   {
     name: 'Py3Exec',
@@ -1171,7 +1218,8 @@ export default [
     description: 'Огромная карта майнкрафт с развитыми ветками диалогов',
     public: true,
     hidden: false,
-    category: 'Minecraft карта'
+    category: 'Minecraft карта',
+    links: ['https://www.planetminecraft.com/project/dragon-quests/']
   },
   {
     name: 'Сайт для заказа рофл-звонков Валакаса',
@@ -1191,7 +1239,8 @@ export default [
     public: true,
     hidden: false,
     category: 'Веб-сайт',
-    logo: roflCallsOrderWebsiteLogo
+    logo: roflCallsOrderWebsiteLogo,
+    links: ['https://github.com/VityaSchel/glad-valakas-website']
   },
   {
     name: 'Stigfinnare Stats',
@@ -1211,7 +1260,8 @@ export default [
     public: true,
     hidden: false,
     category: 'Веб-сайт',
-    logo: wikipediaSpeedrunLogo
+    logo: stigfinnareLogo,
+    links: ['http://stats.utidteam.com/']
   },
   {
     name: 'Хочешь стать программистом?',
@@ -1228,7 +1278,8 @@ export default [
     public: false,
     hidden: false,
     category: 'Веб-сайт',
-    logo: wantToBeAProgrammerLogo
+    logo: wantToBeAProgrammerLogo,
+    links: ['https://github.com/VityaSchel/YouWantToBecomeAProgrammer']
   },
   {
     name: 'bridgedb-tgbot',
@@ -1247,7 +1298,8 @@ export default [
     description: 'Бот, который присылал мосты из BridgeDB для TOR, делая парсинг HTML кода',
     public: true,
     hidden: false,
-    category: 'Бот Telegram'
+    category: 'Бот Telegram',
+    links: ['https://github.com/VityaSchel/bridgedb-tgbot']
   },
   {
     name: 'hiddenID_1',
@@ -1300,7 +1352,8 @@ export default [
     public: true,
     hidden: false,
     category: 'Веб-сайт',
-    logo: uselessCanvasBasedTextEditorLogo
+    logo: uselessCanvasBasedTextEditorLogo,
+    links: ['https://github.com/VityaSchel/useless-canvas-based-text-editor']
   },
   {
     name: 'StreamDO',
@@ -1331,7 +1384,8 @@ export default [
     description: 'Сайт c плохим интерфейсом, для поста на реддите',
     public: true,
     hidden: false,
-    category: 'Веб-сайт'
+    category: 'Веб-сайт',
+    links: ['https://github.com/VityaSchel/bad-ux-support-widget']
   },
   {
     name: 'hiddenID_4',
@@ -1429,7 +1483,8 @@ export default [
     description: 'Статья',
     public: true,
     hidden: false,
-    category: 'Веб-сайт'
+    category: 'Веб-сайт',
+    links: ['https://6oj54.csb.app/']
   },
   {
     name: 'Escape The Mall',
