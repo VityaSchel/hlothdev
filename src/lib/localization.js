@@ -11,8 +11,8 @@ export default {
     'CARD_ME_SPECIALIZATION': 'Веб-разработчик',
     'FULL_SPECIALIZATION': 'Разработчик веб-приложений',
     'CARD_ME_CITY': 'Самара',
-    'CARD_PROJECTS': ['проект', 'проекта', 'проектов'],
-    'CARD_PROJECTS_IN_PORTFOLIO': 'в портфолио',
+    'CARD_PORTFOLIO': ['проект', 'проекта', 'проектов'],
+    'CARD_PORTFOLIO_IN_PORTFOLIO': 'в портфолио',
     'CARD_SERVICES': 'Услуги',
     'THEME_SWITCH_TO_LIGHT': 'Включить светлую тему',
     'THEME_SWITCH_TO_DARK': 'Включить темную тему',
@@ -22,7 +22,7 @@ export default {
     'BACK': 'Вернуться назад в главное меню',
     'PAGES_TITLES': {
       'me': 'Обо мне',
-      'projects': 'Портфолио',
+      'portfolio': 'Портфолио',
       'services': 'Услуги',
       'donate': 'Донаты',
       'about': 'О сайте'
@@ -103,8 +103,8 @@ export default {
     'CARD_ME_SPECIALIZATION': 'Web-developer',
     'FULL_SPECIALIZATION': 'Web-apps developer',
     'CARD_ME_CITY': 'Samara',
-    'CARD_PROJECTS': 'projects',
-    'CARD_PROJECTS_IN_PORTFOLIO': 'in portfolio',
+    'CARD_PORTFOLIO': 'projects',
+    'CARD_PORTFOLIO_IN_PORTFOLIO': 'in portfolio',
     'CARD_SERVICES': 'Services',
     'THEME_SWITCH_TO_LIGHT': 'Switch to light theme',
     'THEME_SWITCH_TO_DARK': 'Switch to dark theme',
@@ -114,7 +114,7 @@ export default {
     'BACK': 'Return back to the main menu',
     'PAGES_TITLES': {
       'me': 'About me',
-      'projects': 'Portfolio',
+      'portfolio': 'Portfolio',
       'services': 'Services',
       'donate': 'Donates',
       'about': 'About this web-site'

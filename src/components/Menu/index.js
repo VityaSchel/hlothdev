@@ -8,7 +8,7 @@ import store from '../../store'
 import { useSpring, animated } from '@react-spring/three'
 
 import { MeCardText } from './MeCard'
-import { ProjectsCardText, useProjectsCardStyles } from './ProjectsCard'
+import { PortfolioCardText, usePortfolioCardStyles } from './PortfolioCard'
 
 import SFBold from 'assets/fonts/SFBold.blob'
 
@@ -19,7 +19,7 @@ export default function Menu() {
         <MenuItem cardID='me' />
       </Suspense>
       <Suspense fallback={null}>
-        <MenuItem cardID='projects' />
+        <MenuItem cardID='portfolio' />
         <MenuItem cardID='services' />
       </Suspense>
       <Suspense fallback={null}>
@@ -33,7 +33,7 @@ export default function Menu() {
 export const layouts = {
   wide: {
     me: [1, 1],
-    projects: [0, 0],
+    portfolio: [0, 0],
     services: [1.97, 0],
     donate: [0, -1],
     about: [1, -1],
@@ -41,7 +41,7 @@ export const layouts = {
   },
   tall: {
     me: [0, 1],
-    projects: [0, 0],
+    portfolio: [0, 0],
     services: [1, -1],
     donate: [0, -1],
     about: [0, -2],
@@ -60,7 +60,7 @@ function MenuItem(props) {
     layout: state.layout
   }))
 
-  const projectsCardStyles = useProjectsCardStyles(theme)
+  const portfolioCardStyles = usePortfolioCardStyles(theme)
   const { rotation } = useSpring({
     to: { rotation: route === props.cardID ? 3.16 : 0 },
     config: { friction: 60 }
@@ -74,7 +74,7 @@ function MenuItem(props) {
     locationIconColor: theme === 'light' ? 0.05 : 1.5
   })
 
-  const wideCard = ['me', 'projects'].includes(props.cardID)
+  const wideCard = ['me', 'portfolio'].includes(props.cardID)
   let position = layouts[layout][props.cardID],
     offset = layouts[layout].offset
   position = [(position[0] + offset[0])*2 - 3, (position[1] + offset[1])*2 - 0.5]
@@ -85,7 +85,7 @@ function MenuItem(props) {
     iconbg: color(iconBgColor),
     '': color(iconColor),
     Location: color(locationIconColor),
-    ...projectsCardStyles
+    ...portfolioCardStyles
   })
 
   const handlePointerOver = () => {
@@ -134,7 +134,7 @@ function MenuItem(props) {
             </Text>
             : {
               me: <MeCardText position={position} />,
-              projects: <ProjectsCardText position={position} />
+              portfolio: <PortfolioCardText position={position} />
             }[props.cardID]
           }
         </group>

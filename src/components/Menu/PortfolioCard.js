@@ -12,16 +12,16 @@ import project4logo from 'assets/images/projectsLogos/sipacker.png'
 import SFBlack from 'assets/fonts/SFBlack.blob'
 import SFBold from 'assets/fonts/SFBold.blob'
 
-export function ProjectsCardText() {
+export function PortfolioCardText() {
   const { translation, theme } = useRedux(state => ({ translation: state.translation, theme: state.theme }))
   const { textColor } = useSpring({ textColor: theme === 'light' ? '#313131' : '#565656' })
 
   const textZ = -0.08
   const projectsNumber = 123
 
-  const PROJECTS_LABEL = Array.isArray(translation.CARD_PROJECTS)
-    ? translation.CARD_PROJECTS[stringEnding(projectsNumber)]
-    : translation.CARD_PROJECTS
+  const PROJECTS_LABEL = Array.isArray(translation.CARD_PORTFOLIO)
+    ? translation.CARD_PORTFOLIO[stringEnding(projectsNumber)]
+    : translation.CARD_PORTFOLIO
 
   return (
     <group position={[0, 0, textZ]}>
@@ -32,13 +32,13 @@ export function ProjectsCardText() {
         {PROJECTS_LABEL}
       </Text>
       <Text position={[0.25, 0.25, 0.05]} font={SFBold} size={3.2} color={textColor}>
-        {translation.CARD_PROJECTS_IN_PORTFOLIO}
+        {translation.CARD_PORTFOLIO_IN_PORTFOLIO}
       </Text>
     </group>
   )
 }
 
-export function useProjectsCardStyles(theme) {
+export function usePortfolioCardStyles(theme) {
   const project1ImageMap = useLoader(TextureLoader, project1logo)
   const project2ImageMap = useLoader(TextureLoader, project2logo)
   const project3ImageMap = useLoader(TextureLoader, project3logo)

@@ -3,6 +3,7 @@ import rollerRideLogo from '../assets/images/projectsLogos/roller-ride.png'
 import abobaLogo from '../assets/images/projectsLogos/aboba.png'
 import gadzasOldLogo from '../assets/images/projectsLogos/gadzas-old.png'
 import gadzasNewLogo from '../assets/images/projectsLogos/gadzas.png'
+import sipackerLogo from '../assets/images/projectsLogos/sipacker.png'
 import rJolygolfLogo from '../assets/images/projectsLogos/rJolygolf.png'
 import shizonyanLogo from '../assets/images/projectsLogos/shizonyan.png'
 import atmosCraftLogo from '../assets/images/projectsLogos/atmoscraft.png'
@@ -27,7 +28,7 @@ import igroruporLogo from '../assets/images/projectsLogos/igrorupor.png'
 import cleanerLogo from '../assets/images/projectsLogos/cleaner.png'
 import noSquidGameLogo from '../assets/images/projectsLogos/no-squid-game.png'
 import gettrDarkThemeLogo from '../assets/images/projectsLogos/gettr-dark-theme.png'
-import probablyKrolLogo from '../assets/images/projectsLogos/probablykrol-bot.jpeg'
+import probablyKrolLogo from '../assets/images/projectsLogos/probablykrol-bot.png'
 import skysmartHelperLogo from '../assets/images/projectsLogos/skysmart-helper.png'
 import mypronLogo from '../assets/images/projectsLogos/mypron.png'
 import panicButtonLogo from '../assets/images/projectsLogos/panic-button.png'
@@ -155,6 +156,7 @@ export default [
     public: true,
     hidden: false,
     category: 'Веб-сайт',
+    logo: sipackerLogo,
     links: ['https://github.com/VityaSchel/SIPacker']
   },
   {

@@ -22,3 +22,16 @@
   flex-direction: column;
   gap: 15px;
 }
+
+.portfolio {
+
+  .logo {
+    width: auto;
+    aspect-ratio: 1/1;
+    height: 100%;
+    object-fit: contain;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 15px;
+  }
+}

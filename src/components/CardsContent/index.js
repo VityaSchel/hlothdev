@@ -6,6 +6,7 @@ import { MdArrowBack } from 'react-icons/md'
 
 import Me from './me'
 import Services from './services'
+import Portfolio from './portfolio'
 
 import { useTheme } from '@mui/styles'
 import Grid from '@mui/material/Grid'
@@ -46,7 +47,8 @@ function CardsContent(props) {
       </Grid>
       {{
         me: <Me />,
-        services: <Services />
+        services: <Services />,
+        portfolio: <Portfolio />
       }[props.route]}
     </animated.div>
   )
