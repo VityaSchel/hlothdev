@@ -14,6 +14,7 @@
   .title {
     width: 100%;
     margin-bottom: 30px;
+    align-items: end;
   }
 }
 
@@ -24,6 +25,9 @@
 }
 
 .portfolio {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 
   .logo {
     width: auto;
@@ -33,5 +37,15 @@
     padding: 10px;
     box-sizing: border-box;
     border-radius: 15px;
+  }
+
+  .search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .textField {
+      flex: 1;
+    }
   }
 }

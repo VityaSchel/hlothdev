@@ -93,7 +93,9 @@ export default {
         с 2019 года, создаю полезные библиотеки и стремлюсь улучшать DX.
         Если у вас еще остались вопросы или вы готовы обсудить проект со мной — пишите мне в Телеграм: <a href='tg://resolve?domain=hlothdev'>@hlothdev</a>
         или в другие соц. сети, перечисленные на этой странице.
-      </p>`
+      </p>`,
+    'PORTFOLIO_SEARCH_PLACEHOLDER': 'Поиск по портфолио: название, описание, технологии',
+    'PORTFOLIO_SEARCH_EXAMPLE': 'Например, «Заказ» или «Redux, React Native»'
   },
   '_DEFAULT_': {
     'CARD_ABOUT': 'About',
@@ -188,6 +190,8 @@ export default {
         since 2019, creating libraries used by other web developers and striving to improve DX. If you have any
         questions or want to discuss your case with me — contact me in
         Telegram: <a href='tg://resolve?domain=hlothdev'>@hlothdev</a> or other ways listed on this page.
-      </p>`
+      </p>`,
+    'PORTFOLIO_SEARCH_PLACEHOLDER': 'Search in portfolio: name, description, technologies',
+    'PORTFOLIO_SEARCH_EXAMPLE': 'e.g. «Order» or «Redux, React Native»'
   }
 }
