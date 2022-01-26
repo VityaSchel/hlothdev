@@ -52,7 +52,7 @@ export default [
     dates: {
       devStart: '2018',
       release: '27 June 2019',
-      abandon: '2020 (частично)'
+      abandon: '2020'
     },
     scope: 5,
     description: 'Игра где 6 людей сражаются в мини играх за большее кол-во очков',
@@ -128,8 +128,8 @@ export default [
     ],
     supported: 'partially',
     dates: {
-      devStart: '20 февраля 2021',
-      release: '20 февраля 2021'
+      devStart: '20 February 2021',
+      release: '20 February 2021'
     },
     scope: 4,
     description: 'Сборник всех гадз глада валакаса (раннее известен как гадзы.online)',
