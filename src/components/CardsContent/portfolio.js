@@ -4,8 +4,6 @@ import { connect } from 'react-redux'
 import { DataGrid, ruRU as xDataGridRu, enUS as xDataGridEnUS } from '@mui/x-data-grid'
 import projectsList from 'lib/projects'
 import { dotFlatten } from 'utils.js'
-import { format } from 'date-fns'
-import { enUS as dateFnsEnUS, ru as dateFnsRu } from 'date-fns/locale'
 
 Services.propTypes = {
   translation: PropTypes.object,
@@ -20,7 +18,7 @@ function Services(props) {
   const dateColWidth = 150
 
   const renderDate = ({ value }) => (value && (dateRegex.test(value) || value instanceof Date))
-    ? format(value, 'dd LLLL y', { locale: { 'ru-RU': dateFnsRu }[props.locale] ?? dateFnsEnUS })
+    ? Intl.DateTimeFormat(props.locale, { day: '2-digit', month: 'long', year: 'numeric' }).format(value)
     : value
 
   const columns = [
