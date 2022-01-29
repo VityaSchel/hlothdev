@@ -6,7 +6,6 @@
   min-height: 100%;
   padding: 80px;
   box-sizing: border-box;
-  display: flex !important;
   flex-direction: column;
 
   @media screen and (max-width: 768px) {
@@ -24,51 +23,4 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
-}
-
-.portfolio {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  flex: 1;
-
-  .logo {
-    width: auto;
-    aspect-ratio: 1/1;
-    $size: 52px;
-    height: $size;
-    width: $size;
-    object-fit: contain;
-    padding: 10px;
-    box-sizing: border-box;
-    border-radius: 15px;
-  }
-
-  .search {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    .textField {
-      flex: 1;
-    }
-  }
-
-  .dataGrid {
-    flex: 1;
-
-    .multilineCell {
-      white-space: normal;
-      line-height: 2;
-    }
-
-    .stack {
-      padding: 3px 0 5px 0;
-    }
-
-    .description {
-      text-overflow: ellipsis;
-      overflow: hidden;
-    }
-  }
 }

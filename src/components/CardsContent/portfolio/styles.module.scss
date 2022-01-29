@@ -1,0 +1,56 @@
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+
+  .logo {
+    width: auto;
+    aspect-ratio: 1/1;
+    $size: 52px;
+    height: $size;
+    width: $size;
+    object-fit: contain;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 15px;
+
+    &.placeholderLogo {
+      filter: grayscale(1);
+      padding: 5px;
+      margin: 10px;
+      width: 32px;
+      height: 32px;
+      background-color: rgb(122 122 122 / 15%);
+      border-radius: 5px;
+    }
+  }
+
+  .search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .textField {
+      flex: 1;
+    }
+  }
+
+  .dataGrid {
+    flex: 1;
+
+    .multilineCell {
+      white-space: normal;
+      line-height: 2;
+    }
+
+    .stack {
+      padding: 3px 0 5px 0;
+    }
+
+    .description {
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+}

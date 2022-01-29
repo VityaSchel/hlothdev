@@ -29,7 +29,7 @@ function CardsContent(props) {
     <animated.div className={styles.container}
       style={{
         opacity: opacity.interpolate(o => o > 0.5 ? (o-0.5)*2 : 0),
-        display: opacity.interpolate(o => o === 0 ? 'none' : 'initial'),
+        display: opacity.interpolate(o => o === 0 ? 'none' : 'flex'),
         backgroundColor
       }}
     >

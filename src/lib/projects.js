@@ -1305,7 +1305,7 @@ export default [
   },
   {
     name: 'Dragon Quests',
-    stack: '',
+    stack: [],
     supported: false,
     dates: {
       devStart: '2020',
