@@ -5,9 +5,12 @@ import { connect } from 'react-redux'
 import { DataGrid, ruRU as xDataGridRu, enUS as xDataGridEnUS } from '@mui/x-data-grid'
 import projectsList from 'lib/projects'
 import { dotFlatten } from 'utils.js'
-import TextField from '@mui/material/TextField'
 import IconButton from '@mui/material/IconButton'
-import { MdFilterList } from 'react-icons/md'
+import InputAdornment from '@mui/material/InputAdornment'
+import FormControl from '@mui/material/FormControl'
+import InputLabel from '@mui/material/InputLabel'
+import OutlinedInput from '@mui/material/OutlinedInput'
+import { MdFilterList, MdClear } from 'react-icons/md'
 
 Services.propTypes = {
   translation: PropTypes.object,
@@ -18,8 +21,9 @@ function Services(props) {
   const [searchTerms, setSearchTerms] = React.useState([])
   const [loading, setLoading] = React.useState(false)
   const cards = props.translation.SERVICES_CARDS
-  if(!cards) return <></>
+  React.useEffect(() => setLoading(false), [searchTerms])
 
+  if(!cards) return <></>
 
   const dateRegex = /^\d+ \w+ \d+$/
   const dateColWidth = 150
@@ -80,7 +84,9 @@ function Services(props) {
   const projects = projectsList
     .filter(project => {
       if(!searchTerms.length) return true
-      if(searchTerms.some(term => project.name.includes(term))) return true
+      if(searchTerms.some(term => project.name.toLowerCase().includes(term.toLowerCase()))) return true
+      if(searchTerms.some(term => project.stack?.some?.(tech => tech.toLowerCase().includes(term.toLowerCase())))) return true
+      if(searchTerms.some(term => project.description.toLowerCase().includes(term.toLowerCase()))) return true
     })
     .map(project => {
       const date = dateString => new Date(dateString)
@@ -93,10 +99,6 @@ function Services(props) {
       }
     })
   const handleProjectClick = id => alert(id)
-
-  React.useEffect(() => {
-    setLoading(false)
-  }, [searchTerms])
 
   return (
     <div className={styles.portfolio}>
@@ -129,8 +131,9 @@ Search.propTypes = {
   setLoading: PropTypes.func,
 }
 function Search(props) {
+  const translation = props.translation.PORTFOLIO_SEARCH
   const [searchTerm, setSearchTerm] = React.useState('')
-  const terms = searchTerm.split(/, ?/)
+  const terms = searchTerm.split(' ')
 
   React.useEffect(() => {
     props.setLoading(true)
@@ -141,16 +144,35 @@ function Search(props) {
     return () => clearTimeout(currentTimeout)
   }, [searchTerm])
 
+  const handleClearInput = () => {
+    setSearchTerm('')
+    props.setSearchTerms(terms)
+  }
+
   return (
     <div className={styles.search}>
-      <TextField
-        variant='outlined'
-        value={searchTerm}
-        onChange={event => setSearchTerm(event.target.value)}
-        label={props.translation.PORTFOLIO_SEARCH_PLACEHOLDER}
-        placeholder={props.translation.PORTFOLIO_SEARCH_EXAMPLE}
-        className={styles.textField}
-      />
+      <FormControl variant='outlined' fullWidth>
+        <InputLabel htmlFor='search-box'>{translation.PLACEHOLDER}</InputLabel>
+        <OutlinedInput
+          id='search-box'
+          value={searchTerm}
+          onChange={event => setSearchTerm(event.target.value)}
+          label={translation.PLACEHOLDER}
+          placeholder={translation.SEARCH_EXAMPLE}
+          className={styles.textField}
+          endAdornment={
+            <InputAdornment position='end'>
+              <IconButton
+                aria-label={translation.CLEAR}
+                onClick={handleClearInput}
+                edge='end'
+              >
+                <MdClear />
+              </IconButton>
+            </InputAdornment>
+          }
+        />
+      </FormControl>
       <IconButton><MdFilterList /></IconButton>
     </div>
   )

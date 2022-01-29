@@ -94,8 +94,30 @@ export default {
         Если у вас еще остались вопросы или вы готовы обсудить проект со мной — пишите мне в Телеграм: <a href='tg://resolve?domain=hlothdev'>@hlothdev</a>
         или в другие соц. сети, перечисленные на этой странице.
       </p>`,
-    'PORTFOLIO_SEARCH_PLACEHOLDER': 'Поиск по портфолио: название, описание, технологии',
-    'PORTFOLIO_SEARCH_EXAMPLE': 'Например, «Заказ» или «Redux, React Native»'
+    'PORTFOLIO': {
+      'SEARCH': {
+        'PLACEHOLDER': 'Поиск по портфолио: название, описание, технологии',
+        'EXAMPLE': 'Например, «Лендинг» или «Redux, React Native»',
+        'CLEAR': 'Очистить'
+      },
+      'CATEGORIES': {
+        'game/windows10': 'Игра Windows 10',
+        'game/android': 'Игра Android',
+        'website': 'Веб-сайт',
+        'bot/reddit': 'Бот Reddit',
+        'figma_plugin': 'Плагин Figma',
+        'bot/telegram': 'Бот Telegram',
+        'npmjs_library': 'Библиотека js',
+        'app': 'Приложение',
+        'bot/vk': 'Бот ВКонтакте',
+        'website/darknet': 'Веб-сайт Tor Hidden Services',
+        'bot/yandex_alice': 'Бот Алисы',
+        'chrome_extension': 'Расширение Chrome',
+        'stream': 'Стрим',
+        'programming_language': 'Компилятор языка',
+        'minecraft_map': 'Minecraft карта'
+      }
+    }
   },
   '_DEFAULT_': {
     'CARD_ABOUT': 'About',
@@ -191,7 +213,29 @@ export default {
         questions or want to discuss your case with me — contact me in
         Telegram: <a href='tg://resolve?domain=hlothdev'>@hlothdev</a> or other ways listed on this page.
       </p>`,
-    'PORTFOLIO_SEARCH_PLACEHOLDER': 'Search in portfolio: name, description, technologies',
-    'PORTFOLIO_SEARCH_EXAMPLE': 'e.g. «Order» or «Redux, React Native»'
+    'PORTFOLIO':{
+      'SEARCH': {
+        'PLACEHOLDER': 'Search in portfolio: name, description, technologies',
+        'EXAMPLE': 'e.g. «API» or «Redux, React Native»',
+        'CLEAR': 'Clear'
+      },
+      'CATEGORIES': {
+        'game/windows10': 'Windows 10 video-game',
+        'game/android': 'Android video-game',
+        'website': 'Web-site',
+        'bot/reddit': 'Reddit bot',
+        'figma_plugin': 'Figma plugin',
+        'bot/telegram': 'Telegram bot',
+        'npmjs_library': 'JS library',
+        'app': 'App',
+        'bot/vk': 'VKontakte bot',
+        'website/darknet': 'Tor Hidden Services website',
+        'bot/yandex_alice': 'Alice bot',
+        'chrome_extension': 'Chrome extension',
+        'stream': 'Stream',
+        'programming_language': 'Programming language',
+        'minecraft_map': 'Minecraft map'
+      }
+    }
   }
 }

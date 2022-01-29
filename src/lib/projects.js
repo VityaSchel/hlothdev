@@ -58,9 +58,11 @@ export default [
     description: 'Игра где 6 людей сражаются в мини играх за большее кол-во очков',
     public: true,
     hidden: false,
-    category: 'Игра Windows 10',
     logo: stigfinnareLogo,
-    links: ['https://stigfinnare.utidteam.com/']
+    links: [
+      'https://stigfinnare.utidteam.com/'
+    ],
+    category: 'game/windows10'
   },
   {
     name: 'Roller-ride',
@@ -77,9 +79,11 @@ export default [
     description: 'Игра про шарик (аркада) в которой ты летишь до солнца минуя препятствия',
     public: true,
     hidden: false,
-    category: 'Игра Android',
     logo: rollerRideLogo,
-    links: ['https://play.google.com/store/apps/details?id=com.VityaSchel.RollerRide']
+    links: [
+      'https://play.google.com/store/apps/details?id=com.VityaSchel.RollerRide'
+    ],
+    category: 'game/android'
   },
   {
     name: 'АБОБА 2024 Кандидат в президенты',
@@ -97,9 +101,12 @@ export default [
     description: 'Сайт абобы: кандидата в президенты и мема от Глада Валакаса',
     public: true,
     hidden: false,
-    category: 'Веб-сайт',
     logo: abobaLogo,
-    links: ['https://aboba.utidteam.com/', 'https://freelance.habr.com/projects/244049']
+    links: [
+      'https://aboba.utidteam.com/',
+      'https://freelance.habr.com/projects/244049'
+    ],
+    category: 'website'
   },
   {
     name: 'Гадзы Глада Валакаса (1.0)',
@@ -117,9 +124,11 @@ export default [
     description: 'Сборник всех гадз глада валакаса (раннее известен как гадзы.online)',
     public: true,
     hidden: false,
-    category: 'Веб-сайт',
     logo: gadzasOldLogo,
-    links: ['https://godzilla.utidteam.com/']
+    links: [
+      'https://godzilla.utidteam.com/'
+    ],
+    category: 'website'
   },
   {
     name: 'Гадзы Глада Валакаса (2.0)',
@@ -135,9 +144,11 @@ export default [
     description: 'Сборник всех гадз глада валакаса (раннее известен как гадзы.online)',
     public: true,
     hidden: false,
-    category: 'Веб-сайт',
     logo: gadzasNewLogo,
-    links: ['https://godzilla.utidteam.com/']
+    links: [
+      'https://godzilla.utidteam.com/'
+    ],
+    category: 'website'
   },
   {
     name: 'SIPacker',
@@ -155,9 +166,11 @@ export default [
     description: 'Онлайн-редактор паков для игры SiGame (Своя Игра)',
     public: true,
     hidden: false,
-    category: 'Веб-сайт',
     logo: sipackerLogo,
-    links: ['https://github.com/VityaSchel/SIPacker']
+    links: [
+      'https://github.com/VityaSchel/SIPacker'
+    ],
+    category: 'website'
   },
   {
     name: 'r/Jolygolf',
@@ -174,9 +187,12 @@ export default [
     description: 'Сабреддит Алексея Шевцова на Reddit',
     public: true,
     hidden: false,
-    category: 'Бот Reddit',
     logo: rJolygolfLogo,
-    links: ['https://github.com/VityaSchel/RedditJolygolfBot', 'https://freelance.habr.com/projects/216865']
+    links: [
+      'https://github.com/VityaSchel/RedditJolygolfBot',
+      'https://freelance.habr.com/projects/216865'
+    ],
+    category: 'bot/reddit'
   },
   {
     name: 'Шизоньян',
@@ -195,9 +211,11 @@ export default [
     description: 'Сайт генератор твитов маргариты симоньян',
     public: true,
     hidden: false,
-    category: 'Веб-сайт',
     logo: shizonyanLogo,
-    links: ['https://shizonyan.utidteam.com/']
+    links: [
+      'https://shizonyan.utidteam.com/'
+    ],
+    category: 'website'
   },
   {
     name: 'AtmosCraft',
@@ -216,12 +234,14 @@ export default [
     description: 'Лендинг для майнкрафт сервера и веб-сервер с API (rcon+status)',
     public: true,
     hidden: false,
-    category: 'Веб-сайт',
     tags: [
       'order'
     ],
     logo: atmosCraftLogo,
-    links: ['https://freelance.habr.com/projects/249937']
+    links: [
+      'https://freelance.habr.com/projects/249937'
+    ],
+    category: 'website'
   },
   {
     name: 'JSwitcher',
@@ -241,11 +261,13 @@ export default [
     description: 'Плагин который помогает менять макеты Android на iOS и наоборот',
     public: true,
     hidden: false,
-    category: 'Плагин Figma',
     tags: [
       'order'
     ],
-    links: ['https://freelance.habr.com/projects/259285']
+    links: [
+      'https://freelance.habr.com/projects/259285'
+    ],
+    category: 'figma_plugin'
   },
   {
     name: 'SAMARACOIN',
@@ -263,9 +285,11 @@ export default [
     description: 'Альткоин и не крипто валюта в телеграме майнится написанием слова самара',
     public: true,
     hidden: false,
-    category: 'Бот Telegram',
     logo: samaracoinLogo,
-    links: ['https://t.me/samaracoinbot']
+    links: [
+      'https://t.me/samaracoinbot'
+    ],
+    category: 'bot/telegram'
   },
   {
     name: 'asurso',
@@ -283,8 +307,10 @@ export default [
     description: 'Библиотека для взаимодействия с закрытым API сайта АСУ РСО (электронный дневник)',
     public: true,
     hidden: false,
-    category: 'Библиотека js',
-    links: ['https://www.npmjs.com/package/asurso']
+    links: [
+      'https://www.npmjs.com/package/asurso'
+    ],
+    category: 'npmjs_library'
   },
   {
     name: 'reuploader',
@@ -305,8 +331,10 @@ export default [
     description: 'Инструмент для автоматической записи и перезалива стримов с YouTube',
     public: true,
     hidden: false,
-    category: 'Приложение',
-    links: ['https://github.com/VityaSchel/reuploader']
+    links: [
+      'https://github.com/VityaSchel/reuploader'
+    ],
+    category: 'app'
   },
   {
     name: 'AtmosSeriesBot',
@@ -325,12 +353,14 @@ export default [
     description: 'Панель управления ботом с добавлением модераторов, контента, проверка на подписку',
     public: true,
     hidden: false,
-    category: 'Бот Telegram',
     tags: [
       'order'
     ],
     logo: atmosSeriesBotLogo,
-    links: ['https://freelance.habr.com/projects/244063']
+    links: [
+      'https://freelance.habr.com/projects/244063'
+    ],
+    category: 'bot/telegram'
   },
   {
     name: 'Симулятор Маши из GoStudy',
@@ -348,9 +378,11 @@ export default [
     description: 'Мобильная игра про Машу из GoStudy, которая шуршит микрофоном и мешает стриму',
     public: true,
     hidden: false,
-    category: 'Игра Android',
     logo: mashaSimulatorLogo,
-    links: ['https://play.google.com/store/apps/details?id=com.VityaSchel.GoStudyMashaSimulator']
+    links: [
+      'https://play.google.com/store/apps/details?id=com.VityaSchel.GoStudyMashaSimulator'
+    ],
+    category: 'game/android'
   },
   {
     name: 'Ремафия',
@@ -372,8 +404,8 @@ export default [
     description: 'Карточная игра Мафия, но онлайн. Ремейк легендарной Мафии Онлайн на React Native. Задумывалась как конкурент, который поглотит Мафию Онлайн и Мафию GO',
     public: true,
     hidden: false,
-    category: 'Игра Android',
-    logo: remafiaLogo
+    logo: 0,
+    category: 'game/android'
   },
   {
     name: 'LIS NCE',
@@ -394,12 +426,14 @@ export default [
     description: 'Сайт для национального центра исследований в Казахстане, разрабатывался в команде',
     public: true,
     hidden: false,
-    category: 'Веб-сайт',
     tags: [
       'order'
     ],
     logo: lisNceLogo,
-    links: ['https://freelance.habr.com/projects/259287']
+    links: [
+      'https://freelance.habr.com/projects/259287'
+    ],
+    category: 'website'
   },
   {
     name: 'destream-api',
@@ -415,8 +449,10 @@ export default [
     description: 'Враппер для API DeStream на NodeJS',
     public: true,
     hidden: false,
-    category: 'Библиотека js',
-    links: ['https://www.npmjs.com/package/destream-api']
+    links: [
+      'https://www.npmjs.com/package/destream-api'
+    ],
+    category: 'npmjs_library'
   },
   {
     name: 'alerts-api',
@@ -433,8 +469,10 @@ export default [
     description: 'Враппер для API DonationAlerts на NodeJS',
     public: true,
     hidden: false,
-    category: 'Библиотека js',
-    links: ['https://www.npmjs.com/package/alerts-api']
+    links: [
+      'https://www.npmjs.com/package/alerts-api'
+    ],
+    category: 'npmjs_library'
   },
   {
     name: 'ОГЭ Генератор',
@@ -453,9 +491,11 @@ export default [
     description: 'Генератор вариантов огэ по информатике 2021',
     public: true,
     hidden: false,
-    category: 'Веб-сайт',
     logo: ogeGeneratorLogo,
-    links: ['https://oge.utidteam.com/']
+    links: [
+      'https://oge.utidteam.com/'
+    ],
+    category: 'website'
   },
   {
     name: 'FIT vs FEL',
@@ -473,9 +513,11 @@ export default [
     description: 'Шуточный сайт, где можно покрутить колесо удачи и узнать куда поступать (всегда будет ČZU)',
     public: true,
     hidden: false,
-    category: 'Веб-сайт',
     logo: fitVsFelLogo,
-    links: ['https://utidteam.com/FITvsFEL/']
+    links: [
+      'https://utidteam.com/FITvsFEL/'
+    ],
+    category: 'website'
   },
   {
     name: 'czech-living-costs',
@@ -492,9 +534,11 @@ export default [
     description: 'Шуточный сайт, где можно посчитать, сколько стоит учеба в Чехии для студента + расходы',
     public: true,
     hidden: false,
-    category: 'Веб-сайт',
     logo: czechLivingCostsLogo,
-    links: ['https://utidteam.com/gostudy/']
+    links: [
+      'https://utidteam.com/gostudy/'
+    ],
+    category: 'website'
   },
   {
     name: 'Homirror лендинг',
@@ -511,9 +555,11 @@ export default [
     description: 'Лендинг про интерьер для дома',
     public: true,
     hidden: false,
-    category: 'Веб-сайт',
     logo: homirrorLogo,
-    links: ['https://portfolio.utidteam.com/homirror']
+    links: [
+      'https://portfolio.utidteam.com/homirror'
+    ],
+    category: 'website'
   },
   {
     name: 'NiolySchool лендинг',
@@ -530,9 +576,11 @@ export default [
     description: 'Лендинг про обучение тильде (CMS)',
     public: true,
     hidden: false,
-    category: 'Веб-сайт',
     logo: niolySchoolLogo,
-    links: ['https://portfolio.utidteam.com/niolyschool']
+    links: [
+      'https://portfolio.utidteam.com/niolyschool'
+    ],
+    category: 'website'
   },
   {
     name: 'Educo лендинг',
@@ -549,9 +597,11 @@ export default [
     description: 'Лендинг про обучающую школу',
     public: true,
     hidden: false,
-    category: 'Веб-сайт',
     logo: educoLogo,
-    links: ['https://portfolio.utidteam.com/educo']
+    links: [
+      'https://portfolio.utidteam.com/educo'
+    ],
+    category: 'website'
   },
   {
     name: 'Bitprotect лендинг',
@@ -568,9 +618,11 @@ export default [
     description: 'Лендинг про кибербезопасность сайтов',
     public: true,
     hidden: false,
-    category: 'Веб-сайт',
     logo: bitProtectLogo,
-    links: ['https://portfolio.utidteam.com/bitprotect']
+    links: [
+      'https://portfolio.utidteam.com/bitprotect'
+    ],
+    category: 'website'
   },
   {
     name: 'FoodStuff лендинг',
@@ -587,9 +639,11 @@ export default [
     description: 'Лендинг про интернет магазин еды',
     public: true,
     hidden: false,
-    category: 'Веб-сайт',
     logo: foodStuffLogo,
-    links: ['https://portfolio.utidteam.com/foodstuff']
+    links: [
+      'https://portfolio.utidteam.com/foodstuff'
+    ],
+    category: 'website'
   },
   {
     name: 'Доброе утро и хорошего дня',
@@ -607,9 +661,11 @@ export default [
     description: 'Бот, отправляющий каждое утро гифку с добрым утром',
     public: true,
     hidden: false,
-    category: 'Бот ВКонтакте',
     logo: goodmorningBotLogo,
-    links: ['https://github.com/VityaSchel/goodmorning-bot']
+    links: [
+      'https://github.com/VityaSchel/goodmorning-bot'
+    ],
+    category: 'bot/vk'
   },
   {
     name: 'McDonaldsOffersBot',
@@ -626,9 +682,11 @@ export default [
     description: 'Бот, который парсит сайт макдональдса и пишет в чат об акциях',
     public: true,
     hidden: false,
-    category: 'Бот Telegram',
     logo: mcDonaldsOffersLogo,
-    links: ['https://t.me/macsamarabot']
+    links: [
+      'https://t.me/macsamarabot'
+    ],
+    category: 'bot/telegram'
   },
   {
     name: 'RussianWordConjugationBot',
@@ -649,9 +707,11 @@ export default [
     description: 'Бот для тренировки спряжений, осенью 2021 был переписан для использования LevelDB и Fastify вместо MongoDB и Express',
     public: true,
     hidden: false,
-    category: 'Бот Telegram',
     logo: rusWordConBotLogo,
-    links: ['https://t.me/ruswordconbot']
+    links: [
+      'https://t.me/ruswordconbot'
+    ],
+    category: 'bot/telegram'
   },
   {
     name: 'hiddenID_7',
@@ -669,7 +729,7 @@ export default [
     description: '',
     public: false,
     hidden: true,
-    category: 'Бот ВКонтакте'
+    category: 'bot/vk'
   },
   {
     name: 'VityaSchel Site: uCoz версия',
@@ -685,11 +745,11 @@ export default [
     description: 'Первый сайт про меня на uCoz CMS',
     public: true,
     hidden: false,
-    category: 'Веб-сайт',
     tags: [
       'personalsite'
     ],
-    logo: vityaschelSiteLogo
+    logo: 0,
+    category: 'website'
   },
   {
     name: 'VityaSchel Site: terminal версия (hostinger)',
@@ -705,11 +765,11 @@ export default [
     description: 'Второй сайт в виде консоли на бесплатном хостинге',
     public: true,
     hidden: false,
-    category: 'Веб-сайт',
     tags: [
       'personalsite'
     ],
-    logo: vityaschelSiteLogo
+    logo: 0,
+    category: 'website'
   },
   {
     name: 'VityaSchel Site: карта проектов',
@@ -725,11 +785,11 @@ export default [
     description: 'Третий сайт про все мои проекты со связями в виде карты',
     public: true,
     hidden: false,
-    category: 'Веб-сайт',
     tags: [
       'personalsite'
     ],
-    logo: vityaschelSiteLogo
+    logo: 0,
+    category: 'website'
   },
   {
     name: 'VityaSchel Site: лаймовая галлерея',
@@ -746,11 +806,11 @@ export default [
     description: 'Четвертый сайт про все мои проекты и меня в виде лаймовой галереи',
     public: true,
     hidden: false,
-    category: 'Веб-сайт',
     tags: [
       'personalsite'
     ],
-    logo: vityaschelSiteLogo
+    logo: 0,
+    category: 'website'
   },
   {
     name: 'VityaSchel Site: космический параллакс',
@@ -767,12 +827,14 @@ export default [
     description: 'Пятый, огромный сайт с красивыми анимациями про все, что со мной связано',
     public: true,
     hidden: false,
-    category: 'Веб-сайт',
     tags: [
       'personalsite'
     ],
     logo: vityaschelSiteLogo,
-    links: ['https://vityaschel.utidteam.com']
+    links: [
+      'https://vityaschel.utidteam.com'
+    ],
+    category: 'website'
   },
   {
     name: 'VityaSchel Site: hloth.dev с 3D-фигурами',
@@ -792,12 +854,14 @@ export default [
     description: 'Шестой сайт про все мои проекты, услуги, технологии и донаты с использованием ThreeJS',
     public: true,
     hidden: false,
-    category: 'Веб-сайт',
     tags: [
       'personalsite'
     ],
     logo: vityaschelSiteLogo,
-    links: ['https://hloth.dev']
+    links: [
+      'https://hloth.dev'
+    ],
+    category: 'website'
   },
   {
     name: 'hiddenID_2',
@@ -818,7 +882,7 @@ export default [
     description: '',
     public: false,
     hidden: true,
-    category: 'Веб-сайт'
+    category: 'website'
   },
   {
     name: 'Vite CSGO Case Simulator',
@@ -840,8 +904,10 @@ export default [
     description: 'Мой первый даркнет-сайт и первый проект на Vite с рулеткой CS:GO',
     public: true,
     hidden: false,
-    category: 'Веб-сайт Tor Hidden Services',
-    links: ['https://github.com/VityaSchel/vitejs-csgo-case-simulator']
+    links: [
+      'https://github.com/VityaSchel/vitejs-csgo-case-simulator'
+    ],
+    category: 'website/darknet'
   },
   {
     name: 'random-steam-avatar',
@@ -857,8 +923,10 @@ export default [
     description: 'Библиотека для получения случайной аватарки из steam',
     public: true,
     hidden: false,
-    category: 'Библиотека js',
-    links: ['https://www.npmjs.com/package/random-steam-avatar']
+    links: [
+      'https://www.npmjs.com/package/random-steam-avatar'
+    ],
+    category: 'npmjs_library'
   },
   {
     name: 'Бот Алисы: Игрорупор',
@@ -876,8 +944,8 @@ export default [
     description: 'Бот Алисы, который афиширует новости из мира игр и может угадать игру по описанию',
     public: true,
     hidden: false,
-    category: 'Бот Алисы',
-    logo: igroruporLogo
+    logo: 0,
+    category: 'bot/yandex_alice'
   },
   {
     name: 'Уборщица',
@@ -894,9 +962,11 @@ export default [
     description: 'Расширение удаляющее сообщения Кирилла Смирнова из бесед ВКонтакте',
     public: true,
     hidden: false,
-    category: 'Расширение Chrome',
     logo: cleanerLogo,
-    links: ['https://chrome.google.com/webstore/detail/%D1%83%D0%B1%D0%BE%D1%80%D1%89%D0%B8%D1%86%D0%B0/pbkimmanmhebbfdphpkjpdkolihanmah?hl=ru']
+    links: [
+      'https://chrome.google.com/webstore/detail/%D1%83%D0%B1%D0%BE%D1%80%D1%89%D0%B8%D1%86%D0%B0/pbkimmanmhebbfdphpkjpdkolihanmah?hl=ru'
+    ],
+    category: 'chrome_extension'
   },
   {
     name: 'No Squid Game',
@@ -912,9 +982,11 @@ export default [
     description: 'Расширение, которое удаляет все новости и видео об Игре в Кальмара',
     public: true,
     hidden: false,
-    category: 'Расширение Chrome',
     logo: noSquidGameLogo,
-    links: ['https://chrome.google.com/webstore/detail/no-squid-game/enmgknhljpalgmfclkinhglkkpgjogdd']
+    links: [
+      'https://chrome.google.com/webstore/detail/no-squid-game/enmgknhljpalgmfclkinhglkkpgjogdd'
+    ],
+    category: 'chrome_extension'
   },
   {
     name: 'Stigfinnare 3D adventure',
@@ -930,7 +1002,7 @@ export default [
     description: 'Адвенчура без сюжета, делалась как открытый мир с красивой графикой и головоломками',
     public: true,
     hidden: false,
-    category: 'Игра Windows 10'
+    category: 'game/windows10'
   },
   {
     name: 'Stigfinnare 2D',
@@ -946,7 +1018,7 @@ export default [
     description: 'Батл рояль в 2д',
     public: true,
     hidden: false,
-    category: 'Игра Windows 10'
+    category: 'game/windows10'
   },
   {
     name: 'Соловьев или Гитлер?',
@@ -962,8 +1034,10 @@ export default [
     description: 'Сайт где надо угадать чья цитата: соловьева или гитлера',
     public: true,
     hidden: false,
-    category: 'Веб-сайт',
-    links: ['https://github.com/VityaSchel/vladimir-solovyev']
+    links: [
+      'https://github.com/VityaSchel/vladimir-solovyev'
+    ],
+    category: 'website'
   },
   {
     name: 'Gettr Dark Theme',
@@ -980,9 +1054,11 @@ export default [
     description: 'Расширение для добавления темной темы в соц. сеть Gettr',
     public: false,
     hidden: false,
-    category: 'Веб-сайт',
     logo: gettrDarkThemeLogo,
-    links: ['https://chrome.google.com/webstore/detail/gettr-dark-theme/jcjmdpdahejbjiopgedoljllckbmmekc']
+    links: [
+      'https://chrome.google.com/webstore/detail/gettr-dark-theme/jcjmdpdahejbjiopgedoljllckbmmekc'
+    ],
+    category: 'website'
   },
   {
     name: 'ProbablyKrolBot',
@@ -999,9 +1075,11 @@ export default [
     description: 'Бот в телеграме отправляющий гифки кролика в чат по текстовому запросу',
     public: true,
     hidden: false,
-    category: 'Бот Telegram',
     logo: probablyKrolLogo,
-    links: ['https://t.me/probablykrolbot']
+    links: [
+      'https://t.me/probablykrolbot'
+    ],
+    category: 'bot/telegram'
   },
   {
     name: 'react-graphic-key',
@@ -1017,8 +1095,10 @@ export default [
     description: 'Компонент графического ключа для реакта',
     public: true,
     hidden: false,
-    category: 'Библиотека js',
-    links: ['https://www.npmjs.com/package/react-graphic-key']
+    links: [
+      'https://www.npmjs.com/package/react-graphic-key'
+    ],
+    category: 'npmjs_library'
   },
   {
     name: 'Навальный арестован?',
@@ -1036,8 +1116,10 @@ export default [
     description: 'Сайт где написано, арестован ли Алексей Навальный',
     public: true,
     hidden: false,
-    category: 'Бот Telegram',
-    links: ['https://navalnyarrested.utidteam.com/']
+    links: [
+      'https://navalnyarrested.utidteam.com/'
+    ],
+    category: 'bot/telegram'
   },
   {
     name: '#СвободуНавальному стрим',
@@ -1054,8 +1136,10 @@ export default [
     description: 'Стрим, длившийся неделю, где писалось кол-во зарегистрированных людей на митинг 21 апреля 2021',
     public: true,
     hidden: false,
-    category: 'Стрим',
-    links: ['https://www.youtube.com/watch?v=eUpy5KzF8XY&list=PLog2oYXiWbm0lYL_q86UIT2FzfrmDm1cT']
+    links: [
+      'https://www.youtube.com/watch?v=eUpy5KzF8XY&list=PLog2oYXiWbm0lYL_q86UIT2FzfrmDm1cT'
+    ],
+    category: 'stream'
   },
   {
     name: 'Ruscript',
@@ -1071,8 +1155,10 @@ export default [
     description: 'Псевдо язык на JS полностью на русском языке',
     public: true,
     hidden: false,
-    category: 'Компилятор языка',
-    links: ['https://github.com/vityaschel/ruscript']
+    links: [
+      'https://github.com/vityaschel/ruscript'
+    ],
+    category: 'programming_language'
   },
   {
     name: 'SkySmart helper',
@@ -1089,9 +1175,11 @@ export default [
     description: 'Помощник к сайту SkySmart чтобы списывать было легче',
     public: true,
     hidden: false,
-    category: 'Расширение Chrome',
     logo: skysmartHelperLogo,
-    links: ['https://chrome.google.com/webstore/detail/skysmart-helper/jedfnnibgbfgmcjbibkfbjclbicdfoim?hl=ru']
+    links: [
+      'https://chrome.google.com/webstore/detail/skysmart-helper/jedfnnibgbfgmcjbibkfbjclbicdfoim?hl=ru'
+    ],
+    category: 'chrome_extension'
   },
   {
     name: 'mypron',
@@ -1111,9 +1199,10 @@ export default [
     description: 'Нативное приложение, позволяющее находить торренты с контентом для взрослых',
     public: false,
     hidden: false,
-    category: 'Нативное приложение',
     logo: mypronLogo,
-    links: ['https://github.com/VityaSchel/mypron']
+    links: [
+      'https://github.com/VityaSchel/mypron'
+    ]
   },
   {
     name: 'Panic Button',
@@ -1130,9 +1219,11 @@ export default [
     description: 'Сайт, где женщина громко кричит, если нажать на кнопку (первый сайт на React)',
     public: true,
     hidden: false,
-    category: 'Веб-сайт',
     logo: panicButtonLogo,
-    links: ['https://github.com/VityaSchel/panic-button']
+    links: [
+      'https://github.com/VityaSchel/panic-button'
+    ],
+    category: 'website'
   },
   {
     name: 'АСУ РСО кастомные названия предметов',
@@ -1148,9 +1239,11 @@ export default [
     description: 'Расширение создающее свои названия для предметов в асу рсо',
     public: false,
     hidden: false,
-    category: 'Расширение Chrome',
     logo: asursoCustomNamesLogo,
-    links: ['https://github.com/VityaSchel/asurso-custom-names']
+    links: [
+      'https://github.com/VityaSchel/asurso-custom-names'
+    ],
+    category: 'chrome_extension'
   },
   {
     name: 'hiddenID_5',
@@ -1167,7 +1260,7 @@ export default [
     description: '',
     public: false,
     hidden: true,
-    category: 'Веб-сайт'
+    category: 'website'
   },
   {
     name: 'Wikipedia Speedrun',
@@ -1184,9 +1277,11 @@ export default [
     description: 'Игра про спидраннинг википедии (от случайной статьи до гитлера)',
     public: true,
     hidden: false,
-    category: 'Веб-сайт',
     logo: wikipediaSpeedrunLogo,
-    links: ['https://wikipedia.utidteam.com']
+    links: [
+      'https://wikipedia.utidteam.com'
+    ],
+    category: 'website'
   },
   {
     name: 'Py3Exec',
@@ -1205,8 +1300,8 @@ export default [
     description: 'Сайт для тренировки написания кода на питоне, решая задачи',
     public: true,
     hidden: false,
-    category: 'Веб-сайт',
-    logo: py3ExecLogo
+    logo: 0,
+    category: 'website'
   },
   {
     name: 'Dragon Quests',
@@ -1220,8 +1315,10 @@ export default [
     description: 'Огромная карта майнкрафт с развитыми ветками диалогов',
     public: true,
     hidden: false,
-    category: 'Minecraft карта',
-    links: ['https://www.planetminecraft.com/project/dragon-quests/']
+    links: [
+      'https://www.planetminecraft.com/project/dragon-quests/'
+    ],
+    category: 'minecraft_map'
   },
   {
     name: 'Сайт для заказа рофл-звонков Валакаса',
@@ -1240,9 +1337,11 @@ export default [
     description: 'Сайт для заказа пранк звонков от Глада Валакаса',
     public: true,
     hidden: false,
-    category: 'Веб-сайт',
     logo: roflCallsOrderWebsiteLogo,
-    links: ['https://github.com/VityaSchel/glad-valakas-website']
+    links: [
+      'https://github.com/VityaSchel/glad-valakas-website'
+    ],
+    category: 'website'
   },
   {
     name: 'Stigfinnare Stats',
@@ -1261,9 +1360,11 @@ export default [
     description: 'Статистика из моей игры Stigfinnare',
     public: true,
     hidden: false,
-    category: 'Веб-сайт',
     logo: stigfinnareLogo,
-    links: ['http://stats.utidteam.com/']
+    links: [
+      'http://stats.utidteam.com/'
+    ],
+    category: 'website'
   },
   {
     name: 'Хочешь стать программистом?',
@@ -1276,12 +1377,14 @@ export default [
       release: '2020'
     },
     scope: 2,
-    description: 'Сайт мем про "Хочешь стать программистом?"',
+    description: 'Сайт мем про \"Хочешь стать программистом?\"',
     public: false,
     hidden: false,
-    category: 'Веб-сайт',
     logo: wantToBeAProgrammerLogo,
-    links: ['https://github.com/VityaSchel/YouWantToBecomeAProgrammer']
+    links: [
+      'https://github.com/VityaSchel/YouWantToBecomeAProgrammer'
+    ],
+    category: 'website'
   },
   {
     name: 'bridgedb-tgbot',
@@ -1300,8 +1403,10 @@ export default [
     description: 'Бот, который присылал мосты из BridgeDB для TOR, делая парсинг HTML кода',
     public: true,
     hidden: false,
-    category: 'Бот Telegram',
-    links: ['https://github.com/VityaSchel/bridgedb-tgbot']
+    links: [
+      'https://github.com/VityaSchel/bridgedb-tgbot'
+    ],
+    category: 'bot/telegram'
   },
   {
     name: 'hiddenID_1',
@@ -1319,8 +1424,7 @@ export default [
     scope: 3,
     description: '',
     public: false,
-    hidden: true,
-    category: 'Приложение Android'
+    hidden: true
   },
   {
     name: 'Witness Guesser',
@@ -1337,7 +1441,7 @@ export default [
     description: 'ИИ которое угадывает ПО ФОТО из игры witness как решить головоломку',
     public: true,
     hidden: false,
-    category: 'Веб-сайт'
+    category: 'website'
   },
   {
     name: 'Useless canvas based editor',
@@ -1353,9 +1457,11 @@ export default [
     description: 'Редактор текста на основе canvas',
     public: true,
     hidden: false,
-    category: 'Веб-сайт',
     logo: uselessCanvasBasedTextEditorLogo,
-    links: ['https://github.com/VityaSchel/useless-canvas-based-text-editor']
+    links: [
+      'https://github.com/VityaSchel/useless-canvas-based-text-editor'
+    ],
+    category: 'website'
   },
   {
     name: 'StreamDO',
@@ -1370,7 +1476,7 @@ export default [
     description: 'Сайт который задумывался как альтернатива Twitch без идиотских правил; закрыт навсегда из-за bitwave',
     public: true,
     hidden: false,
-    category: 'Веб-сайт'
+    category: 'website'
   },
   {
     name: 'Bad UX support form',
@@ -1386,8 +1492,10 @@ export default [
     description: 'Сайт c плохим интерфейсом, для поста на реддите',
     public: true,
     hidden: false,
-    category: 'Веб-сайт',
-    links: ['https://github.com/VityaSchel/bad-ux-support-widget']
+    links: [
+      'https://github.com/VityaSchel/bad-ux-support-widget'
+    ],
+    category: 'website'
   },
   {
     name: 'hiddenID_4',
@@ -1405,7 +1513,7 @@ export default [
     description: '',
     public: false,
     hidden: true,
-    category: 'Веб-сайт'
+    category: 'website'
   },
   {
     name: 'EvieBotCanTalk',
@@ -1420,7 +1528,7 @@ export default [
     description: 'Расширение для общения двух чатботов, популярного в YouTube на тот момент, Evie',
     public: true,
     hidden: false,
-    category: 'Расширение Chrome'
+    category: 'chrome_extension'
   },
   {
     name: 'PsStoreMobile',
@@ -1434,8 +1542,7 @@ export default [
     scope: 2,
     description: 'Приложение на телефон, где можно было найти интересные игры по персональным рекоммендациям',
     public: true,
-    hidden: false,
-    category: 'Приложение Android'
+    hidden: false
   },
   {
     name: 'PGI',
@@ -1450,7 +1557,6 @@ export default [
     description: 'Приложение для посика биолгических родителей и связей с другими людьми',
     public: true,
     hidden: false,
-    category: 'Приложение Android',
     tags: [
       'order'
     ]
@@ -1469,7 +1575,7 @@ export default [
     description: '',
     public: false,
     hidden: true,
-    category: 'Веб-сайт'
+    category: 'website'
   },
   {
     name: '6 причин перейти с Native на PWA',
@@ -1485,8 +1591,10 @@ export default [
     description: 'Статья',
     public: true,
     hidden: false,
-    category: 'Веб-сайт',
-    links: ['https://6oj54.csb.app/']
+    links: [
+      'https://6oj54.csb.app/'
+    ],
+    category: 'website'
   },
   {
     name: 'Escape The Mall',
@@ -1503,7 +1611,7 @@ export default [
     description: 'Хоррор где надо наворовать в магазине и убежать',
     public: true,
     hidden: false,
-    category: 'Игра Windows 10'
+    category: 'game/windows10'
   },
   {
     name: 'Anonymizer',
@@ -1520,7 +1628,7 @@ export default [
     description: 'Мой персональный анонимайзер (прокси сервер) с паролем',
     public: true,
     hidden: false,
-    category: 'Веб-сайт'
+    category: 'website'
   },
   {
     name: 'Big Quest',
@@ -1537,7 +1645,7 @@ export default [
     description: 'Игра, где разбившись на самолете, игроку предстоит собрать чипы, открыть дверь в бункер и спастись',
     public: true,
     hidden: false,
-    category: 'Игра Windows 10'
+    category: 'game/windows10'
   },
   {
     name: 'Nikita-bot',
@@ -1554,7 +1662,7 @@ export default [
     description: 'ИИ, генерирующий предложения, похожие на то, что говорит мой друг Никита Ким',
     public: true,
     hidden: false,
-    category: 'Веб-сайт'
+    category: 'website'
   },
   {
     name: 'hiddenID_3',
@@ -1571,7 +1679,7 @@ export default [
     description: '',
     public: false,
     hidden: true,
-    category: 'Веб-сайт'
+    category: 'website'
   },
   {
     name: 'В чем разница?',
@@ -1588,7 +1696,7 @@ export default [
     description: 'Сайт, объясняющий разницу между похожими вещами. Мой самый первый сайт.',
     public: true,
     hidden: false,
-    category: 'Веб-сайт'
+    category: 'website'
   },
   {
     name: 'qqsh',
@@ -1604,7 +1712,7 @@ export default [
     description: 'Игра по типу quiplash',
     public: true,
     hidden: false,
-    category: 'Игра Windows 10'
+    category: 'game/windows10'
   },
   {
     name: 'CWN',
@@ -1619,6 +1727,6 @@ export default [
     description: 'Сайт задумывался как возможность дать любому пользователю 1 страницу где можно разместить HTML',
     public: true,
     hidden: false,
-    category: 'Веб-сайт'
+    category: 'website'
   }
 ]
