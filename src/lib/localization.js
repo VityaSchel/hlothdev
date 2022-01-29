@@ -127,7 +127,7 @@ export default {
     'CARD_ME_SPECIALIZATION': 'Web-developer',
     'FULL_SPECIALIZATION': 'Web-apps developer',
     'CARD_ME_CITY': 'Samara',
-    'CARD_PORTFOLIO': 'projects',
+    'CARD_PORTFOLIO': 'Projects',
     'CARD_PORTFOLIO_IN_PORTFOLIO': 'in portfolio',
     'CARD_SERVICES': 'Services',
     'THEME_SWITCH_TO_LIGHT': 'Switch to light theme',
@@ -213,7 +213,7 @@ export default {
         questions or want to discuss your case with me — contact me in
         Telegram: <a href='tg://resolve?domain=hlothdev'>@hlothdev</a> or other ways listed on this page.
       </p>`,
-    'PORTFOLIO':{
+    'PORTFOLIO': {
       'SEARCH': {
         'PLACEHOLDER': 'Search in portfolio: name, description, technologies',
         'EXAMPLE': 'e.g. «API» or «Redux, React Native»',

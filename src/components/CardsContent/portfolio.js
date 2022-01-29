@@ -10,20 +10,20 @@ import InputAdornment from '@mui/material/InputAdornment'
 import FormControl from '@mui/material/FormControl'
 import InputLabel from '@mui/material/InputLabel'
 import OutlinedInput from '@mui/material/OutlinedInput'
+import Chip from '@mui/material/Chip'
 import { MdFilterList, MdClear } from 'react-icons/md'
+import _ from 'lodash'
 
-Services.propTypes = {
+Portfolio.propTypes = {
   translation: PropTypes.object,
   locale: PropTypes.string
 }
 
-function Services(props) {
+function Portfolio(props) {
   const [searchTerms, setSearchTerms] = React.useState([])
   const [loading, setLoading] = React.useState(false)
-  const cards = props.translation.SERVICES_CARDS
+  const translation = props.translation.PORTFOLIO
   React.useEffect(() => setLoading(false), [searchTerms])
-
-  if(!cards) return <></>
 
   const dateRegex = /^\d+ \w+ \d+$/
   const dateColWidth = 150
@@ -46,20 +46,35 @@ function Services(props) {
     {
       field: 'name',
       headerName: 'Название',
-      flex: 1
+      flex: 10,
+      renderCell: ({ row: { name, category } }) => <span className={styles.multilineCell}>
+        {name}
+        <span>&#32;&#32;</span>
+        <Chip label={translation.CATEGORIES[category]} size='small' onClick={() => setSearchTerms([category])} />
+      </span>
     },
     {
       field: 'description',
       headerName: 'Описание',
-      flex: 2,
+      flex: 18,
       sortable: false,
-      disableColumnMenu: true
+      disableColumnMenu: true,
+      renderCell: ({ row: { description } }) => <span className={styles.description}>{description}</span>
     },
     {
       field: 'stack',
       headerName: 'Технологии',
+      flex: 7,
       sortable: false,
-      disableColumnMenu: true
+      disableColumnMenu: true,
+      renderCell: ({ row: { stack } }) => <span className={styles.multilineCell}>
+        {stack.map(technology => <><Chip
+          label={technology}
+          size='small'
+          onClick={() => setSearchTerms([technology])}
+          key={technology}
+        /><span>&#32;&#32;</span></>)}
+      </span>
     },
     {
       field: 'dates.devStart',
@@ -84,14 +99,25 @@ function Services(props) {
   const projects = projectsList
     .filter(project => {
       if(!searchTerms.length) return true
-      if(searchTerms.some(term => project.name.toLowerCase().includes(term.toLowerCase()))) return true
-      if(searchTerms.some(term => project.stack?.some?.(tech => tech.toLowerCase().includes(term.toLowerCase())))) return true
-      if(searchTerms.some(term => project.description.toLowerCase().includes(term.toLowerCase()))) return true
+      const terms = searchTerms.map(term => term.toLowerCase())
+      if(terms.some(term => project.name.toLowerCase().includes(term))) return true
+      if(terms.some(term => project.description.toLowerCase().includes(term))) return true
+      if(terms.some(term => project.category.toLowerCase().includes(term))) return true
+      if(terms.some(term => project.stack?.some?.(tech => tech.toLowerCase().includes(term)))) return true
     })
     .map(project => {
       const date = dateString => new Date(dateString)
       project = dotFlatten(project, 'dates')
-      project = Object.fromEntries(Object.entries(project).map(([key, val]) => [key, (key.startsWith('dates') && dateRegex.test(val)) ? date(val) : val]))
+      project = Object.fromEntries(
+        Object.entries(project).map(
+          ([key, val]) => [
+            key,
+            (key.startsWith('dates') && dateRegex.test(val))
+              ? date(val)
+              : val
+          ]
+        )
+      )
       return {
         ...project,
         logo: project.logo,
@@ -103,7 +129,7 @@ function Services(props) {
   return (
     <div className={styles.portfolio}>
       <Search
-        translation={props.translation}
+        translation={translation}
         setSearchTerms={setSearchTerms}
         setLoading={setLoading}
       />
@@ -120,6 +146,7 @@ function Services(props) {
         onCellClick={({ id }) => handleProjectClick(id)}
         localeText={({ 'ru-RU': xDataGridRu }[props.locale] ?? xDataGridEnUS).components.MuiDataGrid.defaultProps.localeText}
         loading={loading}
+        className={styles.dataGrid}
       />
     </div>
   )
@@ -131,9 +158,20 @@ Search.propTypes = {
   setLoading: PropTypes.func,
 }
 function Search(props) {
-  const translation = props.translation.PORTFOLIO_SEARCH
+  const translation = props.translation.SEARCH
   const [searchTerm, setSearchTerm] = React.useState('')
-  const terms = searchTerm.split(' ')
+  const terms = searchTerm
+    .match(/\\?.|^$/g)
+    .reduce((prev, cur) => {
+      if(cur === '"') {
+        prev.quote ^= 1
+      } else if(!prev.quote && cur === ' ') {
+        prev.term.push('')
+      } else {
+        prev.term[prev.term.length - 1] += cur.replace(/\\(.)/, '$1')
+      }
+      return prev
+    }, { term: [''] }).term
 
   React.useEffect(() => {
     props.setLoading(true)
@@ -178,4 +216,4 @@ function Search(props) {
   )
 }
 
-export default connect(state => ({ translation: state.translation, locale: state.locale }))(Services)
+export default connect(state => ({ translation: state.translation, locale: state.locale }))(Portfolio)

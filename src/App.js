@@ -7,6 +7,7 @@ import { createBrowserHistory } from 'history'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import WebFont from 'webfontloader'
+import _ from 'lodash'
 
 import Camera from './components/Camera'
 import Light from './components/Light'
@@ -22,22 +23,38 @@ const defaultTheme = {
       fontFamily: 'Oswald, Arial, sans-serif',
       fontWeight: 400
     }
+  },
+  components: {
+    MuiDataGrid: {
+      styleOverrides: {
+        row: {
+          maxHeight: 'unset !important'
+        },
+        cell: {
+          maxHeight: 'unset !important'
+        }
+      }
+    }
   }
 }
-const lightTheme = createTheme({
-  palette: { mode: 'light' }, ...defaultTheme,
-  components: {
-    MuiTypography: { styleOverrides: { root: { color: '#000' } } },
-    MuiSvgIcon: { styleOverrides: { root: { color: '#000' } } },
-  }
-})
-const darkTheme = createTheme({
-  palette: { mode: 'dark' }, ...defaultTheme,
-  components: {
-    MuiTypography: { styleOverrides: { root: { color: '#fff' } } },
-    MuiSvgIcon: { styleOverrides: { root: { color: '#fff' } } },
-  }
-})
+const lightTheme = createTheme(
+  _.merge(defaultTheme, {
+    palette: { mode: 'light' },
+    components: {
+      MuiTypography: { styleOverrides: { root: { color: '#000' } } },
+      MuiSvgIcon: { styleOverrides: { root: { color: '#000' } } },
+    }
+  })
+)
+const darkTheme = createTheme(
+  _.merge(defaultTheme, {
+    palette: { mode: 'dark' },
+    components: {
+      MuiTypography: { styleOverrides: { root: { color: '#fff' } } },
+      MuiSvgIcon: { styleOverrides: { root: { color: '#fff' } } },
+    }
+  })
+)
 
 export const history = createBrowserHistory()
 

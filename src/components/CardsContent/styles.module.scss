@@ -48,4 +48,16 @@
       flex: 1;
     }
   }
+
+  .dataGrid {
+    .multilineCell {
+      white-space: normal;
+      line-height: 2;
+    }
+
+    .description {
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
 }
