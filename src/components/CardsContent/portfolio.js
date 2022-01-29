@@ -32,6 +32,14 @@ function Portfolio(props) {
     ? Intl.DateTimeFormat(props.locale, { day: '2-digit', month: 'long', year: 'numeric' }).format(value)
     : value
 
+  const formatName = name => {
+    if(name.startsWith('hiddenID_')) {
+      return 'Скрытый проект'
+    } else {
+      return name
+    }
+  }
+
   const columns = [
     {
       field: 'logo',
@@ -48,7 +56,7 @@ function Portfolio(props) {
       headerName: 'Название',
       flex: 10,
       renderCell: ({ row: { name, category } }) => <span className={styles.multilineCell}>
-        {name}
+        {formatName(name)}
         <span>&#32;&#32;</span>
         <Chip label={translation.CATEGORIES[category]} size='small' onClick={() => setSearchTerms([category])} />
       </span>
@@ -67,8 +75,8 @@ function Portfolio(props) {
       flex: 7,
       sortable: false,
       disableColumnMenu: true,
-      renderCell: ({ row: { stack } }) => <span className={styles.multilineCell}>
-        {stack.map(technology => <><Chip
+      renderCell: ({ row: { stack } }) => <span className={[styles.multilineCell, styles.stack].join(' ')}>
+        {stack?.map(technology => <><Chip
           label={technology}
           size='small'
           onClick={() => setSearchTerms([technology])}
@@ -136,8 +144,8 @@ function Portfolio(props) {
       <DataGrid
         rows={projects}
         columns={columns}
-        autoHeight
-        pageSize={25}
+        pageSize={15}
+        rowBuffer={5}
         rowsPerPageOptions={[]}
         disableColumnFilter
         disableColumnSelector

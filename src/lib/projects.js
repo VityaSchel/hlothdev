@@ -404,7 +404,7 @@ export default [
     description: 'Карточная игра Мафия, но онлайн. Ремейк легендарной Мафии Онлайн на React Native. Задумывалась как конкурент, который поглотит Мафию Онлайн и Мафию GO',
     public: true,
     hidden: false,
-    logo: 0,
+    logo: remafiaLogo,
     category: 'game/android'
   },
   {
@@ -748,7 +748,7 @@ export default [
     tags: [
       'personalsite'
     ],
-    logo: 0,
+    logo: vityaschelSiteLogo,
     category: 'website'
   },
   {
@@ -768,7 +768,7 @@ export default [
     tags: [
       'personalsite'
     ],
-    logo: 0,
+    logo: vityaschelSiteLogo,
     category: 'website'
   },
   {
@@ -788,7 +788,7 @@ export default [
     tags: [
       'personalsite'
     ],
-    logo: 0,
+    logo: vityaschelSiteLogo,
     category: 'website'
   },
   {
@@ -809,7 +809,7 @@ export default [
     tags: [
       'personalsite'
     ],
-    logo: 0,
+    logo: vityaschelSiteLogo,
     category: 'website'
   },
   {
@@ -944,7 +944,7 @@ export default [
     description: 'Бот Алисы, который афиширует новости из мира игр и может угадать игру по описанию',
     public: true,
     hidden: false,
-    logo: 0,
+    logo: igroruporLogo,
     category: 'bot/yandex_alice'
   },
   {
@@ -1300,7 +1300,7 @@ export default [
     description: 'Сайт для тренировки написания кода на питоне, решая задачи',
     public: true,
     hidden: false,
-    logo: 0,
+    logo: py3ExecLogo,
     category: 'website'
   },
   {
