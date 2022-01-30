@@ -39,27 +39,35 @@
   .dataGrid {
     flex: 1;
 
-    .multilineCell {
-      white-space: normal;
-      line-height: 2;
-      padding: 3px 0 5px 0;
-    }
+    [class~=MuiDataGrid-row] {
+      cursor: pointer;
 
-    .stack {
-    }
+      [class~=MuiDataGrid-cell]:focus {
+        outline: none;
+      }
 
-    .projectInfoPlaceholder {
-      color: #dedede;
-      font-style: italic;
-    }
+      .multilineCell {
+        white-space: normal;
+        line-height: 2;
+        padding: 3px 0 5px 0;
+      }
 
-    .projectName {
-      font-weight: 600;
-    }
+      .stack {
+      }
 
-    .description {
-      text-overflow: ellipsis;
-      overflow: hidden;
+      .projectInfoPlaceholder {
+        color: #dedede;
+        font-style: italic;
+      }
+
+      .projectName {
+        font-weight: 600;
+      }
+
+      .description {
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
     }
   }
 }
