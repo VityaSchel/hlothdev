@@ -8,13 +8,7 @@ import InputLabel from '@mui/material/InputLabel'
 import OutlinedInput from '@mui/material/OutlinedInput'
 import { MdFilterList, MdClear } from 'react-icons/md'
 
-
-Search.propTypes = {
-  translation: PropTypes.object,
-  setSearchTerms: PropTypes.func,
-  setLoading: PropTypes.func,
-}
-export default function Search(props) {
+const Search = React.forwardRef((props, ref) => {
   const translation = props.translation.SEARCH
   const [searchTerm, setSearchTerm] = React.useState('')
   const terms = searchTerm
@@ -29,6 +23,12 @@ export default function Search(props) {
       }
       return prev
     }, { term: [''] }).term
+
+  React.useImperativeHandle(ref, () => ({
+    setTerms(terms) {
+      setSearchTerm(terms.map(term => term.includes(' ') ? `"${term}"` : term).join(' '))
+    }
+  }))
 
   React.useEffect(() => {
     props.setLoading(true)
@@ -68,7 +68,17 @@ export default function Search(props) {
           }
         />
       </FormControl>
-      <IconButton><MdFilterList /></IconButton>
+      <IconButton>
+        <MdFilterList />
+      </IconButton>
     </div>
   )
+})
+
+Search.propTypes = {
+  translation: PropTypes.object,
+  setSearchTerms: PropTypes.func,
+  setLoading: PropTypes.func,
 }
+Search.displayName = 'Search'
+export default Search

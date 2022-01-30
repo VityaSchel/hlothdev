@@ -19,14 +19,6 @@ export default function generateColumns({ locale, translation, setSearchTerms })
     ? Intl.DateTimeFormat(locale, { day: '2-digit', month: 'long', year: 'numeric' }).format(value)
     : value
 
-  const formatName = name => {
-    if(name.startsWith('hiddenID_')) {
-      return 'Скрытый проект'
-    } else {
-      return name
-    }
-  }
-
   return [
     {
       field: 'logo',
@@ -36,13 +28,13 @@ export default function generateColumns({ locale, translation, setSearchTerms })
       sortable: false,
       disableColumnMenu: true,
       width: 71,
-      renderCell: ({ row: { logo, category, hidden, ...row } }) => {
-        if(logo) {
+      renderCell: ({ row: { logo, category, hidden, unpublic } }) => {
+        if(logo && !unpublic) {
           return <img src={logo} height={100} className={styles.logo} />
         } else {
           let Logo
           if(hidden) Logo = alertDecagram
-          else if(!row.public) Logo = eyeOff
+          else if(unpublic) Logo = eyeOff
           else Logo = {
             'figma_plugin': figmaIcon,
             'npmjs_library': npmLogo,
@@ -59,13 +51,20 @@ export default function generateColumns({ locale, translation, setSearchTerms })
       field: 'name',
       headerName: 'Название',
       flex: 10,
-      renderCell: ({ row: { name, category } }) => <span className={styles.multilineCell}>
-        {formatName(name)}
-        {category && <>
-          <span>&#32;&#32;</span>
-          <Chip label={translation.CATEGORIES[category]} size='small' onClick={() => setSearchTerms([category])} />
-        </>}
-      </span>
+      renderCell: ({ row: { name, category, hidden, unpublic } }) => {
+        if(hidden) name = 'Скрытый проект'
+        else if(unpublic) name = 'Нежелательный контент'
+
+        const translatedCategory = translation.CATEGORIES[category]
+
+        return <span className={styles.multilineCell}>
+          <span className={(hidden || unpublic) ? styles.projectInfoPlaceholder : styles.projectName}>{name}</span>
+          {category && <>
+            <span>&#32;&#32;</span>
+            <Chip label={translatedCategory} size='small' onClick={() => setSearchTerms([translatedCategory])} />
+          </>}
+        </span>
+      }
     },
     {
       field: 'description',
@@ -73,7 +72,15 @@ export default function generateColumns({ locale, translation, setSearchTerms })
       flex: 18,
       sortable: false,
       disableColumnMenu: true,
-      renderCell: ({ row: { description } }) => <span className={styles.description}>{description}</span>
+      renderCell: ({ row: { description, hidden, unpublic } }) => {
+        if(hidden) description = 'Нажмите, чтобы узнать подробнее'
+        else if(unpublic) description = 'Нажмите, чтобы показать информацию о проекте'
+        return (
+          <span className={cx(styles.description, { [styles.projectInfoPlaceholder]: hidden || unpublic })}>
+            {description}
+          </span>
+        )
+      }
     },
     {
       field: 'stack',
@@ -82,12 +89,18 @@ export default function generateColumns({ locale, translation, setSearchTerms })
       sortable: false,
       disableColumnMenu: true,
       renderCell: ({ row: { stack } }) => <span className={[styles.multilineCell, styles.stack].join(' ')}>
-        {stack.map(technology => <><Chip
-          label={technology}
-          size='small'
-          onClick={() => setSearchTerms([technology])}
-          key={technology}
-        /><span>&#32;&#32;</span></>)}
+        {stack.map(technology => (
+          <>
+            <Chip
+              label={technology}
+              size='small'
+              onClick={() => setSearchTerms([technology])}
+              key={technology}
+              // sx={{ backgroundColor: technologiesColors[technology] }}
+            />
+            <span>&#32;&#32;</span>
+          </>
+        ))}
       </span>
     },
     {
@@ -110,3 +123,36 @@ export default function generateColumns({ locale, translation, setSearchTerms })
     }
   ]
 }
+
+// const technologiesColors = {
+//   'NextJS': '#000',
+//   'React': '#61DAFB',
+//   'PHP': '#8993BE',
+//   'React-router': '#E94948',
+//   'MUI': '#3399FF',
+//   'TypeScript': '#2871BF',
+//   'NodeJS': '#77AF63',
+//   'MongoDB': '#0A944E',
+//   'Telegram Bot API': '#22A9E8',
+//   'Kubernetes': '#',
+//   'Docker': '#',
+//   'React Native': '#',
+//   'Expo': '#',
+//   'React-admin': '#',
+//   'Redux': '#',
+//   'React-redux': '#',
+//   'Redux-toolkit': '#',
+//   'rtk-query': '#',
+//   'Reactstrap': '#',
+//   'Bootstrap': '#',
+//   'VK API': '#',
+//   'McDonalds API': '#',
+//   'Vite': '#',
+//   'Preact': '#',
+//   'webpack': '#',
+//   'nginx': '#',
+//   'JavaScript': '#',
+//   'Tauri': '#',
+//   'MySQL': '#',
+//   'phpDevelStudio': '#'
+// }

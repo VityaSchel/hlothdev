@@ -17,14 +17,19 @@ function Portfolio(props) {
   const [searchTerms, setSearchTerms] = React.useState([])
   const [loading, setLoading] = React.useState(false)
   const translation = props.translation.PORTFOLIO
-  React.useEffect(() => setLoading(false), [searchTerms])
-
+  const dataGridRef = React.useRef()
+  const searchRef = React.useRef()
   const dateRegex = /^\d+ \w+ \d+$/
+
+  React.useEffect(() => setLoading(false), [searchTerms])
 
   const columns = generateColumns({
     locale: props.locale,
     translation,
-    setSearchTerms
+    setSearchTerms: terms => {
+      searchRef.current.setTerms(terms)
+      setSearchTerms(terms)
+    }
   })
 
   const projects = projectsList
@@ -32,9 +37,9 @@ function Portfolio(props) {
       if(!searchTerms.length) return true
       const terms = searchTerms.map(term => term.toLowerCase())
       if(terms.some(term => project.name.toLowerCase().includes(term))) return true
-      if(terms.some(term => project.description.toLowerCase().includes(term))) return true
-      if(terms.some(term => project.category.toLowerCase().includes(term))) return true
-      if(terms.some(term => project.stack?.some?.(tech => tech.toLowerCase().includes(term)))) return true
+      if(terms.some(term => project.description?.toLowerCase().includes(term))) return true
+      if(terms.some(term => translation.CATEGORIES[project.category]?.toLowerCase().includes(term))) return true
+      if(terms.some(term => project.stack?.some(tech => tech.toLowerCase().includes(term)))) return true
     })
     .map(project => {
       const date = dateString => new Date(dateString)
@@ -63,19 +68,29 @@ function Portfolio(props) {
         translation={translation}
         setSearchTerms={setSearchTerms}
         setLoading={setLoading}
+        ref={searchRef}
       />
       <DataGrid
         rows={projects}
         columns={columns}
+        ref={dataGridRef}
+
         pageSize={25}
         rowBuffer={5}
         disableVirtualization
         rowsPerPageOptions={[]}
+
+        // pageSize={projects.length}
+        // rowBuffer={15}
+        // hideFooterPagination
+        // rowsPerPageOptions={[]}
+
         disableColumnFilter
         disableColumnSelector
         disableDensitySelector
         disableSelectionOnClick
         onCellClick={({ id }) => handleProjectClick(id)}
+        onPageChange={() => dataGridRef?.current.querySelector('.MuiDataGrid-virtualScroller').scrollTo(0, 0)}
         localeText={({ 'ru-RU': xDataGridRu }[props.locale] ?? xDataGridEnUS).components.MuiDataGrid.defaultProps.localeText}
         loading={loading}
         className={styles.dataGrid}

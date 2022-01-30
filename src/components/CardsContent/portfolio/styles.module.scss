@@ -42,10 +42,19 @@
     .multilineCell {
       white-space: normal;
       line-height: 2;
+      padding: 3px 0 5px 0;
     }
 
     .stack {
-      padding: 3px 0 5px 0;
+    }
+
+    .projectInfoPlaceholder {
+      color: #dedede;
+      font-style: italic;
+    }
+
+    .projectName {
+      font-weight: 600;
     }
 
     .description {

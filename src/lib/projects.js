@@ -56,7 +56,7 @@ export default [
     },
     scope: 5,
     description: 'Игра где 6 людей сражаются в мини играх за большее кол-во очков',
-    public: true,
+    unpublic: false,
     hidden: false,
     logo: stigfinnareLogo,
     links: [
@@ -77,7 +77,7 @@ export default [
     },
     scope: 3,
     description: 'Игра про шарик (аркада) в которой ты летишь до солнца минуя препятствия',
-    public: true,
+    unpublic: false,
     hidden: false,
     logo: rollerRideLogo,
     links: [
@@ -99,7 +99,7 @@ export default [
     },
     scope: 3,
     description: 'Сайт абобы: кандидата в президенты и мема от Глада Валакаса',
-    public: true,
+    unpublic: false,
     hidden: false,
     logo: abobaLogo,
     links: [
@@ -122,7 +122,7 @@ export default [
     },
     scope: 4,
     description: 'Сборник всех гадз глада валакаса (раннее известен как гадзы.online)',
-    public: true,
+    unpublic: false,
     hidden: false,
     logo: gadzasOldLogo,
     links: [
@@ -142,7 +142,7 @@ export default [
     },
     scope: 4,
     description: 'Сборник всех гадз глада валакаса (раннее известен как гадзы.online)',
-    public: true,
+    unpublic: false,
     hidden: false,
     logo: gadzasNewLogo,
     links: [
@@ -164,7 +164,7 @@ export default [
     },
     scope: 3,
     description: 'Онлайн-редактор паков для игры SiGame (Своя Игра)',
-    public: true,
+    unpublic: false,
     hidden: false,
     logo: sipackerLogo,
     links: [
@@ -185,7 +185,7 @@ export default [
     },
     scope: 4,
     description: 'Сабреддит Алексея Шевцова на Reddit',
-    public: true,
+    unpublic: false,
     hidden: false,
     logo: rJolygolfLogo,
     links: [
@@ -197,9 +197,9 @@ export default [
   {
     name: 'Шизоньян',
     stack: [
-      'python',
+      'Python',
       'markovify',
-      'express',
+      'Express',
       'React'
     ],
     supported: 'partially',
@@ -209,7 +209,7 @@ export default [
     },
     scope: 2,
     description: 'Сайт генератор твитов маргариты симоньян',
-    public: true,
+    unpublic: false,
     hidden: false,
     logo: shizonyanLogo,
     links: [
@@ -222,7 +222,7 @@ export default [
     stack: [
       'React',
       'Fastify',
-      'Level'
+      'LevelDB'
     ],
     supported: false,
     dates: {
@@ -232,7 +232,7 @@ export default [
     },
     scope: 3,
     description: 'Лендинг для майнкрафт сервера и веб-сервер с API (rcon+status)',
-    public: true,
+    unpublic: false,
     hidden: false,
     tags: [
       'order'
@@ -259,7 +259,7 @@ export default [
     },
     scope: 3,
     description: 'Плагин который помогает менять макеты Android на iOS и наоборот',
-    public: true,
+    unpublic: false,
     hidden: false,
     tags: [
       'order'
@@ -283,7 +283,7 @@ export default [
     },
     scope: 3,
     description: 'Альткоин и не крипто валюта в телеграме майнится написанием слова самара',
-    public: true,
+    unpublic: false,
     hidden: false,
     logo: samaracoinLogo,
     links: [
@@ -305,7 +305,7 @@ export default [
     },
     scope: 2,
     description: 'Библиотека для взаимодействия с закрытым API сайта АСУ РСО (электронный дневник)',
-    public: true,
+    unpublic: false,
     hidden: false,
     links: [
       'https://www.npmjs.com/package/asurso'
@@ -320,7 +320,7 @@ export default [
       'streamlink',
       'ffmpeg',
       'Kubernetes',
-      'docker'
+      'Docker'
     ],
     supported: 'partially',
     dates: {
@@ -329,7 +329,7 @@ export default [
     },
     scope: 1,
     description: 'Инструмент для автоматической записи и перезалива стримов с YouTube',
-    public: true,
+    unpublic: false,
     hidden: false,
     links: [
       'https://github.com/VityaSchel/reuploader'
@@ -351,7 +351,7 @@ export default [
     },
     scope: 2,
     description: 'Панель управления ботом с добавлением модераторов, контента, проверка на подписку',
-    public: true,
+    unpublic: false,
     hidden: false,
     tags: [
       'order'
@@ -376,7 +376,7 @@ export default [
     },
     scope: 2,
     description: 'Мобильная игра про Машу из GoStudy, которая шуршит микрофоном и мешает стриму',
-    public: true,
+    unpublic: false,
     hidden: false,
     logo: mashaSimulatorLogo,
     links: [
@@ -402,7 +402,7 @@ export default [
     },
     scope: 4,
     description: 'Карточная игра Мафия, но онлайн. Ремейк легендарной Мафии Онлайн на React Native. Задумывалась как конкурент, который поглотит Мафию Онлайн и Мафию GO',
-    public: true,
+    unpublic: false,
     hidden: false,
     logo: remafiaLogo,
     category: 'game/android'
@@ -424,7 +424,7 @@ export default [
     },
     scope: 4,
     description: 'Сайт для национального центра исследований в Казахстане, разрабатывался в команде',
-    public: true,
+    unpublic: false,
     hidden: false,
     tags: [
       'order'
@@ -447,7 +447,7 @@ export default [
     },
     scope: 2,
     description: 'Враппер для API DeStream на NodeJS',
-    public: true,
+    unpublic: false,
     hidden: false,
     links: [
       'https://www.npmjs.com/package/destream-api'
@@ -467,7 +467,7 @@ export default [
     },
     scope: 1,
     description: 'Враппер для API DonationAlerts на NodeJS',
-    public: true,
+    unpublic: false,
     hidden: false,
     links: [
       'https://www.npmjs.com/package/alerts-api'
@@ -489,7 +489,7 @@ export default [
     },
     scope: 3,
     description: 'Генератор вариантов огэ по информатике 2021',
-    public: true,
+    unpublic: false,
     hidden: false,
     logo: ogeGeneratorLogo,
     links: [
@@ -511,7 +511,7 @@ export default [
     },
     scope: 1,
     description: 'Шуточный сайт, где можно покрутить колесо удачи и узнать куда поступать (всегда будет ČZU)',
-    public: true,
+    unpublic: false,
     hidden: false,
     logo: fitVsFelLogo,
     links: [
@@ -532,7 +532,7 @@ export default [
     },
     scope: 1,
     description: 'Шуточный сайт, где можно посчитать, сколько стоит учеба в Чехии для студента + расходы',
-    public: true,
+    unpublic: false,
     hidden: false,
     logo: czechLivingCostsLogo,
     links: [
@@ -553,7 +553,7 @@ export default [
     },
     scope: 2,
     description: 'Лендинг про интерьер для дома',
-    public: true,
+    unpublic: false,
     hidden: false,
     logo: homirrorLogo,
     links: [
@@ -574,7 +574,7 @@ export default [
     },
     scope: 2,
     description: 'Лендинг про обучение тильде (CMS)',
-    public: true,
+    unpublic: false,
     hidden: false,
     logo: niolySchoolLogo,
     links: [
@@ -595,7 +595,7 @@ export default [
     },
     scope: 2,
     description: 'Лендинг про обучающую школу',
-    public: true,
+    unpublic: false,
     hidden: false,
     logo: educoLogo,
     links: [
@@ -616,7 +616,7 @@ export default [
     },
     scope: 2,
     description: 'Лендинг про кибербезопасность сайтов',
-    public: true,
+    unpublic: false,
     hidden: false,
     logo: bitProtectLogo,
     links: [
@@ -637,7 +637,7 @@ export default [
     },
     scope: 2,
     description: 'Лендинг про интернет магазин еды',
-    public: true,
+    unpublic: false,
     hidden: false,
     logo: foodStuffLogo,
     links: [
@@ -659,7 +659,7 @@ export default [
     },
     scope: 2,
     description: 'Бот, отправляющий каждое утро гифку с добрым утром',
-    public: true,
+    unpublic: false,
     hidden: false,
     logo: goodmorningBotLogo,
     links: [
@@ -680,7 +680,7 @@ export default [
     },
     scope: 1,
     description: 'Бот, который парсит сайт макдональдса и пишет в чат об акциях',
-    public: true,
+    unpublic: false,
     hidden: false,
     logo: mcDonaldsOffersLogo,
     links: [
@@ -705,7 +705,7 @@ export default [
     },
     scope: 1,
     description: 'Бот для тренировки спряжений, осенью 2021 был переписан для использования LevelDB и Fastify вместо MongoDB и Express',
-    public: true,
+    unpublic: false,
     hidden: false,
     logo: rusWordConBotLogo,
     links: [
@@ -727,7 +727,7 @@ export default [
     },
     scope: 2,
     description: '',
-    public: false,
+    unpublic: true,
     hidden: true,
     category: 'bot/vk'
   },
@@ -743,7 +743,7 @@ export default [
     },
     scope: 3,
     description: 'Первый сайт про меня на uCoz CMS',
-    public: true,
+    unpublic: false,
     hidden: false,
     tags: [
       'personalsite'
@@ -763,7 +763,7 @@ export default [
     },
     scope: 3,
     description: 'Второй сайт в виде консоли на бесплатном хостинге',
-    public: true,
+    unpublic: false,
     hidden: false,
     tags: [
       'personalsite'
@@ -783,7 +783,7 @@ export default [
     },
     scope: 2,
     description: 'Третий сайт про все мои проекты со связями в виде карты',
-    public: true,
+    unpublic: false,
     hidden: false,
     tags: [
       'personalsite'
@@ -794,8 +794,7 @@ export default [
   {
     name: 'VityaSchel Site: лаймовая галлерея',
     stack: [
-      'Vanilla JS',
-      'Plain HTML'
+      'Vanilla JS'
     ],
     dates: {
       devStart: '2020',
@@ -804,7 +803,7 @@ export default [
     },
     scope: 3,
     description: 'Четвертый сайт про все мои проекты и меня в виде лаймовой галереи',
-    public: true,
+    unpublic: false,
     hidden: false,
     tags: [
       'personalsite'
@@ -825,7 +824,7 @@ export default [
     },
     scope: 4,
     description: 'Пятый, огромный сайт с красивыми анимациями про все, что со мной связано',
-    public: true,
+    unpublic: false,
     hidden: false,
     tags: [
       'personalsite'
@@ -852,7 +851,7 @@ export default [
     },
     scope: 4,
     description: 'Шестой сайт про все мои проекты, услуги, технологии и донаты с использованием ThreeJS',
-    public: true,
+    unpublic: false,
     hidden: false,
     tags: [
       'personalsite'
@@ -880,7 +879,7 @@ export default [
     },
     scope: 4,
     description: '',
-    public: false,
+    unpublic: true,
     hidden: true,
     category: 'website'
   },
@@ -891,8 +890,8 @@ export default [
       'Preact',
       'webpack',
       'babel',
-      'redux',
-      'react-redux',
+      'Redux',
+      'React-redux',
       'nginx'
     ],
     supported: 'partially',
@@ -902,7 +901,7 @@ export default [
     },
     scope: 2,
     description: 'Мой первый даркнет-сайт и первый проект на Vite с рулеткой CS:GO',
-    public: true,
+    unpublic: false,
     hidden: false,
     links: [
       'https://github.com/VityaSchel/vitejs-csgo-case-simulator'
@@ -921,7 +920,7 @@ export default [
     },
     scope: 1,
     description: 'Библиотека для получения случайной аватарки из steam',
-    public: true,
+    unpublic: false,
     hidden: false,
     links: [
       'https://www.npmjs.com/package/random-steam-avatar'
@@ -942,7 +941,7 @@ export default [
     },
     scope: 3,
     description: 'Бот Алисы, который афиширует новости из мира игр и может угадать игру по описанию',
-    public: true,
+    unpublic: false,
     hidden: false,
     logo: igroruporLogo,
     category: 'bot/yandex_alice'
@@ -950,8 +949,7 @@ export default [
   {
     name: 'Уборщица',
     stack: [
-      'Vanilla JS',
-      'Plain HTML'
+      'Vanilla JS'
     ],
     supported: 'partially',
     dates: {
@@ -960,7 +958,7 @@ export default [
     },
     scope: 2,
     description: 'Расширение удаляющее сообщения Кирилла Смирнова из бесед ВКонтакте',
-    public: true,
+    unpublic: false,
     hidden: false,
     logo: cleanerLogo,
     links: [
@@ -980,7 +978,7 @@ export default [
     },
     scope: 1,
     description: 'Расширение, которое удаляет все новости и видео об Игре в Кальмара',
-    public: true,
+    unpublic: false,
     hidden: false,
     logo: noSquidGameLogo,
     links: [
@@ -1000,7 +998,7 @@ export default [
     },
     scope: 3,
     description: 'Адвенчура без сюжета, делалась как открытый мир с красивой графикой и головоломками',
-    public: true,
+    unpublic: false,
     hidden: false,
     category: 'game/windows10'
   },
@@ -1016,7 +1014,7 @@ export default [
     },
     scope: 3,
     description: 'Батл рояль в 2д',
-    public: true,
+    unpublic: false,
     hidden: false,
     category: 'game/windows10'
   },
@@ -1032,7 +1030,7 @@ export default [
     },
     scope: 2,
     description: 'Сайт где надо угадать чья цитата: соловьева или гитлера',
-    public: true,
+    unpublic: false,
     hidden: false,
     links: [
       'https://github.com/VityaSchel/vladimir-solovyev'
@@ -1052,7 +1050,7 @@ export default [
     },
     scope: 1,
     description: 'Расширение для добавления темной темы в соц. сеть Gettr',
-    public: false,
+    unpublic: true,
     hidden: false,
     logo: gettrDarkThemeLogo,
     links: [
@@ -1073,7 +1071,7 @@ export default [
     },
     scope: 2,
     description: 'Бот в телеграме отправляющий гифки кролика в чат по текстовому запросу',
-    public: true,
+    unpublic: false,
     hidden: false,
     logo: probablyKrolLogo,
     links: [
@@ -1093,7 +1091,7 @@ export default [
     },
     scope: 2,
     description: 'Компонент графического ключа для реакта',
-    public: true,
+    unpublic: false,
     hidden: false,
     links: [
       'https://www.npmjs.com/package/react-graphic-key'
@@ -1114,7 +1112,7 @@ export default [
     },
     scope: 2,
     description: 'Сайт где написано, арестован ли Алексей Навальный',
-    public: true,
+    unpublic: false,
     hidden: false,
     links: [
       'https://navalnyarrested.utidteam.com/'
@@ -1134,7 +1132,7 @@ export default [
     },
     scope: 3,
     description: 'Стрим, длившийся неделю, где писалось кол-во зарегистрированных людей на митинг 21 апреля 2021',
-    public: true,
+    unpublic: false,
     hidden: false,
     links: [
       'https://www.youtube.com/watch?v=eUpy5KzF8XY&list=PLog2oYXiWbm0lYL_q86UIT2FzfrmDm1cT'
@@ -1153,7 +1151,7 @@ export default [
     },
     scope: 3,
     description: 'Псевдо язык на JS полностью на русском языке',
-    public: true,
+    unpublic: false,
     hidden: false,
     links: [
       'https://github.com/vityaschel/ruscript'
@@ -1163,8 +1161,7 @@ export default [
   {
     name: 'SkySmart helper',
     stack: [
-      'Vanilla JS',
-      'Plain HTML'
+      'Vanilla JS'
     ],
     supported: 'partially',
     dates: {
@@ -1173,7 +1170,7 @@ export default [
     },
     scope: 2,
     description: 'Помощник к сайту SkySmart чтобы списывать было легче',
-    public: true,
+    unpublic: false,
     hidden: false,
     logo: skysmartHelperLogo,
     links: [
@@ -1197,7 +1194,7 @@ export default [
     },
     scope: 2,
     description: 'Нативное приложение, позволяющее находить торренты с контентом для взрослых',
-    public: false,
+    unpublic: true,
     hidden: false,
     logo: mypronLogo,
     links: [
@@ -1217,7 +1214,7 @@ export default [
     },
     scope: 1,
     description: 'Сайт, где женщина громко кричит, если нажать на кнопку (первый сайт на React)',
-    public: true,
+    unpublic: false,
     hidden: false,
     logo: panicButtonLogo,
     links: [
@@ -1237,7 +1234,7 @@ export default [
     },
     scope: 2,
     description: 'Расширение создающее свои названия для предметов в асу рсо',
-    public: false,
+    unpublic: true,
     hidden: false,
     logo: asursoCustomNamesLogo,
     links: [
@@ -1258,7 +1255,7 @@ export default [
     },
     scope: 3,
     description: '',
-    public: false,
+    unpublic: true,
     hidden: true,
     category: 'website'
   },
@@ -1275,7 +1272,7 @@ export default [
     },
     scope: 2,
     description: 'Игра про спидраннинг википедии (от случайной статьи до гитлера)',
-    public: true,
+    unpublic: false,
     hidden: false,
     logo: wikipediaSpeedrunLogo,
     links: [
@@ -1298,7 +1295,7 @@ export default [
     },
     scope: 3,
     description: 'Сайт для тренировки написания кода на питоне, решая задачи',
-    public: true,
+    unpublic: false,
     hidden: false,
     logo: py3ExecLogo,
     category: 'website'
@@ -1313,7 +1310,7 @@ export default [
     },
     scope: 3,
     description: 'Огромная карта майнкрафт с развитыми ветками диалогов',
-    public: true,
+    unpublic: false,
     hidden: false,
     links: [
       'https://www.planetminecraft.com/project/dragon-quests/'
@@ -1335,7 +1332,7 @@ export default [
     },
     scope: 4,
     description: 'Сайт для заказа пранк звонков от Глада Валакаса',
-    public: true,
+    unpublic: false,
     hidden: false,
     logo: roflCallsOrderWebsiteLogo,
     links: [
@@ -1358,7 +1355,7 @@ export default [
     },
     scope: 2,
     description: 'Статистика из моей игры Stigfinnare',
-    public: true,
+    unpublic: false,
     hidden: false,
     logo: stigfinnareLogo,
     links: [
@@ -1377,8 +1374,8 @@ export default [
       release: '2020'
     },
     scope: 2,
-    description: 'Сайт мем про \"Хочешь стать программистом?\"',
-    public: false,
+    description: 'Сайт мем про "Хочешь стать программистом?"',
+    unpublic: true,
     hidden: false,
     logo: wantToBeAProgrammerLogo,
     links: [
@@ -1401,7 +1398,7 @@ export default [
     },
     scope: 1,
     description: 'Бот, который присылал мосты из BridgeDB для TOR, делая парсинг HTML кода',
-    public: true,
+    unpublic: false,
     hidden: false,
     links: [
       'https://github.com/VityaSchel/bridgedb-tgbot'
@@ -1423,7 +1420,7 @@ export default [
     },
     scope: 3,
     description: '',
-    public: false,
+    unpublic: true,
     hidden: true
   },
   {
@@ -1439,7 +1436,7 @@ export default [
     },
     scope: 2,
     description: 'ИИ которое угадывает ПО ФОТО из игры witness как решить головоломку',
-    public: true,
+    unpublic: false,
     hidden: false,
     category: 'website'
   },
@@ -1455,7 +1452,7 @@ export default [
     },
     scope: 2,
     description: 'Редактор текста на основе canvas',
-    public: true,
+    unpublic: false,
     hidden: false,
     logo: uselessCanvasBasedTextEditorLogo,
     links: [
@@ -1474,7 +1471,7 @@ export default [
     },
     scope: 2,
     description: 'Сайт который задумывался как альтернатива Twitch без идиотских правил; закрыт навсегда из-за bitwave',
-    public: true,
+    unpublic: false,
     hidden: false,
     category: 'website'
   },
@@ -1490,7 +1487,7 @@ export default [
     },
     scope: 1,
     description: 'Сайт c плохим интерфейсом, для поста на реддите',
-    public: true,
+    unpublic: false,
     hidden: false,
     links: [
       'https://github.com/VityaSchel/bad-ux-support-widget'
@@ -1511,7 +1508,7 @@ export default [
     },
     scope: 3,
     description: '',
-    public: false,
+    unpublic: true,
     hidden: true,
     category: 'website'
   },
@@ -1526,7 +1523,7 @@ export default [
     },
     scope: 2,
     description: 'Расширение для общения двух чатботов, популярного в YouTube на тот момент, Evie',
-    public: true,
+    unpublic: false,
     hidden: false,
     category: 'chrome_extension'
   },
@@ -1541,7 +1538,7 @@ export default [
     },
     scope: 2,
     description: 'Приложение на телефон, где можно было найти интересные игры по персональным рекоммендациям',
-    public: true,
+    unpublic: false,
     hidden: false
   },
   {
@@ -1555,7 +1552,7 @@ export default [
     },
     scope: 2,
     description: 'Приложение для посика биолгических родителей и связей с другими людьми',
-    public: true,
+    unpublic: false,
     hidden: false,
     tags: [
       'order'
@@ -1573,7 +1570,7 @@ export default [
     },
     scope: 2,
     description: '',
-    public: false,
+    unpublic: true,
     hidden: true,
     category: 'website'
   },
@@ -1589,7 +1586,7 @@ export default [
     },
     scope: 1,
     description: 'Статья',
-    public: true,
+    unpublic: false,
     hidden: false,
     links: [
       'https://6oj54.csb.app/'
@@ -1609,7 +1606,7 @@ export default [
     },
     scope: 4,
     description: 'Хоррор где надо наворовать в магазине и убежать',
-    public: true,
+    unpublic: false,
     hidden: false,
     category: 'game/windows10'
   },
@@ -1626,7 +1623,7 @@ export default [
     },
     scope: 1,
     description: 'Мой персональный анонимайзер (прокси сервер) с паролем',
-    public: true,
+    unpublic: false,
     hidden: false,
     category: 'website'
   },
@@ -1643,7 +1640,7 @@ export default [
     },
     scope: 3,
     description: 'Игра, где разбившись на самолете, игроку предстоит собрать чипы, открыть дверь в бункер и спастись',
-    public: true,
+    unpublic: false,
     hidden: false,
     category: 'game/windows10'
   },
@@ -1660,7 +1657,7 @@ export default [
     },
     scope: 1,
     description: 'ИИ, генерирующий предложения, похожие на то, что говорит мой друг Никита Ким',
-    public: true,
+    unpublic: false,
     hidden: false,
     category: 'website'
   },
@@ -1677,7 +1674,7 @@ export default [
     },
     scope: 3,
     description: '',
-    public: false,
+    unpublic: true,
     hidden: true,
     category: 'website'
   },
@@ -1694,7 +1691,7 @@ export default [
     },
     scope: 1,
     description: 'Сайт, объясняющий разницу между похожими вещами. Мой самый первый сайт.',
-    public: true,
+    unpublic: false,
     hidden: false,
     category: 'website'
   },
@@ -1710,7 +1707,7 @@ export default [
     },
     scope: 1,
     description: 'Игра по типу quiplash',
-    public: true,
+    unpublic: false,
     hidden: false,
     category: 'game/windows10'
   },
@@ -1725,7 +1722,7 @@ export default [
     },
     scope: 3,
     description: 'Сайт задумывался как возможность дать любому пользователю 1 страницу где можно разместить HTML',
-    public: true,
+    unpublic: false,
     hidden: false,
     category: 'website'
   }
