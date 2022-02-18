@@ -62,7 +62,8 @@ export default [
     links: [
       'https://stigfinnare.utidteam.com/'
     ],
-    category: 'game/windows10'
+    category: 'game/windows10',
+    id: 'stigfinnare'
   },
   {
     name: 'Roller-ride',
@@ -83,7 +84,8 @@ export default [
     links: [
       'https://play.google.com/store/apps/details?id=com.VityaSchel.RollerRide'
     ],
-    category: 'game/android'
+    category: 'game/android',
+    id: 'roller-ride'
   },
   {
     name: 'АБОБА 2024 Кандидат в президенты',
@@ -106,7 +108,8 @@ export default [
       'https://aboba.utidteam.com/',
       'https://freelance.habr.com/projects/244049'
     ],
-    category: 'website'
+    category: 'website',
+    id: 'абоба-2024-кандидат-в-президенты'
   },
   {
     name: 'Гадзы Глада Валакаса (1.0)',
@@ -128,7 +131,8 @@ export default [
     links: [
       'https://godzilla.utidteam.com/'
     ],
-    category: 'website'
+    category: 'website',
+    id: 'гадзы-глада-валакаса-1-0-'
   },
   {
     name: 'Гадзы Глада Валакаса (2.0)',
@@ -148,7 +152,8 @@ export default [
     links: [
       'https://godzilla.utidteam.com/'
     ],
-    category: 'website'
+    category: 'website',
+    id: 'гадзы-глада-валакаса-2-0-'
   },
   {
     name: 'SIPacker',
@@ -170,7 +175,8 @@ export default [
     links: [
       'https://github.com/VityaSchel/SIPacker'
     ],
-    category: 'website'
+    category: 'website',
+    id: 'sipacker'
   },
   {
     name: 'r/Jolygolf',
@@ -192,7 +198,8 @@ export default [
       'https://github.com/VityaSchel/RedditJolygolfBot',
       'https://freelance.habr.com/projects/216865'
     ],
-    category: 'bot/reddit'
+    category: 'bot/reddit',
+    id: 'r-jolygolf'
   },
   {
     name: 'Шизоньян',
@@ -215,7 +222,8 @@ export default [
     links: [
       'https://shizonyan.utidteam.com/'
     ],
-    category: 'website'
+    category: 'website',
+    id: 'шизоньян'
   },
   {
     name: 'AtmosCraft',
@@ -241,7 +249,8 @@ export default [
     links: [
       'https://freelance.habr.com/projects/249937'
     ],
-    category: 'website'
+    category: 'website',
+    id: 'atmoscraft'
   },
   {
     name: 'JSwitcher',
@@ -267,7 +276,8 @@ export default [
     links: [
       'https://freelance.habr.com/projects/259285'
     ],
-    category: 'figma_plugin'
+    category: 'figma_plugin',
+    id: 'jswitcher'
   },
   {
     name: 'SAMARACOIN',
@@ -289,7 +299,8 @@ export default [
     links: [
       'https://t.me/samaracoinbot'
     ],
-    category: 'bot/telegram'
+    category: 'bot/telegram',
+    id: 'samaracoin'
   },
   {
     name: 'asurso',
@@ -310,7 +321,8 @@ export default [
     links: [
       'https://www.npmjs.com/package/asurso'
     ],
-    category: 'npmjs_library'
+    category: 'npmjs_library',
+    id: 'asurso'
   },
   {
     name: 'reuploader',
@@ -334,7 +346,8 @@ export default [
     links: [
       'https://github.com/VityaSchel/reuploader'
     ],
-    category: 'app'
+    category: 'app',
+    id: 'reuploader'
   },
   {
     name: 'AtmosSeriesBot',
@@ -360,7 +373,8 @@ export default [
     links: [
       'https://freelance.habr.com/projects/244063'
     ],
-    category: 'bot/telegram'
+    category: 'bot/telegram',
+    id: 'atmosseriesbot'
   },
   {
     name: 'Симулятор Маши из GoStudy',
@@ -382,7 +396,8 @@ export default [
     links: [
       'https://play.google.com/store/apps/details?id=com.VityaSchel.GoStudyMashaSimulator'
     ],
-    category: 'game/android'
+    category: 'game/android',
+    id: 'симулятор-маши-из-gostudy'
   },
   {
     name: 'Ремафия',
@@ -405,7 +420,8 @@ export default [
     unpublic: false,
     hidden: false,
     logo: remafiaLogo,
-    category: 'game/android'
+    category: 'game/android',
+    id: 'ремафия'
   },
   {
     name: 'LIS NCE',
@@ -433,7 +449,8 @@ export default [
     links: [
       'https://freelance.habr.com/projects/259287'
     ],
-    category: 'website'
+    category: 'website',
+    id: 'lis-nce'
   },
   {
     name: 'destream-api',
@@ -452,7 +469,8 @@ export default [
     links: [
       'https://www.npmjs.com/package/destream-api'
     ],
-    category: 'npmjs_library'
+    category: 'npmjs_library',
+    id: 'destream-api'
   },
   {
     name: 'alerts-api',
@@ -472,7 +490,8 @@ export default [
     links: [
       'https://www.npmjs.com/package/alerts-api'
     ],
-    category: 'npmjs_library'
+    category: 'npmjs_library',
+    id: 'alerts-api'
   },
   {
     name: 'ОГЭ Генератор',
@@ -495,7 +514,8 @@ export default [
     links: [
       'https://oge.utidteam.com/'
     ],
-    category: 'website'
+    category: 'website',
+    id: 'огэ-генератор'
   },
   {
     name: 'FIT vs FEL',
@@ -517,7 +537,8 @@ export default [
     links: [
       'https://utidteam.com/FITvsFEL/'
     ],
-    category: 'website'
+    category: 'website',
+    id: 'fit-vs-fel'
   },
   {
     name: 'czech-living-costs',
@@ -538,7 +559,8 @@ export default [
     links: [
       'https://utidteam.com/gostudy/'
     ],
-    category: 'website'
+    category: 'website',
+    id: 'czech-living-costs'
   },
   {
     name: 'Homirror лендинг',
@@ -559,7 +581,8 @@ export default [
     links: [
       'https://portfolio.utidteam.com/homirror'
     ],
-    category: 'website'
+    category: 'website',
+    id: 'homirror-лендинг'
   },
   {
     name: 'NiolySchool лендинг',
@@ -580,7 +603,8 @@ export default [
     links: [
       'https://portfolio.utidteam.com/niolyschool'
     ],
-    category: 'website'
+    category: 'website',
+    id: 'niolyschool-лендинг'
   },
   {
     name: 'Educo лендинг',
@@ -601,7 +625,8 @@ export default [
     links: [
       'https://portfolio.utidteam.com/educo'
     ],
-    category: 'website'
+    category: 'website',
+    id: 'educo-лендинг'
   },
   {
     name: 'Bitprotect лендинг',
@@ -622,7 +647,8 @@ export default [
     links: [
       'https://portfolio.utidteam.com/bitprotect'
     ],
-    category: 'website'
+    category: 'website',
+    id: 'bitprotect-лендинг'
   },
   {
     name: 'FoodStuff лендинг',
@@ -643,7 +669,8 @@ export default [
     links: [
       'https://portfolio.utidteam.com/foodstuff'
     ],
-    category: 'website'
+    category: 'website',
+    id: 'foodstuff-лендинг'
   },
   {
     name: 'Доброе утро и хорошего дня',
@@ -665,7 +692,8 @@ export default [
     links: [
       'https://github.com/VityaSchel/goodmorning-bot'
     ],
-    category: 'bot/vk'
+    category: 'bot/vk',
+    id: 'доброе-утро-и-хорошего-дня'
   },
   {
     name: 'McDonaldsOffersBot',
@@ -686,7 +714,8 @@ export default [
     links: [
       'https://t.me/macsamarabot'
     ],
-    category: 'bot/telegram'
+    category: 'bot/telegram',
+    id: 'mcdonaldsoffersbot'
   },
   {
     name: 'RussianWordConjugationBot',
@@ -711,7 +740,8 @@ export default [
     links: [
       'https://t.me/ruswordconbot'
     ],
-    category: 'bot/telegram'
+    category: 'bot/telegram',
+    id: 'russianwordconjugationbot'
   },
   {
     name: 'hiddenID_7',
@@ -729,7 +759,8 @@ export default [
     description: '',
     unpublic: true,
     hidden: true,
-    category: 'bot/vk'
+    category: 'bot/vk',
+    id: 'hiddenid-7'
   },
   {
     name: 'VityaSchel Site: uCoz версия',
@@ -749,7 +780,8 @@ export default [
       'personalsite'
     ],
     logo: vityaschelSiteLogo,
-    category: 'website'
+    category: 'website',
+    id: 'vityaschel-site-ucoz-версия'
   },
   {
     name: 'VityaSchel Site: terminal версия (hostinger)',
@@ -769,7 +801,8 @@ export default [
       'personalsite'
     ],
     logo: vityaschelSiteLogo,
-    category: 'website'
+    category: 'website',
+    id: 'vityaschel-site-terminal-версия-hostinger-'
   },
   {
     name: 'VityaSchel Site: карта проектов',
@@ -789,7 +822,8 @@ export default [
       'personalsite'
     ],
     logo: vityaschelSiteLogo,
-    category: 'website'
+    category: 'website',
+    id: 'vityaschel-site-карта-проектов'
   },
   {
     name: 'VityaSchel Site: лаймовая галлерея',
@@ -809,7 +843,8 @@ export default [
       'personalsite'
     ],
     logo: vityaschelSiteLogo,
-    category: 'website'
+    category: 'website',
+    id: 'vityaschel-site-лаймовая-галлерея'
   },
   {
     name: 'VityaSchel Site: космический параллакс',
@@ -833,7 +868,8 @@ export default [
     links: [
       'https://vityaschel.utidteam.com'
     ],
-    category: 'website'
+    category: 'website',
+    id: 'vityaschel-site-космический-параллакс'
   },
   {
     name: 'VityaSchel Site: hloth.dev с 3D-фигурами',
@@ -860,7 +896,8 @@ export default [
     links: [
       'https://hloth.dev'
     ],
-    category: 'website'
+    category: 'website',
+    id: 'vityaschel-site-hloth-dev-с-3d-фигурами'
   },
   {
     name: 'hiddenID_2',
@@ -881,7 +918,8 @@ export default [
     description: '',
     unpublic: true,
     hidden: true,
-    category: 'website'
+    category: 'website',
+    id: 'hiddenid-2'
   },
   {
     name: 'Vite CSGO Case Simulator',
@@ -906,7 +944,8 @@ export default [
     links: [
       'https://github.com/VityaSchel/vitejs-csgo-case-simulator'
     ],
-    category: 'website/darknet'
+    category: 'website/darknet',
+    id: 'vite-csgo-case-simulator'
   },
   {
     name: 'random-steam-avatar',
@@ -925,7 +964,8 @@ export default [
     links: [
       'https://www.npmjs.com/package/random-steam-avatar'
     ],
-    category: 'npmjs_library'
+    category: 'npmjs_library',
+    id: 'random-steam-avatar'
   },
   {
     name: 'Бот Алисы: Игрорупор',
@@ -944,7 +984,8 @@ export default [
     unpublic: false,
     hidden: false,
     logo: igroruporLogo,
-    category: 'bot/yandex_alice'
+    category: 'bot/yandex_alice',
+    id: 'бот-алисы-игрорупор'
   },
   {
     name: 'Уборщица',
@@ -964,7 +1005,8 @@ export default [
     links: [
       'https://chrome.google.com/webstore/detail/%D1%83%D0%B1%D0%BE%D1%80%D1%89%D0%B8%D1%86%D0%B0/pbkimmanmhebbfdphpkjpdkolihanmah?hl=ru'
     ],
-    category: 'chrome_extension'
+    category: 'chrome_extension',
+    id: 'уборщица'
   },
   {
     name: 'No Squid Game',
@@ -984,7 +1026,8 @@ export default [
     links: [
       'https://chrome.google.com/webstore/detail/no-squid-game/enmgknhljpalgmfclkinhglkkpgjogdd'
     ],
-    category: 'chrome_extension'
+    category: 'chrome_extension',
+    id: 'no-squid-game'
   },
   {
     name: 'Stigfinnare 3D adventure',
@@ -1000,7 +1043,8 @@ export default [
     description: 'Адвенчура без сюжета, делалась как открытый мир с красивой графикой и головоломками',
     unpublic: false,
     hidden: false,
-    category: 'game/windows10'
+    category: 'game/windows10',
+    id: 'stigfinnare-3d-adventure'
   },
   {
     name: 'Stigfinnare 2D',
@@ -1016,7 +1060,8 @@ export default [
     description: 'Батл рояль в 2д',
     unpublic: false,
     hidden: false,
-    category: 'game/windows10'
+    category: 'game/windows10',
+    id: 'stigfinnare-2d'
   },
   {
     name: 'Соловьев или Гитлер?',
@@ -1035,7 +1080,8 @@ export default [
     links: [
       'https://github.com/VityaSchel/vladimir-solovyev'
     ],
-    category: 'website'
+    category: 'website',
+    id: 'соловьев-или-гитлер-'
   },
   {
     name: 'Gettr Dark Theme',
@@ -1056,7 +1102,8 @@ export default [
     links: [
       'https://chrome.google.com/webstore/detail/gettr-dark-theme/jcjmdpdahejbjiopgedoljllckbmmekc'
     ],
-    category: 'website'
+    category: 'website',
+    id: 'gettr-dark-theme'
   },
   {
     name: 'ProbablyKrolBot',
@@ -1077,7 +1124,8 @@ export default [
     links: [
       'https://t.me/probablykrolbot'
     ],
-    category: 'bot/telegram'
+    category: 'bot/telegram',
+    id: 'probablykrolbot'
   },
   {
     name: 'react-graphic-key',
@@ -1096,7 +1144,8 @@ export default [
     links: [
       'https://www.npmjs.com/package/react-graphic-key'
     ],
-    category: 'npmjs_library'
+    category: 'npmjs_library',
+    id: 'react-graphic-key'
   },
   {
     name: 'Навальный арестован?',
@@ -1117,7 +1166,8 @@ export default [
     links: [
       'https://navalnyarrested.utidteam.com/'
     ],
-    category: 'bot/telegram'
+    category: 'bot/telegram',
+    id: 'навальный-арестован-'
   },
   {
     name: '#СвободуНавальному стрим',
@@ -1137,7 +1187,8 @@ export default [
     links: [
       'https://www.youtube.com/watch?v=eUpy5KzF8XY&list=PLog2oYXiWbm0lYL_q86UIT2FzfrmDm1cT'
     ],
-    category: 'stream'
+    category: 'stream',
+    id: '-свободунавальному-стрим'
   },
   {
     name: 'Ruscript',
@@ -1156,7 +1207,8 @@ export default [
     links: [
       'https://github.com/vityaschel/ruscript'
     ],
-    category: 'programming_language'
+    category: 'programming_language',
+    id: 'ruscript'
   },
   {
     name: 'SkySmart helper',
@@ -1176,7 +1228,8 @@ export default [
     links: [
       'https://chrome.google.com/webstore/detail/skysmart-helper/jedfnnibgbfgmcjbibkfbjclbicdfoim?hl=ru'
     ],
-    category: 'chrome_extension'
+    category: 'chrome_extension',
+    id: 'skysmart-helper'
   },
   {
     name: 'mypron',
@@ -1199,7 +1252,8 @@ export default [
     logo: mypronLogo,
     links: [
       'https://github.com/VityaSchel/mypron'
-    ]
+    ],
+    id: 'mypron'
   },
   {
     name: 'Panic Button',
@@ -1220,7 +1274,8 @@ export default [
     links: [
       'https://github.com/VityaSchel/panic-button'
     ],
-    category: 'website'
+    category: 'website',
+    id: 'panic-button'
   },
   {
     name: 'АСУ РСО кастомные названия предметов',
@@ -1240,7 +1295,8 @@ export default [
     links: [
       'https://github.com/VityaSchel/asurso-custom-names'
     ],
-    category: 'chrome_extension'
+    category: 'chrome_extension',
+    id: 'асу-рсо-кастомные-названия-предметов'
   },
   {
     name: 'hiddenID_5',
@@ -1257,7 +1313,8 @@ export default [
     description: '',
     unpublic: true,
     hidden: true,
-    category: 'website'
+    category: 'website',
+    id: 'hiddenid-5'
   },
   {
     name: 'Wikipedia Speedrun',
@@ -1278,7 +1335,8 @@ export default [
     links: [
       'https://wikipedia.utidteam.com'
     ],
-    category: 'website'
+    category: 'website',
+    id: 'wikipedia-speedrun'
   },
   {
     name: 'Py3Exec',
@@ -1298,7 +1356,8 @@ export default [
     unpublic: false,
     hidden: false,
     logo: py3ExecLogo,
-    category: 'website'
+    category: 'website',
+    id: 'py3exec'
   },
   {
     name: 'Dragon Quests',
@@ -1315,7 +1374,8 @@ export default [
     links: [
       'https://www.planetminecraft.com/project/dragon-quests/'
     ],
-    category: 'minecraft_map'
+    category: 'minecraft_map',
+    id: 'dragon-quests'
   },
   {
     name: 'Сайт для заказа рофл-звонков Валакаса',
@@ -1338,7 +1398,8 @@ export default [
     links: [
       'https://github.com/VityaSchel/glad-valakas-website'
     ],
-    category: 'website'
+    category: 'website',
+    id: 'сайт-для-заказа-рофл-звонков-валакаса'
   },
   {
     name: 'Stigfinnare Stats',
@@ -1361,7 +1422,8 @@ export default [
     links: [
       'http://stats.utidteam.com/'
     ],
-    category: 'website'
+    category: 'website',
+    id: 'stigfinnare-stats'
   },
   {
     name: 'Хочешь стать программистом?',
@@ -1374,14 +1436,15 @@ export default [
       release: '2020'
     },
     scope: 2,
-    description: 'Сайт мем про "Хочешь стать программистом?"',
+    description: 'Сайт мем про \"Хочешь стать программистом?\"',
     unpublic: true,
     hidden: false,
     logo: wantToBeAProgrammerLogo,
     links: [
       'https://github.com/VityaSchel/YouWantToBecomeAProgrammer'
     ],
-    category: 'website'
+    category: 'website',
+    id: 'хочешь-стать-программистом-'
   },
   {
     name: 'bridgedb-tgbot',
@@ -1403,7 +1466,8 @@ export default [
     links: [
       'https://github.com/VityaSchel/bridgedb-tgbot'
     ],
-    category: 'bot/telegram'
+    category: 'bot/telegram',
+    id: 'bridgedb-tgbot'
   },
   {
     name: 'hiddenID_1',
@@ -1421,7 +1485,8 @@ export default [
     scope: 3,
     description: '',
     unpublic: true,
-    hidden: true
+    hidden: true,
+    id: 'hiddenid-1'
   },
   {
     name: 'Witness Guesser',
@@ -1438,7 +1503,8 @@ export default [
     description: 'ИИ которое угадывает ПО ФОТО из игры witness как решить головоломку',
     unpublic: false,
     hidden: false,
-    category: 'website'
+    category: 'website',
+    id: 'witness-guesser'
   },
   {
     name: 'Useless canvas based editor',
@@ -1458,7 +1524,8 @@ export default [
     links: [
       'https://github.com/VityaSchel/useless-canvas-based-text-editor'
     ],
-    category: 'website'
+    category: 'website',
+    id: 'useless-canvas-based-editor'
   },
   {
     name: 'StreamDO',
@@ -1473,7 +1540,8 @@ export default [
     description: 'Сайт который задумывался как альтернатива Twitch без идиотских правил; закрыт навсегда из-за bitwave',
     unpublic: false,
     hidden: false,
-    category: 'website'
+    category: 'website',
+    id: 'streamdo'
   },
   {
     name: 'Bad UX support form',
@@ -1492,7 +1560,8 @@ export default [
     links: [
       'https://github.com/VityaSchel/bad-ux-support-widget'
     ],
-    category: 'website'
+    category: 'website',
+    id: 'bad-ux-support-form'
   },
   {
     name: 'hiddenID_4',
@@ -1510,7 +1579,8 @@ export default [
     description: '',
     unpublic: true,
     hidden: true,
-    category: 'website'
+    category: 'website',
+    id: 'hiddenid-4'
   },
   {
     name: 'EvieBotCanTalk',
@@ -1525,7 +1595,8 @@ export default [
     description: 'Расширение для общения двух чатботов, популярного в YouTube на тот момент, Evie',
     unpublic: false,
     hidden: false,
-    category: 'chrome_extension'
+    category: 'chrome_extension',
+    id: 'eviebotcantalk'
   },
   {
     name: 'PsStoreMobile',
@@ -1539,7 +1610,8 @@ export default [
     scope: 2,
     description: 'Приложение на телефон, где можно было найти интересные игры по персональным рекоммендациям',
     unpublic: false,
-    hidden: false
+    hidden: false,
+    id: 'psstoremobile'
   },
   {
     name: 'PGI',
@@ -1556,7 +1628,8 @@ export default [
     hidden: false,
     tags: [
       'order'
-    ]
+    ],
+    id: 'pgi'
   },
   {
     name: 'hiddenID_6',
@@ -1572,7 +1645,8 @@ export default [
     description: '',
     unpublic: true,
     hidden: true,
-    category: 'website'
+    category: 'website',
+    id: 'hiddenid-6'
   },
   {
     name: '6 причин перейти с Native на PWA',
@@ -1591,7 +1665,8 @@ export default [
     links: [
       'https://6oj54.csb.app/'
     ],
-    category: 'website'
+    category: 'website',
+    id: '6-причин-перейти-с-native-на-pwa'
   },
   {
     name: 'Escape The Mall',
@@ -1608,7 +1683,8 @@ export default [
     description: 'Хоррор где надо наворовать в магазине и убежать',
     unpublic: false,
     hidden: false,
-    category: 'game/windows10'
+    category: 'game/windows10',
+    id: 'escape-the-mall'
   },
   {
     name: 'Anonymizer',
@@ -1625,7 +1701,8 @@ export default [
     description: 'Мой персональный анонимайзер (прокси сервер) с паролем',
     unpublic: false,
     hidden: false,
-    category: 'website'
+    category: 'website',
+    id: 'anonymizer'
   },
   {
     name: 'Big Quest',
@@ -1642,7 +1719,8 @@ export default [
     description: 'Игра, где разбившись на самолете, игроку предстоит собрать чипы, открыть дверь в бункер и спастись',
     unpublic: false,
     hidden: false,
-    category: 'game/windows10'
+    category: 'game/windows10',
+    id: 'big-quest'
   },
   {
     name: 'Nikita-bot',
@@ -1659,7 +1737,8 @@ export default [
     description: 'ИИ, генерирующий предложения, похожие на то, что говорит мой друг Никита Ким',
     unpublic: false,
     hidden: false,
-    category: 'website'
+    category: 'website',
+    id: 'nikita-bot'
   },
   {
     name: 'hiddenID_3',
@@ -1676,7 +1755,8 @@ export default [
     description: '',
     unpublic: true,
     hidden: true,
-    category: 'website'
+    category: 'website',
+    id: 'hiddenid-3'
   },
   {
     name: 'В чем разница?',
@@ -1693,7 +1773,8 @@ export default [
     description: 'Сайт, объясняющий разницу между похожими вещами. Мой самый первый сайт.',
     unpublic: false,
     hidden: false,
-    category: 'website'
+    category: 'website',
+    id: 'в-чем-разница-'
   },
   {
     name: 'qqsh',
@@ -1709,7 +1790,8 @@ export default [
     description: 'Игра по типу quiplash',
     unpublic: false,
     hidden: false,
-    category: 'game/windows10'
+    category: 'game/windows10',
+    id: 'qqsh'
   },
   {
     name: 'CWN',
@@ -1724,6 +1806,7 @@ export default [
     description: 'Сайт задумывался как возможность дать любому пользователю 1 страницу где можно разместить HTML',
     unpublic: false,
     hidden: false,
-    category: 'website'
+    category: 'website',
+    id: 'cwn'
   }
 ]

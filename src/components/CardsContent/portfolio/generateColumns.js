@@ -42,7 +42,7 @@ export default function generateColumns({ locale, translation, setSearchTerms })
             'website': webIcon,
             'bot': robotIcon,
             'game': gamepadIcon,
-          }[category.split('/')[0]] ?? branchIcon
+          }[category?.split('/')[0]] ?? branchIcon
           return <Logo className={[styles.logo, styles.placeholderLogo].join(' ')} />
         }
       }

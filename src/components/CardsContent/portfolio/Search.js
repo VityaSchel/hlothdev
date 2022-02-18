@@ -39,6 +39,20 @@ const Search = React.forwardRef((props, ref) => {
     return () => clearTimeout(currentTimeout)
   }, [searchTerm])
 
+  React.useEffect(() => {
+    const query = new URLSearchParams(window.location.search)
+    if(query.has('q')) setSearchTerm(query.get('q'))
+  }, [])
+
+  React.useEffect(() => {
+    const query = new URLSearchParams(window.location.search)
+    if(query.has('q') || searchTerm !== '') {
+      query.set('q', searchTerm)
+      const newRelativePathQuery = window.location.pathname + '?' + query.toString()
+      history.replaceState(null, '', newRelativePathQuery)
+    }
+  }, [searchTerm])
+
   const handleClearInput = () => {
     setSearchTerm('')
     props.setSearchTerms(terms)

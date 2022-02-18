@@ -3,6 +3,7 @@ import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import { useSpring } from '@react-spring/three'
 import { useLoader } from '@react-three/fiber'
 import Text from '../Text'
+import projects from '../../lib/projects'
 
 import project1logo from 'assets/images/projectsLogos/aboba.png'
 import project2logo from 'assets/images/projectsLogos/gadzas.png'
@@ -17,7 +18,7 @@ export function PortfolioCardText() {
   const { textColor } = useSpring({ textColor: theme === 'light' ? '#313131' : '#565656' })
 
   const textZ = -0.08
-  const projectsNumber = 123
+  const projectsNumber = projects.length
 
   const PROJECTS_LABEL = Array.isArray(translation.CARD_PORTFOLIO)
     ? translation.CARD_PORTFOLIO[stringEnding(projectsNumber)]

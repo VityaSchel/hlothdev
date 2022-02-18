@@ -1,6 +1,6 @@
 import { history } from '../App'
 
-export default function routeReducer(state = window.location.pathname.substring(1), action) {
+export default function routeReducer(state = window.location.pathname.substring(1).split('/')[0], action) {
   switch (action.type) {
     case 'route/set':
       history.push(`/${action.route}`)

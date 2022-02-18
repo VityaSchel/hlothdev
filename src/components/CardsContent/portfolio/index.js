@@ -7,6 +7,7 @@ import projectsList from 'lib/projects'
 import { dotFlatten } from 'utils.js'
 import generateColumns from './generateColumns'
 import Search from './Search'
+import ProjectInfoDialog from './ProjectInfoDialog'
 
 Portfolio.propTypes = {
   translation: PropTypes.object,
@@ -16,6 +17,7 @@ Portfolio.propTypes = {
 function Portfolio(props) {
   const [searchTerms, setSearchTerms] = React.useState([])
   const [loading, setLoading] = React.useState(false)
+  const [, forceUpdateOnHistoryPush] = React.useState(false)
   const translation = props.translation.PORTFOLIO
   const dataGridRef = React.useRef()
   const searchRef = React.useRef()
@@ -57,10 +59,16 @@ function Portfolio(props) {
       return {
         ...project,
         logo: project.logo,
-        id: project.name
+        id: project.id
       }
     })
-  const handleProjectClick = id => alert(id)
+  const handleProjectClick = id => {
+    const parts = window.location.pathname.split('/')
+    parts.push(id)
+    const newPath = parts.join('/') + window.location.search
+    history.pushState(null, '', newPath)
+    forceUpdateOnHistoryPush({})
+  }
 
   return (
     <div className={styles.portfolio}>
@@ -94,6 +102,9 @@ function Portfolio(props) {
         localeText={({ 'ru-RU': xDataGridRu }[props.locale] ?? xDataGridEnUS).components.MuiDataGrid.defaultProps.localeText}
         loading={loading}
         className={styles.dataGrid}
+      />
+      <ProjectInfoDialog 
+        updateFunc={forceUpdateOnHistoryPush}
       />
     </div>
   )
