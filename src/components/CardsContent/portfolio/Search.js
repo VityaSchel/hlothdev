@@ -2,15 +2,17 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './styles.module.scss'
 import IconButton from '@mui/material/IconButton'
+import { MdClear } from 'react-icons/md'
 import InputAdornment from '@mui/material/InputAdornment'
 import FormControl from '@mui/material/FormControl'
 import InputLabel from '@mui/material/InputLabel'
 import OutlinedInput from '@mui/material/OutlinedInput'
-import { MdFilterList, MdClear } from 'react-icons/md'
+import Filters from './Filters.js'
 
 const Search = React.forwardRef((props, ref) => {
   const translation = props.translation.SEARCH
   const [searchTerm, setSearchTerm] = React.useState('')
+  const [filters, setFilters] = React.useState({})
   const terms = searchTerm
     .match(/\\?.|^$/g)
     .reduce((prev, cur) => {
@@ -58,6 +60,21 @@ const Search = React.forwardRef((props, ref) => {
     props.setSearchTerms(terms)
   }
 
+  const filtersList = [
+    { id: 'ORDERS_ONLY', filterFunc: project => project.tags?.includes?.('order') },
+    { id: 'PERSONAL_WEBSITES_ONLY', filterFunc: project => project.tags?.includes?.('personalsite') },
+    { 
+      id: 'RECENT_PROJECTS_ONLY', filterFunc: project => {
+        return Date.now() - 1000 * 60 * 60 * 24 * 365 <= new Date(project.dates.release).getTime()
+      } 
+    },
+  ]
+
+  React.useEffect(() => {
+    const functions = filtersList.filter(({ id }) => filters[id]).map(({ filterFunc }) => filterFunc)
+    props.setSearchFilterFunc(() => project => functions.every(func => func(project)))
+  }, [filters])
+
   return (
     <div className={styles.search}>
       <FormControl variant='outlined' fullWidth>
@@ -82,9 +99,11 @@ const Search = React.forwardRef((props, ref) => {
           }
         />
       </FormControl>
-      <IconButton>
-        <MdFilterList />
-      </IconButton>
+      <Filters 
+        checked={filters}
+        setChecked={(filterID, checked) => setFilters({ ...filters, [filterID]: checked })}
+        filtersList={filtersList}
+      />
     </div>
   )
 })
@@ -93,6 +112,7 @@ Search.propTypes = {
   translation: PropTypes.object,
   setSearchTerms: PropTypes.func,
   setLoading: PropTypes.func,
+  setSearchFilterFunc: PropTypes.func,
 }
 Search.displayName = 'Search'
 export default Search

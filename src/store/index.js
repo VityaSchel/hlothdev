@@ -9,6 +9,7 @@ import cursorReducer from './cursorReducer'
 import translationReducer from './translationReducer'
 import routeReducer from './routeReducer'
 import layoutReducer from './layoutReducer'
+import portfolioReducer from './portfolioReducer'
 
 const rootReducer = combineReducers({
   theme: themeReducer,
@@ -16,13 +17,14 @@ const rootReducer = combineReducers({
   cursor: cursorReducer,
   translation: translationReducer,
   route: routeReducer,
-  layout: layoutReducer
+  layout: layoutReducer,
+  portfolio: portfolioReducer
 })
 
 const persistConfig = {
   key: 'root',
   storage,
-  blacklist: ['cursor', 'translation', 'route', 'layout']
+  blacklist: ['cursor', 'translation', 'route', 'layout', 'portfolio']
 }
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)

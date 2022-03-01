@@ -116,8 +116,30 @@ export default {
         'stream': 'Стрим',
         'programming_language': 'Компилятор языка',
         'minecraft_map': 'Minecraft карта'
+      },
+      'FILTERS': {
+        'ORDERS_ONLY': 'Только заказы',
+        'PERSONAL_WEBSITES_ONLY': 'Только мои персональные сайты',
+        'RECENT_PROJECTS_ONLY': 'Только проекты за последние 12 месяцев'
+      },
+      'HIDDEN_PROJECT': {
+        'NAME': 'Скрытый проект',
+        DESCRIPTION_PREVIEW: 'Нажмите, чтобы узнать подробнее',
+        DESCRIPTION: 'Информация об этом проекте скрыта, потому что её разглашение противоречит моим принципам о сохранении конфиденциальности или может дискредитировать меня. Если этот проект вас заинтересовал, я готов рассказать о нем лично, для этого назовите его номер: %PROJECT_ID%.'
+      },
+      SHOCK_PROJECT: {
+        NAME: 'Нежелательный контент',
+        DESCRIPTION_PREVIEW: 'Нажмите, чтобы показать информацию о проекте',
+        DESCRIPTION: 'Указанный контент может показаться некоторым людям оскорбительным и шокирующим, однако он имеет достаточно ценное значение для моего портфолио, чтобы оставить его здесь. Если вы хотите увидеть информацию об этом и других проектах из этой категории, нажмете кнопку Показать ниже.'
+      },
+      PROJECT_DIALOG: {
+        LINKS_LABEL: 'Ссылки',
+        SHARE_LABEL: 'Поделиться',
+        CLOSE_LABEL: 'Закрыть',
+        LINK_COPIED: 'Ссылка скопирована',
+        SHOW_SHOCKING_PROJECTS: 'Показать'
       }
-    }
+    },
   },
   '_DEFAULT_': {
     'CARD_ABOUT': 'About',
@@ -235,6 +257,28 @@ export default {
         'stream': 'Stream',
         'programming_language': 'Programming language',
         'minecraft_map': 'Minecraft map'
+      },
+      'FILTERS': {
+        'ORDERS_ONLY': 'Orders only',
+        'PERSONAL_WEBSITES_ONLY': 'My personal websites only',
+        'RECENT_PROJECTS_ONLY': 'Projects released in last 12 months only'
+      },
+      'HIDDEN_PROJECT': {
+        'NAME': 'Hidden project',
+        DESCRIPTION_PREVIEW: 'Click to read more',
+        DESCRIPTION: 'Information about this project is hidden, because its disclosure is against my principles about maintaining confidentiality and may discredit me. If you are interested in this project, I\'m happy to tell you more personally, if you send me the number of this project: %PROJECT_ID%.'
+      },
+      SHOCK_PROJECT: {
+        NAME: 'Shocking project',
+        DESCRIPTION_PREVIEW: 'Click to reveal details',
+        DESCRIPTION: 'The specified content may seem offensive and shocking to some people, however it is valueable enough, to leave it in my portfolio. If you want to see information about this project and other projects from the same category, please press the Show button below.' 
+      },
+      PROJECT_DIALOG: {
+        LINKS_LABEL: 'Links',
+        SHARE_LABEL: 'Share',
+        CLOSE_LABEL: 'Close',
+        LINK_COPIED: 'Link was copied',
+        SHOW_SHOCKING_PROJECTS: 'Show'
       }
     }
   }

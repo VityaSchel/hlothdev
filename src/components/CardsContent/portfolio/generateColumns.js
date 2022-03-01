@@ -33,8 +33,8 @@ export default function generateColumns({ locale, translation, setSearchTerms })
           return <img src={logo} height={100} className={styles.logo} />
         } else {
           let Logo
-          if(hidden) Logo = alertDecagram
-          else if(unpublic) Logo = eyeOff
+          if(hidden) Logo = eyeOff
+          else if(unpublic) Logo = alertDecagram
           else Logo = {
             'figma_plugin': figmaIcon,
             'npmjs_library': npmLogo,
@@ -52,8 +52,8 @@ export default function generateColumns({ locale, translation, setSearchTerms })
       headerName: 'Название',
       flex: 10,
       renderCell: ({ row: { name, category, hidden, unpublic } }) => {
-        if(hidden) name = 'Скрытый проект'
-        else if(unpublic) name = 'Нежелательный контент'
+        if(hidden) name = translation.HIDDEN_PROJECT.NAME
+        else if(unpublic) name = translation.SHOCK_PROJECT.NAME
 
         const translatedCategory = translation.CATEGORIES[category]
 
@@ -73,8 +73,8 @@ export default function generateColumns({ locale, translation, setSearchTerms })
       sortable: false,
       disableColumnMenu: true,
       renderCell: ({ row: { description, hidden, unpublic } }) => {
-        if(hidden) description = 'Нажмите, чтобы узнать подробнее'
-        else if(unpublic) description = 'Нажмите, чтобы показать информацию о проекте'
+        if(hidden) description = translation.HIDDEN_PROJECT.DESCRIPTION_PREVIEW
+        else if(unpublic) description = translation.SHOCK_PROJECT.DESCRIPTION_PREVIEW
         return (
           <span className={cx(styles.description, { [styles.projectInfoPlaceholder]: hidden || unpublic })}>
             {description}
@@ -96,7 +96,6 @@ export default function generateColumns({ locale, translation, setSearchTerms })
               size='small'
               onClick={() => setSearchTerms([technology])}
               key={technology}
-              // sx={{ backgroundColor: technologiesColors[technology] }}
             />
             <span>&#32;&#32;</span>
           </>

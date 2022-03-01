@@ -11,13 +11,16 @@ import ProjectInfoDialog from './ProjectInfoDialog'
 
 Portfolio.propTypes = {
   translation: PropTypes.object,
-  locale: PropTypes.string
+  portfolio: PropTypes.object,
+  locale: PropTypes.string,
+  dispatch: PropTypes.func
 }
 
 function Portfolio(props) {
   const [searchTerms, setSearchTerms] = React.useState([])
   const [loading, setLoading] = React.useState(false)
   const [, forceUpdateOnHistoryPush] = React.useState(false)
+  const [searchFilterFunc, setSearchFilterFunc] = React.useState(() => () => true)
   const translation = props.translation.PORTFOLIO
   const dataGridRef = React.useRef()
   const searchRef = React.useRef()
@@ -43,6 +46,7 @@ function Portfolio(props) {
       if(terms.some(term => translation.CATEGORIES[project.category]?.toLowerCase().includes(term))) return true
       if(terms.some(term => project.stack?.some(tech => tech.toLowerCase().includes(term)))) return true
     })
+    .filter(searchFilterFunc)
     .map(project => {
       const date = dateString => new Date(dateString)
       project = dotFlatten(project, 'dates')
@@ -73,9 +77,10 @@ function Portfolio(props) {
   return (
     <div className={styles.portfolio}>
       <Search
-        translation={translation}
+        setSearchFilterFunc={setSearchFilterFunc}
         setSearchTerms={setSearchTerms}
         setLoading={setLoading}
+        translation={translation}
         ref={searchRef}
       />
       <DataGrid
@@ -103,11 +108,18 @@ function Portfolio(props) {
         loading={loading}
         className={styles.dataGrid}
       />
-      <ProjectInfoDialog 
+      <ProjectInfoDialog
+        translation={translation}
         updateFunc={forceUpdateOnHistoryPush}
+        portfolio={props.portfolio}
+        showShockingProjects={() => props.dispatch({ type: 'portfolio/showShockingProjects' })}
       />
     </div>
   )
 }
 
-export default connect(state => ({ translation: state.translation, locale: state.locale }))(Portfolio)
+export default connect(state => ({ 
+  translation: state.translation,
+  locale: state.locale,
+  portfolio: state.portfolio
+}))(Portfolio)
