@@ -56,22 +56,33 @@ function Me(props) {
         <Card className={styles.about}>
           <div className={styles.text}>
             <h2 dangerouslySetInnerHTML={{ __html: translation.HEADING }} />
-            <div>
+            <div className={styles.imgBlock}>
+              <img src='/static/site-decorations/vk-dog.webp' alt={translation.INTRO_IMAGE} align='right' width={130} />
               <p dangerouslySetInnerHTML={{ __html: translation.INTRO }} />
-              <img src='/static/site-decorations/vk-dog.webp' alt={translation.INTRO_IMAGE} />
             </div>
             <p dangerouslySetInnerHTML={{ __html: translation.BACKEND }} />
+            <div className={styles.imgBlock}>
+              <video src="/static/site-decorations/kolobanga.webm" align='left' autoPlay width={150} muted loop alt={translation.MY_PROJECTS_IMAGE} />
+              <p dangerouslySetInnerHTML={{ __html: translation.MY_PROJECTS }} />
+            </div>
             <p dangerouslySetInnerHTML={{ __html: translation.BOTS }} />
+            <div className={styles.imgBlock}>
+              <img src='/static/site-decorations/shrek.webp' alt={translation.PARSING_IMAGE} align='right' width={130} />
+              <p dangerouslySetInnerHTML={{ __html: translation.PARSING }} />
+            </div>
             <h2 dangerouslySetInnerHTML={{ __html: translation.WORK_EXPERIENCE_LABEL }} />
             <p dangerouslySetInnerHTML={{ __html: translation.WORK_EXPERIENCE_BLOCK }} />
-            <p dangerouslySetInnerHTML={{ __html: translation.ENDING }} />
+            <div className={styles.imgBlock}>
+              <img src='/static/site-decorations/qwq.webp' alt={translation.ENDING_IMAGE} align='left' width={140} />
+              <p dangerouslySetInnerHTML={{ __html: translation.ENDING }} />
+            </div>
           </div>
         </Card>
       </div>
       <div className={styles.rightCol}>
         <div className={styles.topRow}>
           <Card
-            avatar={<img src={avatar} width={100} style={{ borderRadius: 999 }} />}
+            avatar={<img src={avatar} width={100} height={100} style={{ borderRadius: 999 }} />}
             avatarStyles={{ padding: 0, boxShadow: '0 0 2px 0 rgba(0, 0, 0.25)' }}
             title={`${props.translation.CARD_ME_FIRST_NAME} ${props.translation.CARD_ME_LAST_NAME}`}
             subtitle={props.translation.FULL_SPECIALIZATION}

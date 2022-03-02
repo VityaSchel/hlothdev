@@ -5,6 +5,16 @@
   align-self: center;
 
   .info {
+    .imgBlock {
+
+      video {
+        float: left;
+      }
+
+      img, video {
+        margin: 0 10px;
+      }
+    }
 
     .about {
       width: 100%;
