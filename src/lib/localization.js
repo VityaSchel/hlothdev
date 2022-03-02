@@ -199,38 +199,29 @@ export default {
         'price': 'Let\'s talk'
       }
     },
-    'ABOUT_ME': dedent`
-      <h2>Hi, my name is Victor, and I'm a web-applications developer from Russia.</h2>
-
-      <p>
-        I have been professionally developing PWA apps and tools for major clients for over two years, and I have over
+    ABOUT_ME: {
+      HEADING: 'Hi, my name is Viktor, and I\'m a web-application developer from Russia.',
+      INTRO: dedent`I have been professionally developing PWA apps and tools for major clients for over two years, and I have over
         five years of overall website development experience. My main frontend stack is <b>React, Next.js, React Native,
         Preact, and Vite</b>. My responsibilities include mobile, cross-browser, and semantic responsive development so that
-        the site looks equally good on all devices and in all browsers.
-      </p>
-
-      <p>
-        In addition to the frontend, I also work with backend. For my clients I create turnkey websites, set up the
+        the site looks equally good on all devices and in all browsers.`,
+      INTRO_IMAGE: 'Image to the right side of text: white dog sticker from VKontakte social network',
+      BACKEND: dedent`In addition to the frontend, I also work with backend. For my clients I create turnkey websites, set up the
         hosting, mail server, and develop the site itself from scratch at the request of the customer, helping to
         implement the site taking into account specific technical requirements and according to the
         Figma/Photoshop/Illustrator layout, or working in a team with other developers. In my projects, I mostly use
         <b>Express and Fastify</b> web servers with Nginx reverse proxy or CGI (recently moved from Apache with which I was
         working for three years), <b>MongoDB, Redis and LevelDB</b> databases, choosing the appropriate database looking at
-        the size of the project (previously I worked with MySQL and PostgreSQL)
-      </p>
-
-      <p>
-        For more than four years I have been developing <b>bots for VKontakte, Telegram, Discord, Reddit, Yandex.Alice</b>,
+        the size of the project (previously I worked with MySQL and PostgreSQL)`,
+      BOTS: dedent`For more than four years I have been developing <b>bots for VKontakte, Telegram, Discord, Reddit, Yandex.Alice</b>,
         browser extensions, plugins for Figma, developer tools such as libraries, and other useful instruments. Now I am
         learning Kubernetes, already have significant experience of working with <b>Docker</b>, and, at your request, I could
         create a container instead of a ZIP archive with a project, for quick scaling and deployment between your servers.
         Also lately I've started getting into API wrappers, screen-scraping and data parsing: I've already created several
         JS libraries to work with the closed API of some websites, and they include working with bare HTML, working with
-        SignalR directly and other things.
-      </p>
-
-      <h3>Work Experience</h3>
-      <ul>
+        SignalR directly and other things.`,
+      WORK_EXPERIENCE_LABEL: 'Work Experience',
+      WORK_EXPERIENCE_BLOCK: dedent`<ul>
         <li>I have developed several websites for the Russian blogger and streamer (President Aboba, Gadzas of Glad Valakas), which now have hundreds of unique visitors per month</li>
         <li>I have developed Figma plugin for a fast cross-platform layout design for Joom</li>
         <li>I worked in a team on an online English school with the Electron.js app</li>
@@ -239,14 +230,12 @@ export default {
             channel in Telegram, which has a reach of tens of thousands of users. Then we continued to work and created
             a server for the Minecraft video game and a website with payments processing</li>
         <li>I worked in the team of the National Research Center in Kazakhstan, we were working on CRM for the center's employees, and my job was to create a custom React component</li>
-      </ul>
-
-      <p>
-        You can find more information on my skills in my portfolio and on my <a href='https://github.com/VityaSchel'>GitHub account</a>, which I have been running
+      </ul>`,
+      ENDING: dedent`You can find more information on my skills in my portfolio and on my <a href='https://github.com/VityaSchel'>GitHub account</a>, which I have been running
         since 2019, creating libraries used by other web developers and striving to improve DX. If you have any
         questions or want to discuss your case with me — contact me in
-        Telegram: <a href='tg://resolve?domain=hlothdev'>@hlothdev</a> or other ways listed on this page.
-      </p>`,
+        Telegram: <a href='tg://resolve?domain=hlothdev'>@hlothdev</a> or other ways listed on this page.`
+    },
     'PORTFOLIO': {
       COLUMNS: {
         NAME: 'Name',

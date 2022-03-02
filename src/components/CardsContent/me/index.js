@@ -48,13 +48,24 @@ Me.propTypes = {
 }
 
 function Me(props) {
-  if(!props.translation.PAGES_TITLES) return <></>
+  const translation = props.translation.ABOUT_ME
 
   return (
     <div className={styles.me}>
       <div className={styles.info}>
         <Card className={styles.about}>
-          <div dangerouslySetInnerHTML={{ __html: props.translation.ABOUT_ME }} className={styles.text} />
+          <div className={styles.text}>
+            <h2 dangerouslySetInnerHTML={{ __html: translation.HEADING }} />
+            <div>
+              <p dangerouslySetInnerHTML={{ __html: translation.INTRO }} />
+              <img src='/static/site-decorations/vk-dog.webp' alt={translation.INTRO_IMAGE} />
+            </div>
+            <p dangerouslySetInnerHTML={{ __html: translation.BACKEND }} />
+            <p dangerouslySetInnerHTML={{ __html: translation.BOTS }} />
+            <h2 dangerouslySetInnerHTML={{ __html: translation.WORK_EXPERIENCE_LABEL }} />
+            <p dangerouslySetInnerHTML={{ __html: translation.WORK_EXPERIENCE_BLOCK }} />
+            <p dangerouslySetInnerHTML={{ __html: translation.ENDING }} />
+          </div>
         </Card>
       </div>
       <div className={styles.rightCol}>

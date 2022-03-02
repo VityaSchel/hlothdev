@@ -38,7 +38,7 @@ export default function BackgroundShapes() {
 
   return (
     Object.entries(shapes[layout]).map(([url, position], i) =>
-      <Shape url={`/models/background/${url}.glb`} position={position} key={i} />
+      <Shape url={`/static/models/background/${url}.glb`} position={position} key={i} />
     )
   )
 }

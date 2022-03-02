@@ -51,7 +51,7 @@ export const layouts = {
 
 MenuItem.propTypes = { cardID: PropTypes.string }
 function MenuItem(props) {
-  const card = useLoader(GLTFLoader, `/models/cards/card_${props.cardID}.glb`)
+  const card = useLoader(GLTFLoader, `/static/models/cards/card_${props.cardID}.glb`)
   const [isPointerOver, setIsPointerOver] = React.useState(false)
   const { translation, theme, route, layout } = useRedux(state => ({
     translation: state.translation,

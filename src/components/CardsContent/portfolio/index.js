@@ -92,11 +92,6 @@ function Portfolio(props) {
         disableVirtualization
         rowsPerPageOptions={[]}
 
-        // pageSize={projects.length}
-        // rowBuffer={15}
-        // hideFooterPagination
-        // rowsPerPageOptions={[]}
-
         disableColumnFilter
         disableColumnSelector
         disableDensitySelector
