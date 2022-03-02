@@ -11,7 +11,7 @@ import { ReactComponent as appIcon } from 'assets/images/svgIcons/app_icon.svg'
 import { ReactComponent as alertDecagram } from 'assets/images/svgIcons/mdi_alert_decagram.svg'
 import { ReactComponent as eyeOff } from 'assets/images/svgIcons/mdi_eye_off.svg'
 
-export default function generateColumns({ locale, translation, setSearchTerms }) {
+export default function generateColumns({ locale, translation, setSearchTerms, showShockingProjects }) {
   const dateRegex = /^\d+ \w+ \d+$/
   const dateColWidth = 150
 
@@ -32,9 +32,10 @@ export default function generateColumns({ locale, translation, setSearchTerms })
         if(logo && !unpublic) {
           return <img src={logo} height={100} className={styles.logo} />
         } else {
+          const shockingProject = unpublic && !showShockingProjects
           let Logo
           if(hidden) Logo = eyeOff
-          else if(unpublic) Logo = alertDecagram
+          else if(shockingProject) Logo = alertDecagram
           else Logo = {
             'figma_plugin': figmaIcon,
             'npmjs_library': npmLogo,
@@ -52,15 +53,19 @@ export default function generateColumns({ locale, translation, setSearchTerms })
       headerName: 'Название',
       flex: 10,
       renderCell: ({ row: { name, category, hidden, unpublic } }) => {
+        const shockingProject = unpublic && !showShockingProjects
         if(hidden) name = translation.HIDDEN_PROJECT.NAME
-        else if(unpublic) name = translation.SHOCK_PROJECT.NAME
+        else if(shockingProject) name = translation.SHOCK_PROJECT.NAME
 
         const translatedCategory = translation.CATEGORIES[category]
 
         return <span className={styles.multilineCell}>
-          <span className={(hidden || unpublic) ? styles.projectInfoPlaceholder : styles.projectName}>{name}</span>
+          <span className={(hidden || shockingProject) ? styles.projectInfoPlaceholder : styles.projectName}>{name}</span>
           {category && <>
             <span>&#32;&#32;</span>
+            {unpublic && showShockingProjects && 
+              <Chip label={translation.HIDDEN_PROJECT.NAME} size='small' />
+            }
             <Chip label={translatedCategory} size='small' onClick={() => setSearchTerms([translatedCategory])} />
           </>}
         </span>
@@ -73,10 +78,11 @@ export default function generateColumns({ locale, translation, setSearchTerms })
       sortable: false,
       disableColumnMenu: true,
       renderCell: ({ row: { description, hidden, unpublic } }) => {
+        const shockingProject = unpublic && !showShockingProjects
         if(hidden) description = translation.HIDDEN_PROJECT.DESCRIPTION_PREVIEW
-        else if(unpublic) description = translation.SHOCK_PROJECT.DESCRIPTION_PREVIEW
+        else if(shockingProject) description = translation.SHOCK_PROJECT.DESCRIPTION_PREVIEW
         return (
-          <span className={cx(styles.description, { [styles.projectInfoPlaceholder]: hidden || unpublic })}>
+          <span className={cx(styles.description, { [styles.projectInfoPlaceholder]: hidden || shockingProject })}>
             {description}
           </span>
         )

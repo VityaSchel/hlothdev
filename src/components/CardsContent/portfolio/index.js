@@ -34,7 +34,8 @@ function Portfolio(props) {
     setSearchTerms: terms => {
       searchRef.current.setTerms(terms)
       setSearchTerms(terms)
-    }
+    },
+    showShockingProjects: props.portfolio.showShockingProjects
   })
 
   const projects = projectsList
@@ -67,9 +68,7 @@ function Portfolio(props) {
       }
     })
   const handleProjectClick = id => {
-    const parts = window.location.pathname.split('/')
-    parts.push(id)
-    const newPath = parts.join('/') + window.location.search
+    const newPath = '/portfolio/' + id + window.location.search
     history.pushState(null, '', newPath)
     forceUpdateOnHistoryPush({})
   }

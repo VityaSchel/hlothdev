@@ -38,6 +38,9 @@ import wikipediaSpeedrunLogo from '../assets/images/projectsLogos/wikipedia-spee
 import py3ExecLogo from '../assets/images/projectsLogos/py3exec.png'
 import roflCallsOrderWebsiteLogo from '../assets/images/projectsLogos/rofl-calls-order-website.png'
 import wantToBeAProgrammerLogo from '../assets/images/projectsLogos/want-to-be-a-programmer.png'
+import gladvalakasNT200instamask from '../assets/images/projectsLogos/insta-mask-glad-valakas-nt200.png'
+import tinkoffCurrencyConverter from '../assets/images/projectsLogos/tinkoff-currency-converter.png'
+import skeletronRockBot from '../assets/images/projectsLogos/skeletron-rock-bot.png'
 
 // scope: 1=verysmall 2=small 3=average 4=big 5=huge
 
@@ -96,8 +99,8 @@ export default [
     ],
     supported: true,
     dates: {
-      devStart: '2021',
-      release: '2022'
+      devStart: '23 March 2021',
+      release: '28 March 2021'
     },
     scope: 3,
     description: 'Сайт абобы: кандидата в президенты и мема от Глада Валакаса',
@@ -288,11 +291,11 @@ export default [
     ],
     supported: true,
     dates: {
-      devStart: '2021',
-      release: '2022'
+      devStart: '6 May 2021',
+      release: '10 May 2022'
     },
     scope: 3,
-    description: 'Альткоин и не крипто валюта в телеграме майнится написанием слова самара',
+    description: 'Альткоин и некрипто-валюта в телеграме майнится написанием слова самара',
     unpublic: false,
     hidden: false,
     logo: samaracoinLogo,
@@ -696,6 +699,19 @@ export default [
     id: 'доброе-утро-и-хорошего-дня'
   },
   {
+    name: 'private-repo-cloner',
+    stack: ['NodeJS'],
+    dates: { devStart: '2022-02-26', release: '2022-02-26' },
+    scope: 1,
+    description: 'Инструмент для бекапа приватных зашифрованных репозиториев с GitHub на Яндекс.Диск из-за санкций',
+    unpublic: false,
+    hidden: false,
+    tags: [],
+    links: ['https://github.com/VityaSchel/private-repo-cloner'],
+    category: 'developer_tool',
+    id: 'private-repo-cloner'
+  },
+  {
     name: 'McDonaldsOffersBot',
     stack: [
       'NodeJS',
@@ -898,6 +914,20 @@ export default [
     ],
     category: 'website',
     id: 'vityaschel-site-hloth-dev-с-3d-фигурами'
+  },
+  {
+    name: 'Glad Valakas NT200',
+    stack: ['Spark AR', 'Blender'],
+    dates: { devStart: '30 Jan 2022', release: '30 Jan 2022' },
+    scope: 2,
+    description: 'Маска в инстаграм с элементами пожилого тела',
+    unpublic: false,
+    hidden: false,
+    logo: gladvalakasNT200instamask,
+    tags: [],
+    links: ['https://www.instagram.com/ar/617429272667716/'],
+    category: 'instagram_mask',
+    id: 'glad-valakas-nt200'
   },
   {
     name: 'hiddenID_2',
@@ -1117,7 +1147,7 @@ export default [
       release: '2021'
     },
     scope: 2,
-    description: 'Бот в телеграме отправляющий гифки кролика в чат по текстовому запросу',
+    description: 'Бот в телеграме отправляющий гифки кролика в чат по текстовому запросу, работает с API Giphy и Tenor',
     unpublic: false,
     hidden: false,
     logo: probablyKrolLogo,
@@ -1126,6 +1156,24 @@ export default [
     ],
     category: 'bot/telegram',
     id: 'probablykrolbot'
+  },
+  {
+    name: 'СКЕЛЕТ БОТ',
+    stack: ['NodeJS'],
+    dates: {
+      devStart: '2022-02-17',
+      release: '2022-02-17',
+      abandon: '2022-02-17'
+    },
+    scope: 1,
+    description: 'Бот в Telegram по мотивам мема с крутыми скелетами на YouTube на канале Uncle Knuckles. Уже не работает, но видео есть в репозитории.',
+    unpublic: false,
+    hidden: false,
+    logo: skeletronRockBot,
+    tags: [],
+    links: ['https://github.com/VityaSchel/skeletron_rock_bot'],
+    category: 'bot/telegram',
+    id: 'скелет-бот'
   },
   {
     name: 'react-graphic-key',
@@ -1189,6 +1237,20 @@ export default [
     ],
     category: 'stream',
     id: '-свободунавальному-стрим'
+  },
+  {
+    name: 'tinkoff-currency-converter',
+    stack: ['NodeJS'],
+    dates: { devStart: '2022-02-27', release: '2022-02-27' },
+    scope: 1,
+    description: 'Бот для получения текущего курса покупки евро в Тинькофф банке для моих заказчиков, работающий с Tinkoff REST API',
+    unpublic: false,
+    hidden: false,
+    logo: tinkoffCurrencyConverter,
+    tags: [],
+    links: ['https://t.me/eurocurbot'],
+    category: 'bot/telegram',
+    id: 'tinkoff-currency-converter'
   },
   {
     name: 'Ruscript',
@@ -1793,20 +1855,4 @@ export default [
     category: 'game/windows10',
     id: 'qqsh'
   },
-  {
-    name: 'CWN',
-    stack: [
-      'Vanilla JS'
-    ],
-    dates: {
-      devStart: '2018',
-      abandon: '2018'
-    },
-    scope: 3,
-    description: 'Сайт задумывался как возможность дать любому пользователю 1 страницу где можно разместить HTML',
-    unpublic: false,
-    hidden: false,
-    category: 'website',
-    id: 'cwn'
-  }
 ]

@@ -115,7 +115,9 @@ export default {
         'chrome_extension': 'Расширение Chrome',
         'stream': 'Стрим',
         'programming_language': 'Компилятор языка',
-        'minecraft_map': 'Minecraft карта'
+        'minecraft_map': 'Minecraft карта',
+        instagram_mask: 'Instagram-маска',
+        developer_tool: 'Инструмент для разработчиков'
       },
       'FILTERS': {
         'ORDERS_ONLY': 'Только заказы',
@@ -256,7 +258,9 @@ export default {
         'chrome_extension': 'Chrome extension',
         'stream': 'Stream',
         'programming_language': 'Programming language',
-        'minecraft_map': 'Minecraft map'
+        'minecraft_map': 'Minecraft map',
+        instagram_mask: 'Instagram mask',
+        developer_tool: 'Developer tool'
       },
       'FILTERS': {
         'ORDERS_ONLY': 'Orders only',
