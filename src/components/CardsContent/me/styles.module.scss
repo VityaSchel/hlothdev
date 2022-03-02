@@ -2,17 +2,22 @@
   display: flex;
   $gap: 15px;
   gap: $gap;
+  align-self: center;
 
   .info {
-    flex: 1;
 
     .about {
       width: 100%;
-      line-height: 1.65;
+      line-height: 1.7em;//1.65;
       display: flex;
       align-items: center;
 
+      h2 {
+        line-height: 2.1em;
+      }
+
       .text {
+        margin: 0 10px;
         width: 560px;
         font-size: calc(15/16*1rem);
       }
@@ -33,6 +38,10 @@
     .topRow {
       display: flex;
       gap: $gap;
+
+      .avatar img {
+        background-color: #eee;
+      }
 
       .contacts {
         display: flex;

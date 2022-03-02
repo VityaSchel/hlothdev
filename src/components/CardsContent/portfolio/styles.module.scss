@@ -88,6 +88,20 @@
   }
 }
 
+.translateButton {
+  display: block;
+  margin-top: 10px;
+
+  a {
+    color: white;
+    text-decoration: none;
+
+    svg {
+      vertical-align: middle;
+    }
+  }
+}
+
 .arrow {
   top: 0;
   left: 0;

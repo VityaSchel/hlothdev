@@ -10,7 +10,7 @@ import Button from '@mui/material/Button'
 import Tooltip from '@mui/material/Tooltip'
 import projects from '../../../lib/projects'
 import copy from 'copy-to-clipboard'
-import { MdLink } from 'react-icons/md'
+import { MdLink, MdOutlineTranslate } from 'react-icons/md'
 
 ProjectInfoDialog.propTypes = {
   updateFunc: PropTypes.func,
@@ -75,10 +75,25 @@ export default function ProjectInfoDialog(props) {
           }
         </DialogContentText>
         {
+          actualProject && 
+          <span className={styles.translateButton}>
+            <a 
+              href={`https://translate.google.com/?sl=ru&tl=${props.translation.PROJECT_DIALOG.TRANSLATE_DESCRIPTION_CODE}&text=${encodeURIComponent(openedProject.description)}&op=translate`} 
+              target='_blank' rel='noreferrer'
+            >
+              <MdOutlineTranslate /> {props.translation.PROJECT_DIALOG.TRANSLATE_DESCRIPTION_LABEL}
+            </a>
+          </span>
+        }
+        {
           actualProject && openedProject.links && 
           <DialogContentText className={styles.links}>
             <span><MdLink /> {props.translation.PROJECT_DIALOG.LINKS_LABEL}:</span>
-            {openedProject.links.map(link => <span key={link}><a href={link}>{link}</a></span>)}
+            {openedProject.links.map(link => (
+              <span key={link}>
+                <a href={link} target='_blank' rel='noreferrer'>{link}</a>
+              </span>
+            ))}
           </DialogContentText>
         }
       </DialogContent>

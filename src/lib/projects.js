@@ -250,6 +250,8 @@ export default [
     ],
     logo: atmosCraftLogo,
     links: [
+      'https://web.archive.org/web/20211130051931/https://atmosgroup.org/',
+      'https://www.figma.com/file/FFnAfrV8W7SeigyuwkZrFP/AtmosCraft',
       'https://freelance.habr.com/projects/249937'
     ],
     category: 'website',

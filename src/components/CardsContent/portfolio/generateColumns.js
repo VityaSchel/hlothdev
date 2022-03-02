@@ -12,11 +12,17 @@ import { ReactComponent as alertDecagram } from 'assets/images/svgIcons/mdi_aler
 import { ReactComponent as eyeOff } from 'assets/images/svgIcons/mdi_eye_off.svg'
 
 export default function generateColumns({ locale, translation, setSearchTerms, showShockingProjects }) {
-  const dateRegex = /^\d+ \w+ \d+$/
+  const dateRegex = /^\d+[ -]\w+[ -]\d+$/
   const dateColWidth = 150
 
+  const search = terms => e => {
+    setSearchTerms([terms])
+    e.stopPropagation()
+  }
+
   const renderDate = ({ value }) => (value && (dateRegex.test(value) || value instanceof Date))
-    ? Intl.DateTimeFormat(locale, { day: '2-digit', month: 'long', year: 'numeric' }).format(value)
+    ? Intl.DateTimeFormat(locale, { day: '2-digit', month: 'long', year: 'numeric' })
+      .format(value instanceof Date ? value : new Date(value))
     : value
 
   return [
@@ -50,7 +56,7 @@ export default function generateColumns({ locale, translation, setSearchTerms, s
     },
     {
       field: 'name',
-      headerName: 'Название',
+      headerName: translation.COLUMNS.NAME,
       flex: 10,
       renderCell: ({ row: { name, category, hidden, unpublic } }) => {
         const shockingProject = unpublic && !showShockingProjects
@@ -63,17 +69,18 @@ export default function generateColumns({ locale, translation, setSearchTerms, s
           <span className={(hidden || shockingProject) ? styles.projectInfoPlaceholder : styles.projectName}>{name}</span>
           {category && <>
             <span>&#32;&#32;</span>
-            {unpublic && showShockingProjects && 
-              <Chip label={translation.HIDDEN_PROJECT.NAME} size='small' />
-            }
-            <Chip label={translatedCategory} size='small' onClick={() => setSearchTerms([translatedCategory])} />
+            <Chip label={translatedCategory} size='small' onClick={search(translatedCategory)} />
+          </>}
+          {unpublic && showShockingProjects && <>
+            <span>&#32;&#32;</span>
+            <Chip label={translation.HIDDEN_PROJECT.NAME} size='small' />
           </>}
         </span>
       }
     },
     {
       field: 'description',
-      headerName: 'Описание',
+      headerName: translation.COLUMNS.DESCRIPTION,
       flex: 18,
       sortable: false,
       disableColumnMenu: true,
@@ -90,7 +97,7 @@ export default function generateColumns({ locale, translation, setSearchTerms, s
     },
     {
       field: 'stack',
-      headerName: 'Технологии',
+      headerName: translation.COLUMNS.TECHNOLOGIES,
       flex: 7,
       sortable: false,
       disableColumnMenu: true,
@@ -100,7 +107,7 @@ export default function generateColumns({ locale, translation, setSearchTerms, s
             <Chip
               label={technology}
               size='small'
-              onClick={() => setSearchTerms([technology])}
+              onClick={search(technology)}
               key={technology}
             />
             <span>&#32;&#32;</span>
@@ -110,19 +117,19 @@ export default function generateColumns({ locale, translation, setSearchTerms, s
     },
     {
       field: 'dates.devStart',
-      headerName: 'Начало разработки',
+      headerName: translation.COLUMNS.DATES.DEVSTART,
       renderCell: renderDate,
       width: dateColWidth
     },
     {
       field: 'dates.release',
-      headerName: 'Релиз',
+      headerName: translation.COLUMNS.DATES.RELEASE,
       renderCell: renderDate,
       width: dateColWidth
     },
     {
       field: 'dates.abandon',
-      headerName: 'Приостановка',
+      headerName: translation.COLUMNS.DATES.ABANDON,
       renderCell: renderDate,
       width: dateColWidth
     }

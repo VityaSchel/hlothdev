@@ -50,7 +50,7 @@ export default {
       }
     },
     'ABOUT_ME': dedent`
-      <p>Привет, меня зовут Виктор и я являюсь специалистом в области разработки веб-приложений.</p>
+      <h2>Привет, меня зовут Виктор и я являюсь специалистом в области разработки веб-приложений.</h2>
 
       <p>
         Я профессионально занимаюсь разработкой приложений PWA и инструментов для крупных клиентов более двух лет,
@@ -95,6 +95,16 @@ export default {
         или в другие соц. сети, перечисленные на этой странице.
       </p>`,
     'PORTFOLIO': {
+      COLUMNS: {
+        NAME: 'Название',
+        DESCRIPTION: 'Описание',
+        TECHNOLOGIES: 'Технологии',
+        DATES: {
+          DEVSTART: 'Начало разработки',
+          RELEASE: 'Релиз',
+          ABANDON: 'Приостановка'
+        },
+      },
       'SEARCH': {
         'PLACEHOLDER': 'Поиск по портфолио: название, описание, технологии',
         'EXAMPLE': 'Например, «Лендинг» или «Redux, React Native»',
@@ -190,7 +200,7 @@ export default {
       }
     },
     'ABOUT_ME': dedent`
-      <p>Hi, my name is Victor, and I am a web application development specialist from Russia.</p>
+      <h2>Hi, my name is Victor, and I'm a web-applications developer from Russia.</h2>
 
       <p>
         I have been professionally developing PWA apps and tools for major clients for over two years, and I have over
@@ -238,6 +248,16 @@ export default {
         Telegram: <a href='tg://resolve?domain=hlothdev'>@hlothdev</a> or other ways listed on this page.
       </p>`,
     'PORTFOLIO': {
+      COLUMNS: {
+        NAME: 'Name',
+        DESCRIPTION: 'Description (ru)',
+        TECHNOLOGIES: 'Technologies',
+        DATES: {
+          DEVSTART: 'Dev. started',
+          RELEASE: 'Released',
+          ABANDON: 'Abandoned'
+        },
+      },
       'SEARCH': {
         'PLACEHOLDER': 'Search in portfolio: name, description, technologies',
         'EXAMPLE': 'e.g. «API» or «Redux, React Native»',
@@ -282,7 +302,9 @@ export default {
         SHARE_LABEL: 'Share',
         CLOSE_LABEL: 'Close',
         LINK_COPIED: 'Link was copied',
-        SHOW_SHOCKING_PROJECTS: 'Show'
+        SHOW_SHOCKING_PROJECTS: 'Show',
+        TRANSLATE_DESCRIPTION_LABEL: 'Translate to English',
+        TRANSLATE_DESCRIPTION_CODE: 'en'
       }
     }
   }
