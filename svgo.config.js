@@ -1,4 +1,4 @@
-module.exports = {
+const config = {
   plugins: [
     {
       name: 'inlineStyles',
@@ -21,25 +21,44 @@ module.exports = {
     }
   ]
 }
+// module.exports = config
 
-import SVGO from 'svgo'
-import path, { generatePrefix } from 'path'
+import svgo from 'svgo'
+import path from 'path'
 import glob from 'glob-promise'
+import fs from 'fs'
 // const generatePrefix = file => file
 const folder = './src/assets/images/technologiesLogos/**.svg'
 const svgs = await glob(folder)
 for (let filePath of svgs) {
   // let filePath = path.join(folder, file)
   let prefix = path.basename(filePath)//generatePrefix(file)
-  let svgo = new SVGO({
-    plugins: [{
-      cleanupIDs: {
-        prefix: prefix
-      }
-    }]
-  })
+  // let svgo = new SVGO({
+  //   ...config,
+  //   plugins: [...config.plugins, {
+  //     cleanupIDs: {
+  //       prefix: prefix
+  //     }
+  //   }]
+  // })
 
-  svgo.optimize(fs.readFileSync(filePath, 'utf8'), svg => {
-    result = svg.data
-  })
+  const { data } = svgo.optimize(
+    fs.readFileSync(filePath, 'utf8'), 
+    // svg => {
+    //   result = svg.data
+    // },
+    {
+      ...config,
+      plugins: [
+        ...config.plugins, 
+        {
+          name: 'cleanupIDs',
+          params: {
+            prefix: prefix
+          }
+        }
+      ]
+    }
+  )
+  fs.writeFileSync(filePath, data)
 }
