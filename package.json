@@ -64,6 +64,9 @@
   "devDependencies": {
     "eslint": "^7.32.0",
     "eslint-plugin-react": "^7.27.1",
+    "glob": "^7.2.0",
+    "glob-promise": "^4.2.2",
+    "svgo": "^2.8.0",
     "use-resize-observer": "^8.0.0"
   }
 }
