@@ -54,7 +54,7 @@ for (let filePath of svgs) {
         {
           name: 'cleanupIDs',
           params: {
-            prefix: prefix
+            prefix: prefix.replaceAll(/[^a-zA-Z]/g, '')
           }
         }
       ]
