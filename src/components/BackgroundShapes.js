@@ -12,7 +12,10 @@ const generateSwitches = () => [
   Math.round(Math.random()),
 ]
 
-export default function BackgroundShapes() {
+BackgroundShapes.propTypes = {
+  render: PropTypes.bool
+}
+function BackgroundShapes(props) {
   const { layout } = useRedux(state => ({
     layout: state.layout
   }))
@@ -38,7 +41,7 @@ export default function BackgroundShapes() {
 
   return (
     Object.entries(shapes[layout]).map(([url, position], i) =>
-      <Shape url={`/static/models/background/${url}.glb`} position={position} key={i} />
+      <Shape url={`/static/models/background/${url}.glb`} position={position} key={i} render={props.render} />
     )
   )
 }
@@ -52,6 +55,7 @@ const Shape = props => (
 ShapeModel.propTypes = {
   position: PropTypes.object,
   url: PropTypes.string,
+  render: PropTypes.boolean
 }
 function ShapeModel(props) {
   const [accelerationSwitch, setAccelerationSwitch] = React.useState(generateSwitches())
@@ -65,6 +69,8 @@ function ShapeModel(props) {
 
   const accelerationLimit = 0.001
   useFrame(({ camera }) => {
+    if(!props.render) return
+
     raycaster.setFromCamera(props.position, camera)
     const corrections = { x: 0.5, y: 0, z: -2 }
     raycaster.ray.at(props.position.z ?? 20, object.current.position)
@@ -100,3 +106,5 @@ function ShapeModel(props) {
     />
   )
 }
+
+export default BackgroundShapes

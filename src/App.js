@@ -66,6 +66,7 @@ WebFont.load({
 
 App.propTypes = {
   theme: PropTypes.string,
+  route: PropTypes.string,
   cursor: PropTypes.object,
   locale: PropTypes.string,
   translation: PropTypes.object,
@@ -104,13 +105,21 @@ function App(props) {
   const tallLayout = useMediaQuery('(max-width:768px)')
   React.useEffect(() => props.dispatch({ type: 'layout/set', layout: tallLayout ? 'tall' : 'wide' }), [tallLayout])
 
+  const render = props.route === ''
+
   return (
     <ThemeProvider theme={props.theme === 'light' ? lightTheme : darkTheme}>
-      <Canvas camera={{ fov: 60 }} style={{ cursor: raytracedCursor ?? 'auto' }} id='canvas' linear>
+      <Canvas 
+        camera={{ fov: 60 }} 
+        style={{ cursor: raytracedCursor ?? 'auto' }} 
+        id='canvas' 
+        linear
+        invalidateFrameloop={true}
+      >
         <Camera />
         <Background theme={props.theme} />
         <Light />
-        <BackgroundShapes />
+        <BackgroundShapes render={render} />
         <Menu />
       </Canvas>
       <SiteSettings />
@@ -121,6 +130,7 @@ function App(props) {
 
 export default connect(state => ({
   theme: state.theme,
+  route: state.route,
   cursor: state.cursor,
   locale: state.locale,
   translation: state.translation

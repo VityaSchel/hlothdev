@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
+import styles from './styles.module.scss'
 import Card from '../Card'
 import { MdOutlineSpaceDashboard } from 'react-icons/md'
-import styles from './styles.module.scss'
 import { connect } from 'react-redux'
 import { SiTelegram } from 'react-icons/si'
 import { ReactComponent as VKLogo } from '../../../assets/images/svgIcons/vk_logo.svg'
@@ -9,6 +9,7 @@ import { AiFillTwitterCircle } from 'react-icons/ai'
 import { MdEmail, MdLocalPhone } from 'react-icons/md'
 import { ImGithub } from 'react-icons/im'
 import avatar from '../../../assets/images/avatar.jpeg'
+import Experience from './Experience.js'
 
 const links = {
   Telegram: {
@@ -96,11 +97,7 @@ function Me(props) {
             ))}
           </Card>
         </div>
-        <div className={styles.experience}>
-          <Card>
-            jkasdjkjakls
-          </Card>
-        </div>
+        <Experience translation={translation} />
       </div>
     </div>
   )

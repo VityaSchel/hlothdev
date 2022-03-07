@@ -86,7 +86,15 @@ export default {
         Если у вас еще остались вопросы или вы готовы обсудить проект со мной — пишите мне в \
         Телеграм: <a href='tg://resolve?domain=hlothdev'>@hlothdev</a> \
         или в другие соц. сети, перечисленные на этой странице.`,
-      ENDING_IMAGE: 'UWU эмодзи'
+      ENDING_IMAGE: 'UWU эмодзи',
+      CATEGORIES: {
+        frontend: 'Фронтенд',
+        backend: 'Бекенд',
+        bot: 'Разработка ботов',
+        gamedev: 'Разработка игр',
+        design: 'Дизайн',
+        mobile: 'Мобайл'
+      }
     },
     PORTFOLIO: {
       COLUMNS: {
@@ -237,7 +245,15 @@ export default {
         in 2019, creating libraries used by other web developers and striving to improve DX. If you have any
         questions or want to discuss your case with me — contact me in
         Telegram: <a href='tg://resolve?domain=hlothdev'>@hlothdev</a> or other ways listed on this page.`,
-      ENDING_IMAGE: 'UWU emoji'
+      ENDING_IMAGE: 'UWU emoji',
+      CATEGORIES: {
+        frontend: 'Frontend',
+        backend: 'Backend',
+        bot: 'Bot development',
+        gamedev: 'Game development',
+        design: 'Design',
+        mobile: 'Mobile'
+      }
     },
     'PORTFOLIO': {
       COLUMNS: {

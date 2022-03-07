@@ -1675,6 +1675,7 @@ export default [
     description: 'Приложение на телефон, где можно было найти интересные игры по персональным рекоммендациям',
     unpublic: false,
     hidden: false,
+    category: 'app',
     id: 'psstoremobile'
   },
   {
@@ -1690,6 +1691,7 @@ export default [
     description: 'Приложение для посика биолгических родителей и связей с другими людьми',
     unpublic: false,
     hidden: false,
+    category: 'app',
     tags: [
       'order'
     ],

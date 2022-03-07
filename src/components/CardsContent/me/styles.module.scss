@@ -68,6 +68,25 @@
 
     .experience {
       flex: 1;
+
+      .technologiesGrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+
+        .technology {
+          
+          .name {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+
+          .logo {
+            height: 20px;
+          }
+        }
+      }
     }
   }
 }
