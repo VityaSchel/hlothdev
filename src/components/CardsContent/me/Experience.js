@@ -30,7 +30,8 @@ export default function Experience(props) {
                     <MUICard variant='outlined' className={styles.technology} key={technologyID}>
                       <CardContent sx={{ paddingBottom: 0 }}>
                         <Typography variant='h6' component='div' className={styles.name}>
-                          <img src={technologyInfo.logo} className={styles.logo} /> {technologyInfo.name}
+                          {/* <img src={technologyInfo.logo} className={styles.logo} /> {technologyInfo.name} */}
+                          <technologyInfo.logo /> {technologyInfo.name}
                         </Typography>
                         <Typography sx={{ fontSize: 14 }} color='text.secondary'>
                           начал учить <b>{Intl.DateTimeFormat('ru-RU', {

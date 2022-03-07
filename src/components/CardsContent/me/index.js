@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types'
 import styles from './styles.module.scss'
 import Card from '../Card'
-import { MdOutlineSpaceDashboard } from 'react-icons/md'
 import { connect } from 'react-redux'
 import { SiTelegram } from 'react-icons/si'
 import { ReactComponent as VKLogo } from '../../../assets/images/svgIcons/vk_logo.svg'
