@@ -18,7 +18,7 @@ Experience.propTypes = {
 export default function Experience(props) {
   return (
     <div className={styles.experience}>
-      <Card>
+      <Card className={styles.categories}>
         {categories.map(categoryID => (
           <div key={categoryID}>
             <Typography variant='overline'>{props.translation.CATEGORIES[categoryID]}</Typography>
@@ -30,7 +30,6 @@ export default function Experience(props) {
                     <MUICard variant='outlined' className={styles.technology} key={technologyID}>
                       <CardContent sx={{ paddingBottom: 0 }}>
                         <Typography variant='h6' component='div' className={styles.name}>
-                          {/* <img src={technologyInfo.logo} className={styles.logo} /> {technologyInfo.name} */}
                           <technologyInfo.logo /> {technologyInfo.name}
                         </Typography>
                         <Typography sx={{ fontSize: 14 }} color='text.secondary'>

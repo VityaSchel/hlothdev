@@ -25,13 +25,15 @@ const config = {
 
 import svgo from 'svgo'
 import path from 'path'
-import glob from 'glob-promise'
+// import glob from 'glob-promise'
 import fs from 'fs'
 // const generatePrefix = file => file
-const folder = './src/assets/images/technologiesLogos/**.svg'
-const svgs = await glob(folder)
-for (let filePath of svgs) {
+// const folder = './src/assets/images/technologiesLogos/**.svg'
+// const svgs = await glob(folder)
+// for (let filePath of svgs) {
   // let filePath = path.join(folder, file)
+  
+  const filePath = process.argv[2]
   let prefix = path.basename(filePath)//generatePrefix(file)
   // let svgo = new SVGO({
   //   ...config,
@@ -65,4 +67,4 @@ for (let filePath of svgs) {
     }
   )
   fs.writeFileSync(filePath, data)
-}
+// }

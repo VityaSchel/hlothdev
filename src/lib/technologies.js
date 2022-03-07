@@ -26,6 +26,12 @@ import { ReactComponent as babelLogo } from '../assets/images/technologiesLogos/
 import { ReactComponent as materialUILogo } from '../assets/images/technologiesLogos/material-ui.svg'
 import { ReactComponent as reactstrapLogo } from '../assets/images/technologiesLogos/reactstrap.svg'
 import { ReactComponent as telegramBotAPILogo } from '../assets/images/technologiesLogos/telegram.svg'
+import { ReactComponent as pituhonLogo } from '../assets/images/technologiesLogos/python.svg'
+import { ReactComponent as phpLogo } from '../assets/images/technologiesLogos/php.svg'
+import { ReactComponent as vkAPILogo } from '../assets/images/technologiesLogos/vk.svg'
+import { ReactComponent as yandexAliceLogo } from '../assets/images/technologiesLogos/yandex-alice.svg'
+import { ReactComponent as unityLogo } from '../assets/images/technologiesLogos/unity.svg'
+import { ReactComponent as photonEngineLogo } from '../assets/images/technologiesLogos/photon-engine.svg'
 
 // How to count projects for each technology:
 // 1. Go to loop with each project, continue if any of these conditions meet:
@@ -74,7 +80,7 @@ export default {
     aliases: ['Vanilla JS', 'React', 'NodeJS']
   },
   typescript: {
-    name: 'typescript',
+    name: 'TypeScript',
     logo: typescriptLogo,
     startedLearning: new Date(2021, 3, 19),
     category: 'frontend'
@@ -178,7 +184,7 @@ export default {
     category: 'frontend'
   },
   babel: {
-    name: 'babel',
+    name: 'Babel',
     logo: babelLogo,
     startedLearning: new Date(2021, 1, 2),
     category: 'backend',
@@ -223,13 +229,13 @@ export default {
   },
   python: {
     name: 'Python',
-    logo: jestLogo,
+    logo: pituhonLogo,
     startedLearning: new Date(2014, 4, 10),
     category: 'backend'
   },
   php: {
     name: 'PHP',
-    logo: jestLogo,
+    logo: phpLogo,
     startedLearning: new Date(2011, 10, 11),
     category: 'backend'
   },
@@ -255,27 +261,27 @@ export default {
   },
   vkAPI: {
     name: 'VK Bot API',
-    logo: telegramBotAPILogo,
+    logo: vkAPILogo,
     startedLearning: new Date(2015, 10, 3),
     category: 'bot',
     addFromCategory: 'bot/vk'
   },
   yandexAliceAPI: {
     name: 'Яндекс.Диалог API (Алиса)',
-    logo: telegramBotAPILogo,
+    logo: yandexAliceLogo,
     startedLearning: new Date(2020, 3, 18),
     category: 'bot',
     addFromCategory: 'bot/yandex_alice'
   },
   unity: {
     name: 'Unity',
-    logo: telegramBotAPILogo,
+    logo: unityLogo,
     startedLearning: new Date(2016, 7, 27),
     category: 'gamedev'
   },
   photonEngine: {
     name: 'Photon Engine',
-    logo: telegramBotAPILogo,
+    logo: photonEngineLogo,
     startedLearning: new Date(2019, 1, 16),
     category: 'gamedev'
   },
