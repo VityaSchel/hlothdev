@@ -33,7 +33,7 @@ export default function Experience(props) {
                           <technologyInfo.logo /> {technologyInfo.name}
                         </Typography>
                         <Typography sx={{ fontSize: 14 }} color='text.secondary'>
-                          начал учить <b>{Intl.DateTimeFormat('ru-RU', {
+                          {props.translation.} <b>{Intl.DateTimeFormat('ru-RU', {
                             year: 'numeric',
                             month: 'long',
                             day: 'numeric'

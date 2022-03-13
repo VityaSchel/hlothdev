@@ -2,7 +2,7 @@ import dedent from 'dedent'
 
 /* eslint-disable no-irregular-whitespace */
 
-export default {
+const a = {
   'ru-RU': {
     'CARD_ABOUT': 'О сайте',
     'CARD_DONATE': 'Донаты',
@@ -317,3 +317,4 @@ export default {
     }
   }
 }
+export default a

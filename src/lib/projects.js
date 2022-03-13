@@ -41,6 +41,7 @@ import wantToBeAProgrammerLogo from '../assets/images/projectsLogos/want-to-be-a
 import gladvalakasNT200instamask from '../assets/images/projectsLogos/insta-mask-glad-valakas-nt200.png'
 import tinkoffCurrencyConverter from '../assets/images/projectsLogos/tinkoff-currency-converter.png'
 import skeletronRockBot from '../assets/images/projectsLogos/skeletron-rock-bot.png'
+import movieTimeFilmsBot from '../assets/images/projectsLogos/movietime-films-bot.png'
 
 // scope: 1=verysmall 2=small 3=average 4=big 5=huge
 
@@ -368,7 +369,7 @@ export default [
       abandon: '2 August 2021'
     },
     scope: 2,
-    description: 'Панель управления ботом с добавлением модераторов, контента, проверка на подписку',
+    description: 'Панель управления ботом с добавлением админов, рефералов, проверка на подписку, рассылкой рекламы по пользователям и встроенной статистикой',
     unpublic: false,
     hidden: false,
     tags: [
@@ -456,6 +457,21 @@ export default [
     ],
     category: 'website',
     id: 'lis-nce'
+  },
+  {
+    name: 'MovieTime films bot',
+    stack: ['NodeJS', 'MongoDB', 'Telegram Bot API'],
+    supported: false,
+    dates: { devStart: '2022-05-05', release: '2022-05-07' },
+    scope: 2,
+    description: 'Панель управления ботом с добавлением модераторов, фильмов, проверка на подписку',
+    unpublic: false,
+    hidden: false,
+    tags: ['order'],
+    logo: movieTimeFilmsBot,
+    links: ['https://t.me/movietime_films_bot'],
+    category: 'bot/telegram',
+    id: 'movietime-films-bot'
   },
   {
     name: 'destream-api',
@@ -1551,6 +1567,17 @@ export default [
     unpublic: true,
     hidden: true,
     id: 'hiddenid-1'
+  },
+  {
+    name: 'hiddenID_8',
+    stack: ['React', 'NodeJS', 'FastCGI'],
+    dates: { devStart: '2022-05-05', release: '2022-05-07' },
+    scope: 2,
+    description: '',
+    unpublic: true,
+    hidden: true,
+    category: 'website',
+    id: 'hiddenid-8'
   },
   {
     name: 'Witness Guesser',
