@@ -49,6 +49,10 @@
       display: flex;
       gap: $gap;
 
+      .profileCard {
+        flex: 1;
+      }
+
       .avatar img {
         background-color: #eee;
       }

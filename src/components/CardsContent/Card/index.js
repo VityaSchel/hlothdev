@@ -10,6 +10,7 @@ import ButtonBase from '@mui/material/ButtonBase'
 Card.propTypes = CardContainer.propTypes = {
   children: PropTypes.node,
   avatar: PropTypes.node,
+  containerStyle: PropTypes.string,
   title: PropTypes.string,
   subtitle: PropTypes.string,
   caption: PropTypes.string,
@@ -54,13 +55,13 @@ function CardContainer(props) {
   return (
     props.link
       ? (
-        <ButtonBase className={styles.container}>
+        <ButtonBase className={[styles.container, props.containerStyle].join(' ') }>
           <a className={containerClassName} href={props.link}>
             <Card {...props} />
           </a>
         </ButtonBase>
       ) : (
-        <div className={styles.container}>
+        <div className={[styles.container, props.containerStyle].join(' ')}>
           <div className={containerClassName}>
             <Card {...props} />
           </div>

@@ -45,6 +45,7 @@ const links = {
 
 Me.propTypes = {
   translation: PropTypes.object,
+  dispatch: PropTypes.func
 }
 
 function Me(props) {
@@ -82,6 +83,7 @@ function Me(props) {
       <div className={styles.rightCol}>
         <div className={styles.topRow}>
           <Card
+            containerStyle={styles.profileCard}
             avatar={<img src={avatar} width={100} height={100} style={{ borderRadius: 999 }} />}
             avatarStyles={{ padding: 0, boxShadow: '0 0 2px 0 rgba(0, 0, 0.25)' }}
             title={`${props.translation.CARD_ME_FIRST_NAME} ${props.translation.CARD_ME_LAST_NAME}`}
@@ -96,7 +98,7 @@ function Me(props) {
             ))}
           </Card>
         </div>
-        <Experience translation={translation} />
+        <Experience translation={props.translation} dispatch={props.dispatch} />
       </div>
     </div>
   )

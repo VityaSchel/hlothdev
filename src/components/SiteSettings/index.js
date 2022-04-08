@@ -9,8 +9,8 @@ import { useSpring, animated } from 'react-spring'
 import useResizeObserver from 'use-resize-observer'
 import cx from 'classnames'
 
-import ruRU from './flags/ru-RU.png'
-import enUS from './flags/en-US.png'
+import ruRU from '../../assets/images/emojis/flags/ru-RU.png'
+import enUS from '../../assets/images/emojis/flags/en-US.png'
 
 SiteSettings.propTypes = {
   theme: PropTypes.string,

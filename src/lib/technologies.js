@@ -32,6 +32,11 @@ import { ReactComponent as vkAPILogo } from '../assets/images/technologiesLogos/
 import { ReactComponent as yandexAliceLogo } from '../assets/images/technologiesLogos/yandex-alice.svg'
 import { ReactComponent as unityLogo } from '../assets/images/technologiesLogos/unity.svg'
 import { ReactComponent as photonEngineLogo } from '../assets/images/technologiesLogos/photon-engine.svg'
+import { ReactComponent as golangLogo } from '../assets/images/technologiesLogos/golang.svg'
+import { ReactComponent as tauriLogo } from '../assets/images/technologiesLogos/tauri.svg'
+import { ReactComponent as csharpLogo } from '../assets/images/technologiesLogos/csharp.svg'
+import { ReactComponent as figmaLogo } from '../assets/images/technologiesLogos/figma.svg'
+import { ReactComponent as sketchLogo } from '../assets/images/technologiesLogos/sketch.svg'
 
 // How to count projects for each technology:
 // 1. Go to loop with each project, continue if any of these conditions meet:
@@ -197,10 +202,22 @@ export default {
     category: 'backend'
   },
   threejs: {
-    name: 'threejs',
+    name: 'ThreeJS',
     logo: threejsLogo,
     startedLearning: new Date(2021, 5, 5),
     category: 'frontend'
+  },
+  tauri: {
+    name: 'Tauri',
+    logo: tauriLogo,
+    startedLearning: new Date(2022, 0, 9),
+    category: 'apps'
+  },
+  golang: {
+    name: 'Go',
+    logo: golangLogo,
+    startedLearning: new Date(2022, 2, 29),
+    category: 'apps'
   },
   reactThreeFiber: {
     name: 'react-three-fiber',
@@ -213,7 +230,7 @@ export default {
     name: 'NodeJS',
     logo: nodejsLogo,
     startedLearning: new Date(2020, 6, 13),
-    category: 'backend'
+    category: 'apps'
   },
   redis: {
     name: 'Redis',
@@ -231,7 +248,7 @@ export default {
     name: 'Python',
     logo: pituhonLogo,
     startedLearning: new Date(2014, 4, 10),
-    category: 'backend'
+    category: 'apps'
   },
   php: {
     name: 'PHP',
@@ -267,11 +284,12 @@ export default {
     addFromCategory: 'bot/vk'
   },
   yandexAliceAPI: {
-    name: 'Яндекс.Диалог API (Алиса)',
+    name: 'Яндекс.Диалоги API (Алиса)',
     logo: yandexAliceLogo,
     startedLearning: new Date(2020, 3, 18),
     category: 'bot',
-    addFromCategory: 'bot/yandex_alice'
+    addFromCategory: 'bot/yandex_alice',
+    aliases: ['Яндекс.Диалоги API']
   },
   unity: {
     name: 'Unity',
@@ -287,20 +305,22 @@ export default {
   },
   cSharp: {
     name: 'C#',
-    logo: telegramBotAPILogo,
+    logo: csharpLogo,
     startedLearning: new Date(2016, 8, 2),
     category: 'gamedev'
   },
   figma: {
     name: 'Figma',
-    logo: telegramBotAPILogo,
+    logo: figmaLogo,
     startedLearning: new Date(2019, 5, 11),
-    category: 'design'
+    category: 'design',
+    aliases: ['Figma Plugin API', 'Figma REST API']
   },
   sketch: {
     name: 'Sketch',
-    logo: telegramBotAPILogo,
+    logo: sketchLogo,
     startedLearning: new Date(2020, 9, 20),
     category: 'design'
   },
+
 }

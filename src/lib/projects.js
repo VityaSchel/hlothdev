@@ -50,7 +50,8 @@ export default [
     name: 'Stigfinnare',
     stack: [
       'Unity',
-      'C#'
+      'C#',
+      'Photon Engine'
     ],
     supported: 'partially',
     dates: {
@@ -233,6 +234,8 @@ export default [
     name: 'AtmosCraft',
     stack: [
       'React',
+      'Figma',
+      'Sketch',
       'Fastify',
       'LevelDB'
     ],
@@ -1018,6 +1021,7 @@ export default [
   {
     name: 'Бот Алисы: Игрорупор',
     stack: [
+      'Яндекс.Диалоги API',
       'PHP',
       'DuckDuckGo API'
     ],
@@ -1659,6 +1663,7 @@ export default [
     stack: [
       'React',
       'C',
+      'Figma',
       'MariaDB'
     ],
     supported: false,
