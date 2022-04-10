@@ -16,13 +16,13 @@ Experience.propTypes = {
 }
 
 export default function Experience(props) {
-  const openProjects = terms => e => {
-    const termsUnique = new Set(terms.map(s => s.toLowerCase()))
+  const openProjects = terms => () => {
+    const termsUnique = Array.from(new Set(terms.map(s => s.toLowerCase())))
     const query = new URLSearchParams(window.location.search)
-    query.set('q', encodeURIComponent(termsUnique))
-    const newRelativePathQuery = window.location.pathname + '?' + query.toString()
+    query.set('q', encodeURIComponent(termsUnique.join(' ')))
+    const newRelativePathQuery = '/portfolio' + '?' + query.toString()
     history.replaceState(null, '', newRelativePathQuery)
-    props.dispatch({ type: 'route/set', route: 'portfolio' })
+    setTimeout(() => props.dispatch({ type: 'route/set', route: 'portfolio' }), 1000)
   }
 
   return (
@@ -50,7 +50,7 @@ export default function Experience(props) {
                         </Typography>
                       </CardContent>
                       <CardActions>
-                        <Button size='small' onClick={openProjects([technologyID, technologyInfo.name, ...technologyInfo.aliases])}>{
+                        <Button size='small' onClick={openProjects([technologyID, technologyInfo.name, ...(technologyInfo.aliases || [])])}>{
                           props.translation.ABOUT_ME.OPEN_PROJECTS_CAPTION} ({
                           projects.filter(project => 
                             project.stack.map(s => s.toLowerCase()).includes(technologyID.toLowerCase())

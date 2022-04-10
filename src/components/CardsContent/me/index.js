@@ -79,6 +79,31 @@ function Me(props) {
             </div>
           </div>
         </Card>
+        <Card className={styles.about}>
+          <div className={styles.text}>
+            <h2 dangerouslySetInnerHTML={{ __html: translation.HEADING }} />
+            <div className={styles.imgBlock}>
+              <img src='/static/site-decorations/vk-dog.webp' alt={translation.INTRO_IMAGE} align='right' width={130} />
+              <p dangerouslySetInnerHTML={{ __html: translation.INTRO }} />
+            </div>
+            <p dangerouslySetInnerHTML={{ __html: translation.BACKEND }} />
+            <div className={styles.imgBlock}>
+              <video src="/static/site-decorations/kolobanga.webm" align='left' autoPlay width={150} muted loop alt={translation.MY_PROJECTS_IMAGE} />
+              <p dangerouslySetInnerHTML={{ __html: translation.MY_PROJECTS }} />
+            </div>
+            <p dangerouslySetInnerHTML={{ __html: translation.BOTS }} />
+            <div className={styles.imgBlock}>
+              <img src='/static/site-decorations/shrek.webp' alt={translation.PARSING_IMAGE} align='right' width={130} />
+              <p dangerouslySetInnerHTML={{ __html: translation.PARSING }} />
+            </div>
+            <h2 dangerouslySetInnerHTML={{ __html: translation.WORK_EXPERIENCE_LABEL }} />
+            <p dangerouslySetInnerHTML={{ __html: translation.WORK_EXPERIENCE_BLOCK }} />
+            <div className={styles.imgBlock}>
+              <img src='/static/site-decorations/qwq.webp' alt={translation.ENDING_IMAGE} align='left' width={140} />
+              <p dangerouslySetInnerHTML={{ __html: translation.ENDING }} />
+            </div>
+          </div>
+        </Card>
       </div>
       <div className={styles.rightCol}>
         <div className={styles.topRow}>
