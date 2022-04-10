@@ -46,7 +46,7 @@
       },
       "other": {
         "title": "Разработка уникального инструмента",
-        "description": "Разработка расширений для браузеров, разработка Minecraft-сервера, настройка почтового сервера и рассылок, вспомогательные плагины для Figma и другое",
+        "description": "Разработка расширений для браузеров, разработка Minecraft-сервера, настройка почтового сервера и рассылок, вспомогательные плагины для Figma, читы и другое",
         "price": "Договорная цена"
       }
     },
@@ -223,13 +223,13 @@
         "price": "Starting from 299 €"
       },
       "bot": {
-        "title": "Chat-bot or script-bot",
+        "title": "Chatbot or scripted bot",
         "description": "Increase conversions, provide users with feedback and promote channels with VKontakte, Telegram (Bot API and MTProto), WhatsApp or Viber bot, promote your product with a Discord bot, Yandex.Alice skill, Reddit app or a bot that works with other APIs",
         "price": "Starting from 59 €"
       },
       "other": {
         "title": "Other",
-        "description": "Browsers extensions, Minecraft-server development, mail server and mailings setup, plugins for Figma and other",
+        "description": "Browsers extensions, Minecraft-server development, mail server and mailings setup, plugins for Figma, cheats and other stuff",
         "price": "Let's talk"
       }
     },

@@ -12,12 +12,14 @@ import FormControlLabel from '@mui/material/FormControlLabel'
 import Checkbox from '@mui/material/Checkbox'
 import ClickAwayListener from '@mui/material/ClickAwayListener'
 import Badge from '@mui/material/Badge'
+import cx from 'classnames'
 
 Filters.propTypes = {
   checked: PropTypes.object,
   translation: PropTypes.object,
   setChecked: PropTypes.func,
-  filtersList: PropTypes.array
+  filtersList: PropTypes.array,
+  theme: PropTypes.string
 }
 function Filters(props) {
   const [arrowRef, setArrowRef] = React.useState(null)
@@ -70,7 +72,7 @@ function Filters(props) {
             },
           ]}
         >
-          <div ref={setArrowRef} className={styles.arrow} />
+          <div ref={setArrowRef} className={cx(styles.arrow, { [styles.lightTheme]: props.theme === 'light' })} />
           <Paper className={styles.paper}>
             <Typography sx={{ p: 2 }}>
               <FormGroup>
@@ -93,4 +95,8 @@ function Filters(props) {
   )
 }
 
-export default connect(state => ({ translation: state.translation, locale: state.locale }))(Filters)
+export default connect(state => ({ 
+  translation: state.translation, 
+  locale: state.locale, 
+  theme: state.theme 
+}))(Filters)
