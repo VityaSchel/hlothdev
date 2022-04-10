@@ -39,8 +39,8 @@
     "webfontloader": "^1.6.28"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "GENERATE_SOURCEMAP=false react-scripts build",
+    "start": "REACT_APP_API_URL=http://localhost:15920 react-scripts start",
+    "build": "REACT_APP_API_URL=https://hloth.dev/api GENERATE_SOURCEMAP=false react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

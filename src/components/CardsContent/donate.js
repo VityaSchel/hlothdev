@@ -12,11 +12,18 @@ AboutSite.propTypes = {
 }
 
 function AboutSite(props) {
-  const translation = props.translation.ABOUT_THIS_WEBSITE
+  const translation = props.translation.DONATE
 
   return (
     <div className={styles.aboutSite}>
-      text
+      <Card
+        title={translation.HEADING}
+      >
+        <div className={styles.donate}>
+          <p>{translation.TEXT}</p>
+          <a href={translation.EXTERNAL_DONATE_SITE}>{translation.EXTERNAL_DONATE_SITE}</a>
+        </div>
+      </Card>
     </div>
   )
 }

@@ -1,3 +1,4 @@
+import React from 'react'
 import PropTypes from 'prop-types'
 import Card from './Card'
 import styles from './styles.module.scss'
@@ -6,6 +7,7 @@ import { BiLinkExternal } from 'react-icons/bi'
 import firstConceptArt from 'assets/images/aboutSite/first-concept-art.jpeg'
 import blenderScreenshot from 'assets/images/aboutSite/blender-screenshot.jpeg'
 import Skeleton from '@mui/material/Skeleton'
+import Typography from '@mui/material/Typography'
 
 AboutSite.propTypes = {
   translation: PropTypes.object,
@@ -13,6 +15,14 @@ AboutSite.propTypes = {
 
 function AboutSite(props) {
   const translation = props.translation.ABOUT_THIS_WEBSITE
+  const [visitorsCounter, setVisitorsCounter] = React.useState(null)
+
+  React.useEffect(() => {
+    (async () => {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/visitorsThisMonth`)
+      setVisitorsCounter(Number(await response.text()))
+    })()
+  }, [])
 
   return (
     <div className={styles.aboutSite}>
@@ -20,12 +30,18 @@ function AboutSite(props) {
         title={translation.HEADING}
         containerStyle={styles.leftCol}
       >
-        <div>
+        <div className={styles.text}>
           <p>{translation.TEXT}</p>
           <ul>
-            {translation.ABOUT_THIS_WEBSITE.PREVIOUS_SITES.map((siteInfo, i) => <li key={i}>{siteInfo}</li>)}
+            {translation.PREVIOUS_SITES.map((siteInfo, i) => <li key={i}>{siteInfo}</li>)}
           </ul>
-          <span>{translation.VISITORS_THIS_MONTH}: 0</span>
+          {visitorsCounter !== null && <Typography variant='caption' className={styles.counter}>
+            <span>{translation.VISITORS_THIS_MONTH}: {visitorsCounter}.</span> {
+              visitorsCounter === 0 
+                ? <span>{translation.ZERO_VISITORS}</span>
+                : Boolean(visitorsCounter <= 5) && <span>{translation.TOO_LOW_VISITORS.replace('%v', visitorsCounter)}</span>
+            }
+          </Typography>}
         </div>
       </Card>
       <Card

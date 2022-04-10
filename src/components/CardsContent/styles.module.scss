@@ -37,6 +37,17 @@
   .leftCol {
     width: 800px;
     align-items: flex-start;
+    line-height: 1.7em;
+
+    .text {
+      font-size: calc(15/16*1rem);
+
+      .counter {
+        line-height: normal;
+        font-weight: bold;
+        text-transform: none;
+      }
+    }
   }
 
   .rightCol {
@@ -80,4 +91,10 @@
       }
     }
   }
+}
+
+.donate {
+  width: 600px;
+  line-height: 1.7em;
+  font-size: calc(15/16*1rem);
 }
