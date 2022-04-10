@@ -229,7 +229,30 @@
         "mobile": "Mobile"
       },
       "STARTED_LEARNING": "Learning since",
-      "OPEN_PROJECTS_CAPTION": "Open projects"
+      "OPEN_PROJECTS_CAPTION": "Open projects",
+      "WHAT_IS_HLOTH": {
+        "HEADING": "What is \"hloth\"?",
+        "TEXT": "hloth (rus. хлоз, read as [h l ó θ]) — is a nickname I came up with in November of 2021, when I was creating freelance profile. This nickname isn't just a set of letters, because I had a list of requirements:",
+        "CRITERIA": [
+          "from 5 to 7 letters",
+          "related to programming or isn't related to anything",
+          "is not an existing word and is not similiar to negative words",
+          "read in 1 or 2 syllables",
+          "(optional) similiar to \"vitya\""
+        ],
+        "TEXT2": "On top of that, a domain must be available with such a name in the .dev zone or in the zone ending this word. In ancient Greek mythology, the god Chaos is the immortal god of generations, which indicates that my creativity has no boundaries and will exist as long as the world itself is alive. Of course, this is a joke, and this text is needed to fill the space on the left so that you can see the technologies I use on the right and spend more time on the site to improve SEO. Fun fact: while translating this text, I was trying to find god that has closer pronounciation to \"hloth\" and I found \"hoth\", however he was blind and killed his brother, so I stayed on Chaos. I came up with this nickname randomly, while picking up simple endings for \"hl\". My friends offered me some other options:",
+        "VARIANTS": [
+          "vítěz — characters out of ASCII is not undesirable to use in domain name, besides, I wanted to print domain name on products in real life, and not every average user and potential client knows, how to type Czech alphabet letters",
+          "megakiller",
+          "pykov — proposed by an AI generating business names (translates as farty from Russian)",
+          "weetapp",
+          "vitezhorny",
+          "viapp — the idea was that vi can be heard as we (our)",
+          "vitsch — short for vityaschel, which is also short form of my initials",
+          "devitya — was taken already"
+        ],
+        "TEXT3": "All these options were not even considered, when I came up with hloth."
+      }
     },
     "PORTFOLIO": {
       "COLUMNS": {

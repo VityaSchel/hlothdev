@@ -81,27 +81,16 @@ function Me(props) {
         </Card>
         <Card className={styles.about}>
           <div className={styles.text}>
-            <h2 dangerouslySetInnerHTML={{ __html: translation.HEADING }} />
-            <div className={styles.imgBlock}>
-              <img src='/static/site-decorations/vk-dog.webp' alt={translation.INTRO_IMAGE} align='right' width={130} />
-              <p dangerouslySetInnerHTML={{ __html: translation.INTRO }} />
-            </div>
-            <p dangerouslySetInnerHTML={{ __html: translation.BACKEND }} />
-            <div className={styles.imgBlock}>
-              <video src="/static/site-decorations/kolobanga.webm" align='left' autoPlay width={150} muted loop alt={translation.MY_PROJECTS_IMAGE} />
-              <p dangerouslySetInnerHTML={{ __html: translation.MY_PROJECTS }} />
-            </div>
-            <p dangerouslySetInnerHTML={{ __html: translation.BOTS }} />
-            <div className={styles.imgBlock}>
-              <img src='/static/site-decorations/shrek.webp' alt={translation.PARSING_IMAGE} align='right' width={130} />
-              <p dangerouslySetInnerHTML={{ __html: translation.PARSING }} />
-            </div>
-            <h2 dangerouslySetInnerHTML={{ __html: translation.WORK_EXPERIENCE_LABEL }} />
-            <p dangerouslySetInnerHTML={{ __html: translation.WORK_EXPERIENCE_BLOCK }} />
-            <div className={styles.imgBlock}>
-              <img src='/static/site-decorations/qwq.webp' alt={translation.ENDING_IMAGE} align='left' width={140} />
-              <p dangerouslySetInnerHTML={{ __html: translation.ENDING }} />
-            </div>
+            <h2 dangerouslySetInnerHTML={{ __html: translation.WHAT_IS_HLOTH.HEADING }} />
+            <p dangerouslySetInnerHTML={{ __html: translation.WHAT_IS_HLOTH.TEXT }} />
+            <ol>
+              {translation.WHAT_IS_HLOTH.CRITERIA.map((criteria, i) => <li key={i}>{criteria}</li>)}
+            </ol>
+            <p dangerouslySetInnerHTML={{ __html: translation.WHAT_IS_HLOTH.TEXT2 }} />
+            <ul>
+              {translation.WHAT_IS_HLOTH.VARIANTS.map((variant, i) => <li key={i}>{variant}</li>)}
+            </ul>
+            <p dangerouslySetInnerHTML={{ __html: translation.WHAT_IS_HLOTH.TEXT3 }} />
           </div>
         </Card>
       </div>
