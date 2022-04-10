@@ -93,6 +93,13 @@ function Me(props) {
             <p dangerouslySetInnerHTML={{ __html: translation.WHAT_IS_HLOTH.TEXT3 }} />
           </div>
         </Card>
+        <Card className={styles.about}>
+          <div className={styles.text}>
+            <h2 dangerouslySetInnerHTML={{ __html: translation.ABOUT_ME_AS_PERSON.HEADING }} />
+            <p dangerouslySetInnerHTML={{ __html: translation.ABOUT_ME_AS_PERSON.INTRO }} />
+            <p dangerouslySetInnerHTML={{ __html: translation.ABOUT_ME_AS_PERSON.TEXT }} />
+          </div>
+        </Card>
       </div>
       <div className={styles.rightCol}>
         <div className={styles.topRow}>

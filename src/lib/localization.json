@@ -97,6 +97,11 @@
           "devitya — было уже занято"
         ],
         "TEXT3": "Все эти варианты даже не рассматривались, когда я придумал hloth."
+      },
+      "ABOUT_ME_AS_PERSON": {
+        "HEADING": "Обо мне (как о человеке)",
+        "INTRO": "Однажды я услышал, как мудрый человек сказал: «в хорошем резюме должно быть четыре страницы: 1. Опыт работы, 2. Образовние, 3. Скиллы, 4. Немного о Вас». Итак, вы добрались до четвертой страницы моего резюме (в виде сайта), и сейчас я хотел бы рассказать немного о себе как о человеке.",
+        "TEXT": "Я серьезный человек, но только пока меня кто-нибудь не рассмешит. Моя жизненная цель — выбраться из России в Чехию, выучив Чешский язык, но пока я знаю только Ahoj! Jmenuji Vitez Alkalie. Čau! Я уже привык к тому, что неоплачиваемые работники в команде уходят через 7 дней. Я слушаю мешапы и видео на ютубе вместо музыки. Мечтаю научиться играть на фортепиано и гитаре, чтобы не платить композиторам для создания музыки к моим играм. Сломал макбук через 2 месяца после покупки и с марта 2021 года работаю на ноутбуке через внешний монитор; когда-нибудь я обязательно накоплю деньги на ремонт и смогу как настоящий программист ходить с ним в старбакс."
       }
     },
     "PORTFOLIO": {
@@ -252,6 +257,11 @@
           "devitya — was taken already"
         ],
         "TEXT3": "All these options were not even considered, when I came up with hloth."
+      },
+      "ABOUT_ME_AS_PERSON": {
+        "HEADING": "About me (as a person)",
+        "INTRO": "I once heard a wise man say: “A good resume should have four pages: 1. Work experience, 2. Education, 3. Skills, 4. A little about you.” So, you have reached the fourth page of my resume (in the form of a website), and now I would like to tell you about myself as a person.",
+        "TEXT": "I'm a serious person, but only until someone makes me laugh. My life goal is to get out of Russia to the Czech Republic by learning the Czech language, but so far I only know Ahoj! Jmenuji Vitez Alkalie. Čau! I'm already used to the fact that unpaid employees in the team leave after 7 days. I listen to mashups and YouTube videos instead of music. My dream is to learn how to play the piano and guitar so I can stop paying composers to create music for my games. I broke my macbook 2 months after purchase and have been working on this laptop through an external display since March 2021; someday I will definitely save up enough money to repair it to be able to go to Starbucks with it like a real programmer."
       }
     },
     "PORTFOLIO": {

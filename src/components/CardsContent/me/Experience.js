@@ -19,10 +19,8 @@ export default function Experience(props) {
   const openProjects = terms => () => {
     const termsUnique = Array.from(new Set(terms.map(s => s.toLowerCase())))
     const query = new URLSearchParams(window.location.search)
-    query.set('q', encodeURIComponent(termsUnique.join(' ')))
-    const newRelativePathQuery = '/portfolio' + '?' + query.toString()
-    history.replaceState(null, '', newRelativePathQuery)
-    setTimeout(() => props.dispatch({ type: 'route/set', route: 'portfolio' }), 1000)
+    query.set('q', termsUnique.join(' '))
+    props.dispatch({ type: 'route/set', route: 'portfolio', params: query })
   }
 
   return (
