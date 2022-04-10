@@ -19,8 +19,65 @@
   }
 }
 
-.services {
+.services,
+.aboutSite {
   display: flex;
-  flex-direction: column;
   gap: 15px;
+}
+
+.services {
+  flex-direction: column;
+}
+
+.aboutSite {
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+
+  .leftCol {
+    width: 800px;
+    align-items: flex-start;
+  }
+
+  .rightCol {
+    width: 400px;
+
+    & > div > div {
+      gap: 25px;
+
+      .img {
+        position: relative;
+        
+        &,
+        img,
+        span {
+          border-radius: 10px;
+          width: 100%;
+        }
+
+        img {
+          position: absolute;
+          z-index: 1;
+        }
+
+        span {
+          height: 100%;
+        }
+
+        &:nth-child(1) { 
+          &,
+          img {
+            aspect-ratio: 16 / 12;
+          }
+        }
+
+        &:nth-child(2) {
+          &,
+          img {
+            aspect-ratio: 16 / 10;
+          }
+        }
+      }
+    }
+  }
 }

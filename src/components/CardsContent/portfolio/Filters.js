@@ -11,6 +11,7 @@ import FormGroup from '@mui/material/FormGroup'
 import FormControlLabel from '@mui/material/FormControlLabel'
 import Checkbox from '@mui/material/Checkbox'
 import ClickAwayListener from '@mui/material/ClickAwayListener'
+import Badge from '@mui/material/Badge'
 
 Filters.propTypes = {
   checked: PropTypes.object,
@@ -27,9 +28,11 @@ function Filters(props) {
     <ClickAwayListener onClickAway={() => filterMenuOpen && setFilterMenuOpen(false)}>
       <div>
         <div ref={filterDialogAnchorRef}>
-          <IconButton onClick={() => setFilterMenuOpen(!filterMenuOpen)}>
-            <MdFilterList />
-          </IconButton>
+          <Badge color='primary' badgeContent={Object.values(props.checked).filter(Boolean).length}>
+            <IconButton onClick={() => setFilterMenuOpen(!filterMenuOpen)}>
+              <MdFilterList />
+            </IconButton>
+          </Badge>
         </div>
         <Popper
           placement='bottom'

@@ -5,7 +5,6 @@ export default function routeReducer(state = window.location.pathname.substring(
     case 'route/set':
       var params = action.params ? '?' + action.params.toString() : ''
       history.push(`/${action.route}${params}`)
-      console.log(`/${action.route}${params}`)
       return action.route
     case 'route/pop':
       return action.route
