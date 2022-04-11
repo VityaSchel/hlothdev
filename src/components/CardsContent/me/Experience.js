@@ -34,7 +34,7 @@ export default function Experience(props) {
                 Object.entries(technologies)
                   .filter(([, technologyInfo]) => technologyInfo.category === categoryID)
                   .map(([technologyID, technologyInfo]) => (
-                    <MUICard variant='outlined' className={styles.technology} key={technologyID}>
+                    <MUICard variant='outlined' className={styles.technologyCard} key={technologyID}>
                       <CardContent sx={{ paddingBottom: 0 }}>
                         <Typography variant='h6' component='div' className={styles.name}>
                           <technologyInfo.logo /> {technologyInfo.name}

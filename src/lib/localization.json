@@ -209,7 +209,7 @@
       "portfolio": "Portfolio",
       "services": "Services",
       "donate": "Donates",
-      "about": "About this web-site"
+      "about": "About this website"
     },
     "SERVICES_CARDS": {
       "landing": {
@@ -358,7 +358,7 @@
         "Landing with cosmic design (fourth quarter of 2020) — Website with animations, parallax, shaders for gradients in JavaScript and OpenGL, contact form, linked with telegram bot, which is linked to SMTP-server for feedback. Unfortunately, it was closed after just a month because of difficulties with creating mobile version and lags, because I made it in vanilla JS just three months before I learned React."
       ],
       "VISITORS_THIS_MONTH": "Visitors this month",
-      "ZERO_VISITORS": "Wait, 0 visitors? What? How is this even possible if you are on the website? Is the server down?! Sorry for this...",
+      "ZERO_VISITORS": "Wait, 0 visitors? What? How is this even possible if you are on the website? Is the server down?! uh sorry for this...",
       "TOO_LOW_VISITORS": "Wait, only %v? C'mon I was working on this website for 6 months :(",
       "LINKS": {
         "INSTAGRAM_HIGHLIGHTS": "More screenshots in \"Highlights\"",

@@ -1,3 +1,13 @@
+.text {
+  margin: 0 10px;
+  width: 560px;
+  font-size: calc(15/16*1rem);
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+
 .me {
   display: flex;
   $gap: 15px;
@@ -30,12 +40,6 @@
         line-height: 1.9em;
       }
 
-      .text {
-        margin: 0 10px;
-        width: 560px;
-        font-size: calc(15/16*1rem);
-      }
-
       ul {
         li {
           margin: 20px 0;
@@ -56,49 +60,56 @@
       .profileCard {
         flex: 1;
       }
-
-      .avatar img {
-        background-color: #eee;
-      }
-
-      .contacts {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-
-        .link {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-        }
-      }
     }
+  }
 
-    .experience {
-      flex: 1;
-      
-      .categories {
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
+  .avatar img {
+    background-color: #eee;
+  }
 
-        .technologiesGrid {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 20px;
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 
-          .technology {
-            
-            .name {
-              display: flex;
-              align-items: center;
-              gap: 10px;
-            }
+    .link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
 
-            svg {
-              width: auto;
-              height: 20px;
-            }
+  .experience {
+    flex: 1;
+    
+    .categories {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+
+      .technologiesGrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+
+        @media screen and (max-width: 768px) {
+          grid-template-columns: repeat(1, 1fr);
+        }
+
+        .technologyCard {
+          @media screen and (max-width: 768px) {
+            max-width: 100%;
+          }
+          
+          .name {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+
+          svg {
+            width: auto;
+            height: 20px;
           }
         }
       }

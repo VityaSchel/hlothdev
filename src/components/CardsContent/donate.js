@@ -1,10 +1,6 @@
 import PropTypes from 'prop-types'
 import Card from './Card'
-import LanguageIcon from '@mui/icons-material/Language'
-import { MdOutlineSpaceDashboard } from 'react-icons/md'
-import { GiRobotAntennas, GiAbstract016 } from 'react-icons/gi'
 import styles from './styles.module.scss'
-import mailTo from 'mailto-link'
 import { connect } from 'react-redux'
 
 AboutSite.propTypes = {
@@ -15,11 +11,11 @@ function AboutSite(props) {
   const translation = props.translation.DONATE
 
   return (
-    <div className={styles.aboutSite}>
+    <div className={styles.donateContainer}>
       <Card
         title={translation.HEADING}
       >
-        <div className={styles.donate}>
+        <div className={styles.donateCard}>
           <p>{translation.TEXT}</p>
           <a href={translation.EXTERNAL_DONATE_SITE}>{translation.EXTERNAL_DONATE_SITE}</a>
         </div>

@@ -37,12 +37,12 @@ function CardsContent(props) {
     >
       <Grid container spacing={2} className={styles.title}>
         <Grid item>
-          <IconButton aria-label={props.translation.BACK} onClick={() => props.dispatch({ type: 'route/set', route: '' })}>
-            <MdArrowBack />
-          </IconButton>
-        </Grid>
-        <Grid item>
-          <Typography variant='h4' color={theme.palette.text.primary}>
+          <span className={styles.arrowButton}>
+            <IconButton aria-label={props.translation.BACK} onClick={() => props.dispatch({ type: 'route/set', route: '' })}>
+              <MdArrowBack />
+            </IconButton>
+          </span>
+          <Typography variant='h4' color={theme.palette.text.primary} className={styles.text}>
             {props.translation.PAGES_TITLES?.[props.route]?.toUpperCase()}
           </Typography>
         </Grid>

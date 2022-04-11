@@ -9,13 +9,24 @@
   flex-direction: column;
 
   @media screen and (max-width: 768px) {
-    padding: 15px;
+    padding: 30px;
   }
-
+  
   .title {
     width: 100%;
     margin-bottom: 30px;
     align-items: end;
+    
+    .arrowButton {
+      display: inline;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+
+    .text {
+      display: inline;
+      vertical-align: middle;
+    }
   }
 }
 
@@ -27,12 +38,28 @@
 
 .services {
   flex-direction: column;
+
+  .avatar {
+    margin-right: 5px;
+
+    svg {
+      vertical-align: sub;
+    }
+  }
 }
 
 .aboutSite {
   width: 100%;
   justify-content: center;
   align-items: flex-start;
+
+  & > div {
+    max-width: 100%;
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 
   .leftCol {
     width: 800px;
@@ -93,8 +120,16 @@
   }
 }
 
-.donate {
-  width: 600px;
-  line-height: 1.7em;
-  font-size: calc(15/16*1rem);
+.donateContainer {
+
+  & > div > div > div,
+  .donateCard {
+    max-width: 100%;
+  }
+
+  .donateCard {
+    width: 600px;
+    line-height: 1.7em;
+    font-size: calc(15/16*1rem);
+  }
 }

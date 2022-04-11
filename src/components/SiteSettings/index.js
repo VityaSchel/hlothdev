@@ -7,6 +7,8 @@ import { MdWbSunny, MdOutlineTranslate } from 'react-icons/md'
 import { IoMdMoon } from 'react-icons/io'
 import { useSpring, animated } from 'react-spring'
 import useResizeObserver from 'use-resize-observer'
+import useMediaQuery from '@mui/material/useMediaQuery'
+import ClickAwayListener from '@mui/material/ClickAwayListener'
 import cx from 'classnames'
 
 import ruRU from '../../assets/images/emojis/flags/ru-RU.png'
@@ -43,36 +45,41 @@ const SiteLanguage = connect(mapState)(function({ translation, ...props }) {
   const [listOpen, setListOpen] = React.useState(false)
   const { width, ref } = useResizeObserver()
   const { listWidth } = useSpring({ listWidth: listOpen ? width+10 : 0 })
+  const isMobile = useMediaQuery('(max-width: 768px)')
 
   const setLang = locale => () => {
     props.dispatch({ type: 'locale/update', locale })
     props.dispatch({ type: 'translation/set', language: locale })
+    isMobile && setListOpen(false)
   }
 
   return (
-    <div className={styles.languageChange}
-      onPointerOver={() => setListOpen(true)}
-      onPointerOut={() => setListOpen(false)}
-    >
-      <animated.div className={styles.languages} style={{ width: listWidth }}>
-        <div className={styles.languagesInner} ref={ref}>
-          <IconButton aria-label={translation.LANGUAGE_RUSSIAN}
-            onClick={setLang('ru-RU')}
-            className={cx([], { [styles.focused]: props.locale === 'ru-RU' })}
-          >
-            <img src={ruRU} />
-          </IconButton>
-          <IconButton aria-label={translation.LANGUAGE_ENGLISH}
-            onClick={setLang('en-US')}
-            className={cx([], { [styles.focused]: props.locale === 'en-US' })}
-          >
-            <img src={enUS} />
-          </IconButton>
-        </div>
-      </animated.div>
-      <IconButton aria-label={translation.CHANGE_LANGUAGE}>
-        <MdOutlineTranslate />
-      </IconButton>
-    </div>
+    <ClickAwayListener onClickAway={() => isMobile && setListOpen(false) }>
+      <div className={styles.languageChange}
+        onPointerOver={() => !isMobile && setListOpen(true)}
+        onPointerOut={() => !isMobile && setListOpen(false)}
+        onPointerUp={() => isMobile && setListOpen(!listOpen)}
+      >
+        <animated.div className={styles.languages} style={{ width: listWidth }}>
+          <div className={styles.languagesInner} ref={ref}>
+            <IconButton aria-label={translation.LANGUAGE_RUSSIAN}
+              onClick={setLang('ru-RU')}
+              className={cx([], { [styles.focused]: props.locale === 'ru-RU' })}
+            >
+              <img src={ruRU} />
+            </IconButton>
+            <IconButton aria-label={translation.LANGUAGE_ENGLISH}
+              onClick={setLang('en-US')}
+              className={cx([], { [styles.focused]: props.locale === 'en-US' })}
+            >
+              <img src={enUS} />
+            </IconButton>
+          </div>
+        </animated.div>
+        <IconButton aria-label={translation.CHANGE_LANGUAGE}>
+          <MdOutlineTranslate />
+        </IconButton>
+      </div>
+    </ClickAwayListener>
   )
 })
