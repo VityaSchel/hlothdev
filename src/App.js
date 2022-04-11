@@ -97,7 +97,7 @@ function App(props) {
 
   React.useEffect(() => {
     const newLocation = window.location.pathname.substring(1)
-    document.title = `Viktor Shchelochkov (@hloth) ${newLocation === '' ? '' : `— ${props.translation.PAGES_TITLES?.[newLocation]}`}`
+    document.title = `${props.translation.CARD_ME_FIRST_NAME} ${props.translation.CARD_ME_LAST_NAME} (@hloth) ${newLocation === '' ? '' : `— ${props.translation.PAGES_TITLES?.[newLocation]}`}`
   }, [props.translation, window.location.pathname])
 
   const raytracedCursor = Object.values(props.cursor).sort((a,b) => b.added - a.added)[0]?.cursor

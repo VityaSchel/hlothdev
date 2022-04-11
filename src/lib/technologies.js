@@ -55,7 +55,8 @@ export default {
     name: 'Next.js',
     logo: nextLogo,
     startedLearning: new Date(2021, 2, 1),
-    category: 'frontend'
+    category: 'frontend',
+    aliases: ['NextJS']
   },
   reactNative: {
     name: 'React Native',
@@ -281,7 +282,8 @@ export default {
     logo: vkAPILogo,
     startedLearning: new Date(2015, 10, 3),
     category: 'bot',
-    addFromCategory: 'bot/vk'
+    addFromCategory: 'bot/vk',
+    aliases: ['VK API']
   },
   yandexAliceAPI: {
     name: 'Яндекс.Диалоги API (Алиса)',

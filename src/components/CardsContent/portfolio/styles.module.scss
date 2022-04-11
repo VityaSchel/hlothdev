@@ -4,6 +4,10 @@
   gap: 10px;
   flex: 1;
 
+  @media screen and (max-width: 768px) {
+    padding-bottom: 100px;
+  }
+
   .logo {
     width: auto;
     aspect-ratio: 1/1;

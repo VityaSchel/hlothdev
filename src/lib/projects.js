@@ -51,7 +51,9 @@ export default [
     stack: [
       'Unity',
       'C#',
-      'Photon Engine'
+      'Photon Engine',
+      'MySQL',
+      'PostgreSQL',
     ],
     supported: 'partially',
     dates: {
@@ -97,7 +99,8 @@ export default [
     stack: [
       'NextJS',
       'React',
-      'less'
+      'less',
+      'TypeScript'
     ],
     supported: true,
     dates: {
@@ -120,7 +123,10 @@ export default [
     name: 'Гадзы Глада Валакаса (1.0)',
     stack: [
       'Vanilla JS',
-      'PHP'
+      'PHP',
+      'MySQL',
+      'Telegram Bot API',
+      'Express'
     ],
     supported: false,
     dates: {
@@ -916,7 +922,8 @@ export default [
       'React-three-fiber',
       'Redux',
       'React-redux',
-      'MUI'
+      'MUI',
+      'Fastify'
     ],
     supported: true,
     dates: {
@@ -949,6 +956,34 @@ export default [
     links: ['https://www.instagram.com/ar/617429272667716/'],
     category: 'instagram_mask',
     id: 'glad-valakas-nt200'
+  },
+  {
+    name: 'scratch2tggame_bot',
+    stack: [
+      'NodeJS',
+      'MongoDB',
+      'Telegram Bot API',
+      'Telegram Gaming Platform',
+      'Fastify',
+      'Scratch API',
+      'Turbowarp',
+      'Redis',
+      'bee-queue'
+    ],
+    supported: false,
+    dates: {
+      devStart: '2022-02-01',
+      release: '2022-02-06',
+      abandon: '2022-04-11'
+    },
+    scope: 2,
+    description: 'Бот, конвертирующий игры с сайта scratch.mit.edu в игры на Telegram Gaming Platform. Помимо встраивания нативного HTML плеера в телеграм, планировалась интеграция облака с ником, передаваемым от Telegram и адаптивное управление для телефонов.',
+    unpublic: false,
+    hidden: false,
+    tags: [],
+    links: ['https://github.com/VityaSchel/scratch2tggame_bot'],
+    category: 'bot/telegram',
+    id: 'scratch2tggame-bot'
   },
   {
     name: 'hiddenID_2',
@@ -1023,7 +1058,8 @@ export default [
     stack: [
       'Яндекс.Диалоги API',
       'PHP',
-      'DuckDuckGo API'
+      'DuckDuckGo API',
+      'MySQL'
     ],
     supported: 'partially',
     dates: {
@@ -1038,6 +1074,18 @@ export default [
     logo: igroruporLogo,
     category: 'bot/yandex_alice',
     id: 'бот-алисы-игрорупор'
+  },
+  {
+    name: 'bank-sms-codes-forwarder',
+    stack: ['NodeJS', 'Telegram Bot API', 'nginx'],
+    supported: false,
+    dates: { devStart: '2022-12-21', release: '2022-12-21' },
+    scope: 1,
+    description: 'Бот, перенаправляющий СМС от Альфа-банка в Телеграм. Ранее использовалось API Альфа-банка, но из-за сложностей было решено переключиться на СМС и FastCGI-сервер.',
+    unpublic: false,
+    hidden: false,
+    category: 'bot/telegram',
+    id: 'bank-sms-codes-forwarder'
   },
   {
     name: 'Уборщица',
@@ -1262,7 +1310,7 @@ export default [
   },
   {
     name: 'tinkoff-currency-converter',
-    stack: ['NodeJS'],
+    stack: ['NodeJS', 'nginx'],
     dates: { devStart: '2022-02-27', release: '2022-02-27' },
     scope: 1,
     description: 'Бот для получения текущего курса покупки евро в Тинькофф банке для моих заказчиков, работающий с Tinkoff REST API',
@@ -1427,7 +1475,8 @@ export default [
     stack: [
       'Vanilla JS',
       'Bootstrap',
-      'PHP'
+      'PHP',
+      'MySQL'
     ],
     supported: false,
     dates: {
@@ -1534,7 +1583,7 @@ export default [
     name: 'bridgedb-tgbot',
     stack: [
       'NodeJS',
-      'nginx',
+      'apache',
       'Telegram Bot API'
     ],
     supported: false,
@@ -1558,7 +1607,8 @@ export default [
     stack: [
       'Java',
       'Vanilla JS',
-      'PHP'
+      'PHP',
+      'MySQL'
     ],
     supported: false,
     dates: {

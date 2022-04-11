@@ -92,12 +92,12 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1360px) {
           grid-template-columns: repeat(1, 1fr);
         }
 
         .technologyCard {
-          @media screen and (max-width: 768px) {
+          @media screen and (max-width: 1360px) {
             max-width: 100%;
           }
           

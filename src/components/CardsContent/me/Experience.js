@@ -19,7 +19,7 @@ export default function Experience(props) {
   const openProjects = terms => () => {
     const termsUnique = Array.from(new Set(terms.map(s => s.toLowerCase())))
     const query = new URLSearchParams(window.location.search)
-    query.set('q', termsUnique.join(' '))
+    query.set('q', termsUnique.map(term => /[ "]/.test(term) ? '"' + term + '"' : term).join(' '))
     props.dispatch({ type: 'route/set', route: 'portfolio', params: query })
   }
 

@@ -45,7 +45,7 @@ const SiteLanguage = connect(mapState)(function({ translation, ...props }) {
   const [listOpen, setListOpen] = React.useState(false)
   const { width, ref } = useResizeObserver()
   const { listWidth } = useSpring({ listWidth: listOpen ? width+10 : 0 })
-  const isMobile = useMediaQuery('(max-width: 768px)')
+  const isMobile = useMediaQuery('(any-hover: none)')
 
   const setLang = locale => () => {
     props.dispatch({ type: 'locale/update', locale })

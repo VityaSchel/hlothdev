@@ -145,7 +145,7 @@ Me.propTypes = {
 
 function Me(props) {
   const translation = props.translation.ABOUT_ME
-  const isMobile = useMediaQuery('(max-width: 768px)')
+  const isMobile = useMediaQuery('(max-width: 1360px)')
 
   return (
     <div className={styles.me}>

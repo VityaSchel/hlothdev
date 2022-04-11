@@ -11,7 +11,8 @@ import { ReactComponent as appIcon } from 'assets/images/svgIcons/app_icon.svg'
 import { ReactComponent as alertDecagram } from 'assets/images/svgIcons/mdi_alert_decagram.svg'
 import { ReactComponent as eyeOff } from 'assets/images/svgIcons/mdi_eye_off.svg'
 
-export default function generateColumns({ locale, translation, setSearchTerms, showShockingProjects }) {
+export default function generateColumns({ 
+  locale, translation, setSearchTerms, showShockingProjects, ignoreContentWidthLimit = false }) {
   const dateRegex = /^\d+[ -]\w+[ -]\d+$/
   const dateColWidth = 150
 
@@ -24,6 +25,8 @@ export default function generateColumns({ locale, translation, setSearchTerms, s
     ? Intl.DateTimeFormat(locale, { day: '2-digit', month: 'long', year: 'numeric' })
       .format(value instanceof Date ? value : new Date(value))
     : value
+
+  const mobileContentWidthMult = 20
 
   return [
     {
@@ -57,7 +60,7 @@ export default function generateColumns({ locale, translation, setSearchTerms, s
     {
       field: 'name',
       headerName: translation.COLUMNS.NAME,
-      flex: 10,
+      ...(!ignoreContentWidthLimit ? { flex: 10 } : { width: 10 * mobileContentWidthMult }),
       renderCell: ({ row: { name, category, hidden, unpublic } }) => {
         const shockingProject = unpublic && !showShockingProjects
         if(hidden) name = translation.HIDDEN_PROJECT.NAME
@@ -81,7 +84,7 @@ export default function generateColumns({ locale, translation, setSearchTerms, s
     {
       field: 'description',
       headerName: translation.COLUMNS.DESCRIPTION,
-      flex: 18,
+      ...(!ignoreContentWidthLimit ? { flex: 18 } : { width: 18 * mobileContentWidthMult }),
       sortable: false,
       disableColumnMenu: true,
       renderCell: ({ row: { description, hidden, unpublic } }) => {
@@ -98,7 +101,7 @@ export default function generateColumns({ locale, translation, setSearchTerms, s
     {
       field: 'stack',
       headerName: translation.COLUMNS.TECHNOLOGIES,
-      flex: 7,
+      ...(!ignoreContentWidthLimit ? { flex: 7 } : { width: 7 * mobileContentWidthMult }),
       sortable: false,
       disableColumnMenu: true,
       renderCell: ({ row: { stack } }) => <span className={[styles.multilineCell, styles.stack].join(' ')}>

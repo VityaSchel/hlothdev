@@ -8,6 +8,7 @@ import { dotFlatten } from 'utils.js'
 import generateColumns from './generateColumns'
 import Search from './Search'
 import ProjectInfoDialog from './ProjectInfoDialog'
+import useMediaQuery from '@mui/material/useMediaQuery'
 
 Portfolio.propTypes = {
   translation: PropTypes.object,
@@ -21,6 +22,7 @@ function Portfolio(props) {
   const [loading, setLoading] = React.useState(false)
   const [, forceUpdateOnHistoryPush] = React.useState(false)
   const [searchFilterFunc, setSearchFilterFunc] = React.useState(() => () => true)
+  const isMobile = useMediaQuery('(max-width: 768px)')
   const translation = props.translation.PORTFOLIO
   const dataGridRef = React.useRef()
   const searchRef = React.useRef()
@@ -35,7 +37,8 @@ function Portfolio(props) {
       searchRef.current.setTerms(terms)
       setSearchTerms(terms)
     },
-    showShockingProjects: props.portfolio.showShockingProjects
+    showShockingProjects: props.portfolio.showShockingProjects,
+    ignoreContentWidthLimit: isMobile
   })
 
   const projects = projectsList
