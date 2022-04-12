@@ -1569,7 +1569,7 @@ export default [
       release: '2020'
     },
     scope: 2,
-    description: 'Сайт мем про \"Хочешь стать программистом?\"',
+    description: 'Сайт мем про "Хочешь стать программистом?"',
     unpublic: true,
     hidden: false,
     logo: wantToBeAProgrammerLogo,

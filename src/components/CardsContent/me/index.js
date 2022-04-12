@@ -19,29 +19,29 @@ Contacts.propTypes = {
   translation: PropTypes.object
 }
 
-function AboutCard({ translation }) {
+function AboutCard({ translation, isMobile }) {
   return (
     <Card className={styles.about}>
       <div className={styles.text}>
         <h2 dangerouslySetInnerHTML={{ __html: translation.HEADING }} />
         <div className={styles.imgBlock}>
-          <img src='/static/site-decorations/vk-dog.webp' alt={translation.INTRO_IMAGE} align='right' width={130} />
+          <img src='/static/site-decorations/vk-dog.webp' alt={translation.INTRO_IMAGE} align='right' width={isMobile ? 80 : 130} />
           <p dangerouslySetInnerHTML={{ __html: translation.INTRO }} />
         </div>
         <p dangerouslySetInnerHTML={{ __html: translation.BACKEND }} />
         <div className={styles.imgBlock}>
-          <video src="/static/site-decorations/kolobanga.webm" align='left' autoPlay width={150} muted loop alt={translation.MY_PROJECTS_IMAGE} />
+          <video src="/static/site-decorations/kolobanga.webm" align='left' autoPlay width={isMobile ? 50 : 150} muted loop alt={translation.MY_PROJECTS_IMAGE} />
           <p dangerouslySetInnerHTML={{ __html: translation.MY_PROJECTS }} />
         </div>
         <p dangerouslySetInnerHTML={{ __html: translation.BOTS }} />
         <div className={styles.imgBlock}>
-          <img src='/static/site-decorations/shrek.webp' alt={translation.PARSING_IMAGE} align='right' width={130} />
+          <img src='/static/site-decorations/shrek.webp' alt={translation.PARSING_IMAGE} align='right' width={isMobile ? 70 : 130} />
           <p dangerouslySetInnerHTML={{ __html: translation.PARSING }} />
         </div>
         <h2 dangerouslySetInnerHTML={{ __html: translation.WORK_EXPERIENCE_LABEL }} />
         <p dangerouslySetInnerHTML={{ __html: translation.WORK_EXPERIENCE_BLOCK }} />
         <div className={styles.imgBlock}>
-          <img src='/static/site-decorations/qwq.webp' alt={translation.ENDING_IMAGE} align='left' width={140} />
+          <img src='/static/site-decorations/qwq.webp' alt={translation.ENDING_IMAGE} align='left' width={isMobile ? 80 : 140} />
           <p dangerouslySetInnerHTML={{ __html: translation.ENDING }} />
         </div>
       </div>
@@ -153,7 +153,7 @@ function Me(props) {
         !isMobile
           ? (<>
             <div className={styles.info}>
-              <AboutCard translation={translation} />
+              <AboutCard translation={translation} isMobile={isMobile} />
               <WhatIsHloth translation={translation} />
               <AboutMeAsPerson translation={translation} />
             </div>
@@ -168,7 +168,7 @@ function Me(props) {
           : (<div className={styles.info}>
             <MiniProfile translation={props.translation} />
             <Contacts translation={translation} />
-            <AboutCard translation={translation} />
+            <AboutCard translation={translation} isMobile={isMobile} />
             <Experience translation={props.translation} dispatch={props.dispatch} />
             <WhatIsHloth translation={translation} />
             <AboutMeAsPerson translation={translation} />
