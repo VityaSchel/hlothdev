@@ -2,7 +2,7 @@
 
 My personal website, containing information about me, my portfolio, resume, funny things and other stuff y kno
 
-![Screenshots of website](https://user-images.githubusercontent.com/59040542/162999972-d5445b69-f5f3-47b2-b19f-40989a869f07.png)
+![Screenshots of website](https://user-images.githubusercontent.com/59040542/163002146-159d5f4e-aa81-4463-921a-6c7ffe5614fd.png)
 
 ## What it is built on
 
