@@ -35,6 +35,7 @@ function AboutSite(props) {
           <ul>
             {translation.PREVIOUS_SITES.map((siteInfo, i) => <li key={i}>{siteInfo}</li>)}
           </ul>
+          <p>{translation.TEXT2}</p>
           {visitorsCounter !== null && <Typography variant='caption' className={styles.counter}>
             <span>{translation.VISITORS_THIS_MONTH}: {visitorsCounter}.</span> {
               visitorsCounter === 0 

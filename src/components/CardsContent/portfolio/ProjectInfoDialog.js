@@ -75,7 +75,7 @@ export default function ProjectInfoDialog(props) {
           }
         </DialogContentText>
         {
-          actualProject && 
+          actualProject && props.translation.PROJECT_DIALOG.TRANSLATE_DESCRIPTION_CODE &&
           <span className={styles.translateButton}>
             <a 
               href={`https://translate.google.com/?sl=ru&tl=${props.translation.PROJECT_DIALOG.TRANSLATE_DESCRIPTION_CODE}&text=${encodeURIComponent(openedProject.description)}&op=translate`} 

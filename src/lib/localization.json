@@ -172,6 +172,7 @@
         "Галерея проектов (вторая четверть 2020) — Сразу после того, как я выучил теорию по JS, я переделал свой сайт, он уже выглядел более современно, имел приятную палитру цветов, информацию обо мне и мое портфолио (только самые главные проекты), а также имел адекватную мобильную версию",
         "Лендинг с космическим дизайном (четвертая четверть 2020) — Сайт с анимациями, параллаксом, шейдером для градиентов в JavaScript и OpenGL, формой для связи, связанной с телеграм-ботом, который связан с SMTP-сервером для обратной связи. К сожалению, был закрыт через месяц из-за сложностей с созданием мобильной версии и лагами, потому что сайт был сделан на ванильном js, всего за пару месяцев до того, как я выучил React"
       ],
+      "TEXT2": "Пока вы здесь, почему бы вам не взглянуть на файл robots.txt? Предупреждение: Я настоятельно рекомендую скачать его и открыть в мощном редакторе, вместо того, чтобы пытаться открыть его в браузере.",
       "VISITORS_THIS_MONTH": "Посетителей за этот месяц",
       "ZERO_VISITORS": "Стоп, 0 посетителей? что? а как такое вообще возможно если вы сейчас это читаете? Сервер упал?! Прошу прощения за этот инцидент...",
       "TOO_LOW_VISITORS": "Стоп, всего %v? о боже я же работал над этим сайтом 6 месяцев :(",
@@ -357,6 +358,7 @@
         "Projects gallery (second quarter of 2020) — Right after I learned JS theory, I remade my website, now it looked much more better and stylish, had nice color palette, information about me and my portfolio (only popular projects), and the most important thing is that it had adequate mobile version",
         "Landing with cosmic design (fourth quarter of 2020) — Website with animations, parallax, shaders for gradients in JavaScript and OpenGL, contact form, linked with telegram bot, which is linked to SMTP-server for feedback. Unfortunately, it was closed after just a month because of difficulties with creating mobile version and lags, because I made it in vanilla JS just three months before I learned React."
       ],
+      "TEXT2": "While you still here, why don't you take a look at robots.txt file? Warning: I highly recommend you downloading it and opening in powerful editor instead of opening it in browser.",
       "VISITORS_THIS_MONTH": "Visitors this month",
       "ZERO_VISITORS": "Wait, 0 visitors? What? How is this even possible if you are on the website? Is the server down?! uh sorry for this...",
       "TOO_LOW_VISITORS": "Wait, only %v? C'mon I was working on this website for 6 months :(",
