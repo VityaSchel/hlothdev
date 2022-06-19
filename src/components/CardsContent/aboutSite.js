@@ -40,7 +40,10 @@ function AboutSite(props) {
             <span>{translation.VISITORS_THIS_MONTH}: {visitorsCounter}.</span> {
               visitorsCounter === 0 
                 ? <span>{translation.ZERO_VISITORS}</span>
-                : Boolean(visitorsCounter <= 5) && <span>{translation.TOO_LOW_VISITORS.replace('%v', visitorsCounter)}</span>
+                : Number.isNaN(visitorsCounter)
+                  ? <span>{translation.NAN_VISITORS}</span>
+                  : Boolean(visitorsCounter <= 5) && 
+                    <span>{translation.TOO_LOW_VISITORS.replace('%v', visitorsCounter)}</span>
             }
           </Typography>}
         </div>
