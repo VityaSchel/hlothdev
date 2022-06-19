@@ -121,6 +121,11 @@
 }
 
 .donateContainer {
+  align-self: center;
+
+  @media screen and (max-width: 768px) {
+    align-self: stretch;
+  }
 
   & > div > div > div,
   .donateCard {

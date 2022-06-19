@@ -423,7 +423,8 @@ export default [
       'React-admin',
       'Redis',
       'MUI',
-      'React-native-paper'
+      'React-native-paper',
+      'Redux-toolkit'
     ],
     supported: true,
     dates: {
@@ -1638,14 +1639,15 @@ export default [
     stack: [
       'Vanilla JS',
       'PHP',
-      'Python'
+      'Python',
+      'Clarifai API'
     ],
     dates: {
       devStart: '2020',
       abandon: '2020'
     },
     scope: 2,
-    description: 'ИИ которое угадывает ПО ФОТО из игры witness как решить головоломку',
+    description: 'Нейросеть, которая угадывает ПО ФОТО из игры witness как решить головоломку, используя сервис Clarifai',
     unpublic: false,
     hidden: false,
     category: 'website',
