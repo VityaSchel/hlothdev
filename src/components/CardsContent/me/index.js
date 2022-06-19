@@ -154,8 +154,8 @@ function Me(props) {
           ? (<>
             <div className={styles.info}>
               <AboutCard translation={translation} isMobile={isMobile} />
-              <WhatIsHloth translation={translation} />
               <AboutMeAsPerson translation={translation} />
+              <WhatIsHloth translation={translation} />
             </div>
             <div className={styles.rightCol}>
               <div className={styles.topRow}>
@@ -170,8 +170,8 @@ function Me(props) {
             <Contacts translation={translation} />
             <AboutCard translation={translation} isMobile={isMobile} />
             <Experience translation={props.translation} dispatch={props.dispatch} />
-            <WhatIsHloth translation={translation} />
             <AboutMeAsPerson translation={translation} />
+            <WhatIsHloth translation={translation} />
           </div>)
       }
     </div>
