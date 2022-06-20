@@ -57,12 +57,12 @@ export default [
     ],
     supported: 'partially',
     dates: {
-      devStart: '2018',
+      devStart: '20 October 2018',
       release: '27 June 2019',
       abandon: '2020'
     },
     scope: 5,
-    description: 'Игра где 6 людей сражаются в мини играх за большее кол-во очков',
+    description: 'Многопользовательская видео-игра, где до 6 игроков сражаются в мини-играх за большее кол-во очков',
     unpublic: false,
     hidden: false,
     logo: stigfinnareLogo,
@@ -84,7 +84,7 @@ export default [
       release: '27 September 2018'
     },
     scope: 3,
-    description: 'Игра про шарик (аркада) в которой ты летишь до солнца минуя препятствия',
+    description: 'Мобильная аркада, в которой игрок, минуя препятствия и пролетая разные локации, стремится к солнцу',
     unpublic: false,
     hidden: false,
     logo: rollerRideLogo,
@@ -93,6 +93,161 @@ export default [
     ],
     category: 'game/android',
     id: 'roller-ride'
+  },
+  {
+    name: 'AtmosCraft',
+    stack: [
+      'React',
+      'Figma',
+      'Sketch',
+      'Fastify',
+      'LevelDB'
+    ],
+    supported: false,
+    dates: {
+      devStart: '27 September 2021',
+      release: '6 October 2021',
+      abandon: '30 December 2021'
+    },
+    scope: 3,
+    description: 'Лендинг для майнкрафт сервера и веб-сервер с API (rcon+status)',
+    unpublic: false,
+    hidden: false,
+    tags: [
+      'order'
+    ],
+    logo: atmosCraftLogo,
+    links: [
+      'https://web.archive.org/web/20211130051931/https://atmosgroup.org/',
+      'https://www.figma.com/file/FFnAfrV8W7SeigyuwkZrFP/AtmosCraft',
+      'https://freelance.habr.com/projects/249937'
+    ],
+    category: 'website',
+    id: 'atmoscraft'
+  },
+  {
+    name: 'JSwitcher',
+    stack: [
+      'React',
+      'TypeScript',
+      'Figma Plugin API',
+      'Figma REST API'
+    ],
+    supported: false,
+    dates: {
+      devStart: '25 November 2021',
+      release: '3 December 2021',
+      abandon: '3 December 2021'
+    },
+    scope: 3,
+    description: 'Плагин который помогает менять макеты Android на iOS и наоборот',
+    unpublic: false,
+    hidden: false,
+    tags: [
+      'order'
+    ],
+    links: [
+      'https://freelance.habr.com/projects/259285'
+    ],
+    category: 'figma_plugin',
+    id: 'jswitcher'
+  },
+  {
+    name: 'SIPacker',
+    stack: [
+      'React',
+      'React-router',
+      'MUI'
+    ],
+    supported: 'partially',
+    dates: {
+      devStart: '19 September 2021',
+      release: '31 October 2021'
+    },
+    scope: 3,
+    description: 'Онлайн-редактор паков для игры SiGame (Своя Игра)',
+    unpublic: false,
+    hidden: false,
+    logo: sipackerLogo,
+    links: [
+      'https://github.com/VityaSchel/SIPacker'
+    ],
+    category: 'website',
+    id: 'sipacker'
+  },
+  {
+    name: 'AtmosSeriesBot',
+    stack: [
+      'NodeJS',
+      'MongoDB',
+      'Telegram Bot API'
+    ],
+    supported: false,
+    dates: {
+      devStart: '31 July 2021',
+      release: '2 August 2021',
+      abandon: '2 August 2021'
+    },
+    scope: 2,
+    description: 'Панель управления ботом с добавлением админов, рефералов, проверка на подписку, рассылкой рекламы по пользователям и встроенной статистикой',
+    unpublic: false,
+    hidden: false,
+    tags: [
+      'order'
+    ],
+    logo: atmosSeriesBotLogo,
+    links: [
+      'https://freelance.habr.com/projects/244063'
+    ],
+    category: 'bot/telegram',
+    id: 'atmosseriesbot'
+  },
+  {
+    name: 'Симулятор Маши из GoStudy',
+    stack: [
+      'Unity',
+      'C#'
+    ],
+    supported: false,
+    dates: {
+      devStart: '20 July 2021',
+      release: '23 July 2021',
+      abandon: '24 July 2021'
+    },
+    scope: 2,
+    description: 'Мобильная игра про Машу из GoStudy, которая шуршит микрофоном и мешает стриму',
+    unpublic: false,
+    hidden: false,
+    logo: mashaSimulatorLogo,
+    links: [
+      'https://play.google.com/store/apps/details?id=com.VityaSchel.GoStudyMashaSimulator'
+    ],
+    category: 'game/android',
+    id: 'симулятор-маши-из-gostudy'
+  },
+  {
+    name: 'bot.biz (landing)',
+    stack: [
+      'NextJS',
+      'TypeScript',
+      'React-redux',
+      'next-i18next',
+      'react-reveal',
+      'GraphQL'
+    ],
+    supported: 'partially',
+    dates: { devStart: '2022-05-11', release: '2022-05-28' },
+    scope: 3,
+    description: 'Лендинг с анимациями по готовому макету для сервиса, занимающегося коммерческой деятельностью в сфере ботов, сайтов и приложений. Адаптирован под мобильные устройства, браузер Safari, есть кастомный компонент карусели с нативным скроллингом, переключение темы с переходом и локализация на два языка (пока реализован только один).',
+    unpublic: false,
+    hidden: false,
+    tags: ['order'],
+    links: [
+      'https://www.figma.com/file/T4fTAPKZXo5nKUiiPE00DU/Local-bot.biz?node-id=0%3A1',
+      'https://youtu.be/zdMy_A5Y2Kk'
+    ],
+    category: 'website',
+    id: 'bot-biz-landing'
   },
   {
     name: 'АБОБА 2024 Кандидат в президенты',
@@ -167,29 +322,6 @@ export default [
     id: 'гадзы-глада-валакаса-2-0-'
   },
   {
-    name: 'SIPacker',
-    stack: [
-      'React',
-      'React-router',
-      'MUI'
-    ],
-    supported: 'partially',
-    dates: {
-      devStart: '19 September 2021',
-      release: '31 October 2021'
-    },
-    scope: 3,
-    description: 'Онлайн-редактор паков для игры SiGame (Своя Игра)',
-    unpublic: false,
-    hidden: false,
-    logo: sipackerLogo,
-    links: [
-      'https://github.com/VityaSchel/SIPacker'
-    ],
-    category: 'website',
-    id: 'sipacker'
-  },
-  {
     name: 'r/Jolygolf',
     stack: [
       'Python',
@@ -235,64 +367,6 @@ export default [
     ],
     category: 'website',
     id: 'шизоньян'
-  },
-  {
-    name: 'AtmosCraft',
-    stack: [
-      'React',
-      'Figma',
-      'Sketch',
-      'Fastify',
-      'LevelDB'
-    ],
-    supported: false,
-    dates: {
-      devStart: '27 September 2021',
-      release: '6 October 2021',
-      abandon: '30 December 2021'
-    },
-    scope: 3,
-    description: 'Лендинг для майнкрафт сервера и веб-сервер с API (rcon+status)',
-    unpublic: false,
-    hidden: false,
-    tags: [
-      'order'
-    ],
-    logo: atmosCraftLogo,
-    links: [
-      'https://web.archive.org/web/20211130051931/https://atmosgroup.org/',
-      'https://www.figma.com/file/FFnAfrV8W7SeigyuwkZrFP/AtmosCraft',
-      'https://freelance.habr.com/projects/249937'
-    ],
-    category: 'website',
-    id: 'atmoscraft'
-  },
-  {
-    name: 'JSwitcher',
-    stack: [
-      'React',
-      'TypeScript',
-      'Figma Plugin API',
-      'Figma REST API'
-    ],
-    supported: false,
-    dates: {
-      devStart: '25 November 2021',
-      release: '3 December 2021',
-      abandon: '3 December 2021'
-    },
-    scope: 3,
-    description: 'Плагин который помогает менять макеты Android на iOS и наоборот',
-    unpublic: false,
-    hidden: false,
-    tags: [
-      'order'
-    ],
-    links: [
-      'https://freelance.habr.com/projects/259285'
-    ],
-    category: 'figma_plugin',
-    id: 'jswitcher'
   },
   {
     name: 'SAMARACOIN',
@@ -363,56 +437,6 @@ export default [
     ],
     category: 'app',
     id: 'reuploader'
-  },
-  {
-    name: 'AtmosSeriesBot',
-    stack: [
-      'NodeJS',
-      'MongoDB',
-      'Telegram Bot API'
-    ],
-    supported: false,
-    dates: {
-      devStart: '31 July 2021',
-      release: '2 August 2021',
-      abandon: '2 August 2021'
-    },
-    scope: 2,
-    description: 'Панель управления ботом с добавлением админов, рефералов, проверка на подписку, рассылкой рекламы по пользователям и встроенной статистикой',
-    unpublic: false,
-    hidden: false,
-    tags: [
-      'order'
-    ],
-    logo: atmosSeriesBotLogo,
-    links: [
-      'https://freelance.habr.com/projects/244063'
-    ],
-    category: 'bot/telegram',
-    id: 'atmosseriesbot'
-  },
-  {
-    name: 'Симулятор Маши из GoStudy',
-    stack: [
-      'Unity',
-      'C#'
-    ],
-    supported: false,
-    dates: {
-      devStart: '20 July 2021',
-      release: '23 July 2021',
-      abandon: '24 July 2021'
-    },
-    scope: 2,
-    description: 'Мобильная игра про Машу из GoStudy, которая шуршит микрофоном и мешает стриму',
-    unpublic: false,
-    hidden: false,
-    logo: mashaSimulatorLogo,
-    links: [
-      'https://play.google.com/store/apps/details?id=com.VityaSchel.GoStudyMashaSimulator'
-    ],
-    category: 'game/android',
-    id: 'симулятор-маши-из-gostudy'
   },
   {
     name: 'Ремафия',
@@ -740,6 +764,20 @@ export default [
     id: 'private-repo-cloner'
   },
   {
+    name: 'ads-parser-bot',
+    stack: ['TypeScript', 'NodeJS', 'VK-IO'],
+    supported: 'partially',
+    dates: { devStart: '2022-05-10', release: '2022-05-11' },
+    scope: 2,
+    description: 'Бот, выполняющий парсинг рекламных записей по заданному фильтру из отправленных групп ВКонтакте и управляется через сообщения, специально созданной для него группы.',
+    unpublic: false,
+    hidden: false,
+    tags: ['order'],
+    links: ['https://freelance.habr.com/tasks/433865'],
+    category: 'bot/vk',
+    id: 'ads-parser-bot'
+  },
+  {
     name: 'McDonaldsOffersBot',
     stack: [
       'NodeJS',
@@ -993,8 +1031,7 @@ export default [
       'MongoDB',
       'Mapbox',
       'ThreeJS',
-      'React-three-fiber',
-      'scss'
+      'React-three-fiber'
     ],
     supported: true,
     dates: {

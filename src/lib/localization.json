@@ -160,6 +160,9 @@
         "CLOSE_LABEL": "Закрыть",
         "LINK_COPIED": "Ссылка скопирована",
         "SHOW_SHOCKING_PROJECTS": "Показать"
+      },
+      "TAGS": {
+        "ORDER": "Заказ"
       }
     },
     "ABOUT_THIS_WEBSITE": {
@@ -347,6 +350,9 @@
         "SHOW_SHOCKING_PROJECTS": "Show",
         "TRANSLATE_DESCRIPTION_LABEL": "Translate to English",
         "TRANSLATE_DESCRIPTION_CODE": "en"
+      },
+      "TAGS": {
+        "ORDER": "Заказ"
       }
     },
     "ABOUT_THIS_WEBSITE": {

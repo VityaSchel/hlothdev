@@ -50,6 +50,22 @@
         outline: none;
       }
 
+      .nameCell {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+
+        .info {
+          display: flex;
+          flex-direction: column;
+          line-height: 1.6;
+
+          .projectCategory {
+            color: #dedede;
+          }
+        }
+      }
+
       .multilineCell {
         white-space: normal;
         line-height: 2;

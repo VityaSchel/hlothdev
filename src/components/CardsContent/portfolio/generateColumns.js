@@ -61,23 +61,26 @@ export default function generateColumns({
       field: 'name',
       headerName: translation.COLUMNS.NAME,
       ...(!ignoreContentWidthLimit ? { flex: 10 } : { width: 10 * mobileContentWidthMult }),
-      renderCell: ({ row: { name, category, hidden, unpublic } }) => {
+      renderCell: ({ row: { name, category, hidden, unpublic, tags } }) => {
         const shockingProject = unpublic && !showShockingProjects
         if(hidden) name = translation.HIDDEN_PROJECT.NAME
         else if(shockingProject) name = translation.SHOCK_PROJECT.NAME
 
         const translatedCategory = translation.CATEGORIES[category]
 
-        return <span className={styles.multilineCell}>
-          <span className={(hidden || shockingProject) ? styles.projectInfoPlaceholder : styles.projectName}>{name}</span>
-          {category && <>
-            <span>&#32;&#32;</span>
-            <Chip label={translatedCategory} size='small' onClick={search(translatedCategory)} />
-          </>}
-          {unpublic && showShockingProjects && <>
-            <span>&#32;&#32;</span>
+        return <span className={cx(styles.multilineCell, styles.nameCell)}>
+          <div className={styles.info}>
+            <span className={(hidden || shockingProject) ? styles.projectInfoPlaceholder : styles.projectName}>{name}</span>
+            {category && (
+              <span className={styles.projectCategory} onClick={search(translatedCategory)}>{translatedCategory}</span>
+            )}
+          </div>
+          {tags?.includes('order') && (
+            <Chip label={translation.TAGS.ORDER} size='small' />
+          )}
+          {unpublic && showShockingProjects && (
             <Chip label={translation.HIDDEN_PROJECT.NAME} size='small' />
-          </>}
+          )}
         </span>
       }
     },
