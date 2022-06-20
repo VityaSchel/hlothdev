@@ -1,6 +1,9 @@
 import React from 'react'
 import store from './store'
 import hexRgb from 'hex-rgb'
+import replace from 'react-string-replace'
+import { formatDistanceToNowStrict } from 'date-fns'
+import { ru as dateFns_ru, enUS as dateFns_enUS } from 'date-fns/locale'
 
 const easeOutCubic = progress => 1 - Math.pow(1 - progress, 3)
 
@@ -141,4 +144,20 @@ export const dotFlatten = (object, propObjectName) => {
   delete newObject[propObjectName]
   Object.assign(newObject, newPropObject)
   return newObject
+}
+
+export const getDateFnsLocale = () => {
+  return store.getState().locale === 'ru-RU' ? dateFns_ru : dateFns_enUS
+}
+
+export function dates(text: string): string {
+  return text.replaceAll(/%date_fns_(\d+)%/g, (match) => {
+    // const [,date] = match.match(/%date_fns_(\d+)%/)
+    return formatDistanceToNowStrict(
+      new Date(
+        Number(match[1]) * 1000
+      ), 
+      { locale: getDateFnsLocale() }
+    )
+  })
 }
