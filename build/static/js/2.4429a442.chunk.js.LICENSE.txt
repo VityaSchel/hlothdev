@@ -44,7 +44,7 @@ PERFORMANCE OF THIS SOFTWARE.
  * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
  */
 
-/** @license MUI v5.3.0
+/** @license MUI v5.8.0
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.

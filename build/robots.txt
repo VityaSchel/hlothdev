@@ -1,6 +1,13 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Disallow: /gifts-download/
+
+# Fun thing: Gmail rejects all emails with attached archives
+# containing .js files + a lot of other types + all emails
+# with encrypted/compressed/password-protected archives.
+# This is so stupid that only Google could think of it. There
+# was just two ways to avoid it: upload zip file somewhere and
+# attach it as path or via link in email body, or rename files.
 
 # [Интро: МС Пена]
 # Е***ь, такая песня как на похоронах
