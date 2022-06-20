@@ -1,47 +1,49 @@
-import stigfinnareLogo from '../assets/images/projectsLogos/stigfinnare.png'
-import rollerRideLogo from '../assets/images/projectsLogos/roller-ride.png'
 import abobaLogo from '../assets/images/projectsLogos/aboba.png'
-import gadzasOldLogo from '../assets/images/projectsLogos/gadzas-old.png'
-import gadzasNewLogo from '../assets/images/projectsLogos/gadzas.png'
-import sipackerLogo from '../assets/images/projectsLogos/sipacker.png'
-import rJolygolfLogo from '../assets/images/projectsLogos/rJolygolf.png'
-import shizonyanLogo from '../assets/images/projectsLogos/shizonyan.png'
-import atmosCraftLogo from '../assets/images/projectsLogos/atmoscraft.png'
-import samaracoinLogo from '../assets/images/projectsLogos/samaracoin.png'
-import atmosSeriesBotLogo from '../assets/images/projectsLogos/atmosseriesbot.png'
-import mashaSimulatorLogo from '../assets/images/projectsLogos/masha-simulator.png'
-import remafiaLogo from '../assets/images/projectsLogos/remafia.png'
-import lisNceLogo from '../assets/images/projectsLogos/lis-nce.png'
-import ogeGeneratorLogo from '../assets/images/projectsLogos/oge-generator.png'
-import fitVsFelLogo from '../assets/images/projectsLogos/fit-vs-fel.png'
-import czechLivingCostsLogo from '../assets/images/projectsLogos/czech-living-costs.png'
-import homirrorLogo from '../assets/images/projectsLogos/homirror.png'
-import niolySchoolLogo from '../assets/images/projectsLogos/niolyschool.png'
-import educoLogo from '../assets/images/projectsLogos/educo.png'
-import bitProtectLogo from '../assets/images/projectsLogos/bitprotect.png'
-import foodStuffLogo from '../assets/images/projectsLogos/foodstuff.png'
-import goodmorningBotLogo from '../assets/images/projectsLogos/goodmorning-bot.png'
-import mcDonaldsOffersLogo from '../assets/images/projectsLogos/mcdonaldsoffersbot.png'
-import rusWordConBotLogo from '../assets/images/projectsLogos/ruswordconbot.png'
-import vityaschelSiteLogo from '../assets/images/projectsLogos/vityaschel.png'
-import igroruporLogo from '../assets/images/projectsLogos/igrorupor.png'
-import cleanerLogo from '../assets/images/projectsLogos/cleaner.png'
-import noSquidGameLogo from '../assets/images/projectsLogos/no-squid-game.png'
-import gettrDarkThemeLogo from '../assets/images/projectsLogos/gettr-dark-theme.png'
-import probablyKrolLogo from '../assets/images/projectsLogos/probablykrol-bot.png'
-import skysmartHelperLogo from '../assets/images/projectsLogos/skysmart-helper.png'
-import mypronLogo from '../assets/images/projectsLogos/mypron.png'
-import panicButtonLogo from '../assets/images/projectsLogos/panic-button.png'
 import asursoCustomNamesLogo from '../assets/images/projectsLogos/asurso-custom-names.png'
-import uselessCanvasBasedTextEditorLogo from '../assets/images/projectsLogos/useless-canvas-based-text-editor.png'
-import wikipediaSpeedrunLogo from '../assets/images/projectsLogos/wikipedia-speedrun.png'
-import py3ExecLogo from '../assets/images/projectsLogos/py3exec.png'
-import roflCallsOrderWebsiteLogo from '../assets/images/projectsLogos/rofl-calls-order-website.png'
-import wantToBeAProgrammerLogo from '../assets/images/projectsLogos/want-to-be-a-programmer.png'
+import atmosCraftLogo from '../assets/images/projectsLogos/atmoscraft.png'
+import atmosSeriesBotLogo from '../assets/images/projectsLogos/atmosseriesbot.png'
+import bitProtectLogo from '../assets/images/projectsLogos/bitprotect.png'
+import botBizLandingLogo from '../assets/images/projectsLogos/bot-biz-landing.png'
+import cleanerLogo from '../assets/images/projectsLogos/cleaner.png'
+import czechLivingCostsLogo from '../assets/images/projectsLogos/czech-living-costs.png'
+import educoLogo from '../assets/images/projectsLogos/educo.png'
+import figmaAntiLGBTLogo from '../assets/images/projectsLogos/figma-anti-lgbt.png'
+import fitVsFelLogo from '../assets/images/projectsLogos/fit-vs-fel.png'
+import foodStuffLogo from '../assets/images/projectsLogos/foodstuff.png'
+import gadzasNewLogo from '../assets/images/projectsLogos/gadzas.png'
+import gadzasOldLogo from '../assets/images/projectsLogos/gadzas-old.png'
+import gettrDarkThemeLogo from '../assets/images/projectsLogos/gettr-dark-theme.png'
 import gladvalakasNT200instamask from '../assets/images/projectsLogos/insta-mask-glad-valakas-nt200.png'
-import tinkoffCurrencyConverter from '../assets/images/projectsLogos/tinkoff-currency-converter.png'
-import skeletronRockBot from '../assets/images/projectsLogos/skeletron-rock-bot.png'
+import goodmorningBotLogo from '../assets/images/projectsLogos/goodmorning-bot.png'
+import homirrorLogo from '../assets/images/projectsLogos/homirror.png'
+import igroruporLogo from '../assets/images/projectsLogos/igrorupor.png'
+import lisNceLogo from '../assets/images/projectsLogos/lis-nce.png'
+import mashaSimulatorLogo from '../assets/images/projectsLogos/masha-simulator.png'
+import mcDonaldsOffersLogo from '../assets/images/projectsLogos/mcdonaldsoffersbot.png'
 import movieTimeFilmsBot from '../assets/images/projectsLogos/movietime-films-bot.png'
+import mypronLogo from '../assets/images/projectsLogos/mypron.png'
+import niolySchoolLogo from '../assets/images/projectsLogos/niolyschool.png'
+import noSquidGameLogo from '../assets/images/projectsLogos/no-squid-game.png'
+import ogeGeneratorLogo from '../assets/images/projectsLogos/oge-generator.png'
+import panicButtonLogo from '../assets/images/projectsLogos/panic-button.png'
+import probablyKrolLogo from '../assets/images/projectsLogos/probablykrol-bot.png'
+import py3ExecLogo from '../assets/images/projectsLogos/py3exec.png'
+import remafiaLogo from '../assets/images/projectsLogos/remafia.png'
+import rJolygolfLogo from '../assets/images/projectsLogos/rJolygolf.png'
+import roflCallsOrderWebsiteLogo from '../assets/images/projectsLogos/rofl-calls-order-website.png'
+import rollerRideLogo from '../assets/images/projectsLogos/roller-ride.png'
+import rusWordConBotLogo from '../assets/images/projectsLogos/ruswordconbot.png'
+import samaracoinLogo from '../assets/images/projectsLogos/samaracoin.png'
+import shizonyanLogo from '../assets/images/projectsLogos/shizonyan.png'
+import sipackerLogo from '../assets/images/projectsLogos/sipacker.png'
+import skeletronRockBot from '../assets/images/projectsLogos/skeletron-rock-bot.png'
+import skysmartHelperLogo from '../assets/images/projectsLogos/skysmart-helper.png'
+import stigfinnareLogo from '../assets/images/projectsLogos/stigfinnare.png'
+import tinkoffCurrencyConverter from '../assets/images/projectsLogos/tinkoff-currency-converter.png'
+import uselessCanvasBasedTextEditorLogo from '../assets/images/projectsLogos/useless-canvas-based-text-editor.png'
+import vityaschelSiteLogo from '../assets/images/projectsLogos/vityaschel.png'
+import wantToBeAProgrammerLogo from '../assets/images/projectsLogos/want-to-be-a-programmer.png'
+import wikipediaSpeedrunLogo from '../assets/images/projectsLogos/wikipedia-speedrun.png'
 
 // scope: 1=verysmall 2=small 3=average 4=big 5=huge
 
@@ -241,6 +243,7 @@ export default [
     description: 'Лендинг с анимациями по готовому макету для сервиса, занимающегося коммерческой деятельностью в сфере ботов, сайтов и приложений. Адаптирован под мобильные устройства, браузер Safari, есть кастомный компонент карусели с нативным скроллингом, переключение темы с переходом и локализация на два языка (пока реализован только один).',
     unpublic: false,
     hidden: false,
+    logo: botBizLandingLogo,
     tags: ['order'],
     links: [
       'https://www.figma.com/file/T4fTAPKZXo5nKUiiPE00DU/Local-bot.biz?node-id=0%3A1',
@@ -602,6 +605,7 @@ export default [
     description: 'Панель управления, написанная для сервиса, занимающегося коммерческой деятельностью в сфере ботов, сайтов и приложений. Адаптирован под мобильные устройства, браузер Safari, есть кастомный компонент карусели с нативным скроллингом, переключение темы с переходом и локализация на два языка (пока реализован только один).',
     unpublic: false,
     hidden: false,
+    logo: botBizLandingLogo,
     tags: ['order'],
     category: 'website',
     id: 'bot-biz-panels'
@@ -1472,7 +1476,7 @@ export default [
     description: 'Расширение Chrome, заменяющее радужную полосу загрузки на сайте figma.com, появляющуюся во время месяца Pride, на стандартную синюю',
     unpublic: true,
     hidden: false,
-    tags: [],
+    logo: figmaAntiLGBTLogo,
     links: ['https://github.com/VityaSchel/figma-anti-lgbt'],
     category: 'chrome_extension',
     id: 'figma-anti-lgbt'

@@ -38,7 +38,7 @@ export default function generateColumns({
       disableColumnMenu: true,
       width: 71,
       renderCell: ({ row: { logo, category, hidden, unpublic } }) => {
-        if(logo && !unpublic) {
+        if(logo && (!unpublic || showShockingProjects)) {
           return <img src={logo} height={100} className={styles.logo} />
         } else {
           const shockingProject = unpublic && !showShockingProjects
