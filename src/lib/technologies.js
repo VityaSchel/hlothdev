@@ -283,7 +283,7 @@ export default {
     startedLearning: new Date(2015, 10, 3),
     category: 'bot',
     addFromCategory: 'bot/vk',
-    aliases: ['VK API']
+    aliases: ['VK API', 'VK-IO']
   },
   yandexAliceAPI: {
     name: 'Яндекс.Диалоги API (Алиса)',

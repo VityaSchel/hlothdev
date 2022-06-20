@@ -493,6 +493,27 @@ export default [
     id: 'lis-nce'
   },
   {
+    name: 'nmchatbot',
+    stack: [
+      'TypeScript',
+      'NodeJS',
+      'MongoDB',
+      'VK API',
+      'VK-IO',
+      'YooCheckout'
+    ],
+    supported: 'partially',
+    dates: { devStart: '2022-06-14' },
+    scope: 3,
+    description: 'Чат-бот ВКонтакте, обрабатывающий запросы от пользователей, помогающий с частыми вопросами. Принимает оплату в ЮКасса для автоматического удаления постов и публикации без очереди. Передает сообщения администраторам в поддержку. Работает параллельно на 11 группах.',
+    unpublic: false,
+    hidden: false,
+    tags: ['order'],
+    links: ['https://vk.com/nm.tyumen'],
+    category: 'bot/vk',
+    id: 'nmchatbot'
+  },
+  {
     name: 'MovieTime films bot',
     stack: ['NodeJS', 'MongoDB', 'Telegram Bot API'],
     supported: false,
@@ -571,6 +592,19 @@ export default [
     ],
     category: 'website',
     id: 'огэ-генератор'
+  },
+  {
+    name: 'bot.biz (panels)',
+    stack: ['NextJS', 'TypeScript', 'React-redux', 'GraphQL', 'next-i18next'],
+    supported: 'partially',
+    dates: { devStart: '2022-06-09' },
+    scope: 3,
+    description: 'Панель управления, написанная для сервиса, занимающегося коммерческой деятельностью в сфере ботов, сайтов и приложений. Адаптирован под мобильные устройства, браузер Safari, есть кастомный компонент карусели с нативным скроллингом, переключение темы с переходом и локализация на два языка (пока реализован только один).',
+    unpublic: false,
+    hidden: false,
+    tags: ['order'],
+    category: 'website',
+    id: 'bot-biz-panels'
   },
   {
     name: 'FIT vs FEL',
@@ -728,6 +762,20 @@ export default [
     id: 'foodstuff-лендинг'
   },
   {
+    name: 'tJocer',
+    stack: ['Go', 'giu', 'imgui'],
+    supported: true,
+    dates: { devStart: '2022-03-27' },
+    scope: 3,
+    description: 'Трейнер для игры The Joy of Creation, написанный на Go. Умеет взаимодействовать с нативным API Windows для поиска адресов в оперативной памяти и чтения нужных значений. Имеет графический интерфейс, написанный на библиотеке Giu.',
+    unpublic: false,
+    hidden: false,
+    tags: [],
+    links: ['https://github.com/VityaSchel/tJocer'],
+    category: 'app',
+    id: 'tjocer'
+  },
+  {
     name: 'Доброе утро и хорошего дня',
     stack: [
       'NodeJS',
@@ -764,8 +812,22 @@ export default [
     id: 'private-repo-cloner'
   },
   {
+    name: 'vk-content-moderation',
+    stack: ['TypeScript', 'NodeJS', 'MongoDB', 'VK API', 'VK-IO'],
+    supported: 'partially',
+    dates: { devStart: '2022-05-13', release: '2022-06-05' },
+    scope: 3,
+    description: 'Бот, выполняющий модерацию контента (предложки нескольких пабликов ВК), основывающуюся на схожести фото по перцептивным хешам изображений и уникальности текста',
+    unpublic: false,
+    hidden: false,
+    tags: ['order'],
+    links: ['https://youtu.be/3rqj1YDWEQc'],
+    category: 'bot/vk',
+    id: 'vk-content-moderation'
+  },
+  {
     name: 'ads-parser-bot',
-    stack: ['TypeScript', 'NodeJS', 'VK-IO'],
+    stack: ['TypeScript', 'NodeJS', 'VK-IO', 'VK API'],
     supported: 'partially',
     dates: { devStart: '2022-05-10', release: '2022-05-11' },
     scope: 2,
@@ -1400,6 +1462,20 @@ export default [
     ],
     category: 'chrome_extension',
     id: 'skysmart-helper'
+  },
+  {
+    name: 'figma-anti-lgbt',
+    stack: ['CSS'],
+    supported: true,
+    dates: { devStart: '2022-06-16', release: '2022-06-16' },
+    scope: 1,
+    description: 'Расширение Chrome, заменяющее радужную полосу загрузки на сайте figma.com, появляющуюся во время месяца Pride, на стандартную синюю',
+    unpublic: true,
+    hidden: false,
+    tags: [],
+    links: ['https://github.com/VityaSchel/figma-anti-lgbt'],
+    category: 'chrome_extension',
+    id: 'figma-anti-lgbt'
   },
   {
     name: 'mypron',
