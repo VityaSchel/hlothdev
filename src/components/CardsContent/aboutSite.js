@@ -19,8 +19,12 @@ function AboutSite(props) {
 
   React.useEffect(() => {
     (async () => {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/visitorsThisMonth`)
-      setVisitorsCounter(Number(await response.text()))
+      try {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/visitorsThisMonth`)
+        setVisitorsCounter(Number(await response.text()))
+      } catch(e) {
+        setVisitorsCounter(NaN)
+      }
     })()
   }, [])
 
@@ -31,11 +35,13 @@ function AboutSite(props) {
         containerStyle={styles.leftCol}
       >
         <div className={styles.text}>
-          <p>{translation.TEXT}</p>
+          <p dangerouslySetInnerHTML={{ __html: translation.TEXT }} />
           <ul>
-            {translation.PREVIOUS_SITES.map((siteInfo, i) => <li key={i}>{siteInfo}</li>)}
+            {translation.PREVIOUS_SITES.map((siteInfo, i) => (
+              <li key={i} dangerouslySetInnerHTML={{ __html: siteInfo }} />
+            ))}
           </ul>
-          <p>{translation.TEXT2}</p>
+          <p dangerouslySetInnerHTML={{ __html: translation.TEXT2 }} />
           {visitorsCounter !== null && <Typography variant='caption' className={styles.counter}>
             <span>{translation.VISITORS_THIS_MONTH}: {visitorsCounter}.</span> {
               visitorsCounter === 0 

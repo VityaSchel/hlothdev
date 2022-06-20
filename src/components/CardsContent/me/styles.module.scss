@@ -59,12 +59,20 @@
 
       .profileCard {
         flex: 1;
+
+        & > div {
+          background: linear-gradient(125deg, hsl(186deg 2% 4.3%), hsl(218deg 30% 2.5%));
+        }
       }
     }
   }
 
   .avatar img {
     background-color: #eee;
+  }
+
+  .contactsContainer > div {
+    background: linear-gradient(110deg, hsl(218deg 30% 2.5%), hsl(263deg 2% 3%)) !important;
   }
 
   .contacts {

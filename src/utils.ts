@@ -5,7 +5,7 @@ import replace from 'react-string-replace'
 import { formatDistanceToNowStrict } from 'date-fns'
 import { ru as dateFns_ru, enUS as dateFns_enUS } from 'date-fns/locale'
 
-const easeOutCubic = progress => 1 - Math.pow(1 - progress, 3)
+const easeOutCubic = (progress: number) => 1 - Math.pow(1 - progress, 3)
 
 const transitions = new Map()
 export function transition(object, properties, value, setValue) {
@@ -129,7 +129,7 @@ export const color = (colorOrRed, g, b) => {
   } else {
     return Object.fromEntries(
       new Array(3)
-        .fill()
+        .fill(null)
         .map(
           (_,i) => [`color-${['r','g','b'][i]}`, colorOrRed]
         )
@@ -152,10 +152,10 @@ export const getDateFnsLocale = () => {
 
 export function dates(text: string): string {
   return text.replaceAll(/%date_fns_(\d+)%/g, (match) => {
-    // const [,date] = match.match(/%date_fns_(\d+)%/)
+    const [,date] = match.match(/%date_fns_(\d+)%/)
     return formatDistanceToNowStrict(
       new Date(
-        Number(match[1]) * 1000
+        Number(date) * 1000
       ), 
       { locale: getDateFnsLocale() }
     )

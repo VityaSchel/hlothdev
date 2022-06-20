@@ -10,6 +10,7 @@ import { ImGithub } from 'react-icons/im'
 import avatar from '../../../assets/images/avatar.jpeg'
 import Experience from './Experience.js'
 import useMediaQuery from '@mui/material/useMediaQuery'
+import { dates } from '../../../utils'
 
 AboutCard.propTypes = 
 WhatIsHloth.propTypes = 
@@ -28,9 +29,9 @@ function AboutCard({ translation, isMobile }) {
           <img src='/static/site-decorations/vk-dog.webp' alt={translation.INTRO_IMAGE} align='right' width={isMobile ? 80 : 130} />
           <p dangerouslySetInnerHTML={{ __html: translation.INTRO }} />
         </div>
-        <p dangerouslySetInnerHTML={{ __html: translation.BACKEND }} />
+        <p dangerouslySetInnerHTML={{ __html: dates(translation.BACKEND) }} />
         <div className={styles.imgBlock}>
-          <video src="/static/site-decorations/kolobanga.webm" align='left' autoPlay width={isMobile ? 50 : 150} muted loop alt={translation.MY_PROJECTS_IMAGE} />
+          <video src="/static/site-decorations/kolobanga.webm" align='left' autoPlay width={isMobile ? 50 : 170} muted loop alt={translation.MY_PROJECTS_IMAGE} />
           <p dangerouslySetInnerHTML={{ __html: translation.MY_PROJECTS }} />
         </div>
         <p dangerouslySetInnerHTML={{ __html: translation.BOTS }} />
@@ -95,7 +96,10 @@ function MiniProfile(props) {
 
 function Contacts() {
   return (
-    <Card className={styles.contacts}>
+    <Card 
+      containerStyle={styles.contactsContainer}
+      className={styles.contacts}
+    >
       {Object.values(links).map((link, i) => (
         <div key={i} className={styles.link}>
           <link.icon /> <a href={link.href} target='_blank' rel='noreferrer'>{link.label}</a>
