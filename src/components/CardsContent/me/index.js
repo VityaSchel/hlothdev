@@ -41,6 +41,7 @@ function AboutCard({ translation, isMobile }) {
         </div>
         <h2 dangerouslySetInnerHTML={{ __html: translation.WORK_EXPERIENCE_LABEL }} />
         <p dangerouslySetInnerHTML={{ __html: translation.WORK_EXPERIENCE_BLOCK }} />
+        <div className={styles.playlistHint} dangerouslySetInnerHTML={{ __html: translation.PLAYLIST_HINT }} />
         <div className={styles.imgBlock}>
           <img src='/static/site-decorations/qwq.webp' alt={translation.ENDING_IMAGE} align='left' width={isMobile ? 80 : 140} />
           <p dangerouslySetInnerHTML={{ __html: translation.ENDING }} />

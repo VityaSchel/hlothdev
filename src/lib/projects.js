@@ -607,6 +607,11 @@ export default [
     hidden: false,
     logo: botBizLandingLogo,
     tags: ['order'],
+    links: [
+      'https://www.figma.com/file/3YxYimXoU779yLcCjW4oTI/bot.biz-(Copy)?node-id=2305%3A14896',
+      'https://youtu.be/buxSGd_65U4',
+      'https://youtu.be/6WhqQxV1-0Q'
+    ],
     category: 'website',
     id: 'bot-biz-panels'
   },
