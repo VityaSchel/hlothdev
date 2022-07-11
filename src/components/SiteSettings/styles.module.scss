@@ -1,3 +1,5 @@
+@import 'styles/transitions.scss';
+
 .container {
   position: fixed;
   right: 0;
@@ -8,6 +10,14 @@
   gap: 10px;
   align-items: flex-end;
   z-index: 2;
+
+  @media screen and (max-width: 428px) {
+    background-color: var(--paper-background);
+    @include defaultTransition(background-color);
+    border-radius: 25px 0 0 0;
+    padding: 10px;
+    flex-direction: row;
+  }
 
   .languageChange {
     display: flex;

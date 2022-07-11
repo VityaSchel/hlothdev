@@ -3,14 +3,14 @@ import PropTypes from 'prop-types'
 import styles from './styles.module.scss'
 import { connect } from 'react-redux'
 import IconButton from '@mui/material/IconButton'
-import { MdWbSunny, MdOutlineTranslate } from 'react-icons/md'
-import { IoMdMoon } from 'react-icons/io'
 import { useSpring, animated } from 'react-spring'
 import useResizeObserver from 'use-resize-observer'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import ClickAwayListener from '@mui/material/ClickAwayListener'
 import cx from 'classnames'
-
+import { MdWbSunny, MdOutlineTranslate } from 'react-icons/md'
+import { IoMdMoon } from 'react-icons/io'
+import { SiTorbrowser } from 'react-icons/si'
 import ruRU from '../../assets/images/emojis/flags/ru-RU.png'
 import enUS from '../../assets/images/emojis/flags/en-US.png'
 
@@ -24,6 +24,11 @@ function SiteSettings({ translation, ...props }) {
 
   return (
     <div className={styles.container}>
+      <a href='http://hlothadmob6vsssnjd7ovwyz4z2le4pbpbyfhqbuwooyq62ona3l4bid.onion/' title={translation.ONION_SITE_LINK}>
+        <IconButton aria-label={translation.ONION_SITE_LINK}>
+          <SiTorbrowser />
+        </IconButton>
+      </a>
       {props.theme === 'dark' ? (
         <IconButton aria-label={translation.THEME_SWITCH_TO_LIGHT} onClick={themeSwitch}>
           <MdWbSunny />

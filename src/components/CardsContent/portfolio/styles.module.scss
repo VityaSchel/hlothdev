@@ -1,3 +1,5 @@
+@import 'styles/transitions.scss';
+
 .portfolio {
   display: flex;
   flex-direction: column;
@@ -5,7 +7,8 @@
   flex: 1;
 
   @media screen and (max-width: 768px) {
-    padding-bottom: 100px;
+    padding-bottom: 40px;
+    // SiteSettings are overlapping with portfolio table
   }
 
   .logo {
@@ -61,7 +64,8 @@
           line-height: 1.6;
 
           .projectCategory {
-            color: #dedede;
+            color: var(--secondary-text-color);
+            @include defaultTransition(color);
           }
         }
       }

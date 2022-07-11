@@ -68,6 +68,10 @@
 
         & > div {
           background: linear-gradient(125deg, hsl(186deg 2% 4.3%), hsl(218deg 30% 2.5%));
+
+          div, span {
+            color: #eee !important;
+          }
         }
       }
     }
@@ -79,6 +83,18 @@
 
   .contactsContainer > div {
     background: linear-gradient(110deg, hsl(218deg 30% 2.5%), hsl(263deg 2% 3%)) !important;
+
+    div, span {
+      color: #eee !important;
+
+      a {
+        color: #c5c5c5; 
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
   }
 
   .contacts {

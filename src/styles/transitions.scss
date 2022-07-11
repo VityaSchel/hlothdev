@@ -1,0 +1,8 @@
+$defaultTimingFunction: ease-out;
+$defaultDuration: 500ms;
+
+@mixin defaultTransition($properties) {
+  transition-duration: $defaultDuration;
+  transition-timing-function: $defaultTimingFunction;
+  transition-property: $properties;
+}
