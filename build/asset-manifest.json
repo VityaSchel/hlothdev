@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.cd339967.chunk.css",
-    "main.js": "/static/js/main.afb83a0d.chunk.js",
+    "main.css": "/static/css/main.a91967e3.chunk.css",
+    "main.js": "/static/js/main.ed8537b6.chunk.js",
     "runtime-main.js": "/static/js/runtime-main.df3e6827.js",
-    "static/js/2.391b0bfa.chunk.js": "/static/js/2.391b0bfa.chunk.js",
+    "static/js/2.bbead308.chunk.js": "/static/js/2.bbead308.chunk.js",
     "index.html": "/index.html",
-    "static/js/2.391b0bfa.chunk.js.LICENSE.txt": "/static/js/2.391b0bfa.chunk.js.LICENSE.txt",
+    "static/js/2.bbead308.chunk.js.LICENSE.txt": "/static/js/2.bbead308.chunk.js.LICENSE.txt",
     "static/media/SFBlack.e32ac69b.blob": "/static/media/SFBlack.e32ac69b.blob",
     "static/media/SFBold.db9e625b.blob": "/static/media/SFBold.db9e625b.blob",
     "static/media/SFLight.a080c05c.blob": "/static/media/SFLight.a080c05c.blob",
@@ -66,8 +66,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.df3e6827.js",
-    "static/js/2.391b0bfa.chunk.js",
-    "static/css/main.cd339967.chunk.css",
-    "static/js/main.afb83a0d.chunk.js"
+    "static/js/2.bbead308.chunk.js",
+    "static/css/main.a91967e3.chunk.css",
+    "static/js/main.ed8537b6.chunk.js"
   ]
 }
