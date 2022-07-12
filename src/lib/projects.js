@@ -228,31 +228,6 @@ export default [
     id: 'симулятор-маши-из-gostudy'
   },
   {
-    name: 'bot.biz (landing)',
-    stack: [
-      'NextJS',
-      'TypeScript',
-      'React-redux',
-      'next-i18next',
-      'react-reveal',
-      'GraphQL'
-    ],
-    supported: 'partially',
-    dates: { devStart: '2022-05-11', release: '2022-05-28' },
-    scope: 3,
-    description: 'Лендинг с анимациями по готовому макету для сервиса, занимающегося коммерческой деятельностью в сфере ботов, сайтов и приложений. Адаптирован под мобильные устройства, браузер Safari, есть кастомный компонент карусели с нативным скроллингом, переключение темы с переходом и локализация на два языка (пока реализован только один).',
-    unpublic: false,
-    hidden: false,
-    logo: botBizLandingLogo,
-    tags: ['order'],
-    links: [
-      'https://www.figma.com/file/T4fTAPKZXo5nKUiiPE00DU/Local-bot.biz?node-id=0%3A1',
-      'https://youtu.be/zdMy_A5Y2Kk'
-    ],
-    category: 'website',
-    id: 'bot-biz-landing'
-  },
-  {
     name: 'АБОБА 2024 Кандидат в президенты',
     stack: [
       'NextJS',
@@ -595,25 +570,6 @@ export default [
     ],
     category: 'website',
     id: 'огэ-генератор'
-  },
-  {
-    name: 'bot.biz (panels)',
-    stack: ['NextJS', 'TypeScript', 'React-redux', 'GraphQL', 'next-i18next'],
-    supported: 'partially',
-    dates: { devStart: '2022-06-09' },
-    scope: 3,
-    description: 'Панель управления, написанная для сервиса, занимающегося коммерческой деятельностью в сфере ботов, сайтов и приложений. Адаптирован под мобильные устройства, браузер Safari, есть кастомный компонент карусели с нативным скроллингом, переключение темы с переходом и локализация на два языка (пока реализован только один).',
-    unpublic: false,
-    hidden: false,
-    logo: botBizLandingLogo,
-    tags: ['order'],
-    links: [
-      'https://youtu.be/buxSGd_65U4',
-      'https://youtu.be/6WhqQxV1-0Q',
-      'https://youtu.be/zx27GHjpedU'
-    ],
-    category: 'website',
-    id: 'bot-biz-panels'
   },
   {
     name: 'FIT vs FEL',
