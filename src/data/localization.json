@@ -189,9 +189,12 @@
       }
     },
     "DONATE": {
-      "HEADING": "Донаты",
-      "TEXT": "Этот раздел еще в разработке. Неизвестно, когда я его доделаю, и доделаю ли я его вообще. Но спасибо, что поинтересовались, что находится здесь, я очень это ценю и надеюсь на вашу поддержку денюжкой в будущем 🥰. А пока воспользуйтесь сторонним сайтом:",
-      "EXTERNAL_DONATE_SITE": "https://donate.qiwi.com/payin/vityaschel"
+      "MAIN_BLOCK_HEADING": "Донаты",
+      "DONATES_HISTORY": "История донатов",
+      "FORM": {
+        "USERNAME": "Ваше имя",
+        "AMOUNT": "Сумма"
+      }
     }
   },
   "_DEFAULT_": {
@@ -382,9 +385,12 @@
       }
     },
     "DONATE": {
-      "HEADING": "Donates",
-      "TEXT": "This section is still under construction. It is unknown when I'm done developing it, and whether I will develop it at all. But thank you for visiting this section, I really appreciate it and I hope for your financial support in the future 🥰. In the meantime, use a third-party website:",
-      "EXTERNAL_DONATE_SITE": "https://donate.qiwi.com/payin/vityaschel"
+      "MAIN_BLOCK_HEADING": "Donates",
+      "DONATES_HISTORY": "Donates history",
+      "FORM": {
+        "USERNAME": "Your name",
+        "AMOUNT": "Amount"
+      }
     }
   }
 }
