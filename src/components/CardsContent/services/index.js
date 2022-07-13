@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import Card from './Card'
+import Card from '../Card'
 import LanguageIcon from '@mui/icons-material/Language'
 import { MdOutlineSpaceDashboard } from 'react-icons/md'
 import { GiRobotAntennas, GiAbstract016 } from 'react-icons/gi'
