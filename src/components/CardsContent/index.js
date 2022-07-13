@@ -52,7 +52,7 @@ function CardsContent(props) {
         services: <Services />,
         portfolio: <Portfolio />,
         donate: <Donate />,
-        about: <AboutSite />,
+        about: <AboutSite />
       }[props.route]}
     </animated.div>
   )

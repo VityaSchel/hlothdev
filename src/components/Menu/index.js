@@ -25,6 +25,7 @@ export default function Menu() {
       <Suspense fallback={null}>
         <MenuItem cardID='donate' />
         <MenuItem cardID='about' />
+        <MenuItem cardID='archiveLink' />
       </Suspense>
     </>
   )
@@ -37,7 +38,8 @@ export const layouts = {
     services: [1.97, 0],
     donate: [0, -1],
     about: [1, -1],
-    offset: [0, 0]
+    archiveLink: [2, -1],
+    offset: [0, 0],
   },
   tall: {
     me: [0, 1],
@@ -45,13 +47,20 @@ export const layouts = {
     services: [1, -1],
     donate: [0, -1],
     about: [0, -2],
+    archiveLink: [1, -2],
     offset: [0.525, 0.5]
   }
 }
 
+const linkCards = {
+  'archiveLink': 'https://archive.hloth.dev/', 
+  'blogLink': 'https://blog.hloth.dev/'
+}
+
 MenuItem.propTypes = { cardID: PropTypes.string }
 function MenuItem(props) {
-  const card = useLoader(GLTFLoader, `/static/models/cards/card_${props.cardID}.glb`)
+  const fileID = Object.keys(linkCards).includes(props.cardID) ? 'external' : props.cardID
+  const card = useLoader(GLTFLoader, `/static/models/cards/card_${fileID}.glb`)
   const [isPointerOver, setIsPointerOver] = React.useState(false)
   const { translation, theme, route, layout } = useRedux(state => ({
     translation: state.translation,
@@ -99,7 +108,11 @@ function MenuItem(props) {
   }
 
   const handleClick = () => {
-    store.dispatch({ type: 'route/set', route: props.cardID })
+    if (Object.keys(linkCards).includes(props.cardID)) {
+      window.open(linkCards[props.cardID], '_blank').focus()
+    } else {
+      store.dispatch({ type: 'route/set', route: props.cardID })
+    }
   }
 
   return (
@@ -129,6 +142,7 @@ function MenuItem(props) {
                   about: 'CARD_ABOUT',
                   donate: 'CARD_DONATE',
                   services: 'CARD_SERVICES',
+                  archiveLink: 'CARD_ARCHIVE_LINK'
                 }[props.cardID]]?.toUpperCase()
               }
             </Text>

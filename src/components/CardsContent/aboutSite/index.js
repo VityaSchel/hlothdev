@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Card from '../Card'
-import styles from './styles.module.scss'
+import styles from '../styles.module.scss'
 import { connect } from 'react-redux'
 import { BiLinkExternal } from 'react-icons/bi'
 import firstConceptArt from 'assets/images/aboutSite/first-concept-art.jpeg'

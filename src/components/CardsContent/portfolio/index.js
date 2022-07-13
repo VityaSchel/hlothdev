@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styles from './styles.module.scss'
+import styles from '../styles.module.scss'
 import { connect } from 'react-redux'
 import { DataGrid, ruRU as xDataGridRu, enUS as xDataGridEnUS } from '@mui/x-data-grid'
 import projectsList from 'lib/projects'
