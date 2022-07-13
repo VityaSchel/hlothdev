@@ -8,7 +8,7 @@ import DialogContentText from '@mui/material/DialogContentText'
 import DialogTitle from '@mui/material/DialogTitle'
 import Button from '@mui/material/Button'
 import Tooltip from '@mui/material/Tooltip'
-import projects from '../../../lib/projects'
+import projects from '../../../data/projects'
 import copy from 'copy-to-clipboard'
 import { MdLink, MdOutlineTranslate } from 'react-icons/md'
 
