@@ -10,7 +10,8 @@ import ButtonBase from '@mui/material/ButtonBase'
 Card.propTypes = CardContainer.propTypes = {
   children: PropTypes.node,
   avatar: PropTypes.node,
-  containerStyle: PropTypes.string,
+  containerStyle: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)]),
+  className: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)]),
   title: PropTypes.string,
   subtitle: PropTypes.string,
   caption: PropTypes.string,
@@ -18,13 +19,26 @@ Card.propTypes = CardContainer.propTypes = {
   link: PropTypes.string,
 }
 
-function Card(props) {
+interface CardProps {
+  children?: React.ReactNode
+  avatar?: React.ReactNode
+  containerStyle?: string | string[]
+  className?: string | string[]
+  avatarStyles?: object
+  title?: string
+  subtitle?: string
+  caption?: string
+  theme?: string
+  link?: string
+}
+
+function Card(props: CardProps) {
   return (
     <>
       {props.avatar && <div className={styles.avatar} style={props.avatarStyles}>
         {props.avatar}
       </div>}
-      <div className={[styles.content, props.className].join(' ')}>
+      <div className={cx(styles.content, props.className)}>
         {props.title && <div className={styles.title}>
           <Typography variant='h6' gutterBottom component='div'>
             {props.title}

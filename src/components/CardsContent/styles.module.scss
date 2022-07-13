@@ -119,22 +119,3 @@
     }
   }
 }
-
-.donateContainer {
-  align-self: center;
-
-  @media screen and (max-width: 768px) {
-    align-self: stretch;
-  }
-
-  & > div > div > div,
-  .donateCard {
-    max-width: 100%;
-  }
-
-  .donateCard {
-    width: 600px;
-    line-height: 1.7em;
-    font-size: calc(15/16*1rem);
-  }
-}

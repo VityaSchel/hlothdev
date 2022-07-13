@@ -1,0 +1,22 @@
+.donateContainer {
+  display: flex;
+
+  @media screen and (max-width: 768px) {
+    align-self: stretch;
+  }
+
+  &>div>div>div,
+  .donateCard {
+    max-width: 100%;
+  }
+
+  .donateCard {
+    width: 600px;         
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
