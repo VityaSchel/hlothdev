@@ -181,14 +181,16 @@ export default [
     name: 'AtmosSeriesBot',
     stack: [
       'NodeJS',
+      'TypeScript',
+      'Redis',
+      'bee-queue',
       'MongoDB',
       'Telegram Bot API'
     ],
     supported: false,
     dates: {
-      devStart: '31 July 2021',
-      release: '2 August 2021',
-      abandon: '2 August 2021'
+      devStart: '3 February 2022',
+      release: '24 February 2022',
     },
     scope: 2,
     description: 'Панель управления ботом с добавлением админов, рефералов, проверка на подписку, рассылкой рекламы по пользователям и встроенной статистикой',
@@ -199,7 +201,8 @@ export default [
     ],
     logo: atmosSeriesBotLogo,
     links: [
-      'https://freelance.habr.com/projects/244063'
+      'https://freelance.habr.com/projects/304723',
+      'https://www.youtube.com/watch?v=RJEvARpL1e8'
     ],
     category: 'bot/telegram',
     id: 'atmosseriesbot'
