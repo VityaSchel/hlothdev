@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import styles from './styles.module.scss'
-import Card from '../Card'
+import Card from '../Card/index.js'
 import categories from '../../../data/categories.js'
 import technologies from '../../../data/technologies.js'
 import projects from '../../../data/projects.js'

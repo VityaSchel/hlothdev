@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import styles from './styles.module.scss'
-import Card from '../Card'
+import Card from '../Card/index.js'
 import { connect } from 'react-redux'
 import { SiTelegram } from 'react-icons/si'
 import { ReactComponent as VKLogo } from '../../../assets/images/svgIcons/vk_logo.svg'
@@ -10,7 +10,7 @@ import { ImGithub } from 'react-icons/im'
 import avatar from '../../../assets/images/avatar.jpeg'
 import Experience from './Experience.js'
 import useMediaQuery from '@mui/material/useMediaQuery'
-import { dates } from '../../../utils'
+import { dates } from '../../../utils.js'
 
 AboutCard.propTypes = 
 WhatIsHloth.propTypes = 
