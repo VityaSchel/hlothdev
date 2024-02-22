@@ -86,18 +86,6 @@ function DonateForm(props: { translation: Translation }) {
             />
             {errors.amount && <FormHelperText error>{errors.amount}</FormHelperText>}
           </FormControl>
-          <TextField
-            label={translation.FORM.AMOUNT}
-            variant='outlined'
-            type='number'
-            name='amount'
-            onChange={handleChange}
-            onBlur={handleBlur}
-            value={values.amount}
-            error={!!errors.amount}
-            helperText={errors.amount}
-            
-          />
           <button type="submit" disabled={isSubmitting}>
             Submit
           </button>
