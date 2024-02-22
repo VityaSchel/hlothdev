@@ -1,11 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
-import themeReducer from './themeReducer'
-import localeReducer from './localeReducer'
-import cursorReducer from './cursorReducer'
-import translationReducer from './translationReducer'
-import routeReducer from './routeReducer'
-import layoutReducer from './layoutReducer'
-import portfolioReducer from './portfolioReducer'
+import themeReducer from './reducers/theme'
+import localeReducer from './reducers/locale'
+import cursorReducer from './reducers/cursor'
+import translationReducer from './reducers/translation'
+import routeReducer from './reducers/route'
+import layoutReducer from './reducers/layout'
+import portfolioReducer from './reducers/portfolio'
 
 export const store = configureStore(
   {

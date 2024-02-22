@@ -1,6 +1,5 @@
 import React from 'react'
 import { Canvas } from '@react-three/fiber'
-import { connect } from 'react-redux'
 import { useHotkeys } from 'react-hotkeys-hook'
 import { createBrowserHistory } from 'history'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
@@ -15,7 +14,13 @@ import Background from './components/Background'
 import Menu from './components/Menu'
 import SiteSettings from './components/SiteSettings'
 import CardsContent from './components/CardsContent'
-import { useAppDispatch } from '@/store/hooks'
+import { useAppDispatch, useAppSelector } from '@/store/hooks'
+import { selectLocale, updateLocale } from '@/store/reducers/locale'
+import { selectTranslation, setLocale } from '@/store/reducers/translation'
+import { selectTheme, switchTheme } from '@/store/reducers/theme'
+import { selectCursor } from '@/store/reducers/cursor'
+import { popRoute, selectRoute } from '@/store/reducers/route'
+import { setLayout } from '@/store/reducers/layout'
 
 const defaultTheme = {
   typography: {
@@ -64,20 +69,18 @@ WebFont.load({
   }
 })
 
-type AppProps = {
-  theme?: string;
-  route?: string;
-  cursor?: object;
-  locale?: string;
-  translation?: object;
-  dispatch?(...args: unknown[]): unknown;
-};
-
-function App(props: AppProps) {
+export function App() {
+  const { locale: appLocale } = useAppSelector(selectLocale)
+  const translation = useAppSelector(selectTranslation)
+  const { theme } = useAppSelector(selectTheme)
+  const cursor = useAppSelector(selectCursor)
+  const { route } = useAppSelector(selectRoute)
   const spotLightTarget = React.useRef()
   const lightRef = React.useRef()
   const dispatch = useAppDispatch()
-  useHotkeys('space', () => dispatch({ type: 'theme/switch' }))
+  useHotkeys('space', () => {
+    dispatch(switchTheme())
+  })
 
   React.useEffect(() => {
     if(!lightRef.current || !spotLightTarget.current) return
@@ -85,41 +88,43 @@ function App(props: AppProps) {
   }, [lightRef, spotLightTarget])
 
   React.useEffect(() => {
-    const locale = props.locale ?? navigator.language
-    dispatch({ type: 'locale/update', locale })
-    dispatch({ type: 'translation/set', language: locale })
+    const locale = appLocale ?? navigator.language
+    dispatch(updateLocale(locale))
+    dispatch(setLocale(locale))
   }, [navigator.language])
 
   React.useEffect(() => {
     history.listen(({ action, location }) => {
       const newLocation = location.pathname.substring(1)
-      if(action === 'POP') dispatch({ type: 'route/pop', route: newLocation })
+      if(action === 'POP') dispatch(popRoute(newLocation))
     })
   }, [])
 
   React.useEffect(() => {
     const newLocation = window.location.pathname.substring(1)
-    document.title = `${props.translation.CARD_ME_FIRST_NAME} ${props.translation.CARD_ME_LAST_NAME} (@hloth) ${newLocation === '' ? '' : `— ${props.translation.PAGES_TITLES?.[newLocation]}`}`
-  }, [props.translation, window.location.pathname])
+    document.title = `${translation.CARD_ME_FIRST_NAME} ${translation.CARD_ME_LAST_NAME} (@hloth) ${newLocation === '' ? '' : `— ${translation.PAGES_TITLES?.[newLocation]}`}`
+  }, [translation, window.location.pathname])
 
-  const raytracedCursor = Object.values(props.cursor).sort((a,b) => b.added - a.added)[0]?.cursor
+  const raytracedCursor = Object.values(cursor).sort((a,b) => b.added - a.added)[0]?.cursor
 
   const tallLayout = useMediaQuery('(max-width:768px)')
-  React.useEffect(() => dispatch({ type: 'layout/set', layout: tallLayout ? 'tall' : 'wide' }), [tallLayout])
+  React.useEffect(() => {
+    dispatch(setLayout(tallLayout ? 'tall' : 'wide'))
+  }, [tallLayout])
 
-  const render = props.route === ''
+  const render = route === ''
 
   return (
-    <ThemeProvider theme={props.theme === 'light' ? lightTheme : darkTheme}>
+    <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
       <Canvas 
         camera={{ fov: 60 }} 
         style={{ cursor: raytracedCursor ?? 'auto' }} 
         id='canvas' 
         linear
-        invalidateFrameloop={true}
+        // invalidateFrameloop={true}
       >
         <Camera />
-        <Background theme={props.theme} />
+        <Background theme={theme} />
         <Light />
         <BackgroundShapes render={render} />
         <Menu />
@@ -129,11 +134,3 @@ function App(props: AppProps) {
     </ThemeProvider>
   )
 }
-
-export default connect(state => ({
-  theme: state.theme,
-  route: state.route,
-  cursor: state.cursor,
-  locale: state.locale,
-  translation: state.translation
-}))(App)
