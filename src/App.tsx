@@ -15,6 +15,7 @@ import Background from './components/Background'
 import Menu from './components/Menu'
 import SiteSettings from './components/SiteSettings'
 import CardsContent from './components/CardsContent'
+import { useAppDispatch } from '@/store/hooks'
 
 const defaultTheme = {
   typography: {
@@ -75,7 +76,8 @@ type AppProps = {
 function App(props: AppProps) {
   const spotLightTarget = React.useRef()
   const lightRef = React.useRef()
-  useHotkeys('space', () => props.dispatch({ type: 'theme/switch' }))
+  const dispatch = useAppDispatch()
+  useHotkeys('space', () => dispatch({ type: 'theme/switch' }))
 
   React.useEffect(() => {
     if(!lightRef.current || !spotLightTarget.current) return
@@ -84,14 +86,14 @@ function App(props: AppProps) {
 
   React.useEffect(() => {
     const locale = props.locale ?? navigator.language
-    props.dispatch({ type: 'locale/update', locale })
-    props.dispatch({ type: 'translation/set', language: locale })
+    dispatch({ type: 'locale/update', locale })
+    dispatch({ type: 'translation/set', language: locale })
   }, [navigator.language])
 
   React.useEffect(() => {
     history.listen(({ action, location }) => {
       const newLocation = location.pathname.substring(1)
-      if(action === 'POP') props.dispatch({ type: 'route/pop', route: newLocation })
+      if(action === 'POP') dispatch({ type: 'route/pop', route: newLocation })
     })
   }, [])
 
@@ -103,7 +105,7 @@ function App(props: AppProps) {
   const raytracedCursor = Object.values(props.cursor).sort((a,b) => b.added - a.added)[0]?.cursor
 
   const tallLayout = useMediaQuery('(max-width:768px)')
-  React.useEffect(() => props.dispatch({ type: 'layout/set', layout: tallLayout ? 'tall' : 'wide' }), [tallLayout])
+  React.useEffect(() => dispatch({ type: 'layout/set', layout: tallLayout ? 'tall' : 'wide' }), [tallLayout])
 
   const render = props.route === ''
 

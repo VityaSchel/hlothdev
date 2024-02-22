@@ -2,14 +2,14 @@ import React, { Suspense } from 'react'
 import { useLoader } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import Text from '../Text'
-import { useRedux, applyMaterial, color } from 'utils'
+import { useRedux, applyMaterial, color } from '../../utils'
 import store from '../../store'
 import { useSpring, animated } from '@react-spring/three'
 
 import { MeCardText } from './MeCard'
 import { PortfolioCardText, usePortfolioCardStyles } from './PortfolioCard'
 
-import SFBold from 'assets/fonts/SFBold.blob'
+import SFBold from '@/assets/fonts/SFBold.blob'
 
 export default function Menu() {
   return (

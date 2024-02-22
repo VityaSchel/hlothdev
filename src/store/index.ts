@@ -9,13 +9,15 @@ import portfolioReducer from './portfolioReducer'
 
 export const store = configureStore(
   {
-    theme: themeReducer,
-    locale: localeReducer,
-    cursor: cursorReducer,
-    translation: translationReducer,
-    route: routeReducer,
-    layout: layoutReducer,
-    portfolio: portfolioReducer
+    reducer: {
+      theme: themeReducer,
+      locale: localeReducer,
+      cursor: cursorReducer,
+      translation: translationReducer,
+      route: routeReducer,
+      layout: layoutReducer,
+      portfolio: portfolioReducer
+    }
   }, 
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore Redux DevTools Extension
@@ -23,3 +25,6 @@ export const store = configureStore(
 )
 
 export default store
+
+export type RootState = ReturnType<typeof store.getState>
+export type AppDispatch = typeof store.dispatch

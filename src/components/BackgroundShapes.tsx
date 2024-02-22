@@ -2,7 +2,7 @@ import React, { Suspense } from 'react'
 import { useLoader, useFrame } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { Raycaster } from 'three'
-import { useRedux, applyMaterial, color } from 'utils'
+import { useRedux, applyMaterial, color } from '../utils'
 import { animated, useSpring } from '@react-spring/three'
 
 const generateSwitches = () => [
