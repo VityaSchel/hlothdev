@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import styles from './styles.module.scss'
 import { animated, useSpring } from 'react-spring'
 import { connect } from 'react-redux'
@@ -15,12 +14,13 @@ import Grid from '@mui/material/Grid'
 import IconButton from '@mui/material/IconButton'
 import Typography from '@mui/material/Typography'
 
-CardsContent.propTypes = {
-  route: PropTypes.string,
-  translation: PropTypes.object,
-  dispatch: PropTypes.func,
-}
-function CardsContent(props) {
+type CardsContentProps = {
+  route: string;
+  translation: object;
+  dispatch(...args: unknown[]): unknown;
+};
+
+function CardsContent(props: CardsContentProps) {
   const theme = useTheme()
   const { opacity, backgroundColor } = useSpring({
     opacity: props.route === '' ? 0 : 1,

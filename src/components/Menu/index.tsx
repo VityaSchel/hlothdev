@@ -1,5 +1,4 @@
 import React, { Suspense } from 'react'
-import PropTypes from 'prop-types'
 import { useLoader } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import Text from '../Text'
@@ -57,8 +56,11 @@ const linkCards = {
   'blogLink': 'https://blog.hloth.dev/'
 }
 
-MenuItem.propTypes = { cardID: PropTypes.string }
-function MenuItem(props) {
+type MenuItemProps = {
+  cardID?: string;
+};
+
+function MenuItem(props: MenuItemProps) {
   const fileID = Object.keys(linkCards).includes(props.cardID) ? 'external' : props.cardID
   const card = useLoader(GLTFLoader, `/static/models/cards/card_${fileID}.glb`)
   const [isPointerOver, setIsPointerOver] = React.useState(false)

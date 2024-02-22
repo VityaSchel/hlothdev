@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import styles from './styles.module.scss'
 import { connect } from 'react-redux'
 import IconButton from '@mui/material/IconButton'
@@ -14,12 +13,16 @@ import { SiTorbrowser } from 'react-icons/si'
 import ruRU from '../../assets/images/emojis/flags/ru-RU.png'
 import enUS from '../../assets/images/emojis/flags/en-US.png'
 
-SiteSettings.propTypes = {
-  theme: PropTypes.string,
-  translation: PropTypes.object,
-  dispatch: PropTypes.func,
-}
-function SiteSettings({ translation, ...props }) {
+type SiteSettingsProps = {
+  theme?: string;
+  translation?: object;
+  dispatch?(...args: unknown[]): unknown;
+};
+
+function SiteSettings({
+  translation,
+  ...props
+}: SiteSettingsProps) {
   const themeSwitch = () => props.dispatch({ type: 'theme/switch' })
 
   return (

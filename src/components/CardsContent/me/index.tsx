@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import styles from './styles.module.scss'
 import Card from '../Card/index.js'
 import { connect } from 'react-redux'
@@ -12,15 +11,9 @@ import Experience from './Experience.js'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import { dates } from '../../../utils.js'
 
-AboutCard.propTypes = 
-WhatIsHloth.propTypes = 
-AboutMeAsPerson.propTypes =
-MiniProfile.propTypes =
-Contacts.propTypes = {
-  translation: PropTypes.object
-}
-
-function AboutCard({ translation, isMobile }) {
+function AboutCard({ translation, isMobile }: {
+  translation: object
+}) {
   return (
     <Card className={styles.about}>
       <div className={styles.text}>
@@ -70,7 +63,9 @@ function WhatIsHloth({ translation }) {
   )
 }
 
-function AboutMeAsPerson({ translation }) {
+function AboutMeAsPerson({ translation }: {
+  translation: object
+}) {
   return (
     <Card className={styles.about}>
       <div className={styles.text}>
@@ -82,7 +77,9 @@ function AboutMeAsPerson({ translation }) {
   )
 }
 
-function MiniProfile(props) {
+function MiniProfile(props: {
+  translation: object
+}) {
   return (
     <Card
       containerStyle={styles.profileCard}
@@ -143,12 +140,9 @@ const links = {
   },
 }
 
-Me.propTypes = {
-  translation: PropTypes.object,
-  dispatch: PropTypes.func
-}
-
-function Me(props) {
+function Me(props: {
+  translation: object
+}) {
   const translation = props.translation.ABOUT_ME
   const isMobile = useMediaQuery('(max-width: 1360px)')
 

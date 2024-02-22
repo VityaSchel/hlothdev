@@ -1,15 +1,14 @@
-import PropTypes from 'prop-types'
 import Card from '../Card'
 import styles from './styles.module.scss'
 import { connect } from 'react-redux'
 import { Translation } from 'types/definitions'
 import DonateForm from './DonateForm'
 
-AboutSite.propTypes = {
-  translation: PropTypes.object,
-}
+type AboutSiteProps = {
+  translation?: object;
+};
 
-function AboutSite(props: { translation: Translation }) {
+function AboutSite(props: AboutSiteProps) {
   const translation = props.translation.DONATE
 
   return (

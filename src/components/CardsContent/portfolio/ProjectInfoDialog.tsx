@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import styles from './styles.module.scss'
 import Dialog from '@mui/material/Dialog'
 import DialogActions from '@mui/material/DialogActions'
@@ -12,13 +11,14 @@ import projects from '../../../data/projects'
 import copy from 'copy-to-clipboard'
 import { MdLink, MdOutlineTranslate } from 'react-icons/md'
 
-ProjectInfoDialog.propTypes = {
-  updateFunc: PropTypes.func,
-  showShockingProjects: PropTypes.func,
-  translation: PropTypes.object,
-  portfolio: PropTypes.object
-}
-export default function ProjectInfoDialog(props) {
+type ProjectInfoDialogProps = {
+  updateFunc?(...args: unknown[]): unknown;
+  showShockingProjects?(...args: unknown[]): unknown;
+  translation?: object;
+  portfolio?: object;
+};
+
+export default function ProjectInfoDialog(props: ProjectInfoDialogProps) {
   const [shareTooltipOpened, setShareTooltipOpened] = React.useState(false)
 
   const urlProjectID = window.location.pathname.substring(1).split('/')[1]

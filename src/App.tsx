@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Canvas } from '@react-three/fiber'
 import { connect } from 'react-redux'
 import { useHotkeys } from 'react-hotkeys-hook'
@@ -64,15 +63,16 @@ WebFont.load({
   }
 })
 
-App.propTypes = {
-  theme: PropTypes.string,
-  route: PropTypes.string,
-  cursor: PropTypes.object,
-  locale: PropTypes.string,
-  translation: PropTypes.object,
-  dispatch: PropTypes.func,
-}
-function App(props) {
+type AppProps = {
+  theme?: string;
+  route?: string;
+  cursor?: object;
+  locale?: string;
+  translation?: object;
+  dispatch?(...args: unknown[]): unknown;
+};
+
+function App(props: AppProps) {
   const spotLightTarget = React.useRef()
   const lightRef = React.useRef()
   useHotkeys('space', () => props.dispatch({ type: 'theme/switch' }))

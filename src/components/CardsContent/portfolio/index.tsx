@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import styles from '../styles.module.scss'
 import { connect } from 'react-redux'
 import { DataGrid, ruRU as xDataGridRu, enUS as xDataGridEnUS } from '@mui/x-data-grid'
@@ -10,14 +9,14 @@ import Search from './Search'
 import ProjectInfoDialog from './ProjectInfoDialog'
 import useMediaQuery from '@mui/material/useMediaQuery'
 
-Portfolio.propTypes = {
-  translation: PropTypes.object,
-  portfolio: PropTypes.object,
-  locale: PropTypes.string,
-  dispatch: PropTypes.func
-}
+type PortfolioProps = {
+  translation?: object;
+  portfolio?: object;
+  locale?: string;
+  dispatch?(...args: unknown[]): unknown;
+};
 
-function Portfolio(props) {
+function Portfolio(props: PortfolioProps) {
   const [searchTerms, setSearchTerms] = React.useState([])
   const [loading, setLoading] = React.useState(false)
   const [, forceUpdateOnHistoryPush] = React.useState(false)

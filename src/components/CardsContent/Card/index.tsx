@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import styles from './styles.module.scss'
 import { connect } from 'react-redux'
 import cx from 'classnames'
@@ -6,18 +5,6 @@ import { MdChevronRight } from 'react-icons/md'
 
 import Typography from '@mui/material/Typography'
 import ButtonBase from '@mui/material/ButtonBase'
-
-Card.propTypes = CardContainer.propTypes = {
-  children: PropTypes.node,
-  avatar: PropTypes.node,
-  containerStyle: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)]),
-  className: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)]),
-  title: PropTypes.string,
-  subtitle: PropTypes.string,
-  caption: PropTypes.string,
-  theme: PropTypes.string,
-  link: PropTypes.string,
-}
 
 interface CardProps {
   children?: React.ReactNode
@@ -63,7 +50,19 @@ function Card(props: CardProps) {
   )
 }
 
-function CardContainer(props) {
+type CardContainerProps = {
+  children?: React.ReactNode;
+  avatar?: React.ReactNode;
+  containerStyle?: string | string[];
+  className?: string | string[];
+  title?: string;
+  subtitle?: string;
+  caption?: string;
+  theme?: string;
+  link?: string;
+};
+
+function CardContainer(props: CardContainerProps) {
   const containerClassName = cx(styles.card, { [styles.darkTheme]: props.theme === 'dark' })
 
   return (

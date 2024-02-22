@@ -1,5 +1,4 @@
 import * as THREE from 'three'
-import PropTypes from 'prop-types'
 import { useMemo, useRef, useLayoutEffect } from 'react'
 import { extend, useLoader } from '@react-three/fiber'
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader'
@@ -7,16 +6,26 @@ import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry'
 import { animated } from '@react-spring/three'
 
 extend({ TextGeometry })
-Text.propTypes = {
-  children: PropTypes.string,
-  vAlign: PropTypes.string,
-  hAlign: PropTypes.string,
-  size: PropTypes.number,
-  color: PropTypes.any,
-  font: PropTypes.string,
-  bevelEnabled: PropTypes.bool,
-}
-export default function Text({ children, vAlign = 'top', hAlign = 'right', color, size = 15, bevelEnabled = false, ...props }) {
+
+type TextProps = {
+  children?: string;
+  vAlign?: string;
+  hAlign?: string;
+  size?: number;
+  color?: any;
+  font?: string;
+  bevelEnabled?: boolean;
+};
+
+export default function Text({
+  children,
+  vAlign = 'top',
+  hAlign = 'right',
+  color,
+  size = 15,
+  bevelEnabled = false,
+  ...props
+}: TextProps) {
   size /= 100
   const font = useLoader(FontLoader, props.font)
   const config = useMemo(

@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import styles from './styles.module.scss'
 import Card from '../Card/index.js'
 import categories from '../../../data/categories.js'
@@ -10,12 +9,12 @@ import CardContent from '@mui/material/CardContent'
 import CardActions from '@mui/material/CardActions'
 import Button from '@mui/material/Button'
 
-Experience.propTypes = {
-  translation: PropTypes.object,
-  dispatch: PropTypes.func
-}
+type ExperienceProps = {
+  translation?: object;
+  dispatch?(...args: unknown[]): unknown;
+};
 
-export default function Experience(props) {
+export default function Experience(props: ExperienceProps) {
   const openProjects = terms => () => {
     const termsUnique = Array.from(new Set(terms.map(s => s.toLowerCase())))
     const query = new URLSearchParams(window.location.search)

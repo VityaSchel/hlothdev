@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Card from '../Card'
 import styles from '../styles.module.scss'
 import { connect } from 'react-redux'
@@ -9,11 +8,11 @@ import blenderScreenshot from 'assets/images/aboutSite/blender-screenshot.jpeg'
 import Skeleton from '@mui/material/Skeleton'
 import Typography from '@mui/material/Typography'
 
-AboutSite.propTypes = {
-  translation: PropTypes.object,
-}
+type AboutSiteProps = {
+  translation?: object;
+};
 
-function AboutSite(props) {
+function AboutSite(props: AboutSiteProps) {
   const translation = props.translation.ABOUT_THIS_WEBSITE
   const [visitorsCounter, setVisitorsCounter] = React.useState(null)
 

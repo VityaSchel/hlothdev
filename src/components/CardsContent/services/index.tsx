@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import Card from '../Card'
 import LanguageIcon from '@mui/icons-material/Language'
 import { MdOutlineSpaceDashboard } from 'react-icons/md'
@@ -8,11 +7,11 @@ import mailTo from 'mailto-link'
 import { connect } from 'react-redux'
 import useMediaQuery from '@mui/material/useMediaQuery'
 
-Services.propTypes = {
-  translation: PropTypes.object,
-}
+type ServicesProps = {
+  translation?: object;
+};
 
-function Services(props) {
+function Services(props: ServicesProps) {
   const isMobile = useMediaQuery('(max-width: 768px)')
   const cards = props.translation.SERVICES_CARDS
   if(!cards) return <></>

@@ -1,5 +1,4 @@
 import React, { Suspense } from 'react'
-import PropTypes from 'prop-types'
 import { useLoader, useFrame } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { Raycaster } from 'three'
@@ -12,10 +11,11 @@ const generateSwitches = () => [
   Math.round(Math.random()),
 ]
 
-BackgroundShapes.propTypes = {
-  render: PropTypes.bool
-}
-function BackgroundShapes(props) {
+type BackgroundShapesProps = {
+  render?: boolean;
+};
+
+function BackgroundShapes(props: BackgroundShapesProps) {
   const { layout } = useRedux(state => ({
     layout: state.layout
   }))
@@ -52,12 +52,13 @@ const Shape = props => (
   </Suspense>
 )
 
-ShapeModel.propTypes = {
-  position: PropTypes.object,
-  url: PropTypes.string,
-  render: PropTypes.boolean
-}
-function ShapeModel(props) {
+type ShapeModelProps = {
+  position?: object;
+  url?: string;
+  render?: unknown;
+};
+
+function ShapeModel(props: ShapeModelProps) {
   const [accelerationSwitch, setAccelerationSwitch] = React.useState(generateSwitches())
   const [acceleration, setAcceleration] = React.useState([0, 0, 0])
   const object = React.useRef()

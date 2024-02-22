@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import styles from './styles.module.scss'
 import { connect } from 'react-redux'
 import Popper from '@mui/material/Popper'
@@ -14,14 +13,15 @@ import ClickAwayListener from '@mui/material/ClickAwayListener'
 import Badge from '@mui/material/Badge'
 import cx from 'classnames'
 
-Filters.propTypes = {
-  checked: PropTypes.object,
-  translation: PropTypes.object,
-  setChecked: PropTypes.func,
-  filtersList: PropTypes.array,
-  theme: PropTypes.string
-}
-function Filters(props) {
+type FiltersProps = {
+  checked?: object;
+  translation?: object;
+  setChecked?(...args: unknown[]): unknown;
+  filtersList?: unknown[];
+  theme?: string;
+};
+
+function Filters(props: FiltersProps) {
   const [arrowRef, setArrowRef] = React.useState(null)
   const filterDialogAnchorRef = React.useRef()
   const [filterMenuOpen, setFilterMenuOpen] = React.useState(false)

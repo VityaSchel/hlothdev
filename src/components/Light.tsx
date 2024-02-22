@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { useThree } from '@react-three/fiber'
 import { useHelper } from '@react-three/drei'
 import { SpotLightHelper } from 'three'
@@ -21,15 +20,16 @@ export default function Light() {
   )
 }
 
-LightSource.propTypes = {
-  from: PropTypes.array,
-  to: PropTypes.array,
-  angle: PropTypes.number,
-  distance: PropTypes.number,
-  debug: PropTypes.bool,
-  intensity: PropTypes.any,
-}
-function LightSource(props) {
+type LightSourceProps = {
+  from?: unknown[];
+  to?: unknown[];
+  angle?: number;
+  distance?: number;
+  debug?: boolean;
+  intensity?: any;
+};
+
+function LightSource(props: LightSourceProps) {
   const lightRef = React.useRef()
   const targetRef = React.useRef()
   const { scene } = useThree()

@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import styles from './styles.module.scss'
 import IconButton from '@mui/material/IconButton'
 import { MdClear } from 'react-icons/md'
@@ -9,7 +8,14 @@ import InputLabel from '@mui/material/InputLabel'
 import OutlinedInput from '@mui/material/OutlinedInput'
 import Filters from './Filters.js'
 
-const Search = React.forwardRef((props, ref) => {
+type SearchProps = {
+  translation?: object;
+  setSearchTerms?(...args: unknown[]): unknown;
+  setLoading?(...args: unknown[]): unknown;
+  setSearchFilterFunc?(...args: unknown[]): unknown;
+};
+
+const Search = React.forwardRef<HTMLElement, SearchProps>((props, ref) => {
   const translation = props.translation.SEARCH
   const [searchTerm, setSearchTerm] = React.useState('')
   const [filters, setFilters] = React.useState({})
@@ -108,11 +114,5 @@ const Search = React.forwardRef((props, ref) => {
   )
 })
 
-Search.propTypes = {
-  translation: PropTypes.object,
-  setSearchTerms: PropTypes.func,
-  setLoading: PropTypes.func,
-  setSearchFilterFunc: PropTypes.func,
-}
 Search.displayName = 'Search'
 export default Search
