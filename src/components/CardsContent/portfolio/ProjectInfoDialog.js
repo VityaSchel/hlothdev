@@ -21,8 +21,9 @@ ProjectInfoDialog.propTypes = {
 export default function ProjectInfoDialog(props) {
   const [shareTooltipOpened, setShareTooltipOpened] = React.useState(false)
 
-  const openedProjectID = decodeURIComponent(window.location.pathname.substring(1)?.split?.('/')?.[1])
-  const openedProject = projects.find(({ id }) => id === openedProjectID)
+  const urlProjectID = window.location.pathname.substring(1).split('/')[1]
+  const openedProjectID = urlProjectID ? decodeURIComponent(urlProjectID) : undefined
+  const openedProject = openedProjectID ? projects.find(({ id }) => id === openedProjectID) : null
   const showShockingProjects = props.portfolio.showShockingProjects
   const shockingProject = showShockingProjects ? false : (!openedProject?.hidden && openedProject?.unpublic)
   const actualProject = openedProject?.unpublic ? showShockingProjects : !openedProject?.hidden

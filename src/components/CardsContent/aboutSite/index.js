@@ -20,7 +20,7 @@ function AboutSite(props) {
   React.useEffect(() => {
     (async () => {
       try {
-        const response = await fetch(`${process.env.REACT_APP_API_URL}/visitorsThisMonth`)
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/visitorsThisMonth`)
         setVisitorsCounter(Number(await response.text()))
       } catch(e) {
         setVisitorsCounter(NaN)
