@@ -43,7 +43,10 @@
       align-items: center;
 
       h2 {
-        line-height: 1.9em;
+        &:first-child {
+          margin-top: 0.5rem;
+        }
+        line-height: 1.5em;
       }
 
       ul {
