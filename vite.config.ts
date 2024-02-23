@@ -10,7 +10,7 @@ export default defineConfig({
     // viteRawPlugin({
     //   fileRegex: /\.blob$/
     // }),
-    svgr()
+    svgr(),
   ],
   resolve: {
     alias: {

@@ -1,5 +1,3 @@
-import styles from './styles.module.scss'
-import { connect } from 'react-redux'
 import cx from 'classnames'
 import { MdChevronRight } from 'react-icons/md'
 
@@ -24,29 +22,29 @@ interface CardProps {
 function Card(props: CardProps) {
   return (
     <>
-      {props.avatar && <div className={styles.avatar} style={props.avatarStyles}>
+      {props.avatar && <div className={'mr-[10px] bg-[#eee] p-[20px] flex justify-center items-center rounded-[999px] shadow-card-avatar [&>svg]:w-[48px] [&>svg]:h-[48px]'} style={props.avatarStyles}>
         {props.avatar}
       </div>}
-      <div className={cx(styles.content, props.className)}>
-        {props.title && <div className={styles.title}>
+      <div className={cx('flex flex-col text-left flex-[1]', props.className)}>
+        {props.title && <div>
           <Typography variant='h6' gutterBottom component='div'>
             {props.title}
           </Typography>
         </div>}
-        {props.subtitle && <div className={styles.subtitle}>
+        {props.subtitle && <div>
           <Typography variant='subtitle1' gutterBottom component='div'>
             {props.subtitle}
           </Typography>
         </div>}
         {props.children}
-        {props.caption && <div className={styles.caption}>
+        {props.caption && <div>
           <Typography variant='overline' gutterBottom display='block'>
             {props.caption}
           </Typography>
         </div>}
       </div>
-      {props.link && <div className={styles.chevron}>
-        <MdChevronRight />
+      {props.link && <div>
+        <MdChevronRight className='w-[30px] h-[30px] text-[#fff]' />
       </div>}
     </>
   )
@@ -65,18 +63,20 @@ type CardContainerProps = {
 
 function CardContainer(props: CardContainerProps) {
   const { theme } = useAppSelector(selectTheme)
-  const containerClassName = cx(styles.card, { [styles.darkTheme]: theme === 'dark' })
+  const containerClassName = cx('w-full h-full box-border p-[25px] flex gap-[20px] items-center bg-[#fff] no-underline text-[#000]', { 'bg-[linear-gradient(125deg,_#282828,_#1e1e1e)] text-[#fff]': theme === 'dark' })
+
+  const containerClasses = `'!rounded-[15px] overflow-hidden shadow-card-container ${props.containerStyle}`
 
   return (
     props.link
       ? (
-        <ButtonBase className={[styles.container, props.containerStyle].join(' ') }>
+        <ButtonBase className={containerClasses}>
           <a className={containerClassName} href={props.link}>
             <Card {...props} />
           </a>
         </ButtonBase>
       ) : (
-        <div className={[styles.container, props.containerStyle].join(' ')}>
+        <div className={containerClasses}>
           <div className={containerClassName}>
             <Card {...props} />
           </div>
