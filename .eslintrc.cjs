@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-undef
 module.exports = {
   'env': {
     'browser': true,
@@ -42,6 +43,7 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'no-unused-vars': ['warn'],
     '@typescript-eslint/no-explicit-any': 'off',
-    '@typescript-eslint/no-unused-vars': ['warn']
+    '@typescript-eslint/no-unused-vars': ['warn'],
+    'react/no-unknown-property': 'off'
   }
 }

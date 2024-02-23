@@ -12,11 +12,12 @@
   }
 
   .logo {
-    width: auto;
-    aspect-ratio: 1/1;
-    $size: 52px;
-    height: $size;
-    width: $size;
+    width: 52px;
+    // aspect-ratio: 1/1;
+    // $size: 52px;
+    // height: $size;
+    // width: $size;
+    height: 52px;
     object-fit: contain;
     padding: 10px;
     box-sizing: border-box;

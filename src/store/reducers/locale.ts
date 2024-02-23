@@ -1,13 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 import type { RootState } from '../index'
+import { getLocale } from '@/shared/utils/language'
 
 type LocaleSlice = {
   locale: string
 }
 
 const initialState: LocaleSlice = {
-  locale: 'en'
+  locale: getLocale(window.navigator.language)
 }
 
 export const localeSlice = createSlice({
@@ -15,7 +16,7 @@ export const localeSlice = createSlice({
   initialState,
   reducers: {
     updateLocale: (state, action: PayloadAction<string>) => {
-      state.locale = action.payload
+      state.locale = getLocale(action.payload)
     }
   }
 })

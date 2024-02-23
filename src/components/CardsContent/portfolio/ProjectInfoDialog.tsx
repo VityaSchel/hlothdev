@@ -10,21 +10,22 @@ import Tooltip from '@mui/material/Tooltip'
 import projects from '../../../data/projects'
 import copy from 'copy-to-clipboard'
 import { MdLink, MdOutlineTranslate } from 'react-icons/md'
+import { useAppDispatch, useAppSelector } from '@/store/hooks'
+import { selectTranslation } from '@/store/reducers/translation'
+import { selectPortfolio, setShowShockingProjects } from '@/store/reducers/portfolio'
 
-type ProjectInfoDialogProps = {
-  updateFunc?(...args: unknown[]): unknown;
-  showShockingProjects?(...args: unknown[]): unknown;
-  translation?: object;
-  portfolio?: object;
-};
-
-export default function ProjectInfoDialog(props: ProjectInfoDialogProps) {
+export default function ProjectInfoDialog({ updateFunc }: {
+  updateFunc(arg: number): void;
+}) {
+  const translation = useAppSelector(selectTranslation).PORTFOLIO
+  const portfolio = useAppSelector(selectPortfolio)
+  const dispatch = useAppDispatch()
   const [shareTooltipOpened, setShareTooltipOpened] = React.useState(false)
 
   const urlProjectID = window.location.pathname.substring(1).split('/')[1]
   const openedProjectID = urlProjectID ? decodeURIComponent(urlProjectID) : undefined
   const openedProject = openedProjectID ? projects.find(({ id }) => id === openedProjectID) : null
-  const showShockingProjects = props.portfolio.showShockingProjects
+  const showShockingProjects = portfolio.showShockingProjects
   const shockingProject = showShockingProjects ? false : (!openedProject?.hidden && openedProject?.unpublic)
   const actualProject = openedProject?.unpublic ? showShockingProjects : !openedProject?.hidden
   const handleClose = () => {
@@ -32,7 +33,7 @@ export default function ProjectInfoDialog(props: ProjectInfoDialogProps) {
     parts.pop()
     const newPath = parts.join('/') + window.location.search
     history.pushState(null, '', newPath)
-    props.updateFunc({})
+    updateFunc(0)
   }
 
   const handleShare = () => {
@@ -40,7 +41,7 @@ export default function ProjectInfoDialog(props: ProjectInfoDialogProps) {
     if('share' in navigator) {
       navigator.share({
         url,
-        title: `${document.title} — ${openedProject.name}`
+        title: `${document.title} — ${openedProject!.name}`
       })
     } else {
       copy(url)
@@ -51,7 +52,7 @@ export default function ProjectInfoDialog(props: ProjectInfoDialogProps) {
   if(!openedProject) return <div></div>
   return (
     <Dialog
-      open={openedProjectID.length}
+      open={Boolean(openedProjectID?.length)}
       onClose={handleClose}
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
@@ -59,9 +60,9 @@ export default function ProjectInfoDialog(props: ProjectInfoDialogProps) {
       <DialogTitle id="alert-dialog-title">
         {
           openedProject.hidden
-            ? props.translation.HIDDEN_PROJECT.NAME
+            ? translation.HIDDEN_PROJECT.NAME
             : shockingProject
-              ? props.translation.SHOCK_PROJECT.NAME
+              ? translation.SHOCK_PROJECT.NAME
               : openedProject.name
         }
       </DialogTitle>
@@ -69,27 +70,27 @@ export default function ProjectInfoDialog(props: ProjectInfoDialogProps) {
         <DialogContentText id="alert-dialog-description">
           {
             openedProject.hidden
-              ? props.translation.HIDDEN_PROJECT.DESCRIPTION.replace('%PROJECT_ID%', openedProject.name.substring(9))
+              ? translation.HIDDEN_PROJECT.DESCRIPTION.replace('%PROJECT_ID%', openedProject.name.substring(9))
               : shockingProject
-                ? props.translation.SHOCK_PROJECT.DESCRIPTION
+                ? translation.SHOCK_PROJECT.DESCRIPTION
                 : openedProject.description
           }
         </DialogContentText>
         {
-          actualProject && props.translation.PROJECT_DIALOG.TRANSLATE_DESCRIPTION_CODE &&
+          actualProject && translation.PROJECT_DIALOG.TRANSLATE_DESCRIPTION_CODE &&
           <span className={styles.translateButton}>
             <a 
-              href={`https://translate.google.com/?sl=ru&tl=${props.translation.PROJECT_DIALOG.TRANSLATE_DESCRIPTION_CODE}&text=${encodeURIComponent(openedProject.description)}&op=translate`} 
+              href={`https://translate.google.com/?sl=ru&tl=${translation.PROJECT_DIALOG.TRANSLATE_DESCRIPTION_CODE}&text=${encodeURIComponent(openedProject.description)}&op=translate`} 
               target='_blank' rel='noreferrer'
             >
-              <MdOutlineTranslate /> {props.translation.PROJECT_DIALOG.TRANSLATE_DESCRIPTION_LABEL}
+              <MdOutlineTranslate /> {translation.PROJECT_DIALOG.TRANSLATE_DESCRIPTION_LABEL}
             </a>
           </span>
         }
         {
           actualProject && openedProject.links && 
           <DialogContentText className={styles.links}>
-            <span><MdLink /> {props.translation.PROJECT_DIALOG.LINKS_LABEL}:</span>
+            <span><MdLink /> {translation.PROJECT_DIALOG.LINKS_LABEL}:</span>
             {openedProject.links.map(link => (
               <span key={link}>
                 <a href={link} target='_blank' rel='noreferrer'>{link}</a>
@@ -99,15 +100,15 @@ export default function ProjectInfoDialog(props: ProjectInfoDialogProps) {
         }
       </DialogContent>
       <DialogActions>
-        {actualProject && <Tooltip open={shareTooltipOpened} title={props.translation.PROJECT_DIALOG.LINK_COPIED}>
+        {actualProject && <Tooltip open={shareTooltipOpened} title={translation.PROJECT_DIALOG.LINK_COPIED}>
           <Button onClick={handleShare} onPointerOut={() => setShareTooltipOpened(false)}>
-            {props.translation.PROJECT_DIALOG.SHARE_LABEL}
+            {translation.PROJECT_DIALOG.SHARE_LABEL}
           </Button>
         </Tooltip>}
-        {shockingProject && <Button onClick={props.showShockingProjects}>
-          {props.translation.PROJECT_DIALOG.SHOW_SHOCKING_PROJECTS}
+        {shockingProject && <Button onClick={() => dispatch(setShowShockingProjects(true))}>
+          {translation.PROJECT_DIALOG.SHOW_SHOCKING_PROJECTS}
         </Button>}
-        <Button onClick={handleClose}>{props.translation.PROJECT_DIALOG.CLOSE_LABEL}</Button>
+        <Button onClick={handleClose}>{translation.PROJECT_DIALOG.CLOSE_LABEL}</Button>
       </DialogActions>
     </Dialog>
   )

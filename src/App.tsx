@@ -70,28 +70,14 @@ WebFont.load({
 })
 
 export function App() {
-  const { locale: appLocale } = useAppSelector(selectLocale)
   const translation = useAppSelector(selectTranslation)
   const { theme } = useAppSelector(selectTheme)
   const cursor = useAppSelector(selectCursor)
   const { route } = useAppSelector(selectRoute)
-  // const spotLightTarget = React.useRef()
-  // const lightRef = React.useRef()
   const dispatch = useAppDispatch()
   useHotkeys('space', () => {
     dispatch(switchTheme())
   })
-
-  // React.useEffect(() => {
-  //   if(!lightRef.current || !spotLightTarget.current) return
-  //   lightRef.current.target = spotLightTarget.current
-  // }, [lightRef, spotLightTarget])
-
-  React.useEffect(() => {
-    const locale = appLocale ?? navigator.language
-    dispatch(updateLocale(locale))
-    dispatch(setLocale(locale))
-  }, [navigator.language])
 
   React.useEffect(() => {
     history.listen(({ action, location }) => {

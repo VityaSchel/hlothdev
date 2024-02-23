@@ -7,20 +7,29 @@ import FormControl from '@mui/material/FormControl'
 import InputLabel from '@mui/material/InputLabel'
 import OutlinedInput from '@mui/material/OutlinedInput'
 import Filters from './Filters.js'
+import { useAppSelector } from '@/store/hooks.js'
+import { selectTranslation } from '@/store/reducers/translation.js'
 
-type SearchProps = {
-  translation?: object;
-  setSearchTerms?(...args: unknown[]): unknown;
-  setLoading?(...args: unknown[]): unknown;
-  setSearchFilterFunc?(...args: unknown[]): unknown;
-};
+export type SearchProps = {
+  setSearchTerms(terms: string[]): void;
+  setLoading(isLoading: boolean): void;
+  setSearchFilterFunc(func: () => any): void;
+}
 
-const Search = React.forwardRef<HTMLElement, SearchProps>((props, ref) => {
-  const translation = props.translation.SEARCH
+export type SearchRef = {
+  setTerms: (terms: string[]) => void;
+}
+
+const Search = React.forwardRef<SearchRef, SearchProps>(({
+  setLoading,
+  setSearchTerms,
+  setSearchFilterFunc
+}, ref) => {
+  const translation = useAppSelector(selectTranslation).PORTFOLIO.SEARCH
   const [searchTerm, setSearchTerm] = React.useState('')
   const [filters, setFilters] = React.useState({})
   const terms = searchTerm
-    .match(/\\?.|^$/g)
+    .match(/\\?.|^$/g)!
     .reduce((prev, cur) => {
       if(cur === '"') {
         prev.quote ^= 1
@@ -33,23 +42,25 @@ const Search = React.forwardRef<HTMLElement, SearchProps>((props, ref) => {
     }, { term: [''] }).term
 
   React.useImperativeHandle(ref, () => ({
-    setTerms(terms) {
+    setTerms(terms: string[]) {
       setSearchTerm(terms.map(term => term.includes(' ') ? `"${term}"` : term).join(' '))
     }
   }))
 
   React.useEffect(() => {
-    props.setLoading(true)
+    setLoading(true)
     const currentTimeout = setTimeout(() => {
-      props.setSearchTerms(terms)
-      props.setLoading(false)
+      setSearchTerms(terms)
+      setLoading(false)
     }, 400)
     return () => clearTimeout(currentTimeout)
   }, [searchTerm])
 
   React.useEffect(() => {
     const query = new URLSearchParams(window.location.search)
-    if(query.has('q')) setSearchTerm(query.get('q'))
+    if(query.has('q')) {
+      setSearchTerm(query.get('q') as string)
+    }
   }, [])
 
   React.useEffect(() => {
@@ -63,7 +74,7 @@ const Search = React.forwardRef<HTMLElement, SearchProps>((props, ref) => {
 
   const handleClearInput = () => {
     setSearchTerm('')
-    props.setSearchTerms(terms)
+    setSearchTerms(terms)
   }
 
   const filtersList = [
@@ -78,7 +89,7 @@ const Search = React.forwardRef<HTMLElement, SearchProps>((props, ref) => {
 
   React.useEffect(() => {
     const functions = filtersList.filter(({ id }) => filters[id]).map(({ filterFunc }) => filterFunc)
-    props.setSearchFilterFunc(() => project => functions.every(func => func(project)))
+    setSearchFilterFunc(() => project => functions.every(func => func(project)))
   }, [filters])
 
   return (
@@ -90,7 +101,7 @@ const Search = React.forwardRef<HTMLElement, SearchProps>((props, ref) => {
           value={searchTerm}
           onChange={event => setSearchTerm(event.target.value)}
           label={translation.PLACEHOLDER}
-          placeholder={translation.SEARCH_EXAMPLE}
+          placeholder={translation.EXAMPLE}
           className={styles.textField}
           endAdornment={
             <InputAdornment position='end'>

@@ -7,14 +7,15 @@ import svgr from '@svgr/rollup'
 export default defineConfig({
   plugins: [
     react(),
-    viteRawPlugin({
-      fileRegex: /\.blob$/
-    }),
+    // viteRawPlugin({
+    //   fileRegex: /\.blob$/
+    // }),
     svgr()
   ],
   resolve: {
     alias: {
       '@': '/src'
     }
-  }
+  },
+  assetsInclude: ['**/*.blob']
 })

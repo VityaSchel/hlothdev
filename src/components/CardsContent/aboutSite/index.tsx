@@ -1,20 +1,17 @@
 import React from 'react'
 import Card from '../Card'
 import styles from '../styles.module.scss'
-import { connect } from 'react-redux'
 import { BiLinkExternal } from 'react-icons/bi'
 import firstConceptArt from '@/assets/images/aboutSite/first-concept-art.jpeg'
 import blenderScreenshot from '@/assets/images/aboutSite/blender-screenshot.jpeg'
 import Skeleton from '@mui/material/Skeleton'
 import Typography from '@mui/material/Typography'
+import { useAppSelector } from '@/store/hooks'
+import { selectTranslation } from '@/store/reducers/translation'
 
-type AboutSiteProps = {
-  translation?: object;
-};
-
-function AboutSite(props: AboutSiteProps) {
-  const translation = props.translation.ABOUT_THIS_WEBSITE
-  const [visitorsCounter, setVisitorsCounter] = React.useState(null)
+export function AboutSite() {
+  const translation = useAppSelector(selectTranslation).ABOUT_THIS_WEBSITE
+  const [visitorsCounter, setVisitorsCounter] = React.useState<number | null>(null)
 
   React.useEffect(() => {
     (async () => {
@@ -42,13 +39,13 @@ function AboutSite(props: AboutSiteProps) {
           </ul>
           <p dangerouslySetInnerHTML={{ __html: translation.TEXT2 }} />
           {visitorsCounter !== null && <Typography variant='caption' className={styles.counter}>
-            <span>{translation.VISITORS_THIS_MONTH}: {visitorsCounter}.</span> {
+            <span>{translation.VISITORS_THIS_MONTH}: {String(visitorsCounter)}.</span> {
               visitorsCounter === 0 
                 ? <span>{translation.ZERO_VISITORS}</span>
                 : Number.isNaN(visitorsCounter)
                   ? <span>{translation.NAN_VISITORS}</span>
                   : Boolean(visitorsCounter <= 5) && 
-                    <span>{translation.TOO_LOW_VISITORS.replace('%v', visitorsCounter)}</span>
+                    <span>{translation.TOO_LOW_VISITORS.replace('%v', String(visitorsCounter))}</span>
             }
           </Typography>}
         </div>
@@ -70,5 +67,3 @@ function AboutSite(props: AboutSiteProps) {
     </div>
   )
 }
-
-export default connect(state => ({ translation: state.translation }))(AboutSite)

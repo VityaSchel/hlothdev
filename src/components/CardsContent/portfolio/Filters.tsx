@@ -12,16 +12,18 @@ import Checkbox from '@mui/material/Checkbox'
 import ClickAwayListener from '@mui/material/ClickAwayListener'
 import Badge from '@mui/material/Badge'
 import cx from 'classnames'
+import { useAppSelector } from '@/store/hooks'
+import { selectTheme } from '@/store/reducers/theme'
 
 type FiltersProps = {
   checked?: object;
   translation?: object;
   setChecked?(...args: unknown[]): unknown;
-  filtersList?: unknown[];
-  theme?: string;
+  filtersList?: unknown[]
 };
 
 function Filters(props: FiltersProps) {
+  const { theme } = useAppSelector(selectTheme)
   const [arrowRef, setArrowRef] = React.useState(null)
   const filterDialogAnchorRef = React.useRef()
   const [filterMenuOpen, setFilterMenuOpen] = React.useState(false)
@@ -72,7 +74,7 @@ function Filters(props: FiltersProps) {
             },
           ]}
         >
-          <div ref={setArrowRef} className={cx(styles.arrow, { [styles.lightTheme]: props.theme === 'light' })} />
+          <div ref={setArrowRef} className={cx(styles.arrow, { [styles.lightTheme]: theme === 'light' })} />
           <Paper className={styles.paper}>
             <Typography sx={{ p: 2 }}>
               <FormGroup>

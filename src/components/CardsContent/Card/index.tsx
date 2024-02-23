@@ -5,6 +5,8 @@ import { MdChevronRight } from 'react-icons/md'
 
 import Typography from '@mui/material/Typography'
 import ButtonBase from '@mui/material/ButtonBase'
+import { useAppSelector } from '@/store/hooks'
+import { selectTheme } from '@/store/reducers/theme'
 
 interface CardProps {
   children?: React.ReactNode
@@ -12,7 +14,7 @@ interface CardProps {
   containerStyle?: string | string[]
   className?: string | string[]
   avatarStyles?: object
-  title?: string
+  title?: string | React.ReactNode
   subtitle?: string
   caption?: string
   theme?: string
@@ -55,15 +57,15 @@ type CardContainerProps = {
   avatar?: React.ReactNode;
   containerStyle?: string | string[];
   className?: string | string[];
-  title?: string;
+  title?: string | React.ReactNode;
   subtitle?: string;
   caption?: string;
-  theme?: string;
   link?: string;
 };
 
 function CardContainer(props: CardContainerProps) {
-  const containerClassName = cx(styles.card, { [styles.darkTheme]: props.theme === 'dark' })
+  const { theme } = useAppSelector(selectTheme)
+  const containerClassName = cx(styles.card, { [styles.darkTheme]: theme === 'dark' })
 
   return (
     props.link
@@ -83,6 +85,4 @@ function CardContainer(props: CardContainerProps) {
   )
 }
 
-export default connect(state => ({
-  theme: state.theme
-}))(CardContainer)
+export default CardContainer

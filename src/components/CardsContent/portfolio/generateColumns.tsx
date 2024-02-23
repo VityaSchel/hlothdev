@@ -10,8 +10,9 @@ import { ReactComponent as webIcon } from '@/assets/images/svgIcons/web_icon.svg
 import { ReactComponent as appIcon } from '@/assets/images/svgIcons/app_icon.svg'
 import { ReactComponent as alertDecagram } from '@/assets/images/svgIcons/mdi_alert_decagram.svg'
 import { ReactComponent as eyeOff } from '@/assets/images/svgIcons/mdi_eye_off.svg'
+import { Project } from '@/data/projects'
 
-export default function generateColumns({ 
+export default function generateColumns({
   locale, translation, setSearchTerms, showShockingProjects, ignoreContentWidthLimit = false }) {
   const dateRegex = /^\d+[ -]\w+[ -]\d+$/
   const dateColWidth = 150
@@ -37,13 +38,17 @@ export default function generateColumns({
       sortable: false,
       disableColumnMenu: true,
       width: 71,
-      renderCell: ({ row: { logo, category, hidden, unpublic } }) => {
-        if(logo && (!unpublic || showShockingProjects)) {
-          return <img src={logo} height={100} className={styles.logo} />
+      renderCell: ({ row }: { row: Project }) => {
+        if(row.logo && (!row.unpublic || showShockingProjects)) {
+          return (
+            <div>
+              <img src={row.logo} className={styles.logo} />
+            </div>
+          )
         } else {
-          const shockingProject = unpublic && !showShockingProjects
+          const shockingProject = row.unpublic && !showShockingProjects
           let Logo
-          if(hidden) Logo = eyeOff
+          if (row.hidden) Logo = eyeOff
           else if(shockingProject) Logo = alertDecagram
           else Logo = {
             'figma_plugin': figmaIcon,
@@ -52,8 +57,8 @@ export default function generateColumns({
             'website': webIcon,
             'bot': robotIcon,
             'game': gamepadIcon,
-          }[category?.split('/')[0]] ?? branchIcon
-          return <Logo className={[styles.logo, styles.placeholderLogo].join(' ')} />
+          }[row.category?.split('/')[0]] ?? branchIcon
+          return <Logo width={51} height={51} className={[styles.logo, styles.placeholderLogo].join(' ')} />
         }
       }
     },
@@ -61,24 +66,25 @@ export default function generateColumns({
       field: 'name',
       headerName: translation.COLUMNS.NAME,
       ...(!ignoreContentWidthLimit ? { flex: 10 } : { width: 10 * mobileContentWidthMult }),
-      renderCell: ({ row: { name, category, hidden, unpublic, tags } }) => {
-        const shockingProject = unpublic && !showShockingProjects
-        if(hidden) name = translation.HIDDEN_PROJECT.NAME
-        else if(shockingProject) name = translation.SHOCK_PROJECT.NAME
+      renderCell: ({ row }: { row: Project }) => {
+        const shockingProject = row.unpublic && !showShockingProjects
+        let name: string = row.name
+        if (row.hidden) name = translation.HIDDEN_PROJECT.NAME
+        else if (shockingProject) name = translation.SHOCK_PROJECT.NAME
 
-        const translatedCategory = translation.CATEGORIES[category]
+        const translatedCategory = translation.CATEGORIES[row.category]
 
         return <span className={cx(styles.multilineCell, styles.nameCell)}>
           <div className={styles.info}>
-            <span className={(hidden || shockingProject) ? styles.projectInfoPlaceholder : styles.projectName}>{name}</span>
-            {category && (
+            <span className={(row.hidden || shockingProject) ? styles.projectInfoPlaceholder : styles.projectName}>{name}</span>
+            {row.category && (
               <span className={styles.projectCategory} onClick={search(translatedCategory)}>{translatedCategory}</span>
             )}
           </div>
-          {tags?.includes('order') && (
+          {row.tags?.includes('order') && (
             <Chip label={translation.TAGS.ORDER} size='small' />
           )}
-          {unpublic && showShockingProjects && (
+          {row.unpublic && showShockingProjects && (
             <Chip label={translation.HIDDEN_PROJECT.NAME} size='small' />
           )}
         </span>
@@ -90,12 +96,13 @@ export default function generateColumns({
       ...(!ignoreContentWidthLimit ? { flex: 18 } : { width: 18 * mobileContentWidthMult }),
       sortable: false,
       disableColumnMenu: true,
-      renderCell: ({ row: { description, hidden, unpublic } }) => {
-        const shockingProject = unpublic && !showShockingProjects
-        if(hidden) description = translation.HIDDEN_PROJECT.DESCRIPTION_PREVIEW
+      renderCell: ({ row }: { row: Project }) => {
+        const shockingProject = row.unpublic && !showShockingProjects
+        let description: string = row.description
+        if(row.hidden) description = translation.HIDDEN_PROJECT.DESCRIPTION_PREVIEW
         else if(shockingProject) description = translation.SHOCK_PROJECT.DESCRIPTION_PREVIEW
         return (
-          <span className={cx(styles.description, { [styles.projectInfoPlaceholder]: hidden || shockingProject })}>
+          <span className={cx(styles.description, { [styles.projectInfoPlaceholder]: row.hidden || shockingProject })}>
             {description}
           </span>
         )
@@ -107,8 +114,8 @@ export default function generateColumns({
       ...(!ignoreContentWidthLimit ? { flex: 7 } : { width: 7 * mobileContentWidthMult }),
       sortable: false,
       disableColumnMenu: true,
-      renderCell: ({ row: { stack } }) => <span className={[styles.multilineCell, styles.stack].join(' ')}>
-        {stack.map(technology => (
+      renderCell: ({ row }: { row: Project }) => <span className={[styles.multilineCell, styles.stack].join(' ')}>
+        {row.stack.map(technology => (
           <>
             <Chip
               label={technology}

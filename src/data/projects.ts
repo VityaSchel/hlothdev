@@ -47,7 +47,47 @@ import wikipediaSpeedrunLogo from '../assets/images/projectsLogos/wikipedia-spee
 
 // scope: 1=verysmall 2=small 3=average 4=big 5=huge
 
-export default [
+export type Project = {
+  name: string
+  stack: string[]
+  supported?: boolean | 'partially'
+  dates: {
+    devStart: string
+    release?: string
+    abandon?: string
+  }
+  scope: 1 | 2 | 3 | 4 | 5
+  description: string
+  unpublic: boolean
+  hidden: boolean
+  logo?: string
+  tags?: string[]
+  links?: string[]
+  category: 'game/windows10'
+  | 'game/android'
+  | 'website'
+  | 'website/darknet'
+  | 'bot/telegram'
+  | 'bot/reddit'
+  | 'bot/yandex_alice'
+  | 'bot/vk'
+  | 'figma_plugin'
+  | 'npmjs_library'
+  | 'app'
+  | 'personalsite'
+  | 'order'
+  | 'figma_plugin'
+  | 'npmjs_library'
+  | 'developer_tool'
+  | 'instagram_mask'
+  | 'chrome_extension'
+  | 'stream'
+  | 'minecraft_map'
+  | 'programming_language'
+  id: string
+}
+
+const projects: Project[] = [
   {
     name: 'Stigfinnare',
     stack: [
@@ -229,6 +269,31 @@ export default [
     ],
     category: 'game/android',
     id: 'симулятор-маши-из-gostudy'
+  },
+  {
+    name: 'bot.biz (landing)',
+    stack: [
+      'NextJS',
+      'TypeScript',
+      'React-redux',
+      'next-i18next',
+      'react-reveal',
+      'GraphQL'
+    ],
+    supported: 'partially',
+    dates: { devStart: '2022-05-11', release: '2022-05-28' },
+    scope: 3,
+    description: 'Лендинг с анимациями по готовому макету для сервиса, занимающегося коммерческой деятельностью в сфере ботов, сайтов и приложений. Адаптирован под мобильные устройства, браузер Safari, есть кастомный компонент карусели с нативным скроллингом, переключение темы с переходом и локализация на два языка (пока реализован только один).',
+    unpublic: false,
+    hidden: false,
+    logo: botBizLandingLogo,
+    tags: ['order'],
+    links: [
+      'https://www.figma.com/file/T4fTAPKZXo5nKUiiPE00DU/Local-bot.biz?node-id=0%3A1',
+      'https://youtu.be/zdMy_A5Y2Kk'
+    ],
+    category: 'website',
+    id: 'bot-biz-landing'
   },
   {
     name: 'АБОБА 2024 Кандидат в президенты',
@@ -573,6 +638,25 @@ export default [
     ],
     category: 'website',
     id: 'огэ-генератор'
+  },
+  {
+    name: 'bot.biz (panels)',
+    stack: ['NextJS', 'TypeScript', 'React-redux', 'GraphQL', 'next-i18next'],
+    supported: 'partially',
+    dates: { devStart: '2022-06-09' },
+    scope: 3,
+    description: 'Панель управления, написанная для сервиса, занимающегося коммерческой деятельностью в сфере ботов, сайтов и приложений. Адаптирован под мобильные устройства, браузер Safari, есть кастомный компонент карусели с нативным скроллингом, переключение темы с переходом и локализация на два языка (пока реализован только один).',
+    unpublic: false,
+    hidden: false,
+    logo: botBizLandingLogo,
+    tags: ['order'],
+    links: [
+      'https://youtu.be/buxSGd_65U4',
+      'https://youtu.be/6WhqQxV1-0Q',
+      'https://youtu.be/zx27GHjpedU'
+    ],
+    category: 'website',
+    id: 'bot-biz-panels'
   },
   {
     name: 'FIT vs FEL',
@@ -1467,6 +1551,7 @@ export default [
     links: [
       'https://github.com/VityaSchel/mypron'
     ],
+    category: 'app',
     id: 'mypron'
   },
   {
@@ -1702,6 +1787,7 @@ export default [
     description: '',
     unpublic: true,
     hidden: true,
+    category: 'app',
     id: 'hiddenid-1'
   },
   {
@@ -2025,3 +2111,5 @@ export default [
     id: 'qqsh'
   },
 ]
+
+export default projects

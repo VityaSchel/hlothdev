@@ -27,6 +27,9 @@
       "react": [
         "./node_modules/@types/react"
       ],
+      "three": [
+        "./node_modules/@types/three"
+      ],
       "@/*": [
         "src/*"
       ]

@@ -4,16 +4,13 @@ import { MdOutlineSpaceDashboard } from 'react-icons/md'
 import { GiRobotAntennas, GiAbstract016 } from 'react-icons/gi'
 import styles from '../styles.module.scss'
 import mailTo from 'mailto-link'
-import { connect } from 'react-redux'
 import useMediaQuery from '@mui/material/useMediaQuery'
+import { useAppSelector } from '@/store/hooks'
+import { selectTranslation } from '@/store/reducers/translation'
 
-type ServicesProps = {
-  translation?: object;
-};
-
-function Services(props: ServicesProps) {
+export function Services() {
   const isMobile = useMediaQuery('(max-width: 768px)')
-  const cards = props.translation.SERVICES_CARDS
+  const cards = useAppSelector(selectTranslation).SERVICES_CARDS
   if(!cards) return <></>
 
   const cardsContent = [
@@ -25,19 +22,22 @@ function Services(props: ServicesProps) {
 
   return (
     <div className={styles.services}>
-      {cardsContent.map(card => <Card
-        key={card.key}
-        avatar={!isMobile && card.avatar}
-        title={isMobile 
-          ? <><span className={styles.avatar}>{card.avatar}</span> {cards[card.key].title}</> 
-          : cards[card.key].title
-        }
-        subtitle={cards[card.key].description}
-        caption={cards[card.key].price}
-        link={mailTo({ to: 'hi@hloth.dev', subject: cards[card.key].title })}
-      />)}
+      {cardsContent.map(card => {
+        const cardKey = card.key as keyof typeof cards
+        return (
+          <Card
+            key={card.key}
+            avatar={!isMobile && card.avatar}
+            title={isMobile 
+              ? <><span className={styles.avatar}>{card.avatar}</span> {cards[cardKey].title}</> 
+              : cards[cardKey].title
+            }
+            subtitle={cards[cardKey].description}
+            caption={cards[cardKey].price}
+            link={mailTo({ to: 'hi@hloth.dev', subject: cards[cardKey].title })}
+          />
+        )
+      })}
     </div>
   )
 }
-
-export default connect(state => ({ translation: state.translation }))(Services)

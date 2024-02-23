@@ -7,7 +7,11 @@ import Text from '../Text'
 import { useAppSelector } from '@/store/hooks'
 
 export function MeCardText() {
-  const { translation, locale, theme } = useAppSelector(state => ({ translation: state.translation, locale: state.locale, theme: state.theme }))
+  const { translation, locale, theme } = useAppSelector(state => ({ 
+    translation: state.translation, 
+    locale: state.locale.locale, 
+    theme: state.theme.theme
+  }))
   const { textColor } = useSpring({ textColor: theme === 'light' ? '#272727' : '#a09f9f' })
   const textZ = -0.08
 

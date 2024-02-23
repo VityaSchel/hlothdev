@@ -1,13 +1,12 @@
 import styles from './styles.module.scss'
 import { animated, useSpring } from 'react-spring'
-import { connect } from 'react-redux'
 import { MdArrowBack } from 'react-icons/md'
 
 import { Me } from './me'
-import Services from './services'
-import Portfolio from './portfolio'
-import Donate from './donate'
-import AboutSite from './aboutSite'
+import { Services } from './services'
+import { Portfolio } from './portfolio'
+import { Donate } from './donate'
+import { AboutSite } from './aboutSite'
 
 import { useTheme } from '@mui/styles'
 import Grid from '@mui/material/Grid'

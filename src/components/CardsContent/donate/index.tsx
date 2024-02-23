@@ -1,15 +1,11 @@
 import Card from '../Card'
 import styles from './styles.module.scss'
-import { connect } from 'react-redux'
-import { Translation } from 'types/definitions'
 import DonateForm from './DonateForm'
+import { useAppSelector } from '@/store/hooks'
+import { selectTranslation } from '@/store/reducers/translation'
 
-type AboutSiteProps = {
-  translation?: object;
-};
-
-function AboutSite(props: AboutSiteProps) {
-  const translation = props.translation.DONATE
+export function Donate() {
+  const translation = useAppSelector(selectTranslation).DONATE
 
   return (
     <div className={styles.donateContainer}>
@@ -27,5 +23,3 @@ function AboutSite(props: AboutSiteProps) {
     </div>
   )
 }
-
-export default connect(state => ({ translation: state.translation }))(AboutSite)

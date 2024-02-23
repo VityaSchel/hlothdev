@@ -15,14 +15,16 @@ import enUS from '../../assets/images/emojis/flags/en-US.png'
 import { selectLocale, updateLocale } from '@/store/reducers/locale'
 import { selectTranslation, setLocale, setTranslation } from '@/store/reducers/translation'
 import { useAppDispatch, useAppSelector } from '@/store/hooks'
-import { selectTheme } from '@/store/reducers/theme'
+import { selectTheme, switchTheme } from '@/store/reducers/theme'
 
 export function SiteSettings() {
   const translation = useAppSelector(selectTranslation)
   const { theme } = useAppSelector(selectTheme)
   const dispatch = useAppDispatch()
 
-  const themeSwitch = () => dispatch({ type: 'theme/switch' })
+  const themeSwitch = () => {
+    dispatch(switchTheme())
+  }
 
   return (
     <div className={styles.container}>
@@ -51,8 +53,7 @@ function SiteLanguage() {
   const dispatch = useAppDispatch()
   const [listOpen, setListOpen] = React.useState(false)
   const { width, ref } = useResizeObserver()
-  if (!width) return
-  const { listWidth } = useSpring({ listWidth: listOpen ? width+10 : 0 })
+  const { listWidth } = useSpring({ listWidth: listOpen ? (width ?? 0)+10 : 0 })
   const isMobile = useMediaQuery('(any-hover: none)')
 
   const setLang = (locale: string) => () => {

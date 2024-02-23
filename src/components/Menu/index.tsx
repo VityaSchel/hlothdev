@@ -26,7 +26,7 @@ export default function Menu() {
       <Suspense fallback={null}>
         <MenuItem cardID='donate' />
         <MenuItem cardID='about' />
-        <MenuItem cardID='archiveLink' />
+        {/* <MenuItem cardID='archiveLink' /> */}
       </Suspense>
     </>
   )
@@ -89,7 +89,7 @@ function MenuItem(props: MenuItemProps) {
   })
 
   const wideCard = ['me', 'portfolio'].includes(props.cardID)
-  let position = layouts[layout][props.cardID as 'me' | 'portfolio' | 'services' | 'donate' | 'about' | 'archiveLink']
+  let position = layouts[layout][props.cardID as 'me' | 'portfolio' | 'services' | 'donate' | 'about' | 'archiveLink'] as [number, number]
   const offset = layouts[layout].offset
   position = [(position[0] + offset[0])*2 - 3, (position[1] + offset[1])*2 - 0.5]
   const textZ = -0.06
@@ -119,11 +119,12 @@ function MenuItem(props: MenuItemProps) {
       dispatch(setRoute({ route: props.cardID }))
     }
   }
-
+  
   return (
-    <group position={[...position, -4.5]}>
+    <group position={[position[0], position[1], -4.5]}>
       <animated.group position={[0, 0.5, 0.5]} rotation-x={rotation}>
         <group position={[0, -1, 1]}>
+          {/* @ts-expect-error Type instantiation is excessively deep and possibly infinite */}
           <animated.primitive
             object={card.scene}
             scale={new Array(3).fill(0.97)}
@@ -142,18 +143,18 @@ function MenuItem(props: MenuItemProps) {
               color={textColor}
               bevelEnabled
             >
-              {
-                translation[{
+              {translation[
+                {
                   about: 'CARD_ABOUT',
                   donate: 'CARD_DONATE',
                   services: 'CARD_SERVICES',
                   archiveLink: 'CARD_ARCHIVE_LINK'
-                }[props.cardID]]?.toUpperCase()
-              }
+                }[props.cardID as 'about' | 'donate' | 'services' | 'archiveLink'] as 'CARD_ABOUT' | 'CARD_DONATE' | 'CARD_SERVICES' | 'CARD_ARCHIVE_LINK'
+              ]?.toUpperCase()}
             </Text>
             : {
-              me: <MeCardText position={position} />,
-              portfolio: <PortfolioCardText position={position} />
+              me: <MeCardText />,
+              portfolio: <PortfolioCardText/>
             }[props.cardID]
           }
         </group>
