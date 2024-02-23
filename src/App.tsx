@@ -6,14 +6,6 @@ import { ThemeProvider, createTheme } from '@mui/material/styles'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import WebFont from 'webfontloader'
 import _ from 'lodash'
-
-import Camera from './components/Camera'
-import Light from './components/Light'
-import BackgroundShapes from './components/BackgroundShapes'
-import Background from './components/Background'
-import Menu from './components/Menu'
-import SiteSettings from './components/SiteSettings'
-import CardsContent from './components/CardsContent'
 import { useAppDispatch, useAppSelector } from '@/store/hooks'
 import { selectLocale, updateLocale } from '@/store/reducers/locale'
 import { selectTranslation, setLocale } from '@/store/reducers/translation'
@@ -21,6 +13,14 @@ import { selectTheme, switchTheme } from '@/store/reducers/theme'
 import { selectCursor } from '@/store/reducers/cursor'
 import { popRoute, selectRoute } from '@/store/reducers/route'
 import { setLayout } from '@/store/reducers/layout'
+
+import Camera from './components/Camera'
+import Light from './components/Light'
+import BackgroundShapes from './components/BackgroundShapes'
+import Background from './components/Background'
+import Menu from './components/Menu'
+import { SiteSettings } from './components/SiteSettings'
+import { CardsContent } from './components/CardsContent'
 
 const defaultTheme = {
   typography: {
@@ -75,17 +75,17 @@ export function App() {
   const { theme } = useAppSelector(selectTheme)
   const cursor = useAppSelector(selectCursor)
   const { route } = useAppSelector(selectRoute)
-  const spotLightTarget = React.useRef()
-  const lightRef = React.useRef()
+  // const spotLightTarget = React.useRef()
+  // const lightRef = React.useRef()
   const dispatch = useAppDispatch()
   useHotkeys('space', () => {
     dispatch(switchTheme())
   })
 
-  React.useEffect(() => {
-    if(!lightRef.current || !spotLightTarget.current) return
-    lightRef.current.target = spotLightTarget.current
-  }, [lightRef, spotLightTarget])
+  // React.useEffect(() => {
+  //   if(!lightRef.current || !spotLightTarget.current) return
+  //   lightRef.current.target = spotLightTarget.current
+  // }, [lightRef, spotLightTarget])
 
   React.useEffect(() => {
     const locale = appLocale ?? navigator.language
@@ -102,7 +102,10 @@ export function App() {
 
   React.useEffect(() => {
     const newLocation = window.location.pathname.substring(1)
-    document.title = `${translation.CARD_ME_FIRST_NAME} ${translation.CARD_ME_LAST_NAME} (@hloth) ${newLocation === '' ? '' : `— ${translation.PAGES_TITLES?.[newLocation]}`}`
+    const pageTitle = newLocation in translation.PAGES_TITLES 
+      ? translation.PAGES_TITLES[newLocation as keyof typeof translation.PAGES_TITLES] 
+      : '404'
+    document.title = `${translation.CARD_ME_FIRST_NAME} ${translation.CARD_ME_LAST_NAME} (@hloth) ${newLocation === '' ? '' : `— ${pageTitle}`}`
   }, [translation, window.location.pathname])
 
   const raytracedCursor = Object.values(cursor).sort((a,b) => b.added - a.added)[0]?.cursor

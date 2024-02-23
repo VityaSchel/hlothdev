@@ -10,10 +10,14 @@ import avatar from '../../../assets/images/avatar.jpeg'
 import Experience from './Experience.js'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import { dates } from '../../../utils.js'
+import { useAppSelector } from '@/store/hooks.js'
+import { selectTranslation } from '@/store/reducers/translation.js'
 
-function AboutCard({ translation, isMobile }: {
-  translation: object
+function AboutCard({ isMobile }: {
+  isMobile: boolean
 }) {
+  const translation = useAppSelector(selectTranslation).ABOUT_ME
+
   return (
     <Card className={styles.about}>
       <div className={styles.text}>
@@ -44,7 +48,9 @@ function AboutCard({ translation, isMobile }: {
   )
 }
 
-function WhatIsHloth({ translation }) {
+function WhatIsHloth() {
+  const translation = useAppSelector(selectTranslation).ABOUT_ME
+
   return (
     <Card className={styles.about}>
       <div className={styles.text}>
@@ -63,9 +69,9 @@ function WhatIsHloth({ translation }) {
   )
 }
 
-function AboutMeAsPerson({ translation }: {
-  translation: object
-}) {
+function AboutMeAsPerson() {
+  const translation = useAppSelector(selectTranslation).ABOUT_ME
+
   return (
     <Card className={styles.about}>
       <div className={styles.text}>
@@ -77,16 +83,16 @@ function AboutMeAsPerson({ translation }: {
   )
 }
 
-function MiniProfile(props: {
-  translation: object
-}) {
+function MiniProfile() {
+  const translation = useAppSelector(selectTranslation)
+
   return (
     <Card
       containerStyle={styles.profileCard}
       avatar={<img src={avatar} width={100} height={100} style={{ borderRadius: 999 }} />}
       avatarStyles={{ padding: 0, boxShadow: '0 0 2px 0 rgba(0, 0, 0.25)' }}
-      title={`${props.translation.CARD_ME_FIRST_NAME} ${props.translation.CARD_ME_LAST_NAME}`}
-      subtitle={props.translation.FULL_SPECIALIZATION}
+      title={`${translation.CARD_ME_FIRST_NAME} ${translation.CARD_ME_LAST_NAME}`}
+      subtitle={translation.FULL_SPECIALIZATION}
       caption='VityaSchel / @hloth'
     />
   )
@@ -140,10 +146,7 @@ const links = {
   },
 }
 
-function Me(props: {
-  translation: object
-}) {
-  const translation = props.translation.ABOUT_ME
+export function Me() {
   const isMobile = useMediaQuery('(max-width: 1360px)')
 
   return (
@@ -152,29 +155,27 @@ function Me(props: {
         !isMobile
           ? (<>
             <div className={styles.info}>
-              <AboutCard translation={translation} isMobile={isMobile} />
-              <AboutMeAsPerson translation={translation} />
-              <WhatIsHloth translation={translation} />
+              <AboutCard isMobile={isMobile} />
+              <AboutMeAsPerson />
+              <WhatIsHloth />
             </div>
             <div className={styles.rightCol}>
               <div className={styles.topRow}>
-                <MiniProfile translation={props.translation} />
-                <Contacts translation={translation} />
+                <MiniProfile />
+                <Contacts />
               </div>
-              <Experience translation={props.translation} dispatch={props.dispatch} />
+              <Experience />
             </div>
           </>)
           : (<div className={styles.info}>
-            <MiniProfile translation={props.translation} />
-            <Contacts translation={translation} />
-            <AboutCard translation={translation} isMobile={isMobile} />
-            <Experience translation={props.translation} dispatch={props.dispatch} />
-            <AboutMeAsPerson translation={translation} />
-            <WhatIsHloth translation={translation} />
+            <MiniProfile />
+            <Contacts />
+            <AboutCard isMobile={isMobile} />
+            <Experience />
+            <AboutMeAsPerson />
+            <WhatIsHloth />
           </div>)
       }
     </div>
   )
 }
-
-export default connect(state => ({ translation: state.translation }))(Me)

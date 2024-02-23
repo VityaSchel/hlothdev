@@ -12,18 +12,17 @@ import { IoMdMoon } from 'react-icons/io'
 import { SiTorbrowser } from 'react-icons/si'
 import ruRU from '../../assets/images/emojis/flags/ru-RU.png'
 import enUS from '../../assets/images/emojis/flags/en-US.png'
+import { selectLocale, updateLocale } from '@/store/reducers/locale'
+import { selectTranslation, setLocale, setTranslation } from '@/store/reducers/translation'
+import { useAppDispatch, useAppSelector } from '@/store/hooks'
+import { selectTheme } from '@/store/reducers/theme'
 
-type SiteSettingsProps = {
-  theme?: string;
-  translation?: object;
-  dispatch?(...args: unknown[]): unknown;
-};
+export function SiteSettings() {
+  const translation = useAppSelector(selectTranslation)
+  const { theme } = useAppSelector(selectTheme)
+  const dispatch = useAppDispatch()
 
-function SiteSettings({
-  translation,
-  ...props
-}: SiteSettingsProps) {
-  const themeSwitch = () => props.dispatch({ type: 'theme/switch' })
+  const themeSwitch = () => dispatch({ type: 'theme/switch' })
 
   return (
     <div className={styles.container}>
@@ -32,7 +31,7 @@ function SiteSettings({
           <SiTorbrowser />
         </IconButton>
       </a>
-      {props.theme === 'dark' ? (
+      {theme === 'dark' ? (
         <IconButton aria-label={translation.THEME_SWITCH_TO_LIGHT} onClick={themeSwitch}>
           <MdWbSunny />
         </IconButton>
@@ -46,18 +45,19 @@ function SiteSettings({
   )
 }
 
-const mapState = state => ({ translation: state.translation, locale: state.locale, theme: state.theme })
-export default connect(mapState)(SiteSettings)
-
-const SiteLanguage = connect(mapState)(function({ translation, ...props }) {
+function SiteLanguage() {
+  const translation = useAppSelector(selectTranslation)
+  const { locale } = useAppSelector(selectLocale)
+  const dispatch = useAppDispatch()
   const [listOpen, setListOpen] = React.useState(false)
   const { width, ref } = useResizeObserver()
+  if (!width) return
   const { listWidth } = useSpring({ listWidth: listOpen ? width+10 : 0 })
   const isMobile = useMediaQuery('(any-hover: none)')
 
-  const setLang = locale => () => {
-    props.dispatch({ type: 'locale/update', locale })
-    props.dispatch({ type: 'translation/set', language: locale })
+  const setLang = (locale: string) => () => {
+    dispatch(updateLocale(locale))
+    dispatch(setLocale(locale))
     isMobile && setListOpen(false)
   }
 
@@ -72,13 +72,13 @@ const SiteLanguage = connect(mapState)(function({ translation, ...props }) {
           <div className={styles.languagesInner} ref={ref}>
             <IconButton aria-label={translation.LANGUAGE_RUSSIAN}
               onClick={setLang('ru-RU')}
-              className={cx([], { [styles.focused]: props.locale === 'ru-RU' })}
+              className={cx([], { [styles.focused]: locale === 'ru-RU' })}
             >
               <img src={ruRU} />
             </IconButton>
             <IconButton aria-label={translation.LANGUAGE_ENGLISH}
               onClick={setLang('en-US')}
-              className={cx([], { [styles.focused]: props.locale === 'en-US' })}
+              className={cx([], { [styles.focused]: locale === 'en-US' })}
             >
               <img src={enUS} />
             </IconButton>
@@ -90,4 +90,4 @@ const SiteLanguage = connect(mapState)(function({ translation, ...props }) {
       </div>
     </ClickAwayListener>
   )
-})
+}

@@ -3,7 +3,7 @@ import { animated, useSpring } from 'react-spring'
 import { connect } from 'react-redux'
 import { MdArrowBack } from 'react-icons/md'
 
-import Me from './me'
+import { Me } from './me'
 import Services from './services'
 import Portfolio from './portfolio'
 import Donate from './donate'
@@ -13,19 +13,19 @@ import { useTheme } from '@mui/styles'
 import Grid from '@mui/material/Grid'
 import IconButton from '@mui/material/IconButton'
 import Typography from '@mui/material/Typography'
+import { useAppDispatch, useAppSelector } from '@/store/hooks'
+import { selectTranslation } from '@/store/reducers/translation'
+import { selectRoute, setRoute } from '@/store/reducers/route'
 
-type CardsContentProps = {
-  route: string;
-  translation: object;
-  dispatch(...args: unknown[]): unknown;
-};
-
-function CardsContent(props: CardsContentProps) {
+export function CardsContent() {
   const theme = useTheme()
+  const translation = useAppSelector(selectTranslation)
+  const { route } = useAppSelector(selectRoute)
   const { opacity, backgroundColor } = useSpring({
-    opacity: props.route === '' ? 0 : 1,
+    opacity: route === '' ? 0 : 1,
     backgroundColor: theme.palette.background.default
   })
+  const dispatch = useAppDispatch()
 
   return (
     <animated.div className={styles.container}
@@ -38,12 +38,12 @@ function CardsContent(props: CardsContentProps) {
       <Grid container spacing={2} className={styles.title}>
         <Grid item>
           <span className={styles.arrowButton}>
-            <IconButton aria-label={props.translation.BACK} onClick={() => props.dispatch({ type: 'route/set', route: '' })}>
+            <IconButton aria-label={translation.BACK} onClick={() => dispatch(setRoute({ route: '' }))}>
               <MdArrowBack />
             </IconButton>
           </span>
           <Typography variant='h4' color={theme.palette.text.primary} className={styles.text}>
-            {props.translation.PAGES_TITLES?.[props.route]?.toUpperCase()}
+            {translation.PAGES_TITLES?.[route as keyof typeof translation.PAGES_TITLES]?.toUpperCase()}
           </Typography>
         </Grid>
       </Grid>
@@ -53,12 +53,7 @@ function CardsContent(props: CardsContentProps) {
         portfolio: <Portfolio />,
         donate: <Donate />,
         about: <AboutSite />
-      }[props.route]}
+      }[route]}
     </animated.div>
   )
 }
-
-export default connect(state => ({
-  route: state.route,
-  translation: state.translation
-}))(CardsContent)

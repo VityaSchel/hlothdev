@@ -2,8 +2,11 @@ import React, { Suspense } from 'react'
 import { useLoader, useFrame } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { Raycaster } from 'three'
-import { useRedux, applyMaterial, color } from '../utils'
+import { applyMaterial, color } from '../utils'
 import { animated, useSpring } from '@react-spring/three'
+import { useAppSelector } from '@/store/hooks'
+import { selectLayout } from '@/store/reducers/layout'
+import { selectTheme } from '@/store/reducers/theme'
 
 const generateSwitches = () => [
   Math.round(Math.random()),
@@ -16,9 +19,7 @@ type BackgroundShapesProps = {
 };
 
 function BackgroundShapes(props: BackgroundShapesProps) {
-  const { layout } = useRedux(state => ({
-    layout: state.layout
-  }))
+  const { state } = useAppSelector(selectLayout)
 
   const shapes = {
     wide: {
@@ -40,13 +41,18 @@ function BackgroundShapes(props: BackgroundShapesProps) {
   }
 
   return (
-    Object.entries(shapes[layout]).map(([url, position], i) =>
-      <Shape url={`/static/models/background/${url}.glb`} position={position} key={i} render={props.render} />
+    Object.entries(shapes[state]).map(([url, position], i) =>
+      <Shape 
+        url={`/static/models/background/${url}.glb`} 
+        position={position} 
+        key={i} 
+        render={props.render} 
+      />
     )
   )
 }
 
-const Shape = props => (
+const Shape = (props: ShapeModelProps) => (
   <Suspense fallback={null}>
     <ShapeModel {...props} />
   </Suspense>
@@ -62,9 +68,9 @@ function ShapeModel(props: ShapeModelProps) {
   const [accelerationSwitch, setAccelerationSwitch] = React.useState(generateSwitches())
   const [acceleration, setAcceleration] = React.useState([0, 0, 0])
   const object = React.useRef()
-  const shape = useLoader(GLTFLoader, props.url)
+  const shape = useLoader(GLTFLoader, props.url ?? '')
   const raycaster = React.useMemo(() => new Raycaster(), [])
-  const { theme } = useRedux(state => ({ theme: state.theme }))
+  const { theme } = useAppSelector(selectTheme)
   const { shapeColor } = useSpring({ shapeColor: theme === 'light' ? 2.5 : 0.06 })
   const { shapeOpacity } = useSpring({ from: { shapeOpacity: 0 }, to: { shapeOpacity: 1 } })
 

@@ -1,11 +1,8 @@
-import React from 'react'
-import store from './store'
 import hexRgb from 'hex-rgb'
-import replace from 'react-string-replace'
 import { formatDistanceToNowStrict } from 'date-fns'
 import { ru as dateFns_ru, enUS as dateFns_enUS } from 'date-fns/locale'
-
-const easeOutCubic = (progress: number) => 1 - Math.pow(1 - progress, 3)
+import { SpringValue } from 'react-spring'
+import { store } from '@/store'
 
 const transitions = new Map()
 export function transition(object, properties, value, setValue) {
@@ -41,22 +38,6 @@ function prog(from, to, progress) {
   const max = to - from
   const proportion = current/max
   return backwards ? 1-proportion : proportion
-}
-
-export function useRedux(mapping) {
-  const [mappedStore, setMappedStore] = React.useState(mapping(store.getState() ?? {}) ?? {})
-
-  React.useEffect(() => {
-    const update = () => {
-      const newState = store.getState()
-      setMappedStore(mapping(newState ?? {}) ?? {})
-    }
-
-    update()
-    store.subscribe(update)
-  }, [store])
-
-  return mappedStore
 }
 
 export const stringEnding = a => (a%10 === 1 && a !== 11) ? 0 : (a%10 >= 2 && a%10 <= 4 && !(a >= 12 && a <= 14)) ? 1 : 2
@@ -112,7 +93,9 @@ export const applyMaterial = (scene, materials) => {
   return props
 }
 
-export const color = (colorOrRed, g, b) => {
+export function color(color: SpringValue<number>): object
+export function color(r: SpringValue<number>, g: SpringValue<number>, b: SpringValue<number>): object
+export function color(colorOrRed: SpringValue<number>, g?: SpringValue<number>, b?: SpringValue<number>): object {
   if(g !== undefined && b !== undefined) {
     return {
       'color-r': colorOrRed,
@@ -137,8 +120,11 @@ export const color = (colorOrRed, g, b) => {
   }
 }
 
-export const flatten = obj => Object.assign({}, ...function _flatten(o) { return [].concat(...Object.keys(o).map(k => typeof o[k] === 'object' ? _flatten(o[k]) : ({[k]: o[k]})))}(obj))
-export const dotFlatten = (object, propObjectName) => {
+export const flatten = (obj: object) => Object.assign({}, ...function _flatten(o: { [k: string]: any }): object[] { 
+  const arr: object[] = []
+  return arr.concat(...Object.keys(o).map(k => typeof o[k] === 'object' ? _flatten(o[k]) : ({[k]: o[k]})))
+}(obj))
+export const dotFlatten = (object: object, propObjectName: string) => {
   const newObject = JSON.parse(JSON.stringify(object))
   const newPropObject = Object.fromEntries(Object.entries(newObject[propObjectName]).map(([key, val]) => [`${propObjectName}.${key}`, val]))
   delete newObject[propObjectName]
@@ -147,12 +133,14 @@ export const dotFlatten = (object, propObjectName) => {
 }
 
 export const getDateFnsLocale = () => {
-  return store.getState().locale === 'ru-RU' ? dateFns_ru : dateFns_enUS
+  return store.getState().locale.locale === 'ru-RU' ? dateFns_ru : dateFns_enUS
 }
 
 export function dates(text: string): string {
   return text.replaceAll(/%date_fns_(\d+)%/g, (match) => {
-    const [,date] = match.match(/%date_fns_(\d+)%/)
+    const matches = match.match(/%date_fns_(\d+)%/)
+    if(!matches) return ''
+    const date = matches[1]
     return formatDistanceToNowStrict(
       new Date(
         Number(date) * 1000

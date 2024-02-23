@@ -1,4 +1,4 @@
-import { useRedux, stringEnding, color } from '../../utils'
+import { stringEnding, color } from '../../utils'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import { useSpring } from '@react-spring/three'
 import { useLoader } from '@react-three/fiber'
@@ -12,9 +12,13 @@ import project4logo from '@/assets/images/projectsLogos/sipacker.png'
 
 import SFBlack from '@/assets/fonts/SFBlack.blob'
 import SFBold from '@/assets/fonts/SFBold.blob'
+import { useAppSelector } from '@/store/hooks'
 
 export function PortfolioCardText() {
-  const { translation, theme } = useRedux(state => ({ translation: state.translation, theme: state.theme }))
+  const { translation, theme } = useAppSelector(state => ({ 
+    translation: state.translation, 
+    theme: state.theme.theme
+  }))
   const { textColor } = useSpring({ textColor: theme === 'light' ? '#313131' : '#565656' })
 
   const textZ = -0.08
@@ -39,7 +43,7 @@ export function PortfolioCardText() {
   )
 }
 
-export function usePortfolioCardStyles(theme) {
+export function usePortfolioCardStyles(theme: string) {
   const project1ImageMap = useLoader(TextureLoader, project1logo)
   const project2ImageMap = useLoader(TextureLoader, project2logo)
   const project3ImageMap = useLoader(TextureLoader, project3logo)

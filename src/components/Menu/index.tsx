@@ -2,14 +2,16 @@ import React, { Suspense } from 'react'
 import { useLoader } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import Text from '../Text'
-import { useRedux, applyMaterial, color } from '../../utils'
-import store from '../../store'
+import { applyMaterial, color } from '../../utils'
 import { useSpring, animated } from '@react-spring/three'
 
 import { MeCardText } from './MeCard'
 import { PortfolioCardText, usePortfolioCardStyles } from './PortfolioCard'
 
 import SFBold from '@/assets/fonts/SFBold.blob'
+import { useAppDispatch, useAppSelector } from '@/store/hooks'
+import { resetCursor, setCursor } from '@/store/reducers/cursor'
+import { setRoute } from '@/store/reducers/route'
 
 export default function Menu() {
   return (
@@ -57,19 +59,20 @@ const linkCards = {
 }
 
 type MenuItemProps = {
-  cardID?: string;
+  cardID: string;
 };
 
 function MenuItem(props: MenuItemProps) {
   const fileID = Object.keys(linkCards).includes(props.cardID) ? 'external' : props.cardID
   const card = useLoader(GLTFLoader, `/static/models/cards/card_${fileID}.glb`)
   const [isPointerOver, setIsPointerOver] = React.useState(false)
-  const { translation, theme, route, layout } = useRedux(state => ({
+  const { translation, theme, route, layout } = useAppSelector(state => ({
     translation: state.translation,
-    theme: state.theme,
-    route: state.route,
-    layout: state.layout
+    theme: state.theme.theme,
+    route: state.route.route,
+    layout: state.layout.state
   }))
+  const dispatch = useAppDispatch()
 
   const portfolioCardStyles = usePortfolioCardStyles(theme)
   const { rotation } = useSpring({
@@ -86,8 +89,8 @@ function MenuItem(props: MenuItemProps) {
   })
 
   const wideCard = ['me', 'portfolio'].includes(props.cardID)
-  let position = layouts[layout][props.cardID],
-    offset = layouts[layout].offset
+  let position = layouts[layout][props.cardID as 'me' | 'portfolio' | 'services' | 'donate' | 'about' | 'archiveLink']
+  const offset = layouts[layout].offset
   position = [(position[0] + offset[0])*2 - 3, (position[1] + offset[1])*2 - 0.5]
   const textZ = -0.06
 
@@ -100,20 +103,20 @@ function MenuItem(props: MenuItemProps) {
   })
 
   const handlePointerOver = () => {
-    store.dispatch({ type: 'cursor/setCursor', id: props.cardID, cursor: 'pointer' })
+    dispatch(setCursor({ id: props.cardID, cursor: 'pointer' }))
     setIsPointerOver(true)
   }
 
   const handlePointerOut = () => {
-    store.dispatch({ type: 'cursor/reset', id: props.cardID })
+    dispatch(resetCursor(props.cardID))
     setIsPointerOver(false)
   }
 
   const handleClick = () => {
     if (Object.keys(linkCards).includes(props.cardID)) {
-      window.open(linkCards[props.cardID], '_blank').focus()
+      window.open(linkCards[props.cardID as 'archiveLink' | 'blogLink'], '_blank')?.focus()
     } else {
-      store.dispatch({ type: 'route/set', route: props.cardID })
+      dispatch(setRoute({ route: props.cardID }))
     }
   }
 

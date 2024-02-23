@@ -13,8 +13,9 @@ type TextProps = {
   hAlign?: string;
   size?: number;
   color?: any;
-  font?: string;
+  font: string;
   bevelEnabled?: boolean;
+  position: [number, number, number];
 };
 
 export default function Text({

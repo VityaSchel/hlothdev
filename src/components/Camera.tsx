@@ -1,17 +1,17 @@
 import { useThree, useFrame } from '@react-three/fiber'
 import { useSpring } from '@react-spring/three'
-import { useRedux } from '../utils'
 import { layouts } from './Menu'
+import { useAppSelector } from '@/store/hooks'
+import { selectRoute } from '@/store/reducers/route'
+import { selectLayout } from '@/store/reducers/layout'
 
 export default function Camera() {
-  const { route, layout } = useRedux(state => ({
-    route: state.route,
-    layout: state.layout
-  }))
+  const { route } = useAppSelector(selectRoute)
+  const { state: layout } = useAppSelector(selectLayout)
   const { camera } = useThree()
 
   const defaultPosition = [0, 0, 5]
-  const position = layouts[layout][route]
+  const position = layouts[layout][route as 'me' | 'portfolio']
   const offset = layouts[layout].offset
   const wideCard = ['me', 'portfolio'].includes(route)
   const { cameraPosition } = useSpring({

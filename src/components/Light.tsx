@@ -2,11 +2,12 @@ import React from 'react'
 import { useThree } from '@react-three/fiber'
 import { useHelper } from '@react-three/drei'
 import { SpotLightHelper } from 'three'
-import { useRedux } from '../utils'
 import { useSpring, animated } from '@react-spring/three'
+import { useAppSelector } from '@/store/hooks'
+import { selectTheme } from '@/store/reducers/theme'
 
 export default function Light() {
-  const { theme } = useRedux(state => ({ theme: state.theme }))
+  const { theme } = useAppSelector(selectTheme)
   const { intensisty } = useSpring({ intensisty: theme === 'light' ? 0.3 : 1 })
 
   return (

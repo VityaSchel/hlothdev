@@ -2,12 +2,12 @@ import SFBlack from '@/assets/fonts/SFBlack.blob'
 import SFLight from '@/assets/fonts/SFLight.blob'
 import SFBold from '@/assets/fonts/SFBold.blob'
 import SFMedium from '@/assets/fonts/SFMedium.blob'
-import { useRedux } from '../../utils'
 import { useSpring } from '@react-spring/three'
 import Text from '../Text'
+import { useAppSelector } from '@/store/hooks'
 
 export function MeCardText() {
-  const { translation, locale, theme } = useRedux(state => ({ translation: state.translation, locale: state.locale, theme: state.theme }))
+  const { translation, locale, theme } = useAppSelector(state => ({ translation: state.translation, locale: state.locale, theme: state.theme }))
   const { textColor } = useSpring({ textColor: theme === 'light' ? '#272727' : '#a09f9f' })
   const textZ = -0.08
 
