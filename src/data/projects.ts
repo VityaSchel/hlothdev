@@ -1,55 +1,83 @@
-import abobaLogo from '../assets/images/projectsLogos/aboba.png'
-import asursoCustomNamesLogo from '../assets/images/projectsLogos/asurso-custom-names.png'
-import atmosCraftLogo from '../assets/images/projectsLogos/atmoscraft.png'
-import atmosSeriesBotLogo from '../assets/images/projectsLogos/atmosseriesbot.png'
-import bitProtectLogo from '../assets/images/projectsLogos/bitprotect.png'
-import botBizLandingLogo from '../assets/images/projectsLogos/bot-biz-landing.png'
-import cleanerLogo from '../assets/images/projectsLogos/cleaner.png'
-import czechLivingCostsLogo from '../assets/images/projectsLogos/czech-living-costs.png'
-import educoLogo from '../assets/images/projectsLogos/educo.png'
-import figmaAntiLGBTLogo from '../assets/images/projectsLogos/figma-anti-lgbt.png'
-import fitVsFelLogo from '../assets/images/projectsLogos/fit-vs-fel.png'
-import foodStuffLogo from '../assets/images/projectsLogos/foodstuff.png'
-import gadzasNewLogo from '../assets/images/projectsLogos/gadzas.png'
-import gadzasOldLogo from '../assets/images/projectsLogos/gadzas-old.png'
-import gettrDarkThemeLogo from '../assets/images/projectsLogos/gettr-dark-theme.png'
-import gladvalakasNT200instamask from '../assets/images/projectsLogos/insta-mask-glad-valakas-nt200.png'
-import goodmorningBotLogo from '../assets/images/projectsLogos/goodmorning-bot.png'
-import homirrorLogo from '../assets/images/projectsLogos/homirror.png'
-import igroruporLogo from '../assets/images/projectsLogos/igrorupor.png'
-import lisNceLogo from '../assets/images/projectsLogos/lis-nce.png'
-import mashaSimulatorLogo from '../assets/images/projectsLogos/masha-simulator.png'
-import mcDonaldsOffersLogo from '../assets/images/projectsLogos/mcdonaldsoffersbot.png'
-import movieTimeFilmsBot from '../assets/images/projectsLogos/movietime-films-bot.png'
-import mypronLogo from '../assets/images/projectsLogos/mypron.png'
-import niolySchoolLogo from '../assets/images/projectsLogos/niolyschool.png'
-import noSquidGameLogo from '../assets/images/projectsLogos/no-squid-game.png'
-import ogeGeneratorLogo from '../assets/images/projectsLogos/oge-generator.png'
-import panicButtonLogo from '../assets/images/projectsLogos/panic-button.png'
-import probablyKrolLogo from '../assets/images/projectsLogos/probablykrol-bot.png'
-import py3ExecLogo from '../assets/images/projectsLogos/py3exec.png'
-import remafiaLogo from '../assets/images/projectsLogos/remafia.png'
-import rJolygolfLogo from '../assets/images/projectsLogos/rJolygolf.png'
-import roflCallsOrderWebsiteLogo from '../assets/images/projectsLogos/rofl-calls-order-website.png'
-import rollerRideLogo from '../assets/images/projectsLogos/roller-ride.png'
-import rusWordConBotLogo from '../assets/images/projectsLogos/ruswordconbot.png'
-import samaracoinLogo from '../assets/images/projectsLogos/samaracoin.png'
-import shizonyanLogo from '../assets/images/projectsLogos/shizonyan.png'
-import sipackerLogo from '../assets/images/projectsLogos/sipacker.png'
-import skeletronRockBot from '../assets/images/projectsLogos/skeletron-rock-bot.png'
-import skysmartHelperLogo from '../assets/images/projectsLogos/skysmart-helper.png'
-import stigfinnareLogo from '../assets/images/projectsLogos/stigfinnare.png'
-import tinkoffCurrencyConverter from '../assets/images/projectsLogos/tinkoff-currency-converter.png'
-import uselessCanvasBasedTextEditorLogo from '../assets/images/projectsLogos/useless-canvas-based-text-editor.png'
-import vityaschelSiteLogo from '../assets/images/projectsLogos/vityaschel.png'
-import wantToBeAProgrammerLogo from '../assets/images/projectsLogos/want-to-be-a-programmer.png'
-import wikipediaSpeedrunLogo from '../assets/images/projectsLogos/wikipedia-speedrun.png'
+import abobaLogo from '@/assets/images/projectsLogos/aboba.png'
+import asursoCustomNamesLogo from '@/assets/images/projectsLogos/asurso-custom-names.png'
+import atmosCraftLogo from '@/assets/images/projectsLogos/atmoscraft.png'
+import atmosSeriesBotLogo from '@/assets/images/projectsLogos/atmosseriesbot.png'
+import awfulSamLitWebsiteLogo from '@/assets/images/projectsLogos/awful-samlit-website.png'
+import bitProtectLogo from '@/assets/images/projectsLogos/bitprotect.png'
+import botBizLandingLogo from '@/assets/images/projectsLogos/bot-biz-landing.png'
+import cleanerLogo from '@/assets/images/projectsLogos/cleaner.png'
+import cvhlothdevLogo from '@/assets/images/projectsLogos/cvhlothdev.png'
+import czechLivingCostsLogo from '@/assets/images/projectsLogos/czech-living-costs.png'
+import educoLogo from '@/assets/images/projectsLogos/educo.png'
+import figmaAntiLGBTLogo from '@/assets/images/projectsLogos/figma-anti-lgbt.png'
+import fitVsFelLogo from '@/assets/images/projectsLogos/fit-vs-fel.png'
+import fuckSamlitLogo from '@/assets/images/projectsLogos/fuck-samlit.png'
+import foodStuffLogo from '@/assets/images/projectsLogos/foodstuff.png'
+import gadzasNewLogo from '@/assets/images/projectsLogos/gadzas.png'
+import gadzasOldLogo from '@/assets/images/projectsLogos/gadzas-old.png'
+import gettrDarkThemeLogo from '@/assets/images/projectsLogos/gettr-dark-theme.png'
+import gladvalakasNT200instamask from '@/assets/images/projectsLogos/insta-mask-glad-valakas-nt200.png'
+import goodmorningBotLogo from '@/assets/images/projectsLogos/goodmorning-bot.png'
+import homirrorLogo from '@/assets/images/projectsLogos/homirror.png'
+import igroruporLogo from '@/assets/images/projectsLogos/igrorupor.png'
+import lisNceLogo from '@/assets/images/projectsLogos/lis-nce.png'
+import mashaSimulatorLogo from '@/assets/images/projectsLogos/masha-simulator.png'
+import mcDonaldsOffersLogo from '@/assets/images/projectsLogos/mcdonaldsoffersbot.png'
+import movieTimeFilmsBot from '@/assets/images/projectsLogos/movietime-films-bot.png'
+import mypronLogo from '@/assets/images/projectsLogos/mypron.png'
+import niolySchoolLogo from '@/assets/images/projectsLogos/niolyschool.png'
+import noSquidGameLogo from '@/assets/images/projectsLogos/no-squid-game.png'
+import ogeGeneratorLogo from '@/assets/images/projectsLogos/oge-generator.png'
+import onsRegistryLogo from '@/assets/images/projectsLogos/ons-registry.png'
+import panicButtonLogo from '@/assets/images/projectsLogos/panic-button.png'
+import probablyKrolLogo from '@/assets/images/projectsLogos/probablykrol-bot.png'
+import py3ExecLogo from '@/assets/images/projectsLogos/py3exec.png'
+import remafiaLogo from '@/assets/images/projectsLogos/remafia.png'
+import rJolygolfLogo from '@/assets/images/projectsLogos/rJolygolf.png'
+import roflCallsOrderWebsiteLogo from '@/assets/images/projectsLogos/rofl-calls-order-website.png'
+import rollerRideLogo from '@/assets/images/projectsLogos/roller-ride.png'
+import rusWordConBotLogo from '@/assets/images/projectsLogos/ruswordconbot.png'
+import theArchiveLogo from '@/assets/images/projectsLogos/the-archive.png'
+import kspsutiLogo from '@/assets/images/projectsLogos/kspsuti.png'
+import samaracoinLogo from '@/assets/images/projectsLogos/samaracoin.png'
+import sessionBotsDirectoryLogo from '@/assets/images/projectsLogos/session-bots-directory.png'
+import samsungPingerLogo from '@/assets/images/projectsLogos/samsung-pinger-logo.png'
+import solovyevVsHitlerLogo from '@/assets/images/projectsLogos/solovyev-vs-hitler.png'
+import shizonyanLogo from '@/assets/images/projectsLogos/shizonyan.png'
+import sipackerLogo from '@/assets/images/projectsLogos/sipacker.png'
+import skeletronRockBot from '@/assets/images/projectsLogos/skeletron-rock-bot.png'
+import skysmartHelperLogo from '@/assets/images/projectsLogos/skysmart-helper.png'
+import stigfinnareLogo from '@/assets/images/projectsLogos/stigfinnare.png'
+import tinkoffCurrencyConverter from '@/assets/images/projectsLogos/tinkoff-currency-converter.png'
+import uselessCanvasBasedTextEditorLogo from '@/assets/images/projectsLogos/useless-canvas-based-text-editor.png'
+import vityaschelSiteLogo from '@/assets/images/projectsLogos/vityaschel.png'
+import wantToBeAProgrammerLogo from '@/assets/images/projectsLogos/want-to-be-a-programmer.png'
+import wikipediaSpeedrunLogo from '@/assets/images/projectsLogos/wikipedia-speedrun.png'
 
 // scope: 1=verysmall 2=small 3=average 4=big 5=huge
 
+const technologies = {
+  web: ['React', 'NextJS', 'GraphQL', 'MaterialUI', 'Reactstrap', 'Bootstrap', 'less', 'React-redux', 'Redux-toolkit', 'next-i18next', 'react-reveal', 'rtk-query', 'React-admin', 'React-router', 'Jest', 'ThreeJS', 'React-three-fiber', 'Vite', 'Preact', 'webpack', 'rollup', 'babel', 'Mapbox', 'Browser Extension', 'workbox', 'Service Worker', 'TailwindCSS', '@shadcn/ui', 'Remix'],
+  mobile: ['React Native', 'Android', 'Expo', 'React-native-paper'],
+  backend: ['NodeJS', 'TypeScript', 'Express', 'Fastify', 'SignalR', 'streamlink', 'ffmpeg', 'Kubernetes', 'Python', 'PHP', 'bee-queue', 'Vanilla JS', 'Telegram MTProto', 'Ruby on Rails'],
+  databases: ['MongoDB', 'PostgreSQL', 'MySQL', 'Redis', 'LevelDB', 'sqlite'],
+  design: ['Figma', 'Sketch', 'Figma Plugin API', 'Figma REST API'],
+  gameDev: ['Unity', 'C#', 'Photon Engine', 'Scratch API', 'Turbowarp'],
+  bots: ['VK API', 'VK-IO', 'Telegram Bot API', 'VK API', 'Telegram Gaming Platform', 'Яндекс.Диалоги API'],
+  devOps: ['Docker', 'bee-queue', 'nginx', 'FastCGI', 'apache', 'Tor Hidden Service'],
+  ai: ['markovify', 'GPT', 'OpenAI Moderation', 'OpenAI Whisper'],
+  payments: ['YooKassa', 'QIWI p2p'],
+  software: ['Go', 'giu', 'imgui', 'JavaScript', 'Tauri', 'Electron', 'Java', 'phpDevelStudio', 'Swift', 'SwiftUI'],
+  modeling: ['Spark AR', 'Blender'],
+  other: ['McDonalds API', 'uCoz CMS', 'DuckDuckGo API', 'OBS Plugins', 'Clarifai API', 'Cloudflare API'],
+} as const
+
+type ValueOf<T> = T[keyof T]
+type Technology = ValueOf<typeof technologies>[number]
+
 export type Project = {
   name: string
-  stack: string[]
+  stack: Technology[]
   supported?: boolean | 'partially'
   dates: {
     devStart: string
@@ -58,10 +86,10 @@ export type Project = {
   }
   scope: 1 | 2 | 3 | 4 | 5
   description: string
-  unpublic: boolean
-  hidden: boolean
+  unpublic?: boolean
+  hidden?: boolean
   logo?: string
-  tags?: string[]
+  tags?: ('personalsite' | 'order')[]
   links?: string[]
   category: 'game/windows10'
   | 'game/android'
@@ -84,10 +112,1017 @@ export type Project = {
   | 'stream'
   | 'minecraft_map'
   | 'programming_language'
+  | 'widget'
+  | 'robot'
+  | 'utility'
+  | 'other'
   id: string
 }
 
 const projects: Project[] = [
+  {
+    name: 'ONS Registry',
+    stack: [
+      'React', 'NextJS', 'next-i18next', 'TypeScript',
+      '@shadcn/ui', 'React-redux', 'Redux-toolkit', 'NodeJS',
+      'Service Worker', 'workbox', 'YooKassa', 'sqlite',
+      'webpack', 'TailwindCSS'
+    ],
+    supported: true,
+    dates: {
+      devStart: '27 January 2024',
+      release: '29 January 2024'
+    },
+    scope: 2,
+    description: 'Открытый и бесплатный реестр записей ONS, автоматически анализирующий блокчейн OXEN. Бекнд парсит новые ONS записи с помощью JSON RPC и расшифровывает значения с помощью Blake2b и argon2. Фронтенд ориентирован на работу офлайн, поэтому я написал собственный сервис воркер и настроил webpack для его загрузки с механизмом background sync и локальной базой данных. Этот сайт также полностью автоматически интегрируется с блокчейном для создания записей, чтобы пользователю не нужно было покупать криптовалюту. Я развернул собственный SMTP сервер и настроил 100% доставку писем и интегрировал сайт с YooKassa для приема платежей и оплаты.',
+    unpublic: false,
+    hidden: false,
+    logo: onsRegistryLogo,
+    links: [
+      'https://ons.sessionbots.directory'
+    ],
+    category: 'website',
+    id: 'ons-registry'
+  },
+  {
+    name: 'Session Bots Directory',
+    stack: [
+      'React', 'Remix', 'TypeScript',
+      'React-redux', 'Redux-toolkit', 'NodeJS',
+      'TailwindCSS', 'Redis',
+      'OpenAI Moderation'
+    ],
+    supported: true,
+    dates: {
+      devStart: '27 January 2024',
+      release: '29 January 2024'
+    },
+    scope: 2,
+    description: 'Платформа, на которой разработчики могут полностью автоматически опубликовать бота для мессенджера Session. Бекенд проводит полную верификацию авторства бота при помощи отсылки команд в сторонний мессенджер и проверит контент бота с помощью OpenAI Moderation.',
+    unpublic: false,
+    hidden: false,
+    logo: sessionBotsDirectoryLogo,
+    links: [
+      'https://sessionbots.directory',
+      'https://github.com/VityaSchel/session-bots-directory',
+    ],
+    category: 'website',
+    id: 'session-bots-directory'
+  },
+  {
+    name: 'Расписание КС ПГУТИ',
+    stack: [
+      'React', 'NextJS', 'TypeScript',
+      '@shadcn/ui', 'TailwindCSS',
+      'Telegram Bot API'
+    ],
+    supported: 'partially',
+    dates: {
+      devStart: '19 September 2021',
+      release: '31 October 2021'
+    },
+    scope: 3,
+    description: 'Рескин сайта с расписанием для моего колледжа. Построен, ориентируясь на кеш и максимальную экономию данных: все ассеты сайта кешируются, данные из API проверяются на обновление по E-Tag. Бекенд на Next.js парсит расписание с официального сайта с помощью JSDOM и оповещает о возможных проблемах через Telegram Bot API.',
+    unpublic: false,
+    hidden: false,
+    logo: kspsutiLogo,
+    links: [
+      'https://kspsuti.ru/',
+      'https://github.com/VityaSchel/kspguti-schedule'
+    ],
+    category: 'website',
+    id: 'kspsuti'
+  },
+  {
+    name: 'SIPacker',
+    stack: [
+      'React',
+      'React-router',
+      'MaterialUI',
+      'Service Worker'
+    ],
+    supported: 'partially',
+    dates: {
+      devStart: '19 September 2021',
+      release: '31 October 2021'
+    },
+    scope: 3,
+    description: 'Онлайн-редактор паков для игры SiGame (Своя Игра)',
+    unpublic: false,
+    hidden: false,
+    logo: sipackerLogo,
+    links: [
+      'https://sipacker.netlify.app',
+      'https://github.com/VityaSchel/SIPacker'
+    ],
+    category: 'website',
+    id: 'sipacker'
+  },
+  {
+    name: 'ОГЭ Генератор',
+    stack: [
+      'React',
+      'Reactstrap',
+      'Bootstrap',
+      'less'
+    ],
+    supported: 'partially',
+    dates: {
+      devStart: '2021',
+      release: '2021'
+    },
+    scope: 3,
+    description: 'Генератор вариантов огэ по информатике 2021',
+    unpublic: false,
+    hidden: false,
+    logo: ogeGeneratorLogo,
+    links: [
+      'https://oge.utidteam.com/',
+      'https://github.com/VityaSchel/informatics-OGE-generator'
+    ],
+    category: 'website',
+    id: 'огэ-генератор'
+  },
+  {
+    name: 'The Archive',
+    stack: [
+      'React', 'NextJS', 'next-i18next',
+      'TypeScript', 'nginx', 'Tor Hidden Service'
+    ],
+    supported: true,
+    dates: {
+      devStart: '7 May 2022',
+      release: '28 June 2022'
+    },
+    scope: 4,
+    description: 'Полный архив моих видео с удаленного канала на YouTube, работающий с CDN imagekit.io',
+    logo: theArchiveLogo,
+    links: [
+      'https://archive.hloth.dev/',
+      'https://github.com/VityaSchel/the-archive'
+    ],
+    category: 'website',
+    id: 'the-archive'
+  },
+  {
+    name: 'Samsung Pinger',
+    stack: [
+      'Swift', 'SwiftUI'
+    ],
+    supported: true,
+    dates: {
+      devStart: '28 September 2023',
+      release: '29 September 2023'
+    },
+    scope: 1,
+    description: 'Виджет для macOS, интегрирующийся с неофициальным браузерным API сайта smartthingsfind.samsung.com (результат моего реверс-инженеринга) и пингующий устройства Samsung',
+    logo: samsungPingerLogo,
+    links: [
+      'https://github.com/VityaSchel/samsung-pinger/'
+    ],
+    category: 'widget',
+    id: 'samsung-pinger'
+  },
+  {
+    name: 'Session Node.js client',
+    stack: [
+      'NodeJS', 'TypeScript'
+    ],
+    supported: true,
+    dates: {
+      devStart: '28 September 2023',
+      release: '29 September 2023'
+    },
+    scope: 1,
+    description: 'Первый фреймворк для разработки ботов в мессенджере Session. Хедлесс клиент для работы с API мессенджера Session. Работает с onion-роутингом, расшифровывает файлы с помощью асинхронных файлов.',
+    links: [
+      'https://github.com/VityaSchel/session-nodejs-bot',
+      'https://www.youtube.com/watch?v=af7-DFSbFZ4'
+    ],
+    category: 'npmjs_library',
+    id: 'session-messenger-nodejs'
+  },
+  {
+    name: 'Соловьев VS Гитлер',
+    stack: [
+      'React', 'NextJS', 'TypeScript',
+      'Redux-toolkit'
+    ],
+    supported: true,
+    dates: {
+      devStart: '12 April 2023',
+      release: '12 April 2023'
+    },
+    logo: solovyevVsHitlerLogo,
+    scope: 1,
+    description: 'Шуточный сайт, где вам предстоит угадать, кому принадлежит цитата: пропагандисту Владимиру Соловьеву или Адольфу Гитлеру',
+    links: [
+      'https://solovyev.netlify.app/',
+      'https://github.com/VityaSchel/vladimir-solovyev'
+    ],
+    category: 'website',
+    id: 'solovyev-vs-hitler'
+  },
+  {
+    name: 'File sharing platform',
+    stack: [
+      'React', 'NextJS', 'TypeScript',
+      '@shadcn/ui', 'TailwindCSS', 'NodeJS',
+      'MongoDB', 'Redux-toolkit', 'Fastify',
+      'Tor Hidden Service'
+    ],
+    supported: true,
+    tags: ['order'],
+    dates: {
+      devStart: '28 August 2023',
+      release: '1 October 2023'
+    },
+    scope: 3,
+    description: 'E2EE файлообменник, интегрирующийся с Backblaze B2 и поддерживающий превью файлов типа изображения, видео, аудио, таблицы, PDF, zip архивы прямо на веб-странице, а также опции защиты файлов паролем и автоматическое удаление через выбранный срок. Работает как в клирнете, так и в даркнете. Файлы шифруются ключом AES еще до загрузки на сервер, а расшифровываются ключом в URL-фрагменте (хеш после знака #). Фронтенд и бекенд полностью написаны мной. Для сохранения конфиденциальности заказчика, не могу дать ссылку на развернутый файлообменник, но могу показать вам его при личном созвоне.',
+    category: 'website',
+    id: 'file-sharing-platform-2023'
+  },
+  {
+    name: 'Blog-agregator',
+    stack: [
+      'React', 'NextJS', 'TypeScript',
+      '@shadcn/ui', 'TailwindCSS', 'NodeJS',
+      'MongoDB', 'Redux-toolkit', 'Telegram Bot API',
+      'GPT', 'Telegram MTProto', 'Tor Hidden Service',
+      'Cloudflare API'
+    ],
+    supported: true,
+    tags: ['order'],
+    dates: {
+      devStart: '28 August 2023',
+      release: '1 October 2023'
+    },
+    scope: 3,
+    description: 'Блог и агрегатор Telegram-каналов, интегрирующийся с Telegram User API и собирающий сотни постов, сохраняя ссылки, перезаливая медиа-файлы (изображения и видео из телеграма) на собственный CDN на Node.js. Текст проверяется на уникальность при помощи интеграции с API сайта content-watch.ru и для всех постов генерируются заголовки с помощью интеграции с API OpenAI GPT v4 Assistants. В админке можно редактировать посты, назначать теги для поиска по сайту, из которых GPT автоматически выбирает подходящие. Система управления доменами в админке интегрируется с Cloudflare API для управления DNS записями и с API собственного прокси-сервера. Также я добавил интеграцию с plausible для партнеров, которые могут приводить новых читателей и зарабатывать деньги за реферальные посещения. Также я разработал систему комментариев к постам, которая собирает 0 персональной информации, с функциями модерации, ответов и прямых ссылок на комментарии. Также я занимался SEO оптимизацией сайта. Все выше перечисленное я делал самостоятельно для моего заказчика, но для соблюдения его конфиденциальности, я могу показать вам сайт лишь при личном созвоне.',
+    category: 'website',
+    id: 'blog-agregator-2023'
+  },
+  {
+    name: 'Darknet marketplaces analytics',
+    stack: [
+      'React', 'NextJS', 'TypeScript',
+      '@shadcn/ui', 'TailwindCSS', 'NodeJS',
+      'MongoDB', 'Redux-toolkit', 'Tor Hidden Service',
+      'rollup', 'Browser Extension', 'Redis'
+    ],
+    supported: true,
+    tags: ['order'],
+    dates: {
+      devStart: '15 September 2023',
+      release: '12 December 2023'
+    },
+    scope: 5,
+    description: 'Проект, анализирующий данные продаж российских маркетплейсов в даркнете. Включает в себя парсер, который запускается как расширение в браузере Tor, интегрирующего в админку, в которой можно назначать несколько операторов и с огромной скоростью собирать данные сайтов через скрейпинг HTML. Парсеры — это модульные скрипты, подключающиеся к расширению, которые могут писаться сторонними разработчиками, запускающиеся после компиляции с Rollup и статистического анализа в изолированной среде внутри background-скрипта. Собранные данные загружаются, анализируются бекендом на Node.js и структуризируются в определенную модель данных, хранящуюся в MongoDB для оптимизированных запросов. На фронтенде можно настроить любые фильтры по данным по каждому маркетплейсу, любые сортировки и различные представления (views) данных. Все выше перечисленное я делал в одиночку для моего заказчика, но для соблюдения его конфиденциальности, я могу показать вам сайт лишь при личном созвоне.',
+    category: 'website',
+    id: 'darknet-marketplaces-analytics-2023'
+  },
+  {
+    name: 'Mastodon for darknet',
+    stack: [
+      'Ruby on Rails', 'PostgreSQL'
+    ],
+    supported: true,
+    tags: ['order'],
+    dates: {
+      devStart: '20 August 2023',
+      release: '10 September 2023'
+    },
+    scope: 3,
+    description: 'Форк мастодона. Я работал с бекендом на Ruby и PostgreSQL, для того, чтобы добавить платные роли около никнеймов с генерацией счетов с BTCPayServer, защитой сайта с hCaptcha, удалением функционала верификации аккаунта по e-mail, модификацию алгоритма ранжирования постов (рейтинга постов) и прочее. Для сохранения конфиденциальности моего заказчика, я могу рассказать вам больше о проекте лишь при личном созвоне.',
+    category: 'website',
+    id: 'mastodon-for-darknet-2023'
+  },
+  {
+    name: 'Prankbot',
+    stack: [
+      'NextJS', 'Redux-toolkit', 'TypeScript'
+    ],
+    supported: true,
+    tags: ['order'],
+    dates: {
+      devStart: '10 March 2023',
+      release: '1 April 2023'
+    },
+    scope: 3,
+    description: 'Сайт, сделанный для клиента, на котором можно заказать розыгрыш человека за деньги. Перейдя по ссылке на деплой сайта, вы можете ввести любую почту и пароль, запросы к API не делаются, но вы все равно войдете в тестовый аккаунт.',
+    links: [
+      'https://prankbot-website.netlify.app'
+    ],
+    category: 'website',
+    id: 'prankbot'
+  },
+  {
+    name: 'Prankbot',
+    stack: [
+      'NextJS', 'Redux-toolkit', 'TypeScript'
+    ],
+    supported: true,
+    tags: ['order'],
+    dates: {
+      devStart: '10 March 2023',
+      release: '1 April 2023'
+    },
+    scope: 3,
+    description: 'Сайт, сделанный для клиента, на котором можно заказать розыгрыш человека за деньги. Перейдя по ссылке на деплой сайта, вы можете ввести любую почту и пароль, запросы к API не делаются, но вы все равно войдете в тестовый аккаунт.',
+    links: [
+      'https://prankbot-website.netlify.app'
+    ],
+    category: 'website',
+    id: 'prankbot'
+  },
+  {
+    name: 'Mental health ketoquiz',
+    stack: [
+      'NextJS', 'Redux-toolkit', 'TypeScript'
+    ],
+    supported: true,
+    tags: ['order'],
+    dates: {
+      devStart: '1 March 2023',
+      release: '10 March 2023'
+    },
+    scope: 2,
+    description: 'Сайт, сделанный для клиента, на котором можно заполнить небольшую анкету по ментальному здоровью и получить результат и платный план диеты для улучшения ментального здоровья. Перейдя по ссылке на демо-версию, задеплоенную на Netlify, вы можете сначала пройти тест, а потом перезагрузить страницу и нажать на кнопку Skip слева сверху для открытия страницы с результатом, так как запросы к API после прохождения теста на демо-сайте не делаются.',
+    links: [
+      'https://x5io-mental-health.netlify.app/'
+    ],
+    category: 'website',
+    id: 'ketoquiz'
+  },
+  {
+    name: 'X5.io Mental health',
+    stack: [
+      'NextJS', 'Redux-toolkit', 'TypeScript'
+    ],
+    supported: true,
+    tags: ['order'],
+    dates: {
+      devStart: '1 February 2023',
+      release: '1 March 2023'
+    },
+    scope: 2,
+    description: 'Сайт, сделанный для клиента, на котором можно заполнить небольшую анкету по ментальному здоровью и получить результат и платный план для улучшения ментального здоровья. Перейдя по ссылке на демо-версию, задеплоенную на Netlify, вы можете сначала пройти тест, а потом перезагрузить страницу и нажать на кнопку Skip слева сверху для открытия страницы с результатом, так как запросы к API после прохождения теста на демо-сайте не делаются.',
+    links: [
+      'https://x5io-mental-health.netlify.app/'
+    ],
+    category: 'website',
+    id: 'x5-mental-health'
+  },
+  {
+    name: 'X5.io Keto diet plan',
+    stack: [
+      'NextJS', 'Redux-toolkit', 'TypeScript'
+    ],
+    supported: true,
+    tags: ['order'],
+    dates: {
+      devStart: '1 March 2023',
+      release: '10 March 2023'
+    },
+    scope: 2,
+    description: 'Сайт, сделанный для клиента, на котором можно заполнить небольшую анкету по образу жизни и получить платный план кетогенной-диеты.',
+    links: [
+      'https://x5io-ketoplan.netlify.app/'
+    ],
+    category: 'website',
+    id: 'x5-keto-quiz'
+  },
+  {
+    name: 'Real BMO (Adventure Time)',
+    stack: [
+      'React', 'TypeScript', 'NodeJS', 'Vite', 
+      'OpenAI Whisper', 'GPT'
+    ],
+    supported: true,
+    dates: {
+      devStart: '20 December 2023'
+    },
+    scope: 4,
+    description: 'Робот BMO, которого я строю в реальной жизни на Raspberry PI 5 с Whisper и picovoice для распознавания речи и с синтезатором голоса на основе модели голоса BMO из мультсериала. Он думает с помощью бекенда на Node.js и придумывает ответы, как будто он персонаж в мультсериале, с помощью OpenAI GPTv4 Assistants API.',
+    links: [
+      'https://t.me/realbmo'
+    ],
+    category: 'robot',
+    id: 'realbmo'
+  },
+  {
+    name: 'At Dead of Night Russian voiceover',
+    stack: [
+      'ffmpeg'
+    ],
+    supported: true,
+    dates: {
+      devStart: '10 December 2022'
+    },
+    scope: 4,
+    description: 'Неофициальный русский дубляж FMV-инди-хоррора At Dead of Night, которым я занимаюсь в свободное время. Из своих личных денежных средств оплачиваю работу актеров дубляжа, монтирую все фразы, подыскиваю подходящие эффекты на голоса.',
+    links: [
+      'https://t.me/adonru',
+      'https://github.com/AtDeadOfNight/russian-dub',
+    ],
+    category: 'game/windows10',
+    id: 'adon-ru'
+  },
+  {
+    name: 'At Dead of Night cheats',
+    stack: [
+      'JavaScript', 'TypeScript', 'ThreeJS'
+    ],
+    supported: true,
+    dates: {
+      devStart: '10 January 2022',
+      release: '10 January 2022'
+    },
+    scope: 1,
+    description: 'Читы на игру At Dead of Night, которые я написал на JavaScript с помощью собственного инъектора дебаггера внутрь веб-контекста игры на движке NW.js. Читы анализируют внутренние переменные игры и позволяют игроку видеть передвижения врага, следить за состоянием предметов на карте. В последней версии был добавлен экспериментальный WallHack, который показывает примерный силуэт врага сквозь стены с помощью накладываемого ThreeJS рендера поверх FMV плеера.',
+    links: [
+      'https://t.me/adonru',
+      'https://github.com/AtDeadOfNight/cheats',
+    ],
+    category: 'game/windows10',
+    id: 'adon-cheats'
+  },
+  {
+    name: 'At Dead of Jerma',
+    stack: [],
+    supported: true,
+    dates: {
+      devStart: '12 January 2022',
+      release: '13 January 2022'
+    },
+    scope: 1,
+    description: 'Мод для At Dead of Night, для которой я натренировал нейросеть по смене лиц для замены лица врага из игры на известного блоггера Jerma985, а также поменял голос врага на голос Jerma при помощи другой нейросети.',
+    links: [
+      'https://t.me/adonru',
+      'https://github.com/AtDeadOfNight/at-dead-of-jerma-mod',
+    ],
+    category: 'game/windows10',
+    id: 'at-dead-of-jerma'
+  },
+  {
+    name: 'telegram-channel-mirror-mtproto',
+    stack: [
+      'NodeJS', 'TypeScript', 'Telegram Bot API', 'Telegram MTProto'
+    ],
+    supported: 'partially',
+    dates: {
+      devStart: '2 July 2022',
+      release: '5 July 2022'
+    },
+    scope: 1,
+    description: 'Утилита, работающая в автоматическом режиме и копирующая все сообщения из одного Telegram-канала в другой, даже если целевой канал защищен от форвардов. Работает через Telegram User API, копируя в точности все содержание,форматирование и вложения постов. В случае любых ошибок сообщает об этом через Telegram Bot API.',
+    links: [
+      'https://github.com/VityaSchel/telegram-channel-mirror-mtproto',
+    ],
+    category: 'developer_tool',
+    id: 'telegram-channel-mirror-mtproto'
+  },
+  {
+    name: 'MTProto Mobile',
+    stack: [
+      'React Native', 'React-native-paper', 'Expo', 'TypeScript', 'Telegram MTProto'
+    ],
+    supported: 'partially',
+    dates: {
+      devStart: '6 October 2022',
+      release: '13 October 2022'
+    },
+    scope: 2,
+    description: 'Мобильное приложение, позволяющее взаимодействовать с Telegram Core API (User API) прямо с телефона. Поддерживает мультисессию, автокомплит методов, строгую типизацию, рекурсивные параметры, легкое скачивание и загрузку через системный файлпикер Android.',
+    links: [
+      'https://github.com/VityaSchel/mtproto-mobile',
+      'https://play.google.com/store/apps/details?id=com.vityaschel.mtprotomobile',
+    ],
+    category: 'app',
+    id: 'mtproto-mobile'
+  },
+  {
+    name: 'Daivinchik Assist',
+    stack: [
+      'React Native', 'React-native-paper', 'Expo', 'TypeScript', 'Telegram MTProto'
+    ],
+    supported: false,
+    dates: {
+      devStart: '6 October 2022',
+      release: '13 October 2022'
+    },
+    scope: 2,
+    description: 'Мобильное приложение, помогающее во время использования дейтинг-бота Дайвинчик в Telegram. Интегрируется с Telegram User API через очень простой флоу (при этом api_id и api_hash получаются от пользователя приложения) и запускается в параллельном окне, в котором появляется детальная информация по анкете. Также позволяет пропускать уже пропущенные в прошлом анкеты и анкеты с черными словами.',
+    links: [
+      'https://github.com/VityaSchel/daivinchik-assist'
+    ],
+    category: 'app',
+    id: 'daivinchik-assist'
+  },
+  {
+    name: 'sport-trainings-app',
+    stack: [
+      'React Native', 'React-native-paper', 'Expo', 'TypeScript'
+    ],
+    supported: 'partially',
+    dates: {
+      devStart: '4 October 2022',
+      release: '4 October 2022'
+    },
+    scope: 1,
+    description: 'Мобильное приложение, помогающее мне во время посещений спортзала. Хранит информацию об упражнениях, помогает вести подсчет подходов и напоминает об инструкциях.',
+    category: 'app',
+    id: 'sport-trainings-app'
+  },
+  {
+    name: 'samara.lgbt',
+    stack: [
+      'React', 'NextJS'
+    ],
+    supported: false,
+    dates: {
+      devStart: '6 January 2023',
+      release: '6 January 2023'
+    },
+    scope: 1,
+    description: 'Ныне отключенный сайт, который я создавал для развития ЛГБТ-активизма и информирования людей о событиях квир-сообщества в моем родном городе Самара. Также на сайте были полезные ресурсы с помощью.',
+    links: [
+      'https://web.archive.org/web/20230723130959/https://samara.lgbt/'
+    ],
+    category: 'website',
+    id: 'samara-lgbt'
+  },
+  {
+    name: 'vitya.plus.devio.love',
+    stack: [
+      'React', 'NextJS', 'TypeScript'
+    ],
+    supported: true,
+    dates: {
+      devStart: '18 July 2023',
+      release: '20 July 2023'
+    },
+    scope: 1,
+    description: 'Подарок моему парню Диме на его 19-ый день рождения. Веб-сайт с нашими общими фотографиями и милыми открытками, анимациями и эффектами паралакс.',
+    links: [
+      'https://vitya.plus.devio.love',
+      'https://github.com/VityaSchel/vitya-plus-devio-love'
+    ],
+    category: 'website',
+    id: 'vitya-plus-devio-love'
+  },
+  {
+    name: 'devio-tw.ink',
+    stack: [
+      'React', 'NextJS', 'TypeScript', 'Blender', 'ThreeJS', 'React-three-fiber'
+    ],
+    supported: true,
+    dates: {
+      devStart: '18 July 2023',
+      release: '20 July 2023'
+    },
+    scope: 1,
+    description: 'Подарок моему парню Диме на его 19-ый день рождения. Веб-сайт с его 3D моделью, где он танцует "Gangnam Style". Скорее всего, при первом открытии сайта и нажатии кнопки Play у вас ничего не сработает и не загрузится, так что попробуйте перезагрузить страницу еще раз.',
+    links: [
+      'https://devio-tw.ink',
+      'https://github.com/VityaSchel/devio-tw.ink'
+    ],
+    category: 'website',
+    id: 'devio-twink'
+  },
+  {
+    name: 'lgbtize',
+    stack: [
+      'NodeJS', 'TypeScript'
+    ],
+    supported: true,
+    dates: {
+      devStart: '14 April 2023',
+      release: '14 April 2023'
+    },
+    scope: 1,
+    description: 'Библиотека на Node.js, которая лгбт-изирует любые картинки (меняет тон у 6 вертикальных частей входного изображения на радужные цвета). Попробовать можно в боте Telegram @lgbtize_bot',
+    links: [
+      'https://www.npmjs.com/package/lgbt',
+      'https://t.me/lgbtize_bot'
+    ],
+    category: 'npmjs_library',
+    id: 'devio-twink'
+  },
+  {
+    name: 'hornet.com API',
+    stack: [
+      'NodeJS', 'TypeScript', 'Jest'
+    ],
+    supported: false,
+    dates: {
+      devStart: '13 February 2023',
+      release: '13 February 2023'
+    },
+    scope: 1,
+    description: 'Библиотека на Node.js, которая позволяет использовать неофициальный браузерный API сайта hornet.com для знакомств среди геев. В репозитории есть готовый пример, удаляющий диалоги с людьми, старше указанного вами возраста в настройках кода.',
+    links: [
+      'https://github.com/VityaSchel/hornet.com',
+      'https://www.npmjs.com/package/hornet.com',
+    ],
+    category: 'npmjs_library',
+    id: 'hornet-api'
+  },
+  {
+    name: 'Hazbin Shop',
+    stack: [
+      'React', 'NextJS', 'TypeScript'
+    ],
+    supported: true,
+    dates: {
+      devStart: '26 June 2023',
+      release: '26 June 2023'
+    },
+    scope: 1,
+    description: 'Сайт для моего магазина предметов на моем SMB сервере игры Minecraft (сервер выживания для моих друзей)',
+    links: [
+      'https://github.com/VityaSchel/hazbin-shop',
+      'https://hazbin.netlify.app/',
+    ],
+    category: 'website',
+    id: 'hazbin-shop'
+  },
+  {
+    name: 'Tor Chat',
+    stack: [
+      'React', 'NextJS', 'TypeScript', 'Fastify', 'Tor Hidden Service', 'React-redux', 'Redux-toolkit'
+    ],
+    supported: true,
+    dates: {
+      devStart: '22 May 2023',
+      release: '22 May 2023'
+    },
+    scope: 1,
+    description: 'Простой анонимный чат на WebSocket в Tor, который собирает 0 персональных данных и не хранит никакие сообщения. Работает круглосуточно и не требует регистрации и авторизации',
+    links: [
+      'https://github.com/VityaSchel/tor-chat',
+      'http://tormsgrns63s7oivkcjxodze3zr7qaay7haqi7chojayrxpvtmiv7gyd.onion/',
+    ],
+    category: 'website',
+    id: 'tor-chat'
+  },
+  {
+    name: 'smb16school.ru',
+    stack: [
+      'React', 'NextJS', 'TypeScript'
+    ],
+    supported: true,
+    dates: {
+      devStart: '20 August 2023',
+      release: '20 August 2023'
+    },
+    scope: 1,
+    description: 'Простой сайт-хранилище с фотографиями с моего выпускного и с фото-альбома моего класса, интегрируется с imagekit CDN для быстрого предпросмотра',
+    links: [
+      'https://smb16school.ru'
+    ],
+    category: 'website',
+    id: 'smb16school'
+  },
+  {
+    name: 'my.telegram.org-api-wrapper',
+    stack: [
+      'React', 'NextJS', 'TypeScript', 'Jest'
+    ],
+    supported: false,
+    dates: {
+      devStart: '27 October 2022',
+      release: '30 October 2022'
+    },
+    scope: 1,
+    description: 'Враппер закрытого неофициального браузерного API сайта my.telegram.org c тестами Jest',
+    links: [
+      'https://github.com/VityaSchel/my.telegram.org-api-wrapper',
+      'https://www.npmjs.com/package/my.telegram.org-api-wrapper'
+    ],
+    category: 'npmjs_library',
+    id: 'my-telegram-org-api-wrapper'
+  },
+  {
+    name: 's-otk-js',
+    stack: [
+      'NodeJS', 'TypeScript', 'Jest'
+    ],
+    supported: 'partially',
+    dates: {
+      devStart: '22 April 2022',
+      release: '23 April 2022'
+    },
+    scope: 1,
+    description: 'Враппер закрытого неофициального браузерного API сайта s-otk.ru с государственным Самарским транспортом c тестами Jest',
+    links: [
+      'https://github.com/VityaSchel/s-otk-js',
+      'https://www.npmjs.com/package/s-otk-js'
+    ],
+    category: 'npmjs_library',
+    id: 's-otk-js'
+  },
+  {
+    name: 's-otk-bot',
+    stack: [
+      'NodeJS', 'TypeScript', 'Telegram Bot API'
+    ],
+    supported: false,
+    dates: {
+      devStart: '13 November 2022',
+      release: '13 November 2022'
+    },
+    scope: 1,
+    description: 'Telegram-бот, интегрирующийся с неофициальным API городской транспортной банковской системы и отправляющий уведомления о низком балансе счета в телеграм',
+    links: [
+      'https://github.com/VityaSchel/s-otk-bot'
+    ],
+    category: 'npmjs_library',
+    id: 's-otk-bot'
+  },
+  {
+    name: 'mafiaonline.js',
+    stack: [
+      'NodeJS', 'TypeScript', 'Jest'
+    ],
+    supported: false,
+    dates: {
+      devStart: '28 April 2022',
+      release: '28 April 2022'
+    },
+    scope: 1,
+    description: 'Враппер закрытого неофициального клиентского API на http-сокетах игры Мафия Онлайн с JSDOC, полной обработкой ошибок, поддежкой авторизации, чата, тестами Jest, примерами и API Reference',
+    links: [
+      'https://github.com/VityaSchel/mafiaonline.js',
+      'https://npmjs.com/package/mafiaonline.js'
+    ],
+    category: 'npmjs_library',
+    id: 'mafiaonline-js'
+  },
+  {
+    name: 'samlit.js',
+    stack: [
+      'NodeJS', 'TypeScript'
+    ],
+    supported: false,
+    dates: {
+      devStart: '21 December 2022',
+      release: '22 December 2022'
+    },
+    scope: 1,
+    description: 'Шуточная библиотека для проверки сайта моего лицея на наличие проблем. Отсылает к моим статьям <a href="/portfolio/100-причин-почему-у-самлита-плохой-сайт" target="_blank" rel="nofollow noreferrer">100 причин почему у СамЛИТа плохой сайт</a> и <a href="/portfolio/fuck-samlit" target="_blank" rel="nofollow noreferrer">как я взломал все аккаунты учеников моей школы</a>',
+    links: [
+      'https://github.com/VityaSchel/samlit.js',
+      'https://www.npmjs.com/package/samlit'
+    ],
+    category: 'npmjs_library',
+    id: 'samlit-js'
+  },
+  {
+    name: 'scaffold',
+    stack: [
+      'NodeJS', 'TypeScript'
+    ],
+    supported: true,
+    dates: {
+      devStart: '21 December 2022',
+      release: '22 December 2022'
+    },
+    scope: 1,
+    description: 'Инструмент для быстрой развертки проекта на Node.js с SWC (компилятор TypeScript на Rust), TypeScript, Jest с babel и моими избранными правилами eslint и конфигурацией vscode. Одна команда: scaffold project-name и проект готов к разработке',
+    links: [
+      'https://github.com/VityaSchel/scaffold',
+      'https://www.npmjs.com/package/@hloth/scaffold'
+    ],
+    category: 'developer_tool',
+    id: 'scaffold'
+  },
+  {
+    name: 'hloth-telegram-status',
+    stack: [
+      'NodeJS', 'TypeScript', 'Telegram MTProto'
+    ],
+    supported: false,
+    dates: {
+      devStart: '1 February 2022',
+      release: '2 February 2022'
+    },
+    scope: 1,
+    description: 'Бот, показывающий соответствующий эмодзи-статус в Telegram: работа, сон или отдых (выходные)',
+    links: [
+      'https://github.com/VityaSchel/hloth-telegram-status'
+    ],
+    category: 'utility',
+    id: 'hloth-telegram-status'
+  },
+  {
+    name: 'Bad Apple collection',
+    stack: [
+      'JavaScript'
+    ],
+    supported: true,
+    dates: {
+      devStart: '24 February 2023',
+      release: '24 February 2023'
+    },
+    scope: 1,
+    description: 'Моя личная коллекция "bad apple" — вещей, на которых можно проецировать видео Bad Apple',
+    links: [
+      'https://github.com/VityaSchel/bad-apple'
+    ],
+    category: 'other',
+    id: 'bad-apples'
+  },
+  {
+    name: 'vfs-status-bot',
+    stack: [
+      'NodeJS', 'TypeScript'
+    ],
+    supported: false,
+    dates: {
+      devStart: '29 November 2023',
+      release: '29 November 2023'
+    },
+    scope: 1,
+    description: 'Бот, проверяющий статус заявки на визу в VFS Global и уведомляющий об изменениях в статусе в Telegram',
+    links: [
+      'https://github.com/VityaSchel/vfs-status-bot'
+    ],
+    category: 'utility',
+    id: 'vfs-status-bot'
+  },
+  {
+    name: 'hloth-telegram-greeting',
+    stack: [
+      'NodeJS', 'TypeScript', 'Telegram MTProto'
+    ],
+    supported: false,
+    dates: {
+      devStart: '15 December 2021',
+      release: '17 December 2021'
+    },
+    scope: 1,
+    description: 'Бот, автоматически приветствующий всех, кто пишет мне в Telegram от моего имени и присылает короткий FAQ и информацию',
+    links: [
+      'https://github.com/VityaSchel/hloth-telegram-greeting'
+    ],
+    category: 'utility',
+    id: 'hloth-telegram-greeting'
+  },
+  {
+    name: 'styles.module.scss-vscode-extension',
+    stack: [
+      'NodeJS', 'TypeScript'
+    ],
+    supported: false,
+    dates: {
+      devStart: '16 September 2023',
+      release: '16 September 2023'
+    },
+    scope: 1,
+    description: 'Расширение для VSCode, которое позволяет одним кликом мыши в контекстном меню создать файл styles.module.scss для SCSS-модулей',
+    category: 'developer_tool',
+    id: 'styles-module-scss-vscode-extension'
+  },
+  {
+    name: 'Onlymeemes Bot',
+    stack: [
+      'NodeJS', 'TypeScript', 'Telegram Bot API', 'Telegram MTProto'
+    ],
+    supported: true,
+    dates: {
+      devStart: '16 September 2023',
+      release: '16 September 2023'
+    },
+    scope: 1,
+    description: 'Бот, который работает как предложка для Telegram-канала с мемами, позволяя подписчикам легко присылать мемы, а админу нажатием одной кнопки в боте запланировать публикацию поста в канал с помощью Telegram User API',
+    category: 'bot/telegram',
+    id: 'onlymeemes-bot'
+  },
+  {
+    name: 'github-status',
+    stack: [
+      'NodeJS', 'TypeScript'
+    ],
+    supported: true,
+    dates: {
+      devStart: '4 December 2021',
+      release: '4 December 2021'
+    },
+    scope: 1,
+    description: 'Бот, автоматически меняющий статус пользователя на GitHub каждый день, создавая таким образом счетчик до выбранного события. Когда-то отсчитывал дни до получения мной Чешского гражданства, потом отсчитывал дни до моего совершеннолетия',
+    category: 'utility',
+    id: 'github-status'
+  },
+  {
+    name: 'shitlerts',
+    stack: [
+      'NodeJS', 'TypeScript', 'Telegram Bot API'
+    ],
+    supported: true,
+    dates: {
+      devStart: '11 April 2023',
+      release: '11 April 2023'
+    },
+    scope: 1,
+    description: 'Бот, присылающий тупые шутки в Telegram про Штирлица',
+    links: [
+      'https://github.com/VityaSchel/shitlerts'
+    ],
+    category: 'utility',
+    id: 'shitlerts'
+  },
+  {
+    name: 'ps4exploit9.03bot',
+    stack: [
+      'NodeJS', 'VK API'
+    ],
+    supported: false,
+    dates: {
+      devStart: '25 March 2022',
+      release: '25 March 2022'
+    },
+    scope: 1,
+    description: 'Бот, каждый день меняющий счетчик дней в сообществе "сегодня вышел эксплойт 9.03 на PlayStation 4?" ВКонтакте. Отработав больше 1.5 года был наконец выключен. Эксплойт, кстати, не вышел до сих пор, даже спустя 2.5 года ожидания.',
+    category: 'bot/vk',
+    id: 'ps4exploit9-03bot'
+  },
+  {
+    name: 'hlothdon-banner',
+    stack: [
+      'NodeJS', 'TypeScript'
+    ],
+    supported: true,
+    dates: {
+      devStart: '7 June 2023',
+      release: '7 June 2023'
+    },
+    scope: 1,
+    description: 'Утилита, генерирующая с помощью node-canvas баннер для моего Twitter-аккаунта про мою <a href="https://twitter.com/hlothdon" target="_blank" rel="nofollow noreferrer">благотворительность</a>.',
+    links: [
+      'https://github.com/VityaSchel/hlothdon-banner',
+      'https://twitter.com/hlothdon'
+    ],
+    category: 'utility',
+    id: 'hlothdon-banner'
+  },
+  {
+    name: 'Replica Player',
+    stack: [
+      'rollup', 'TypeScript', 'React'
+    ],
+    supported: true,
+    dates: {
+      devStart: '14 June 2022'
+    },
+    scope: 1,
+    description: 'Компонент для React, полностью копирующий веб-плеер YouTube, включая все его функции и внешний вид с открытым кодом',
+    links: [
+      'https://vityaschel.github.io/replica-player/',
+      'https://github.com/VityaSchel/replica-player',
+    ],
+    category: 'utility',
+    id: 'replica-player'
+  },
+  {
+    name: 'pornolab.net',
+    stack: [
+      'NodeJS', 'TypeScript', 'Jest'
+    ],
+    supported: true,
+    dates: {
+      devStart: '14 November 2023',
+      release: '3 December 2023'
+    },
+    scope: 2,
+    unpublic: true,
+    description: 'Монорепозиторий с техническими заметки по работе форума порно-форума pornolab.net и враппер его неофициального браузерного API',
+    links: [
+      'https://github.com/VityaSchel/pornolab.net',
+      'https://www.npmjs.com/package/gayporn'
+    ],
+    category: 'npmjs_library',
+    id: 'pornolab-net'
+  },
+  {
+    name: 'sofastgaybrowser',
+    stack: [
+      'NodeJS', 'React', 'TypeScript', 'Electron'
+    ],
+    supported: true,
+    dates: {
+      devStart: '14 November 2023',
+      release: '5 December 2023'
+    },
+    scope: 2,
+    unpublic: true,
+    description: 'Браузер для просмотра и скачивания взрослого контента с порно-форума pornolab.net с поддержкой авторизации, торрентов и различных подфорумов',
+    links: [
+      'https://github.com/VityaSchel/sofastgaybrowser'
+    ],
+    category: 'app',
+    id: 'sofastgaybrowser'
+  },
   {
     name: 'Stigfinnare',
     stack: [
@@ -195,29 +1230,6 @@ const projects: Project[] = [
     id: 'jswitcher'
   },
   {
-    name: 'SIPacker',
-    stack: [
-      'React',
-      'React-router',
-      'MUI'
-    ],
-    supported: 'partially',
-    dates: {
-      devStart: '19 September 2021',
-      release: '31 October 2021'
-    },
-    scope: 3,
-    description: 'Онлайн-редактор паков для игры SiGame (Своя Игра)',
-    unpublic: false,
-    hidden: false,
-    logo: sipackerLogo,
-    links: [
-      'https://github.com/VityaSchel/SIPacker'
-    ],
-    category: 'website',
-    id: 'sipacker'
-  },
-  {
     name: 'AtmosSeriesBot',
     stack: [
       'NodeJS',
@@ -248,34 +1260,12 @@ const projects: Project[] = [
     id: 'atmosseriesbot'
   },
   {
-    name: 'Симулятор Маши из GoStudy',
-    stack: [
-      'Unity',
-      'C#'
-    ],
-    supported: false,
-    dates: {
-      devStart: '20 July 2021',
-      release: '23 July 2021',
-      abandon: '24 July 2021'
-    },
-    scope: 2,
-    description: 'Мобильная игра про Машу из GoStudy, которая шуршит микрофоном и мешает стриму',
-    unpublic: false,
-    hidden: false,
-    logo: mashaSimulatorLogo,
-    links: [
-      'https://play.google.com/store/apps/details?id=com.VityaSchel.GoStudyMashaSimulator'
-    ],
-    category: 'game/android',
-    id: 'симулятор-маши-из-gostudy'
-  },
-  {
     name: 'bot.biz (landing)',
     stack: [
       'NextJS',
       'TypeScript',
       'React-redux',
+      'Redux-toolkit',
       'next-i18next',
       'react-reveal',
       'GraphQL'
@@ -289,106 +1279,31 @@ const projects: Project[] = [
     logo: botBizLandingLogo,
     tags: ['order'],
     links: [
-      'https://www.figma.com/file/T4fTAPKZXo5nKUiiPE00DU/Local-bot.biz?node-id=0%3A1',
+      'https://botbiz-landing.netlify.app/',
+      'https://gitlab.com/hloth/bot.biz',
       'https://youtu.be/zdMy_A5Y2Kk'
     ],
     category: 'website',
     id: 'bot-biz-landing'
   },
   {
-    name: 'АБОБА 2024 Кандидат в президенты',
-    stack: [
-      'NextJS',
-      'React',
-      'less',
-      'TypeScript'
-    ],
-    supported: true,
-    dates: {
-      devStart: '23 March 2021',
-      release: '28 March 2021'
-    },
+    name: 'bot.biz (panels)',
+    stack: ['NextJS', 'TypeScript', 'React-redux', 'Redux-toolkit', 'GraphQL', 'next-i18next'],
+    supported: 'partially',
+    dates: { devStart: '2022-06-09' },
     scope: 3,
-    description: 'Сайт абобы: кандидата в президенты и мема от Глада Валакаса',
+    description: 'Панель управления, написанная для сервиса, занимающегося коммерческой деятельностью в сфере ботов, сайтов и приложений. Адаптирован под мобильные устройства, браузер Safari, есть кастомный компонент карусели с нативным скроллингом, переключение темы с переходом и локализация на два языка (пока реализован только один).',
     unpublic: false,
     hidden: false,
-    logo: abobaLogo,
+    logo: botBizLandingLogo,
+    tags: ['order'],
     links: [
-      'https://aboba.utidteam.com/',
-      'https://freelance.habr.com/projects/244049'
+      'https://youtu.be/buxSGd_65U4',
+      'https://youtu.be/6WhqQxV1-0Q',
+      'https://youtu.be/zx27GHjpedU'
     ],
     category: 'website',
-    id: 'абоба-2024-кандидат-в-президенты'
-  },
-  {
-    name: 'Гадзы Глада Валакаса (1.0)',
-    stack: [
-      'Vanilla JS',
-      'PHP',
-      'MySQL',
-      'Telegram Bot API',
-      'Express'
-    ],
-    supported: false,
-    dates: {
-      devStart: '20 February 2020',
-      release: '20 February 2020',
-      abandon: '20 February 2021'
-    },
-    scope: 4,
-    description: 'Сборник всех гадз глада валакаса (раннее известен как гадзы.online)',
-    unpublic: false,
-    hidden: false,
-    logo: gadzasOldLogo,
-    links: [
-      'https://godzilla.utidteam.com/'
-    ],
-    category: 'website',
-    id: 'гадзы-глада-валакаса-1-0-'
-  },
-  {
-    name: 'Гадзы Глада Валакаса (2.0)',
-    stack: [
-      'React'
-    ],
-    supported: 'partially',
-    dates: {
-      devStart: '20 February 2021',
-      release: '20 February 2021'
-    },
-    scope: 4,
-    description: 'Сборник всех гадз глада валакаса (раннее известен как гадзы.online)',
-    unpublic: false,
-    hidden: false,
-    logo: gadzasNewLogo,
-    links: [
-      'https://godzilla.utidteam.com/'
-    ],
-    category: 'website',
-    id: 'гадзы-глада-валакаса-2-0-'
-  },
-  {
-    name: 'r/Jolygolf',
-    stack: [
-      'Python',
-      'PHP'
-    ],
-    supported: 'partially',
-    dates: {
-      devStart: '2019',
-      release: '2019'
-    },
-    scope: 4,
-    description: 'Сабреддит Алексея Шевцова на Reddit',
-    unpublic: false,
-    hidden: false,
-    logo: rJolygolfLogo,
-    links: [
-      'https://github.com/VityaSchel/RedditJolygolfBot',
-      'https://freelance.habr.com/projects/216865'
-    ],
-    category: 'bot/reddit',
-    id: 'r-jolygolf'
+    id: 'bot-biz-panels'
   },
   {
     name: 'Шизоньян',
@@ -398,18 +1313,19 @@ const projects: Project[] = [
       'Express',
       'React'
     ],
-    supported: 'partially',
+    supported: true,
     dates: {
       devStart: '2021',
       release: '2021'
     },
     scope: 2,
-    description: 'Сайт генератор твитов маргариты симоньян',
+    description: 'Сайт генератор твитов маргариты симоньян. На бекенде использовался markovify (цепи Маркова) для искуственного интеллекта',
     unpublic: false,
     hidden: false,
     logo: shizonyanLogo,
     links: [
-      'https://shizonyan.utidteam.com/'
+      'https://shizonyan.utidteam.com/',
+      'https://github.com/VityaSchel/shizonyan'
     ],
     category: 'website',
     id: 'шизоньян'
@@ -492,7 +1408,7 @@ const projects: Project[] = [
       'React',
       'React-admin',
       'Redis',
-      'MUI',
+      'MaterialUI',
       'React-native-paper',
       'Redux-toolkit'
     ],
@@ -513,10 +1429,8 @@ const projects: Project[] = [
     name: 'LIS NCE',
     stack: [
       'React',
-      'MUI',
-      'Redux',
+      'MaterialUI',
       'React-redux',
-      'Redux-toolkit',
       'rtk-query'
     ],
     supported: false,
@@ -546,7 +1460,7 @@ const projects: Project[] = [
       'MongoDB',
       'VK API',
       'VK-IO',
-      'YooCheckout'
+      'YooKassa'
     ],
     supported: 'partially',
     dates: { devStart: '2022-06-14' },
@@ -616,53 +1530,300 @@ const projects: Project[] = [
     id: 'alerts-api'
   },
   {
-    name: 'ОГЭ Генератор',
+    name: 'Симулятор Маши из GoStudy',
     stack: [
-      'React',
-      'Reactstrap',
-      'Bootstrap',
-      'less'
+      'Unity',
+      'C#'
+    ],
+    supported: false,
+    dates: {
+      devStart: '20 July 2021',
+      release: '23 July 2021',
+      abandon: '24 July 2021'
+    },
+    scope: 2,
+    description: 'Мобильная игра про Машу из GoStudy, которая шуршит микрофоном и мешает стриму',
+    unpublic: false,
+    hidden: false,
+    logo: mashaSimulatorLogo,
+    links: [
+      'https://play.google.com/store/apps/details?id=com.VityaSchel.GoStudyMashaSimulator'
+    ],
+    category: 'game/android',
+    id: 'симулятор-маши-из-gostudy'
+  },
+  {
+    name: 'cv.hloth.dev',
+    stack: [
+      'TypeScript', 'NextJS', 'TailwindCSS',
+      '@shadcn/ui'
+    ],
+    supported: true,
+    dates: {
+      devStart: '17 September 2023',
+      release: '17 September 2023'
+    },
+    scope: 1,
+    description: 'Сайт с моим резюме',
+    logo: cvhlothdevLogo,
+    links: [
+      'https://cv.hloth.dev',
+      'https://github.com/VityaSchel/cv.hloth.dev'
+    ],
+    category: 'website',
+    id: 'cv-hloth-dev'
+  },
+  {
+    name: 'Vite CSGO Case Simulator',
+    stack: [
+      'Vite',
+      'Preact',
+      'webpack',
+      'babel',
+      'React-redux'
     ],
     supported: 'partially',
+    dates: {
+      devStart: '6 January 2022',
+      release: '6 January 2022'
+    },
+    scope: 2,
+    description: 'Мой первый даркнет-сайт и первый проект на Vite с рулеткой CS:GO',
+    unpublic: false,
+    hidden: false,
+    links: [
+      'https://github.com/VityaSchel/vitejs-csgo-case-simulator'
+    ],
+    category: 'website/darknet',
+    id: 'vite-csgo-case-simulator'
+  },
+  {
+    name: 'Ruscript',
+    stack: [
+      'JavaScript'
+    ],
+    supported: false,
     dates: {
       devStart: '2021',
       release: '2021'
     },
     scope: 3,
-    description: 'Генератор вариантов огэ по информатике 2021',
+    description: 'Псевдо язык на JS полностью на русском языке',
     unpublic: false,
     hidden: false,
-    logo: ogeGeneratorLogo,
     links: [
-      'https://oge.utidteam.com/'
+      'https://github.com/vityaschel/ruscript'
     ],
-    category: 'website',
-    id: 'огэ-генератор'
+    category: 'programming_language',
+    id: 'ruscript'
   },
   {
-    name: 'bot.biz (panels)',
-    stack: ['NextJS', 'TypeScript', 'React-redux', 'GraphQL', 'next-i18next'],
-    supported: 'partially',
-    dates: { devStart: '2022-06-09' },
+    name: '100 причин почему у СамЛИТа плохой сайт',
+    stack: [
+      'Vanilla JS',
+      'less'
+    ],
+    supported: true,
+    dates: {
+      devStart: '2020',
+      release: '2020'
+    },
     scope: 3,
-    description: 'Панель управления, написанная для сервиса, занимающегося коммерческой деятельностью в сфере ботов, сайтов и приложений. Адаптирован под мобильные устройства, браузер Safari, есть кастомный компонент карусели с нативным скроллингом, переключение темы с переходом и локализация на два языка (пока реализован только один).',
+    description: 'Моя статья со 100 причинами о том, почему у моей школы ужасный веб-сайт и детальный разбор как и что можно улучшить. В итоге эта статья ни к чему не привела, а потом я <a href="/portfolio/fuck-samlit" target="_blank" rel="noreferrer nofollow">взломал свою школу</a> и написал об этом другую статью.',
     unpublic: false,
     hidden: false,
-    logo: botBizLandingLogo,
-    tags: ['order'],
+    logo: awfulSamLitWebsiteLogo,
+    category: 'website',
+    id: '100-причин-почему-у-самлита-плохой-сайт'
+  },
+  {
+    name: 'Wikipedia Speedrun',
+    stack: [
+      'Vanilla JS',
+      'PHP'
+    ],
+    supported: 'partially',
+    dates: {
+      devStart: '2020',
+      release: '2020'
+    },
+    scope: 2,
+    description: 'Игра про спидраннинг википедии (от случайной статьи до гитлера)',
+    unpublic: false,
+    hidden: false,
+    logo: wikipediaSpeedrunLogo,
     links: [
-      'https://youtu.be/buxSGd_65U4',
-      'https://youtu.be/6WhqQxV1-0Q',
-      'https://youtu.be/zx27GHjpedU'
+      'https://wikipedia.utidteam.com'
     ],
     category: 'website',
-    id: 'bot-biz-panels'
+    id: 'wikipedia-speedrun'
+  },
+  {
+    name: 'Py3Exec',
+    stack: [
+      'Vanilla JS',
+      'Bootstrap',
+      'PHP',
+      'MySQL'
+    ],
+    supported: false,
+    dates: {
+      devStart: '2019',
+      release: '2019',
+      abandon: '2021'
+    },
+    scope: 3,
+    description: 'Сайт для тренировки написания кода на питоне, решая задачи',
+    unpublic: false,
+    hidden: false,
+    logo: py3ExecLogo,
+    category: 'website',
+    id: 'py3exec'
+  },
+  {
+    name: 'Новый сайт для СамЛИТа',
+    stack: [
+      'React',
+      'Figma'
+    ],
+    supported: false,
+    dates: {
+      devStart: '2021',
+      abandon: '2021'
+    },
+    scope: 3,
+    description: 'Проект нового сайта для моей школы, на который я потратил больше 20 часов. Я разработал дизайн для каждого блока сайта, вместо того, чтобы использовать один скучный дизайн для всех страниц. Хитро включенный функционал для слабовидящих и документы об образовательной организации, чтобы они не мешали обычным посетителям, но были доступны в одно нажатие. Интеграция с Google-аккаунты из Google workspace школьной организации для голосования за еду в школьной столовой. Удобная админка для редактирования статей. Все это я предлагал бесплатно после своей разгромной статьи <a href="/portfolio/100-причин-почему-у-самлита-плохой-сайт">100 причин почему у СамЛИТа плохой сайт</a>',
+    unpublic: false,
+    hidden: false,
+    links: [
+      'https://www.figma.com/file/kgEObvHKuSPT4SEfMqDNaN/design?type=design&t=i1TdeiRQXrWhPF6v-1',
+      'https://www.figma.com/file/pGcuw2ICd5kBQYIpznidVK/dash.samlit.net?type=design&t=X4ZjNF6lM3hmBzlq-1'
+    ],
+    category: 'website',
+    id: 'новый-сайт-для-самлита'
+  },
+  {
+    name: 'Пароли Маркова',
+    stack: [
+      'React'
+    ],
+    supported: true,
+    dates: {
+      devStart: '5 July 2021',
+      release: '6 July 2021'
+    },
+    scope: 2,
+    description: 'Моя статья о том, как я взломал все аккаунты в Google workspace в моей школе — "самом лучшем информационном лицее города" и узнал личные данные, личные переписки и личные фотографии других учеников. В статье я подробно описываю уязвимость и как школа пыталась давить на меня, заставляя замолчать и не публиковать статью.',
+    unpublic: false,
+    hidden: false,
+    logo: fuckSamlitLogo,
+    links: [
+      'https://fucksamlit.ru',
+      'https://markov.utidteam.com',
+    ],
+    category: 'website',
+    id: 'fuck-samlit'
+  },
+  {
+    name: 'АБОБА 2024 Кандидат в президенты',
+    stack: [
+      'NextJS',
+      'React',
+      'less',
+      'TypeScript'
+    ],
+    supported: true,
+    dates: {
+      devStart: '23 March 2021',
+      release: '28 March 2021'
+    },
+    scope: 3,
+    description: 'Шуточный сайт абобы: кандидата в президенты и мема от Глада Валакаса',
+    unpublic: false,
+    hidden: false,
+    logo: abobaLogo,
+    links: [
+      'https://aboba.utidteam.com/',
+      'https://freelance.habr.com/projects/244049'
+    ],
+    category: 'website',
+    id: 'абоба-2024-кандидат-в-президенты'
+  },
+  {
+    name: 'Гадзы Глада Валакаса (1.0)',
+    stack: [
+      'Vanilla JS',
+      'PHP',
+      'MySQL',
+      'Telegram Bot API',
+      'Express'
+    ],
+    supported: false,
+    dates: {
+      devStart: '20 February 2020',
+      release: '20 February 2020',
+      abandon: '20 February 2021'
+    },
+    scope: 4,
+    description: 'Шуточный сайт, сборник всех гадз глада валакаса (раннее известен как гадзы.online)',
+    unpublic: false,
+    hidden: false,
+    logo: gadzasOldLogo,
+    links: [
+      'https://godzilla.utidteam.com/'
+    ],
+    category: 'website',
+    id: 'гадзы-глада-валакаса-1'
+  },
+  {
+    name: 'Гадзы Глада Валакаса (2.0)',
+    stack: [
+      'React'
+    ],
+    supported: 'partially',
+    dates: {
+      devStart: '20 February 2021',
+      release: '20 February 2021'
+    },
+    scope: 4,
+    description: 'Сборник всех гадз глада валакаса (раннее известен как гадзы.online)',
+    unpublic: false,
+    hidden: false,
+    logo: gadzasNewLogo,
+    links: [
+      'https://godzilla.utidteam.com/'
+    ],
+    category: 'website',
+    id: 'гадзы-глада-валакаса-2'
+  },
+  {
+    name: 'r/Jolygolf',
+    stack: [
+      'Python',
+      'PHP'
+    ],
+    supported: 'partially',
+    dates: {
+      devStart: '2019',
+      release: '2019'
+    },
+    scope: 4,
+    description: 'Сабреддит Алексея Шевцова на Reddit',
+    unpublic: false,
+    hidden: false,
+    logo: rJolygolfLogo,
+    links: [
+      'https://github.com/VityaSchel/RedditJolygolfBot',
+      'https://freelance.habr.com/projects/216865'
+    ],
+    category: 'bot/reddit',
+    id: 'r-jolygolf'
   },
   {
     name: 'FIT vs FEL',
     stack: [
       'React',
-      'MUI'
+      'MaterialUI'
     ],
     supported: 'partially',
     dates: {
@@ -685,7 +1846,7 @@ const projects: Project[] = [
     name: 'czech-living-costs',
     stack: [
       'React',
-      'MUI'
+      'MaterialUI'
     ],
     supported: 'partially',
     dates: {
@@ -840,7 +2001,7 @@ const projects: Project[] = [
       release: '2020'
     },
     scope: 2,
-    description: 'Бот, отправляющий каждое утро гифку с добрым утром',
+    description: 'Шуточный бот, отправляющий каждое утро гифку с добрым утром из Одноклассников. Появился как мем и шутка. Позже был переписан с PHP на Express и Node.js.',
     unpublic: false,
     hidden: false,
     logo: goodmorningBotLogo,
@@ -848,7 +2009,7 @@ const projects: Project[] = [
       'https://github.com/VityaSchel/goodmorning-bot'
     ],
     category: 'bot/vk',
-    id: 'доброе-утро-и-хорошего-дня'
+    id: 'good-morning-bot'
   },
   {
     name: 'private-repo-cloner',
@@ -940,23 +2101,23 @@ const projects: Project[] = [
     id: 'russianwordconjugationbot'
   },
   {
-    name: 'hiddenID_7',
+    name: 'GDZBot',
     stack: [
       'Fastify',
       'VK API'
     ],
-    supported: 'partially',
+    supported: false,
     dates: {
       devStart: '16 September 2021',
       release: '20 September 2021',
       abandon: '15 November 2021'
     },
     scope: 2,
-    description: '',
-    unpublic: true,
-    hidden: true,
+    description: 'Бот ВКонтакте, парсящий сайты с готовыми домашними работами и присылающий их по запросу в личные сообщения по номерам заданий из учебников',
+    unpublic: false,
+    hidden: false,
     category: 'bot/vk',
-    id: 'hiddenid-7'
+    id: 'gdzbot'
   },
   {
     name: 'VityaSchel Site: uCoz версия',
@@ -1071,12 +2232,14 @@ const projects: Project[] = [
     name: 'VityaSchel Site: hloth.dev с 3D-фигурами',
     stack: [
       'React',
+      'Vite',
+      'TypeScript',
       'ThreeJS',
       'React-three-fiber',
-      'Redux',
       'React-redux',
-      'MUI',
-      'Fastify'
+      'Redux-toolkit',
+      'MaterialUI',
+      'TailwindCSS'
     ],
     supported: true,
     dates: {
@@ -1158,32 +2321,6 @@ const projects: Project[] = [
     hidden: true,
     category: 'website',
     id: 'hiddenid-2'
-  },
-  {
-    name: 'Vite CSGO Case Simulator',
-    stack: [
-      'Vite',
-      'Preact',
-      'webpack',
-      'babel',
-      'Redux',
-      'React-redux',
-      'nginx'
-    ],
-    supported: 'partially',
-    dates: {
-      devStart: '6 January 2022',
-      release: '6 January 2022'
-    },
-    scope: 2,
-    description: 'Мой первый даркнет-сайт и первый проект на Vite с рулеткой CS:GO',
-    unpublic: false,
-    hidden: false,
-    links: [
-      'https://github.com/VityaSchel/vitejs-csgo-case-simulator'
-    ],
-    category: 'website/darknet',
-    id: 'vite-csgo-case-simulator'
   },
   {
     name: 'random-steam-avatar',
@@ -1316,29 +2453,9 @@ const projects: Project[] = [
     id: 'stigfinnare-2d'
   },
   {
-    name: 'Соловьев или Гитлер?',
-    stack: [
-      'Vanilla JS'
-    ],
-    supported: 'partially',
-    dates: {
-      devStart: '2020',
-      release: '2020'
-    },
-    scope: 2,
-    description: 'Сайт где надо угадать чья цитата: соловьева или гитлера',
-    unpublic: false,
-    hidden: false,
-    links: [
-      'https://github.com/VityaSchel/vladimir-solovyev'
-    ],
-    category: 'website',
-    id: 'соловьев-или-гитлер-'
-  },
-  {
     name: 'Gettr Dark Theme',
     stack: [
-      'CSS'
+      'Browser Extension'
     ],
     supported: false,
     dates: {
@@ -1354,7 +2471,7 @@ const projects: Project[] = [
     links: [
       'https://chrome.google.com/webstore/detail/gettr-dark-theme/jcjmdpdahejbjiopgedoljllckbmmekc'
     ],
-    category: 'website',
+    category: 'chrome_extension',
     id: 'gettr-dark-theme'
   },
   {
@@ -1443,7 +2560,7 @@ const projects: Project[] = [
     name: '#СвободуНавальному стрим',
     stack: [
       'NodeJS',
-      'OBS'
+      'OBS Plugins'
     ],
     dates: {
       devStart: '2021',
@@ -1475,26 +2592,6 @@ const projects: Project[] = [
     id: 'tinkoff-currency-converter'
   },
   {
-    name: 'Ruscript',
-    stack: [
-      'JavaScript'
-    ],
-    supported: false,
-    dates: {
-      devStart: '2021',
-      release: '2021'
-    },
-    scope: 3,
-    description: 'Псевдо язык на JS полностью на русском языке',
-    unpublic: false,
-    hidden: false,
-    links: [
-      'https://github.com/vityaschel/ruscript'
-    ],
-    category: 'programming_language',
-    id: 'ruscript'
-  },
-  {
     name: 'SkySmart helper',
     stack: [
       'Vanilla JS'
@@ -1517,11 +2614,13 @@ const projects: Project[] = [
   },
   {
     name: 'figma-anti-lgbt',
-    stack: ['CSS'],
+    stack: [
+      'Browser Extension'
+    ],
     supported: true,
     dates: { devStart: '2022-06-16', release: '2022-06-16' },
     scope: 1,
-    description: 'Расширение Chrome, заменяющее радужную полосу загрузки на сайте figma.com, появляющуюся во время месяца Pride, на стандартную синюю',
+    description: 'Расширение Chrome, заменяющее радужную полосу загрузки на сайте figma.com, появляющуюся во время месяца Pride, на стандартную синюю. Я удалил расширение вскоре после публикации.',
     unpublic: true,
     hidden: false,
     logo: figmaAntiLGBTLogo,
@@ -1596,68 +2695,6 @@ const projects: Project[] = [
     ],
     category: 'chrome_extension',
     id: 'асу-рсо-кастомные-названия-предметов'
-  },
-  {
-    name: 'hiddenID_5',
-    stack: [
-      'Vanilla JS',
-      'less'
-    ],
-    supported: 'partially',
-    dates: {
-      devStart: '2020',
-      release: '2020'
-    },
-    scope: 3,
-    description: '',
-    unpublic: true,
-    hidden: true,
-    category: 'website',
-    id: 'hiddenid-5'
-  },
-  {
-    name: 'Wikipedia Speedrun',
-    stack: [
-      'Vanilla JS',
-      'PHP'
-    ],
-    supported: 'partially',
-    dates: {
-      devStart: '2020',
-      release: '2020'
-    },
-    scope: 2,
-    description: 'Игра про спидраннинг википедии (от случайной статьи до гитлера)',
-    unpublic: false,
-    hidden: false,
-    logo: wikipediaSpeedrunLogo,
-    links: [
-      'https://wikipedia.utidteam.com'
-    ],
-    category: 'website',
-    id: 'wikipedia-speedrun'
-  },
-  {
-    name: 'Py3Exec',
-    stack: [
-      'Vanilla JS',
-      'Bootstrap',
-      'PHP',
-      'MySQL'
-    ],
-    supported: false,
-    dates: {
-      devStart: '2019',
-      release: '2019',
-      abandon: '2021'
-    },
-    scope: 3,
-    description: 'Сайт для тренировки написания кода на питоне, решая задачи',
-    unpublic: false,
-    hidden: false,
-    logo: py3ExecLogo,
-    category: 'website',
-    id: 'py3exec'
   },
   {
     name: 'Dragon Quests',
@@ -1770,7 +2807,7 @@ const projects: Project[] = [
     id: 'bridgedb-tgbot'
   },
   {
-    name: 'hiddenID_1',
+    name: '9Food',
     stack: [
       'Java',
       'Vanilla JS',
@@ -1784,11 +2821,11 @@ const projects: Project[] = [
       abandon: '2020'
     },
     scope: 3,
-    description: '',
-    unpublic: true,
-    hidden: true,
+    description: 'Мобильное приложение на Android и веб-сайт для пользователей iOS, которое я сделал в 9 классе для моих одноклассников, чтобы все смогли голосовать за ту еду, которую хотят (или не хотят) в школьной столовой завтра. Бекенд был на PHP с базой данных MySQL.',
+    unpublic: false,
+    hidden: false,
     category: 'app',
-    id: 'hiddenid-1'
+    id: '9food'
   },
   {
     name: 'hiddenID_8',
@@ -1878,26 +2915,6 @@ const projects: Project[] = [
     id: 'bad-ux-support-form'
   },
   {
-    name: 'hiddenID_4',
-    stack: [
-      'React',
-      'C',
-      'Figma',
-      'MariaDB'
-    ],
-    supported: false,
-    dates: {
-      devStart: '2021',
-      abandon: '2021'
-    },
-    scope: 3,
-    description: '',
-    unpublic: true,
-    hidden: true,
-    category: 'website',
-    id: 'hiddenid-4'
-  },
-  {
     name: 'EvieBotCanTalk',
     stack: [
       'Vanilla JS'
@@ -1947,23 +2964,6 @@ const projects: Project[] = [
       'order'
     ],
     id: 'pgi'
-  },
-  {
-    name: 'hiddenID_6',
-    stack: [
-      'React'
-    ],
-    supported: 'partially',
-    dates: {
-      devStart: '5 July 2021',
-      release: '6 July 2021'
-    },
-    scope: 2,
-    description: '',
-    unpublic: true,
-    hidden: true,
-    category: 'website',
-    id: 'hiddenid-6'
   },
   {
     name: '6 причин перейти с Native на PWA',
@@ -2051,14 +3051,14 @@ const projects: Project[] = [
       abandon: '2020'
     },
     scope: 1,
-    description: 'ИИ, генерирующий предложения, похожие на то, что говорит мой друг Никита Ким',
+    description: 'ИИ, генерирующий предложения, похожие на то, что говорит мой друг Никита',
     unpublic: false,
     hidden: false,
     category: 'website',
     id: 'nikita-bot'
   },
   {
-    name: 'hiddenID_3',
+    name: 'camlit',
     stack: [
       'uCoz CMS'
     ],
@@ -2069,11 +3069,11 @@ const projects: Project[] = [
       abandon: '2018'
     },
     scope: 3,
-    description: '',
-    unpublic: true,
-    hidden: true,
+    description: 'Веб-сайт на HTML, который я сделал во втором классе для моих одноклассников, где были новости, тесты и игры',
+    unpublic: false,
+    hidden: false,
     category: 'website',
-    id: 'hiddenid-3'
+    id: 'camlit'
   },
   {
     name: 'В чем разница?',
@@ -2087,11 +3087,11 @@ const projects: Project[] = [
       abandon: '2018'
     },
     scope: 1,
-    description: 'Сайт, объясняющий разницу между похожими вещами. Мой самый первый сайт.',
+    description: 'Сайт, объясняющий разницу между похожими вещами. Мой самый первый сайт на чистом HTML.',
     unpublic: false,
     hidden: false,
     category: 'website',
-    id: 'в-чем-разница-'
+    id: 'в-чем-разница'
   },
   {
     name: 'qqsh',
@@ -2104,7 +3104,7 @@ const projects: Project[] = [
       abandon: '2016'
     },
     scope: 1,
-    description: 'Игра по типу quiplash',
+    description: 'Игра по типу quiplash, сделанная на phpDevelStudio когда мне было 12 лет. Бекенд был на PHP',
     unpublic: false,
     hidden: false,
     category: 'game/windows10',

@@ -1,21 +1,16 @@
 import React from 'react'
 import styles from '../styles.module.scss'
-import { connect } from 'react-redux'
 import { DataGrid, ruRU as xDataGridRu, enUS as xDataGridEnUS } from '@mui/x-data-grid'
 import projectsList from '../../../data/projects'
-import { dotFlatten } from '../../../utils'
 import generateColumns from './generateColumns'
-import Search, { SearchProps, SearchRef } from './Search'
+import Search, { SearchRef } from './Search'
 import ProjectInfoDialog from './ProjectInfoDialog'
 import useMediaQuery from '@mui/material/useMediaQuery'
-import { useAppDispatch, useAppSelector } from '@/store/hooks'
+import { useAppSelector } from '@/store/hooks'
 import { selectTranslation } from '@/store/reducers/translation'
 import { selectLocale } from '@/store/reducers/locale'
-import { setShowShockingProjects } from '@/store/reducers/portfolio'
-
-type PortfolioProps = {
-  portfolio?: object;
-}
+import { selectPortfolio } from '@/store/reducers/portfolio'
+import { dotFlatten } from '@/utils'
 
 export function Portfolio() {
   const [searchTerms, setSearchTerms] = React.useState<string[]>([])
@@ -27,11 +22,12 @@ export function Portfolio() {
   const dataGridRef = React.useRef<HTMLDivElement>(null)
   const searchRef = React.useRef<SearchRef>(null)
   const { locale } = useAppSelector(selectLocale)
+  const { showShockingProjects } = useAppSelector(selectPortfolio)
   const dataGridLocalization = { 'ru-RU': xDataGridRu }[locale] ?? xDataGridEnUS
 
   React.useEffect(() => setLoading(false), [searchTerms])
 
-  const columns = generateColumns({
+  const columns = React.useMemo(() => generateColumns({
     locale,
     translation: translation.PORTFOLIO,
     setSearchTerms: (terms: string[]) => {
@@ -39,11 +35,11 @@ export function Portfolio() {
         searchRef.current.setTerms(terms)
       setSearchTerms(terms)
     },
-    showShockingProjects: translation.PORTFOLIO.PROJECT_DIALOG.SHOW_SHOCKING_PROJECTS,
+    showShockingProjects,
     ignoreContentWidthLimit: isMobile
-  })
+  }), [locale, translation, isMobile])
 
-  const projects = projectsList
+  const projects = React.useMemo(() => projectsList
     .filter(project => {
       if(!searchTerms.length) return true
       const terms = searchTerms.map(term => term.toLowerCase())
@@ -57,15 +53,18 @@ export function Portfolio() {
         return true
       if (terms.some(term => project.stack?.some(tech => tech.toLowerCase().includes(term)))) return true
     })
-    .filter(searchFilterFunc)
+    .filter(searchFilterFunc),
+  [searchTerms, searchFilterFunc, translation, showShockingProjects])
   const handleProjectClick = (id: string) => {
     const newPath = '/portfolio/' + id + window.location.search
     history.pushState(null, '', newPath)
     forceUpdateOnHistoryPush(Date.now())
   }
 
+  const projectsFlatten = React.useMemo(() => projects.map(p => dotFlatten(p, 'dates')), [projects])
+
   return (
-    <div className={styles.portfolio} style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
+    <div className='flex flex-col gap-3 flex-1'>
       <Search
         setSearchFilterFunc={setSearchFilterFunc}
         setSearchTerms={setSearchTerms}
@@ -73,14 +72,16 @@ export function Portfolio() {
         ref={searchRef}
       />
       <DataGrid
-        rows={projects}
+        rows={projectsFlatten}
         columns={columns}
         ref={dataGridRef}
 
-        pageSize={25}
+        pageSize={50}
         rowBuffer={5}
-        disableVirtualization
         rowsPerPageOptions={[]}
+
+        // otherwise scroll breaks
+        disableVirtualization
 
         disableColumnFilter
         disableColumnSelector
@@ -90,7 +91,7 @@ export function Portfolio() {
         onPageChange={() => dataGridRef.current?.querySelector('.MuiDataGrid-virtualScroller')?.scrollTo(0, 0)}
         localeText={dataGridLocalization.components.MuiDataGrid.defaultProps.localeText}
         loading={loading}
-        className={styles.dataGrid}
+        className='flex-1 [&_.MuiDataGrid-row]:cursor-pointer'
 
         getRowId={row => row.id}
       />

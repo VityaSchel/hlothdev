@@ -93,7 +93,7 @@ const Search = React.forwardRef<SearchRef, SearchProps>(({
   }, [filters])
 
   return (
-    <div className={styles.search}>
+    <div className='flex gap-3 items-center'>
       <FormControl variant='outlined' fullWidth>
         <InputLabel htmlFor='search-box'>{translation.PLACEHOLDER}</InputLabel>
         <OutlinedInput
