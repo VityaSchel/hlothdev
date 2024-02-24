@@ -21,7 +21,7 @@ export function Services() {
   ]
 
   return (
-    <div className={styles.services}>
+    <div className={`${styles.services} grid md:grid-cols-2`}>
       {cardsContent.map(card => {
         const cardKey = card.key as keyof typeof cards
         return (
@@ -32,7 +32,7 @@ export function Services() {
               ? <><span className={styles.avatar}>{card.avatar}</span> {cards[cardKey].title}</> 
               : cards[cardKey].title
             }
-            subtitle={cards[cardKey].description}
+            subtitle={<p className='text-sm'>{cards[cardKey].description}</p>}
             caption={cards[cardKey].price}
             link={mailTo({ to: 'hi@hloth.dev', subject: cards[cardKey].title })}
           />

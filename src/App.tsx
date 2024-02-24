@@ -111,6 +111,7 @@ export function App() {
         id='canvas' 
         linear
         // invalidateFrameloop={true}
+        dpr={window.devicePixelRatio}
       >
         <Camera />
         <Background theme={theme} />

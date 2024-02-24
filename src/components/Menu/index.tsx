@@ -77,7 +77,7 @@ function MenuItem(props: MenuItemProps) {
   const portfolioCardStyles = usePortfolioCardStyles(theme)
   const { rotation } = useSpring({
     to: { rotation: route === props.cardID ? 3.16 : 0 },
-    config: { friction: 60 }
+    config: { friction: 30 }
   })
 
   const { textColor, cubeColor, iconBgColor, iconColor, locationIconColor } = useSpring({

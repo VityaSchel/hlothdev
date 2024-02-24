@@ -2,7 +2,7 @@ import styles from './styles.module.scss'
 import Card from '../Card/index.js'
 import { connect } from 'react-redux'
 import { SiTelegram } from 'react-icons/si'
-import { ReactComponent as VKLogo } from '../../../assets/images/svgIcons/vk_logo.svg'
+import { ReactComponent as LinkedinLogo } from '../../../assets/images/svgIcons/linkedin_logo.svg'
 import { AiFillTwitterCircle } from 'react-icons/ai'
 import { MdEmail, MdLocalPhone } from 'react-icons/md'
 import { ImGithub } from 'react-icons/im'
@@ -24,21 +24,26 @@ function AboutCard({ isMobile }: {
         <h2 dangerouslySetInnerHTML={{ __html: translation.HEADING }} />
         <div className={styles.imgBlock}>
           <img src='/static/site-decorations/vk-dog.webp' alt={translation.INTRO_IMAGE} align='right' width={isMobile ? 80 : 130} />
-          <p dangerouslySetInnerHTML={{ __html: translation.INTRO }} />
+          <p dangerouslySetInnerHTML={{ __html: dates(translation.INTRO) }} />
         </div>
         <p dangerouslySetInnerHTML={{ __html: dates(translation.BACKEND) }} />
         <div className={styles.imgBlock}>
-          <video src="/static/site-decorations/kolobanga.webm" align='left' autoPlay width={isMobile ? 50 : 170} muted loop alt={translation.MY_PROJECTS_IMAGE} />
+          <video src="/static/site-decorations/kolobanga.webm" autoPlay width={isMobile ? 50 : 170} muted loop alt={translation.MY_PROJECTS_IMAGE} />
           <p dangerouslySetInnerHTML={{ __html: translation.MY_PROJECTS }} />
         </div>
-        <p dangerouslySetInnerHTML={{ __html: translation.BOTS }} />
+        <p dangerouslySetInnerHTML={{ __html: translation.FEATURED }} />
+        <p dangerouslySetInnerHTML={{ __html: translation.FEATURED_1 }} />
+        <p dangerouslySetInnerHTML={{ __html: translation.FEATURED_2 }} />
+        <p dangerouslySetInnerHTML={{ __html: translation.FEATURED_3 }} />
+        <p dangerouslySetInnerHTML={{ __html: translation.FEATURED_4 }} />
+        <p dangerouslySetInnerHTML={{ __html: translation.FEATURED_5 }} />
+        <p dangerouslySetInnerHTML={{ __html: translation.FEATURED_6 }} />
+        <p dangerouslySetInnerHTML={{ __html: translation.FEATURED_7 }} />
+        <p dangerouslySetInnerHTML={{ __html: translation.FEATURED_8 }} />
         <div className={styles.imgBlock}>
           <img src='/static/site-decorations/shrek.webp' alt={translation.PARSING_IMAGE} align='right' width={isMobile ? 70 : 130} />
           <p dangerouslySetInnerHTML={{ __html: translation.PARSING }} />
         </div>
-        <h2 dangerouslySetInnerHTML={{ __html: translation.WORK_EXPERIENCE_LABEL }} />
-        <p dangerouslySetInnerHTML={{ __html: translation.WORK_EXPERIENCE_BLOCK }} />
-        <div className={styles.playlistHint} dangerouslySetInnerHTML={{ __html: translation.PLAYLIST_HINT }} />
         <div className={styles.imgBlock}>
           <img src='/static/site-decorations/qwq.webp' alt={translation.ENDING_IMAGE} align='left' width={isMobile ? 80 : 140} />
           <p dangerouslySetInnerHTML={{ __html: translation.ENDING }} />
@@ -77,7 +82,7 @@ function AboutMeAsPerson() {
       <div className={styles.text}>
         <h2 dangerouslySetInnerHTML={{ __html: translation.ABOUT_ME_AS_PERSON.HEADING }} />
         <p dangerouslySetInnerHTML={{ __html: translation.ABOUT_ME_AS_PERSON.INTRO }} />
-        <p dangerouslySetInnerHTML={{ __html: translation.ABOUT_ME_AS_PERSON.TEXT }} />
+        <p dangerouslySetInnerHTML={{ __html: dates(translation.ABOUT_ME_AS_PERSON.TEXT, 'floor') }} className='whitespace-pre-wrap' />
       </div>
     </Card>
   )
@@ -88,7 +93,7 @@ function MiniProfile() {
 
   return (
     <Card
-      containerStyle={styles.profileCard}
+      containerClassname={styles.profileCard}
       avatar={<img src={avatar} width={100} height={100} style={{ borderRadius: 999 }} />}
       avatarStyles={{ padding: 0, boxShadow: '0 0 2px 0 rgba(0, 0, 0.25)' }}
       title={`${translation.CARD_ME_FIRST_NAME} ${translation.CARD_ME_LAST_NAME}`}
@@ -101,7 +106,7 @@ function MiniProfile() {
 function Contacts() {
   return (
     <Card 
-      containerStyle={styles.contactsContainer}
+      containerClassname={styles.contactsContainer}
       className={styles.contacts}
     >
       {Object.values(links).map((link, i) => (
@@ -114,19 +119,29 @@ function Contacts() {
 }
 
 const links = {
-  Telegram: {
-    icon: SiTelegram,
-    href: 'https://t.me/hlothdev',
-    label: '@hlothdev'
+  GitHub: {
+    icon: ImGithub,
+    href: 'https://github.com/VityaSchel',
+    label: '@VityaSchel'
   },
-  VKontakte: {
-    icon: VKLogo,
-    href: 'https://vk.com/hloth',
-    label: 'Виктор Щелочков'
+  // VKontakte: {
+  //   icon: VKLogo,
+  //   href: 'https://vk.com/hloth',
+  //   label: 'Виктор Щелочков'
+  // },
+  LinkedIN: {
+    icon: LinkedinLogo,
+    href: 'https://www.linkedin.com/in/hloth/',
+    label: 'Viktor Shchelochkov'
   },
   Twitter: {
     icon: AiFillTwitterCircle,
     href: 'https://twitter.com/hlothdev',
+    label: '@hlothdev'
+  },
+  Telegram: {
+    icon: SiTelegram,
+    href: 'https://t.me/hlothdev',
     label: '@hlothdev'
   },
   Email: {
@@ -137,12 +152,7 @@ const links = {
   Telephone: {
     icon: MdLocalPhone,
     href: 'tel:79019404698',
-    label: '+7 9019 404-69-8'
-  },
-  GitHub: {
-    icon: ImGithub,
-    href: 'https://github.com/VityaSchel',
-    label: '@VityaSchel'
+    label: '8 9019 404 69 8'
   },
 }
 

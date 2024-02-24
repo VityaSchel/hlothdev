@@ -9,11 +9,11 @@ import { selectTheme } from '@/store/reducers/theme'
 interface CardProps {
   children?: React.ReactNode
   avatar?: React.ReactNode
-  containerStyle?: string | string[]
+  containerClassname?: string | string[]
   className?: string | string[]
   avatarStyles?: object
-  title?: string | React.ReactNode
-  subtitle?: string
+  title?: React.ReactNode
+  subtitle?: React.ReactNode
   caption?: string
   theme?: string
   link?: string
@@ -51,21 +51,21 @@ function Card(props: CardProps) {
 }
 
 type CardContainerProps = {
-  children?: React.ReactNode;
-  avatar?: React.ReactNode;
-  containerStyle?: string | string[];
-  className?: string | string[];
-  title?: string | React.ReactNode;
-  subtitle?: string;
-  caption?: string;
-  link?: string;
+  children?: React.ReactNode
+  avatar?: React.ReactNode
+  containerClassname?: string | string[]
+  className?: string | string[]
+  title?: React.ReactNode
+  subtitle?: React.ReactNode
+  caption?: string
+  link?: string
 };
 
 function CardContainer(props: CardContainerProps) {
   const { theme } = useAppSelector(selectTheme)
   const containerClassName = cx('w-full h-full box-border p-[25px] flex gap-[20px] items-center bg-[#fff] no-underline text-[#000]', { 'bg-[linear-gradient(125deg,_#282828,_#1e1e1e)] text-[#fff]': theme === 'dark' })
 
-  const containerClasses = cx('!rounded-[15px] overflow-hidden shadow-card-container [&_a]:font-semibold [&_a]:text-[0.9em] [&_a]:leading-[17px] [&_a]:no-underline', props.containerStyle)
+  const containerClasses = cx('!rounded-[15px] overflow-hidden shadow-card-container [&_a]:font-semibold [&_a]:text-[0.9em] [&_a]:leading-[17px] [&_a]:no-underline', props.containerClassname)
 
   return (
     props.link

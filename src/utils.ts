@@ -1,5 +1,5 @@
 import hexRgb from 'hex-rgb'
-import { formatDistanceToNowStrict } from 'date-fns'
+import { RoundingMethod, formatDistanceToNowStrict } from 'date-fns'
 import { ru as dateFns_ru, enUS as dateFns_enUS } from 'date-fns/locale'
 import { SpringValue } from 'react-spring'
 import { store } from '@/store'
@@ -136,7 +136,7 @@ export const getDateFnsLocale = () => {
   return store.getState().locale.locale === 'ru-RU' ? dateFns_ru : dateFns_enUS
 }
 
-export function dates(text: string): string {
+export function dates(text: string, roundingMethod?: RoundingMethod): string {
   return text.replaceAll(/%date_fns_(\d+)%/g, (match) => {
     const matches = match.match(/%date_fns_(\d+)%/)
     if(!matches) return ''
@@ -145,7 +145,7 @@ export function dates(text: string): string {
       new Date(
         Number(date) * 1000
       ), 
-      { locale: getDateFnsLocale() }
+      { locale: getDateFnsLocale(), roundingMethod }
     )
   })
 }

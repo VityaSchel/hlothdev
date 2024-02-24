@@ -2,12 +2,21 @@ import React from 'react'
 import Card from '../Card'
 import styles from '../styles.module.scss'
 import { BiLinkExternal } from 'react-icons/bi'
-import firstConceptArt from '@/assets/images/aboutSite/first-concept-art.jpeg'
-import blenderScreenshot from '@/assets/images/aboutSite/blender-screenshot.jpeg'
 import Skeleton from '@mui/material/Skeleton'
-import Typography from '@mui/material/Typography'
 import { useAppSelector } from '@/store/hooks'
 import { selectTranslation } from '@/store/reducers/translation'
+import firstConceptArt from '@/assets/images/aboutSite/first-concept-art.jpeg'
+import blenderScreenshot from '@/assets/images/aboutSite/blender-screenshot.jpeg'
+import site4thscreenshot1 from '@/assets/images/aboutSite/4th-site-screenshot-1.png'
+import site4thscreenshot2 from '@/assets/images/aboutSite/4th-site-screenshot-2.png'
+import site4thscreenshot3 from '@/assets/images/aboutSite/4th-site-screenshot-3.png'
+import site4thscreenshot4 from '@/assets/images/aboutSite/4th-site-screenshot-4.png'
+import site5thScreenshot1 from '@/assets/images/aboutSite/5th-site-screenshot-1.png'
+import site5thScreenshot2 from '@/assets/images/aboutSite/5th-site-screenshot-2.png'
+import site5thScreenshot3 from '@/assets/images/aboutSite/5th-site-screenshot-3.png'
+import site5thScreenshot4 from '@/assets/images/aboutSite/5th-site-screenshot-4.png'
+import site5thScreenshot5 from '@/assets/images/aboutSite/5th-site-screenshot-5.png'
+import site5thScreenshot6 from '@/assets/images/aboutSite/5th-site-screenshot-6.png'
 
 export function AboutSite() {
   const translation = useAppSelector(selectTranslation).ABOUT_THIS_WEBSITE
@@ -24,21 +33,45 @@ export function AboutSite() {
     })()
   }, [])
 
+  const handleOpenImage = (e: React.MouseEvent<HTMLImageElement>) => {
+    window.open(e.currentTarget.src, '_blank')
+  }
+
   return (
     <div className={styles.aboutSite}>
       <Card
         title={translation.HEADING}
-        containerStyle={styles.leftCol}
+        containerClassname={styles.leftCol}
       >
         <div className={styles.text}>
           <p dangerouslySetInnerHTML={{ __html: translation.TEXT }} />
           <ul>
             {translation.PREVIOUS_SITES.map((siteInfo, i) => (
-              <li key={i} dangerouslySetInnerHTML={{ __html: siteInfo }} />
+              <li key={i}>
+                <p dangerouslySetInnerHTML={{ __html: siteInfo }} />
+                {i >= 3 && (
+                  <div className='flex gap-2 [&>img]:rounded-lg [&>img]:h-20 flex-wrap [&>img]:cursor-zoom-in [&>img]:bg-[#eee] [&>img]:border-[#eee] [&>img]:border-solid'>
+                    {i === 3 && (<>
+                      <img src={site4thscreenshot1} onClick={handleOpenImage} />
+                      <img src={site4thscreenshot2} onClick={handleOpenImage} />
+                      <img src={site4thscreenshot3} onClick={handleOpenImage} />
+                      <img src={site4thscreenshot4} onClick={handleOpenImage} />
+                    </>)}
+                    {i === 4 && (<>
+                      <img src={site5thScreenshot1} onClick={handleOpenImage} />
+                      <img src={site5thScreenshot2} onClick={handleOpenImage} />
+                      <img src={site5thScreenshot3} onClick={handleOpenImage} />
+                      <img src={site5thScreenshot4} onClick={handleOpenImage} />
+                      <img src={site5thScreenshot5} onClick={handleOpenImage} />
+                      <img src={site5thScreenshot6} onClick={handleOpenImage} />
+                    </>)}
+                  </div>
+                )}
+              </li>
             ))}
           </ul>
           <p dangerouslySetInnerHTML={{ __html: translation.TEXT2 }} />
-          {visitorsCounter !== null && <Typography variant='caption' className={styles.counter}>
+          {visitorsCounter !== null && <span className='font-bold text-sm [&,&_span]leading-tight'>
             <span>{translation.VISITORS_THIS_MONTH}: {String(visitorsCounter)}.</span> {
               visitorsCounter === 0 
                 ? <span>{translation.ZERO_VISITORS}</span>
@@ -47,11 +80,11 @@ export function AboutSite() {
                   : Boolean(visitorsCounter <= 5) && 
                     <span>{translation.TOO_LOW_VISITORS.replace('%v', String(visitorsCounter))}</span>
             }
-          </Typography>}
+          </span>}
         </div>
       </Card>
       <Card
-        containerStyle={styles.rightCol}
+        containerClassname={styles.rightCol}
       >
         <div className={styles.img}>
           <img src={firstConceptArt} alt="" />
@@ -61,7 +94,6 @@ export function AboutSite() {
           <img src={blenderScreenshot} alt="" />
           <Skeleton variant='rectangular' />
         </div>
-        <a href="https://www.instagram.com/s/aGlnaGxpZ2h0OjE3ODcxNzQ1NzUxNjI2MjM4">{translation.LINKS.INSTAGRAM_HIGHLIGHTS} <BiLinkExternal/></a>
         <a href="https://github.com/VityaSchel/hlothdev">{translation.LINKS.GITHUB_SOURCES} <BiLinkExternal/></a>
       </Card>
     </div>
