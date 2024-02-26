@@ -57,7 +57,7 @@ import wikipediaSpeedrunLogo from '@/assets/images/projectsLogos/wikipedia-speed
 // scope: 1=verysmall 2=small 3=average 4=big 5=huge
 
 const technologies = {
-  web: ['React', 'NextJS', 'GraphQL', 'MaterialUI', 'Reactstrap', 'Bootstrap', 'less', 'React-redux', 'Redux-toolkit', 'next-i18next', 'react-reveal', 'rtk-query', 'React-admin', 'React-router', 'Jest', 'ThreeJS', 'React-three-fiber', 'Vite', 'Preact', 'webpack', 'rollup', 'babel', 'Mapbox', 'Browser Extension', 'workbox', 'Service Worker', 'TailwindCSS', '@shadcn/ui', 'Remix'],
+  web: ['React', 'NextJS', 'GraphQL', 'MaterialUI', 'Reactstrap', 'Bootstrap', 'less', 'React-redux', 'Redux-toolkit', 'next-i18next', 'react-reveal', 'rtk-query', 'React-admin', 'React-router', 'Jest', 'ThreeJS', 'React-three-fiber', 'Vite', 'Preact', 'webpack', 'rollup', 'babel', 'Mapbox', 'Browser Extension', 'workbox', 'Service Worker', 'TailwindCSS', '@shadcn/ui', 'Remix', 'IndexedDB'],
   mobile: ['React Native', 'Android', 'Expo', 'React-native-paper'],
   backend: ['NodeJS', 'TypeScript', 'Express', 'Fastify', 'SignalR', 'streamlink', 'ffmpeg', 'Kubernetes', 'Python', 'PHP', 'bee-queue', 'Vanilla JS', 'Telegram MTProto', 'Ruby on Rails'],
   databases: ['MongoDB', 'PostgreSQL', 'MySQL', 'Redis', 'LevelDB', 'sqlite'],
@@ -85,7 +85,10 @@ export type Project = {
     abandon?: string
   }
   scope: 1 | 2 | 3 | 4 | 5
-  description: string
+  description: {
+    ru: string
+    _DEFAULT_: string
+  }
   unpublic?: boolean
   hidden?: boolean
   logo?: string
@@ -134,7 +137,10 @@ const projects: Project[] = [
       release: '29 January 2024'
     },
     scope: 2,
-    description: 'Открытый и бесплатный реестр записей ONS, автоматически анализирующий блокчейн OXEN. Бекнд парсит новые ONS записи с помощью JSON RPC и расшифровывает значения с помощью Blake2b и argon2. Фронтенд ориентирован на работу офлайн, поэтому я написал собственный сервис воркер и настроил webpack для его загрузки с механизмом background sync и локальной базой данных. Этот сайт также полностью автоматически интегрируется с блокчейном для создания записей, чтобы пользователю не нужно было покупать криптовалюту. Я развернул собственный SMTP сервер и настроил 100% доставку писем и интегрировал сайт с YooKassa для приема платежей и оплаты.',
+    description: {
+      ru: 'Открытый и бесплатный реестр записей ONS, автоматически анализирующий блокчейн OXEN. Бекнд парсит новые ONS записи с помощью JSON RPC и расшифровывает значения с помощью Blake2b и argon2. Фронтенд ориентирован на работу офлайн, поэтому я написал собственный сервис воркер и настроил webpack для его загрузки с механизмом background sync и локальной базой данных. Этот сайт также полностью автоматически интегрируется с блокчейном для создания записей, чтобы пользователю не нужно было покупать криптовалюту. Я развернул собственный SMTP сервер и настроил 100% доставку писем и интегрировал сайт с YooKassa для приема платежей и оплаты.',
+      _DEFAULT_: 'Open and free ONS record registry, automatically analyzing OXEN blockchain. The backend parses new ONS records using JSON RPC and decrypts values using Blake2b and argon2. The frontend is designed for offline operation, so I wrote my own service worker and configured webpack for its loading with background sync mechanism and local database. This site is also fully automated for blockchain entries creation, so the user does not need to buy cryptocurrency. I deployed my own SMTP server and set up 100% email delivery and integrated the site with YooKassa for accepting payments.',
+    },
     unpublic: false,
     hidden: false,
     logo: onsRegistryLogo,
@@ -158,7 +164,10 @@ const projects: Project[] = [
       release: '29 January 2024'
     },
     scope: 2,
-    description: 'Платформа, на которой разработчики могут полностью автоматически опубликовать бота для мессенджера Session. Бекенд проводит полную верификацию авторства бота при помощи отсылки команд в сторонний мессенджер и проверит контент бота с помощью OpenAI Moderation.',
+    description: {
+      ru: 'Платформа, на которой разработчики могут полностью автоматически опубликовать бота для мессенджера Session. Бекенд проводит полную верификацию авторства бота при помощи отсылки команд в сторонний мессенджер и проверит контент бота с помощью OpenAI Moderation.',
+      _DEFAULT_: 'A platform where developers can fully automatically publish a bot for the Session messenger. The backend performs full bot authorship verification by sending commands to an external messenger and checks the bot content using OpenAI Moderation.',
+    },
     unpublic: false,
     hidden: false,
     logo: sessionBotsDirectoryLogo,
@@ -182,7 +191,10 @@ const projects: Project[] = [
       release: '31 October 2021'
     },
     scope: 3,
-    description: 'Рескин сайта с расписанием для моего колледжа. Построен, ориентируясь на кеш и максимальную экономию данных: все ассеты сайта кешируются, данные из API проверяются на обновление по E-Tag. Бекенд на Next.js парсит расписание с официального сайта с помощью JSDOM и оповещает о возможных проблемах через Telegram Bot API.',
+    description: {
+      ru: 'Рескин сайта с расписанием для моего колледжа. Построен, ориентируясь на кеш и максимальную экономию данных: все ассеты сайта кешируются, данные из API проверяются на обновление по E-Tag. Бекенд на Next.js парсит расписание с официального сайта с помощью JSDOM и оповещает о возможных проблемах через Telegram Bot API.',
+      _DEFAULT_: 'A reskin of a schedule site for my college. Built with a focus on caching and maximum data savings: all site assets are cached, data from API is checked for updates by E-Tag. The backend on Next.js parses the schedule from the official site using JSDOM and notifies of possible problems via Telegram Bot API.',
+    },
     unpublic: false,
     hidden: false,
     logo: kspsutiLogo,
@@ -199,7 +211,8 @@ const projects: Project[] = [
       'React',
       'React-router',
       'MaterialUI',
-      'Service Worker'
+      'Service Worker',
+      'IndexedDB'
     ],
     supported: 'partially',
     dates: {
@@ -207,7 +220,10 @@ const projects: Project[] = [
       release: '31 October 2021'
     },
     scope: 3,
-    description: 'Онлайн-редактор паков для игры SiGame (Своя Игра)',
+    description: {
+      ru: 'Онлайн-редактор паков для игры SiGame (Своя Игра). Ориентирован на работу офлайн, поэтому имеет Service Worker, парсер xml для анализа загруженных файлов, файловое хранилище с IndexedDB и генератор паков с jszip',
+      _DEFAULT_: 'Online editor for packs for the game SiGame (Russian\'s verion of Jeopardy! game). Oriented for offline work, the PWA has a Service Worker, xml parser for analyzing uploaded files, file storage with IndexedDB, and packs (files) generator with jszip',
+    },
     unpublic: false,
     hidden: false,
     logo: sipackerLogo,
@@ -232,7 +248,10 @@ const projects: Project[] = [
       release: '2021'
     },
     scope: 3,
-    description: 'Генератор вариантов огэ по информатике 2021',
+    description: {
+      ru: 'Генератор вариантов ОГЭ по информатике 2021. Сделан на React с Bootstrap, имеет встроенную поддержку xlsx для таблиц, jszip для генерации архивов и компилятор python на WebAssembly',
+      _DEFAULT_: 'Generator of OGE (basic state exam for school students in Russia) variants for computer science subject made in 2021. Developed with React and Bootstrap, has built-in support for tables with xlsx, jszip for generating zip archives, and a Python compiler on WebAssembly',
+    },
     unpublic: false,
     hidden: false,
     logo: ogeGeneratorLogo,
@@ -255,7 +274,10 @@ const projects: Project[] = [
       release: '28 June 2022'
     },
     scope: 4,
-    description: 'Полный архив моих видео с удаленного канала на YouTube, работающий с CDN imagekit.io',
+    description: {
+      ru: 'Полный архив моих видео с удаленного канала на YouTube, работающий с CDN imagekit.io',
+      _DEFAULT_: 'Full archive in form on web-site of my videos from the removed channel on YouTube, working with CDN imagekit.io',
+    },
     logo: theArchiveLogo,
     links: [
       'https://archive.hloth.dev/',
@@ -275,7 +297,10 @@ const projects: Project[] = [
       release: '29 September 2023'
     },
     scope: 1,
-    description: 'Виджет для macOS, интегрирующийся с неофициальным браузерным API сайта smartthingsfind.samsung.com (результат моего реверс-инженеринга) и пингующий устройства Samsung',
+    description: {
+      ru: 'Виджет для macOS, интегрирующийся с неофициальным браузерным API сайта smartthingsfind.samsung.com (результат моего реверс-инженеринга) и пингующий устройства Samsung',
+      _DEFAULT_: 'Widget for macOS, integrating with the unofficial browser API of the site smartthingsfind.samsung.com (result of my reverse-engineering) and pinging Samsung devices',
+    },
     logo: samsungPingerLogo,
     links: [
       'https://github.com/VityaSchel/samsung-pinger/'
@@ -294,7 +319,10 @@ const projects: Project[] = [
       release: '29 September 2023'
     },
     scope: 1,
-    description: 'Первый фреймворк для разработки ботов в мессенджере Session. Хедлесс клиент для работы с API мессенджера Session. Работает с onion-роутингом, расшифровывает файлы с помощью асинхронных файлов.',
+    description: {
+      ru: 'Первый фреймворк для разработки ботов в мессенджере Session. Хедлесс клиент для работы с API мессенджера Session. Работает с onion-роутингом, расшифровывает файлы с помощью ассиметричных ключей.',
+      _DEFAULT_: 'First framework for developing bots in the Session messenger. Headless client for working with the Session messenger API. Works with onion-routing, decrypts files using assymetric keys.',
+    },
     links: [
       'https://github.com/VityaSchel/session-nodejs-bot',
       'https://www.youtube.com/watch?v=af7-DFSbFZ4'
@@ -315,7 +343,10 @@ const projects: Project[] = [
     },
     logo: solovyevVsHitlerLogo,
     scope: 1,
-    description: 'Шуточный сайт, где вам предстоит угадать, кому принадлежит цитата: пропагандисту Владимиру Соловьеву или Адольфу Гитлеру',
+    description: {
+      ru: 'Шуточный сайт, где вам предстоит угадать, кому принадлежит цитата: пропагандисту Владимиру Соловьеву или Адольфу Гитлеру',
+      _DEFAULT_: 'Joke website where you have to guess who the quote belongs to: propagandist Vladimir Solovyov or Adolf Hitler',
+    },
     links: [
       'https://solovyev.netlify.app/',
       'https://github.com/VityaSchel/vladimir-solovyev'
@@ -338,7 +369,10 @@ const projects: Project[] = [
       release: '1 October 2023'
     },
     scope: 3,
-    description: 'E2EE файлообменник, интегрирующийся с Backblaze B2 и поддерживающий превью файлов типа изображения, видео, аудио, таблицы, PDF, zip архивы прямо на веб-странице, а также опции защиты файлов паролем и автоматическое удаление через выбранный срок. Работает как в клирнете, так и в даркнете. Файлы шифруются ключом AES еще до загрузки на сервер, а расшифровываются ключом в URL-фрагменте (хеш после знака #). Фронтенд и бекенд полностью написаны мной. Для сохранения конфиденциальности заказчика, не могу дать ссылку на развернутый файлообменник, но могу показать вам его при личном созвоне.',
+    description: {
+      ru: 'E2EE файлообменник, интегрирующийся с Backblaze B2 и поддерживающий превью файлов типа изображения, видео, аудио, таблицы, PDF, zip архивы прямо на веб-странице, а также опции защиты файлов паролем и автоматическое удаление через выбранный срок. Работает как в клирнете, так и в даркнете. Файлы шифруются ключом AES еще до загрузки на сервер, а расшифровываются ключом в URL-фрагменте (хеш после знака #). Фронтенд и бекенд полностью написаны мной. Для сохранения конфиденциальности заказчика, не могу дать ссылку на развернутый файлообменник, но могу показать вам его при личном созвоне.',
+      _DEFAULT_: 'E2EE file exchanger, integrating with Backblaze B2 and supporting previews of file types such as images, videos, audio, tables, PDFs, zip archives directly on the web page, as well as options for file protection with a password and automatic deletion after some time. Works both in the clearnet and darknet. Files are encrypted with AES key before uploading to the server, and decrypted with the key in the URL fragment (hash after the # sign). Frontend and backend are completely written by me. Due to client confidentiality, I cannot provide a link to the deployed file exchange, but I can show you it in a personal call.',
+    },
     category: 'website',
     id: 'file-sharing-platform-2023'
   },
@@ -358,7 +392,10 @@ const projects: Project[] = [
       release: '1 October 2023'
     },
     scope: 3,
-    description: 'Блог и агрегатор Telegram-каналов, интегрирующийся с Telegram User API и собирающий сотни постов, сохраняя ссылки, перезаливая медиа-файлы (изображения и видео из телеграма) на собственный CDN на Node.js. Текст проверяется на уникальность при помощи интеграции с API сайта content-watch.ru и для всех постов генерируются заголовки с помощью интеграции с API OpenAI GPT v4 Assistants. В админке можно редактировать посты, назначать теги для поиска по сайту, из которых GPT автоматически выбирает подходящие. Система управления доменами в админке интегрируется с Cloudflare API для управления DNS записями и с API собственного прокси-сервера. Также я добавил интеграцию с plausible для партнеров, которые могут приводить новых читателей и зарабатывать деньги за реферальные посещения. Также я разработал систему комментариев к постам, которая собирает 0 персональной информации, с функциями модерации, ответов и прямых ссылок на комментарии. Также я занимался SEO оптимизацией сайта. Все выше перечисленное я делал самостоятельно для моего заказчика, но для соблюдения его конфиденциальности, я могу показать вам сайт лишь при личном созвоне.',
+    description: {
+      ru: 'Блог и агрегатор Telegram-каналов, интегрирующийся с Telegram User API и собирающий сотни постов, сохраняя ссылки, перезаливая медиа-файлы (изображения и видео из телеграма) на собственный CDN на Node.js. Текст проверяется на уникальность при помощи интеграции с API сайта content-watch.ru и для всех постов генерируются заголовки с помощью интеграции с API OpenAI GPT v4 Assistants. В админке можно редактировать посты, назначать теги для поиска по сайту, из которых GPT автоматически выбирает подходящие. Система управления доменами в админке интегрируется с Cloudflare API для управления DNS записями и с API собственного прокси-сервера. Также я добавил интеграцию с plausible для партнеров, которые могут приводить новых читателей и зарабатывать деньги за реферальные посещения. Также я разработал систему комментариев к постам, которая собирает 0 персональной информации, с функциями модерации, ответов и прямых ссылок на комментарии. Также я занимался SEO оптимизацией сайта. Все выше перечисленное я делал самостоятельно для моего заказчика, но для соблюдения его конфиденциальности, я могу показать вам сайт лишь при личном созвоне.',
+      _DEFAULT_: 'Blog and aggregator of Telegram channels, integrating with Telegram User API and collecting hundreds of posts, saving links, re-uploading media files (images and videos from telegram) to its own CDN on Node.js. Text is checked for uniqueness using API integration with content-watch.ru and titles are generated for all posts using OpenAI GPT v4 Assistants API. In the admin panel, you can edit posts, assign tags for site search, from which GPT automatically selects suitable ones. The domain management system in the admin panel integrates with the Cloudflare API for managing DNS records and with the API of my own proxy server. I also added integration with plausible for partners who can bring new readers and earn money for referral visits. Also, I developed a comment system for posts that collects 0 personal information, with moderation features, replies, and direct links to comments. I also took care of SEO optimization for the site. All of the above I did independently for my client, but to maintain their confidentiality, I can show you the site only in a personal call.',
+    },
     category: 'website',
     id: 'blog-agregator-2023'
   },
@@ -377,7 +414,10 @@ const projects: Project[] = [
       release: '12 December 2023'
     },
     scope: 5,
-    description: 'Проект, анализирующий данные продаж российских маркетплейсов в даркнете. Включает в себя парсер, который запускается как расширение в браузере Tor, интегрирующего в админку, в которой можно назначать несколько операторов и с огромной скоростью собирать данные сайтов через скрейпинг HTML. Парсеры — это модульные скрипты, подключающиеся к расширению, которые могут писаться сторонними разработчиками, запускающиеся после компиляции с Rollup и статистического анализа в изолированной среде внутри background-скрипта. Собранные данные загружаются, анализируются бекендом на Node.js и структуризируются в определенную модель данных, хранящуюся в MongoDB для оптимизированных запросов. На фронтенде можно настроить любые фильтры по данным по каждому маркетплейсу, любые сортировки и различные представления (views) данных. Все выше перечисленное я делал в одиночку для моего заказчика, но для соблюдения его конфиденциальности, я могу показать вам сайт лишь при личном созвоне.',
+    description: {
+      ru: 'Проект, анализирующий данные продаж российских маркетплейсов в даркнете. Включает в себя парсер, который запускается как расширение в браузере Tor, интегрирующего в админку, в которой можно назначать несколько операторов и с огромной скоростью собирать данные сайтов через скрейпинг HTML. Парсеры — это модульные скрипты, подключающиеся к расширению, которые могут писаться сторонними разработчиками, запускающиеся после компиляции с Rollup и статистического анализа в изолированной среде внутри background-скрипта. Собранные данные загружаются, анализируются бекендом на Node.js и структуризируются в определенную модель данных, хранящуюся в MongoDB для оптимизированных запросов. На фронтенде можно настроить любые фильтры по данным по каждому маркетплейсу, любые сортировки и различные представления (views) данных. Все выше перечисленное я делал в одиночку для моего заказчика, но для соблюдения его конфиденциальности, я могу показать вам сайт лишь при личном созвоне.',
+      _DEFAULT_: 'Project analyzing sales data of Russian marketplaces in the darknet. Includes a parser that runs as an extension in the Tor browser, integrating into the admin panel, where multiple operators can be assigned and data from sites can be collected at high speed through HTML scraping. Parsers are modular scripts that connect to the extension, which can be written by third-party developers, launched after compilation with Rollup and statistical analysis in an isolated environment inside the background script. Collected data is uploaded, analyzed by the backend on Node.js and structured into a specific data model, stored in MongoDB for optimized queries. On the frontend, any filters can be set for data by each marketplace, any sorting and various views (views) of data. All of the above I did in solo for my client, but to keep their confidentiality, I can show you the site only in a personal call.',
+    },
     category: 'website',
     id: 'darknet-marketplaces-analytics-2023'
   },
@@ -393,7 +433,10 @@ const projects: Project[] = [
       release: '10 September 2023'
     },
     scope: 3,
-    description: 'Форк мастодона. Я работал с бекендом на Ruby и PostgreSQL, для того, чтобы добавить платные роли около никнеймов с генерацией счетов с BTCPayServer, защитой сайта с hCaptcha, удалением функционала верификации аккаунта по e-mail, модификацию алгоритма ранжирования постов (рейтинга постов) и прочее. Для сохранения конфиденциальности моего заказчика, я могу рассказать вам больше о проекте лишь при личном созвоне.',
+    description: {
+      ru: 'Форк мастодона. Я работал с бекендом на Ruby и PostgreSQL, для того, чтобы добавить платные роли около никнеймов с генерацией счетов с BTCPayServer, защитой сайта с hCaptcha, удалением функционала верификации аккаунта по e-mail, модификацию алгоритма ранжирования постов (рейтинга постов) и прочее. Для сохранения конфиденциальности моего заказчика, я могу рассказать вам больше о проекте лишь при личном созвоне.',
+      _DEFAULT_: 'Fork of Mastodon. I worked with the backend on Ruby and PostgreSQL, in order to add paid roles near nicknames with generating invoices with BTCPayServer, protecting the site with hCaptcha, removing the functionality of account verification by email, modifying the post ranking algorithm (post rating) and more. To keep the confidentiality of my client, I can tell you more about the project only in a personal call.',
+    },
     category: 'website',
     id: 'mastodon-for-darknet-2023'
   },
@@ -409,50 +452,15 @@ const projects: Project[] = [
       release: '1 April 2023'
     },
     scope: 3,
-    description: 'Сайт, сделанный для клиента, на котором можно заказать розыгрыш человека за деньги. Перейдя по ссылке на деплой сайта, вы можете ввести любую почту и пароль, запросы к API не делаются, но вы все равно войдете в тестовый аккаунт.',
+    description: {
+      ru: 'Сайт, сделанный для клиента, на котором можно заказать розыгрыш человека за деньги. Перейдя по ссылке на деплой сайта, вы можете ввести любую почту и пароль, запросы к API не делаются, но вы все равно войдете в тестовый аккаунт.',
+      _DEFAULT_: 'A site made for a client, where you can order a person\'s prank for money. By following the link to the site deploy, you can enter any email and password, no API requests are made, but you will still log in to the test account.',
+    },
     links: [
       'https://prankbot-website.netlify.app'
     ],
     category: 'website',
     id: 'prankbot'
-  },
-  {
-    name: 'Prankbot',
-    stack: [
-      'NextJS', 'Redux-toolkit', 'TypeScript'
-    ],
-    supported: true,
-    tags: ['order'],
-    dates: {
-      devStart: '10 March 2023',
-      release: '1 April 2023'
-    },
-    scope: 3,
-    description: 'Сайт, сделанный для клиента, на котором можно заказать розыгрыш человека за деньги. Перейдя по ссылке на деплой сайта, вы можете ввести любую почту и пароль, запросы к API не делаются, но вы все равно войдете в тестовый аккаунт.',
-    links: [
-      'https://prankbot-website.netlify.app'
-    ],
-    category: 'website',
-    id: 'prankbot'
-  },
-  {
-    name: 'Mental health ketoquiz',
-    stack: [
-      'NextJS', 'Redux-toolkit', 'TypeScript'
-    ],
-    supported: true,
-    tags: ['order'],
-    dates: {
-      devStart: '1 March 2023',
-      release: '10 March 2023'
-    },
-    scope: 2,
-    description: 'Сайт, сделанный для клиента, на котором можно заполнить небольшую анкету по ментальному здоровью и получить результат и платный план диеты для улучшения ментального здоровья. Перейдя по ссылке на демо-версию, задеплоенную на Netlify, вы можете сначала пройти тест, а потом перезагрузить страницу и нажать на кнопку Skip слева сверху для открытия страницы с результатом, так как запросы к API после прохождения теста на демо-сайте не делаются.',
-    links: [
-      'https://x5io-mental-health.netlify.app/'
-    ],
-    category: 'website',
-    id: 'ketoquiz'
   },
   {
     name: 'X5.io Mental health',
@@ -466,7 +474,10 @@ const projects: Project[] = [
       release: '1 March 2023'
     },
     scope: 2,
-    description: 'Сайт, сделанный для клиента, на котором можно заполнить небольшую анкету по ментальному здоровью и получить результат и платный план для улучшения ментального здоровья. Перейдя по ссылке на демо-версию, задеплоенную на Netlify, вы можете сначала пройти тест, а потом перезагрузить страницу и нажать на кнопку Skip слева сверху для открытия страницы с результатом, так как запросы к API после прохождения теста на демо-сайте не делаются.',
+    description: {
+      ru: 'Сайт, сделанный для клиента, на котором можно заполнить небольшую анкету по ментальному здоровью и получить результат и платный план для улучшения ментального здоровья. Перейдя по ссылке на демо-версию, задеплоенную на Netlify, вы можете сначала пройти тест, а потом перезагрузить страницу и нажать на кнопку Skip слева сверху для открытия страницы с результатом, так как запросы к API после прохождения теста на демо-сайте не делаются.',
+      _DEFAULT_: 'A site made for a client, where you can fill out a small mental health questionnaire and receive the result and a paid plan for mental health improvement. By following the link to the demo version deployed on Netlify, you can first take the test, then reload the page and click the Skip button at the top left to open the result page, as no API requests are made after taking the test on the demo site.',
+    },
     links: [
       'https://x5io-mental-health.netlify.app/'
     ],
@@ -485,7 +496,10 @@ const projects: Project[] = [
       release: '10 March 2023'
     },
     scope: 2,
-    description: 'Сайт, сделанный для клиента, на котором можно заполнить небольшую анкету по образу жизни и получить платный план кетогенной-диеты.',
+    description: {
+      ru: 'Сайт, сделанный для клиента, на котором можно заполнить небольшую анкету по образу жизни и получить платный план кетогенной-диеты.',
+      _DEFAULT_: 'A site made for a client, where you can fill out a small lifestyle questionnaire and receive a paid ketogenic diet plan.',
+    },
     links: [
       'https://x5io-ketoplan.netlify.app/'
     ],
@@ -503,7 +517,10 @@ const projects: Project[] = [
       devStart: '20 December 2023'
     },
     scope: 4,
-    description: 'Робот BMO, которого я строю в реальной жизни на Raspberry PI 5 с Whisper и picovoice для распознавания речи и с синтезатором голоса на основе модели голоса BMO из мультсериала. Он думает с помощью бекенда на Node.js и придумывает ответы, как будто он персонаж в мультсериале, с помощью OpenAI GPTv4 Assistants API.',
+    description: {
+      ru: 'Робот BMO, которого я строю в реальной жизни на Raspberry PI 5 с Whisper и picovoice для распознавания речи и с синтезатором голоса на основе модели голоса BMO из мультсериала. Он думает с помощью бекенда на Node.js и придумывает ответы, как будто он персонаж в мультсериале, с помощью OpenAI GPTv4 Assistants API.',
+      _DEFAULT_: 'BMO robot that I am building in real life on Raspberry PI 5 with Whisper OpenAI API and Picovoice SDK for speech recognition and with a voice synthesizer based on the BMO character\'s voice model from the cartoon. Its brain is using a backend on Node.js and generates dialog responses as if it were a character in the cartoon, using the OpenAI GPTv4 Assistants API.',
+    },
     links: [
       'https://t.me/realbmo'
     ],
@@ -520,7 +537,10 @@ const projects: Project[] = [
       devStart: '10 December 2022'
     },
     scope: 4,
-    description: 'Неофициальный русский дубляж FMV-инди-хоррора At Dead of Night, которым я занимаюсь в свободное время. Из своих личных денежных средств оплачиваю работу актеров дубляжа, монтирую все фразы, подыскиваю подходящие эффекты на голоса.',
+    description: {
+      ru: 'Неофициальный русский дубляж FMV-инди-хоррора At Dead of Night, которым я занимаюсь в свободное время. Из своих личных денежных средств оплачиваю работу актеров дубляжа, монтирую все фразы, подыскиваю подходящие эффекты на голоса.',
+      _DEFAULT_: 'Unofficial Russian dubbing of the FMV indie horror At Dead of Night, which I do in my free time. From my own personal funds, I pay for the dubbing actors\' work, edit all audio fragments and phrases, and look for suitable voice effects.',
+    },
     links: [
       'https://t.me/adonru',
       'https://github.com/AtDeadOfNight/russian-dub',
@@ -539,7 +559,10 @@ const projects: Project[] = [
       release: '10 January 2022'
     },
     scope: 1,
-    description: 'Читы на игру At Dead of Night, которые я написал на JavaScript с помощью собственного инъектора дебаггера внутрь веб-контекста игры на движке NW.js. Читы анализируют внутренние переменные игры и позволяют игроку видеть передвижения врага, следить за состоянием предметов на карте. В последней версии был добавлен экспериментальный WallHack, который показывает примерный силуэт врага сквозь стены с помощью накладываемого ThreeJS рендера поверх FMV плеера.',
+    description: {
+      ru: 'Читы на игру At Dead of Night, которые я написал на JavaScript с помощью собственного инъектора дебаггера внутрь веб-контекста игры на движке NW.js. Читы анализируют внутренние переменные игры и позволяют игроку видеть передвижения врага, следить за состоянием предметов на карте. В последней версии был добавлен экспериментальный WallHack, который показывает примерный силуэт врага сквозь стены с помощью накладываемого ThreeJS рендера поверх FMV плеера.',
+      _DEFAULT_: 'Cheats for the game At Dead of Night, which I wrote in JavaScript using my own debugger injector into the web context of the game on the NW.js engine. Cheats analyze the game\'s internal variables and allow the player to see the enemy\'s movements, monitor the state of items on the map. In the latest version, an experimental WallHack was added, which shows the approximate silhouette of the enemy through the walls using a ThreeJS render overlaid on top of the FMV player.',
+    },
     links: [
       'https://t.me/adonru',
       'https://github.com/AtDeadOfNight/cheats',
@@ -556,7 +579,10 @@ const projects: Project[] = [
       release: '13 January 2022'
     },
     scope: 1,
-    description: 'Мод для At Dead of Night, для которой я натренировал нейросеть по смене лиц для замены лица врага из игры на известного блоггера Jerma985, а также поменял голос врага на голос Jerma при помощи другой нейросети.',
+    description: {
+      ru: 'Мод для At Dead of Night, для которой я натренировал нейросеть по смене лиц для замены лица врага из игры на известного блоггера Jerma985, а также поменял голос врага на голос Jerma при помощи другой нейросети.',
+      _DEFAULT_: 'Mod for At Dead of Night, for which I trained a neural network for face swapping to replace the enemy\'s face in the game with the famous blogger Jerma985, and also changed the enemy\'s voice to Jerma\'s voice using another neural network.',
+    },
     links: [
       'https://t.me/adonru',
       'https://github.com/AtDeadOfNight/at-dead-of-jerma-mod',
@@ -575,7 +601,10 @@ const projects: Project[] = [
       release: '5 July 2022'
     },
     scope: 1,
-    description: 'Утилита, работающая в автоматическом режиме и копирующая все сообщения из одного Telegram-канала в другой, даже если целевой канал защищен от форвардов. Работает через Telegram User API, копируя в точности все содержание,форматирование и вложения постов. В случае любых ошибок сообщает об этом через Telegram Bot API.',
+    description: {
+      ru: 'Утилита, работающая в автоматическом режиме и копирующая все сообщения из одного Telegram-канала в другой, даже если целевой канал защищен от форвардов. Работает через Telegram User API, копируя в точности все содержание,форматирование и вложения постов. В случае любых ошибок сообщает об этом через Telegram Bot API.',
+      _DEFAULT_: 'Utility that works in automatic mode and copies all messages from one Telegram channel to another, even if the target channel is protected from forwards. Works through the Telegram User API, copying exactly all content, formatting, and attachments of posts. In case of any errors, it reports them through the Telegram Bot API.',
+    },
     links: [
       'https://github.com/VityaSchel/telegram-channel-mirror-mtproto',
     ],
@@ -593,7 +622,10 @@ const projects: Project[] = [
       release: '13 October 2022'
     },
     scope: 2,
-    description: 'Мобильное приложение, позволяющее взаимодействовать с Telegram Core API (User API) прямо с телефона. Поддерживает мультисессию, автокомплит методов, строгую типизацию, рекурсивные параметры, легкое скачивание и загрузку через системный файлпикер Android.',
+    description: {
+      ru: 'Мобильное приложение, позволяющее взаимодействовать с Telegram Core API (User API) прямо с телефона. Поддерживает мультисессию, автокомплит методов, строгую типизацию, рекурсивные параметры, легкое скачивание и загрузку через системный файлпикер Android.',
+      _DEFAULT_: 'Mobile application allowing interaction with Telegram Core API (User API) directly from the phone. Supports multi-session, method autocomplete, strict typing, recursive parameters, easy downloading, and uploading through the Android system file picker.',
+    },
     links: [
       'https://github.com/VityaSchel/mtproto-mobile',
       'https://play.google.com/store/apps/details?id=com.vityaschel.mtprotomobile',
@@ -612,7 +644,10 @@ const projects: Project[] = [
       release: '13 October 2022'
     },
     scope: 2,
-    description: 'Мобильное приложение, помогающее во время использования дейтинг-бота Дайвинчик в Telegram. Интегрируется с Telegram User API через очень простой флоу (при этом api_id и api_hash получаются от пользователя приложения) и запускается в параллельном окне, в котором появляется детальная информация по анкете. Также позволяет пропускать уже пропущенные в прошлом анкеты и анкеты с черными словами.',
+    description: {
+      ru: 'Мобильное приложение, помогающее во время использования дейтинг-бота Дайвинчик в Telegram. Интегрируется с Telegram User API через очень простой флоу (при этом api_id и api_hash получаются от пользователя приложения) и запускается в параллельном окне, в котором появляется детальная информация по анкете. Также позволяет пропускать уже пропущенные в прошлом анкеты и анкеты с черными словами.',
+      _DEFAULT_: 'Mobile application helping during the use of the dating bot Daivinchik in Telegram. Integrates with the Telegram User API through a very simple flow (api_id and api_hash are obtained from the user of the application) and runs in a parallel window, where detailed information about the profile appears. Also allows skipping profiles already skipped in the past and profiles with blacklisted words',
+    },
     links: [
       'https://github.com/VityaSchel/daivinchik-assist'
     ],
@@ -630,7 +665,10 @@ const projects: Project[] = [
       release: '4 October 2022'
     },
     scope: 1,
-    description: 'Мобильное приложение, помогающее мне во время посещений спортзала. Хранит информацию об упражнениях, помогает вести подсчет подходов и напоминает об инструкциях.',
+    description: {
+      ru: 'Мобильное приложение, помогающее мне во время посещений спортзала. Хранит информацию об упражнениях, помогает вести подсчет подходов и напоминает об инструкциях.',
+      _DEFAULT_: 'Mobile app that helps me during gym visits. Stores information about exercises, helps count sets, and reminds about instructions.',
+    },
     category: 'app',
     id: 'sport-trainings-app'
   },
@@ -645,7 +683,10 @@ const projects: Project[] = [
       release: '6 January 2023'
     },
     scope: 1,
-    description: 'Ныне отключенный сайт, который я создавал для развития ЛГБТ-активизма и информирования людей о событиях квир-сообщества в моем родном городе Самара. Также на сайте были полезные ресурсы с помощью.',
+    description: {
+      ru: 'Ныне отключенный сайт, который я создавал для развития ЛГБТ-активизма и информирования людей о событиях квир-сообщества в моем родном городе Самара. Также на сайте были полезные ресурсы с помощью.',
+      _DEFAULT_: 'Now disabled website that I created for the development of LGBT activism and informing people about queer community events in my hometown Samara. Also, the site had useful resources.',
+    },
     links: [
       'https://web.archive.org/web/20230723130959/https://samara.lgbt/'
     ],
@@ -663,7 +704,10 @@ const projects: Project[] = [
       release: '20 July 2023'
     },
     scope: 1,
-    description: 'Подарок моему парню Диме на его 19-ый день рождения. Веб-сайт с нашими общими фотографиями и милыми открытками, анимациями и эффектами паралакс.',
+    description: {
+      ru: 'Подарок моему парню Диме на его 19-ый день рождения. Веб-сайт с нашими общими фотографиями и милыми открытками, анимациями и эффектами паралакс.',
+      _DEFAULT_: 'A gift for my boyfriend Dima on his 19th birthday. A website with our shared photos and sweet cards, animations, and parallax effects.',
+    },
     links: [
       'https://vitya.plus.devio.love',
       'https://github.com/VityaSchel/vitya-plus-devio-love'
@@ -682,7 +726,10 @@ const projects: Project[] = [
       release: '20 July 2023'
     },
     scope: 1,
-    description: 'Подарок моему парню Диме на его 19-ый день рождения. Веб-сайт с его 3D моделью, где он танцует "Gangnam Style". Скорее всего, при первом открытии сайта и нажатии кнопки Play у вас ничего не сработает и не загрузится, так что попробуйте перезагрузить страницу еще раз.',
+    description: {
+      ru: 'Подарок моему парню Диме на его 19-ый день рождения. Веб-сайт с его 3D моделью, где он танцует "Gangnam Style". Скорее всего, при первом открытии сайта и нажатии кнопки Play у вас ничего не сработает и не загрузится, так что попробуйте перезагрузить страницу еще раз.',
+      _DEFAULT_: 'A gift for my boyfriend Dima on his 19th birthday. A website with his 3D model, where he dances \'Gangnam Style\'. Most likely, nothing will work or load when you first open the site and press the Play button, so try reloading the page again.',
+    },
     links: [
       'https://devio-tw.ink',
       'https://github.com/VityaSchel/devio-tw.ink'
@@ -701,7 +748,10 @@ const projects: Project[] = [
       release: '14 April 2023'
     },
     scope: 1,
-    description: 'Библиотека на Node.js, которая лгбт-изирует любые картинки (меняет тон у 6 вертикальных частей входного изображения на радужные цвета). Попробовать можно в боте Telegram @lgbtize_bot',
+    description: {
+      ru: 'Библиотека на Node.js, которая лгбт-изирует любые картинки (меняет тон у 6 вертикальных частей входного изображения на радужные цвета). Попробовать можно в боте Telegram @lgbtize_bot',
+      _DEFAULT_: 'Node.js library that LGBT-izes any images (changes the tone of 6 vertical parts of the input image to rainbow colors). You can try it in the Telegram bot @lgbtize_bot',
+    },
     links: [
       'https://www.npmjs.com/package/lgbt',
       'https://t.me/lgbtize_bot'
@@ -720,7 +770,10 @@ const projects: Project[] = [
       release: '13 February 2023'
     },
     scope: 1,
-    description: 'Библиотека на Node.js, которая позволяет использовать неофициальный браузерный API сайта hornet.com для знакомств среди геев. В репозитории есть готовый пример, удаляющий диалоги с людьми, старше указанного вами возраста в настройках кода.',
+    description: {
+      ru: 'Библиотека на Node.js, которая позволяет использовать неофициальный браузерный API сайта hornet.com для знакомств среди геев. В репозитории есть готовый пример, удаляющий диалоги с людьми, старше указанного вами возраста в настройках кода.',
+      _DEFAULT_: 'Node.js library that allows using the unofficial browser API of the site hornet.com for dating among gays. The repository has a ready example that deletes dialogues with people older than the age you specify in the code settings.',
+    },
     links: [
       'https://github.com/VityaSchel/hornet.com',
       'https://www.npmjs.com/package/hornet.com',
@@ -739,7 +792,10 @@ const projects: Project[] = [
       release: '26 June 2023'
     },
     scope: 1,
-    description: 'Сайт для моего магазина предметов на моем SMB сервере игры Minecraft (сервер выживания для моих друзей)',
+    description: {
+      ru: 'Сайт для моего магазина предметов на моем SMB сервере игры Minecraft (сервер выживания для моих друзей)',
+      _DEFAULT_: 'Website for my store of items on my SMB Minecraft server (a survival server for my friends)',
+    },
     links: [
       'https://github.com/VityaSchel/hazbin-shop',
       'https://hazbin.netlify.app/',
@@ -758,7 +814,10 @@ const projects: Project[] = [
       release: '22 May 2023'
     },
     scope: 1,
-    description: 'Простой анонимный чат на WebSocket в Tor, который собирает 0 персональных данных и не хранит никакие сообщения. Работает круглосуточно и не требует регистрации и авторизации',
+    description: {
+      ru: 'Простой анонимный чат на WebSocket в Tor, который собирает 0 персональных данных и не хранит никакие сообщения. Работает круглосуточно и не требует регистрации и авторизации',
+      _DEFAULT_: 'Simple anonymous chat on WebSocket in Tor, which collects zero personal data and does not store any messages. Operates 24/7 and does not require registration or authorization',
+    },
     links: [
       'https://github.com/VityaSchel/tor-chat',
       'http://tormsgrns63s7oivkcjxodze3zr7qaay7haqi7chojayrxpvtmiv7gyd.onion/',
@@ -777,7 +836,10 @@ const projects: Project[] = [
       release: '20 August 2023'
     },
     scope: 1,
-    description: 'Простой сайт-хранилище с фотографиями с моего выпускного и с фото-альбома моего класса, интегрируется с imagekit CDN для быстрого предпросмотра',
+    description: {
+      ru: 'Простой сайт-хранилище с фотографиями с моего выпускного и с фото-альбома моего класса, интегрируется с imagekit CDN для быстрого предпросмотра',
+      _DEFAULT_: 'Simple photo storage site from my graduation and my class\'s photo album, integrates with imagekit CDN for fast previews',
+    },
     links: [
       'https://smb16school.ru'
     ],
@@ -795,7 +857,10 @@ const projects: Project[] = [
       release: '30 October 2022'
     },
     scope: 1,
-    description: 'Враппер закрытого неофициального браузерного API сайта my.telegram.org c тестами Jest',
+    description: {
+      ru: 'Враппер закрытого неофициального браузерного API сайта my.telegram.org c тестами Jest',
+      _DEFAULT_: 'Wrapper for the closed unofficial browser reverse-engineered API of the site my.telegram.org with Jest tests',
+    },
     links: [
       'https://github.com/VityaSchel/my.telegram.org-api-wrapper',
       'https://www.npmjs.com/package/my.telegram.org-api-wrapper'
@@ -814,7 +879,10 @@ const projects: Project[] = [
       release: '23 April 2022'
     },
     scope: 1,
-    description: 'Враппер закрытого неофициального браузерного API сайта s-otk.ru с государственным Самарским транспортом c тестами Jest',
+    description: {
+      ru: 'Враппер закрытого неофициального браузерного API сайта s-otk.ru с государственным Самарским транспортом c тестами Jest',
+      _DEFAULT_: 'Wrapper for the closed unofficial browser reverse-engineered API of the site s-otk.ru with Samara public transport with Jest tests',
+    },
     links: [
       'https://github.com/VityaSchel/s-otk-js',
       'https://www.npmjs.com/package/s-otk-js'
@@ -833,7 +901,10 @@ const projects: Project[] = [
       release: '13 November 2022'
     },
     scope: 1,
-    description: 'Telegram-бот, интегрирующийся с неофициальным API городской транспортной банковской системы и отправляющий уведомления о низком балансе счета в телеграм',
+    description: {
+      ru: 'Telegram-бот, интегрирующийся с неофициальным API городской транспортной банковской системы и отправляющий уведомления о низком балансе счета в телеграм',
+      _DEFAULT_: 'Telegram bot integrating with the unofficial browser reverse-engineered API of my city\'s transport banking system and sending notifications about low account balance in telegram',
+    },
     links: [
       'https://github.com/VityaSchel/s-otk-bot'
     ],
@@ -851,7 +922,10 @@ const projects: Project[] = [
       release: '28 April 2022'
     },
     scope: 1,
-    description: 'Враппер закрытого неофициального клиентского API на http-сокетах игры Мафия Онлайн с JSDOC, полной обработкой ошибок, поддежкой авторизации, чата, тестами Jest, примерами и API Reference',
+    description: {
+      ru: 'Враппер закрытого неофициального клиентского API на http-сокетах игры Мафия Онлайн с JSDOC, полной обработкой ошибок, поддежкой авторизации, чата, тестами Jest, примерами и API Reference',
+      _DEFAULT_: 'Wrapper for the closed unofficial client API on http-sockets of the game Mafia Online with JSDOC, full error handling, support for authorization, chat, Jest tests, examples, and API Reference',
+    },
     links: [
       'https://github.com/VityaSchel/mafiaonline.js',
       'https://npmjs.com/package/mafiaonline.js'
@@ -870,7 +944,10 @@ const projects: Project[] = [
       release: '22 December 2022'
     },
     scope: 1,
-    description: 'Шуточная библиотека для проверки сайта моего лицея на наличие проблем. Отсылает к моим статьям <a href="/portfolio/100-причин-почему-у-самлита-плохой-сайт" target="_blank" rel="nofollow noreferrer">100 причин почему у СамЛИТа плохой сайт</a> и <a href="/portfolio/fuck-samlit" target="_blank" rel="nofollow noreferrer">как я взломал все аккаунты учеников моей школы</a>',
+    description: {
+      ru: 'Шуточная библиотека для проверки сайта моего лицея на наличие проблем. Отсылает к моим статьям <a href="/portfolio/100-причин-почему-у-самлита-плохой-сайт" target="_blank" rel="nofollow noreferrer">100 причин почему у СамЛИТа плохой сайт</a> и <a href="/portfolio/fuck-samlit" target="_blank" rel="nofollow noreferrer">как я взломал все аккаунты учеников моей школы</a>',
+      _DEFAULT_: 'Joke library for checking my lyceum\'s website for problems. Refers to my articles <a href="/portfolio/100-причин-почему-у-самлита-плохой-сайт" target="_blank" rel="nofollow noreferrer">100 reasons why SamLIT has a bad website</a> and <a href="/portfolio/fuck-samlit" target="_blank" rel="nofollow noreferrer">how I hacked all the student accounts of my school</a>',
+    },
     links: [
       'https://github.com/VityaSchel/samlit.js',
       'https://www.npmjs.com/package/samlit'
@@ -889,7 +966,10 @@ const projects: Project[] = [
       release: '22 December 2022'
     },
     scope: 1,
-    description: 'Инструмент для быстрой развертки проекта на Node.js с SWC (компилятор TypeScript на Rust), TypeScript, Jest с babel и моими избранными правилами eslint и конфигурацией vscode. Одна команда: scaffold project-name и проект готов к разработке',
+    description: {
+      ru: 'Инструмент для быстрой развертки проекта на Node.js с SWC (компилятор TypeScript на Rust), TypeScript, Jest с babel и моими избранными правилами eslint и конфигурацией vscode. Одна команда: scaffold project-name и проект готов к разработке',
+      _DEFAULT_: 'Tool for quick deployment of a project on Node.js with SWC (TypeScript compiler on Rust), TypeScript, Jest with babel, and my selected eslint rules and vscode configuration. Type single command: sf project-name and the project is ready for development',
+    },
     links: [
       'https://github.com/VityaSchel/scaffold',
       'https://www.npmjs.com/package/@hloth/scaffold'
@@ -908,7 +988,10 @@ const projects: Project[] = [
       release: '2 February 2022'
     },
     scope: 1,
-    description: 'Бот, показывающий соответствующий эмодзи-статус в Telegram: работа, сон или отдых (выходные)',
+    description: {
+      ru: 'Бот, показывающий соответствующий эмодзи-статус в Telegram: работа, сон или отдых (выходные)',
+      _DEFAULT_: 'Bot showing the corresponding emoji-status in Telegram: work, sleep, or rest (weekends)',
+    },
     links: [
       'https://github.com/VityaSchel/hloth-telegram-status'
     ],
@@ -926,7 +1009,10 @@ const projects: Project[] = [
       release: '24 February 2023'
     },
     scope: 1,
-    description: 'Моя личная коллекция "bad apple" — вещей, на которых можно проецировать видео Bad Apple',
+    description: {
+      ru: 'Моя личная коллекция "bad apple" — вещей, на которых можно проецировать видео Bad Apple',
+      _DEFAULT_: 'My personal collection of \'bad apples\' – things you can project the Bad Apple video on',
+    },
     links: [
       'https://github.com/VityaSchel/bad-apple'
     ],
@@ -944,7 +1030,10 @@ const projects: Project[] = [
       release: '29 November 2023'
     },
     scope: 1,
-    description: 'Бот, проверяющий статус заявки на визу в VFS Global и уведомляющий об изменениях в статусе в Telegram',
+    description: {
+      ru: 'Бот, проверяющий статус заявки на визу в VFS Global и уведомляющий об изменениях в статусе в Telegram',
+      _DEFAULT_: 'Bot checking the visa application status at VFS Global and notifying about status changes in Telegram',
+    },
     links: [
       'https://github.com/VityaSchel/vfs-status-bot'
     ],
@@ -962,7 +1051,10 @@ const projects: Project[] = [
       release: '17 December 2021'
     },
     scope: 1,
-    description: 'Бот, автоматически приветствующий всех, кто пишет мне в Telegram от моего имени и присылает короткий FAQ и информацию',
+    description: {
+      ru: 'Бот, автоматически приветствующий всех, кто пишет мне в Telegram от моего имени и присылает короткий FAQ и информацию',
+      _DEFAULT_: 'Bot automatically greeting everyone who writes to me in Telegram on my behalf and sending a short FAQ and information',
+    },
     links: [
       'https://github.com/VityaSchel/hloth-telegram-greeting'
     ],
@@ -980,7 +1072,10 @@ const projects: Project[] = [
       release: '16 September 2023'
     },
     scope: 1,
-    description: 'Расширение для VSCode, которое позволяет одним кликом мыши в контекстном меню создать файл styles.module.scss для SCSS-модулей',
+    description: {
+      ru: 'Расширение для VSCode, которое позволяет одним кликом мыши в контекстном меню создать файл styles.module.scss для SCSS-модулей',
+      _DEFAULT_: 'VSCode extension that allows with one mouse click in the context menu to create a styles.module.scss file for SCSS modules',
+    },
     category: 'developer_tool',
     id: 'styles-module-scss-vscode-extension'
   },
@@ -995,7 +1090,10 @@ const projects: Project[] = [
       release: '16 September 2023'
     },
     scope: 1,
-    description: 'Бот, который работает как предложка для Telegram-канала с мемами, позволяя подписчикам легко присылать мемы, а админу нажатием одной кнопки в боте запланировать публикацию поста в канал с помощью Telegram User API',
+    description: {
+      ru: 'Бот, который работает как предложка для Telegram-канала с мемами, позволяя подписчикам легко присылать мемы, а админу нажатием одной кнопки в боте запланировать публикацию поста в канал с помощью Telegram User API',
+      _DEFAULT_: 'Bot that works as a submission box for a Telegram channel with memes, allowing subscribers to easily send memes, and the admin to schedule a post publication in the channel with one button press in the bot integating with Telegram User API',
+    },
     category: 'bot/telegram',
     id: 'onlymeemes-bot'
   },
@@ -1010,7 +1108,10 @@ const projects: Project[] = [
       release: '4 December 2021'
     },
     scope: 1,
-    description: 'Бот, автоматически меняющий статус пользователя на GitHub каждый день, создавая таким образом счетчик до выбранного события. Когда-то отсчитывал дни до получения мной Чешского гражданства, потом отсчитывал дни до моего совершеннолетия',
+    description: {
+      ru: 'Бот, автоматически меняющий статус пользователя на GitHub каждый день, создавая таким образом счетчик до выбранного события. Когда-то отсчитывал дни до получения мной Чешского гражданства, потом отсчитывал дни до моего совершеннолетия',
+      _DEFAULT_: 'Bot automatically changing the user\'s status on GitHub every day, thus creating a countdown to a selected event. Once counted down days until I would have received my Czech citizenship, then counted down days until I\'m no longer underage',
+    },
     category: 'utility',
     id: 'github-status'
   },
@@ -1025,7 +1126,10 @@ const projects: Project[] = [
       release: '11 April 2023'
     },
     scope: 1,
-    description: 'Бот, присылающий тупые шутки в Telegram про Штирлица',
+    description: {
+      ru: 'Бот, присылающий тупые шутки в Telegram про Штирлица',
+      _DEFAULT_: 'Bot sending dumb jokes in Telegram about Stirlitz',
+    },
     links: [
       'https://github.com/VityaSchel/shitlerts'
     ],
@@ -1043,7 +1147,10 @@ const projects: Project[] = [
       release: '25 March 2022'
     },
     scope: 1,
-    description: 'Бот, каждый день меняющий счетчик дней в сообществе "сегодня вышел эксплойт 9.03 на PlayStation 4?" ВКонтакте. Отработав больше 1.5 года был наконец выключен. Эксплойт, кстати, не вышел до сих пор, даже спустя 2.5 года ожидания.',
+    description: {
+      ru: 'Бот, каждый день меняющий счетчик дней в сообществе "сегодня вышел эксплойт 9.03 на PlayStation 4?" ВКонтакте. Отработав больше 1.5 года был наконец выключен. Эксплойт, кстати, не вышел до сих пор, даже спустя 2.5 года ожидания.',
+      _DEFAULT_: 'Bot changing the day counter in the community \'did the 9.03 exploit for PlayStation 4 came out today?\' on VKontakte every day. After working for more than 1.5 years, it was finally turned off. The exploit, by the way, has not been released yet, even after 2.5 years of waiting.',
+    },
     category: 'bot/vk',
     id: 'ps4exploit9-03bot'
   },
@@ -1058,7 +1165,10 @@ const projects: Project[] = [
       release: '7 June 2023'
     },
     scope: 1,
-    description: 'Утилита, генерирующая с помощью node-canvas баннер для моего Twitter-аккаунта про мою <a href="https://twitter.com/hlothdon" target="_blank" rel="nofollow noreferrer">благотворительность</a>.',
+    description: {
+      ru: 'Утилита, генерирующая с помощью node-canvas баннер для моего Twitter-аккаунта про мою <a href="https://twitter.com/hlothdon" target="_blank" rel="nofollow noreferrer">благотворительность</a>.',
+      _DEFAULT_: 'Utility generating banner for my Twitter account about my <a href="https://twitter.com/hlothdon" target="_blank" rel="nofollow noreferrer">charity</a> with node-canvas.',
+    },
     links: [
       'https://github.com/VityaSchel/hlothdon-banner',
       'https://twitter.com/hlothdon'
@@ -1076,7 +1186,10 @@ const projects: Project[] = [
       devStart: '14 June 2022'
     },
     scope: 1,
-    description: 'Компонент для React, полностью копирующий веб-плеер YouTube, включая все его функции и внешний вид с открытым кодом',
+    description: {
+      ru: 'Компонент для React, полностью копирующий веб-плеер YouTube, включая все его функции и внешний вид с открытым кодом',
+      _DEFAULT_: 'React component that fully copies functionality and design of the YouTube web player, including all its functions and appearance with open source',
+    },
     links: [
       'https://vityaschel.github.io/replica-player/',
       'https://github.com/VityaSchel/replica-player',
@@ -1096,7 +1209,10 @@ const projects: Project[] = [
     },
     scope: 2,
     unpublic: true,
-    description: 'Монорепозиторий с техническими заметки по работе форума порно-форума pornolab.net и враппер его неофициального браузерного API',
+    description: {
+      ru: 'Монорепозиторий с техническими заметки по работе форума порно-форума pornolab.net и враппер его неофициального браузерного API',
+      _DEFAULT_: 'Monorepository with technical notes on the operation of the porn forum pornolab.net and wrapper of its unofficial browser API',
+    },
     links: [
       'https://github.com/VityaSchel/pornolab.net',
       'https://www.npmjs.com/package/gayporn'
@@ -1116,7 +1232,10 @@ const projects: Project[] = [
     },
     scope: 2,
     unpublic: true,
-    description: 'Браузер для просмотра и скачивания взрослого контента с порно-форума pornolab.net с поддержкой авторизации, торрентов и различных подфорумов',
+    description: {
+      ru: 'Браузер для просмотра и скачивания взрослого контента с порно-форума pornolab.net с поддержкой авторизации, торрентов и различных подфорумов',
+      _DEFAULT_: 'Browser for viewing and downloading adult content from the porn forum pornolab.net with support for authorization, torrents, and various subforums',
+    },
     links: [
       'https://github.com/VityaSchel/sofastgaybrowser'
     ],
@@ -1139,7 +1258,10 @@ const projects: Project[] = [
       abandon: '2020'
     },
     scope: 5,
-    description: 'Многопользовательская видео-игра, где до 6 игроков сражаются в мини-играх за большее кол-во очков',
+    description: {
+      ru: 'Многопользовательская видео-игра, где до 6 игроков сражаются в мини-играх за большее кол-во очков',
+      _DEFAULT_: 'Multiplayer video game where up to 6 players fight in mini-games for the most points',
+    },
     unpublic: false,
     hidden: false,
     logo: stigfinnareLogo,
@@ -1161,7 +1283,10 @@ const projects: Project[] = [
       release: '27 September 2018'
     },
     scope: 3,
-    description: 'Мобильная аркада, в которой игрок, минуя препятствия и пролетая разные локации, стремится к солнцу',
+    description: {
+      ru: 'Мобильная аркада, в которой игрок, минуя препятствия и пролетая разные локации, стремится к солнцу',
+      _DEFAULT_: 'Mobile arcade where the player, avoiding obstacles and flying through different locations, flies to the sun',
+    },
     unpublic: false,
     hidden: false,
     logo: rollerRideLogo,
@@ -1187,7 +1312,10 @@ const projects: Project[] = [
       abandon: '30 December 2021'
     },
     scope: 3,
-    description: 'Лендинг для майнкрафт сервера и веб-сервер с API (rcon+status)',
+    description: {
+      ru: 'Лендинг для майнкрафт сервера и веб-сервер с API (rcon+status)',
+      _DEFAULT_: 'Landing page for a Minecraft server and web server with API (rcon+status)',
+    },
     unpublic: false,
     hidden: false,
     tags: [
@@ -1217,7 +1345,10 @@ const projects: Project[] = [
       abandon: '3 December 2021'
     },
     scope: 3,
-    description: 'Плагин который помогает менять макеты Android на iOS и наоборот',
+    description: {
+      ru: 'Плагин который помогает менять макеты Android на iOS и наоборот. Сделан для команды дизайнеров латвийского маркетплейса Joom',
+      _DEFAULT_: 'Plugin that helps change Android layouts to iOS and vice versa, made for latvian marketplace Joom\'s designers team',
+    },
     unpublic: false,
     hidden: false,
     tags: [
@@ -1245,7 +1376,10 @@ const projects: Project[] = [
       release: '24 February 2022',
     },
     scope: 2,
-    description: 'Панель управления ботом с добавлением админов, рефералов, проверка на подписку, рассылкой рекламы по пользователям и встроенной статистикой',
+    description: {
+      ru: 'Панель управления ботом с добавлением админов, рефералов, проверка на подписку, рассылкой рекламы по пользователям и встроенной статистикой',
+      _DEFAULT_: 'Bot with control panel that has functionality of adding admins, referrals users, channels subscription check, sending bulk advertisments to users, and has built-in statistics that is updated in real-time',
+    },
     unpublic: false,
     hidden: false,
     tags: [
@@ -1273,7 +1407,10 @@ const projects: Project[] = [
     supported: 'partially',
     dates: { devStart: '2022-05-11', release: '2022-05-28' },
     scope: 3,
-    description: 'Лендинг с анимациями по готовому макету для сервиса, занимающегося коммерческой деятельностью в сфере ботов, сайтов и приложений. Адаптирован под мобильные устройства, браузер Safari, есть кастомный компонент карусели с нативным скроллингом, переключение темы с переходом и локализация на два языка (пока реализован только один).',
+    description: {
+      ru: 'Лендинг с анимациями по готовому макету для сервиса, занимающегося коммерческой деятельностью в сфере ботов, сайтов и приложений. Адаптирован под мобильные устройства, браузер Safari, есть кастомный компонент карусели с нативным скроллингом, переключение темы с переходом и локализация на два языка (пока реализован только один).',
+      _DEFAULT_: 'Landing page with animations from a ready-made design for a service engaged in commercial activity in the field of bots, websites, and applications. Adapted for mobile devices, Safari browser, there is a custom carousel component with native scrolling, theme switching with transition, and localization in two languages (so far only one implemented).',
+    },
     unpublic: false,
     hidden: false,
     logo: botBizLandingLogo,
@@ -1292,7 +1429,10 @@ const projects: Project[] = [
     supported: 'partially',
     dates: { devStart: '2022-06-09' },
     scope: 3,
-    description: 'Панель управления, написанная для сервиса, занимающегося коммерческой деятельностью в сфере ботов, сайтов и приложений. Адаптирован под мобильные устройства, браузер Safari, есть кастомный компонент карусели с нативным скроллингом, переключение темы с переходом и локализация на два языка (пока реализован только один).',
+    description: {
+      ru: 'Панель управления, написанная для сервиса, занимающегося коммерческой деятельностью в сфере ботов, сайтов и приложений. Адаптирован под мобильные устройства, браузер Safari, есть кастомный компонент карусели с нативным скроллингом, переключение темы с переходом и локализация на два языка (пока реализован только один).',
+      _DEFAULT_: 'Control panel, written for a service engaged in commercial activity in the field of bots, websites, and applications. Adapted for mobile devices, Safari browser, there is a custom carousel component with native scrolling, theme switching with transition, and localization in two languages (so far only one implemented).',
+    },
     unpublic: false,
     hidden: false,
     logo: botBizLandingLogo,
@@ -1319,7 +1459,10 @@ const projects: Project[] = [
       release: '2021'
     },
     scope: 2,
-    description: 'Сайт генератор твитов маргариты симоньян. На бекенде использовался markovify (цепи Маркова) для искуственного интеллекта',
+    description: {
+      ru: 'Сайт генератор твитов маргариты симоньян. На бекенде использовался markovify (цепи Маркова) для искуственного интеллекта',
+      _DEFAULT_: 'Website with Tweets generator from Margarita Simonyan. Backend used markovify (Markov chains) on Python imitating AI',
+    },
     unpublic: false,
     hidden: false,
     logo: shizonyanLogo,
@@ -1343,7 +1486,10 @@ const projects: Project[] = [
       release: '10 May 2022'
     },
     scope: 3,
-    description: 'Альткоин и некрипто-валюта в телеграме майнится написанием слова самара',
+    description: {
+      ru: 'Альткоин и некрипто-валюта в телеграме майнится написанием слова самара',
+      _DEFAULT_: 'Altcoin and non-crypto currency in Telegram mined by typing the word Samara (fictional coin)',
+    },
     unpublic: false,
     hidden: false,
     logo: samaracoinLogo,
@@ -1366,7 +1512,10 @@ const projects: Project[] = [
       release: '15 January 2022'
     },
     scope: 2,
-    description: 'Библиотека для взаимодействия с закрытым API сайта АСУ РСО (электронный дневник)',
+    description: {
+      ru: 'Библиотека для взаимодействия с закрытым API сайта АСУ РСО (электронный дневник)',
+      _DEFAULT_: 'JavaScript Library for interacting with the closed API of the ASU RSO (electronic diary) website',
+    },
     unpublic: false,
     hidden: false,
     links: [
@@ -1391,7 +1540,10 @@ const projects: Project[] = [
       release: '20 November 2021'
     },
     scope: 1,
-    description: 'Инструмент для автоматической записи и перезалива стримов с YouTube',
+    description: {
+      ru: 'Инструмент для автоматической записи и перезалива стримов с YouTube',
+      _DEFAULT_: 'Tool for automatic recording and re-uploading streams from YouTube back to YouTube',
+    },
     unpublic: false,
     hidden: false,
     links: [
@@ -1418,7 +1570,10 @@ const projects: Project[] = [
       abandon: '10 January 2022'
     },
     scope: 4,
-    description: 'Карточная игра Мафия, но онлайн. Ремейк легендарной Мафии Онлайн на React Native. Задумывалась как конкурент, который поглотит Мафию Онлайн и Мафию GO',
+    description: {
+      ru: 'Карточная игра Мафия, но онлайн. Ремейк легендарной Мафии Онлайн на React Native. Задумывалась как конкурент, который поглотит Мафию Онлайн и Мафию GO',
+      _DEFAULT_: 'Card game Mafia, but online. Remake of the legendary Mafia Online on React Native. Conceived as a competitor that will overcome Mafia Online and Mafia GO',
+    },
     unpublic: false,
     hidden: false,
     logo: remafiaLogo,
@@ -1439,7 +1594,10 @@ const projects: Project[] = [
       release: '30 December 2021'
     },
     scope: 4,
-    description: 'Сайт для национального центра исследований в Казахстане, разрабатывался в команде',
+    description: {
+      ru: 'Сайт для национального центра исследований в Казахстане, разрабатывался в команде',
+      _DEFAULT_: 'Website for the National Research Center in Kazakhstan, developed in a team',
+    },
     unpublic: false,
     hidden: false,
     tags: [
@@ -1465,7 +1623,10 @@ const projects: Project[] = [
     supported: 'partially',
     dates: { devStart: '2022-06-14' },
     scope: 3,
-    description: 'Чат-бот ВКонтакте, обрабатывающий запросы от пользователей, помогающий с частыми вопросами. Принимает оплату в ЮКасса для автоматического удаления постов и публикации без очереди. Передает сообщения администраторам в поддержку. Работает параллельно на 11 группах.',
+    description: {
+      ru: 'Чат-бот ВКонтакте, обрабатывающий запросы от пользователей, помогающий с частыми вопросами. Принимает оплату в ЮКасса для автоматического удаления постов и публикации без очереди. Передает сообщения администраторам в поддержку. Работает параллельно на 32 группах.',
+      _DEFAULT_: 'VKontakte chat-bot processing user requests, helping with frequent questions. Accepts payment in YooKassa for automatic post deletion and publication without queue. Transfers messages to administrators for support. Works simultaneously on 32 groups.',
+    },
     unpublic: false,
     hidden: false,
     tags: ['order'],
@@ -1479,7 +1640,10 @@ const projects: Project[] = [
     supported: false,
     dates: { devStart: '2022-05-05', release: '2022-05-07' },
     scope: 2,
-    description: 'Панель управления ботом с добавлением модераторов, фильмов, проверка на подписку',
+    description: {
+      ru: 'Панель управления ботом с добавлением модераторов, фильмов, проверка на подписку',
+      _DEFAULT_: 'Bot control panel with adding moderators, movies, subscription check',
+    },
     unpublic: false,
     hidden: false,
     tags: ['order'],
@@ -1499,7 +1663,10 @@ const projects: Project[] = [
       release: '31 May 2021'
     },
     scope: 2,
-    description: 'Враппер для API DeStream на NodeJS',
+    description: {
+      ru: 'Враппер для API DeStream на NodeJS',
+      _DEFAULT_: 'Wrapper for DeStream API on NodeJS',
+    },
     unpublic: false,
     hidden: false,
     links: [
@@ -1520,7 +1687,10 @@ const projects: Project[] = [
       abandon: '28 May 2021'
     },
     scope: 1,
-    description: 'Враппер для API DonationAlerts на NodeJS',
+    description: {
+      ru: 'Враппер для API DonationAlerts на NodeJS',
+      _DEFAULT_: 'Wrapper for DonationAlerts API on NodeJS',
+    },
     unpublic: false,
     hidden: false,
     links: [
@@ -1542,7 +1712,10 @@ const projects: Project[] = [
       abandon: '24 July 2021'
     },
     scope: 2,
-    description: 'Мобильная игра про Машу из GoStudy, которая шуршит микрофоном и мешает стриму',
+    description: {
+      ru: 'Мобильная игра про Машу из GoStudy, которая шуршит микрофоном и мешает стриму',
+      _DEFAULT_: 'Mobile game about Masha from GoStudy, who rustles the microphone and interferes with the stream',
+    },
     unpublic: false,
     hidden: false,
     logo: mashaSimulatorLogo,
@@ -1564,7 +1737,10 @@ const projects: Project[] = [
       release: '17 September 2023'
     },
     scope: 1,
-    description: 'Сайт с моим резюме',
+    description: {
+      ru: 'Сайт с моим резюме',
+      _DEFAULT_: 'Website with my resume',
+    },
     logo: cvhlothdevLogo,
     links: [
       'https://cv.hloth.dev',
@@ -1588,7 +1764,10 @@ const projects: Project[] = [
       release: '6 January 2022'
     },
     scope: 2,
-    description: 'Мой первый даркнет-сайт и первый проект на Vite с рулеткой CS:GO',
+    description: {
+      ru: 'Мой первый даркнет-сайт и первый проект на Vite с рулеткой CS:GO',
+      _DEFAULT_: 'My first darknet site and first project on Vite with a CS:GO roulette',
+    },
     unpublic: false,
     hidden: false,
     links: [
@@ -1608,7 +1787,10 @@ const projects: Project[] = [
       release: '2021'
     },
     scope: 3,
-    description: 'Псевдо язык на JS полностью на русском языке',
+    description: {
+      ru: 'Псевдо язык на JS полностью на русском языке',
+      _DEFAULT_: 'Pseudo language on JS entirely in Russian',
+    },
     unpublic: false,
     hidden: false,
     links: [
@@ -1629,7 +1811,10 @@ const projects: Project[] = [
       release: '2020'
     },
     scope: 3,
-    description: 'Моя статья со 100 причинами о том, почему у моей школы ужасный веб-сайт и детальный разбор как и что можно улучшить. В итоге эта статья ни к чему не привела, а потом я <a href="/portfolio/fuck-samlit" target="_blank" rel="noreferrer nofollow">взломал свою школу</a> и написал об этом другую статью.',
+    description: {
+      ru: 'Моя статья со 100 причинами о том, почему у моей школы ужасный веб-сайт и детальный разбор как и что можно улучшить. В итоге эта статья ни к чему не привела, а потом я <a href="/portfolio/fuck-samlit" target="_blank" rel="noreferrer nofollow">взломал свою школу</a> и написал об этом другую статью.',
+      _DEFAULT_: 'My article with 100 reasons why my school has a terrible website and a detailed analysis of how and what can be improved. In the end, this article led to nothing, so I <a href="/portfolio/fuck-samlit" target="_blank" rel="noreferrer nofollow">hacked my school</a> and wrote another article about it.',
+    },
     unpublic: false,
     hidden: false,
     logo: awfulSamLitWebsiteLogo,
@@ -1648,7 +1833,10 @@ const projects: Project[] = [
       release: '2020'
     },
     scope: 2,
-    description: 'Игра про спидраннинг википедии (от случайной статьи до гитлера)',
+    description: {
+      ru: 'Игра про спидраннинг википедии (от случайной статьи до гитлера)',
+      _DEFAULT_: 'Game about speedrunning Wikipedia (from a random article to Hitler)',
+    },
     unpublic: false,
     hidden: false,
     logo: wikipediaSpeedrunLogo,
@@ -1673,7 +1861,10 @@ const projects: Project[] = [
       abandon: '2021'
     },
     scope: 3,
-    description: 'Сайт для тренировки написания кода на питоне, решая задачи',
+    description: {
+      ru: 'Сайт для тренировки написания кода на питоне, решая задачи',
+      _DEFAULT_: 'Website for practicing writing code in python by solving problems',
+    },
     unpublic: false,
     hidden: false,
     logo: py3ExecLogo,
@@ -1692,7 +1883,10 @@ const projects: Project[] = [
       abandon: '2021'
     },
     scope: 3,
-    description: 'Проект нового сайта для моей школы, на который я потратил больше 20 часов. Я разработал дизайн для каждого блока сайта, вместо того, чтобы использовать один скучный дизайн для всех страниц. Хитро включенный функционал для слабовидящих и документы об образовательной организации, чтобы они не мешали обычным посетителям, но были доступны в одно нажатие. Интеграция с Google-аккаунты из Google workspace школьной организации для голосования за еду в школьной столовой. Удобная админка для редактирования статей. Все это я предлагал бесплатно после своей разгромной статьи <a href="/portfolio/100-причин-почему-у-самлита-плохой-сайт">100 причин почему у СамЛИТа плохой сайт</a>',
+    description: {
+      ru: 'Проект нового сайта для моей школы, на который я потратил больше 20 часов. Я разработал дизайн для каждого блока сайта, вместо того, чтобы использовать один скучный дизайн для всех страниц. Хитро включенный функционал для слабовидящих и документы об образовательной организации, чтобы они не мешали обычным посетителям, но были доступны в одно нажатие. Интеграция с Google-аккаунты из Google workspace школьной организации для голосования за еду в школьной столовой. Удобная админка для редактирования статей. Все это я предлагал бесплатно после своей разгромной статьи <a href="/portfolio/100-причин-почему-у-самлита-плохой-сайт">100 причин почему у СамЛИТа плохой сайт</a>',
+      _DEFAULT_: 'Project of a new website for my school, which I spent more than 20 hours on. I designed each block of the site, instead of using one boring design for all pages. Cleverly included functionality for the visually impaired and documents about the educational organization, so they don\'t interfere with regular visitors, but are available at one click. Integration with Google accounts from the Google workspace of the school organization for voting for food in the school canteen. Convenient admin panel for editing articles. All this I offered for free after my scathing article <a href="/portfolio/100-причин-почему-у-самлита-плохой-сайт">100 reasons why SamLIT has a bad website</a>',
+    },
     unpublic: false,
     hidden: false,
     links: [
@@ -1713,7 +1907,10 @@ const projects: Project[] = [
       release: '6 July 2021'
     },
     scope: 2,
-    description: 'Моя статья о том, как я взломал все аккаунты в Google workspace в моей школе — "самом лучшем информационном лицее города" и узнал личные данные, личные переписки и личные фотографии других учеников. В статье я подробно описываю уязвимость и как школа пыталась давить на меня, заставляя замолчать и не публиковать статью.',
+    description: {
+      ru: 'Моя статья о том, как я взломал все аккаунты в Google workspace в моей школе — "самом лучшем информационном лицее города" и узнал личные данные, личные переписки и личные фотографии других учеников. В статье я подробно описываю уязвимость и как школа пыталась давить на меня, заставляя замолчать и не публиковать статью.',
+      _DEFAULT_: 'My article about how I hacked all the accounts in Google workspace at my school – \'the best information lyceum of the city\' and leaked personal data, personal chats, and personal photos of other students. In the article, I explain the vulnerability in details and how the school tried to pressure me, forcing me to keep quiet and not publish the article.',
+    },
     unpublic: false,
     hidden: false,
     logo: fuckSamlitLogo,
@@ -1738,7 +1935,10 @@ const projects: Project[] = [
       release: '28 March 2021'
     },
     scope: 3,
-    description: 'Шуточный сайт абобы: кандидата в президенты и мема от Глада Валакаса',
+    description: {
+      ru: 'Шуточный сайт абобы: кандидата в президенты и мема от Глада Валакаса',
+      _DEFAULT_: 'Joke site about ABOBA: a presidential candidate and meme by Glad Valakas',
+    },
     unpublic: false,
     hidden: false,
     logo: abobaLogo,
@@ -1765,7 +1965,10 @@ const projects: Project[] = [
       abandon: '20 February 2021'
     },
     scope: 4,
-    description: 'Шуточный сайт, сборник всех гадз глада валакаса (раннее известен как гадзы.online)',
+    description: {
+      ru: 'Шуточный сайт, сборник всех гадз глада валакаса (раннее известен как гадзы.online)',
+      _DEFAULT_: 'Joke site, collection of all Glad Valakas\'s gadgets (formerly known as гадзы.online)',
+    },
     unpublic: false,
     hidden: false,
     logo: gadzasOldLogo,
@@ -1786,7 +1989,10 @@ const projects: Project[] = [
       release: '20 February 2021'
     },
     scope: 4,
-    description: 'Сборник всех гадз глада валакаса (раннее известен как гадзы.online)',
+    description: {
+      ru: 'Сборник всех гадз глада валакаса (раннее известен как гадзы.online)',
+      _DEFAULT_: 'Collection of all Glad Valakas\'s gadgets (formerly known as гадзы.online)',
+    },
     unpublic: false,
     hidden: false,
     logo: gadzasNewLogo,
@@ -1808,7 +2014,10 @@ const projects: Project[] = [
       release: '2019'
     },
     scope: 4,
-    description: 'Сабреддит Алексея Шевцова на Reddit',
+    description: {
+      ru: 'Сабреддит Алексея Шевцова на Reddit',
+      _DEFAULT_: 'Alexey Shevtsov\'s subreddit on Reddit',
+    },
     unpublic: false,
     hidden: false,
     logo: rJolygolfLogo,
@@ -1832,7 +2041,10 @@ const projects: Project[] = [
       abandon: '13 June 2021'
     },
     scope: 1,
-    description: 'Шуточный сайт, где можно покрутить колесо удачи и узнать куда поступать (всегда будет ČZU)',
+    description: {
+      ru: 'Шуточный сайт, где можно покрутить колесо удачи и узнать куда поступать (всегда будет ČZU)',
+      _DEFAULT_: 'Joke site where you can spin the wheel of fortune and find out where to enroll (always will be ČZU)',
+    },
     unpublic: false,
     hidden: false,
     logo: fitVsFelLogo,
@@ -1854,7 +2066,10 @@ const projects: Project[] = [
       release: '5 June 2021'
     },
     scope: 1,
-    description: 'Шуточный сайт, где можно посчитать, сколько стоит учеба в Чехии для студента + расходы',
+    description: {
+      ru: 'Шуточный сайт, где можно посчитать, сколько стоит учеба в Чехии для студента + расходы',
+      _DEFAULT_: 'Joke site where you can calculate how much studying in the Czech Republic costs for a student',
+    },
     unpublic: false,
     hidden: false,
     logo: czechLivingCostsLogo,
@@ -1876,7 +2091,10 @@ const projects: Project[] = [
       release: '2020'
     },
     scope: 2,
-    description: 'Лендинг про интерьер для дома',
+    description: {
+      ru: 'Лендинг про интерьер для дома',
+      _DEFAULT_: 'Landing page about interior for home',
+    },
     unpublic: false,
     hidden: false,
     logo: homirrorLogo,
@@ -1898,7 +2116,10 @@ const projects: Project[] = [
       release: '2020'
     },
     scope: 2,
-    description: 'Лендинг про обучение тильде (CMS)',
+    description: {
+      ru: 'Лендинг про обучение тильде (CMS)',
+      _DEFAULT_: 'Landing page about learning Tilda (CMS)',
+    },
     unpublic: false,
     hidden: false,
     logo: niolySchoolLogo,
@@ -1920,7 +2141,10 @@ const projects: Project[] = [
       release: '2021'
     },
     scope: 2,
-    description: 'Лендинг про обучающую школу',
+    description: {
+      ru: 'Лендинг про обучающую школу',
+      _DEFAULT_: 'Landing page about an educational school',
+    },
     unpublic: false,
     hidden: false,
     logo: educoLogo,
@@ -1942,7 +2166,10 @@ const projects: Project[] = [
       release: '2021'
     },
     scope: 2,
-    description: 'Лендинг про кибербезопасность сайтов',
+    description: {
+      ru: 'Лендинг про кибербезопасность сайтов',
+      _DEFAULT_: 'Landing page about cybersecurity of websites',
+    },
     unpublic: false,
     hidden: false,
     logo: bitProtectLogo,
@@ -1964,7 +2191,10 @@ const projects: Project[] = [
       release: '2021'
     },
     scope: 2,
-    description: 'Лендинг про интернет магазин еды',
+    description: {
+      ru: 'Лендинг про интернет магазин еды',
+      _DEFAULT_: 'Landing page about an online food store',
+    },
     unpublic: false,
     hidden: false,
     logo: foodStuffLogo,
@@ -1980,7 +2210,10 @@ const projects: Project[] = [
     supported: true,
     dates: { devStart: '2022-03-27' },
     scope: 3,
-    description: 'Трейнер для игры The Joy of Creation, написанный на Go. Умеет взаимодействовать с нативным API Windows для поиска адресов в оперативной памяти и чтения нужных значений. Имеет графический интерфейс, написанный на библиотеке Giu.',
+    description: {
+      ru: 'Трейнер для игры The Joy of Creation, написанный на Go. Умеет взаимодействовать с нативным API Windows для поиска адресов в оперативной памяти и чтения нужных значений. Имеет графический интерфейс, написанный на библиотеке Giu.',
+      _DEFAULT_: 'Trainer for the game The Joy of Creation, written in Go. Interacts with native Windows API for finding addresses in RAM and reading values. Has a GUI written with the Giu library.',
+    },
     unpublic: false,
     hidden: false,
     tags: [],
@@ -2001,7 +2234,10 @@ const projects: Project[] = [
       release: '2020'
     },
     scope: 2,
-    description: 'Шуточный бот, отправляющий каждое утро гифку с добрым утром из Одноклассников. Появился как мем и шутка. Позже был переписан с PHP на Express и Node.js.',
+    description: {
+      ru: 'Шуточный бот, отправляющий каждое утро гифку с добрым утром из Одноклассников. Появился как мем и шутка. Позже был переписан с PHP на Express и Node.js.',
+      _DEFAULT_: 'Joke bot sending a good morning gif from ok.ru every morning. It was made as a meme and joke. Later was rewritten from PHP to Express and Node.js.',
+    },
     unpublic: false,
     hidden: false,
     logo: goodmorningBotLogo,
@@ -2016,7 +2252,10 @@ const projects: Project[] = [
     stack: ['NodeJS'],
     dates: { devStart: '2022-02-26', release: '2022-02-26' },
     scope: 1,
-    description: 'Инструмент для бекапа приватных зашифрованных репозиториев с GitHub на Яндекс.Диск из-за санкций',
+    description: {
+      ru: 'Инструмент для бекапа приватных зашифрованных репозиториев с GitHub на Яндекс.Диск из-за санкций',
+      _DEFAULT_: 'Utility for creating encrypted backup of private repositories from GitHub to Yandex.Disk due to sanctions',
+    },
     unpublic: false,
     hidden: false,
     tags: [],
@@ -2030,7 +2269,10 @@ const projects: Project[] = [
     supported: 'partially',
     dates: { devStart: '2022-05-13', release: '2022-06-05' },
     scope: 3,
-    description: 'Бот, выполняющий модерацию контента (предложки нескольких пабликов ВК), основывающуюся на схожести фото по перцептивным хешам изображений и уникальности текста',
+    description: {
+      ru: 'Бот, выполняющий модерацию контента (предложки нескольких пабликов ВК), основывающуюся на схожести фото по перцептивным хешам изображений и уникальности текста',
+      _DEFAULT_: 'Bot performing content moderation in VKontakte open groups, based on the similarity of photos by perceptual image hashes and text uniqueness',
+    },
     unpublic: false,
     hidden: false,
     tags: ['order'],
@@ -2044,7 +2286,10 @@ const projects: Project[] = [
     supported: 'partially',
     dates: { devStart: '2022-05-10', release: '2022-05-11' },
     scope: 2,
-    description: 'Бот, выполняющий парсинг рекламных записей по заданному фильтру из отправленных групп ВКонтакте и управляется через сообщения, специально созданной для него группы.',
+    description: {
+      ru: 'Бот, выполняющий парсинг рекламных записей по заданному фильтру из отправленных групп ВКонтакте и управляется через сообщения, специально созданной для него группы.',
+      _DEFAULT_: 'Bot performing parsing of advertising posts according to a specified filter from sent VKontakte groups and is managed through messages of a specially created group for it.',
+    },
     unpublic: false,
     hidden: false,
     tags: ['order'],
@@ -2064,7 +2309,10 @@ const projects: Project[] = [
       release: '3 November 2021'
     },
     scope: 1,
-    description: 'Бот, который парсит сайт макдональдса и пишет в чат об акциях',
+    description: {
+      ru: 'Бот, который парсит сайт макдональдса и пишет в чат об акциях',
+      _DEFAULT_: 'Bot that parses McDonald\'s website and writes in the chat about new sales and special offers',
+    },
     unpublic: false,
     hidden: false,
     logo: mcDonaldsOffersLogo,
@@ -2090,7 +2338,10 @@ const projects: Project[] = [
       abandon: '23 May 2021'
     },
     scope: 1,
-    description: 'Бот для тренировки спряжений, осенью 2021 был переписан для использования LevelDB и Fastify вместо MongoDB и Express',
+    description: {
+      ru: 'Бот для тренировки спряжений, осенью 2021 был переписан для использования LevelDB и Fastify вместо MongoDB и Express',
+      _DEFAULT_: 'Bot for training conjugations, in autumn 2021 it was rewritten with LevelDB and Fastify instead of MongoDB and Express',
+    },
     unpublic: false,
     hidden: false,
     logo: rusWordConBotLogo,
@@ -2113,7 +2364,10 @@ const projects: Project[] = [
       abandon: '15 November 2021'
     },
     scope: 2,
-    description: 'Бот ВКонтакте, парсящий сайты с готовыми домашними работами и присылающий их по запросу в личные сообщения по номерам заданий из учебников',
+    description: {
+      ru: 'Бот ВКонтакте, парсящий сайты с готовыми домашними работами и присылающий их по запросу в личные сообщения по номерам заданий из учебников',
+      _DEFAULT_: 'VKontakte bot parsing sites with ready-made homework and sending them on request in DMs by requesting workbook tasks numbers',
+    },
     unpublic: false,
     hidden: false,
     category: 'bot/vk',
@@ -2130,7 +2384,10 @@ const projects: Project[] = [
       abandon: '2016'
     },
     scope: 3,
-    description: 'Первый сайт про меня на uCoz CMS',
+    description: {
+      ru: 'Первый сайт про меня на uCoz CMS',
+      _DEFAULT_: 'First website about me on uCoz CMS',
+    },
     unpublic: false,
     hidden: false,
     tags: [
@@ -2151,7 +2408,10 @@ const projects: Project[] = [
       abandon: '2019'
     },
     scope: 3,
-    description: 'Второй сайт в виде консоли на бесплатном хостинге',
+    description: {
+      ru: 'Второй сайт в виде консоли на бесплатном хостинге',
+      _DEFAULT_: 'Second website in the form of a terminal on free hosting',
+    },
     unpublic: false,
     hidden: false,
     tags: [
@@ -2172,7 +2432,10 @@ const projects: Project[] = [
       abandon: '2020'
     },
     scope: 2,
-    description: 'Третий сайт про все мои проекты со связями в виде карты',
+    description: {
+      ru: 'Третий сайт про все мои проекты со связями в виде карты',
+      _DEFAULT_: 'Third website about all my projects with connections in the form of a map',
+    },
     unpublic: false,
     hidden: false,
     tags: [
@@ -2193,7 +2456,10 @@ const projects: Project[] = [
       abandon: '2020'
     },
     scope: 3,
-    description: 'Четвертый сайт про все мои проекты и меня в виде лаймовой галереи',
+    description: {
+      ru: 'Четвертый сайт про все мои проекты и меня в виде лаймовой галереи',
+      _DEFAULT_: 'Fourth website about all my projects and me in the form of a lime gallery',
+    },
     unpublic: false,
     hidden: false,
     tags: [
@@ -2215,7 +2481,10 @@ const projects: Project[] = [
       abandon: '2021'
     },
     scope: 4,
-    description: 'Пятый, огромный сайт с красивыми анимациями про все, что со мной связано',
+    description: {
+      ru: 'Пятый, огромный сайт с красивыми анимациями про все, что со мной связано',
+      _DEFAULT_: 'Fifth, huge website with beautiful animations about everything related to me',
+    },
     unpublic: false,
     hidden: false,
     tags: [
@@ -2246,7 +2515,10 @@ const projects: Project[] = [
       devStart: '24 November 2021'
     },
     scope: 4,
-    description: 'Шестой сайт про все мои проекты, услуги, технологии и донаты с использованием ThreeJS',
+    description: {
+      ru: 'Шестой сайт про все мои проекты, услуги, технологии и донаты с использованием ThreeJS',
+      _DEFAULT_: 'Sixth website about all my projects, services, technologies, and donations using ThreeJS',
+    },
     unpublic: false,
     hidden: false,
     tags: [
@@ -2264,7 +2536,10 @@ const projects: Project[] = [
     stack: ['Spark AR', 'Blender'],
     dates: { devStart: '30 Jan 2022', release: '30 Jan 2022' },
     scope: 2,
-    description: 'Маска в инстаграм с элементами пожилого тела',
+    description: {
+      ru: 'Маска в инстаграм с элементами пожилого тела',
+      _DEFAULT_: 'Instagram mask with elements of an elderly body',
+    },
     unpublic: false,
     hidden: false,
     logo: gladvalakasNT200instamask,
@@ -2293,7 +2568,10 @@ const projects: Project[] = [
       abandon: '2022-04-11'
     },
     scope: 2,
-    description: 'Бот, конвертирующий игры с сайта scratch.mit.edu в игры на Telegram Gaming Platform. Помимо встраивания нативного HTML плеера в телеграм, планировалась интеграция облака с ником, передаваемым от Telegram и адаптивное управление для телефонов.',
+    description: {
+      ru: 'Бот, конвертирующий игры с сайта scratch.mit.edu в игры на Telegram Gaming Platform. Помимо встраивания нативного HTML плеера в телеграм, планировалась интеграция облака с ником, передаваемым от Telegram и адаптивное управление для телефонов.',
+      _DEFAULT_: 'Bot converting games from scratch.mit.edu into games on the Telegram Gaming Platform. In addition to embedding a native HTML player in Telegram, cloud integration with a nickname passed from Telegram and adaptive control for phones was planned.',
+    },
     unpublic: false,
     hidden: false,
     tags: [],
@@ -2316,7 +2594,10 @@ const projects: Project[] = [
       release: '18 April 2021'
     },
     scope: 4,
-    description: '',
+    description: {
+      ru: '',
+      _DEFAULT_: '',
+    },
     unpublic: true,
     hidden: true,
     category: 'website',
@@ -2333,7 +2614,10 @@ const projects: Project[] = [
       release: '6 January 2022'
     },
     scope: 1,
-    description: 'Библиотека для получения случайной аватарки из steam',
+    description: {
+      ru: 'Библиотека для получения случайной аватарки из steam',
+      _DEFAULT_: 'Library for getting a random avatar from steam using integration with API',
+    },
     unpublic: false,
     hidden: false,
     links: [
@@ -2343,7 +2627,7 @@ const projects: Project[] = [
     id: 'random-steam-avatar'
   },
   {
-    name: 'Бот Алисы: Игрорупор',
+    name: 'Бот Яндекс Алисы: Игрорупор',
     stack: [
       'Яндекс.Диалоги API',
       'PHP',
@@ -2357,7 +2641,10 @@ const projects: Project[] = [
       abandon: '2021'
     },
     scope: 3,
-    description: 'Бот Алисы, который афиширует новости из мира игр и может угадать игру по описанию',
+    description: {
+      ru: 'Бот Яндекс Алисы, который афиширует новости из мира игр и может угадать игру по описанию',
+      _DEFAULT_: 'Yandex.Alice bot that advertises news from the world of games and can guess a game by description',
+    },
     unpublic: false,
     hidden: false,
     logo: igroruporLogo,
@@ -2370,7 +2657,10 @@ const projects: Project[] = [
     supported: false,
     dates: { devStart: '2022-12-21', release: '2022-12-21' },
     scope: 1,
-    description: 'Бот, перенаправляющий СМС от Альфа-банка в Телеграм. Ранее использовалось API Альфа-банка, но из-за сложностей было решено переключиться на СМС и FastCGI-сервер.',
+    description: {
+      ru: 'Бот, перенаправляющий СМС от Альфа-банка в Телеграм. Ранее использовалось приватное API Альфа-банка, но из-за сложностей было решено переключиться на вебхуки СМС и FastCGI-сервер.',
+      _DEFAULT_: 'Bot redirecting SMS codes from Alfa-Bank to Telegram. Previously used private Alfa-Bank API, but due to difficulties, it was decided to switch to SMS webhook and FastCGI server.',
+    },
     unpublic: false,
     hidden: false,
     category: 'bot/telegram',
@@ -2387,7 +2677,10 @@ const projects: Project[] = [
       release: '2020'
     },
     scope: 2,
-    description: 'Расширение удаляющее сообщения Кирилла Смирнова из бесед ВКонтакте',
+    description: {
+      ru: 'Расширение удаляющее сообщения Кирилла Смирнова из бесед ВКонтакте',
+      _DEFAULT_: 'Extension removing Kirill Smirnov\'s messages from conversations in VKontakte messenger chats',
+    },
     unpublic: false,
     hidden: false,
     logo: cleanerLogo,
@@ -2408,7 +2701,10 @@ const projects: Project[] = [
       release: '12 October 2021'
     },
     scope: 1,
-    description: 'Расширение, которое удаляет все новости и видео об Игре в Кальмара',
+    description: {
+      ru: 'Расширение, которое удаляет все новости и видео об Игре в Кальмара',
+      _DEFAULT_: 'Extension that removes all news and videos about Squid Game',
+    },
     unpublic: false,
     hidden: false,
     logo: noSquidGameLogo,
@@ -2429,7 +2725,10 @@ const projects: Project[] = [
       abandon: '2018'
     },
     scope: 3,
-    description: 'Адвенчура без сюжета, делалась как открытый мир с красивой графикой и головоломками',
+    description: {
+      ru: 'Адвенчура без сюжета, делалась как открытый мир с красивой графикой и головоломками',
+      _DEFAULT_: 'Adventure without a plot, made as an open world with beautiful graphics and puzzles',
+    },
     unpublic: false,
     hidden: false,
     category: 'game/windows10',
@@ -2446,7 +2745,10 @@ const projects: Project[] = [
       abandon: '2018'
     },
     scope: 3,
-    description: 'Батл рояль в 2д',
+    description: {
+      ru: 'Батл рояль в 2д',
+      _DEFAULT_: '2D battle royale',
+    },
     unpublic: false,
     hidden: false,
     category: 'game/windows10',
@@ -2464,7 +2766,10 @@ const projects: Project[] = [
       abandon: '7 July 2021'
     },
     scope: 1,
-    description: 'Расширение для добавления темной темы в соц. сеть Gettr',
+    description: {
+      ru: 'Расширение для добавления темной темы в соц. сеть Gettr',
+      _DEFAULT_: 'Extension for adding dark theme to the social network Gettr',
+    },
     unpublic: true,
     hidden: false,
     logo: gettrDarkThemeLogo,
@@ -2486,7 +2791,10 @@ const projects: Project[] = [
       release: '2021'
     },
     scope: 2,
-    description: 'Бот в телеграме отправляющий гифки кролика в чат по текстовому запросу, работает с API Giphy и Tenor',
+    description: {
+      ru: 'Бот в телеграме отправляющий гифки кролика в чат по текстовому запросу, работает с API Giphy и Tenor',
+      _DEFAULT_: 'Telegram bot sending bunny gifs to the chat by text request, works with Giphy and Tenor APIs',
+    },
     unpublic: false,
     hidden: false,
     logo: probablyKrolLogo,
@@ -2505,7 +2813,10 @@ const projects: Project[] = [
       abandon: '2022-02-17'
     },
     scope: 1,
-    description: 'Бот в Telegram по мотивам мема с крутыми скелетами на YouTube на канале Uncle Knuckles. Уже не работает, но видео есть в репозитории.',
+    description: {
+      ru: 'Бот в Telegram по мотивам мема с крутыми скелетами на YouTube на канале Uncle Knuckles. Уже не работает, но видео есть в репозитории.',
+      _DEFAULT_: 'Telegram bot based on the meme of cool skeletons on YouTube on the Uncle Knuckles channel. No longer works, but the video is in the repository.',
+    },
     unpublic: false,
     hidden: false,
     logo: skeletronRockBot,
@@ -2525,7 +2836,10 @@ const projects: Project[] = [
       release: '2021'
     },
     scope: 2,
-    description: 'Компонент графического ключа для реакта',
+    description: {
+      ru: 'Компонент графического ключа для реакта',
+      _DEFAULT_: 'Graphic key component for React',
+    },
     unpublic: false,
     hidden: false,
     links: [
@@ -2547,7 +2861,10 @@ const projects: Project[] = [
       release: '2020'
     },
     scope: 2,
-    description: 'Сайт где написано, арестован ли Алексей Навальный',
+    description: {
+      ru: 'Сайт где написано, арестован ли Алексей Навальный. С 16 февраля 2024 года наконец-то показывает "нет"...',
+      _DEFAULT_: 'Website stating whether Alexey Navalny is arrested. Since 16th February 2024 finally shows "no"...',
+    },
     unpublic: false,
     hidden: false,
     links: [
@@ -2568,7 +2885,10 @@ const projects: Project[] = [
       abandon: '2021'
     },
     scope: 3,
-    description: 'Стрим, длившийся неделю, где писалось кол-во зарегистрированных людей на митинг 21 апреля 2021',
+    description: {
+      ru: 'Стрим, длившийся неделю, где писалось кол-во зарегистрированных людей на митинг 21 апреля 2021',
+      _DEFAULT_: 'Stream that lasted a week, showing the number of people registered for the protest on April 21, 2021',
+    },
     unpublic: false,
     hidden: false,
     links: [
@@ -2582,7 +2902,10 @@ const projects: Project[] = [
     stack: ['NodeJS', 'nginx'],
     dates: { devStart: '2022-02-27', release: '2022-02-27' },
     scope: 1,
-    description: 'Бот для получения текущего курса покупки евро в Тинькофф банке для моих заказчиков, работающий с Tinkoff REST API',
+    description: {
+      ru: 'Бот для получения текущего курса покупки евро в Тинькофф банке для моих заказчиков, работающий с Tinkoff REST API',
+      _DEFAULT_: 'Bot for getting the current buying rate of Euro in Tinkoff bank for my clients, working with Tinkoff REST API',
+    },
     unpublic: false,
     hidden: false,
     logo: tinkoffCurrencyConverter,
@@ -2602,7 +2925,10 @@ const projects: Project[] = [
       release: '2021'
     },
     scope: 2,
-    description: 'Помощник к сайту SkySmart чтобы списывать было легче',
+    description: {
+      ru: 'Помощник к сайту SkySmart чтобы списывать было легче',
+      _DEFAULT_: 'Assistant to SkySmart site to make copying easier',
+    },
     unpublic: false,
     hidden: false,
     logo: skysmartHelperLogo,
@@ -2620,7 +2946,10 @@ const projects: Project[] = [
     supported: true,
     dates: { devStart: '2022-06-16', release: '2022-06-16' },
     scope: 1,
-    description: 'Расширение Chrome, заменяющее радужную полосу загрузки на сайте figma.com, появляющуюся во время месяца Pride, на стандартную синюю. Я удалил расширение вскоре после публикации.',
+    description: {
+      ru: 'Расширение Chrome, заменяющее радужную полосу загрузки на сайте figma.com, появляющуюся во время месяца Pride, на стандартную синюю. Я удалил расширение вскоре после публикации.',
+      _DEFAULT_: 'Chrome extension replacing the rainbow loading bar on the site figma.com, appearing during Pride month, with the standard blue one. I removed the extension soon after publication.',
+    },
     unpublic: true,
     hidden: false,
     logo: figmaAntiLGBTLogo,
@@ -2643,7 +2972,10 @@ const projects: Project[] = [
       abandon: '13 January 2022'
     },
     scope: 2,
-    description: 'Нативное приложение, позволяющее находить торренты с контентом для взрослых',
+    description: {
+      ru: 'Нативное приложение, позволяющее находить торренты с контентом для взрослых',
+      _DEFAULT_: 'Native app allowing to find adult content torrents',
+    },
     unpublic: true,
     hidden: false,
     logo: mypronLogo,
@@ -2665,7 +2997,10 @@ const projects: Project[] = [
       release: '2021'
     },
     scope: 1,
-    description: 'Сайт, где женщина громко кричит, если нажать на кнопку (первый сайт на React)',
+    description: {
+      ru: 'Сайт, где женщина громко кричит, если нажать на кнопку (первый сайт на React)',
+      _DEFAULT_: 'Website where a woman screams loudly if you press a button (my very first website on React)',
+    },
     unpublic: false,
     hidden: false,
     logo: panicButtonLogo,
@@ -2686,7 +3021,10 @@ const projects: Project[] = [
       release: '2021'
     },
     scope: 2,
-    description: 'Расширение создающее свои названия для предметов в асу рсо',
+    description: {
+      ru: 'Расширение создающее свои названия для предметов в асу рсо',
+      _DEFAULT_: 'Browser extension allowing you to create your own names for items in online school diary ASU RSO',
+    },
     unpublic: true,
     hidden: false,
     logo: asursoCustomNamesLogo,
@@ -2705,7 +3043,10 @@ const projects: Project[] = [
       release: '2020'
     },
     scope: 3,
-    description: 'Огромная карта майнкрафт с развитыми ветками диалогов',
+    description: {
+      ru: 'Огромная карта майнкрафт с развитыми ветками диалогов',
+      _DEFAULT_: 'Huge Minecraft map with developed dialogue branches',
+    },
     unpublic: false,
     hidden: false,
     links: [
@@ -2728,7 +3069,10 @@ const projects: Project[] = [
       abandon: '2020'
     },
     scope: 4,
-    description: 'Сайт для заказа пранк звонков от Глада Валакаса',
+    description: {
+      ru: 'Сайт для заказа пранк звонков от Глада Валакаса',
+      _DEFAULT_: 'Website for ordering prank calls from Glad Valakas',
+    },
     unpublic: false,
     hidden: false,
     logo: roflCallsOrderWebsiteLogo,
@@ -2752,7 +3096,10 @@ const projects: Project[] = [
       abandon: '2020'
     },
     scope: 2,
-    description: 'Статистика из моей игры Stigfinnare',
+    description: {
+      ru: 'Статистика из моей игры Stigfinnare',
+      _DEFAULT_: 'Statistics from my online shooter multiplier game Stigfinnare',
+    },
     unpublic: false,
     hidden: false,
     logo: stigfinnareLogo,
@@ -2773,7 +3120,10 @@ const projects: Project[] = [
       release: '2020'
     },
     scope: 2,
-    description: 'Сайт мем про "Хочешь стать программистом?"',
+    description: {
+      ru: 'Сайт мем про "Хочешь стать программистом?"',
+      _DEFAULT_: 'Meme site about phrase "Want to become a programmer?"',
+    },
     unpublic: true,
     hidden: false,
     logo: wantToBeAProgrammerLogo,
@@ -2797,7 +3147,10 @@ const projects: Project[] = [
       abandon: '7 January 2022'
     },
     scope: 1,
-    description: 'Бот, который присылал мосты из BridgeDB для TOR, делая парсинг HTML кода',
+    description: {
+      ru: 'Бот, который присылал мосты из BridgeDB для TOR, делая парсинг HTML кода',
+      _DEFAULT_: 'Bot that sent bridges from BridgeDB for TOR, parsing HTML code',
+    },
     unpublic: false,
     hidden: false,
     links: [
@@ -2821,7 +3174,10 @@ const projects: Project[] = [
       abandon: '2020'
     },
     scope: 3,
-    description: 'Мобильное приложение на Android и веб-сайт для пользователей iOS, которое я сделал в 9 классе для моих одноклассников, чтобы все смогли голосовать за ту еду, которую хотят (или не хотят) в школьной столовой завтра. Бекенд был на PHP с базой данных MySQL.',
+    description: {
+      ru: 'Мобильное приложение на Android и веб-сайт для пользователей iOS, которое я сделал в 9 классе для моих одноклассников, чтобы все смогли голосовать за ту еду, которую хотят (или не хотят) в школьной столовой завтра. Бекенд был на PHP с базой данных MySQL.',
+      _DEFAULT_: 'Mobile application on Android and a website for iOS users, which I made in 9th grade for my classmates, so everyone could vote for the food they want (or don\'t want) in the school canteen tomorrow. Backend was on PHP with MySQL database.',
+    },
     unpublic: false,
     hidden: false,
     category: 'app',
@@ -2832,7 +3188,10 @@ const projects: Project[] = [
     stack: ['React', 'NodeJS', 'FastCGI'],
     dates: { devStart: '2022-05-05', release: '2022-05-07' },
     scope: 2,
-    description: '',
+    description: {
+      ru: '',
+      _DEFAULT_: '',
+    },
     unpublic: true,
     hidden: true,
     category: 'website',
@@ -2851,7 +3210,10 @@ const projects: Project[] = [
       abandon: '2020'
     },
     scope: 2,
-    description: 'Нейросеть, которая угадывает ПО ФОТО из игры witness как решить головоломку, используя сервис Clarifai',
+    description: {
+      ru: 'Нейросеть, которая угадывает ПО ФОТО из игры witness как решить головоломку, используя сервис Clarifai',
+      _DEFAULT_: 'Neural network that guesses BY PHOTO from the game Witness how to solve the puzzle, using Clarifai AI',
+    },
     unpublic: false,
     hidden: false,
     category: 'website',
@@ -2868,7 +3230,10 @@ const projects: Project[] = [
       release: '2020'
     },
     scope: 2,
-    description: 'Редактор текста на основе canvas',
+    description: {
+      ru: 'Редактор текста на основе canvas',
+      _DEFAULT_: 'Text editor based on canvas',
+    },
     unpublic: false,
     hidden: false,
     logo: uselessCanvasBasedTextEditorLogo,
@@ -2888,7 +3253,10 @@ const projects: Project[] = [
       abandon: '2019'
     },
     scope: 2,
-    description: 'Сайт который задумывался как альтернатива Twitch без идиотских правил; закрыт навсегда из-за bitwave',
+    description: {
+      ru: 'Сайт который задумывался как альтернатива Twitch без идиотских правил; закрыт навсегда из-за bitwave',
+      _DEFAULT_: 'Website that was plannted to be Twitch.tv competitor without stupid rules; closed forever due to bitwave',
+    },
     unpublic: false,
     hidden: false,
     category: 'website',
@@ -2905,7 +3273,10 @@ const projects: Project[] = [
       release: '2020'
     },
     scope: 1,
-    description: 'Сайт c плохим интерфейсом, для поста на реддите',
+    description: {
+      ru: 'Сайт c плохим интерфейсом, для поста на реддите',
+      _DEFAULT_: 'Website with a bad interface, made for a post on reddit',
+    },
     unpublic: false,
     hidden: false,
     links: [
@@ -2924,7 +3295,10 @@ const projects: Project[] = [
       abandon: '2017'
     },
     scope: 2,
-    description: 'Расширение для общения двух чатботов, популярного в YouTube на тот момент, Evie',
+    description: {
+      ru: 'Расширение для общения двух чатботов, популярного в YouTube на тот момент, Evie',
+      _DEFAULT_: 'Browser extension for communication between two chatbots, popular on YouTube at the time, Evie',
+    },
     unpublic: false,
     hidden: false,
     category: 'chrome_extension',
@@ -2940,7 +3314,10 @@ const projects: Project[] = [
       abandon: '2018'
     },
     scope: 2,
-    description: 'Приложение на телефон, где можно было найти интересные игры по персональным рекоммендациям',
+    description: {
+      ru: 'Приложение на телефон, где можно было найти интересные игры по персональным рекоммендациям',
+      _DEFAULT_: 'Phone application where you could find interesting games based on personal recommendations',
+    },
     unpublic: false,
     hidden: false,
     category: 'app',
@@ -2956,7 +3333,10 @@ const projects: Project[] = [
       abandon: '2020'
     },
     scope: 2,
-    description: 'Приложение для посика биолгических родителей и связей с другими людьми',
+    description: {
+      ru: 'Приложение для посика биолгических родителей и связей с другими людьми',
+      _DEFAULT_: 'Application for searching biological parents and connections with other people',
+    },
     unpublic: false,
     hidden: false,
     category: 'app',
@@ -2976,7 +3356,10 @@ const projects: Project[] = [
       release: '2021'
     },
     scope: 1,
-    description: 'Статья',
+    description: {
+      ru: 'Статья',
+      _DEFAULT_: 'Article',
+    },
     unpublic: false,
     hidden: false,
     links: [
@@ -2997,7 +3380,10 @@ const projects: Project[] = [
       abandon: '2020'
     },
     scope: 4,
-    description: 'Хоррор где надо наворовать в магазине и убежать',
+    description: {
+      ru: 'Хоррор где надо наворовать в магазине и убежать',
+      _DEFAULT_: 'Horror where you have to steal from a store and escape',
+    },
     unpublic: false,
     hidden: false,
     category: 'game/windows10',
@@ -3015,7 +3401,10 @@ const projects: Project[] = [
       abandon: '2021'
     },
     scope: 1,
-    description: 'Мой персональный анонимайзер (прокси сервер) с паролем',
+    description: {
+      ru: 'Мой персональный анонимайзер (прокси сервер) с паролем',
+      _DEFAULT_: 'My personal anonymizer (proxy server) with password',
+    },
     unpublic: false,
     hidden: false,
     category: 'website',
@@ -3033,7 +3422,10 @@ const projects: Project[] = [
       release: '2018'
     },
     scope: 3,
-    description: 'Игра, где разбившись на самолете, игроку предстоит собрать чипы, открыть дверь в бункер и спастись',
+    description: {
+      ru: 'Игра, где разбившись на самолете, игроку предстоит собрать чипы, открыть дверь в бункер и спастись',
+      _DEFAULT_: 'Game where, having crashed on a plane, the player has to collect chips, open the door to a bunker, and escape',
+    },
     unpublic: false,
     hidden: false,
     category: 'game/windows10',
@@ -3051,7 +3443,10 @@ const projects: Project[] = [
       abandon: '2020'
     },
     scope: 1,
-    description: 'ИИ, генерирующий предложения, похожие на то, что говорит мой друг Никита',
+    description: {
+      ru: 'ИИ, генерирующий предложения, похожие на то, что говорит мой друг Никита',
+      _DEFAULT_: 'AI generating sentences similar to what my friend Nikita says',
+    },
     unpublic: false,
     hidden: false,
     category: 'website',
@@ -3069,7 +3464,10 @@ const projects: Project[] = [
       abandon: '2018'
     },
     scope: 3,
-    description: 'Веб-сайт на HTML, который я сделал во втором классе для моих одноклассников, где были новости, тесты и игры',
+    description: {
+      ru: 'Веб-сайт на HTML, который я сделал во втором классе для моих одноклассников, где были новости, тесты и игры',
+      _DEFAULT_: 'Web-site on HTML that I made in the second grade for my classmates, where there were news, tests, and games',
+    },
     unpublic: false,
     hidden: false,
     category: 'website',
@@ -3087,7 +3485,10 @@ const projects: Project[] = [
       abandon: '2018'
     },
     scope: 1,
-    description: 'Сайт, объясняющий разницу между похожими вещами. Мой самый первый сайт на чистом HTML.',
+    description: {
+      ru: 'Сайт, объясняющий разницу между похожими вещами. Мой самый первый сайт на чистом HTML.',
+      _DEFAULT_: 'Site explaining the difference between similar things. My very first site on pure HTML.',
+    },
     unpublic: false,
     hidden: false,
     category: 'website',
@@ -3104,7 +3505,10 @@ const projects: Project[] = [
       abandon: '2016'
     },
     scope: 1,
-    description: 'Игра по типу quiplash, сделанная на phpDevelStudio когда мне было 12 лет. Бекенд был на PHP',
+    description: {
+      ru: 'Игра по типу quiplash, сделанная на phpDevelStudio когда мне было 12 лет. Бекенд был на PHP',
+      _DEFAULT_: 'Game like quiplash, made on phpDevelStudio when I was 12 years old. Backend was on PHP'
+    },
     unpublic: false,
     hidden: false,
     category: 'game/windows10',
