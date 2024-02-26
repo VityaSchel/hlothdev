@@ -7,7 +7,9 @@ type ThemeSlice = {
 }
 
 const initialState: ThemeSlice = {
-  theme: 'light'
+  theme: window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+    ? 'dark'
+    : 'light'
 }
 
 export const themeSlice = createSlice({

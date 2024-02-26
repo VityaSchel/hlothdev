@@ -23,3 +23,14 @@ body.dark-theme {
   --secondary-text-color: #dedede;
   --paper-background: #383838;
 }
+
+.MuiDataGrid-row a,
+.MuiDialog-container a {
+  color: inherit;
+}
+
+.MuiDataGrid-row a {
+  font-weight: 500;
+  text-underline-offset: 2px;
+  text-decoration-skip-ink: none;
+}

@@ -20,7 +20,6 @@ export default function generateColumns({ locale, translation, setSearchTerms, s
   ignoreContentWidthLimit?: boolean
 }) {
   const dateRegex = /^\d+[ -]\w+[ -]\d+$/
-  const dateColWidth = 150
 
   const search = (terms: string) => (e: any) => {
     setSearchTerms([terms])
@@ -89,16 +88,18 @@ export default function generateColumns({ locale, translation, setSearchTerms, s
         const translatedCategory = translation.CATEGORIES[row.category as keyof typeof translation.CATEGORIES]
 
         return (
-          <div className='flex flex-col gap-1'>
-            <div className='flex gap-2 items-center'>
-              <span className={(row.hidden || shockingProject) ? 'text-[#dedede] italic' : 'font-semibold'}>
+          <div className='flex flex-col gap-1 my-2'>
+            <div className='flex flex-wrap gap-x-2 items-center'>
+              <span className={cx('text-wrap',
+                (row.hidden || shockingProject) ? 'text-[#dedede] italic' : 'font-semibold'
+              )}>
                 {name}
               </span>
               {row.tags?.includes('order') && (
                 <Chip label={translation.TAGS.ORDER} size='small' />
               )}
-              {row.unpublic && showShockingProjects && (
-                <Chip label={translation.HIDDEN_PROJECT.NAME} size='small' />
+              {row.unpublic && !row.hidden && showShockingProjects && (
+                <Chip label={translation.SHOCK_PROJECT.NAME} size='small' />
               )}
             </div>
             {row.category && (
@@ -116,54 +117,67 @@ export default function generateColumns({ locale, translation, setSearchTerms, s
       disableColumnMenu: true,
       renderCell: ({ row }: { row: Project }) => {
         const shockingProject = row.unpublic && !showShockingProjects
-        let description: string = row.description
+        let description: string = locale in row.description 
+          ? row.description[locale as keyof typeof row.description] 
+          : row.description['_DEFAULT_']
         if(row.hidden) description = translation.HIDDEN_PROJECT.DESCRIPTION_PREVIEW
         else if(shockingProject) description = translation.SHOCK_PROJECT.DESCRIPTION_PREVIEW
         return (
-          <span className={cx('text-ellipsis line-clamp-3 whitespace-normal', { 'text-[#dedede] italic': row.hidden || shockingProject })}>
-            {description}
-          </span>
+          <span 
+            className={cx('text-ellipsis whitespace-normal', { 
+              'text-[#dedede] italic': row.hidden || shockingProject,
+              'line-clamp-3': row.stack.length < 13,
+              'line-clamp-4': row.stack.length >= 13,
+            })} 
+            dangerouslySetInnerHTML={{ __html: description }}
+          />
         )
       }
     },
     {
       field: 'stack',
       headerName: translation.COLUMNS.TECHNOLOGIES,
-      ...(!ignoreContentWidthLimit ? { flex: 10 } : { width: 7 * mobileContentWidthMult }),
+      // ...(!ignoreContentWidthLimit ? { flex: 10 } : { width: 7 * mobileContentWidthMult }),
+      flex: 12,
       sortable: false,
       disableColumnMenu: true,
-      renderCell: ({ row }: { row: Project }) => <span className='whitespace-normal leading-loose pt-[3px] pb-[5px] px-0'>
-        {row.stack.map(technology => (
-          <>
-            <Chip
-              label={technology}
-              size='small'
-              onClick={search(technology)}
-              key={technology}
-            />
-            <span>&#32;&#32;</span>
-          </>
-        ))}
-      </span>
+      renderCell: ({ row }: { row: Project }) => (
+        <span className='whitespace-normal leading-loose pt-[3px] pb-[5px] px-0'>
+          {row.stack.map(technology => (
+            <>
+              <Chip
+                label={technology}
+                size='small'
+                onClick={search(technology)}
+                key={technology}
+              />
+              <span>&#32;&#32;</span>
+            </>
+          ))}
+        </span>
+      ),
     },
-    // {
-    //   field: 'dates.devStart',
-    //   headerName: translation.COLUMNS.DATES.DEVSTART,
-    //   renderCell: renderDate,
-    //   width: dateColWidth
-    // },
     {
-      field: 'dates.release',
+      field: 'dates',
       headerName: translation.COLUMNS.DATES.RELEASE,
-      renderCell: renderDate,
-      width: dateColWidth
+      renderCell: ({ row }: { row: Project }) => (
+        <div className='flex flex-col gap-1 text-xs my-2'>
+          {row.dates.devStart && (
+            <div className='flex flex-col'>
+              <span className='font-bold'>{translation.DATES.DEV_START}:</span>
+              <span>{renderDate({ value: row.dates.devStart })}</span>
+            </div>
+          )}
+          {row.dates.release && (
+            <div className='flex flex-col'>
+              <span className='font-bold'>{translation.DATES.RELEASE}:</span>
+              <span>{renderDate({ value: row.dates.release })}</span>
+            </div>
+          )}
+        </div>
+      ),
+      width: 170
     },
-    // {
-    //   field: 'dates.abandon',
-    //   headerName: translation.COLUMNS.DATES.ABANDON,
-    //   renderCell: renderDate,
-    //   width: dateColWidth
-    // }
   ]
 }
 

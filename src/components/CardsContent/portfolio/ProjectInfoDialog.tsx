@@ -7,33 +7,43 @@ import DialogContentText from '@mui/material/DialogContentText'
 import DialogTitle from '@mui/material/DialogTitle'
 import Button from '@mui/material/Button'
 import Tooltip from '@mui/material/Tooltip'
-import projects from '../../../data/projects'
+import projects, { Project } from '../../../data/projects'
 import copy from 'copy-to-clipboard'
 import { MdLink, MdOutlineTranslate } from 'react-icons/md'
 import { useAppDispatch, useAppSelector } from '@/store/hooks'
 import { selectTranslation } from '@/store/reducers/translation'
 import { selectPortfolio, setShowShockingProjects } from '@/store/reducers/portfolio'
+import { selectLocale } from '@/store/reducers/locale'
 
-export default function ProjectInfoDialog({ updateFunc }: {
-  updateFunc(arg: number): void;
+export default function ProjectInfoDialog({ openedProjectID, setOpenedProjectID }: {
+  openedProjectID: string | null
+  setOpenedProjectID: (id: string | null) => void
 }) {
   const translation = useAppSelector(selectTranslation).PORTFOLIO
   const portfolio = useAppSelector(selectPortfolio)
   const dispatch = useAppDispatch()
   const [shareTooltipOpened, setShareTooltipOpened] = React.useState(false)
+  const { locale } = useAppSelector(selectLocale)
 
-  const urlProjectID = window.location.pathname.substring(1).split('/')[1]
-  const openedProjectID = urlProjectID ? decodeURIComponent(urlProjectID) : undefined
-  const openedProject = openedProjectID ? projects.find(({ id }) => id === openedProjectID) : null
+  const [openedProject, setOpenedProject] = React.useState<Project | null>(null)
+
+  React.useEffect(() => {
+    if(!openedProjectID) {
+      return
+    }
+    const project = decodeURIComponent(openedProjectID)
+    setOpenedProject(projects.find(({ id }) => id === project) ?? null)
+  }, [openedProjectID])
   const showShockingProjects = portfolio.showShockingProjects
   const shockingProject = showShockingProjects ? false : (!openedProject?.hidden && openedProject?.unpublic)
   const actualProject = openedProject?.unpublic ? showShockingProjects : !openedProject?.hidden
+
   const handleClose = () => {
     const parts = window.location.pathname.split('/')
     parts.pop()
     const newPath = parts.join('/') + window.location.search
     history.pushState(null, '', newPath)
-    updateFunc(0)
+    setOpenedProjectID(null)
   }
 
   const handleShare = () => {
@@ -49,46 +59,44 @@ export default function ProjectInfoDialog({ updateFunc }: {
     }
   }
 
-  if(!openedProject) return <div></div>
   return (
     <Dialog
-      open={Boolean(openedProjectID?.length)}
+      open={Boolean(openedProjectID)}
       onClose={handleClose}
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
     >
       <DialogTitle id="alert-dialog-title">
         {
-          openedProject.hidden
-            ? translation.HIDDEN_PROJECT.NAME
-            : shockingProject
-              ? translation.SHOCK_PROJECT.NAME
-              : openedProject.name
+          openedProject && (
+            openedProject.hidden
+              ? translation.HIDDEN_PROJECT.NAME
+              : shockingProject
+                ? translation.SHOCK_PROJECT.NAME
+                : openedProject.name
+          )
         }
       </DialogTitle>
       <DialogContent>
         <DialogContentText id="alert-dialog-description">
-          {
-            openedProject.hidden
-              ? translation.HIDDEN_PROJECT.DESCRIPTION.replace('%PROJECT_ID%', openedProject.name.substring(9))
-              : shockingProject
-                ? translation.SHOCK_PROJECT.DESCRIPTION
-                : openedProject.description
-          }
+          {openedProject && (
+            <p 
+              className='m-0'
+              dangerouslySetInnerHTML={{
+                __html:
+                  openedProject.hidden
+                    ? translation.HIDDEN_PROJECT.DESCRIPTION.replace('%PROJECT_ID%', openedProject.name.substring(9))
+                    : shockingProject
+                      ? translation.SHOCK_PROJECT.DESCRIPTION
+                      : locale in openedProject.description
+                        ? openedProject.description[locale as keyof typeof openedProject.description]
+                        : openedProject.description['_DEFAULT_']
+              }}
+            />
+          )}
         </DialogContentText>
         {
-          actualProject && translation.PROJECT_DIALOG.TRANSLATE_DESCRIPTION_CODE &&
-          <span className={styles.translateButton}>
-            <a 
-              href={`https://translate.google.com/?sl=ru&tl=${translation.PROJECT_DIALOG.TRANSLATE_DESCRIPTION_CODE}&text=${encodeURIComponent(openedProject.description)}&op=translate`} 
-              target='_blank' rel='noreferrer'
-            >
-              <MdOutlineTranslate /> {translation.PROJECT_DIALOG.TRANSLATE_DESCRIPTION_LABEL}
-            </a>
-          </span>
-        }
-        {
-          actualProject && openedProject.links && 
+          actualProject && openedProject && openedProject.links && 
           <DialogContentText className={styles.links}>
             <span><MdLink /> {translation.PROJECT_DIALOG.LINKS_LABEL}:</span>
             {openedProject.links.map(link => (

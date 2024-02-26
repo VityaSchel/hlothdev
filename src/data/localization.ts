@@ -98,7 +98,7 @@ export type Translation = {
       DESCRIPTION: string
       TECHNOLOGIES: string
       DATES: {
-        DEVSTART: string
+        DEV_START: string
         RELEASE: string
         ABANDON: string
       }
@@ -107,6 +107,22 @@ export type Translation = {
       PLACEHOLDER: string
       EXAMPLE: string
       CLEAR: string
+      QUICK_SEARCH: {
+        TITLE: string
+        WEB: string
+        MOBILE: string
+        BACKEND: string
+        DATABASES: string
+        DESIGN: string
+        GAME_DEV: string
+        BOTS: string
+        DEV_OPS: string
+        AI: string
+        PAYMENTS: string
+        SOFTWARE: string
+        MODELING: string
+        OTHER: string
+      }
     }
     CATEGORIES: {
       'game/windows10': string
@@ -153,6 +169,11 @@ export type Translation = {
     }
     TAGS: {
       ORDER: string
+    }
+    DATES: {
+      DEV_START: string
+      RELEASE: string
+      ABANDON: string
     }
   }
   ABOUT_THIS_WEBSITE: {
@@ -295,7 +316,7 @@ const translation: Record<'ru-RU' | '_DEFAULT_', Translation> = {
         'DESCRIPTION': 'Описание',
         'TECHNOLOGIES': 'Технологии',
         'DATES': {
-          'DEVSTART': 'Начало разработки',
+          'DEV_START': 'Начало разработки',
           'RELEASE': 'Релиз',
           'ABANDON': 'Приостановка'
         }
@@ -303,7 +324,23 @@ const translation: Record<'ru-RU' | '_DEFAULT_', Translation> = {
       'SEARCH': {
         'PLACEHOLDER': 'Поиск по портфолио: название, описание, технологии',
         'EXAMPLE': 'Например, «Лендинг» или «Redux, React Native»',
-        'CLEAR': 'Очистить'
+        'CLEAR': 'Очистить',
+        QUICK_SEARCH: {
+          TITLE: 'Поиск по сферам',
+          WEB: 'Фронтенд и веб',
+          MOBILE: 'Мобайл',
+          BACKEND: 'Бекенд',
+          DATABASES: 'БД',
+          DESIGN: 'Дизайн',
+          GAME_DEV: 'Геймдев',
+          BOTS: 'Боты',
+          DEV_OPS: 'Девопс',
+          AI: 'ИИ',
+          PAYMENTS: 'Платежи',
+          SOFTWARE: 'Софт',
+          MODELING: '3D',
+          OTHER: 'Другое',
+        }
       },
       'CATEGORIES': {
         'game/windows10': 'Игра Windows 10',
@@ -335,7 +372,7 @@ const translation: Record<'ru-RU' | '_DEFAULT_', Translation> = {
         'DESCRIPTION': 'Информация об этом проекте скрыта, потому что так захотел клиент (если это заказ) или я просто не хочу им делиться; но я готов показать вам его лично, для этого обратитесь ко мне и назовите его id: %PROJECT_ID%.'
       },
       'SHOCK_PROJECT': {
-        'NAME': 'Нежелательный контент',
+        'NAME': 'Шокирующий контент',
         'DESCRIPTION_PREVIEW': 'Нажмите, чтобы показать информацию о проекте',
         'DESCRIPTION': 'Указанный контент может показаться некоторым людям оскорбительным и шокирующим, однако он имеет достаточно ценное значение для моего портфолио, чтобы оставить его здесь. Если вы хотите увидеть информацию об этом и других проектах из этой категории, нажмете кнопку Показать ниже.'
       },
@@ -348,6 +385,11 @@ const translation: Record<'ru-RU' | '_DEFAULT_', Translation> = {
       },
       'TAGS': {
         'ORDER': 'Заказ'
+      },
+      'DATES': {
+        'DEV_START': 'Начало разработки',
+        'RELEASE': 'Релиз',
+        'ABANDON': 'Отмена/прекращение'
       }
     },
     'ABOUT_THIS_WEBSITE': {

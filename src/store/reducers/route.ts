@@ -21,7 +21,7 @@ export const routeSlice = createSlice({
       state.route = action.payload.route
     },
     popRoute: (state, action: PayloadAction<string>) => {
-      state.route = action.payload
+      state.route = action.payload.split('/')[0]
     }
   }
 })

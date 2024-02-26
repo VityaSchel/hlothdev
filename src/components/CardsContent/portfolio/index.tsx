@@ -1,5 +1,4 @@
 import React from 'react'
-import styles from '../styles.module.scss'
 import { DataGrid, ruRU as xDataGridRu, enUS as xDataGridEnUS } from '@mui/x-data-grid'
 import projectsList from '../../../data/projects'
 import generateColumns from './generateColumns'
@@ -10,12 +9,10 @@ import { useAppSelector } from '@/store/hooks'
 import { selectTranslation } from '@/store/reducers/translation'
 import { selectLocale } from '@/store/reducers/locale'
 import { selectPortfolio } from '@/store/reducers/portfolio'
-import { dotFlatten } from '@/utils'
 
 export function Portfolio() {
   const [searchTerms, setSearchTerms] = React.useState<string[]>([])
   const [loading, setLoading] = React.useState(false)
-  const [, forceUpdateOnHistoryPush] = React.useState<number>(0)
   const [searchFilterFunc, setSearchFilterFunc] = React.useState(() => () => true)
   const isMobile = useMediaQuery('(max-width: 768px)')
   const translation = useAppSelector(selectTranslation)
@@ -24,6 +21,7 @@ export function Portfolio() {
   const { locale } = useAppSelector(selectLocale)
   const { showShockingProjects } = useAppSelector(selectPortfolio)
   const dataGridLocalization = { 'ru-RU': xDataGridRu }[locale] ?? xDataGridEnUS
+  const [openedProjectID, setOpenedProjectID] = React.useState<string | null>(window.location.pathname.substring(1).split('/')[1] || null)
 
   React.useEffect(() => setLoading(false), [searchTerms])
 
@@ -37,7 +35,7 @@ export function Portfolio() {
     },
     showShockingProjects,
     ignoreContentWidthLimit: isMobile
-  }), [locale, translation, isMobile])
+  }), [locale, translation, isMobile, showShockingProjects])
 
   const projects = React.useMemo(() => projectsList
     .filter(project => {
@@ -45,7 +43,12 @@ export function Portfolio() {
       const terms = searchTerms.map(term => term.toLowerCase())
       if (terms.some(term => project.name.toLowerCase().includes(term))) 
         return true
-      if (terms.some(term => project.description?.toLowerCase().includes(term))) 
+      if (terms.some(term => {
+        const projectDescription = locale in project.description
+          ? project.description[locale as keyof typeof project.description]
+          : project.description['_DEFAULT_']
+        projectDescription.toLowerCase().includes(term)
+      })) 
         return true
       if (project.category && project.category in translation.PORTFOLIO.CATEGORIES && terms.some(term => 
         translation.PORTFOLIO.CATEGORIES[project.category as keyof typeof translation.PORTFOLIO.CATEGORIES]?.toLowerCase().includes(term)
@@ -58,10 +61,20 @@ export function Portfolio() {
   const handleProjectClick = (id: string) => {
     const newPath = '/portfolio/' + id + window.location.search
     history.pushState(null, '', newPath)
-    forceUpdateOnHistoryPush(Date.now())
+    setOpenedProjectID(id)
   }
 
-  const projectsFlatten = React.useMemo(() => projects.map(p => dotFlatten(p, 'dates')), [projects])
+  React.useEffect(() => {
+    const handlePopState = () => {
+      setOpenedProjectID(window.location.pathname.substring(1).split('/')[1] || null)
+    }
+    window.addEventListener('navigate', handlePopState)
+    window.addEventListener('popstate', handlePopState)
+    return () => {
+      window.removeEventListener('navigate', handlePopState)
+      window.removeEventListener('popstate', handlePopState)
+    }
+  }, [])
 
   return (
     <div className='flex flex-col gap-3 flex-1'>
@@ -72,7 +85,7 @@ export function Portfolio() {
         ref={searchRef}
       />
       <DataGrid
-        rows={projectsFlatten}
+        rows={projects}
         columns={columns}
         ref={dataGridRef}
 
@@ -87,7 +100,10 @@ export function Portfolio() {
         disableColumnSelector
         disableDensitySelector
         disableSelectionOnClick
-        onCellClick={({ id }) => handleProjectClick(String(id))}
+        onCellClick={({ id }, event) => {
+          if (event.target && 'tagName' in event.target && event.target.tagName === 'A') return
+          handleProjectClick(String(id))
+        }}
         onPageChange={() => dataGridRef.current?.querySelector('.MuiDataGrid-virtualScroller')?.scrollTo(0, 0)}
         localeText={dataGridLocalization.components.MuiDataGrid.defaultProps.localeText}
         loading={loading}
@@ -95,8 +111,9 @@ export function Portfolio() {
 
         getRowId={row => row.id}
       />
-      <ProjectInfoDialog
-        updateFunc={forceUpdateOnHistoryPush}
+      <ProjectInfoDialog 
+        openedProjectID={openedProjectID}
+        setOpenedProjectID={setOpenedProjectID}
       />
     </div>
   )

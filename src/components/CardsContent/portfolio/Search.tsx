@@ -9,6 +9,8 @@ import OutlinedInput from '@mui/material/OutlinedInput'
 import Filters from './Filters.js'
 import { useAppSelector } from '@/store/hooks.js'
 import { selectTranslation } from '@/store/reducers/translation.js'
+import { Project, technologies } from '@/data/projects.js'
+import { Chip } from '@mui/material'
 
 export type SearchProps = {
   setSearchTerms(terms: string[]): void;
@@ -19,6 +21,8 @@ export type SearchProps = {
 export type SearchRef = {
   setTerms: (terms: string[]) => void;
 }
+
+const quickSearch = [['web', 'WEB'], ['backend', 'BACKEND'], ['databases', 'DATABASES'], ['bots', 'BOTS'], ['devOps', 'DEV_OPS'], ['mobile', 'MOBILE'], ['design', 'DESIGN'], ['gameDev', 'GAME_DEV'],  ['ai', 'AI'], ['payments', 'PAYMENTS'], ['software', 'SOFTWARE'], ['modeling', 'MODELING'], ['other', 'OTHER']] as const
 
 const Search = React.forwardRef<SearchRef, SearchProps>(({
   setLoading,
@@ -77,11 +81,12 @@ const Search = React.forwardRef<SearchRef, SearchProps>(({
     setSearchTerms(terms)
   }
 
-  const filtersList = [
+  const filtersList: { id: string, filterFunc: (project: Project) => void }[] = [
     { id: 'ORDERS_ONLY', filterFunc: project => project.tags?.includes?.('order') },
     { id: 'PERSONAL_WEBSITES_ONLY', filterFunc: project => project.tags?.includes?.('personalsite') },
     { 
       id: 'RECENT_PROJECTS_ONLY', filterFunc: project => {
+        if (!project.dates.release) return false
         return Date.now() - 1000 * 60 * 60 * 24 * 365 <= new Date(project.dates.release).getTime()
       } 
     },
@@ -89,7 +94,7 @@ const Search = React.forwardRef<SearchRef, SearchProps>(({
 
   React.useEffect(() => {
     const functions = filtersList.filter(({ id }) => filters[id]).map(({ filterFunc }) => filterFunc)
-    setSearchFilterFunc(() => project => functions.every(func => func(project)))
+    setSearchFilterFunc(() => (project: Project) => functions.every(func => func(project)))
   }, [filters])
 
   return (
@@ -116,6 +121,20 @@ const Search = React.forwardRef<SearchRef, SearchProps>(({
           }
         />
       </FormControl>
+      <div className='flex flex-wrap gap-1'>
+        <span className='text-[var(--secondary-text-color)]'>{translation.QUICK_SEARCH.TITLE}:</span>
+        {quickSearch.map(([id, label]) => (
+          <Chip
+            label={translation.QUICK_SEARCH[label]}
+            size='small'
+            onClick={() => {
+              setSearchTerm(technologies[id].join(', '))
+              setSearchTerms([...technologies[id]])
+            }}
+            key={id}
+          />
+        ))}
+      </div>
       <Filters 
         checked={filters}
         setChecked={(filterID, checked) => setFilters({ ...filters, [filterID]: checked })}
