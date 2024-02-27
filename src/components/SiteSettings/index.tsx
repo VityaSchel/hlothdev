@@ -29,7 +29,7 @@ export function SiteSettings() {
   return (
     <div className={styles.container}>
       <a href='http://hlothadmob6vsssnjd7ovwyz4z2le4pbpbyfhqbuwooyq62ona3l4bid.onion/' title={translation.ONION_SITE_LINK}>
-        <IconButton aria-label={translation.ONION_SITE_LINK}>
+        <IconButton aria-label={translation.ONION_SITE_LINK} tabIndex={-1}>
           <SiTorbrowser />
         </IconButton>
       </a>

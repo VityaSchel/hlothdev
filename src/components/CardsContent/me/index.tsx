@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { SiTelegram } from 'react-icons/si'
 import { ReactComponent as LinkedinLogo } from '../../../assets/images/svgIcons/linkedin_logo.svg'
 import { AiFillTwitterCircle } from 'react-icons/ai'
-import { MdEmail, MdLocalPhone } from 'react-icons/md'
+import { MdChevronRight, MdEmail, MdLocalPhone } from 'react-icons/md'
 import { ImGithub } from 'react-icons/im'
 import avatar from '../../../assets/images/avatar.jpeg'
 import Experience from './Experience.js'
@@ -12,7 +12,8 @@ import useMediaQuery from '@mui/material/useMediaQuery'
 import { dates } from '../../../utils.js'
 import { useAppSelector } from '@/store/hooks.js'
 import { selectTranslation } from '@/store/reducers/translation.js'
-import { ButtonBase } from '@mui/material'
+import { Button, ButtonBase } from '@mui/material'
+import { FiExternalLink } from 'react-icons/fi'
 
 function AboutCard({ isMobile }: {
   isMobile: boolean
@@ -95,24 +96,20 @@ function MiniProfile() {
   return (
     <div className='flex-1 flex flex-col gap-2'>
       <Card
-        containerClassname={styles.profileCard}
+        containerClassname={`${styles.profileCard} relative [&>*]:pb-16`}
         avatar={<img src={avatar} width={100} height={100} style={{ borderRadius: 999 }} />}
         avatarStyles={{ padding: 0, boxShadow: '0 0 2px 0 rgba(0, 0, 0.25)' }}
         title={`${translation.CARD_ME_FIRST_NAME} ${translation.CARD_ME_LAST_NAME}`}
         subtitle={translation.FULL_SPECIALIZATION}
         caption='VityaSchel / @hloth'
-      />
-      {/* <ButtonBase className='font-[inherit]'>
-        <a href='https://cv.hloth.dev' className='flex-1 no-underline'> */}
-      <Card
-        containerClassname='!py-0 [&>a]:!py-4 [&>a]:bg-[linear-gradient(125deg,_hsl(186deg_2%_4.3%),_hsl(218deg_30%_2.5%))] [&>a]:text-white'
-        className='text-lg font-semibold'
-        link='https://cv.hloth.dev'
       >
-            Перейти к CV / Резюме
+        <a className='w-full block absolute bottom-0 left-0 text-white border-solid border-t border-x-0 border-b-0 border-t-neutral-800' href='https://cv.hloth.dev' target='_blank' rel='nofollow noreferrer'>
+          <ButtonBase tabIndex={-1} className='font-[inherit] font-medium w-full !justify-between !p-4 text-xs'>
+            <div>Открыть CV / Резюме</div>
+            <MdChevronRight className='text-white' />
+          </ButtonBase>
+        </a>
       </Card>
-      {/* </a>
-      </ButtonBase> */}
     </div>
   )
 }

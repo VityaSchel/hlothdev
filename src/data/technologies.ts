@@ -196,19 +196,19 @@ export default {
     name: 'Kubernetes',
     logo: kubernetesLogo,
     startedLearning: new Date(2021, 5, 13),
-    category: 'backend'
+    category: 'devops'
   },
   docker: {
     name: 'Docker',
     logo: dockerLogo,
     startedLearning: new Date(2021, 5, 13),
-    category: 'backend'
+    category: 'devops'
   },
   nginx: {
     name: 'Nginx',
     logo: nginxLogo,
     startedLearning: new Date(2021, 10, 15),
-    category: 'backend'
+    category: 'devops'
   },
   apache: {
     name: 'Apache',
@@ -283,12 +283,12 @@ export default {
     startedLearning: new Date(2018, 11, 2),
     category: 'mobile'
   },
-  python: {
-    name: 'Python',
-    logo: pituhonLogo,
-    startedLearning: new Date(2014, 4, 10),
-    category: 'apps'
-  },
+  // python: {
+  //   name: 'Python',
+  //   logo: pituhonLogo,
+  //   startedLearning: new Date(2014, 4, 10),
+  //   category: 'apps'
+  // },
   php: {
     name: 'PHP',
     logo: phpLogo,
@@ -301,6 +301,13 @@ export default {
     startedLearning: new Date(2018, 6, 14),
     category: 'bot',
     addFromCategory: 'bot/telegram'
+  },
+  telegramCoreAPI: {
+    name: 'Telegram User API',
+    logo: telegramBotAPILogo,
+    startedLearning: new Date(2018, 6, 14),
+    category: 'bot',
+    aliases: ['Telegram MTProto']
   },
   vkAPI: {
     name: 'VK Bot API',

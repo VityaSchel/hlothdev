@@ -15,10 +15,10 @@ import { setRoute } from '@/store/reducers/route.js'
 export default function Experience() {
   const translation = useAppSelector(selectTranslation)
   const dispatch = useAppDispatch()
-  const openProjects = terms => () => {
+  const openProjects = (terms: string[]) => () => {
     const termsUnique = Array.from(new Set(terms.map(s => s.toLowerCase())))
     const query = new URLSearchParams(window.location.search)
-    query.set('q', termsUnique.map(term => /[ "]/.test(term) ? '"' + term + '"' : term).join(' '))
+    query.set('q', termsUnique.map(term => /[ "]/.test(term) ? '"' + term + '"' : term).join(', '))
     dispatch(setRoute({ route: 'portfolio', params: query }))
   }
 

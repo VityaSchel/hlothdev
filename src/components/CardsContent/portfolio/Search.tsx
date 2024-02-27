@@ -40,20 +40,23 @@ const Search = React.forwardRef<SearchRef, SearchProps>(({
   }))
 
   React.useEffect(() => {
-    const query = new URLSearchParams(window.location.search)
-    if(query.has('q')) {
-      setSearchTerm(query.get('q') as string)
+    const queryChange = () => {
+      console.log('queryChange')
+      const query = new URLSearchParams(window.location.search)
+      const queryStr = query.has('q') && query.get('q')
+      if (queryStr) {
+        setSearchTerm(queryStr)
+        setSearchTerms(queryStr.split(', '))
+      }
+    }
+    queryChange()
+    window.addEventListener('popstate', () => queryChange)
+    window.addEventListener('navigate', () => queryChange)
+    return () => {
+      window.removeEventListener('popstate', () => queryChange)
+      window.removeEventListener('navigate', () => queryChange)
     }
   }, [])
-
-  React.useEffect(() => {
-    const query = new URLSearchParams(window.location.search)
-    if(query.has('q') || searchTerm !== '') {
-      query.set('q', searchTerm)
-      const newRelativePathQuery = window.location.pathname + '?' + query.toString()
-      history.replaceState(null, '', newRelativePathQuery)
-    }
-  }, [searchTerm])
 
   const handleClearInput = () => {
     setSearchTerm('')
@@ -91,6 +94,12 @@ const Search = React.forwardRef<SearchRef, SearchProps>(({
         return prev
       }, { term: [''] }).term
     setLoading(true)
+    const query = new URLSearchParams(window.location.search)
+    if (searchTerm !== '') {
+      query.set('q', searchTerm)
+      const newRelativePathQuery = window.location.pathname + '?' + query.toString()
+      history.replaceState(null, '', newRelativePathQuery)
+    }
     setTimeout(() => {
       setSearchTerms(terms)
       setLoading(false)

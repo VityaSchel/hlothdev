@@ -70,6 +70,7 @@ export type Translation = {
     CATEGORIES: {
       frontend: string
       backend: string
+      devops: string
       apps: string
       bot: string
       gamedev: string
@@ -272,11 +273,12 @@ const translation: Record<'ru-RU' | '_DEFAULT_', Translation> = {
       'FEATURED_8': '<b>Опыт работы.</b> За свою карьеру я занимался и другими проектами, например <a href="https://hloth.dev/portfolio/jswitcher" target="_blank" rel="nofollow noreferrer">плагин Figma</a> для быстрой верстки кросс-платформерных макетов для команды дизайнеров Латвийского онлайн-маркетплейса Joom; <a href="https://hloth.dev/portfolio/atmosseriesbot">Telegram-бота</a> для массовых рассылок и статистики реферральных регистраций с панелью управления прямо внутри бота с интеграцией с MongoDB (300 тыс. активных пользователей на пике); <a href="/portfolio/hloth-telegram-greeting">авто-ответчик в Telegram</a> и <a href="/portfolio/telegram-channel-mirror-mtproto">бот, воссоздающий зеркало любого канала Telegram</a>, когда изучал Telegram MTProto (Telegram User API); <a href="/portfolio/bot-biz-panels">админ-панель x5.io</a> с интеграцией apollo graphql, grpc и MaterialUI и другие проекты не по моей специальности',
       'PARSING': 'Я люблю помогать другим разработчикам и иногда делаю пулл реквесты в опенсурс, а иногда я создаю проекты с нуля, если этим еще никто до меня не занялся: у меня есть несколько врапперов API, работающие со скрейпингом HTML, коммуницирующие с SignalR или GraphQL. Я люблю инди-хакинг (3 раза взломал свою школу, вот <a href="/portfolio/fuck-samlit" target="_blank" rel="nofollow noreferrer">одна из статей</a>) и реверс-инженеринг, а еще я увлекаюсь мобильной разработкой и с августа 2021 года выпустил несколько приложений с Expo (React Native).',
       'PARSING_IMAGE': 'Шрек смотрит налево (направо относительно него)',
-      'ENDING': 'В командах работал с таск-менеджерами GitLab Boards, Jira, Trello. <b>Прямо сейчас рассматриваю предложения по релокации в США на полную занятость, удаленно (от 200.000$ в год)</b> Более подробную информацию о моих навыках вы можете найти <a href=\'https://hloth.dev/portfolio\' target="_blank" rel="noreferrer">в портфолио</a> и в моем <a href=\'https://github.com/VityaSchel\' target="_blank" rel="noreferrer">аккаунте GitHub (150+ репозиториев)</a>, который я веду\nс 2019 года, создаю полезные инструменты и стремлюсь улучшать DX в сообществе разработчиков JS :) Если у вас еще остались вопросы или вы готовы обсудить проект со мной, пишите мне в Телеграм: <a href=\'https://t.me/hlothdev\'>@hlothdev</a> или в другие соц. сети, перечисленные на этой странице.',
+      'ENDING': 'В командах работал с таск-менеджерами GitLab Boards, Jira, Trello. <b>Прямо сейчас рассматриваю предложения по релокации в США на полную занятость, удаленно (от 150.000$ в год)</b> Более подробную информацию о моих навыках вы можете найти <a href=\'https://hloth.dev/portfolio\' target="_blank" rel="noreferrer">в портфолио</a> и в моем <a href=\'https://github.com/VityaSchel\' target="_blank" rel="noreferrer">аккаунте GitHub (150+ репозиториев)</a>, который я веду\nс 2019 года, создаю полезные инструменты и стремлюсь улучшать DX в сообществе разработчиков JS :) Если у вас еще остались вопросы или вы готовы обсудить проект со мной, пишите мне в Телеграм: <a href=\'https://t.me/hlothdev\'>@hlothdev</a> или в другие соц. сети, перечисленные на этой странице.',
       'ENDING_IMAGE': 'UWU эмодзи',
       'CATEGORIES': {
         'frontend': 'Фронтенд',
         'backend': 'Бекенд',
+        'devops': 'DevOps',
         'apps': 'Приложения',
         'bot': 'Разработка ботов',
         'gamedev': 'Разработка игр',
@@ -492,11 +494,12 @@ const translation: Record<'ru-RU' | '_DEFAULT_', Translation> = {
       'FEATURED_8': '<b>Work experience.</b> During my career, I have also worked on other projects, for example <a href="https://hloth.dev/portfolio/jswitcher" target="_blank" rel="nofollow noreferrer">Figma plugin</a> for fast cross-platform layout design for the design team of the Latvian online marketplace Joom; <a href="https://hloth.dev/portfolio/atmosseriesbot">Telegram bot</a> for mass mailings and statistics of referral registrations with a control panel directly inside the bot with MongoDB integration (300k active users at peak); <a href="/portfolio/hloth-telegram-greeting">auto-responder in Telegram</a> and <a href="/portfolio/telegram-channel-mirror-mtproto">bot that recreates a mirror of any Telegram channel</a>, when I was studying Telegram MTProto (Telegram User API); <a href="/portfolio/bot-biz-panels">admin panel x5.io</a> with apollo graphql, grpc and MaterialUI integration and other projects not in my specialty',
       'PARSING': 'Lately I\'ve started getting into API wrappers, and I\'m learing Golang since February of 2022 to work with processes memory on low-level to create games modifications and software. In past I worked with screen-scraping from websites and data parsing: I\'ve already created several\nJS libraries to work with the closed API of some websites, and they include working with bare HTML, working with\nSignalR directly and other things. Also I\'m passionate about mobile development and I\'m learning Expo (React Native) since August of 2021.',
       'PARSING_IMAGE': 'Shrek looking at the left (right relative to him)',
-      'ENDING': 'I worked in teams with task managers GitLab Boards, Jira, Trello. <b>Right now I\'m considering offers for relocation to the USA for full-time remote work (from 200.000$ per year)</b> More detailed information about my skills you can find <a href=\'https://hloth.dev/portfolio\' target="_blank" rel="noreferrer">in portfolio</a> and in my <a href=\'https://hloth.dev/cv\' target="_blank" rel="noreferrer">CV</a>.',
+      'ENDING': 'I worked in teams with task managers GitLab Boards, Jira, Trello. <b>Right now I\'m considering offers for relocation to the USA for full-time remote work (from 150.000$ per year)</b> More detailed information about my skills you can find <a href=\'https://hloth.dev/portfolio\' target="_blank" rel="noreferrer">in portfolio</a> and in my <a href=\'https://hloth.dev/cv\' target="_blank" rel="noreferrer">CV</a>.',
       'ENDING_IMAGE': 'UWU emoji',
       'CATEGORIES': {
         'frontend': 'Frontend',
         'backend': 'Backend',
+        'devops': 'DevOps',
         'apps': 'Apps',
         'bot': 'Bot development',
         'gamedev': 'Game development',
