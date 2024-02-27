@@ -12,6 +12,7 @@ import useMediaQuery from '@mui/material/useMediaQuery'
 import { dates } from '../../../utils.js'
 import { useAppSelector } from '@/store/hooks.js'
 import { selectTranslation } from '@/store/reducers/translation.js'
+import { ButtonBase } from '@mui/material'
 
 function AboutCard({ isMobile }: {
   isMobile: boolean
@@ -92,14 +93,27 @@ function MiniProfile() {
   const translation = useAppSelector(selectTranslation)
 
   return (
-    <Card
-      containerClassname={styles.profileCard}
-      avatar={<img src={avatar} width={100} height={100} style={{ borderRadius: 999 }} />}
-      avatarStyles={{ padding: 0, boxShadow: '0 0 2px 0 rgba(0, 0, 0.25)' }}
-      title={`${translation.CARD_ME_FIRST_NAME} ${translation.CARD_ME_LAST_NAME}`}
-      subtitle={translation.FULL_SPECIALIZATION}
-      caption='VityaSchel / @hloth'
-    />
+    <div className='flex-1 flex flex-col gap-2'>
+      <Card
+        containerClassname={styles.profileCard}
+        avatar={<img src={avatar} width={100} height={100} style={{ borderRadius: 999 }} />}
+        avatarStyles={{ padding: 0, boxShadow: '0 0 2px 0 rgba(0, 0, 0.25)' }}
+        title={`${translation.CARD_ME_FIRST_NAME} ${translation.CARD_ME_LAST_NAME}`}
+        subtitle={translation.FULL_SPECIALIZATION}
+        caption='VityaSchel / @hloth'
+      />
+      {/* <ButtonBase className='font-[inherit]'>
+        <a href='https://cv.hloth.dev' className='flex-1 no-underline'> */}
+      <Card
+        containerClassname='!py-0 [&>a]:!py-4 [&>a]:bg-[linear-gradient(125deg,_hsl(186deg_2%_4.3%),_hsl(218deg_30%_2.5%))] [&>a]:text-white'
+        className='text-lg font-semibold'
+        link='https://cv.hloth.dev'
+      >
+            Перейти к CV / Резюме
+      </Card>
+      {/* </a>
+      </ButtonBase> */}
+    </div>
   )
 }
 
@@ -107,10 +121,10 @@ function Contacts() {
   return (
     <Card 
       containerClassname={styles.contactsContainer}
-      className={styles.contacts}
+      className='flex flex-col gap-3'
     >
       {Object.values(links).map((link, i) => (
-        <div key={i} className={styles.link}>
+        <div key={i} className='flex items-center gap-2.5'>
           <link.icon /> <a href={link.href} target='_blank' rel='noreferrer'>{link.label}</a>
         </div>
       ))}

@@ -32,33 +32,12 @@ const Search = React.forwardRef<SearchRef, SearchProps>(({
   const translation = useAppSelector(selectTranslation).PORTFOLIO.SEARCH
   const [searchTerm, setSearchTerm] = React.useState('')
   const [filters, setFilters] = React.useState({})
-  const terms = searchTerm
-    .match(/\\?.|^$/g)!
-    .reduce((prev, cur) => {
-      if(cur === '"') {
-        prev.quote ^= 1
-      } else if(!prev.quote && cur === ' ') {
-        prev.term.push('')
-      } else {
-        prev.term[prev.term.length - 1] += cur.replace(/\\(.)/, '$1')
-      }
-      return prev
-    }, { term: [''] }).term
 
   React.useImperativeHandle(ref, () => ({
     setTerms(terms: string[]) {
       setSearchTerm(terms.map(term => term.includes(' ') ? `"${term}"` : term).join(' '))
     }
   }))
-
-  React.useEffect(() => {
-    setLoading(true)
-    const currentTimeout = setTimeout(() => {
-      setSearchTerms(terms)
-      setLoading(false)
-    }, 400)
-    return () => clearTimeout(currentTimeout)
-  }, [searchTerm])
 
   React.useEffect(() => {
     const query = new URLSearchParams(window.location.search)
@@ -78,7 +57,7 @@ const Search = React.forwardRef<SearchRef, SearchProps>(({
 
   const handleClearInput = () => {
     setSearchTerm('')
-    setSearchTerms(terms)
+    setSearchTerms([])
   }
 
   const filtersList: { id: string, filterFunc: (project: Project) => void }[] = [
@@ -96,6 +75,27 @@ const Search = React.forwardRef<SearchRef, SearchProps>(({
     const functions = filtersList.filter(({ id }) => filters[id]).map(({ filterFunc }) => filterFunc)
     setSearchFilterFunc(() => (project: Project) => functions.every(func => func(project)))
   }, [filters])
+  
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(e.target.value)
+    const terms = e.target.value
+      .match(/\\?.|^$/g)!
+      .reduce((prev, cur) => {
+        if (cur === '"') {
+          prev.quote ^= 1
+        } else if (!prev.quote && cur === ' ') {
+          prev.term.push('')
+        } else {
+          prev.term[prev.term.length - 1] += cur.replace(/\\(.)/, '$1')
+        }
+        return prev
+      }, { term: [''] }).term
+    setLoading(true)
+    setTimeout(() => {
+      setSearchTerms(terms)
+      setLoading(false)
+    }, 10)
+  }
 
   return (
     <div className='flex gap-3 items-center'>
@@ -104,7 +104,7 @@ const Search = React.forwardRef<SearchRef, SearchProps>(({
         <OutlinedInput
           id='search-box'
           value={searchTerm}
-          onChange={event => setSearchTerm(event.target.value)}
+          onChange={onChange}
           label={translation.PLACEHOLDER}
           placeholder={translation.EXAMPLE}
           className={styles.textField}

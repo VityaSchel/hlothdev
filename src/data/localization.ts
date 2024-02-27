@@ -142,6 +142,10 @@ export type Translation = {
       minecraft_map: string
       instagram_mask: string
       developer_tool: string
+      widget: string
+      robot: string
+      utility: string
+      other: string
     }
     FILTERS: {
       ORDERS_ONLY: string
@@ -318,7 +322,7 @@ const translation: Record<'ru-RU' | '_DEFAULT_', Translation> = {
         'DATES': {
           'DEV_START': 'Начало разработки',
           'RELEASE': 'Релиз',
-          'ABANDON': 'Приостановка'
+          'ABANDON': 'Отмена/прекращение'
         }
       },
       'SEARCH': {
@@ -359,7 +363,11 @@ const translation: Record<'ru-RU' | '_DEFAULT_', Translation> = {
         'programming_language': 'Компилятор языка',
         'minecraft_map': 'Minecraft карта',
         'instagram_mask': 'Instagram-маска',
-        'developer_tool': 'Инструмент для разработчиков'
+        'developer_tool': 'Инструмент для разработчиков',
+        'widget': 'Виджет',
+        'robot': 'Робот',
+        'utility': 'Утилита',
+        'other': 'Другое',
       },
       'FILTERS': {
         'ORDERS_ONLY': 'Только заказы',
@@ -405,8 +413,8 @@ const translation: Record<'ru-RU' | '_DEFAULT_', Translation> = {
       'TEXT2': 'Кстати, пока вы еще здесь, почему бы вам не взглянуть на файл <a href="/robots.txt" target="blank" rel="noreferrer">robots.txt</a>? В 500 КБ, разрешенные поисковиками Google и Яндекс, я смог уместить ASCII-рисунки, анекдоты, текста песен, 100 000 первых цифр числа Пи, транскрипт эпизода «Времени приключений» и даже 70-секундный аудио-фрагмент из «Шрека», закодированный в Base64 и другое. Все вспомогательные инструменты для конвертации и форматирования текста я написал сам, используя Node.js и FFMpeg.',
       'VISITORS_THIS_MONTH': 'Посетителей за этот месяц',
       'NAN_VISITORS': 'Да, именно NaN. Вы знали, что это тоже считается числом в JavaScript? На самом деле это баг, у меня упал бекенд 😵‍💫',
-      'ZERO_VISITORS': 'Стоп, 0 посетителей? что? а как такое вообще возможно если вы сейчас это читаете? Сервер упал?! Прошу прощения за этот инцидент...',
-      'TOO_LOW_VISITORS': 'Стоп, всего %v? о боже я же работал над этим сайтом 6 месяцев :(',
+      'ZERO_VISITORS': 'Погодите, 0 посетителей? что? как такое вообще возможно если вы сейчас это читаете? Сервер упал?! упс...',
+      'TOO_LOW_VISITORS': 'Всего %v? я же работал над этим сайтом 6 месяцев!',
       'LINKS': {
         'INSTAGRAM_HIGHLIGHTS': 'Больше скриншотов в "Актуальном"',
         'GITHUB_SOURCES': 'Исходники сайта на GitHub'
@@ -430,7 +438,7 @@ const translation: Record<'ru-RU' | '_DEFAULT_', Translation> = {
     'CARD_PORTFOLIO': 'Projects',
     'CARD_PORTFOLIO_IN_PORTFOLIO': 'in portfolio',
     'CARD_SERVICES': 'Services',
-    'ONION_SITE_LINK': 'Switch to onion-service with this site',
+    'ONION_SITE_LINK': 'Switch to onion version of this website',
     'THEME_SWITCH_TO_LIGHT': 'Switch to light theme',
     'THEME_SWITCH_TO_DARK': 'Switch to dark theme',
     'CHANGE_LANGUAGE': 'Change language',
@@ -447,39 +455,44 @@ const translation: Record<'ru-RU' | '_DEFAULT_', Translation> = {
     'SERVICES_CARDS': {
       'landing': {
         'title': 'Landing page',
-        'description': 'Increase product sales and tell about it as simply and clearly as possible using a landing page - a one-page website with fresh looking design and interactive elements',
-        'price': 'With your layout — starting form 119 €, if you have no layout — from 179 €'
+        'description': 'Landing page — a great way to convey information about your product or service, attract attention and start sales. I can integrate any APIs, payment gateways, impressive graphics and animation, as well as make the site responsive and optimized for search engines.',
+        'price': 'With ready-made design — from 300$ and 5 hours'
       },
       'turnkey_website': {
-        'title': 'Turnkey website',
-        'description': 'Blog with MongoDB or SQL Database, mass media, online shop with e-commerce/payments and admin panel — frontend+backend development, VPS and Database setup in single service',
-        'price': 'Starting from 299 €'
+        'title': 'Fullstack website',
+        'description': 'Blog with NoSQL (like MongoDB) or SQL (like PostgreSQL) database, online store with payment processing and admin panel, data management system. Site layout, backend and microservices development, API, authorization, CI/CD setup, server and database setup — all this is included in a single service.',
+        'price': 'Starting from 1000$ and 20 hours'
       },
       'bot': {
         'title': 'Chatbot or scripted bot',
-        'description': 'Increase conversions, provide users with feedback and promote channels with VKontakte, Telegram (Bot API and MTProto), WhatsApp or Viber bot, promote your product with a Discord bot, Yandex.Alice skill, Reddit app or a bot that works with other APIs',
-        'price': 'Starting from 59 €'
+        'description': 'Increase conversions, provide user feedback, and promote communities and channels by checking for subscription with a VKontakte, Telegram (via Bot API or on behalf of the user with MTProto Core API), WhatsApp or Viber bot, promote your product with a Discord bot, Yandex.Alice skill, Reddit app or bot working with any other API. Scenario development, testing and integration with your product.',
+        'price': 'From 50$ for a Telegram bot and from 150$ for other platforms'
       },
       'other': {
         'title': 'Other',
-        'description': 'Browsers extensions, Minecraft-server development, mail server and mailings setup, plugins for Figma, cheats and other stuff',
-        'price': 'Let\'s talk'
+        'description': 'Browser extensions (worked with Chrome, Firefox, Tor), plugins for existing platforms, modifications of open source projects, development of game servers, SMTP server setup and mailings, AI integration into your projects, code review.',
+        'price': 'Let\'s talk (from 50$/hour)'
       }
     },
     'ABOUT_ME': {
-      'HEADING': 'Hi, my name is Viktor, and I\'m a web-applications developer from Russia',
-      'INTRO': 'I have been professionally developing PWA apps, web-sites bots and tools for major clients for over two years, and I have over five years of overall web-development experience. My main frontend stack is <b>React, Next.js, GraphQL, Preact, and Vite</b>. My responsibilities while developing website include mobile, cross-browser, and semantic responsive development so that\nthe site looks equally good on all devices and in all browsers.',
+      'HEADING': 'Hi, my name is Viktor, and I\'m a fullstack webapps developer',
+      'INTRO': 'I have been developing PWA, websites (frontend and backend), bots, developer tools, libraries, plugins, parsers and aggregators for large clients and private customers for more than two years. I have hundreds of hours of commercial development and thousands of hours of general practice with React, Next.js, TypeScript. My main frontend stack: <b>React, Next.js and Vite</b> (experience working with it since %date_fns_1610222400%). I use the Feature-Sliced Design methodology to organize files in the project, linters and code stylers in VSCode. I have experience integrating AI into websites, I develop many side projects with GPT (for example, BMO from Adventure Time in real life: OpenAI Whisper, GPT4).',
       'INTRO_IMAGE': 'White dog sticker from VKontakte social network',
-      'BACKEND': 'In addition to the frontend, I also work with backend. For my clients I create turnkey websites, setting up the hosting, optionally mail server, and develop the site itself from scratch at the request of the customer, according to the\nFigma/Photoshop/Illustrator layout or working in team with other developers. My stack: <b>Node.js (%date_fns_1590955200%) or Go (%date_fns_1643659200%)</b>',
-      'MY_PROJECTS': 'In my projects, I mostly use\n<b>Express and Fastify</b> web servers with Nginx reverse proxy or CGI (recently moved from Apache with which I was\nworking for three years), <b>MongoDB, Redis and LevelDB</b> databases, choosing the appropriate database depending on\nthe size of the project (previously I worked with MySQL and PostgreSQL)',
+      'BACKEND': 'In addition to the frontend, I also do backend, usually creating turnkey websites, deploying to Vercel, Netlify, GitHub/GitLab CI/CD or directly to a VPS with a Docker container or without. I have worked both under the supervision of senior developers in a team and as a team leader. I usually write the backend in <b>Node.js</b> (experience working with it since %date_fns_1590955200%), but I also had time to work with Rust, Go, Ruby.',
+      'MY_PROJECTS': 'I have tried myself in many areas of IT and continue to experiment and find new technologies for myself. I keep my hand on the pulse of webdev life and know about all the new features of the w3c specification and browsers, new frameworks and try them.',
       'MY_PROJECTS_IMAGE': 'Yellow Kolobok with sign of the horns gesture',
-      'BOTS': 'For more than four years I have been developing <b>chat bots for platforms as VKontakte, Telegram, Discord, Reddit, Yandex.Alice</b>, I made several browser extensions, plugins for Figma, developer tools such as libraries, and other useful instruments. Now I am learning Kubernetes, already have significant experience of working with <b>Docker</b>, and, at your request, I could\ncreate a container instead of a ZIP archive with a project, for quick scaling and deployment between your servers and ci/cd (or setup it myself with Netlify).',
+      'FEATURED': 'All my projects you can see on <a href="/portfolio">portfolio page</a>, but here are some of them:',
+      'FEATURED_1': '<b>Working with blockchain 2024Q1.</b> I developed a website with a frontend on Next.js, Tailwind and @shadcn/ui and a backend on Node.js, which automatically analyzes the OXEN blockchain for new ONS records, parses them using JSON RPC and decrypts values using Blake2b and argon2. The frontend is designed to work offline, so I wrote my own service worker with a background sync mechanism and a local database. This site also fully automatically integrates with the blockchain to create records, so the user does not need to buy cryptocurrency. I deployed my own SMTP server and set up 100% email delivery and integrated the site with YooKassa for payments and payment. <a href="/portfolio/ons-registry" target="_blank" rel="nofollow noreferrer">More.</a>',
+      'FEATURED_2': '<b>Creating developer community 2024Q1.</b> I developed a website with a frontend on <b>Remix</b> and a backend on Node.js, on which developers can fully automatically publish a bot for the Session messenger. My script will fully verify the authorship of the bot by sending commands to a third-party messenger and check the bot\'s content with OpenAI Moderation. <a href="/portfolio/session-bots-directory" target="_blank" rel="nofollow noreferrer">More.</a>',
+      'FEATURED_3': '<b>Working with data 2023Q4.</b> I developed a parser for a giant marketplace alone, created processes for analyzing gigabytes of collected data, came up with a data storage model and set up systematization algorithms in MongoDB. Result: thousands of rows of data with flexible filters, sorting and different user views in fractions of a second.',
+      'FEATURED_4': '<b>Mastodon fork 2023Q3.</b> It was necessary to deploy Mastodon with significant changes: add monetization with BTCPayServer and automatic pooling of transactions from the cryptocurrency blockchain, modify the backend in Ruby to add protection from DDOS with hCaptcha, work with the PostgreSQL database and add a table to store issued badges next to the username. Later, I also developed a completely custom captcha service for the client, focused on Tor users.',
+      'FEATURED_5': '<b>Opensource and bots 2024Q1</b> I developed 4 projects for the Session messenger community — a fork of Signal with open source, aimed at zero storage of personal data. I analyzed the Session code, removed all the part responsible for rendering (including everything related to Electron) and left only the backend (node.js). Thus, I got a headless messenger client, which is now used by dozens of developers to create their own bots. My project became the first open framework for bot development in the million-strong Session community. <a href="/portfolio/session-messenger-nodejs" target="_blank" rel="nofollow noreferrer">More.</a>',
+      'FEATURED_6': '<b>Web-based editor 2022Q3</b> A web application created as a replacement for the inconvenient official SiQuester application, which has gained huge popularity among fans of "Your game". Built on React and MaterialUI, the frontend analyzes the game\'s xml files and allows you to edit all questions and topics in a convenient interface. It has a built-in file manager with storage in IndexedDB, where files are Blobs and can be imported both through the system\'s built-in file picker and through downloading from a URL. <a href="/portfolio/sipacker" target="_blank" rel="nofollow noreferrer">More.</a>',
+      'FEATURED_7': '<b>Students exams generator 2021Q1</b> This is a React and Bootstrap open source site for schoolchildren, made by me in 9th grade. This is a site that generates tasks for exam preparation, which has a code editor and a js and python (on WebAssembly) compiler, an archive generator with jszip, a table generator with xlsx.js <a href="/portfolio/огэ-генератор" target="_blank" rel="nofollow noreferrer">More.</a>',
+      'FEATURED_8': '<b>Work experience.</b> During my career, I have also worked on other projects, for example <a href="https://hloth.dev/portfolio/jswitcher" target="_blank" rel="nofollow noreferrer">Figma plugin</a> for fast cross-platform layout design for the design team of the Latvian online marketplace Joom; <a href="https://hloth.dev/portfolio/atmosseriesbot">Telegram bot</a> for mass mailings and statistics of referral registrations with a control panel directly inside the bot with MongoDB integration (300k active users at peak); <a href="/portfolio/hloth-telegram-greeting">auto-responder in Telegram</a> and <a href="/portfolio/telegram-channel-mirror-mtproto">bot that recreates a mirror of any Telegram channel</a>, when I was studying Telegram MTProto (Telegram User API); <a href="/portfolio/bot-biz-panels">admin panel x5.io</a> with apollo graphql, grpc and MaterialUI integration and other projects not in my specialty',
       'PARSING': 'Lately I\'ve started getting into API wrappers, and I\'m learing Golang since February of 2022 to work with processes memory on low-level to create games modifications and software. In past I worked with screen-scraping from websites and data parsing: I\'ve already created several\nJS libraries to work with the closed API of some websites, and they include working with bare HTML, working with\nSignalR directly and other things. Also I\'m passionate about mobile development and I\'m learning Expo (React Native) since August of 2021.',
       'PARSING_IMAGE': 'Shrek looking at the left (right relative to him)',
-      'WORK_EXPERIENCE_LABEL': 'Work Experience',
-      'WORK_EXPERIENCE_BLOCK': '<ul>  <li>I made a <a href="https://hloth.dev/portfolio/bot-biz-landing" target="_blank" rel="noreferrer">landing</a> for Bot.Biz, who are developing commercial soltions in IT-sphere, such as bots, websites and apps. After successfull experience of working with me, my client invited me to work fulltime for two months (starting from June of 2022 to August 2022). I agreed and was working in developer team on <a href=\'https://hloth.dev/portfolio/bot-biz-panels\' target="_blank" rel="noreferrer">admin control panel</a></li>  <li>I have developed <a href="https://hloth.dev/portfolio/jswitcher" target="_blank" rel="noreferrer">Figma plugin</a> for a fast cross-platform layout design for designers team of Latvia fintech company Joom</li>  <li>I have developed a <a href="https://hloth.dev/portfolio/atmosseriesbot" target="_blank" rel="noreferrer">Telegram bot</a> with an admin control panel, installed on a customer\'s server for the AtmosSeries      channel in Telegram, that posts movies recommendations in Telegram and TikTok. The bot had 84k active users at the time of writing this and another 30k users stopped it. The bot allows admins to distribute ads in       private chat with bot and count referral registrations</li>  <li>Previous client liked me as a developer, so we continued to work and created a <a href="https://hloth.dev/portfolio/atmoscraft" target="_blank" rel="noreferrer">Minecraft server and a website</a> with       payments processing</li>  <li>I worked in the team of the National Research Center in Kazakhstan, we were working on <a href="https://hloth.dev/portfolio/lis-nce" target="_blank" rel="noreferrer">CRM for the       center\'s employees</a>, and my job was to create a custom React component</li><li>I have developed <a href="https://hloth.dev/portfolio/nmchatbot" target="_blank" rel="noreferrer">VKontakte chatbot</a> (VK is Russian analog of Facebook) for a network of groups «Find me» in many cities. In total, network has a reach of 200k users. Bot processes payments, automatically deletes posts and sends notifications to admins about urgent searches. Additional tools of this bot for admins includes search of ads posts in similar groups and content moderation based on photo similarity and text uniqueness</li></ul>',
-      'PLAYLIST_HINT': 'Just want to see what I can do? Check out this <a href="https://www.youtube.com/playlist?list=PL_R5-1HYwG_WkxqeSQgkoCFxIsh77l4Wm" target="_blank" rel="noreferrer">playlist on YouTube</a> with demos of projects I made!',
-      'ENDING': 'In teams I worked with  GitLab Boards, Jira Trello task-managers. <b>I\'m not interested in fulltime job offers (>5 hours), pay-for-percent and pay-after-done.</b> You can find more information on my skills in <a href=\'https://hloth.dev/portfolio\' target="_blank" rel="noreferrer">my portfolio</a> and in <a href=\'https://github.com/VityaSchel\'>my GitHub account</a>, which I\'ve created\nin 2019 and publishing libraries used by other web developers there, striving to improve DX in JS community :) If you have any questions or want to discuss your case with me — contact me in Telegram: <a href=\'tg://resolve?domain=hlothdev\'>@hlothdev</a> or other ways listed on this page.',
+      'ENDING': 'I worked in teams with task managers GitLab Boards, Jira, Trello. <b>Right now I\'m considering offers for relocation to the USA for full-time remote work (from 200.000$ per year)</b> More detailed information about my skills you can find <a href=\'https://hloth.dev/portfolio\' target="_blank" rel="noreferrer">in portfolio</a> and in my <a href=\'https://hloth.dev/cv\' target="_blank" rel="noreferrer">CV</a>.',
       'ENDING_IMAGE': 'UWU emoji',
       'CATEGORIES': {
         'frontend': 'Frontend',
@@ -511,23 +524,23 @@ const translation: Record<'ru-RU' | '_DEFAULT_', Translation> = {
           'weetapp',
           'viapp — the idea was that vi can be heard as we (our)',
           'vitsch — short for vityaschel, which is also short form of my initials',
-          'devitya — was taken already'
+          'devitya — was taken already, but my husband has nickname devio'
         ],
         'TEXT3': 'All these options were not even considered, when I came up with hloth.'
       },
       'ABOUT_ME_AS_PERSON': {
         'HEADING': 'About me (as a person)',
-        'INTRO': 'I once heard a wise man say: “A good resume should have four pages: 1. Work experience, 2. Education, 3. Skills, 4. A little about you.” So, you have reached the fourth page of my resume (in the form of a website), and now I would like to tell you about myself as a person.',
-        'TEXT': 'I\'m a serious person, but only until someone makes me laugh on dirty joke. My life goal is to get out of Russia to the Czech Republic by learning the Czech language, but so far I only know Ahoj! Jmenuji Vitez Alkalie. Jsem webu-programator. Čau! I\'ve already used to the fact that unpaid employees in the team leave after 7 days (but I\'ll leave earlier). I listen to mashups and YouTube videos instead of music, because I have no money for paid subscriptions. My dream is to learn how to play the piano and guitar so I can stop paying composers to create music for my games. I broke my Macbook 2 months after purchase, I\'m still responsible tho. I have been working on this laptop through an external display since March 2021, so I can\'t rewrite piece of code on weekend in 2 AM. Someday I will definitely save up enough money to repair my Macbook to be able to go to Starbucks with it like a real programmer 🧋'
+        'INTRO': 'I once heard a wise man say: “A good resume should have four pages: 1. Work experience, 2. Education, 3. Skills, 4. A little about you.” So, you have reached the fourth page of my resume (in the form of a website), and now I\'d like to tell you a little about myself as a person.',
+        'TEXT': 'Most of all I love to travel with my husband, who is a professional game developer. We have been together for %date_fns_1680377388% and together we are going to conquer the whole world! You will often see us in <a href="https://instagram.com/vityaczech">my Instagram</a>. In addition to traveling (and short trips on electric scooters), I love sports and a healthy lifestyle, listen to mashups and ru-indie, run several blogs and <a href="https://www.youtube.com/@hlothdev/videos">YouTube channel</a> for my dear programmer colleagues.\n\nI started programming at the age of 6 on Pascal.ABC and since then I have tried to develop everything. I wrote my first game at the age of 7 on Pascal, then on Scratch, then on Kodu Game Lab, at 13 I published my <a href="/portfolio/roller-ride">first mobile game</a> on Unity in PlayMarket. <a href="/portfolio/camlit">The first website</a> I made in the second grade about my school, so I started learning HTML and at the age of 14 I got to writing programs in JavaScript. In the 7th grade, I made projects every year, spoke at IT conferences and won many diplomas. At the same time, I wrote an online shooter completely alone with a backend on PHP, Python and MySQL and rented my own VPS, on which I experimented with Linux and git. At the age of 15, I was already studying Kubernetes and Docker, React and Next.js, React Native and mobile app development. I got my first job at 16, but at the same time I was studying other technologies, for example, I wrote in Go and Scala, studied Telegram MTProto and Bot API, and by the age of 18 in my <a href="https://github.com/vityaschel">GitHub account</a> there were already 150+ repositories and <a href="https://www.npmjs.com/~vityaschel">27 published packages in npmjs</a>.\n\nAlso, every month I donate part of my salary to charity and blog about it. <a href="https://twitter.com/hlothdon">My charity blog on Twitter</a>.\n\nNow I am %date_fns_1120590000%, I live in the city of Samara, Russia.'
       }
     },
     'PORTFOLIO': {
       'COLUMNS': {
         'NAME': 'Name',
-        'DESCRIPTION': 'Description (ru)',
-        'TECHNOLOGIES': 'Technologies',
+        'DESCRIPTION': 'About',
+        'TECHNOLOGIES': 'Technology stack',
         'DATES': {
-          'DEVSTART': 'Dev. started',
+          'DEV_START': 'Dev. started',
           'RELEASE': 'Released',
           'ABANDON': 'Abandoned'
         }
@@ -535,7 +548,23 @@ const translation: Record<'ru-RU' | '_DEFAULT_', Translation> = {
       'SEARCH': {
         'PLACEHOLDER': 'Search in portfolio: name, description, technologies',
         'EXAMPLE': 'e.g. «API» or «Redux, React Native»',
-        'CLEAR': 'Clear'
+        'CLEAR': 'Clear',
+        QUICK_SEARCH: {
+          TITLE: 'Quick search',
+          WEB: 'Frontend and web',
+          MOBILE: 'Mobile',
+          BACKEND: 'Backend',
+          DATABASES: 'DB',
+          DESIGN: 'Design',
+          GAME_DEV: 'Gamedev',
+          BOTS: 'Bots',
+          DEV_OPS: 'DevOps',
+          AI: 'AI',
+          PAYMENTS: 'Payments',
+          SOFTWARE: 'Software',
+          MODELING: '3D',
+          OTHER: 'Other',
+        }
       },
       'CATEGORIES': {
         'game/windows10': 'Windows 10 video-game',
@@ -554,7 +583,11 @@ const translation: Record<'ru-RU' | '_DEFAULT_', Translation> = {
         'programming_language': 'Programming language',
         'minecraft_map': 'Minecraft map',
         'instagram_mask': 'Instagram mask',
-        'developer_tool': 'Developer tool'
+        'developer_tool': 'Developer tool',
+        'widget': 'Widget',
+        'robot': 'Robot',
+        'utility': 'Utility',
+        'other': 'Other',
       },
       'FILTERS': {
         'ORDERS_ONLY': 'Orders only',
@@ -564,7 +597,7 @@ const translation: Record<'ru-RU' | '_DEFAULT_', Translation> = {
       'HIDDEN_PROJECT': {
         'NAME': 'Hidden project',
         'DESCRIPTION_PREVIEW': 'Click to read more',
-        'DESCRIPTION': 'Information about this project is hidden, because its disclosure is against my principles about maintaining confidentiality and may discredit me. If you are interested in this project, I\'m happy to tell you more personally, if you send me the number of this project: %PROJECT_ID%.'
+        'DESCRIPTION': 'Information about this project is hidden, because that\'s what the client wanted (if it is the order) or I just don\'t want to share it publically; but I\'m ready to discuss it personally, just tell me this ID: %PROJECT_ID%.'
       },
       'SHOCK_PROJECT': {
         'NAME': 'Shocking project',
@@ -582,23 +615,28 @@ const translation: Record<'ru-RU' | '_DEFAULT_', Translation> = {
       },
       'TAGS': {
         'ORDER': 'Order'
+      },
+      'DATES': {
+        'DEV_START': 'Dev. started',
+        'RELEASE': 'Released',
+        'ABANDON': 'Abandoned'
       }
     },
     'ABOUT_THIS_WEBSITE': {
       'HEADING': 'Website hloth.dev',
-      'TEXT': 'This is my sixth personal site. It contains information about me, my projects, is a kind of portfolio and resume at the same time, and even serves as a tool for donations to me. If you wondering why with published game on Steam and a lot of orders from freelance, I still have the conscience to ask for donations, then firstly, I am a developer of open-source applications, DX tools and just useful programs, fun websites (with no ads!) and mobile games without microtransactions, and secondly, let me give you some statistics on my profit from all my products (with the exception of Stigfinnare, because it is prohibited by the NDA from Steam Direct): exactly 0 dollars, which is in euro, in the current exchange rate, zero euro. There are no ads on my websites, because there is no point to fight with AdBlock (but I\'ve successfully implemented Google Analytics proxy that can fool uOrigin), and I do not embed paid subscriptions. I receive money only from friends donations (hello to Vanya Sevryukov and Arthur Fejtullaev). I received less than 1000₽ ($16 at the moment) from donations in 2021. And as for Stigfinnare, since I cannot disclose any information about product sells, I can only give you a hint: actually I received exactly 0 dollars, and if you count it with development costs, I lost 20K ₽. Some information about my previous personal websites:',
+      'TEXT': 'This is my sixth personal site. It contains information about me, my projects, is a kind of portfolio and resume at the same time, and even serves as a tool for donations to me. <br></br>Some information about my previous personal websites:',
       'PREVIOUS_SITES': [
-        'Website on uCoz CMS (2015-2016) — My first website, which has a lot of games, tests and other stuff, inspired by legendary girl Diana website http://devo4ka-diano4ka.narod.ru/',
+        'Website on uCoz CMS (2015-2016) — My first website, which had a lot of games, tests and other stuff, inspired by legendary girl Diana website <a href="http://devo4ka‑diano4ka.narod.ru/" target="_blank" rel="noreferrer">http://devo4ka-diano4ka.narod.ru/</a>',
         'Website on hostinger (2017-2018) — Website I used to learn web: I created pages, watched how html works and I even created my first CAPTCHA with actual check',
         'Projects map (first quarter of 2020) — Website with my projects map, which had a few bubbles with projects info, connected with lines, if you hover cursor above any of it, you could read description. It was made on self-made engine written in JavaScript',
         'Projects gallery (second quarter of 2020) — Right after I learned JS theory, I remade my website, now it looked much more better and stylish, had nice color palette, information about me and my portfolio (only popular projects), and the most important thing is that it had mobile version',
         'Landing with cosmic design (fourth quarter of 2020) — Website with animations, parallax, shaders for gradients in JavaScript and OpenGL, contact form, linked with telegram bot, which is linked to SMTP-server for feedback. Unfortunately, it was closed after just a month because of difficulties with creating mobile version and lags, because I made it in vanilla JS. In just a week I started learning React.'
       ],
-      'TEXT2': 'While you still here, why don\'t you take a look at <a href="https://hloth.dev/robots.txt" target="blank" rel="noreferrer">robots.txt</a> file? In just 500 KB, allowed by Google and Yandex crawlers, I put ASCII arts, jokes, songs texts, first 100 000 digits of Pi, transcript of single «Adventure Time» episode and even 70 seconds fragment of «Shrek» movie audio and more. All tools for converting and formatting I made myself with Node and FFMpeg. Warning: do not look at this if you weak or scary of things!',
-      'NAN_VISITORS': 'Yes, exactly NaN. Did you know that it\'s a number too? I mean, special state of number. Read about it on Wikipedia. Okay, it\'a bug, I promise I\'ll fix this until you visit this site next time 😵‍💫',
+      'TEXT2': 'While you\'re still here, why don\'t you take a look at <a href="https://hloth.dev/robots.txt" target="blank" rel="noreferrer">robots.txt</a> file? In just 500 KB, allowed by Google and Yandex crawlers, I put ASCII arts, jokes, songs texts, first 100 000 digits of Pi, transcript of single «Adventure Time» episode and even 70 seconds fragment of «Shrek» movie audio and more. All tools for converting and formatting I coded myself with Node.js and FFMpeg.',
+      'NAN_VISITORS': 'Yes, exactly NaN. Did you know that it\'s a JavaScript special state of Number? Actually it\'a bug, my backend is down 😵‍💫',
       'VISITORS_THIS_MONTH': 'Visitors this month',
-      'ZERO_VISITORS': 'Wait, 0 visitors? What? How is this even possible if you are on the website? Is the server down?! uh sorry for this...',
-      'TOO_LOW_VISITORS': 'Wait, only %v? C\'mon I was working on this website for 6 months :(',
+      'ZERO_VISITORS': 'Wait, 0 visitors? How is this even possible if you are on the website? Is the server down?! oops...',
+      'TOO_LOW_VISITORS': 'Wait, only %v? I was working on this website for 6 months :(',
       'LINKS': {
         'INSTAGRAM_HIGHLIGHTS': 'More screenshots in "Highlights"',
         'GITHUB_SOURCES': 'Website sources on GitHub'
@@ -606,11 +644,7 @@ const translation: Record<'ru-RU' | '_DEFAULT_', Translation> = {
     },
     'DONATE': {
       'MAIN_BLOCK_HEADING': 'Donates',
-      'DONATES_HISTORY': 'Donates history',
-      'FORM': {
-        'USERNAME': 'Your name',
-        'AMOUNT': 'Amount'
-      }
+      'INFO': 'In addition to the fact that I develop open source applications, developer tools and just useful programs, fun websites (without ads!) and mobile games without donate, I also <a href="https://twitter.com/hlothdon" target="_blank" rel="noreferrer nofollow">donate</a> part of my salary to charity. If you want to support me and my creativity, and also help me pay for hosting and domain, you can do this with cryptocurrency, by donating to one of the wallets below. P.S. If you have already sent a donation, contact me in <a href="https://t.me/hlothdev">Telegram</a> so I can thank you personally!',
     }
   }
 }

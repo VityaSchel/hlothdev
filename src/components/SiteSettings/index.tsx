@@ -3,7 +3,7 @@ import styles from './styles.module.scss'
 import { connect } from 'react-redux'
 import IconButton from '@mui/material/IconButton'
 import { useSpring, animated } from 'react-spring'
-import useResizeObserver from 'use-resize-observer'
+import { useComponentSize } from 'react-use-size'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import ClickAwayListener from '@mui/material/ClickAwayListener'
 import cx from 'classnames'
@@ -52,7 +52,7 @@ function SiteLanguage() {
   const { locale } = useAppSelector(selectLocale)
   const dispatch = useAppDispatch()
   const [listOpen, setListOpen] = React.useState(false)
-  const { width, ref } = useResizeObserver()
+  const { width, ref } = useComponentSize()
   const { listWidth } = useSpring({ listWidth: listOpen ? (width ?? 0)+10 : 0 })
   const isMobile = useMediaQuery('(any-hover: none)')
 

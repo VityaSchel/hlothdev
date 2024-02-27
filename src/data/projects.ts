@@ -2973,8 +2973,8 @@ const projects: Project[] = [
     dates: { devStart: '2022-06-16', release: '2022-06-16' },
     scope: 1,
     description: {
-      'ru-RU': 'Расширение Chrome, заменяющее радужную полосу загрузки на сайте figma.com, появляющуюся во время месяца Pride, на стандартную синюю. Я удалил расширение вскоре после публикации.',
-      _DEFAULT_: 'Chrome extension replacing the rainbow loading bar on the site figma.com, appearing during Pride month, with the standard blue one. I removed the extension soon after publication.',
+      'ru-RU': 'Расширение Chrome, заменяющее радужную полосу загрузки на сайте figma.com, появляющуюся во время месяца Pride, на стандартную синюю. <b>Я удалил расширение вскоре после публикации.</b>',
+      _DEFAULT_: 'Chrome extension replacing the rainbow loading bar on the site figma.com, appearing during Pride month, with the standard blue one. <b>I removed the extension soon after publication.</b>',
     },
     unpublic: true,
     hidden: false,

@@ -15,11 +15,13 @@ body,
 }
 
 body {
+  --text-color: #000;
   --secondary-text-color: #2b2b2b;
   --paper-background: #eee;
 }
 
 body.dark-theme {
+  --text-color: #fff;
   --secondary-text-color: #dedede;
   --paper-background: #383838;
 }

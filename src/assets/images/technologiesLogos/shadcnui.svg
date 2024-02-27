@@ -1,0 +1,18 @@
+<svg viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip3_15">
+			<rect id="shadcn-ui-seeklogo" width="256.000000" height="256.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="shadcn-ui-seeklogo" width="256.000000" height="256.000000" fill="#000000" fill-opacity="1.000000"/>
+	<g clip-path="url(#clip3_15)">
+		<rect id="rect" width="256.000000" height="256.000000" fill="#000000" fill-opacity="0"/>
+		<path id="line" d="M202.343 122.371L202.343 122.343C205.511 119.175 210.489 119.175 213.657 122.343C216.825 125.511 216.825 130.489 213.657 133.657L213.629 133.657L202.343 122.371ZM133.657 213.629L133.657 213.657C130.489 216.825 125.511 216.825 122.343 213.657C119.175 210.489 119.175 205.511 122.343 202.343L122.371 202.343L133.657 213.629Z" fill="#000000" fill-opacity="0" fill-rule="nonzero"/>
+		<path id="line" d="M208 128L128 208" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="16.000000" stroke-linejoin="round" stroke-linecap="round"/>
+		<path id="line" d="M186.343 34.3714L186.343 34.3431C189.511 31.1753 194.489 31.1753 197.657 34.3431C200.825 37.511 200.825 42.489 197.657 45.6569L197.629 45.6569L186.343 34.3714ZM45.6569 197.629L45.6569 197.657C42.489 200.825 37.511 200.825 34.3431 197.657C31.1753 194.489 31.1753 189.511 34.3431 186.343L34.3715 186.343L45.6569 197.629Z" fill="#000000" fill-opacity="0" fill-rule="nonzero"/>
+		<path id="line" d="M192 40L40 192" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="16.000000" stroke-linejoin="round" stroke-linecap="round"/>
+	</g>
+</svg>

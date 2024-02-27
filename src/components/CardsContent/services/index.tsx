@@ -21,7 +21,7 @@ export function Services() {
   ]
 
   return (
-    <div className={`${styles.services} grid md:grid-cols-2`}>
+    <div className={`${styles.services} grid xl:grid-cols-2`}>
       {cardsContent.map(card => {
         const cardKey = card.key as keyof typeof cards
         return (

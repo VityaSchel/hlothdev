@@ -38,6 +38,7 @@
     "react-redux": "^7.2.6",
     "react-spring": "^9.3.2",
     "react-string-replace": "^1.1.0",
+    "react-use-size": "^3.0.3",
     "three": "^0.135.0",
     "vite-raw-plugin": "^1.0.2",
     "webfontloader": "^1.6.28",

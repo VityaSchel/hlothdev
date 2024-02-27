@@ -19,15 +19,15 @@ interface CardProps {
   link?: string
 }
 
-function Card(props: CardProps) {
+export function Card(props: CardProps) {
   return (
     <>
-      {props.avatar && <div className={'mr-[10px] bg-[#eee] p-[20px] flex justify-center items-center rounded-[999px] shadow-cardavatar [&>svg]:w-[48px] [&>svg]:h-[48px]'} style={props.avatarStyles}>
+      {props.avatar && <div className={'mr-[10px] bg-[var(--paper-background)] transition-[background-color] duration-500 p-[20px] flex justify-center items-center rounded-[999px] shadow-cardavatar [&>svg]:w-[48px] [&>svg]:h-[48px]'} style={props.avatarStyles}>
         {props.avatar}
       </div>}
       <div className={cx('flex flex-col text-left flex-[1]', props.className)}>
         {props.title && <div>
-          <Typography variant='h6' gutterBottom component='div'>
+          <Typography variant='h6' gutterBottom component='div' className='text-[var(--text-color)]'>
             {props.title}
           </Typography>
         </div>}
@@ -43,8 +43,8 @@ function Card(props: CardProps) {
           </Typography>
         </div>}
       </div>
-      {props.link && <div>
-        <MdChevronRight className='w-[30px] h-[30px] text-[#fff]' />
+      {props.link && <div className='flex items-center'>
+        <MdChevronRight className='w-[30px] h-[30px] text-[var(--secondary-text-color)]' />
       </div>}
     </>
   )
@@ -53,6 +53,7 @@ function Card(props: CardProps) {
 type CardContainerProps = {
   children?: React.ReactNode
   avatar?: React.ReactNode
+  avatarStyles?: React.CSSProperties
   containerClassname?: string | string[]
   className?: string | string[]
   title?: React.ReactNode
@@ -63,7 +64,10 @@ type CardContainerProps = {
 
 function CardContainer(props: CardContainerProps) {
   const { theme } = useAppSelector(selectTheme)
-  const containerClassName = cx('w-full h-full box-border p-[25px] flex gap-[20px] items-center bg-[#fff] no-underline text-[#000]', { 'bg-[linear-gradient(125deg,_#282828,_#1e1e1e)] text-[#fff]': theme === 'dark' })
+  const containerClassName = cx('w-full h-full box-border p-[25px] flex gap-[20px] items-center no-underline text-[#000] transition-colors duration-500 bg-opacity-1', { 
+    'bg-[#282828] text-[#fff]': theme === 'dark',
+    'bg-[#fff]': theme === 'light'
+  })
 
   const containerClasses = cx('!rounded-[15px] overflow-hidden shadow-card-container [&_a]:font-semibold [&_a]:text-[0.9em] [&_a]:leading-[17px] [&_a]:no-underline', props.containerClassname)
 
@@ -71,13 +75,13 @@ function CardContainer(props: CardContainerProps) {
     props.link
       ? (
         <ButtonBase className={containerClasses}>
-          <a className={containerClassName} style={{ '--tw-bg-opacity': 'unset' } as React.CSSProperties} href={props.link}>
+          <a className={containerClassName}>
             <Card {...props} />
           </a>
         </ButtonBase>
       ) : (
         <div className={containerClasses}>
-          <div className={containerClassName} style={{ '--tw-bg-opacity': 'unset' } as React.CSSProperties}>
+          <div className={containerClassName}>
             <Card {...props} />
           </div>
         </div>

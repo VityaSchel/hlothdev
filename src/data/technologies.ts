@@ -17,7 +17,8 @@ import { ReactComponent as postgresqlLogo } from '../assets/images/technologiesL
 import { ReactComponent as expressLogo } from '../assets/images/technologiesLogos/express.svg'
 import { ReactComponent as fastifyLogo } from '../assets/images/technologiesLogos/fastify.svg'
 import { ReactComponent as reduxLogo } from '../assets/images/technologiesLogos/redux.svg'
-import { ReactComponent as webpackLogo } from '../assets/images/technologiesLogos/webpack.svg'
+import { ReactComponent as tailwindLogo } from '../assets/images/technologiesLogos/tailwind.svg'
+import { ReactComponent as shadcnLogo } from '../assets/images/technologiesLogos/shadcnui.svg'
 import { ReactComponent as jestLogo } from '../assets/images/technologiesLogos/jest.svg'
 import { ReactComponent as threejsLogo } from '../assets/images/technologiesLogos/threejs.svg'
 import { ReactComponent as nodejsLogo } from '../assets/images/technologiesLogos/nodejs.svg'
@@ -34,9 +35,13 @@ import { ReactComponent as unityLogo } from '../assets/images/technologiesLogos/
 import { ReactComponent as photonEngineLogo } from '../assets/images/technologiesLogos/photon-engine.svg'
 import { ReactComponent as golangLogo } from '../assets/images/technologiesLogos/golang.svg'
 import { ReactComponent as tauriLogo } from '../assets/images/technologiesLogos/tauri.svg'
+import { ReactComponent as electronLogo } from '../assets/images/technologiesLogos/electron.svg'
 import { ReactComponent as csharpLogo } from '../assets/images/technologiesLogos/csharp.svg'
 import { ReactComponent as figmaLogo } from '../assets/images/technologiesLogos/figma.svg'
 import { ReactComponent as sketchLogo } from '../assets/images/technologiesLogos/sketch.svg'
+import { ReactComponent as webpackLogo } from '../assets/images/technologiesLogos/webpack.svg'
+import { ReactComponent as rollupLogo } from '../assets/images/technologiesLogos/rollup-logo.svg'
+import { ReactComponent as javaLogo } from '../assets/images/technologiesLogos/java.svg'
 
 // How to count projects for each technology:
 // 1. Go to loop with each project, continue if any of these conditions meet:
@@ -58,12 +63,63 @@ export default {
     category: 'frontend',
     aliases: ['NextJS']
   },
+  vite: {
+    name: 'Vite',
+    logo: viteLogo,
+    startedLearning: new Date(2021, 11, 25),
+    category: 'frontend'
+  },
+  typescript: {
+    name: 'TypeScript',
+    logo: typescriptLogo,
+    startedLearning: new Date(2021, 3, 19),
+    category: 'frontend'
+  },
   reactNative: {
     name: 'React Native',
     logo: reactNativeLogo,
     startedLearning: new Date(2021, 7, 30),
     category: 'mobile',
     aliases: ['react-native']
+  },
+  tailwind: {
+    name: 'Tailwind',
+    logo: tailwindLogo,
+    startedLearning: new Date(2023, 9, 1),
+    category: 'frontend',
+    aliases: ['TailwindCSS']
+  },
+  shadcnui: {
+    name: '@shadcn/ui',
+    logo: shadcnLogo,
+    startedLearning: new Date(2023, 8, 17),
+    category: 'frontend'
+  },
+  materialUI: {
+    name: 'Material UI',
+    logo: materialUILogo,
+    startedLearning: new Date(2021, 1, 24),
+    category: 'frontend',
+    aliases: ['MUI']
+  },
+  reactstrap: {
+    name: 'Reactstrap',
+    logo: reactstrapLogo,
+    startedLearning: new Date(2021, 3, 5),
+    category: 'frontend'
+  },
+  threejs: {
+    name: 'ThreeJS',
+    logo: threejsLogo,
+    startedLearning: new Date(2021, 5, 5),
+    category: 'frontend'
+  },
+  reactThreeFiber: {
+    name: 'react-three-fiber',
+    logo: threejsLogo,
+    startedLearning: new Date(2021, 5, 5),
+    category: 'frontend',
+    aliases: ['ThreeJS']
   },
   preact: {
     name: 'Preact',
@@ -85,11 +141,32 @@ export default {
     category: 'frontend',
     aliases: ['Vanilla JS', 'React', 'NodeJS']
   },
-  typescript: {
-    name: 'TypeScript',
-    logo: typescriptLogo,
-    startedLearning: new Date(2021, 3, 19),
+  jest: {
+    name: 'Jest',
+    logo: jestLogo,
+    startedLearning: new Date(2021, 4, 3),
     category: 'frontend'
+  },
+  webpack: {
+    name: 'webpack',
+    logo: webpackLogo,
+    startedLearning: new Date(2021, 3, 1),
+    category: 'frontend',
+    aliases: ['webpack']
+  },
+  rollup: {
+    name: 'Rollup',
+    logo: rollupLogo,
+    startedLearning: new Date(2022, 0, 6),
+    category: 'frontend',
+    aliases: ['rollup']
+  },
+  babel: {
+    name: 'Babel',
+    logo: babelLogo,
+    startedLearning: new Date(2021, 1, 2),
+    category: 'frontend',
+    aliases: ['create-react-app']
   },
   mongoDB: {
     name: 'MongoDB',
@@ -151,12 +228,6 @@ export default {
     startedLearning: new Date(2021, 4, 23),
     category: 'backend'
   },
-  redux: {
-    name: 'redux',
-    logo: reduxLogo,
-    startedLearning: new Date(2021, 8, 19),
-    category: 'frontend'
-  },
   reduxToolkit: {
     name: 'redux-toolkit',
     logo: reduxLogo,
@@ -176,42 +247,16 @@ export default {
     startedLearning: new Date(2021, 11, 6),
     category: 'frontend'
   },
-  webpack: {
-    name: 'webpack',
-    logo: webpackLogo,
-    startedLearning: new Date(2021, 3, 1),
-    category: 'frontend',
-    aliases: ['React']
-  },
-  vite: {
-    name: 'Vite',
-    logo: viteLogo,
-    startedLearning: new Date(2021, 11, 25),
-    category: 'frontend'
-  },
-  babel: {
-    name: 'Babel',
-    logo: babelLogo,
-    startedLearning: new Date(2021, 1, 2),
-    category: 'backend',
-    aliases: ['React']
-  },
-  jest: {
-    name: 'Jest',
-    logo: jestLogo,
-    startedLearning: new Date(2021, 4, 3),
-    category: 'backend'
-  },
-  threejs: {
-    name: 'ThreeJS',
-    logo: threejsLogo,
-    startedLearning: new Date(2021, 5, 5),
-    category: 'frontend'
-  },
   tauri: {
     name: 'Tauri',
     logo: tauriLogo,
     startedLearning: new Date(2022, 0, 9),
+    category: 'apps'
+  },
+  electron: {
+    name: 'Electron',
+    logo: electronLogo,
+    startedLearning: new Date(2023, 10, 14),
     category: 'apps'
   },
   golang: {
@@ -219,13 +264,6 @@ export default {
     logo: golangLogo,
     startedLearning: new Date(2022, 2, 29),
     category: 'apps'
-  },
-  reactThreeFiber: {
-    name: 'react-three-fiber',
-    logo: threejsLogo,
-    startedLearning: new Date(2021, 5, 5),
-    category: 'frontend',
-    aliases: ['ThreeJS']
   },
   nodejs: {
     name: 'NodeJS',
@@ -241,7 +279,7 @@ export default {
   },
   java: {
     name: 'Java',
-    logo: jestLogo,
+    logo: javaLogo,
     startedLearning: new Date(2018, 11, 2),
     category: 'mobile'
   },
@@ -256,19 +294,6 @@ export default {
     logo: phpLogo,
     startedLearning: new Date(2011, 10, 11),
     category: 'backend'
-  },
-  materialUI: {
-    name: 'Material UI',
-    logo: materialUILogo,
-    startedLearning: new Date(2021, 1, 24),
-    category: 'frontend',
-    aliases: ['MUI']
-  },
-  reactstrap: {
-    name: 'Reactstrap',
-    logo: reactstrapLogo,
-    startedLearning: new Date(2021, 3, 5),
-    category: 'frontend'
   },
   telegramBotAPI: {
     name: 'Telegram Bot API',
