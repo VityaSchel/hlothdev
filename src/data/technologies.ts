@@ -1,6 +1,5 @@
 import { ReactComponent as reactLogo } from '../assets/images/technologiesLogos/react.svg'
 import { ReactComponent as nextLogo } from '../assets/images/technologiesLogos/nextjs.svg'
-import { ReactComponent as reactNativeLogo } from '../assets/images/technologiesLogos/react-native.svg'
 import { ReactComponent as preactLogo } from '../assets/images/technologiesLogos/preact.svg'
 import { ReactComponent as createReactAppLogo } from '../assets/images/technologiesLogos/create-react-app.svg'
 import { ReactComponent as viteLogo } from '../assets/images/technologiesLogos/vite.svg'
@@ -36,12 +35,19 @@ import { ReactComponent as photonEngineLogo } from '../assets/images/technologie
 import { ReactComponent as golangLogo } from '../assets/images/technologiesLogos/golang.svg'
 import { ReactComponent as tauriLogo } from '../assets/images/technologiesLogos/tauri.svg'
 import { ReactComponent as electronLogo } from '../assets/images/technologiesLogos/electron.svg'
-import { ReactComponent as csharpLogo } from '../assets/images/technologiesLogos/csharp.svg'
+import { ReactComponent as openaiLogo } from '../assets/images/technologiesLogos/openai.svg'
+// import { ReactComponent as csharpLogo } from '../assets/images/technologiesLogos/csharp.svg'
 import { ReactComponent as figmaLogo } from '../assets/images/technologiesLogos/figma.svg'
-import { ReactComponent as sketchLogo } from '../assets/images/technologiesLogos/sketch.svg'
+// import { ReactComponent as sketchLogo } from '../assets/images/technologiesLogos/sketch.svg'
+import { ReactComponent as sparkArLogo } from '../assets/images/technologiesLogos/spark-ar.svg'
 import { ReactComponent as webpackLogo } from '../assets/images/technologiesLogos/webpack.svg'
 import { ReactComponent as rollupLogo } from '../assets/images/technologiesLogos/rollup-logo.svg'
 import { ReactComponent as javaLogo } from '../assets/images/technologiesLogos/java.svg'
+import { ReactComponent as reactNativeLogo } from '../assets/images/technologiesLogos/react-native.svg'
+import { ReactComponent as expoLogo } from '../assets/images/technologiesLogos/expo.svg'
+import { ReactComponent as swiftLogo } from '../assets/images/technologiesLogos/swift.svg'
+import { ReactComponent as remixLogo } from '../assets/images/technologiesLogos/remix.svg'
+import { ReactComponent as serviceWorkerLogo } from '../assets/images/technologiesLogos/workbox.svg'
 
 // How to count projects for each technology:
 // 1. Go to loop with each project, continue if any of these conditions meet:
@@ -75,13 +81,6 @@ export default {
     startedLearning: new Date(2021, 3, 19),
     category: 'frontend'
   },
-  reactNative: {
-    name: 'React Native',
-    logo: reactNativeLogo,
-    startedLearning: new Date(2021, 7, 30),
-    category: 'mobile',
-    aliases: ['react-native']
-  },
   tailwind: {
     name: 'Tailwind',
     logo: tailwindLogo,
@@ -107,6 +106,19 @@ export default {
     logo: reactstrapLogo,
     startedLearning: new Date(2021, 3, 5),
     category: 'frontend'
+  },
+  remix: {
+    name: 'Remix',
+    logo: remixLogo,
+    startedLearning: new Date(2024, 0, 10),
+    category: 'frontend'
+  },
+  serviceWorkers: {
+    name: 'Service Worker (workbox)',
+    logo: serviceWorkerLogo,
+    startedLearning: new Date(2021, 8, 5),
+    category: 'frontend',
+    aliases: ['workbox', 'Service Worker']
   },
   threejs: {
     name: 'ThreeJS',
@@ -214,7 +226,7 @@ export default {
     name: 'Apache',
     logo: apacheLogo,
     startedLearning: new Date(2019, 3, 20),
-    category: 'backend'
+    category: 'devops'
   },
   express: {
     name: 'Express',
@@ -277,12 +289,6 @@ export default {
     startedLearning: new Date(2021, 7, 26),
     category: 'backend'
   },
-  java: {
-    name: 'Java',
-    logo: javaLogo,
-    startedLearning: new Date(2018, 11, 2),
-    category: 'mobile'
-  },
   // python: {
   //   name: 'Python',
   //   logo: pituhonLogo,
@@ -318,12 +324,37 @@ export default {
     aliases: ['VK API', 'VK-IO']
   },
   yandexAliceAPI: {
-    name: 'Яндекс.Диалоги API (Алиса)',
+    name: 'Yandex.Alice Dialogs',
     logo: yandexAliceLogo,
     startedLearning: new Date(2020, 3, 18),
     category: 'bot',
     addFromCategory: 'bot/yandex_alice',
     aliases: ['Яндекс.Диалоги API']
+  },
+  gpt: {
+    name: 'OpenAI GPT API',
+    logo: openaiLogo,
+    startedLearning: new Date(2023, 11, 15),
+    category: 'ai',
+    aliases: ['gpt', 'GPT']
+  },
+  whisper: {
+    name: 'OpenAI Whisper',
+    logo: openaiLogo,
+    startedLearning: new Date(2023, 11, 15),
+    category: 'ai'
+  },
+  openaiModeration: {
+    name: 'OpenAI Moderation',
+    logo: openaiLogo,
+    startedLearning: new Date(2024, 0, 10),
+    category: 'ai'
+  },
+  markovify: {
+    name: 'Markovify',
+    logo: pituhonLogo,
+    startedLearning: new Date(2020, 6, 15),
+    category: 'ai'
   },
   unity: {
     name: 'Unity',
@@ -337,12 +368,12 @@ export default {
     startedLearning: new Date(2019, 1, 16),
     category: 'gamedev'
   },
-  cSharp: {
-    name: 'C#',
-    logo: csharpLogo,
-    startedLearning: new Date(2016, 8, 2),
-    category: 'gamedev'
-  },
+  // cSharp: {
+  //   name: 'C#',
+  //   logo: csharpLogo,
+  //   startedLearning: new Date(2016, 8, 2),
+  //   category: 'gamedev'
+  // },
   figma: {
     name: 'Figma',
     logo: figmaLogo,
@@ -350,11 +381,43 @@ export default {
     category: 'design',
     aliases: ['Figma Plugin API', 'Figma REST API']
   },
-  sketch: {
-    name: 'Sketch',
-    logo: sketchLogo,
-    startedLearning: new Date(2020, 9, 20),
+  // sketch: {
+  //   name: 'Sketch',
+  //   logo: sketchLogo,
+  //   startedLearning: new Date(2020, 9, 20),
+  //   category: 'design'
+  // },
+  sparkAr: {
+    name: 'Spark AR',
+    logo: sparkArLogo,
+    startedLearning: new Date(2022, 0, 30),
     category: 'design'
   },
-
+  reactNative: {
+    name: 'React Native',
+    logo: reactNativeLogo,
+    startedLearning: new Date(2021, 7, 30),
+    category: 'mobile',
+    aliases: ['react-native']
+  },
+  expo: {
+    name: 'Expo',
+    logo: expoLogo,
+    startedLearning: new Date(2021, 7, 30),
+    category: 'mobile',
+    aliases: ['expo']
+  },
+  java: {
+    name: 'Java',
+    logo: javaLogo,
+    startedLearning: new Date(2018, 11, 2),
+    category: 'mobile'
+  },
+  swift: {
+    name: 'Swift',
+    logo: swiftLogo,
+    startedLearning: new Date(2023, 8, 28),
+    category: 'mobile',
+    aliases: ['SwiftUI']
+  },
 }

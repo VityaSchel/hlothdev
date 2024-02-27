@@ -26,16 +26,6 @@ Please don't even try, I would really appreciate you if you won't steal anything
 
 Idk I had one hour before deadline and I decided to entertain myself by putting shit into robots.txt broy
 
-It contains racist sexist gay gomophobic nazist trans info so don't look at it unless you have no morals left :feelsgood:
-
-## Why is translation so bad?
-
-Because Grammarly "decided to stop their business in Russia because it may be used in war" lol I see Putin sending SMS to Bidon and using Grammarly to check his grammar
-
 ## Why is it so laggy
 
 Because MaterialUI \<Table \\\> component and 3
-
-## When next site
-
-already done

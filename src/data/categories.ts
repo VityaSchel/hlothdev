@@ -2,9 +2,10 @@ export default [
   'frontend',
   'backend',
   'devops',
+  'ai',
   'apps',
   'bot',
   'mobile',
-  'design',
   'gamedev',
+  'design',
 ]

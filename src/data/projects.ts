@@ -1260,7 +1260,6 @@ const projects: Project[] = [
     stack: [
       'React',
       'Figma',
-      'Sketch',
       'Fastify',
       'LevelDB'
     ],
