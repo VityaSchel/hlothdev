@@ -36,6 +36,9 @@ body {
       transition: color 0.1s ease-in-out;
     }
   }
+
+  --button-outline: #e5e7eb;
+  --button-bg: #f1f5f9
 }
 
 body.dark-theme {
@@ -50,6 +53,9 @@ body.dark-theme {
   a:visited {
     color: palevioletred;
   }
+
+  --button-outline: #414244;
+  --button-bg: #323131;
 }
 
 a {

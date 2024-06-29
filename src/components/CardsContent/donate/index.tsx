@@ -86,7 +86,7 @@ function CopyAddressButton({ children }: {
   }
 
   return (
-    <button className='text-sm font-medium font-mono text-left bg-transparent shadow-sm border border-solid border-[#e5e7eb] rounded-md px-4 py-2 cursor-pointer hover:bg-[#f1f5f9] transition-colors flex gap-2 items-center text-inherit' onClick={handleCopy} onPointerLeave={() => setIsCopied(false)}>
+    <button className='text-sm font-medium font-mono text-left bg-transparent shadow-sm border border-solid border-[--button-outline] rounded-md px-4 py-2 cursor-pointer hover:bg-[--button-bg] transition-colors flex gap-2 items-center text-inherit' onClick={handleCopy} onPointerLeave={() => setIsCopied(false)}>
       {isCopied ? <MdDone /> : <MdCopyAll />}
       <span className='text-ellipsis overflow-hidden flex-1 text-nowrap'>
         {children}
