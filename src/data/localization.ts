@@ -210,7 +210,7 @@ const translation: Record<'ru-RU' | '_DEFAULT_', Translation> = {
     'CARD_ARCHIVE_LINK': 'Архив',
     'CARD_ME_FIRST_NAME': 'Виктор',
     'CARD_ME_LAST_NAME': 'Щелочков',
-    'CARD_ME_SPECIALIZATION': 'Фуллстек разработчик',
+    'CARD_ME_SPECIALIZATION': 'Fullstack developer',
     'FULL_SPECIALIZATION': 'Фуллстек разработчик',
     'CARD_ME_CITY': 'Батуми',
     'CARD_PORTFOLIO': [
