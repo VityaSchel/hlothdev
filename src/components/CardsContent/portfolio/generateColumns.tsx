@@ -11,6 +11,7 @@ import { ReactComponent as alertDecagram } from '@/assets/images/svgIcons/mdi_al
 import { ReactComponent as eyeOff } from '@/assets/images/svgIcons/mdi_eye_off.svg'
 import { Project } from '@/data/projects'
 import { Translation } from '@/data/localization'
+import { GridEnrichedColDef } from '@mui/x-data-grid'
 
 export default function generateColumns({ locale, translation, setSearchTerms, showShockingProjects, ignoreContentWidthLimit = false }: {
   locale: string
@@ -18,7 +19,7 @@ export default function generateColumns({ locale, translation, setSearchTerms, s
   setSearchTerms: (terms: string[]) => void
   showShockingProjects: boolean
   ignoreContentWidthLimit?: boolean
-}) {
+}): GridEnrichedColDef<Project, any, any>[] {
   const dateRegex = /^\d+[ -]\w+[ -]\d+$/
 
   const search = (terms: string) => (e: any) => {
@@ -142,7 +143,7 @@ export default function generateColumns({ locale, translation, setSearchTerms, s
       sortable: false,
       disableColumnMenu: true,
       renderCell: ({ row }: { row: Project }) => (
-        <span className='whitespace-normal leading-loose pt-[3px] pb-[5px] px-0'>
+        <span className='whitespace-normal leading-[1.75] pt-[3px] pb-[5px] px-0 text-center w-full overflow-auto'>
           {row.stack.map(technology => (
             <>
               <Chip
@@ -150,6 +151,7 @@ export default function generateColumns({ locale, translation, setSearchTerms, s
                 size='small'
                 onClick={search(technology)}
                 key={technology}
+                className='xs-chip'
               />
               <span>&#32;&#32;</span>
             </>
@@ -176,6 +178,11 @@ export default function generateColumns({ locale, translation, setSearchTerms, s
           )}
         </div>
       ),
+      sortComparator: (v1: Project['dates'], v2: Project['dates']) => {
+        const v1Date = v1.release || v1.devStart
+        const v2Date = v2.release || v2.devStart
+        return new Date(v1Date).getTime() - new Date(v2Date).getTime()
+      },
       width: 170
     },
   ]

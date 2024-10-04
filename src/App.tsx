@@ -32,12 +32,12 @@ const defaultTheme = {
   components: {
     MuiDataGrid: {
       styleOverrides: {
-        row: {
-          maxHeight: 'unset !important'
-        },
-        cell: {
-          maxHeight: 'unset !important'
-        }
+        // row: {
+        //   maxHeight: 'unset !important'
+        // },
+        // cell: {
+        //   maxHeight: 'unset !important'
+        // }
       }
     }
   }

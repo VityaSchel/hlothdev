@@ -72,3 +72,13 @@ a {
   text-underline-offset: 2px;
   text-decoration-skip-ink: none;
 }
+
+.xs-chip {
+  height: 18px !important;
+
+  & > span:first-child {
+    font-size: 11px;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+}

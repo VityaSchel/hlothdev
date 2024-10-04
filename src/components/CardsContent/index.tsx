@@ -1,6 +1,7 @@
 import styles from './styles.module.scss'
 import { animated, useSpring } from 'react-spring'
 import { MdArrowBack } from 'react-icons/md'
+import cx from 'classnames'
 
 import { Me } from './me'
 import { Services } from './services'
@@ -27,7 +28,10 @@ export function CardsContent() {
   const dispatch = useAppDispatch()
 
   return (
-    <animated.div className={styles.container}
+    <animated.div 
+      className={cx(styles.container, {
+        'pl-6 py-6': route === 'portfolio'
+      })}
       style={{
         opacity: opacity.interpolate(o => o > 0.5 ? (o-0.5)*2 : 0),
         display: opacity.interpolate(o => o === 0 ? 'none' : 'flex'),

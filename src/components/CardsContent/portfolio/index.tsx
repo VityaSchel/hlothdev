@@ -89,12 +89,13 @@ export function Portfolio() {
         columns={columns}
         ref={dataGridRef}
 
-        pageSize={50}
+        pageSize={100}
         rowBuffer={5}
         rowsPerPageOptions={[]}
 
         // otherwise scroll breaks
-        disableVirtualization
+        // disableVirtualization
+        rowHeight={100}
 
         disableColumnFilter
         disableColumnSelector

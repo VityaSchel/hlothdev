@@ -66,23 +66,38 @@ import vityaschelSiteLogo from '@/assets/images/projectsLogos/vityaschel.png'
 import vityaPlusDevioLoveLogo from '@/assets/images/projectsLogos/vitya-plus-devio-love.png'
 import wantToBeAProgrammerLogo from '@/assets/images/projectsLogos/want-to-be-a-programmer.png'
 import wikipediaSpeedrunLogo from '@/assets/images/projectsLogos/wikipedia-speedrun.png'
+import sessionWebLogo from '@/assets/images/projectsLogos/session-web.png'
+import bunsogsLogo from '@/assets/images/projectsLogos/bunsogs.png'
+import sessionWatchosLogo from '@/assets/images/projectsLogos/session-watchos.png'
+import ps4mergerAppLogo from '@/assets/images/projectsLogos/ps4-merger-app.png'
+import sessionNativeLogo from '@/assets/images/projectsLogos/session-native.png'
+import sessionIdGeneratorLogo from '@/assets/images/projectsLogos/session-id-generator.png'
+import sessionJsLogo from '@/assets/images/projectsLogos/session-js.png'
+import batumiBikeLogo from '@/assets/images/projectsLogos/batumi.bike.png'
+import blindingIdConverterWebsiteLogo from '@/assets/images/projectsLogos/blinding-id-converter.png'
 
-// scope: 1=verysmall 2=small 3=average 4=big 5=huge
+/* Scopes: 
+ * 1 = created in one day
+ * 2 = under a week
+ * 3 = under a month
+ * 4 = under a year
+ * 5 = more than a year
+ */
 
 export const technologies = {
-  web: ['React', 'NextJS', 'GraphQL', 'MaterialUI', 'Reactstrap', 'Bootstrap', 'less', 'React-redux', 'Redux-toolkit', 'next-i18next', 'react-reveal', 'rtk-query', 'React-admin', 'React-router', 'Jest', 'ThreeJS', 'React-three-fiber', 'Vite', 'Preact', 'webpack', 'rollup', 'babel', 'Mapbox', 'Browser Extension', 'workbox', 'Service Worker', 'TailwindCSS', '@shadcn/ui', 'Remix', 'IndexedDB'],
+  web: ['React', 'NextJS', 'AMP', 'GraphQL', 'MaterialUI', 'Reactstrap', 'Bootstrap', 'less', 'React-redux', 'Redux-toolkit', 'next-i18next', 'react-reveal', 'rtk-query', 'React-admin', 'React-router', 'Jest', 'ThreeJS', 'React-three-fiber', 'Vite', 'Preact', 'webpack', 'rollup', 'babel', 'Mapbox', 'Browser Extension', 'workbox', 'Service Worker', 'TailwindCSS', '@shadcn/ui', 'Remix', 'IndexedDB'],
   mobile: ['React Native', 'Android', 'Expo', 'React-native-paper'],
-  backend: ['NodeJS', 'TypeScript', 'Express', 'Fastify', 'SignalR', 'streamlink', 'ffmpeg', 'Kubernetes', 'Python', 'PHP', 'bee-queue', 'Vanilla JS', 'Telegram MTProto', 'Ruby on Rails'],
+  backend: ['NodeJS', 'Bun', 'TypeScript', 'Express', 'Fastify', 'Elysia', 'SignalR', 'streamlink', 'ffmpeg', 'Kubernetes', 'Python', 'PHP', 'bee-queue', 'Vanilla JS', 'Telegram MTProto', 'Ruby on Rails', 'puppeteer'],
   databases: ['MongoDB', 'PostgreSQL', 'MySQL', 'Redis', 'LevelDB', 'sqlite'],
   design: ['Figma', 'Sketch', 'Figma Plugin API', 'Figma REST API'],
   gameDev: ['Unity', 'C#', 'Photon Engine', 'Scratch API', 'Turbowarp'],
   bots: ['VK API', 'VK-IO', 'Telegram Bot API', 'VK API', 'Telegram Gaming Platform', 'Яндекс.Диалоги API'],
-  devOps: ['Docker', 'bee-queue', 'nginx', 'FastCGI', 'apache', 'Tor Hidden Service'],
+  devOps: ['Docker', 'Kata containers', 'bee-queue', 'nginx', 'FastCGI', 'apache', 'Tor Hidden Service'],
   ai: ['markovify', 'GPT', 'OpenAI Moderation', 'OpenAI Whisper'],
   payments: ['YooKassa', 'QIWI p2p'],
   software: ['Go', 'giu', 'imgui', 'JavaScript', 'Tauri', 'Electron', 'Java', 'phpDevelStudio', 'Swift', 'SwiftUI'],
   modeling: ['Spark AR', 'Blender'],
-  other: ['McDonalds API', 'uCoz CMS', 'DuckDuckGo API', 'OBS Plugins', 'Clarifai API', 'Cloudflare API'],
+  other: ['McDonalds API', 'uCoz CMS', 'DuckDuckGo API', 'OBS Plugins', 'Clarifai API', 'Cloudflare API', 'OpenStreetMap API', 'C++'],
 } as const
 
 type ValueOf<T> = T[keyof T]
@@ -140,8 +155,8 @@ const projects: Project[] = [
     name: 'ONS Registry',
     stack: [
       'React', 'NextJS', 'next-i18next', 'TypeScript',
-      '@shadcn/ui', 'React-redux', 'Redux-toolkit', 'NodeJS',
       'Service Worker', 'workbox', 'YooKassa', 'sqlite',
+      '@shadcn/ui', 'React-redux', 'Redux-toolkit', 'NodeJS',
       'webpack', 'TailwindCSS'
     ],
     supported: true,
@@ -149,7 +164,7 @@ const projects: Project[] = [
       devStart: '27 January 2024',
       release: '29 January 2024'
     },
-    scope: 2,
+    scope: 3,
     description: {
       'ru-RU': 'Открытый и бесплатный реестр записей ONS, автоматически анализирующий блокчейн OXEN. Бекнд парсит новые ONS записи с помощью JSON RPC и расшифровывает значения с помощью Blake2b и argon2. Фронтенд ориентирован на работу офлайн, поэтому я написал собственный сервис воркер и настроил webpack для его загрузки с механизмом background sync и локальной базой данных. Этот сайт также полностью автоматически интегрируется с блокчейном для создания записей, чтобы пользователю не нужно было покупать криптовалюту. Я развернул собственный SMTP сервер и настроил 100% доставку писем и интегрировал сайт с YooKassa для приема платежей и оплаты.',
       _DEFAULT_: 'Open and free ONS record registry, automatically analyzing OXEN blockchain. The backend parses new ONS records using JSON RPC and decrypts values using Blake2b and argon2. The frontend is designed for offline operation, so I wrote my own service worker and configured webpack for its loading with background sync mechanism and local database. This site is also fully automated for blockchain entries creation, so the user does not need to buy cryptocurrency. I deployed my own SMTP server and set up 100% email delivery and integrated the site with YooKassa for accepting payments.',
@@ -162,6 +177,84 @@ const projects: Project[] = [
     ],
     category: 'website',
     id: 'ons-registry'
+  },
+  {
+    name: 'Session Native',
+    stack: [
+      'Swift', 'C++'
+    ],
+    supported: true,
+    dates: {
+      devStart: '25 July 2024',
+      release: '30 September 2024'
+    },
+    scope: 4,
+    description: {
+      'ru-RU': 'Нативный клиент мессенджера Session для macOS, написанный с нуля на Swift с использованием Session.js как сайдкара на Bun. Поддерживает все функции мессенджера, включая отправку сообщений, создание чатов, отправку и получение вложений, а также дополнительные эксклюзивные функции, например, архив чатов, прокси, контакты.',
+      _DEFAULT_: 'Native client of the Session messenger for macOS, written from scratch in Swift using Session.js as a Bun sidecar. Supports all messenger features, including sending messages, creating chats, sending and receiving attachments, as well as additional exclusive features such as chat archive, proxy, contacts.',
+    },
+    unpublic: false,
+    hidden: false,
+    logo: sessionNativeLogo,
+    links: [
+      'https://github.com/VityaSchel/session-native'
+    ],
+    category: 'app',
+    id: 'session-native'
+  },
+  {
+    name: 'Session Web',
+    stack: [
+      'React', 'Vite', 'TypeScript',
+      '@shadcn/ui', 'React-redux', 'Redux-toolkit', 'Bun',
+      'TailwindCSS'
+    ],
+    supported: true,
+    dates: {
+      devStart: '17 April 2024',
+      release: '2 May 2024'
+    },
+    scope: 3,
+    description: {
+      'ru-RU': 'Веб-версия мессенджера Session, работающая с бекендом на Bun. Поддерживает отправку сообщений, создание чатов по никнейму ONS, а также темную тему.',
+      _DEFAULT_: 'Web version of the Session messenger, working with the Bun backend. Supports sending messages, resolving ONS and dark theme.',
+    },
+    unpublic: false,
+    hidden: false,
+    logo: sessionWebLogo,
+    links: [
+      'https://github.com/VityaSchel/session-web',
+      'https://session-web.pages.dev/'
+    ],
+    category: 'website',
+    id: 'session-web'
+  },
+  {
+    name: 'Bunsogs',
+    stack: [
+      'Bun', 'TypeScript', 'GPT', 'OpenAI Moderation',
+      'sqlite'
+    ],
+    supported: true,
+    dates: {
+      devStart: '13 May 2024',
+      release: '13 August 2024'
+    },
+    scope: 4,
+    description: {
+      'ru-RU': 'Реимплементация Session Open Group Server на Bunsogs с модульными плагинами, визуальным CLI, обширными настройками комнат. Работает на любой платформе, в отличие от официальной реализации, которая работает только на Ubuntu 22. База данных полностью совместима с официальной реализацией, что облегчает миграцию. CLI также имеет совместимый режим на основе аргументов, который работает так же, как официальная реализация CLI. Плагин антиспама, плагин для борьбы с материалами, содержащими сексуальное насилие над детьми, плагин модерации GPT и плагин автокапчи доступны "из коробки".',
+      _DEFAULT_: 'Session Open Group Server reimplementation rewritten from Python to faster Bunsogs with features such as modular plugins, visual CLI, extensive room settings. Runs on any platform, unlike official implementation that only runs on Ubuntu 22. Database is fully compatible with official implementation, making migration easy. CLI also has a compatible argument-based mode that works just like the official CLI implementation. Antispam, anticsam, GPT moderation and auto captcha plugins come out of the box.',
+    },
+    unpublic: false,
+    hidden: false,
+    logo: bunsogsLogo,
+    links: [
+      'https://github.com/VityaSchel/bunsogs',
+      'https://github.com/VityaSchel/bunsogs-auto-dm',
+      'https://github.com/VityaSchel/bunsogs-profanity-filter'
+    ],
+    category: 'app',
+    id: 'bunsogs'
   },
   {
     name: 'Session Bots Directory',
@@ -192,31 +285,146 @@ const projects: Project[] = [
     id: 'session-bots-directory'
   },
   {
-    name: 'Расписание КС ПГУТИ',
+    name: 'Session watchOS client',
     stack: [
-      'React', 'NextJS', 'TypeScript',
-      '@shadcn/ui', 'TailwindCSS',
-      'Telegram Bot API'
+      'Swift', 'React', 'NextJS', 'TypeScript',
+      'TailwindCSS', 'C++'
     ],
-    supported: 'partially',
+    supported: false,
     dates: {
-      devStart: '19 September 2021',
-      release: '31 October 2021'
+      devStart: '13 March 2024',
+      release: '8 May 2024'
     },
     scope: 3,
     description: {
-      'ru-RU': 'Рескин сайта с расписанием для моего колледжа. Построен, ориентируясь на кеш и максимальную экономию данных: все ассеты сайта кешируются, данные из API проверяются на обновление по E-Tag. Бекенд на Next.js парсит расписание с официального сайта с помощью JSDOM и оповещает о возможных проблемах через Telegram Bot API.',
-      _DEFAULT_: 'A reskin of a schedule site for my college. Built with a focus on caching and maximum data savings: all site assets are cached, data from API is checked for updates by E-Tag. The backend on Next.js parses the schedule from the official site using JSDOM and notifies of possible problems via Telegram Bot API.',
+      'ru-RU': 'Первый клиент мессенджера Session для часов Apple Watch. Поддерживает отправку сообщений.',
+      _DEFAULT_: 'First client of the Session messenger for Apple Watch. Supports sending messages.',
     },
     unpublic: false,
     hidden: false,
-    logo: kspsutiLogo,
+    logo: sessionWatchosLogo,
     links: [
-      'https://kspsuti.ru/',
-      'https://github.com/VityaSchel/kspguti-schedule'
+      'https://github.com/VityaSchel/session-watchos-website',
+      'https://github.com/VityaSchel/session-watchos'
+    ],
+    category: 'app',
+    id: 'session-watchos'
+  },
+  {
+    name: 'Session ID generator',
+    stack: [
+      'React', 'Vite', 'TypeScript',
+      'Service Worker', 'Bun'
+    ],
+    supported: true,
+    dates: {
+      devStart: '17 April 2024',
+      release: '17 April 2024'
+    },
+    scope: 1,
+    description: {
+      'ru-RU': 'Генератор vanity ID для мессенджера Session, работающий офлайн как в браузере, так и как консольное приложение в виде собранного бинарного файла от Bun.',
+      _DEFAULT_: 'Vanity ID generator for the Session messenger, working offline both in the browser and as a console application in the form of a compiled binary file from Bun.',
+    },
+    logo: sessionIdGeneratorLogo,
+    links: [
+      'https://github.com/VityaSchel/session-id-generator',
+      'https://session-id.pages.dev/'
     ],
     category: 'website',
-    id: 'kspsuti'
+    id: 'session-id-generator'
+  },
+  {
+    name: 'Session.js',
+    stack: [
+      'TypeScript', 'Bun'
+    ],
+    supported: true,
+    dates: {
+      devStart: '7 June 2024',
+      release: '30 August 2024'
+    },
+    scope: 4,
+    description: {
+      'ru-RU': 'Фреймворк для разработки инструментов, ботов и прочего для мессенджера Session. Обширная документация и примеры, а также несколько пакетов-утилит на любой случай. Модульные адаптеры для подключения к сети и хранилища для использования библиотеки в любом окружении, включая клиентскую сторону браузеров.',
+      _DEFAULT_: 'Feature-rich Session framework allowing developers to build tools, bots and other stuff for Session messenger. Extensive documentation and examples along with several utility packages for any use case. Modular network and storage adapters for using this library in any environment, including client-side browsers with network proxy.',
+    },
+    logo: sessionJsLogo,
+    links: [
+      'https://github.com/sessionjs/',
+      'https://github.com/VityaSchel/session-id-generator',
+    ],
+    category: 'npmjs_library',
+    id: 'session-js'
+  },
+  {
+    name: 'Session Node.js client [deprecated]',
+    stack: [
+      'NodeJS', 'TypeScript'
+    ],
+    supported: true,
+    dates: {
+      devStart: '21 January 2024',
+      release: '25 Janaury 2024'
+    },
+    scope: 1,
+    description: {
+      'ru-RU': 'Первый фреймворк для разработки ботов в мессенджере Session. Хедлесс клиент для работы с API мессенджера Session. Работает с onion-роутингом, расшифровывает файлы с помощью ассиметричных ключей. В настоящее время заменен фреймворком session.js',
+      _DEFAULT_: 'First framework for developing bots in the Session messenger. Headless client for working with the Session messenger API. Works with onion-routing, decrypts files using assymetric keys. Currently replaced by session.js framework',
+    },
+    links: [
+      'https://github.com/VityaSchel/session-nodejs-bot',
+      'https://www.youtube.com/watch?v=af7-DFSbFZ4'
+    ],
+    category: 'npmjs_library',
+    id: 'session-messenger-nodejs'
+  },
+  {
+    name: 'Session unblinding website',
+    stack: [
+      'React', 'Vite', 'TypeScript', 'Bun',
+    ],
+    supported: true,
+    dates: {
+      devStart: '28 August 2024',
+      release: '28 August 2024'
+    },
+    scope: 1,
+    logo: blindingIdConverterWebsiteLogo,
+    description: {
+      'ru-RU': 'Инструмент для конвертации "неконвертируемых" слепых Session ID в обычные ID. Уязвимость была обнаружена li0ard и реализована мной в виде веб-сайта.',
+      _DEFAULT_: 'Tool allowing you to convert "unconvertable" blinded Session IDs to regular IDs. Security vulnerability discovered by li0ard and made into a website by me.',
+    },
+    links: [
+      'https://blinding.sessionbots.directory/',
+      'https://github.com/VityaSchel/blinded-id-converter-website',
+      'https://blog.li0ard.rest/blindedid'
+    ],
+    category: 'website',
+    id: 'blinding-session-ids-converter'
+  },
+  {
+    name: 'Batumi.bike',
+    stack: [
+      'React', 'Vite', 'OpenStreetMap API'
+    ],
+    supported: 'partially',
+    dates: {
+      devStart: '3 June 2024',
+      release: '7 June 2024'
+    },
+    scope: 1,
+    logo: batumiBikeLogo,
+    description: {
+      'ru-RU': 'Первый фреймворк для разработки ботов в мессенджере Session. Хедлесс клиент для работы с API мессенджера Session. Работает с onion-роутингом, расшифровывает файлы с помощью ассиметричных ключей.',
+      _DEFAULT_: 'First framework for developing bots in the Session messenger. Headless client for working with the Session messenger API. Works with onion-routing, decrypts files using assymetric keys.',
+    },
+    links: [
+      // 'https://github.com/VityaSchel/batumi.bike',
+      'https://batumi.bike'
+    ],
+    category: 'website',
+    id: 'batumi-bike'
   },
   {
     name: 'SIPacker',
@@ -246,6 +454,30 @@ const projects: Project[] = [
     ],
     category: 'website',
     id: 'sipacker'
+  },
+  {
+    name: 'PlayStation 4 merger app',
+    stack: [
+      'C++'
+    ],
+    supported: true,
+    dates: {
+      devStart: '4 September 2024',
+      release: '5 September 2024'
+    },
+    scope: 1,
+    description: {
+      'ru-RU': 'Приложение для PlayStation 4, собранное с помощью домашнего SDK на основе OpenOrbis toolchain. Позволяет загружать части pkg-файлов через USB на внутренний HDD консоли и сливать их воедино непосредственно на PS4. Может быть полезно для людей, у которых нет большого USB-накопителя и для тех, у кого медленное интернет-соединение для удаленной отправки pkg файлов',
+      _DEFAULT_: 'Merger app for PlayStation 4 built with homebrew opensource SDK called OpenOrbis toolchain. It allows you to load pkg\'s parts via USB to internal HDD of console and merge them directly on your PS4. It might be useful for people who don\'t own a large capacity USB drive or have a slow internet connection for remote pkg sending',
+    },
+    unpublic: false,
+    hidden: false,
+    logo: ps4mergerAppLogo,
+    links: [
+      'https://github.com/VityaSchel/ps4-app-merge-pkgs'
+    ],
+    category: 'app',
+    id: 'ps4-merger-app'
   },
   {
     name: 'ОГЭ Генератор',
@@ -300,6 +532,33 @@ const projects: Project[] = [
     id: 'the-archive'
   },
   {
+    name: 'Расписание КС ПГУТИ',
+    stack: [
+      'React', 'NextJS', 'TypeScript',
+      '@shadcn/ui', 'TailwindCSS',
+      'Telegram Bot API'
+    ],
+    supported: 'partially',
+    dates: {
+      devStart: '1 October 2023',
+      release: '2 October 2023'
+    },
+    scope: 3,
+    description: {
+      'ru-RU': 'Рескин сайта с расписанием для моего колледжа. Построен, ориентируясь на кеш и максимальную экономию данных: все ассеты сайта кешируются, данные из API проверяются на обновление по E-Tag. Бекенд на Next.js парсит расписание с официального сайта с помощью JSDOM и оповещает о возможных проблемах через Telegram Bot API.',
+      _DEFAULT_: 'A reskin of a schedule site for my college. Built with a focus on caching and maximum data savings: all site assets are cached, data from API is checked for updates by E-Tag. The backend on Next.js parses the schedule from the official site using JSDOM and notifies of possible problems via Telegram Bot API.',
+    },
+    unpublic: false,
+    hidden: false,
+    logo: kspsutiLogo,
+    links: [
+      'https://kspsuti.ru/',
+      'https://github.com/VityaSchel/kspguti-schedule'
+    ],
+    category: 'website',
+    id: 'kspsuti'
+  },
+  {
     name: 'Samsung Pinger',
     stack: [
       'Swift', 'SwiftUI'
@@ -320,52 +579,6 @@ const projects: Project[] = [
     ],
     category: 'widget',
     id: 'samsung-pinger'
-  },
-  {
-    name: 'Session Node.js client',
-    stack: [
-      'NodeJS', 'TypeScript'
-    ],
-    supported: true,
-    dates: {
-      devStart: '28 September 2023',
-      release: '29 September 2023'
-    },
-    scope: 1,
-    description: {
-      'ru-RU': 'Первый фреймворк для разработки ботов в мессенджере Session. Хедлесс клиент для работы с API мессенджера Session. Работает с onion-роутингом, расшифровывает файлы с помощью ассиметричных ключей.',
-      _DEFAULT_: 'First framework for developing bots in the Session messenger. Headless client for working with the Session messenger API. Works with onion-routing, decrypts files using assymetric keys.',
-    },
-    links: [
-      'https://github.com/VityaSchel/session-nodejs-bot',
-      'https://www.youtube.com/watch?v=af7-DFSbFZ4'
-    ],
-    category: 'npmjs_library',
-    id: 'session-messenger-nodejs'
-  },
-  {
-    name: 'Соловьев VS Гитлер',
-    stack: [
-      'React', 'NextJS', 'TypeScript',
-      'Redux-toolkit'
-    ],
-    supported: true,
-    dates: {
-      devStart: '12 April 2023',
-      release: '12 April 2023'
-    },
-    logo: solovyevVsHitlerLogo,
-    scope: 1,
-    description: {
-      'ru-RU': 'Шуточный сайт, где вам предстоит угадать, кому принадлежит цитата: пропагандисту Владимиру Соловьеву или Адольфу Гитлеру',
-      _DEFAULT_: 'Joke website where you have to guess who the quote belongs to: propagandist Vladimir Solovyov or Adolf Hitler',
-    },
-    links: [
-      'https://solovyev.netlify.app/',
-      'https://github.com/VityaSchel/vladimir-solovyev'
-    ],
-    category: 'website',
-    id: 'solovyev-vs-hitler'
   },
   {
     name: 'File sharing platform',
@@ -392,11 +605,11 @@ const projects: Project[] = [
   {
     name: 'Blog-agregator',
     stack: [
-      'React', 'NextJS', 'TypeScript',
+      'React', 'NextJS', 'TypeScript', 'AMP',
       '@shadcn/ui', 'TailwindCSS', 'NodeJS',
       'MongoDB', 'Redux-toolkit', 'Telegram Bot API',
       'GPT', 'Telegram MTProto', 'Tor Hidden Service',
-      'Cloudflare API'
+      'Cloudflare API',
     ],
     supported: true,
     tags: ['order'],
@@ -453,6 +666,71 @@ const projects: Project[] = [
     logo: mastodonForkLogo,
     category: 'website',
     id: 'mastodon-for-darknet-2023'
+  },
+  {
+    name: 'Packages requests website',
+    stack: [
+      'React', 'Vite', 'TypeScript', 'Service Worker', 'Bun',
+      'MongoDB', 'React-redux', 'React-router', 'TailwindCSS',
+      '@shadcn/ui', 'IndexedDB'
+    ],
+    supported: true,
+    tags: ['order'],
+    dates: {
+      devStart: '13 July 2024',
+      release: '26 July 2024'
+    },
+    scope: 4,
+    description: {
+      'ru-RU': 'PWA для логистической компании. Поддерживает автоматическое управление инвентарем, выставление запросов на доставку, интеграцию с 17track API для автоматического отслеживания посылок',
+      _DEFAULT_: 'PWA for a logistics company. Supports automatic inventory management, bounty requests, 17track API integration for automatic parcel tracking',
+    },
+    category: 'website',
+    id: 'packages-requests-website-2024'
+  },
+  {
+    name: 'Session Notifications Service',
+    stack: [
+      'React', 'Vite', 'TypeScript', 'Bun',
+      'Docker', 'Redis', 'MongoDB', 'NextJS',
+      'Kata containers', 'Elysia', 'Tor Hidden Service'
+    ],
+    supported: true,
+    tags: ['order'],
+    dates: {
+      devStart: '23 March 2024',
+      release: '18 June 2024'
+    },
+    scope: 4,
+    description: {
+      'ru-RU': 'B2B cервис для доставки сообщений в сети Session. Поддерживает serverless функции, контейнеры kata, вебхуки для разработчиков, делающих ботов. Принимает платежи через бота в мессенджере Session в Monero и автоматически обрабатывает депозиты на баланс пользователей. Имеет админ-панель для управления активами сервиса, админ-бот для удобного доступа к инструментам администрирования и админ-CLI для управления сервисом из терминала. Имеет документацию Swagger и mkdocs для разработчиков.',
+      _DEFAULT_: 'Feature rich B2B service for messages delivery within Session network. Supports serverless functions, kata containers, webhooks for developers building bots. Accepts payments via Session bot in Monero and automatically processes users balances deposits. Has an admin panel for managing service assets, admin bot for easier access to administration tools and admin CLI for managing service from terminal. Has a Swagger and mkdocs documentation for developers.'
+    },
+    category: 'order',
+    id: 'session-notifications-service'
+  },
+  {
+    name: 'Session.email',
+    stack: [
+      'React', 'Vite', 'TypeScript', 'Bun',
+      'Figma'
+    ],
+    supported: true,
+    tags: ['order'],
+    dates: {
+      devStart: '29 June 2024',
+      release: '11 July 2024'
+    },
+    scope: 2,
+    description: {
+      'ru-RU': 'Платный сервис для перенаправления писем напрямую в мессенджер Session. Лендинг разработан мной.',
+      _DEFAULT_: 'Paid service to redirect emails directly to Session messenger. Landing designed by me.'
+    },
+    links: [
+      'https://session.email'
+    ],
+    category: 'order',
+    id: 'session-email'
   },
   {
     name: 'Prankbot',
@@ -522,94 +800,6 @@ const projects: Project[] = [
     logo: ketoplanLogo,
     category: 'website',
     id: 'x5-keto-quiz'
-  },
-  {
-    name: 'Real BMO (Adventure Time)',
-    stack: [
-      'React', 'TypeScript', 'NodeJS', 'Vite', 
-      'OpenAI Whisper', 'GPT'
-    ],
-    supported: true,
-    dates: {
-      devStart: '20 December 2023'
-    },
-    scope: 4,
-    description: {
-      'ru-RU': 'Робот BMO, которого я строю в реальной жизни на Raspberry PI 5 с Whisper и picovoice для распознавания речи и с синтезатором голоса на основе модели голоса BMO из мультсериала. Он думает с помощью бекенда на Node.js и придумывает ответы, как будто он персонаж в мультсериале, с помощью OpenAI GPTv4 Assistants API.',
-      _DEFAULT_: 'BMO robot that I am building in real life on Raspberry PI 5 with Whisper OpenAI API and Picovoice SDK for speech recognition and with a voice synthesizer based on the BMO character\'s voice model from the cartoon. Its brain is using a backend on Node.js and generates dialog responses as if it were a character in the cartoon, using the OpenAI GPTv4 Assistants API.',
-    },
-    links: [
-      'https://t.me/realbmo'
-    ],
-    logo: realBmoLogo,
-    category: 'robot',
-    id: 'realbmo'
-  },
-  {
-    name: 'At Dead of Night Russian voiceover',
-    stack: [
-      'ffmpeg'
-    ],
-    supported: true,
-    dates: {
-      devStart: '10 December 2022'
-    },
-    scope: 4,
-    description: {
-      'ru-RU': 'Неофициальный русский дубляж FMV-инди-хоррора At Dead of Night, которым я занимаюсь в свободное время. Из своих личных денежных средств оплачиваю работу актеров дубляжа, монтирую все фразы, подыскиваю подходящие эффекты на голоса.',
-      _DEFAULT_: 'Unofficial Russian dubbing of the FMV indie horror At Dead of Night, which I do in my free time. From my own personal funds, I pay for the dubbing actors\' work, edit all audio fragments and phrases, and look for suitable voice effects.',
-    },
-    links: [
-      'https://t.me/adonru',
-      'https://github.com/AtDeadOfNight/russian-dub',
-    ],
-    logo: adonRuLogo,
-    category: 'game/windows10',
-    id: 'adon-ru'
-  },
-  {
-    name: 'At Dead of Night cheats',
-    stack: [
-      'JavaScript', 'TypeScript', 'ThreeJS'
-    ],
-    supported: true,
-    dates: {
-      devStart: '10 January 2022',
-      release: '10 January 2022'
-    },
-    scope: 1,
-    description: {
-      'ru-RU': 'Читы на игру At Dead of Night, которые я написал на JavaScript с помощью собственного инъектора дебаггера внутрь веб-контекста игры на движке NW.js. Читы анализируют внутренние переменные игры и позволяют игроку видеть передвижения врага, следить за состоянием предметов на карте. В последней версии был добавлен экспериментальный WallHack, который показывает примерный силуэт врага сквозь стены с помощью накладываемого ThreeJS рендера поверх FMV плеера.',
-      _DEFAULT_: 'Cheats for the game At Dead of Night, which I wrote in JavaScript using my own debugger injector into the web context of the game on the NW.js engine. Cheats analyze the game\'s internal variables and allow the player to see the enemy\'s movements, monitor the state of items on the map. In the latest version, an experimental WallHack was added, which shows the approximate silhouette of the enemy through the walls using a ThreeJS render overlaid on top of the FMV player.',
-    },
-    links: [
-      'https://t.me/adonru',
-      'https://github.com/AtDeadOfNight/cheats',
-    ],
-    logo: adonCheatsLogo,
-    category: 'game/windows10',
-    id: 'adon-cheats'
-  },
-  {
-    name: 'At Dead of Jerma',
-    stack: [],
-    supported: true,
-    dates: {
-      devStart: '12 January 2022',
-      release: '13 January 2022'
-    },
-    scope: 1,
-    description: {
-      'ru-RU': 'Мод для At Dead of Night, для которой я натренировал нейросеть по смене лиц для замены лица врага из игры на известного блоггера Jerma985, а также поменял голос врага на голос Jerma при помощи другой нейросети.',
-      _DEFAULT_: 'Mod for At Dead of Night, for which I trained a neural network for face swapping to replace the enemy\'s face in the game with the famous blogger Jerma985, and also changed the enemy\'s voice to Jerma\'s voice using another neural network.',
-    },
-    links: [
-      'https://t.me/adonru',
-      'https://github.com/AtDeadOfNight/at-dead-of-jerma-mod',
-    ],
-    logo: atDeadOfJermaLogo,
-    category: 'game/windows10',
-    id: 'at-dead-of-jerma'
   },
   {
     name: 'telegram-channel-mirror-mtproto',
@@ -851,6 +1041,48 @@ const projects: Project[] = [
     id: 'tor-chat'
   },
   {
+    name: 'q-midpass-autoconfirm',
+    stack: [
+      'Bun', 'puppeteer', 'TypeScript'
+    ],
+    supported: false,
+    dates: {
+      devStart: '9 June 2024',
+      release: '11 June 2024'
+    },
+    scope: 1,
+    description: {
+      'ru-RU': 'Скрипт на Bun, который автоматически подтверждает вход в аккаунт на сайте q.midpass.ru, используя puppeteer',
+      _DEFAULT_: 'Bun script that automatically confirms login to the account on the site q.midpass.ru using puppeteer',
+    },
+    links: [
+      'https://github.com/VityaSchel/q-midpass-ru-autoconfirm'
+    ],
+    category: 'bot/telegram',
+    id: 'q-midpass-autoconfirm'
+  },
+  {
+    name: 'tapochek.net freeleech monitoring',
+    stack: [
+      'Bun', 'TypeScript', 'React', 'Vite', 'Service Worker', 'Telegram Bot API',
+    ],
+    supported: true,
+    dates: {
+      devStart: '7 September 2024',
+      release: '7 September 2024'
+    },
+    scope: 1,
+    description: {
+      'ru-RU': 'Скрипт на Bun, который автоматически отслеживает начало фрилича на форуме Tapochek.net и отправляет push-уведомления через веб-сайт и уведомления в Telegram. Парсинг HTML делается с помощью библиотеки cheerio',
+      _DEFAULT_: 'Bun script that automatically tracks the start of freeleech on the Tapochek.net forum and sends push notifications through the website and notifications in Telegram. HTML parsing is using cheerio',
+    },
+    links: [
+      'https://github.com/VityaSchel/tapochek.net-freeleech-monitoring'
+    ],
+    category: 'website',
+    id: 'tapochek-net-freeleech'
+  },
+  {
     name: 'smb16school.ru',
     stack: [
       'React', 'NextJS', 'TypeScript'
@@ -866,7 +1098,7 @@ const projects: Project[] = [
       _DEFAULT_: 'Simple photo storage site from my graduation and my class\'s photo album, integrates with imagekit CDN for fast previews',
     },
     links: [
-      'https://smb16school.ru'
+      'https://smb16school.utidteam.com'
     ],
     logo: smb16schoolruLogo,
     category: 'website',
@@ -1024,6 +1256,142 @@ const projects: Project[] = [
     category: 'utility',
     id: 'hloth-telegram-status'
   },
+
+  {
+    name: 'Real BMO (Adventure Time)',
+    stack: [
+      'React', 'TypeScript', 'NodeJS', 'Vite',
+      'OpenAI Whisper', 'GPT'
+    ],
+    supported: true,
+    dates: {
+      devStart: '20 December 2023'
+    },
+    scope: 4,
+    description: {
+      'ru-RU': 'Робот BMO, которого я строю в реальной жизни на Raspberry PI 5 с Whisper и picovoice для распознавания речи и с синтезатором голоса на основе модели голоса BMO из мультсериала. Он думает с помощью бекенда на Node.js и придумывает ответы, как будто он персонаж в мультсериале, с помощью OpenAI GPTv4 Assistants API.',
+      _DEFAULT_: 'BMO robot that I am building in real life on Raspberry PI 5 with Whisper OpenAI API and Picovoice SDK for speech recognition and with a voice synthesizer based on the BMO character\'s voice model from the cartoon. Its brain is using a backend on Node.js and generates dialog responses as if it were a character in the cartoon, using the OpenAI GPTv4 Assistants API.',
+    },
+    links: [
+      'https://t.me/realbmo'
+    ],
+    logo: realBmoLogo,
+    category: 'robot',
+    id: 'realbmo'
+  },
+  {
+    name: 'At Dead of Night Russian voiceover',
+    stack: [
+      'ffmpeg'
+    ],
+    supported: true,
+    dates: {
+      devStart: '10 December 2022'
+    },
+    scope: 4,
+    description: {
+      'ru-RU': 'Неофициальный русский дубляж FMV-инди-хоррора At Dead of Night, которым я занимаюсь в свободное время. Из своих личных денежных средств оплачиваю работу актеров дубляжа, монтирую все фразы, подыскиваю подходящие эффекты на голоса.',
+      _DEFAULT_: 'Unofficial Russian dubbing of the FMV indie horror At Dead of Night, which I do in my free time. From my own personal funds, I pay for the dubbing actors\' work, edit all audio fragments and phrases, and look for suitable voice effects.',
+    },
+    links: [
+      'https://t.me/adonru',
+      'https://github.com/AtDeadOfNight/russian-dub',
+    ],
+    logo: adonRuLogo,
+    category: 'game/windows10',
+    id: 'adon-ru'
+  },
+  {
+    name: 'At Dead of Night cheats',
+    stack: [
+      'JavaScript', 'TypeScript', 'ThreeJS'
+    ],
+    supported: true,
+    dates: {
+      devStart: '10 January 2022',
+      release: '10 January 2022'
+    },
+    scope: 1,
+    description: {
+      'ru-RU': 'Читы на игру At Dead of Night, которые я написал на JavaScript с помощью собственного инъектора дебаггера внутрь веб-контекста игры на движке NW.js. Читы анализируют внутренние переменные игры и позволяют игроку видеть передвижения врага, следить за состоянием предметов на карте. В последней версии был добавлен экспериментальный WallHack, который показывает примерный силуэт врага сквозь стены с помощью накладываемого ThreeJS рендера поверх FMV плеера.',
+      _DEFAULT_: 'Cheats for the game At Dead of Night, which I wrote in JavaScript using my own debugger injector into the web context of the game on the NW.js engine. Cheats analyze the game\'s internal variables and allow the player to see the enemy\'s movements, monitor the state of items on the map. In the latest version, an experimental WallHack was added, which shows the approximate silhouette of the enemy through the walls using a ThreeJS render overlaid on top of the FMV player.',
+    },
+    links: [
+      'https://t.me/adonru',
+      'https://github.com/AtDeadOfNight/cheats',
+    ],
+    logo: adonCheatsLogo,
+    category: 'game/windows10',
+    id: 'adon-cheats'
+  },
+  {
+    name: 'At Dead of Jerma',
+    stack: [],
+    supported: true,
+    dates: {
+      devStart: '12 January 2022',
+      release: '13 January 2022'
+    },
+    scope: 1,
+    description: {
+      'ru-RU': 'Мод для At Dead of Night, для которой я натренировал нейросеть по смене лиц для замены лица врага из игры на известного блоггера Jerma985, а также поменял голос врага на голос Jerma при помощи другой нейросети.',
+      _DEFAULT_: 'Mod for At Dead of Night, for which I trained a neural network for face swapping to replace the enemy\'s face in the game with the famous blogger Jerma985, and also changed the enemy\'s voice to Jerma\'s voice using another neural network.',
+    },
+    links: [
+      'https://t.me/adonru',
+      'https://github.com/AtDeadOfNight/at-dead-of-jerma-mod',
+    ],
+    logo: atDeadOfJermaLogo,
+    category: 'game/windows10',
+    id: 'at-dead-of-jerma'
+  },
+  {
+    name: 'Соловьев VS Гитлер',
+    stack: [
+      'React', 'NextJS', 'TypeScript',
+      'Redux-toolkit'
+    ],
+    supported: true,
+    dates: {
+      devStart: '12 April 2023',
+      release: '12 April 2023'
+    },
+    logo: solovyevVsHitlerLogo,
+    scope: 1,
+    description: {
+      'ru-RU': 'Шуточный сайт, где вам предстоит угадать, кому принадлежит цитата: пропагандисту Владимиру Соловьеву или Адольфу Гитлеру',
+      _DEFAULT_: 'Joke website where you have to guess who the quote belongs to: propagandist Vladimir Solovyov or Adolf Hitler',
+    },
+    links: [
+      'https://solovyev.netlify.app/',
+      'https://github.com/VityaSchel/vladimir-solovyev'
+    ],
+    category: 'website',
+    id: 'solovyev-vs-hitler'
+  },
+  {
+    name: 'Doxxer',
+    stack: [
+      'React', 'Vite', 'TypeScript',
+      'Bun'
+    ],
+    supported: 'partially',
+    dates: {
+      devStart: '25 August 2024',
+      release: '25 August 2024'
+    },
+    scope: 1,
+    description: {
+      'ru-RU': 'Шуточный сайт, который стремится получить о вас всю возможную информацию, как в меме "Doxxer"',
+      _DEFAULT_: 'Joke website that tries to get all possible information about you, like in the meme "Doxxer"',
+    },
+    links: [
+      'https://doxxer.utidteam.com/',
+      'https://github.com/VityaSchel/doxxer'
+    ],
+    category: 'website',
+    id: 'doxxer'
+  },
   {
     name: 'Bad Apple collection',
     stack: [
@@ -1140,6 +1508,27 @@ const projects: Project[] = [
     },
     category: 'utility',
     id: 'github-status'
+  },
+  {
+    name: 'GPT text game',
+    stack: [
+      'Vite', 'TypeScript', 'React', 'GPT'
+    ],
+    supported: 'partially',
+    dates: {
+      devStart: '18 September 2024',
+      release: '18 September 2024'
+    },
+    scope: 1,
+    description: {
+      'ru-RU': 'Простая бесконечная браузерная игра, генерируемая в реальном времени ChatGPT',
+      _DEFAULT_: 'Simple endless browser game generated in real-time by ChatGPT',
+    },
+    links: [
+      'https://github.com/VityaSchel/gpt-text-game/'
+    ],
+    category: 'website',
+    id: 'gpt-text-game'
   },
   {
     name: 'shitlerts',
@@ -1684,30 +2073,6 @@ const projects: Project[] = [
     id: 'симулятор-маши-из-gostudy'
   },
   {
-    name: 'cv.hloth.dev',
-    stack: [
-      'TypeScript', 'NextJS', 'TailwindCSS',
-      '@shadcn/ui'
-    ],
-    supported: true,
-    dates: {
-      devStart: '17 September 2023',
-      release: '17 September 2023'
-    },
-    scope: 1,
-    description: {
-      'ru-RU': 'Сайт с моим резюме',
-      _DEFAULT_: 'Website with my resume',
-    },
-    logo: cvhlothdevLogo,
-    links: [
-      'https://cv.hloth.dev',
-      'https://github.com/VityaSchel/cv.hloth.dev'
-    ],
-    category: 'website',
-    id: 'cv-hloth-dev'
-  },
-  {
     name: 'Vite CSGO Case Simulator',
     stack: [
       'Vite',
@@ -2036,6 +2401,188 @@ const projects: Project[] = [
     ],
     category: 'website',
     id: 'czech-living-costs'
+  },
+  {
+    name: 'VityaSchel Site: uCoz версия',
+    stack: [
+      'uCoz CMS'
+    ],
+    dates: {
+      devStart: '2015',
+      release: '2015',
+      abandon: '2016'
+    },
+    scope: 3,
+    description: {
+      'ru-RU': 'Первый сайт про меня на uCoz CMS',
+      _DEFAULT_: 'First website about me on uCoz CMS',
+    },
+    unpublic: false,
+    hidden: false,
+    tags: [
+      'personalsite'
+    ],
+    logo: vityaschelSiteLogo,
+    category: 'website',
+    id: 'vityaschel-site-ucoz-версия'
+  },
+  {
+    name: 'VityaSchel Site: terminal версия (hostinger)',
+    stack: [
+      'Vanilla JS'
+    ],
+    dates: {
+      devStart: '2018',
+      release: '2018',
+      abandon: '2019'
+    },
+    scope: 3,
+    description: {
+      'ru-RU': 'Второй сайт в виде консоли на бесплатном хостинге',
+      _DEFAULT_: 'Second website in the form of a terminal on free hosting',
+    },
+    unpublic: false,
+    hidden: false,
+    tags: [
+      'personalsite'
+    ],
+    logo: vityaschelSiteLogo,
+    category: 'website',
+    id: 'vityaschel-site-terminal-версия-hostinger-'
+  },
+  {
+    name: 'VityaSchel Site: карта проектов',
+    stack: [
+      'Vanilla JS'
+    ],
+    dates: {
+      devStart: '2020',
+      release: '2020',
+      abandon: '2020'
+    },
+    scope: 2,
+    description: {
+      'ru-RU': 'Третий сайт про все мои проекты со связями в виде карты',
+      _DEFAULT_: 'Third website about all my projects with connections in the form of a map',
+    },
+    unpublic: false,
+    hidden: false,
+    tags: [
+      'personalsite'
+    ],
+    logo: vityaschelSiteLogo,
+    category: 'website',
+    id: 'vityaschel-site-карта-проектов'
+  },
+  {
+    name: 'VityaSchel Site: лаймовая галлерея',
+    stack: [
+      'Vanilla JS'
+    ],
+    dates: {
+      devStart: '2020',
+      release: '2020',
+      abandon: '2020'
+    },
+    scope: 3,
+    description: {
+      'ru-RU': 'Четвертый сайт про все мои проекты и меня в виде лаймовой галереи',
+      _DEFAULT_: 'Fourth website about all my projects and me in the form of a lime gallery',
+    },
+    unpublic: false,
+    hidden: false,
+    tags: [
+      'personalsite'
+    ],
+    logo: vityaschelSiteLogo,
+    category: 'website',
+    id: 'vityaschel-site-лаймовая-галлерея'
+  },
+  {
+    name: 'VityaSchel Site: космический параллакс',
+    stack: [
+      'Vanilla JS'
+    ],
+    supported: 'partially',
+    dates: {
+      devStart: '2020',
+      release: '2020',
+      abandon: '2021'
+    },
+    scope: 4,
+    description: {
+      'ru-RU': 'Пятый, огромный сайт с красивыми анимациями про все, что со мной связано',
+      _DEFAULT_: 'Fifth, huge website with beautiful animations about everything related to me',
+    },
+    unpublic: false,
+    hidden: false,
+    tags: [
+      'personalsite'
+    ],
+    logo: vityaschelSiteLogo,
+    links: [
+      'https://vityaschel.utidteam.com'
+    ],
+    category: 'website',
+    id: 'vityaschel-site-космический-параллакс'
+  },
+  {
+    name: 'VityaSchel Site: hloth.dev с 3D-фигурами',
+    stack: [
+      'React',
+      'Vite',
+      'TypeScript',
+      'ThreeJS',
+      'React-three-fiber',
+      'React-redux',
+      'Redux-toolkit',
+      'MaterialUI',
+      'TailwindCSS'
+    ],
+    supported: true,
+    dates: {
+      devStart: '24 November 2021'
+    },
+    scope: 4,
+    description: {
+      'ru-RU': 'Шестой сайт про все мои проекты, услуги, технологии и донаты с использованием ThreeJS',
+      _DEFAULT_: 'Sixth website about all my projects, services, technologies, and donations using ThreeJS',
+    },
+    unpublic: false,
+    hidden: false,
+    tags: [
+      'personalsite'
+    ],
+    logo: vityaschelSiteLogo,
+    links: [
+      'https://hloth.dev'
+    ],
+    category: 'website',
+    id: 'vityaschel-site-hloth-dev-с-3d-фигурами'
+  },
+  {
+    name: 'cv.hloth.dev',
+    stack: [
+      'TypeScript', 'NextJS', 'TailwindCSS',
+      '@shadcn/ui'
+    ],
+    supported: true,
+    dates: {
+      devStart: '17 September 2023',
+      release: '17 September 2023'
+    },
+    scope: 1,
+    description: {
+      'ru-RU': 'Сайт с моим резюме',
+      _DEFAULT_: 'Website with my resume',
+    },
+    logo: cvhlothdevLogo,
+    links: [
+      'https://cv.hloth.dev',
+      'https://github.com/VityaSchel/cv.hloth.dev'
+    ],
+    category: 'website',
+    id: 'cv-hloth-dev'
   },
   {
     name: 'Homirror лендинг',
@@ -2397,164 +2944,6 @@ const projects: Project[] = [
     hidden: false,
     category: 'bot/vk',
     id: 'gdzbot'
-  },
-  {
-    name: 'VityaSchel Site: uCoz версия',
-    stack: [
-      'uCoz CMS'
-    ],
-    dates: {
-      devStart: '2015',
-      release: '2015',
-      abandon: '2016'
-    },
-    scope: 3,
-    description: {
-      'ru-RU': 'Первый сайт про меня на uCoz CMS',
-      _DEFAULT_: 'First website about me on uCoz CMS',
-    },
-    unpublic: false,
-    hidden: false,
-    tags: [
-      'personalsite'
-    ],
-    logo: vityaschelSiteLogo,
-    category: 'website',
-    id: 'vityaschel-site-ucoz-версия'
-  },
-  {
-    name: 'VityaSchel Site: terminal версия (hostinger)',
-    stack: [
-      'Vanilla JS'
-    ],
-    dates: {
-      devStart: '2018',
-      release: '2018',
-      abandon: '2019'
-    },
-    scope: 3,
-    description: {
-      'ru-RU': 'Второй сайт в виде консоли на бесплатном хостинге',
-      _DEFAULT_: 'Second website in the form of a terminal on free hosting',
-    },
-    unpublic: false,
-    hidden: false,
-    tags: [
-      'personalsite'
-    ],
-    logo: vityaschelSiteLogo,
-    category: 'website',
-    id: 'vityaschel-site-terminal-версия-hostinger-'
-  },
-  {
-    name: 'VityaSchel Site: карта проектов',
-    stack: [
-      'Vanilla JS'
-    ],
-    dates: {
-      devStart: '2020',
-      release: '2020',
-      abandon: '2020'
-    },
-    scope: 2,
-    description: {
-      'ru-RU': 'Третий сайт про все мои проекты со связями в виде карты',
-      _DEFAULT_: 'Third website about all my projects with connections in the form of a map',
-    },
-    unpublic: false,
-    hidden: false,
-    tags: [
-      'personalsite'
-    ],
-    logo: vityaschelSiteLogo,
-    category: 'website',
-    id: 'vityaschel-site-карта-проектов'
-  },
-  {
-    name: 'VityaSchel Site: лаймовая галлерея',
-    stack: [
-      'Vanilla JS'
-    ],
-    dates: {
-      devStart: '2020',
-      release: '2020',
-      abandon: '2020'
-    },
-    scope: 3,
-    description: {
-      'ru-RU': 'Четвертый сайт про все мои проекты и меня в виде лаймовой галереи',
-      _DEFAULT_: 'Fourth website about all my projects and me in the form of a lime gallery',
-    },
-    unpublic: false,
-    hidden: false,
-    tags: [
-      'personalsite'
-    ],
-    logo: vityaschelSiteLogo,
-    category: 'website',
-    id: 'vityaschel-site-лаймовая-галлерея'
-  },
-  {
-    name: 'VityaSchel Site: космический параллакс',
-    stack: [
-      'Vanilla JS'
-    ],
-    supported: 'partially',
-    dates: {
-      devStart: '2020',
-      release: '2020',
-      abandon: '2021'
-    },
-    scope: 4,
-    description: {
-      'ru-RU': 'Пятый, огромный сайт с красивыми анимациями про все, что со мной связано',
-      _DEFAULT_: 'Fifth, huge website with beautiful animations about everything related to me',
-    },
-    unpublic: false,
-    hidden: false,
-    tags: [
-      'personalsite'
-    ],
-    logo: vityaschelSiteLogo,
-    links: [
-      'https://vityaschel.utidteam.com'
-    ],
-    category: 'website',
-    id: 'vityaschel-site-космический-параллакс'
-  },
-  {
-    name: 'VityaSchel Site: hloth.dev с 3D-фигурами',
-    stack: [
-      'React',
-      'Vite',
-      'TypeScript',
-      'ThreeJS',
-      'React-three-fiber',
-      'React-redux',
-      'Redux-toolkit',
-      'MaterialUI',
-      'TailwindCSS'
-    ],
-    supported: true,
-    dates: {
-      devStart: '24 November 2021'
-    },
-    scope: 4,
-    description: {
-      'ru-RU': 'Шестой сайт про все мои проекты, услуги, технологии и донаты с использованием ThreeJS',
-      _DEFAULT_: 'Sixth website about all my projects, services, technologies, and donations using ThreeJS',
-    },
-    unpublic: false,
-    hidden: false,
-    tags: [
-      'personalsite'
-    ],
-    logo: vityaschelSiteLogo,
-    links: [
-      'https://hloth.dev'
-    ],
-    category: 'website',
-    id: 'vityaschel-site-hloth-dev-с-3d-фигурами'
   },
   {
     name: 'Glad Valakas NT200',
