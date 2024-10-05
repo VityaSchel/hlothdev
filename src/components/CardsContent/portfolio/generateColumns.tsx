@@ -9,9 +9,10 @@ import { ReactComponent as webIcon } from '@/assets/images/svgIcons/web_icon.svg
 import { ReactComponent as appIcon } from '@/assets/images/svgIcons/app_icon.svg'
 import { ReactComponent as alertDecagram } from '@/assets/images/svgIcons/mdi_alert_decagram.svg'
 import { ReactComponent as eyeOff } from '@/assets/images/svgIcons/mdi_eye_off.svg'
-import { Project } from '@/data/projects'
+import type { Project } from '@/data/projects'
 import { Translation } from '@/data/localization'
-import { GridEnrichedColDef } from '@mui/x-data-grid'
+import type { GridColDef } from '@mui/x-data-grid'
+import React from 'react'
 
 export default function generateColumns({ locale, translation, setSearchTerms, showShockingProjects, ignoreContentWidthLimit = false }: {
   locale: string
@@ -19,7 +20,7 @@ export default function generateColumns({ locale, translation, setSearchTerms, s
   setSearchTerms: (terms: string[]) => void
   showShockingProjects: boolean
   ignoreContentWidthLimit?: boolean
-}): GridEnrichedColDef<Project, any, any>[] {
+}): GridColDef<Project>[] {
   const dateRegex = /^\d+[ -]\w+[ -]\d+$/
 
   const search = (terms: string) => (e: any) => {
@@ -44,14 +45,10 @@ export default function generateColumns({ locale, translation, setSearchTerms, s
       disableColumnMenu: true,
       width: 71,
       renderCell: ({ row }: { row: Project }) => {
-        const logoClasses = 'p-[10px] flex items-center w-[51px] h-[51px] justify-center'
+        let icon: React.ReactNode
         if(row.logo && (!row.unpublic || showShockingProjects)) {
-          return (
-            <div className={logoClasses}>
-              <div className='rounded-[5px] overflow-clip w-[41px] h-[41px]'>
-                <img src={row.logo} className='object-contain w-full h-full' />
-              </div>
-            </div>
+          icon = (
+            <img src={row.logo} className='w-full aspect-square' />
           )
         } else {
           const shockingProject = row.unpublic && !showShockingProjects
@@ -66,14 +63,18 @@ export default function generateColumns({ locale, translation, setSearchTerms, s
             'bot': robotIcon,
             'game': gamepadIcon,
           }[row.category?.split('/')[0]] ?? branchIcon
-          return (
-            <div className={logoClasses}>
-              <div className='w-[41px] h-[41px]'>
-                <Logo className='grayscale-[1] w-full h-full rounded-[5px]' />
-              </div>
-            </div>
+          icon = (
+            <Logo className='grayscale-[1] w-full h-full rounded-[5px]' />
           )
         }
+
+        return (
+          <div className='h-full flex items-center justify-center'>
+            <div className='rounded-[5px] overflow-clip w-[41px] h-auto aspect-square flex'>
+              {icon}
+            </div>
+          </div>
+        )
       }
     },
     {
@@ -89,9 +90,9 @@ export default function generateColumns({ locale, translation, setSearchTerms, s
         const translatedCategory = translation.CATEGORIES[row.category as keyof typeof translation.CATEGORIES]
 
         return (
-          <div className='flex flex-col gap-1 my-2'>
+          <div className='flex flex-col gap-1 justify-center h-full leading-normal'>
             <div className='flex flex-wrap gap-x-2 items-center'>
-              <span className={cx('text-wrap',
+              <span className={cx('text-wrap leading-tight',
                 (row.hidden || shockingProject) ? 'text-[#dedede] italic' : 'font-semibold'
               )}>
                 {name}
@@ -124,14 +125,14 @@ export default function generateColumns({ locale, translation, setSearchTerms, s
         if(row.hidden) description = translation.HIDDEN_PROJECT.DESCRIPTION_PREVIEW
         else if(shockingProject) description = translation.SHOCK_PROJECT.DESCRIPTION_PREVIEW
         return (
-          <span 
-            className={cx('text-ellipsis whitespace-normal', { 
-              'text-[#dedede] italic': row.hidden || shockingProject,
-              'line-clamp-3': row.stack.length < 13,
-              'line-clamp-4': row.stack.length >= 13,
-            })} 
-            dangerouslySetInnerHTML={{ __html: description }}
-          />
+          <div className='flex items-center h-full'>
+            <span
+              className={cx('text-ellipsis whitespace-normal leading-[1.43] line-clamp-3', { 
+                'text-[#dedede] italic': row.hidden || shockingProject,
+              })} 
+              dangerouslySetInnerHTML={{ __html: description }}
+            />
+          </div>
         )
       }
     },
@@ -143,27 +144,29 @@ export default function generateColumns({ locale, translation, setSearchTerms, s
       sortable: false,
       disableColumnMenu: true,
       renderCell: ({ row }: { row: Project }) => (
-        <span className='whitespace-normal leading-[1.75] pt-[3px] pb-[5px] px-0 text-center w-full overflow-auto'>
-          {row.stack.map(technology => (
-            <>
-              <Chip
-                label={technology}
-                size='small'
-                onClick={search(technology)}
-                key={technology}
-                className='xs-chip'
-              />
-              <span>&#32;&#32;</span>
-            </>
-          ))}
-        </span>
+        <div className='flex items-center h-full'>
+          <span className='whitespace-normal leading-[1.75] pt-[3px] pb-[5px] px-0 text-center w-full overflow-auto'>
+            {row.stack.map(technology => (
+              <>
+                <Chip
+                  label={technology}
+                  size='small'
+                  onClick={search(technology)}
+                  key={technology}
+                  className='xs-chip'
+                />
+                <span>&#32;&#32;</span>
+              </>
+            ))}
+          </span>
+        </div>
       ),
     },
     {
       field: 'dates',
       headerName: translation.COLUMNS.DATES.RELEASE,
       renderCell: ({ row }: { row: Project }) => (
-        <div className='flex flex-col gap-1 text-xs my-2'>
+        <div className='flex flex-col justify-center h-full gap-1 text-xs'>
           {row.dates.devStart && (
             <div className='flex flex-col'>
               <span className='font-bold'>{translation.DATES.DEV_START}:</span>

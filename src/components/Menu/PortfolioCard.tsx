@@ -13,13 +13,14 @@ import project4logo from '@/assets/images/projectsLogos/sipacker.png'
 import SFBlack from '@/assets/fonts/SFBlack.blob'
 import SFBold from '@/assets/fonts/SFBold.blob'
 import { useAppSelector } from '@/store/hooks'
+import { MaterialJSON } from 'three'
 
 export function PortfolioCardText() {
   const { translation, theme } = useAppSelector(state => ({ 
     translation: state.translation, 
     theme: state.theme.theme
   }))
-  const { textColor } = useSpring({ textColor: theme === 'light' ? '#313131' : '#565656' })
+  const { textColor } = useSpring({ textColor: theme === 'light' ? '#313131' : '#ffffff' })
 
   const textZ = -0.08
   const projectsNumber = projects.length
@@ -29,7 +30,7 @@ export function PortfolioCardText() {
     : translation.CARD_PORTFOLIO
 
   return (
-    <group position={[0, 0, textZ]}>
+    <group position={[0, 0, textZ]} layers={1}>
       <Text position={[0.25, 1, 0]} font={SFBold} size={17} color={textColor}>
         {String(projectsNumber)}
       </Text>
@@ -50,7 +51,7 @@ export function usePortfolioCardStyles(theme: string) {
   const project4ImageMap = useLoader(TextureLoader, project4logo)
 
   const { extrudingColor } = useSpring({ extrudingColor: theme === 'light' ? 1 : 0.05 })
-  const extrudingMaterial = { roughness: 1, ...color(extrudingColor) }
+  const extrudingMaterial: Partial<MaterialJSON> = { roughness: 1, ...color(extrudingColor) }
 
   return {
     Project1Image: { map: project1ImageMap },

@@ -1,6 +1,7 @@
 import React from 'react'
-import { DataGrid, ruRU as xDataGridRu, enUS as xDataGridEnUS } from '@mui/x-data-grid'
-import projectsList from '../../../data/projects'
+import { DataGrid } from '@mui/x-data-grid'
+import { ruRU as xDataGridRu, enUS as xDataGridEnUS } from '@mui/x-data-grid/locales'
+import projectsList, { Project } from '../../../data/projects'
 import generateColumns from './generateColumns'
 import Search, { SearchRef } from './Search'
 import ProjectInfoDialog from './ProjectInfoDialog'
@@ -77,7 +78,7 @@ export function Portfolio() {
   }, [])
 
   return (
-    <div className='flex flex-col gap-3 flex-1'>
+    <div className='flex flex-col gap-3 flex-1 max-h-[calc(100vh-120px)]'>
       <Search
         setSearchFilterFunc={setSearchFilterFunc}
         setSearchTerms={setSearchTerms}
@@ -89,28 +90,28 @@ export function Portfolio() {
         columns={columns}
         ref={dataGridRef}
 
-        pageSize={100}
-        rowBuffer={5}
-        rowsPerPageOptions={[]}
-
         // otherwise scroll breaks
         // disableVirtualization
         rowHeight={100}
-
+        paginationModel={{ page: 0, pageSize: 10000 }}
+        
+        disableColumnResize 
         disableColumnFilter
         disableColumnSelector
         disableDensitySelector
-        disableSelectionOnClick
+        disableRowSelectionOnClick
+        disableAutosize
         onCellClick={({ id }, event) => {
           if (event.target && 'tagName' in event.target && event.target.tagName === 'A') return
           handleProjectClick(String(id))
         }}
+        hideFooter
         onPageChange={() => dataGridRef.current?.querySelector('.MuiDataGrid-virtualScroller')?.scrollTo(0, 0)}
         localeText={dataGridLocalization.components.MuiDataGrid.defaultProps.localeText}
         loading={loading}
-        className='flex-1 [&_.MuiDataGrid-row]:cursor-pointer'
+        className='[&_.MuiDataGrid-row]:cursor-pointer'
 
-        getRowId={row => row.id}
+        getRowId={(row: Project) => row.id}
       />
       <ProjectInfoDialog 
         openedProjectID={openedProjectID}

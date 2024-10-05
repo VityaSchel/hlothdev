@@ -67,7 +67,7 @@ export default function Text({
   return (
     <animated.group scale={[0.1 * textSize, 0.1 * textSize, 0.05 * textSize]} {...props}>
       {/** @ts-expect-error - no idea why this is not working  */}
-      <animated.mesh ref={mesh}>
+      <animated.mesh ref={mesh} layers={1}>
         {/** @ts-expect-error - no idea why this is not working  */}
         <textGeometry args={[children ?? '', config]} />
         <animated.meshStandardMaterial color={color} metalness={0} roughness={1} />

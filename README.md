@@ -1,6 +1,6 @@
 # hloth.dev
 
-My personal website, containing information about me, my portfolio, resume, funny things and other stuff y kno
+My personal website, containing information about me, my portfolio, resume, funny things and other stuff
 
 ![Screenshots of website](https://user-images.githubusercontent.com/59040542/163002146-159d5f4e-aa81-4463-921a-6c7ffe5614fd.png)
 
@@ -12,20 +12,15 @@ My personal website, containing information about me, my portfolio, resume, funn
 - React, redux
 - ThreeJS, react-three-fiber
 - Material UI
-- Fastify (backend)
 
 ## How to run it
 
-Clone this repo, type `npm i`, type `npm start`. Since this website requires running backend API that I won't publish for obvoius for me reasons, you'll have to do something with `Failed to fetch` error. Remove fetch or run mock server on specified port.
+Clone this repo, type `bun install`, type `bun dev`.
 
 ## How to build it
 
-Please don't even try, I would really appreciate you if you won't steal anything from here or modify it...
+Type `bun run build`
 
 ## What is robots.txt??
 
-Idk I had one hour before deadline and I decided to entertain myself by putting shit into robots.txt broy
-
-## Why is it so laggy
-
-Because MaterialUI \<Table \\\> component and 3
+Idk I had one hour before deadline and I decided to entertain myself by putting some things into robots.txt

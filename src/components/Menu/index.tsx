@@ -81,7 +81,7 @@ function MenuItem(props: MenuItemProps) {
   })
 
   const { textColor, cubeColor, iconBgColor, iconColor, locationIconColor } = useSpring({
-    textColor: theme === 'light' ? '#545454' : '#191919',
+    textColor: theme === 'light' ? '#545454' : '#dddddd',
     cubeColor: theme === 'light' ? (isPointerOver ? 1.3 : 1.8) : (isPointerOver ? 0.02 : 0.012),
     iconBgColor: theme === 'light' ? 1.2 : 0.05,
     iconColor: theme === 'light' ? 1.4 : 0.05,
@@ -142,6 +142,7 @@ function MenuItem(props: MenuItemProps) {
               hAlign='center'
               color={textColor}
               bevelEnabled
+              layers={1}
             >
               {translation[
                 {

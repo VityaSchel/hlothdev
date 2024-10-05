@@ -1,5 +1,5 @@
 import React from 'react'
-import { Canvas } from '@react-three/fiber'
+import { Canvas, useFrame } from '@react-three/fiber'
 import { useHotkeys } from 'react-hotkeys-hook'
 import { createBrowserHistory } from 'history'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
@@ -21,6 +21,8 @@ import Background from './components/Background'
 import Menu from './components/Menu'
 import { SiteSettings } from './components/SiteSettings'
 import { CardsContent } from './components/CardsContent'
+import { OrbitControls } from '@react-three/drei'
+import { ACESFilmicToneMapping, LinearToneMapping, NeutralToneMapping } from 'three'
 
 const defaultTheme = {
   typography: {
@@ -69,6 +71,10 @@ WebFont.load({
   }
 })
 
+export const debug = false
+
+const DisableRender = () => useFrame(() => null, 1000)
+
 export function App() {
   const translation = useAppSelector(selectTranslation)
   const { theme } = useAppSelector(selectTheme)
@@ -103,21 +109,41 @@ export function App() {
 
   const render = route === ''
 
+  const [disableRendering, setDisableRendering] = React.useState(false)
+  const disableRenderingTimeout = React.useRef<Timer | null>(null)
+
+  React.useEffect(() => {
+    if(route === '') {
+      setDisableRendering(false)
+    } else {
+      if (disableRenderingTimeout.current) clearTimeout(disableRenderingTimeout.current)
+      disableRenderingTimeout.current = setTimeout(() => {
+        setDisableRendering(true)
+      }, 500)
+    }
+  }, [route])
+
   return (
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
       <Canvas 
         camera={{ fov: 60 }} 
         style={{ cursor: raytracedCursor ?? 'auto' }} 
         id='canvas' 
-        linear
+        // linear
         // invalidateFrameloop={true}
         dpr={window.devicePixelRatio}
+        onCreated={({ gl }) => {
+          gl.toneMapping = 2
+          gl.toneMappingExposure = 2.0
+        }} 
       >
+        {disableRendering && <DisableRender />}
         <Camera />
         <Background theme={theme} />
         <Light />
         <BackgroundShapes render={render} />
         <Menu />
+        {debug && <OrbitControls />}
       </Canvas>
       <SiteSettings />
       <CardsContent />

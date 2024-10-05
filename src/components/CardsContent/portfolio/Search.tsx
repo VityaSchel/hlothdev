@@ -41,26 +41,29 @@ const Search = React.forwardRef<SearchRef, SearchProps>(({
 
   React.useEffect(() => {
     const queryChange = () => {
-      console.log('queryChange')
       const query = new URLSearchParams(window.location.search)
       const queryStr = query.has('q') && query.get('q')
       if (queryStr) {
         setSearchTerm(queryStr)
         setSearchTerms(queryStr.split(', '))
+      } else {
+        setSearchTerm('')
+        setSearchTerms([])
       }
     }
     queryChange()
-    window.addEventListener('popstate', () => queryChange)
-    window.addEventListener('navigate', () => queryChange)
+    window.addEventListener('popstate', () => queryChange())
+    window.addEventListener('navigate', () => queryChange())
     return () => {
-      window.removeEventListener('popstate', () => queryChange)
-      window.removeEventListener('navigate', () => queryChange)
+      window.removeEventListener('popstate', () => queryChange())
+      window.removeEventListener('navigate', () => queryChange())
     }
   }, [])
 
   const handleClearInput = () => {
     setSearchTerm('')
     setSearchTerms([])
+    pushNewQueryToUrl('')
   }
 
   const filtersList: { id: string, filterFunc: (project: Project) => void }[] = [
@@ -80,6 +83,7 @@ const Search = React.forwardRef<SearchRef, SearchProps>(({
   }, [filters])
   
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const searchTerm = e.target.value
     setSearchTerm(e.target.value)
     const terms = e.target.value
       .match(/\\?.|^$/g)!
@@ -94,17 +98,23 @@ const Search = React.forwardRef<SearchRef, SearchProps>(({
         return prev
       }, { term: [''] }).term
     setLoading(true)
-    const query = new URLSearchParams(window.location.search)
-    if (searchTerm !== '') {
-      query.set('q', searchTerm)
-      const newRelativePathQuery = window.location.pathname + '?' + query.toString()
-      history.replaceState(null, '', newRelativePathQuery)
-    }
+    pushNewQueryToUrl(searchTerm)
     setTimeout(() => {
       setSearchTerms(terms)
       setLoading(false)
     }, 10)
   }
+
+  const pushNewQueryToUrl = (searchTerm: string) => {
+    if (searchTerm === '') {
+      history.replaceState(null, '', window.location.pathname)
+    } else {
+      const query = new URLSearchParams(window.location.search)
+      query.set('q', searchTerm)
+      const newRelativePathQuery = window.location.pathname + '?' + query.toString()
+      history.replaceState(null, '', newRelativePathQuery)
+    }
+}
 
   return (
     <div className='flex gap-3 items-center'>

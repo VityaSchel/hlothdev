@@ -16,6 +16,7 @@ import Typography from '@mui/material/Typography'
 import { useAppDispatch, useAppSelector } from '@/store/hooks'
 import { selectTranslation } from '@/store/reducers/translation'
 import { selectRoute, setRoute } from '@/store/reducers/route'
+import React from 'react'
 
 export function CardsContent() {
   const theme = useTheme()
@@ -30,7 +31,7 @@ export function CardsContent() {
   return (
     <animated.div 
       className={cx(styles.container, {
-        'pl-6 py-6': route === 'portfolio'
+        'pl-6 py-6 max-h-screen': route === 'portfolio'
       })}
       style={{
         opacity: opacity.interpolate(o => o > 0.5 ? (o-0.5)*2 : 0),
