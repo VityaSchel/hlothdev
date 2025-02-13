@@ -23,23 +23,29 @@ export function Donate() {
         className='w-full'
       >
         <div className='h-full flex flex-col gap-6'>
-          <Coin name='Bitcoin' icons={[bitcoinIcon]}>
-            <CopyAddressButton>bc1q6l065yaa6zc2p4798rc9fcyud8mmny8sk8995f</CopyAddressButton>
+          <Coin name='Tron, USDT TRC20' icons={[tronIcon, usdtIcon]}>
+            <CopyAddressButton>THgEkWLWJsLFJ5FfQFCasF1zbwJNLHyrkF</CopyAddressButton>
           </Coin>
           <Coin name='Etherium, USDT ERC20' icons={[etheriumIcon, usdtIcon]}>
             <CopyAddressButton>0xE3e548ae4f1f74195857084ED335EF89C29Ce43c</CopyAddressButton>
+          </Coin>
+          <Coin name='Monero XMR' icons={[moneroIcon]}>
+            <CopyAddressButton>43MTCc7BsyZip4YUpRSqGahUPf8NefifvW6KXEXttTXicTbMfAehtny26HuU84pzQNQmodxzWoTaPAL5aqPjAUo4DtkvXBV</CopyAddressButton>
+          </Coin>
+          <Coin name='🇷🇺 Card2Card' icons={[]}>
+            <CopyAddressButton>2200700620662600</CopyAddressButton>
+          </Coin>
+          <Coin name='🇬🇪 Bank2Bank' icons={[]}>
+            <CopyAddressButton>GE39CD0360000042481009</CopyAddressButton>
+          </Coin>
+          <Coin name='Bitcoin' icons={[bitcoinIcon]}>
+            <CopyAddressButton>bc1q6l065yaa6zc2p4798rc9fcyud8mmny8sk8995f</CopyAddressButton>
           </Coin>
           <Coin name='Litecoin' icons={[litecoinIcon]}>
             <CopyAddressButton>ltc1qnvzl0zgcg22tm269a6ny95ept93l6009348y3c</CopyAddressButton>
           </Coin>
           <Coin name='TON' icons={[tonIcon]}>
-            <CopyAddressButton>EQDFBtua92AYG8DgLd8x7h10PMpyuOvOxdNaEdc4-rwe1rO4</CopyAddressButton>
-          </Coin>
-          <Coin name='Tron, USDT TRC20' icons={[tronIcon, usdtIcon]}>
-            <CopyAddressButton>THgEkWLWJsLFJ5FfQFCasF1zbwJNLHyrkF</CopyAddressButton>
-          </Coin>
-          <Coin name='Monero XMR' icons={[moneroIcon]}>
-            <CopyAddressButton>43MTCc7BsyZip4YUpRSqGahUPf8NefifvW6KXEXttTXicTbMfAehtny26HuU84pzQNQmodxzWoTaPAL5aqPjAUo4DtkvXBV</CopyAddressButton>
+            <CopyAddressButton>UQDFBtua92AYG8DgLd8x7h10PMpyuOvOxdNaEdc4-rwe1u59</CopyAddressButton>
           </Coin>
           <Coin name='OXEN' icons={[oxenIcon]}>
             <CopyAddressButton>L6j1Kam6QQfKetnvxwyAbe2eUPFuL1bZuYeDWepm7G7cM8cGh3EZBgncrpkMFN5sRKP2pWGLdxpbLf5DRYSnhBY2PypkhLC</CopyAddressButton>
