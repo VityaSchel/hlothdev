@@ -1,1 +1,16 @@
 @import 'tailwindcss';
+
+html {
+  image-rendering: optimizeQuality;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@theme {
+  --color-thick: rgba(36, 36, 36, 0.35);
+  --color-thin: rgba(0, 0, 0, 0.1);
+  --blur-thick: 128px;
+  --blur-thin: 30px;
+}
