@@ -7,13 +7,15 @@
     children,
     cornerRadius = 32,
     cornerSmoothing = 0.6,
-    innerStrokeWidth = 1
+    innerStrokeWidth = 1,
+    translucent
   }: {
     class?: import('svelte/elements').SvelteHTMLElements['div']['class']
     children: import('svelte').Snippet
     cornerRadius?: number
     cornerSmoothing?: number
     innerStrokeWidth?: number
+    translucent?: boolean
   } = $props()
 
   const uid = $props.id()
@@ -34,14 +36,15 @@
 <div class="relative h-full w-full" bind:offsetWidth={width} bind:offsetHeight={height}>
   <div
     class={[
-      'backdrop-blur-thick absolute top-0 left-0 z-[0] h-full w-full',
+      ' absolute top-0 left-0 z-[0] h-full w-full',
       classes,
       {
-        card: !browser
+        'backdrop-blur-thick': translucent,
+        'squircle-card': !browser
       }
     ]}
     style={(squircle === undefined ? '' : `clip-path: path('${squircle}');`) +
-      `border-radius: ${cornerRadius}px;`}
+      `border-radius: ${cornerRadius}px; --inner-stroke-width: ${innerStrokeWidth / 2}px;`}
   ></div>
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -75,9 +78,9 @@
 </div>
 
 <style>
-  .card {
+  .squircle-card {
     box-shadow:
       0 0 0px 0.5px black,
-      inset 0 0 0px 1px rgba(255, 255, 255, 0.2);
+      inset 0 0 0px var(--inner-stroke-width) rgba(255, 255, 255, 0.2);
   }
 </style>

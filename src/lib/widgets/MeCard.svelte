@@ -2,16 +2,22 @@
   import Squircle from '$lib/Squircle.svelte'
 </script>
 
-<div class="relative max-w-full flex-[743] rounded-[16px] drop-background-shadow">
+<div class="drop-background-shadow relative max-w-full flex-[743] rounded-[16px]">
   <Squircle class="bg-black/10" cornerRadius={16}>
     <div class="flex items-center gap-8 px-8 py-9">
-      <div class="aspect-square h-auto w-[164px] rounded-full bg-gray-400"></div>
+      <img class="aspect-square h-auto w-[164px] rounded-full" src="/me-avatar.webp" />
       <div class="flex flex-1 flex-col gap-3">
         <div class="flex flex-col gap-[3px]">
-          <span class="font-bold text-5xl text-thick-typography">Viktor Shchelochkov</span>
-          <span class="font-bold text-[28px] text-thin-typography">Senior fullstack web apps developer</span>
+          <span class="text-thick-typography text-5xl leading-[57px] font-bold tracking-[-0.1px]">
+            Viktor Shchelochkov
+          </span>
+          <span class="text-thin-typography text-[28px] leading-[33px] font-bold tracking-[-0.2px]">
+            Senior fullstack web apps developer
+          </span>
         </div>
-        <span class="font-semibold text-2xl text-[rgba(123,123,123,0.4)]">19 y.o., Batumi, Georgia</span>
+        <span class="text-2xl leading-[29px] font-semibold text-[rgba(123,123,123,0.4)]">
+          19 y.o., Batumi, Georgia
+        </span>
       </div>
     </div>
   </Squircle>

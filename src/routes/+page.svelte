@@ -10,7 +10,7 @@
     <MeCard />
     <div class="flex flex-col gap-4 flex-[593]">
       <ResumeCard />
-      <div class="flex gap-4">
+      <div class="flex gap-4 flex-1">
         <DonateCard />
         <OnionMirrorCard />
       </div>
