@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { browser } from '$app/environment'
   import { getSvgPath } from 'figma-squircle'
 
   let {
@@ -15,19 +16,27 @@
   let width = $state(0)
   let height = $state(0)
   const squircle = $derived(
-    getSvgPath({
-      width,
-      height,
-      cornerRadius,
-      cornerSmoothing
-    })
+    width && height
+      ? getSvgPath({
+          width,
+          height,
+          cornerRadius,
+          cornerSmoothing
+        })
+      : null
   )
 </script>
 
 <div class="relative h-full w-full" bind:offsetWidth={width} bind:offsetHeight={height}>
   <div
-    class="backdrop-blur-thick bg-thick absolute top-0 left-0 z-[0] h-full w-full"
-    style="clip-path: path('{squircle}');"
+    class={[
+      'backdrop-blur-thick bg-thick absolute top-0 left-0 z-[0] h-full w-full',
+      {
+        card: !browser
+      }
+    ]}
+    style={(squircle === undefined ? '' : `clip-path: path('${squircle}');`) +
+      `border-radius: ${cornerRadius}px;`}
   ></div>
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -59,3 +68,11 @@
     {@render children()}
   </div>
 </div>
+
+<style>
+  .card {
+    box-shadow:
+      0 0 0px 0.5px black,
+      inset 0 0 0px 1px rgba(255, 255, 255, 0.2);
+  }
+</style>
