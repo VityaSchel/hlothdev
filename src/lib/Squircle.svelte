@@ -6,12 +6,14 @@
     class: classes,
     children,
     cornerRadius = 32,
-    cornerSmoothing = 0.6
+    cornerSmoothing = 0.6,
+    innerStrokeWidth = 1
   }: {
     class?: import('svelte/elements').SvelteHTMLElements['div']['class']
     children: import('svelte').Snippet
     cornerRadius?: number
     cornerSmoothing?: number
+    innerStrokeWidth?: number
   } = $props()
 
   const uid = $props.id()
@@ -62,7 +64,7 @@
       d={squircle}
       fill="transparent"
       stroke="rgba(255, 255, 255, 0.2)"
-      stroke-width="2px"
+      stroke-width="{innerStrokeWidth}px"
       clip-path="url(#clip-{uid})"
     />
     <path d={squircle} fill="black" filter="url(#shadow-{uid})" />

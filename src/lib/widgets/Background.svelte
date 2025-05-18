@@ -6,7 +6,7 @@
   } = $props()
 </script>
 
-<div class="fixed top-0 left-0 h-full w-full">
+<div class="fixed top-0 left-0 h-full w-full select-none">
   <img src="/bg.webp" alt="" class="absolute top-0 left-0 h-full w-full object-cover" />
 </div>
 <div

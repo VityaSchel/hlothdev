@@ -57,7 +57,7 @@
   href={link}
   rel="nofollow noopener noreferrer"
   target="_blank"
-  class="nav-item group flex shrink-0 cursor-default flex-col items-center gap-[3px] self-stretch pt-[5px] pb-[3px]"
+  class="nav-item group flex shrink-0 cursor-default flex-col items-center gap-[3px] self-stretch pt-[5px] pb-[3px] select-none"
   onpointerenter={() => {
     if (!dragging) {
       setTooltip()

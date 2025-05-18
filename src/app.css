@@ -10,6 +10,8 @@ html {
 }
 
 @theme {
+  --color-thick-typography: #E5E5E5;
+  --color-thin-typography: #7C7C7C;
   --color-thick: rgba(36, 36, 36, 0.35);
   --color-tooltip: rgba(50, 50, 50, 0.48);
   --color-thin: rgba(0, 0, 0, 0.1);
