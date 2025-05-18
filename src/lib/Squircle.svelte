@@ -3,10 +3,12 @@
   import { getSvgPath } from 'figma-squircle'
 
   let {
+    class: classes,
     children,
     cornerRadius = 32,
     cornerSmoothing = 0.6
   }: {
+    class?: import('svelte/elements').SvelteHTMLElements['div']['class']
     children: import('svelte').Snippet
     cornerRadius?: number
     cornerSmoothing?: number
@@ -30,7 +32,8 @@
 <div class="relative h-full w-full" bind:offsetWidth={width} bind:offsetHeight={height}>
   <div
     class={[
-      'backdrop-blur-thick bg-thick absolute top-0 left-0 z-[0] h-full w-full',
+      'backdrop-blur-thick absolute top-0 left-0 z-[0] h-full w-full',
+      classes,
       {
         card: !browser
       }
@@ -64,7 +67,7 @@
     />
     <path d={squircle} fill="black" filter="url(#shadow-{uid})" />
   </svg>
-  <div class="absolute top-0 left-0 z-[2] h-full w-full">
+  <div class="relative top-0 left-0 z-[2] h-full w-full">
     {@render children()}
   </div>
 </div>

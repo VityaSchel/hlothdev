@@ -8,12 +8,10 @@
 </script>
 
 <Background>
-  <div class="h-[645px] w-[1384px] max-w-full">
-    <main class="relative h-full w-full rounded-4xl">
-      <Squircle>
-        {@render children()}
-      </Squircle>
-    </main>
-  </div>
+  <main class="relative h-[645px] w-[1384px] max-w-full">
+    <Squircle>
+      {@render children()}
+    </Squircle>
+  </main>
   <Nav />
 </Background>
