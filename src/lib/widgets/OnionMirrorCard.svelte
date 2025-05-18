@@ -4,7 +4,7 @@
 
 <div class="drop-background-shadow relative max-w-full flex-[171] rounded-[16px]">
   <Squircle class="bg-black/10" cornerRadius={16}>
-    <div class="flex h-full flex-col items-center gap-2 p-4">
+    <div class="flex h-full flex-col items-center gap-2 p-4 select-none">
       <svg
         class="h-[53px] w-[52px]"
         viewBox="0 0 52 52"

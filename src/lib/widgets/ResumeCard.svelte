@@ -2,9 +2,14 @@
   import Squircle from '$lib/Squircle.svelte'
 </script>
 
-<div class="drop-background-shadow relative max-w-full flex-1 rounded-[16px]">
-  <Squircle class="bg-black/10" cornerRadius={16}>
-    <div class="flex h-full items-center gap-[18px] px-4 py-4">
+<a
+  href="https://cv.hloth.dev"
+  rel="nofollow noreferrer noopener"
+  target="_blank"
+  class="drop-background-shadow relative max-w-full flex-1 cursor-default rounded-[16px]"
+>
+  <Squircle class="bg-black/10" cornerRadius={16} arrow>
+    <div class="flex h-full items-center gap-[18px] rounded-[16px] px-4 py-4 select-none">
       <div class="flex h-16 w-16 items-center justify-center rounded-full bg-[#3B82F7]">
         <svg class="w-7" viewBox="0 0 57.7188 57.5312">
           <g>
@@ -27,7 +32,7 @@
       </div>
     </div>
   </Squircle>
-</div>
+</a>
 
 <style>
   .drop-background-shadow {

@@ -8,7 +8,7 @@
 </script>
 
 <Background>
-  <main class="relative h-[645px] w-[1384px] max-w-full drop-background-shadow rounded-[32px]">
+  <main class="relative h-[645px] w-[1384px] max-w-full drop-background-shadow rounded-[32px] shrink-0">
     <Squircle class="bg-thick" innerStrokeWidth={2} translucent>
       {@render children()}
     </Squircle>

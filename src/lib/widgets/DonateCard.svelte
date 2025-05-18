@@ -3,8 +3,8 @@
 </script>
 
 <div class="drop-background-shadow relative max-w-full flex-[412] rounded-[16px]">
-  <Squircle class="bg-black/10" cornerRadius={16}>
-    <div class="flex h-full items-center gap-[18px] px-4 py-4">
+  <Squircle class="bg-black/10" cornerRadius={16} arrow>
+    <div class="flex h-full items-center gap-[18px] px-4 py-4 select-none">
       <div class="flex h-16 w-16 items-center justify-center rounded-full bg-[#3B82F7]">
         <svg height="33" viewBox="0 0 39.8125 70.4688">
           <path
