@@ -3,7 +3,7 @@
   import ScrollableSection from '$lib/ui/ScrollableSection.svelte'
 </script>
 
-<ScrollableSection name="Websites">
+<ScrollableSection name="Websites" childrenCount={10}>
   <ProfileItemCard name="Nock Trade" banner="/portfolio-screenshots/nock-trade.png" />
   <ProfileItemCard name="Nock Trade" banner="/portfolio-screenshots/nock-trade.png" />
   <ProfileItemCard name="Nock Trade" banner="/portfolio-screenshots/nock-trade.png" />

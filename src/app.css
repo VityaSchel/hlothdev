@@ -19,6 +19,5 @@ html {
   --color-thin: rgba(0, 0, 0, 0.1);
   --blur-thick: 128px;
   --blur-thin: 30px;
-  --font-sf-pro: 'SF Pro', --apple-system, BlinkMacSystemFont, sans-serif;
-  --font-sf-pro-display: 'SF Pro Display', --apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sf-pro: 'SF Pro', -apple-system, BlinkMacSystemFont, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }

@@ -5,7 +5,7 @@
 <div class="drop-background-shadow relative max-w-full flex-[743] rounded-[16px]">
   <Squircle class="bg-black/10" cornerRadius={16} arrow>
     <div class="flex items-center gap-8 px-8 py-9 select-none">
-      <img class="aspect-square h-auto w-[164px] rounded-full" src="/me-avatar.webp" />
+      <img class="aspect-square h-auto w-[164px] rounded-full" src="/me-avatar.webp" alt="Me" />
       <div class="flex flex-1 flex-col gap-3">
         <div class="flex flex-col gap-[3px]">
           <span class="text-thick-typography text-5xl leading-[57px] font-bold tracking-[-0.1px]">

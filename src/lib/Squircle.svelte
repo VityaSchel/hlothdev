@@ -1,5 +1,6 @@
 <script lang="ts">
   import { browser } from '$app/environment'
+  import { isIos } from '$lib/utils'
   import { getSvgPath } from 'figma-squircle'
 
   let {
@@ -46,7 +47,7 @@
       'absolute top-0 left-0 z-[0] h-full w-full',
       classes,
       {
-        'backdrop-blur-thick': translucent,
+        'backdrop-blur-[48px]': translucent,
         'squircle-card': !browser
       }
     ]}
@@ -65,7 +66,7 @@
       <filter id="shadow-{uid}">
         <feGaussianBlur stdDeviation="0.25" />
         <feComponentTransfer>
-          <feFuncA type="gamma" exponent="0.5" amplitude="2" />
+          <feFuncA type="gamma" exponent={isIos() ? 0.9 : 0.5} amplitude="2" />
         </feComponentTransfer>
         <feComposite operator="out" in2="SourceGraphic" />
       </filter>

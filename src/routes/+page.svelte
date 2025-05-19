@@ -5,9 +5,10 @@
   import OnionMirrorCard from '$lib/widgets/OnionMirrorCard.svelte'
   import WebsitesSection from '$lib/widgets/WebsitesSection.svelte'
   import ProjectsSection from '$lib/widgets/ProjectsSection.svelte'
+  import PortfolioSection from '$lib/widgets/PortfolioSection.svelte'
 </script>
 
-<div class="flex flex-col gap-4 py-4 h-full">
+<div class="flex h-full flex-col gap-4 pt-4">
   <div class="flex gap-4 px-4">
     <MeCard />
     <div class="flex flex-[593] flex-col gap-4">
@@ -18,8 +19,8 @@
       </div>
     </div>
   </div>
-  <div class="flex flex-col justify-between flex-1">
+  <PortfolioSection>
     <WebsitesSection />
     <ProjectsSection />
-  </div>
+  </PortfolioSection>
 </div>

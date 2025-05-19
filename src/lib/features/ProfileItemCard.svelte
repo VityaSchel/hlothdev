@@ -10,7 +10,7 @@
 
 <button class="flex flex-col items-center gap-[6px] shrink-0 select-none">
   <img src={banner} alt="{name} banner" class="w-auto h-[115px] banner rounded-[5px]">
-  <span class="font-sf-pro-display font-medium text-xs">{name}</span>
+  <span class="font-sf-pro font-medium text-xs tracking-[-0.1px]">{name}</span>
 </button>
 
 <style>
