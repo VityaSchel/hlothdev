@@ -15,7 +15,9 @@
         </svg>
       </div>
       <div class="flex flex-1 flex-col gap-[6px]">
-        <span class="text-thick-typography text-[32px] leading-[38px] font-bold tracking-[-0.1px]">Donate</span>
+        <span class="text-thick-typography text-[32px] leading-[38px] font-bold tracking-[-0.1px]">
+          Donate
+        </span>
         <span class="text-thin-typography text-base leading-[19px] font-semibold tracking-[-0.1px]">
           Support open source development
         </span>

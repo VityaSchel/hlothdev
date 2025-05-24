@@ -92,7 +92,7 @@
     src={icon}
     alt={name}
     class={[
-      'h-[50px] w-[50px]',
+      'h-[50px] w-[50px] text-[0px]',
       {
         'brightness-[48%]': pressed
       }
