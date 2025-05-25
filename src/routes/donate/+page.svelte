@@ -10,7 +10,7 @@
   import LitecoinIcon from '$lib/icons/LitecoinIcon.svelte'
 </script>
 
-<PageWrapper title="donate.svelte">
+<PageWrapper title="donate.svelte" backUrl='/'>
   <div class="grid h-full grid-cols-3 grid-rows-2 gap-[25px]">
     <DonateCurrencyCard
       name="USDT TRC-20"
