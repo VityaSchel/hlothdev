@@ -20,10 +20,10 @@
   <span class="h-[43px] w-[43px] shrink-0 rounded-full bg-black p-2">
     <WavingHandIcon />
   </span>
-  <h1 class="ss07 text-[39px] leading-[39px] font-bold tracking-[0.2px]">
+  <h1 class="one-storey-a text-[39px] leading-[39px] font-bold tracking-[0.35px]">
     Hi, I’m Viktor, and my life is a roller coaster!
   </h1>
-  <Button class="flex items-center gap-[18px]">
+  <Button class="flex items-center gap-6">
     <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M2.16663 11.5H20.8333M20.8333 11.5L11.5 2.16666M20.8333 11.5L11.5 20.8333"
@@ -36,9 +36,3 @@
     Read more
   </Button>
 </XlCard>
-
-<style>
-  .ss07 {
-    font-feature-settings: 'ss07' on;
-  }
-</style>

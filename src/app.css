@@ -22,3 +22,8 @@ html {
   --font-sf-pro: 'SF Pro', -apple-system, BlinkMacSystemFont, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-mono: 'SF Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
+
+.one-storey-a {
+  /* SF Pro */
+  font-feature-settings: 'ss07' on;
+}

@@ -38,7 +38,7 @@
           href="https://hloth.dev{page.url.pathname}"
           aria-label="Current page"
           class={[
-            'flex w-0 overflow-clip transition-[width] duration-300 group-hover:w-5',
+            'flex w-0 overflow-clip transition-[width] duration-300 focus-visible:w-5 group-hover:w-5',
             {
               'brightness-[48%]': pressed
             }
