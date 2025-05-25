@@ -6,7 +6,7 @@
 
 <div
   class={[
-    'flex flex-1 flex-col gap-[5px] overflow-auto border border-x-0 border-b-0 transition-colors pb-4 rounded-b-[32px]',
+    'flex flex-1 flex-col gap-[5px] overflow-auto rounded-b-[32px] border border-x-0 border-b-0 pb-4 transition-colors',
     {
       'border-transparent': scrollY === 0,
       'border-white/10': scrollY > 0

@@ -1,6 +1,6 @@
 <script>
-  import ProfileItemCard from '$lib/features/ProfileItemCard.svelte'
   import ScrollableSection from '$lib/ui/ScrollableSection.svelte'
+  import ProfileItemCard from '$lib/widgets/ProfileItemCard.svelte'
 </script>
 
 <ScrollableSection name="Websites" childrenCount={10}>
