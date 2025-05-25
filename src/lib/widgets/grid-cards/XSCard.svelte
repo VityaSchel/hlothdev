@@ -11,7 +11,7 @@
 </script>
 
 <div
-  class={['col-span-1 row-span-1 rounded-[14px] bg-neutral-200 text-black', className]}
+  class={['col-span-1 row-span-1 rounded-[14px]', className]}
   {@attach squircle({ cornerRadius: 14, cornerSmoothing: 1 })}
 >
   {@render children?.()}
