@@ -29,7 +29,7 @@
       </button>
     {/if}
   </header>
-  <div class="p-[25px] flex-1">
+  <div class="p-[25px] flex-1 max-h-[calc(100%-52px)]">
     {@render children?.()}
   </div>
 </div>

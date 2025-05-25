@@ -10,9 +10,4 @@
       fill="#4C4C4C"
     />
   </g>
-  <defs>
-    <clipPath id="clip0_53_309">
-      <rect y="0.5" width="68" height="68" rx="34" fill="white" />
-    </clipPath>
-  </defs>
 </svg>
