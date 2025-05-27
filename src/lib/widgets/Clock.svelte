@@ -127,7 +127,7 @@
     width: math.div(1.5px, 114px) * 100%;
 
     span {
-      height: math.div(4.5px, 114px / 2) * 100%;
+      height: math.div(4.5px, math.div(114px, 2)) * 100%;
       width: 100%;
       border-radius: calc(infinity * 1px);
       background: #b0b0b0;
