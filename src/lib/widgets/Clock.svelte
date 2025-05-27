@@ -5,11 +5,19 @@
   const hourRotation = 360 / hours
   const secondRotation = minuteRotation
 
-  const timezone = 'UTC+4'
+  const utcOffsetHours: number = 4
+  const utcOffsetMinutes: number = 0
+  const timezone = `UTC${utcOffsetHours >= 0 ? '+' : ''}${utcOffsetHours}${
+    utcOffsetMinutes ? ':' + utcOffsetMinutes.toString().padStart(2, '0') : ''
+  }`
+  const utcHours = new Date().getUTCHours() + utcOffsetHours
+  const utcMinutes = new Date().getUTCMinutes() + utcOffsetMinutes
+  const utcSeconds = new Date().getUTCSeconds()
+  const utcMilliseconds = new Date().getUTCMilliseconds()
   const time = {
-    hours: 0,
-    minutes: 54,
-    seconds: 0
+    hours: utcHours,
+    minutes: utcMinutes + utcSeconds / 60,
+    seconds: utcSeconds + utcMilliseconds / 1000
   }
 </script>
 
@@ -31,47 +39,55 @@
       {@render hour(i * hourRotation + hourRotation, String(i + 1))}
     {/each}
     <div
-      class="center-aligned-element arrow h-[27.73%]"
-      style="--rotate: {hourRotation * (time.hours % 12)}deg;"
+      class="center-aligned-element arrow rotate-86400sec h-[27.73%] w-[4.2%]"
+      style="--initial-rotation: {hourRotation * (time.hours % 12)}deg;"
     >
-      <span class="bottom-2 h-[25px] w-[5px]"></span>
-      <span class="bottom-0 h-3 w-[2px]"></span>
-    </div>
-    <div class="center-aligned-element arrow" style="--rotate: {minuteRotation * time.minutes}deg;">
-      <span class="bottom-2 h-[47px] w-[5px]"></span>
-      <span class="bottom-0 h-3 w-[2px]"></span>
+      <span class="bottom-[24%] h-[78%] w-full"></span>
+      <span class="bottom-0 h-[36.36%] w-[40%]"></span>
     </div>
     <div
-      class="center-aligned-element arrow seconds"
-      style="--rotate: {secondRotation * time.seconds}deg;"
+      class="center-aligned-element arrow rotate-3600sec h-[46.21%] w-[4.2%]"
+      style="--initial-rotation: {minuteRotation * time.minutes}deg;"
     >
-      <span class="bottom-0 h-[57px] w-[0.5px]"></span>
-      <span class="top-0 h-2 w-[0.5px]"></span>
+      <span class="bottom-[14.54%] h-[90%] w-full"></span>
+      <span class="bottom-0 h-[21.81%] w-[40%]"></span>
+    </div>
+    <div
+      class="center-aligned-element arrow seconds rotate-60sec h-[49%] w-[1%]"
+      style="--initial-rotation: {secondRotation * time.seconds}deg;"
+    >
+      <span class="bottom-0 h-full w-full"></span>
+      <span class="top-full h-[14%] w-full"></span>
     </div>
     {#each { length: hours }, i}
       {#each { length: minutesBlock }, j}
         {@render tick(minuteRotation * (i * minutesBlock + j))}
       {/each}
     {/each}
-    <div class="dot h-[7px] w-[7px] bg-[#1c1c1e]"></div>
-    <div class="dot h-[4px] w-[4px] bg-[#ff9500]"></div>
-    <div class="dot top h-[2px] w-[2px] bg-white"></div>
-    <span class="left-1/2 -translate-x-1/2 absolute top-2/3 -translate-y-1/2 text-[10px] font-semibold">{timezone}</span>
+    <div class="dot h-[5.88%] w-[5.88%] bg-[#1c1c1e]"></div>
+    <div class="dot h-[3.36%] w-[3.36%] bg-[#ff9500]"></div>
+    <div class="dot top h-[1.68%] w-[1.68%] bg-white"></div>
+    <span
+      class="text-outline absolute top-2/3 left-1/2 z-[10] -translate-x-1/2 -translate-y-1/2 text-[10px] font-semibold text-white mix-blend-difference"
+    >
+      {timezone}
+    </span>
   </div>
 </div>
 
 <style lang="scss">
+  @use 'sass:math';
+
   .center-aligned-element {
     position: absolute;
-    top: 50%;
+    bottom: 50%;
     left: 50%;
     z-index: 1;
     display: flex;
-    transform-origin: center;
-    transform: translate(-50%, -50%) rotate(var(--rotate));
-    align-items: center;
+    transform-origin: bottom;
+    transform: translate(-50%, 0%) rotate(var(--rotate));
+    align-items: flex-end;
     justify-content: center;
-    flex-shrink: 0;
   }
 
   .border-aligned-element {
@@ -88,9 +104,6 @@
   }
 
   .arrow {
-    width: 0px;
-    height: 0px;
-
     span {
       background-color: #1c1c1e;
       border-radius: calc(infinity * 1px);
@@ -111,11 +124,11 @@
   }
 
   .tick {
-    width: 1.5px;
+    width: math.div(1.5px, 114px) * 100%;
 
     span {
-      height: 4px;
-      width: 1.5px;
+      height: math.div(4.5px, 114px / 2) * 100%;
+      width: 100%;
       border-radius: calc(infinity * 1px);
       background: #b0b0b0;
     }
@@ -127,12 +140,12 @@
 
   .hour {
     width: 0px;
-    padding-top: 4px;
+    padding-top: math.div(4px, 114px) * 100%;
 
     span {
       border-radius: calc(infinity * 1px);
       text-align: center;
-      font-size: 13px;
+      font-size: 13.5px;
       font-weight: bold;
       letter-spacing: -0.05em;
       user-select: none;
@@ -149,6 +162,35 @@
 
     &.top {
       z-index: 5;
+    }
+  }
+
+  .text-outline {
+    text-shadow: 0 0 1px black;
+  }
+
+  .rotate-60sec,
+  .rotate-3600sec,
+  .rotate-86400sec {
+    animation: rotate-360deg linear infinite;
+  }
+
+  .rotate-60sec {
+    animation-duration: 60s;
+  }
+  .rotate-3600sec {
+    animation-duration: 60s * 60;
+  }
+  .rotate-86400sec {
+    animation-duration: 60s * 60 * 24;
+  }
+
+  @keyframes rotate-360deg {
+    from {
+      transform: translateX(-50%) rotate(var(--initial-rotation));
+    }
+    to {
+      transform: translateX(-50%) rotate(calc(var(--initial-rotation) + 360deg));
     }
   }
 </style>
