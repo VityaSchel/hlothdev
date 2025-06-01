@@ -2,4 +2,4 @@
   import XsCard from '$lib/widgets/grid-cards/XSCard.svelte'
 </script>
 
-<XsCard />
+<XsCard bg --bg="url('/open-to-work.webp')" class="bg-cover" />
