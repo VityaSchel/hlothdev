@@ -15,7 +15,7 @@
   const utcSeconds = new Date().getUTCSeconds()
   const utcMilliseconds = new Date().getUTCMilliseconds()
   const time = {
-    hours: utcHours,
+    hours: utcHours + utcMinutes / 60,
     minutes: utcMinutes + utcSeconds / 60,
     seconds: utcSeconds + utcMilliseconds / 1000
   }
