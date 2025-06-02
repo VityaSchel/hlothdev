@@ -4,7 +4,22 @@
   import Button from '$lib/ui/Button.svelte'
 </script>
 
-<LgCard class="flex flex-col justify-end gap-[6px]">
+<LgCard
+  class="group flex flex-col justify-end gap-[6px] bg-cover bg-position-[30%]"
+  --bg="url(/privacy-rights.webp)"
+>
+  <span
+    class="mb-auto text-[9px] tracking-[-0.03px] text-[#5D5D5D] opacity-0 transition-opacity duration-300 group-hover:opacity-100 has-focus-within:opacity-100"
+  >
+    Photo by <a
+      href="https://unsplash.com/@srhhrbch"
+      class="font-medium"
+      target="_blank"
+      rel="nofollow noreferrer noopener"
+    >
+      Siarhei Horbach
+    </a>
+  </span>
   <h2 class="font-condensed text-[20px] leading-5 font-extrabold tracking-[-0.6px] uppercase">
     Privacy Rights
   </h2>
