@@ -18,7 +18,9 @@
   class="flex flex-col justify-between text-black"
 >
   <span class="h-[43px] w-[43px] shrink-0 rounded-full bg-black p-2">
-    <WavingHandIcon />
+    <span class="animate-rotate flex">
+      <WavingHandIcon />
+    </span>
   </span>
   <h1 class="one-storey-a text-[39px] leading-[39px] font-bold tracking-[0.35px]">
     Hi, I’m Viktor, and my life is a roller coaster!
@@ -36,3 +38,43 @@
     Read more
   </Button>
 </XlCard>
+
+<style>
+  .animate-rotate {
+    animation: rotate 1s cubic-bezier(0.61, 1, 0.88, 1);
+    transform-origin: 73% 80%;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    15% {
+      transform: rotate(-15deg);
+    }
+    40% {
+      transform: rotate(15deg);
+    }
+    60% {
+      transform: rotate(-15deg);
+    }
+    80% {
+      transform: rotate(15deg);
+    }
+    95% {
+      transform: rotate(0deg);
+    }
+  }
+
+  /* @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(15deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  } */
+</style>

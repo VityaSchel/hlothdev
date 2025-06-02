@@ -18,17 +18,24 @@
 
   const clipPathStyle = $derived(clipPath ? `clip-path: path('${clipPath}')` : undefined)
 
-  const images = [
-    ['favorite-things', 'Scroll to see my favorite things ➜'],
-    ['games', 'I love puzzle platformers, survival horrors and adventure sandboxes'],
-    ['cinema', 'I love criminals, dramas and detectives'],
-    ['music', 'Pop is always in my playlist'],
-    ['dish', 'The best Tom Yum I tasted was in my  home city local bar'],
-    ['influencer', 'I admire Jerma985 unique personality and love watching his livestreams'],
-    ['book', 'Steve Krug — Don’t make me think is a must-read for all web designers'],
-    ['series', 'Severance is my favorite TV series'],
-    ['quote', 'My favorite quote is one of my own'],
-    ['love', 'But my most favorite thing in life is love']
+  const images: { img: string; alt: string; href?: string }[] = [
+    { img: 'favorite-things', alt: 'Scroll to see my favorite things ➜' },
+    { img: 'games', alt: 'I love puzzle platformers, survival horrors and adventure sandboxes' },
+    { img: 'cinema', alt: 'I love criminals, dramas and detectives' },
+    { img: 'music', alt: 'Pop is always in my playlist' },
+    { img: 'dish', alt: 'The best Tom Yum I tasted was in my  home city local bar' },
+    {
+      img: 'influencer',
+      alt: 'I admire Jerma985 unique personality and love watching his livestreams'
+    },
+    { img: 'book', alt: 'Steve Krug — Don’t make me think is a must-read for all web designers' },
+    { img: 'series', alt: 'Severance is my favorite TV series' },
+    { img: 'quote', alt: 'My favorite quote is one of my own' },
+    {
+      img: 'love',
+      alt: 'But my most favorite thing in life is love',
+      href: 'https://www.instagram.com/devio.10/'
+    }
   ]
 
   let scroll = $state(0)
@@ -48,18 +55,25 @@
     bind:this={scrollContainer}
     onscroll={() => (scroll = scrollContainer.scrollLeft)}
   >
-    {#snippet img(src: string, alt: string)}
-      <div class="animate-scroll h-full w-full shrink-0 snap-center overflow-clip">
+    {#snippet img(src: string, alt: string, href: string | undefined = undefined)}
+      <svelte:element
+        this={href ? 'a' : 'div'}
+        rel={href ? 'noopener noreferrer' : undefined}
+        target={href ? '_blank' : undefined}
+        class="animate-scroll h-full w-full shrink-0 cursor-default snap-center overflow-clip rounded-4xl"
+        style={clipPathStyle}
+        {href}
+      >
         <img
           src="/favorite-things/{src}.webp"
           {alt}
           class="h-full w-full shrink-0 rounded-4xl object-cover"
           style={clipPathStyle}
         />
-      </div>
+      </svelte:element>
     {/snippet}
-    {#each images as [src, alt], i (i)}
-      {@render img(src, alt)}
+    {#each images as { img: src, alt, href }, i (i)}
+      {@render img(src, alt, href)}
     {/each}
   </div>
   {#if browser}
