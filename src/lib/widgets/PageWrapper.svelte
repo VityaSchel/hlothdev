@@ -5,12 +5,14 @@
     button,
     title,
     children,
-    backUrl
+    backUrl,
+    class: className
   }: {
     button?: string
     title: string
     children?: import('svelte').Snippet
     backUrl: string
+    class?: import('svelte/elements').ClassValue
   } = $props()
 
   // JS ONLY:
@@ -18,12 +20,17 @@
   let pressed = $state(false)
 </script>
 
-<div class="flex h-full w-full flex-col">
+<div class={['flex h-full w-full flex-col', className]} style="view-transition-name: expanding-card;">
   <header
     class="border-px flex h-[52px] w-full shrink-0 items-center justify-between border border-x-0 border-t-0 border-white/25 px-[15px] py-[12px]"
   >
     <div class="ml-[3px] flex flex-row items-center gap-2">
-      <a href={backUrl} aria-label="Back to previous page" class="flex justify-center items-center h-3 w-3 rounded-full active:text-[#EAEAEA] text-white/55" draggable="false">
+      <a
+        href={backUrl}
+        aria-label="Back to previous page"
+        class="flex h-3 w-3 items-center justify-center rounded-full text-white/55 active:text-[#EAEAEA]"
+        draggable="false"
+      >
         <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g style="mix-blend-mode:plus-darker">
             <path
@@ -38,7 +45,7 @@
           href="https://hloth.dev{page.url.pathname}"
           aria-label="Current page"
           class={[
-            'flex w-0 overflow-clip transition-[width] duration-300 focus-visible:w-5 group-hover:w-5',
+            'flex w-0 overflow-clip transition-[width] duration-300 group-hover:w-5 focus-visible:w-5',
             {
               'brightness-[48%]': pressed
             }

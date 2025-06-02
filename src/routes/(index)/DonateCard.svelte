@@ -2,9 +2,12 @@
   import Squircle from '$lib/Squircle.svelte'
 </script>
 
-<div class="drop-background-shadow relative max-w-full flex-[412] rounded-[16px]">
+<a
+  href="/donate"
+  class="drop-background-shadow vtn-expanding-card relative max-w-full flex-[412] cursor-default rounded-[16px]"
+>
   <Squircle class="bg-black/10" cornerRadius={16} arrow>
-    <div class="flex h-full items-center gap-[18px] px-4 py-4 select-none">
+    <div class="flex h-full items-center gap-[18px] rounded-[16px] px-4 py-4 select-none">
       <div class="flex h-16 w-16 items-center justify-center rounded-full bg-[#3B82F7]">
         <svg height="33" viewBox="0 0 39.8125 70.4688">
           <path
@@ -24,10 +27,13 @@
       </div>
     </div>
   </Squircle>
-</div>
+</a>
 
 <style>
   .drop-background-shadow {
     box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.25);
+  }
+  .vtn-expanding-card {
+    view-transition-name: expanding-card;
   }
 </style>

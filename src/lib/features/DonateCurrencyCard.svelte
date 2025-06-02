@@ -30,8 +30,6 @@
 
   let addressHeight: number = $state(0)
   let clickToPayHeight: number = $state(0)
-  const expandedHeight = $derived(addressHeight + clickToPayHeight)
-  $effect(() => console.log(expandedHeight))
   let collapseAddress = $state(true)
 </script>
 
