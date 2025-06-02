@@ -18,7 +18,7 @@
 </script>
 
 <PageWrapper viewId="me">
-  <SubpageWrapper title="me.svelte" backUrl="/">
+  <SubpageWrapper title="me.svelte" backUrl="/" button={{ href: 'https://cv.hloth.dev', external: true, text: 'Open Developer Resume' }}>
     <div class="grid h-full grid-flow-col grid-cols-10 grid-rows-4 gap-4">
       <GreetingsCard />
       <LgbtqiaPlusSupportCard />

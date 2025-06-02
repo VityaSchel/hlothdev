@@ -8,7 +8,7 @@
     backUrl,
     class: className
   }: {
-    button?: string
+    button?: { href: string; external?: boolean; text: string }
     title: string
     children?: import('svelte').Snippet
     backUrl: string
@@ -70,9 +70,14 @@
       </div>
     </div>
     {#if button}
-      <button class="rounded-md border border-[#8a8070] px-[7px] py-[3px] text-[13px]">
-        {button}
-      </button>
+      <a
+        href={button.href}
+        rel={button.external ? 'noreferrer noopener' : undefined}
+        target={button.external ? '_blank' : undefined}
+        class="flex h-[22px] items-center justify-center rounded-md border border-[#b6a68e]/40 px-[7px] text-[13px] text-[#ede1cf]/90 hover:border-[#9b8a76] hover:bg-[#9b8a76] active:bg-[#af9c86] active:border-[#af9c86] active:text-[#f7efe2]"
+      >
+        {button.text}
+      </a>
     {/if}
   </header>
   <div class="max-h-[calc(100%-52px)] flex-1 p-[25px]">

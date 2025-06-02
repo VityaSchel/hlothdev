@@ -5,17 +5,8 @@
 </script>
 
 <XlCard
-  --bg="radial-gradient(
-      63.89% 64.44% at 89% 63%,
-      rgb(204, 123, 241),
-      rgb(208, 138, 240) 12.019%,
-      rgb(228, 208, 233) 34.615%,
-      rgb(225, 212, 231) 51.923%,
-      rgb(226, 206, 236) 59.135%,
-      rgb(226, 206, 236) 77.885%,
-      rgb(232, 232, 232) 100%
-    );"
   class="flex flex-col justify-between text-black"
+  bg="radial-gradient(63.89% 64.44% at 89% 63%,rgb(204, 123, 241),rgb(208, 138, 240) 12.019%,rgb(228, 208, 233) 34.615%,rgb(225, 212, 231) 51.923%,rgb(226, 206, 236) 59.135%,rgb(226, 206, 236) 77.885%,rgb(232, 232, 232) 100%);"
 >
   <span class="h-[43px] w-[43px] shrink-0 rounded-full bg-black p-2">
     <span class="animate-rotate flex">

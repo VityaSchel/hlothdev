@@ -12,11 +12,8 @@
   }
 }
 
-::view-transition-group(home) {
-  border-radius: 32px;
-}
-
-::view-transition-group(donate) {
+::view-transition-group(donate),
+::view-transition-group(me) {
   animation-duration: 350ms;
   animation-timing-function: ease-outcubic-bezier(0.16, 1, 0.3, 1);
   border-radius: 32px;

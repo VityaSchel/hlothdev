@@ -2,9 +2,9 @@
   import Squircle from '$lib/Squircle.svelte'
 </script>
 
-<div class="drop-background-shadow relative max-w-full flex-[743] rounded-[16px]">
+<a href="/me" class="drop-background-shadow relative max-w-full flex-[743] rounded-[16px] cursor-default" style="view-transition-name: me;">
   <Squircle class="bg-black/10" cornerRadius={16} arrow>
-    <div class="flex items-center gap-8 px-8 py-9 select-none">
+    <div class="flex items-center gap-8 px-8 py-9 select-none rounded-[16px]">
       <img class="aspect-square h-auto w-[164px] rounded-full" src="/me-avatar.webp" alt="Me" />
       <div class="flex flex-1 flex-col gap-3">
         <div class="flex flex-col gap-[3px]">
@@ -21,7 +21,7 @@
       </div>
     </div>
   </Squircle>
-</div>
+</a>
 
 <style>
   .drop-background-shadow {
