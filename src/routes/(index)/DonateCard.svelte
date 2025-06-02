@@ -4,7 +4,8 @@
 
 <a
   href="/donate"
-  class="drop-background-shadow vtn-expanding-card relative max-w-full flex-[412] cursor-default rounded-[16px]"
+  class="drop-background-shadow relative max-w-full flex-[412] cursor-default rounded-[16px]"
+  style="view-transition-name: donate;"
 >
   <Squircle class="bg-black/10" cornerRadius={16} arrow>
     <div class="flex h-full items-center gap-[18px] rounded-[16px] px-4 py-4 select-none">
@@ -32,8 +33,5 @@
 <style>
   .drop-background-shadow {
     box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.25);
-  }
-  .vtn-expanding-card {
-    view-transition-name: expanding-card;
   }
 </style>

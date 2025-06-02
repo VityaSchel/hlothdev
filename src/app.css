@@ -1,8 +1,23 @@
-@view-transition {
-  navigation: auto;
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: none;
+  }
 }
 
-::view-transition-group(expanding-card) {
-  animation-duration: 2s;
-  animation-timing-function: ease-in-out;
+@media (prefers-reduced-motion) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}
+
+::view-transition-group(home) {
+  border-radius: 32px;
+}
+
+::view-transition-group(donate) {
+  animation-duration: 350ms;
+  animation-timing-function: ease-outcubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 32px;
 }

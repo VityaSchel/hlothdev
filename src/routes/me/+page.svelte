@@ -1,5 +1,6 @@
 <script>
   import PageWrapper from '$lib/widgets/PageWrapper.svelte'
+  import SubpageWrapper from '$lib/widgets/SubpageWrapper.svelte'
   import GreetingsCard from './GreetingsCard.svelte'
   import LgbtqiaPlusSupportCard from './LGBTQIAPlusSupportCard.svelte'
   import UkraineSupportCard from './UkraineSupportCard.svelte'
@@ -16,21 +17,23 @@
   import EducationCard from './EducationCard.svelte'
 </script>
 
-<PageWrapper title="me.svelte" backUrl="/">
-  <div class="grid h-full grid-flow-col grid-cols-10 grid-rows-4 gap-4">
-    <GreetingsCard />
-    <LgbtqiaPlusSupportCard />
-    <UkraineSupportCard />
-    <TravelAndExploreCard />
-    <SpeakingLanguagesCard />
-    <PrivacySupportCard />
-    <LocalTimeCard />
-    <HlothCharityCard />
-    <GitHubRepositoriesCard />
-    <FunFactAboutMeCard />
-    <OpenToWorkCard />
-    <FavoriteThingsCard />
-    <EducationCard />
-    <ReadyToRelocateCard />
-  </div>
+<PageWrapper viewId="me">
+  <SubpageWrapper title="me.svelte" backUrl="/">
+    <div class="grid h-full grid-flow-col grid-cols-10 grid-rows-4 gap-4">
+      <GreetingsCard />
+      <LgbtqiaPlusSupportCard />
+      <UkraineSupportCard />
+      <TravelAndExploreCard />
+      <SpeakingLanguagesCard />
+      <PrivacySupportCard />
+      <LocalTimeCard />
+      <HlothCharityCard />
+      <GitHubRepositoriesCard />
+      <FunFactAboutMeCard />
+      <OpenToWorkCard />
+      <FavoriteThingsCard />
+      <EducationCard />
+      <ReadyToRelocateCard />
+    </div>
+  </SubpageWrapper>
 </PageWrapper>
