@@ -15,8 +15,10 @@ html {
   --color-thick-typography: #e5e5e5;
   --color-thin-typography: #7c7c7c;
   --color-thick: rgba(36, 36, 36, 0.35);
+  --color-thick-light: rgba(246, 246, 246, 0.72);
   --color-tooltip: rgba(50, 50, 50, 0.48);
   --color-thin: rgba(0, 0, 0, 0.1);
+  --color-thin-light: rgba(246, 246, 246, 0.48);
   --blur-thick: 128px;
   --blur-thin: 30px;
   --font-sf-pro:
