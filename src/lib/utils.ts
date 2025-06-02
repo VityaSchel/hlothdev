@@ -3,4 +3,4 @@ export function isIos() {
 }
 
 export const transition = (clampStart: number, clampEnd: number, x: number) =>
-  clampStart + (clampEnd - clampStart) * Math.max(0, Math.min(x, 1))
+  clampStart + (clampEnd - clampStart) * x

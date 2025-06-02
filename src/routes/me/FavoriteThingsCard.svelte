@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { browser } from '$app/environment'
   import { transition } from '$lib/utils'
   import { getSvgPath } from 'figma-squircle'
   import { onMount } from 'svelte'
@@ -37,7 +38,7 @@
 </script>
 
 <div
-  class="relative col-span-2 row-span-1 rounded-4xl text-white"
+  class="group relative col-span-2 row-span-1 rounded-4xl text-white"
   bind:clientWidth={width}
   bind:clientHeight={height}
   style={clipPathStyle}
@@ -61,22 +62,22 @@
       {@render img(src, alt)}
     {/each}
   </div>
-  <div
-    class="absolute bottom-[5px] z-[1] flex h-[2px] w-full items-center justify-center gap-[2px]"
-  >
-    {#each images, i}
-      <span
-        class="h-[2px] w-[2px] rounded-full backdrop-blur-3xl"
-        style="background-color: rgba(246, 246, 246, {transition(
-          // 0.48,
-          // 0.72,
-          0,
-          1,
-          (1 - (i - cardInViewport))
-        )})"
-      ></span>
-    {/each}
-  </div>
+  {#if browser}
+    <div
+      class="absolute bottom-[5px] z-[1] flex h-[2px] w-full items-center justify-center gap-[2px] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+    >
+      {#each images, i}
+        <span
+          class="h-[2px] w-[2px] rounded-full backdrop-blur-3xl"
+          style="background-color: rgba(246, 246, 246, {transition(
+            0.3,
+            0.72,
+            Math.max(0, 1 - Math.abs(cardInViewport - i))
+          )})"
+        ></span>
+      {/each}
+    </div>
+  {/if}
 </div>
 
 <style lang="scss">
