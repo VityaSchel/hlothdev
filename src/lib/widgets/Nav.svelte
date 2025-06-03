@@ -12,7 +12,7 @@
   } | null = $state(null)
 </script>
 
-<nav class="relative h-[65px] rounded-[16px] shrink-0" onpointerleave={() => (selectedNavItem = null)}>
+<nav class="relative h-[65px] rounded-[16px] shrink-0 select-none" onpointerleave={() => (selectedNavItem = null)}>
   {#if selectedNavItem !== null}
     <Tooltip {selectedNavItem}>{selectedNavItem.name}</Tooltip>
   {/if}

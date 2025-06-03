@@ -45,7 +45,7 @@
 </script>
 
 <div
-  class="group relative col-start-9 col-end-11 row-start-2 row-end-3 rounded-4xl text-white"
+  class="group relative col-start-9 col-end-11 row-start-2 row-end-3 rounded-4xl text-white select-none"
   bind:clientWidth={width}
   bind:clientHeight={height}
   style={clipPathStyle}
@@ -78,7 +78,7 @@
   </div>
   {#if browser}
     <div
-      class="absolute bottom-[5px] z-[1] flex h-[2px] w-full items-center justify-center gap-[2px] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+      class="absolute bottom-[5px] z-[1] flex h-[2px] w-full items-center justify-center gap-[2px] opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none"
     >
       {#each images, i}
         <span

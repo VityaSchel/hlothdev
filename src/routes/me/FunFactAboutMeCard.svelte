@@ -4,7 +4,7 @@
 
 <XsCard class="col-start-8 col-end-9 row-start-4 row-end-5 flex flex-col overflow-clip">
   <div
-    class="flex h-[31px] w-full shrink-0 items-center bg-gradient-to-b from-[#FED700] to-[#E6A600]"
+    class="flex h-[31px] px-2 w-full shrink-0 items-center bg-gradient-to-b from-[#FED700] to-[#E6A600]"
   >
     <span class="block w-full text-center text-[11px] font-bold tracking-tight text-black">
       Fun fact about me

@@ -27,5 +27,5 @@
     I advocate for privacy and prefer selfhosting over SAAS. All my personal websites are available
     in lokinet under hloth.loki domain.
   </p>
-  <Button variant="md" class="small-caps">Learn about my commitment</Button>
+  <Button variant="md" class="small-caps select-none">Learn about my commitment</Button>
 </LgCard>

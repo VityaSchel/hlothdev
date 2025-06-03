@@ -22,8 +22,8 @@
       'col-start-1 col-end-4 row-start-1 row-end-4': !expanded
     }
   ]}
-  bg="radial-gradient(63.89% 64.44% at 89% 63%,rgb(204, 123, 241),rgb(208, 138, 240) 12.019%,rgb(228, 208, 233) 34.615%,rgb(225, 212, 231) 51.923%,rgb(226, 206, 236) 59.135%,rgb(226, 206, 236) 77.885%,rgb(232, 232, 232) 100%);"
-  viewId={transition ? "about-me" : undefined}
+  bg="radial-gradient(circle farthest-side at 89% 63%,rgb(204, 123, 241),rgb(208, 138, 240) 12.019%,rgb(228, 208, 233) 34.615%,rgb(225, 212, 231) 51.923%,rgb(226, 206, 236) 59.135%,rgb(226, 206, 236) 77.885%,rgb(232, 232, 232) 100%);"
+  viewId={transition ? 'about-me' : undefined}
 >
   <div
     class="flex h-full w-full flex-col justify-between"
@@ -39,7 +39,7 @@
         Hi, I’m Viktor, and my life is a roller coaster!
       </h1>
       <a href="/me/about" class="flex w-full rounded-[30px]">
-        <Button class="flex w-full items-center gap-6" tabindex={-1}>
+        <Button class="flex w-full items-center gap-6 select-none" tabindex={-1}>
           <svg
             width="23"
             height="23"

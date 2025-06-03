@@ -26,7 +26,8 @@
     clickToPay?: ClickToPay
   } = $props()
 
-  // I thought about using interpolate-size but 1) it's only implemented in Chrome/Edge and 2) it does not work with text-overflow: ellipsis
+  // I thought about using interpolate-size but 1) it's only implemented in Chrome/Edge
+  // and 2) it does not work with text-overflow: ellipsis
 
   let addressHeight: number = $state(0)
   let clickToPayHeight: number = $state(0)
@@ -79,7 +80,7 @@
               {@const name = key as keyof ClickToPay}
               <a
                 href={value}
-                class="flex h-[40px] w-auto p-1 px-2"
+                class="flex h-[40px] w-auto p-1 px-2 safari-fix-svgs-please"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -104,5 +105,8 @@
 <style>
   .coins {
     mask-image: linear-gradient(to bottom, black 0%, black calc(100% - 20px), transparent 100%);
+  }
+  .safari-fix-svgs-please :global(svg) {
+    height: 40px;
   }
 </style>

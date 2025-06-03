@@ -15,7 +15,7 @@
 </script>
 
 <Portal>
-  <div class="fixed top-0 left-0 z-[5] h-full w-full pointer-events-none">
+  <div class="fixed top-0 left-0 z-[5] h-full w-full pointer-events-none select-none">
     <div
       class="pointer-events-none absolute z-[5] flex flex-col items-center -translate-x-1/2 -translate-y-1/2"
       style="left: {selectedNavItem.x}px; top: {selectedNavItem.y}px"
