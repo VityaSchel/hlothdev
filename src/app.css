@@ -20,7 +20,9 @@
 ::view-transition-group(donate),
 ::view-transition-group(me),
 ::view-transition-group(about-me),
-::view-transition-group(about-me-content) {
+::view-transition-group(about-me-content),
+::view-transition-group(privacy-rights),
+::view-transition-group(privacy-rights-content) {
   animation-duration: 350ms;
   animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -31,19 +33,25 @@
   overflow: clip;
 }
 
-::view-transition-old(about-me),
-::view-transition-new(about-me) {
-  animation: none;
+::view-transition-group(privacy-rights),
+::view-transition-group(privacy-rights-content) {
+  border-radius: 13px;
+  overflow: clip;
 }
 
 ::view-transition-old(about-me),
-::view-transition-new(about-me) {
+::view-transition-new(about-me),
+::view-transition-old(privacy-rights),
+::view-transition-new(privacy-rights) {
+  animation: none;
   width: 100%;
   height: 100%;
 }
 
 ::view-transition-old(about-me-content),
-::view-transition-new(about-me-content) {
+::view-transition-new(about-me-content),
+::view-transition-old(privacy-rights-content),
+::view-transition-new(privacy-rights-content) {
   width: auto;
   height: 100%;
 }
@@ -51,8 +59,26 @@
 ::view-transition-old(about-me):only-child,
 ::view-transition-new(about-me):only-child,
 ::view-transition-old(about-me-content):only-child,
-::view-transition-new(about-me-content):only-child {
+::view-transition-new(about-me-content):only-child,
+::view-transition-old(privacy-rights):only-child,
+::view-transition-new(privacy-rights):only-child,
+::view-transition-old(privacy-rights-content):only-child,
+::view-transition-new(privacy-rights-content):only-child {
   animation: none;
   animation-duration: 1ms;
   display: none;
+}
+
+::view-transition-group(privacy-rights-content-ignore),
+::view-transition-old(privacy-rights-content-ignore),
+::view-transition-new(privacy-rights-content-ignore) {
+  animation: none;
+  animation-duration: 1ms;
+  display: none;
+}
+
+::view-transition-group(privacy-rights) {
+  background-image: url(/privacy-rights.webp);
+  background-size: cover;
+  background-position: 30%;
 }

@@ -4,7 +4,7 @@
   import UkraineSupportCard from './UkraineSupportCard.svelte'
   import TravelAndExploreCard from './TravelAndExploreCard.svelte'
   import SpeakingLanguagesCard from './SpeakingLanguagesCard.svelte'
-  import PrivacySupportCard from './PrivacySupportCard.svelte'
+  import PrivacySupportCard from './PrivacyRightsCard.svelte'
   import LocalTimeCard from './LocalTimeCard.svelte'
   import HlothCharityCard from './HlothCharityCard.svelte'
   import GitHubRepositoriesCard from './GitHubRepositoriesCard.svelte'
@@ -21,6 +21,7 @@
 <UkraineSupportCard />
 <TravelAndExploreCard />
 <SpeakingLanguagesCard />
+<PrivacySupportCard inert />
 <PrivacySupportCard />
 <LocalTimeCard />
 <HlothCharityCard />

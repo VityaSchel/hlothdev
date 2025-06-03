@@ -11,10 +11,10 @@
   <h4 class="text-xs font-semibold tracking-[-0.075em]">I’m ready to relocate</h4>
 
   <div
-    class="absolute top-0 left-0 h-full w-full bg-black/70 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+    class="absolute top-0 left-0 h-full w-full bg-black/70 opacity-0 transition-opacity duration-300 group-hover:opacity-100 overflow-auto"
   >
     <p
-      class="relative z-[1] flex w-full flex-col gap-1 p-2 text-[11px] leading-[14px] font-medium tracking-tighter opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+      class="relative z-[1] flex w-full flex-col gap-1 p-2 text-[11px] leading-[14px] font-medium tracking-[-0.051em] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
     >
       <span>
         <span class="mr-0.5 font-semibold text-[#28c841]">best:</span>

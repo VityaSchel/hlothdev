@@ -21,17 +21,22 @@ html {
   --color-thin-light: rgba(246, 246, 246, 0.48);
   --blur-thick: 128px;
   --blur-thin: 30px;
-  --font-sf-pro:
-    'SF Pro', -apple-system, BlinkMacSystemFont, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-    'Segoe UI Symbol';
+  --emoji-font: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  --default-fonts:
+    -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif, var(--emoji-font);
+  --font-sf-pro: 'SF Pro', SF-Pro, var(--default-fonts);
   --font-mono:
     'SF Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
-    'Courier New', monospace;
+    'Courier New', monospace, var(--default-fonts);
   --font-condensed:
+    'Sofia Sans Condensed Variable', 'Sofia Sans Condensed', 'Sofia Sans Extra Condensed Variable',
+    'Sofia Extra Sans Condensed', 'Impact', var(--default-fonts);
+  --font-extra-condensed:
     'Sofia Sans Extra Condensed Variable', 'Sofia Sans Extra Condensed',
-    'Sofia Sans Condensed Variable', 'Sofia Sans Condensed', 'Impact', Roboto, sans-serif;
-  --font-display: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-  'Segoe UI Symbol';
+    'Sofia Sans Condensed Variable', 'Sofia Sans Condensed', 'Impact', var(--default-fonts);
+  --font-display: 'SF Pro Display', SF-Pro-Display, var(--default-fonts);
+  --font-compact-display:
+    'SF Compact Display', SF-Compact-Display, 'SF Compact', SF-Compact, var(--default-fonts);
 }
 
 .one-storey-a {

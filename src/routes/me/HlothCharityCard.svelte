@@ -11,7 +11,7 @@
   rel="noopener noreferrer"
   target="_blank"
 >
-  <span class="text-xl leading-6 font-semibold select-none">
+  <span class="text-xl leading-6 font-semibold select-none one-storey-a">
     hloth
     <br />
     charity

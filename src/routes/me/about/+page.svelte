@@ -67,17 +67,4 @@
   .indent-hanging {
     text-indent: -0.35em;
   }
-  /* .animate-opacity {
-    opacity: 0;
-    animation: fadeIn 0.5s forwards;
-    animation-delay: 20ms;
-  }
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  } */
 </style>
