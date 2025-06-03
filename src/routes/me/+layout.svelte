@@ -26,6 +26,7 @@
   >
     <div class="relative grid h-full grid-flow-col grid-cols-10 grid-rows-4 gap-4">
       <GreetingsCard />
+      <GreetingsCard transition />
       {#if page.route.id === '/me'}
         <LgbtqiaPlusSupportCard />
         <UkraineSupportCard />

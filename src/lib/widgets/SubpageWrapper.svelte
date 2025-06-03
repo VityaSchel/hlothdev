@@ -28,7 +28,7 @@
       <a
         href={backUrl}
         aria-label="Back to previous page"
-        class="flex h-3 w-3 items-center justify-center rounded-full text-white/55 active:text-[#EAEAEA]"
+        class="flex h-3 w-3 cursor-default items-center justify-center rounded-full text-white/55 active:text-[#EAEAEA]"
         draggable="false"
       >
         <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -45,7 +45,7 @@
           href="https://hloth.dev{page.url.pathname}"
           aria-label="Current page"
           class={[
-            'flex w-0 overflow-clip transition-[width] duration-300 group-hover:w-5 focus-visible:w-5',
+            'flex w-0 cursor-default overflow-clip transition-[width] duration-300 group-hover:w-5 focus-visible:w-5',
             {
               'brightness-[48%]': pressed
             }
@@ -74,7 +74,7 @@
         href={button.href}
         rel={button.external ? 'noreferrer noopener' : undefined}
         target={button.external ? '_blank' : undefined}
-        class="flex h-[22px] items-center justify-center rounded-md border border-[#b6a68e]/40 px-[7px] text-[13px] text-[#ede1cf]/90 hover:border-[#9b8a76] hover:bg-[#9b8a76] active:bg-[#af9c86] active:border-[#af9c86] active:text-[#f7efe2]"
+        class="flex h-[22px] items-center justify-center rounded-md border border-[#b6a68e]/40 px-[7px] text-[13px] text-[#ede1cf]/90 hover:border-[#9b8a76] hover:bg-[#9b8a76] active:border-[#af9c86] active:bg-[#af9c86] active:text-[#f7efe2]"
       >
         {button.text}
       </a>

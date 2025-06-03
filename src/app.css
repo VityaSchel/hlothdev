@@ -46,3 +46,12 @@
   width: auto;
   height: 100%;
 }
+
+::view-transition-old(about-me):only-child,
+::view-transition-new(about-me):only-child,
+::view-transition-old(about-me-content):only-child,
+::view-transition-new(about-me-content):only-child {
+  animation: none;
+  animation-duration: 1ms;
+  display: none;
+}

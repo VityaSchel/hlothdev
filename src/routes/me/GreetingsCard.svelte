@@ -1,10 +1,16 @@
 <script lang="ts">
+  import { page } from '$app/state'
   import XlCard from '$lib/widgets/grid-cards/XLCard.svelte'
   import WavingHandIcon from '$lib/icons/WavingHandIcon.svelte'
   import Button from '$lib/ui/Button.svelte'
-  import { page } from '$app/state'
 
-  let expanded = $derived(page.route.id === '/me/about')
+  let {
+    transition
+  }: {
+    transition?: boolean
+  } = $props()
+
+  let expanded = $derived(page.route.id === '/me/about' && transition)
 </script>
 
 <XlCard
@@ -17,11 +23,11 @@
     }
   ]}
   bg="radial-gradient(63.89% 64.44% at 89% 63%,rgb(204, 123, 241),rgb(208, 138, 240) 12.019%,rgb(228, 208, 233) 34.615%,rgb(225, 212, 231) 51.923%,rgb(226, 206, 236) 59.135%,rgb(226, 206, 236) 77.885%,rgb(232, 232, 232) 100%);"
-  viewId="about-me"
+  viewId={transition ? "about-me" : undefined}
 >
   <div
-    style="view-transition-name: about-me-content;"
     class="flex h-full w-full flex-col justify-between"
+    style:view-transition-name={transition ? 'about-me-content' : undefined}
   >
     {#if expanded}{:else}
       <span class="h-[43px] w-[43px] shrink-0 rounded-full bg-black p-2">
