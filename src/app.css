@@ -25,7 +25,8 @@
   animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-::view-transition-group(about-me) {
+::view-transition-group(about-me),
+::view-transition-group(about-me-content) {
   border-radius: 55px;
   overflow: clip;
 }

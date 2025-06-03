@@ -21,7 +21,7 @@
   }
 </script>
 
-<div class="aspect-square h-auto w-full rounded-full bg-white p-[2.1%] text-[#1c1c1e] safari-fix-aspect-ratio-please">
+<div class="w-full h-full rounded-full bg-white p-[2.1%] text-[#1c1c1e]">
   <div class="relative h-full w-full">
     {#snippet tick(rotation: number)}
       <div class="border-aligned-element tick" style="--rotate: {rotation}deg;">
@@ -192,9 +192,5 @@
     to {
       transform: translateX(-50%) rotate(calc(var(--initial-rotation) + 360deg));
     }
-  }
-
-  .safari-fix-aspect-ratio-please {
-    object-fit: contain;
   }
 </style>

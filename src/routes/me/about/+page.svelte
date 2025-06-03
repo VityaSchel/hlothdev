@@ -3,7 +3,7 @@
 </script>
 
 <GreetingsCard>
-  <div class="animate-opacity flex h-full">
+  <div class="flex h-full" style="view-transition-name: about-me-content;">
     <div class="flex flex-1 items-start gap-[34px] overflow-auto p-[34px]">
       <nav class="sticky top-0 left-0 z-[1] shrink-0">
         <a
@@ -67,7 +67,7 @@
   .indent-hanging {
     text-indent: -0.35em;
   }
-  .animate-opacity {
+  /* .animate-opacity {
     opacity: 0;
     animation: fadeIn 0.5s forwards;
     animation-delay: 20ms;
@@ -79,5 +79,5 @@
     to {
       opacity: 1;
     }
-  }
+  } */
 </style>

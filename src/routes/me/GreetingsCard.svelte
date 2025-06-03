@@ -76,9 +76,9 @@
     {@render content()}
   {/if}
 </XlCard>
-{#if expanded}
+<!-- {#if expanded}
   {@render content(true)}
-{/if}
+{/if} -->
 
 <style>
   .animate-rotate {
