@@ -71,7 +71,7 @@
             class="h-[20.5px] object-cover object-right"
           />
         </a>
-        <span class="select-none">
+        <span class="select-none" aria-hidden="true">
           {title}
         </span>
       </div>

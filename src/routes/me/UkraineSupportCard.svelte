@@ -5,6 +5,7 @@
 <SmCard
   class="group col-start-4 col-end-6 row-start-1 row-end-2 flex flex-col justify-between bg-cover p-4"
   --bg="url(/support-ukraine.webp)"
+  aria-label="Background image: photo of a couple wearing traditional Ukrainian embroidered clothing, holding hands in a field"
 >
   <span
     class="text-[9px] font-normal tracking-[-0.3px] opacity-0 transition-opacity duration-300 group-hover:opacity-100 has-focus-within:opacity-100"

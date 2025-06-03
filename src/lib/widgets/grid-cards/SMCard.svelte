@@ -1,21 +1,26 @@
-<script lang="ts">
+<script lang="ts" generics="T extends keyof import('svelte/elements').SvelteHTMLElements">
   import { squircle } from '$lib/squircle'
 
   let {
+    tag = 'div' as T,
     class: className,
-    children
+    children,
+    ...props
   }: {
+    tag?: T
     class?: import('svelte/elements').SvelteHTMLElements['div']['class']
     children?: import('svelte').Snippet
-  } = $props()
+  } & import('svelte/elements').SvelteHTMLElements[T] = $props()
 </script>
 
-<div
+<svelte:element
+  this={tag}
   class={['bg col-span-2 row-span-1 rounded-4xl bg-neutral-600 text-white', className]}
   {@attach squircle({ cornerRadius: 32, cornerSmoothing: 0.6 })}
+  {...props}
 >
   {@render children?.()}
-</div>
+</svelte:element>
 
 <style>
   .bg {

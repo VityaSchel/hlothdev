@@ -21,16 +21,18 @@ Feel free to review the code and contact me if you have any questions!
 
 ## Contact me
 
-Preferred contact method: via Telegram ([@hlothdev](https://t.me/hlothdev))
+**Preferred contact method**: via Matrix ([@hloth:hloth.dev](https://matrix.to/#/@hloth:hloth.dev))
 
 Ways to contact me securely:
 
-- Create a "**secret**" Telegram dialogue
-- Send me a mail to my selfhosted email server (hi@hloth.dev)
-- Send me a message in [Session](https://getsession.org): `057aeb66e45660c3bdfb7c62706f6440226af43ec13f3b6f899c1dd4db1b8fce5b`
+- Create a **"secret"** Telegram dialogue and send a message to ([@hlothdev](https://t.me/hlothdev))
+- Send me a **PGP-encrypted mail** to my selfhosted email server ([hi@hloth.dev](mailto:hi@hloth.dev))
+- Send me a message in [Session messenger](https://getsession.org) (my ONS is `hloth`, my Session/Account ID is `057aeb66e45660c3bdfb7c62706f6440226af43ec13f3b6f899c1dd4db1b8fce5b`)
 
 <details> 
-  <summary>My GPG public key for encrypting your messages and verifying my signature</summary>
+  <summary>My PGP public key for encrypting your messages and verifying my signature</summary>
+
+You can also find it at [hloth.dev/pgp](https://hloth.dev/pgp)
 
 ```
 -----BEGIN PGP PUBLIC KEY BLOCK-----

@@ -9,7 +9,6 @@
     ...props
   }: {
     tag?: T
-    class?: import('svelte/elements').SvelteHTMLElements['div']['class']
     children?: import('svelte').Snippet
     bg?: boolean
   } & import('svelte/elements').SvelteHTMLElements[T] = $props()

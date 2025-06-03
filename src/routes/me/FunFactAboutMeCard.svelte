@@ -6,9 +6,9 @@
   <div
     class="flex h-[31px] px-2 w-full shrink-0 items-center bg-gradient-to-b from-[#FED700] to-[#E6A600]"
   >
-    <span class="block w-full text-center text-[11px] font-bold tracking-tight text-black">
+    <h4 class="block w-full text-center text-[11px] font-bold tracking-tight text-black">
       Fun fact about me
-    </span>
+    </h4>
   </div>
   <div
     class="flex flex-1 flex-col gap-[3px] bg-[#1E1E1E] px-[11px] py-3 text-[10px] font-medium text-white"

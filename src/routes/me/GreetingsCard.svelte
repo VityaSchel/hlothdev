@@ -5,12 +5,14 @@
   import Button from '$lib/ui/Button.svelte'
 
   let {
-    transition
+    inert,
+    children
   }: {
-    transition?: boolean
+    inert?: boolean
+    children?: import('svelte').Snippet
   } = $props()
 
-  let expanded = $derived(page.route.id === '/me/about' && transition)
+  let expanded = $derived(page.route.id === '/me/about' && !inert)
 </script>
 
 <XlCard
@@ -23,13 +25,17 @@
     }
   ]}
   bg="radial-gradient(circle farthest-side at 89% 63%,rgb(204, 123, 241),rgb(208, 138, 240) 12.019%,rgb(228, 208, 233) 34.615%,rgb(225, 212, 231) 51.923%,rgb(226, 206, 236) 59.135%,rgb(226, 206, 236) 77.885%,rgb(232, 232, 232) 100%);"
-  viewId={transition ? 'about-me' : undefined}
+  viewId={inert ? undefined : 'about-me'}
+  data-nosnippet={inert ? '' : undefined}
+  {inert}
 >
   <div
-    class="flex h-full w-full flex-col justify-between"
-    style:view-transition-name={transition ? 'about-me-content' : undefined}
+    class={['flex h-full w-full flex-col justify-between', { 'px-8 py-[34px]': !expanded }]}
+    style:view-transition-name={inert ? undefined : 'about-me-content'}
   >
-    {#if expanded}{:else}
+    {#if expanded}
+      {@render children?.()}
+    {:else}
       <span class="h-[43px] w-[43px] shrink-0 rounded-full bg-black p-2">
         <span class="animate-rotate flex h-full w-full items-center justify-center [&_svg]:w-full">
           <WavingHandIcon />
