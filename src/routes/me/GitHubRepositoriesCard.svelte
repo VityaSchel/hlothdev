@@ -4,7 +4,7 @@
 </script>
 
 <XsCard
-  class="flex cursor-default flex-col items-start justify-between bg-gradient-to-b from-[#191919] to-[#0d0d0d] p-2"
+  class="flex cursor-default flex-col items-start justify-between bg-gradient-to-b from-[#191919] to-[#0d0d0d] p-2 col-start-8 col-end-9 row-start-3 row-end-4"
   tag="a"
   href="https://github.com/VityaSchel"
   rel="noopener noreferrer"

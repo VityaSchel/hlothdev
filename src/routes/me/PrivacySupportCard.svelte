@@ -5,7 +5,7 @@
 </script>
 
 <LgCard
-  class="group flex flex-col justify-end gap-[6px] bg-cover bg-position-[30%]"
+  class="group col-start-7 col-end-9 row-start-1 row-end-3 flex flex-col justify-end gap-[6px] bg-cover bg-position-[30%]"
   --bg="url(/privacy-rights.webp)"
 >
   <span

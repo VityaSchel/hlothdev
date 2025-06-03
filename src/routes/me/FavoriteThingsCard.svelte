@@ -45,7 +45,7 @@
 </script>
 
 <div
-  class="group relative col-span-2 row-span-1 rounded-4xl text-white"
+  class="group relative col-start-9 col-end-11 row-start-2 row-end-3 rounded-4xl text-white"
   bind:clientWidth={width}
   bind:clientHeight={height}
   style={clipPathStyle}

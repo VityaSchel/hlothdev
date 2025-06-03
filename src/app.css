@@ -1,6 +1,6 @@
 @media (prefers-reduced-motion: no-preference) {
   @view-transition {
-    navigation: none;
+    navigation: auto;
   }
 }
 
@@ -14,7 +14,35 @@
 
 ::view-transition-group(donate),
 ::view-transition-group(me) {
-  animation-duration: 350ms;
-  animation-timing-function: ease-outcubic-bezier(0.16, 1, 0.3, 1);
   border-radius: 32px;
+}
+
+::view-transition-group(donate),
+::view-transition-group(me),
+::view-transition-group(about-me),
+::view-transition-group(about-me-content) {
+  animation-duration: 350ms;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+::view-transition-group(about-me) {
+  border-radius: 55px;
+  overflow: clip;
+}
+
+::view-transition-old(about-me),
+::view-transition-new(about-me) {
+  animation: none;
+}
+
+::view-transition-old(about-me),
+::view-transition-new(about-me) {
+  width: 100%;
+  height: 100%;
+}
+
+::view-transition-old(about-me-content),
+::view-transition-new(about-me-content) {
+  width: auto;
+  height: 100%;
 }

@@ -5,7 +5,7 @@
 
 <LgCard
   --bg="url(/education.webp)"
-  class="flex cursor-default flex-col justify-end gap-[1px] bg-cover text-white"
+  class="flex cursor-default flex-col justify-end gap-[1px] bg-cover text-white col-start-9 col-end-11 row-start-3 row-end-5"
   tag="a"
   href="https://web.archive.org/web/20170312123940/http://drugoigorod.ru/vitya-indigo/"
 >

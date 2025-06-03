@@ -2,7 +2,9 @@
   import XsCard from '$lib/widgets/grid-cards/XSCard.svelte'
 </script>
 
-<XsCard class="flex flex-col gap-[4px] bg-[#2E2E2E] px-[11px] py-2 text-white">
+<XsCard
+  class="col-start-6 col-end-7 row-start-1 row-end-2 flex flex-col gap-[4px] bg-[#2E2E2E] px-[11px] py-2 text-white"
+>
   <h4 class="text-[10px] font-bold tracking-[-0.6px] text-[#FF9500]">Languages</h4>
   <div class="flex flex-1 flex-col justify-between pb-1">
     {#snippet lang(icon: string, label: string)}
