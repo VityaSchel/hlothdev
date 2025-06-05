@@ -1,0 +1,25 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+[PREFERRED] Tron (USDT TRC-20):
+THgEkWLWJsLFJ5FfQFCasF1zbwJNLHyrkF
+
+Monero (XMR):
+43MTCc7BsyZip4YUpRSqGahUPf8NefifvW6KXEXttTXicTbMfAehtny26HuU84pzQNQmodxzWoTaPAL5aqPjAUo4DtkvXBV
+
+Etherium (USDT ERC-20, ETH):
+0xE3e548ae4f1f74195857084ED335EF89C29Ce43c
+
+Bitcoin (BTC):
+bc1q6l065yaa6zc2p4798rc9fcyud8mmny8sk8995f
+
+Litecoin (LTC):
+ltc1qnvzl0zgcg22tm269a6ny95ept93l6009348y3c
+
+-----BEGIN PGP SIGNATURE-----
+
+iHUEARYIAB0WIQQDb30iQpfYc6T86dopnppFATKijAUCaEDfsgAKCRApnppFATKi
+jE6fAQD8p3sdwsmiwdNEp6faroivy1audmDOK2khBJ7Q8FcbuwEA81WgbGxABrPO
+MufOOuAVgtaVnnDg3gf7uadbvlJSLwg=
+=Yz74
+-----END PGP SIGNATURE-----

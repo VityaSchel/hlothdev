@@ -10,7 +10,10 @@
 </script>
 
 <PageWrapper viewId="donate">
-  <SubpageWrapper title="donate.svelte" backUrl="/">
+  <SubpageWrapper title="donate.svelte" backUrl="/" button={{
+    text: 'Open PGP Signed List',
+    href: '/donate-pgp-signed.txt'
+  }}>
     <div class="grid h-full grid-cols-3 grid-rows-2 gap-[25px]">
       <UsdtTrc20 />
       <UsdtErc20 />

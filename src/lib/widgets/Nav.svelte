@@ -12,7 +12,10 @@
   } | null = $state(null)
 </script>
 
-<nav class="relative h-[65px] rounded-[16px] shrink-0 select-none" onpointerleave={() => (selectedNavItem = null)}>
+<nav
+  class="relative h-[65px] shrink-0 rounded-[16px] select-none"
+  onpointerleave={() => (selectedNavItem = null)}
+>
   {#if selectedNavItem !== null}
     <Tooltip {selectedNavItem}>{selectedNavItem.name}</Tooltip>
   {/if}
@@ -22,7 +25,7 @@
         icon="/dock-icons/upwork.webp"
         name="My Upwork"
         highlight
-        link="https://github.com/VityaSchel/"
+        link="https://www.upwork.com/freelancers/~01a1f59e7a4697be89"
         bind:selectedNavItem
       />
       <NavItem
@@ -41,16 +44,16 @@
       />
       <NavSeparator />
       <NavItem
-        icon="/dock-icons/telegram.webp"
-        name="Contact me via Telegram"
+        icon="/dock-icons/element.webp"
         highlight
-        link="https://t.me/hlothdev"
+        name="Contact me via Matrix (preferred)"
+        link="https://matrix.to/#/@hloth:hloth.dev"
         bind:selectedNavItem
       />
       <NavItem
-        icon="/dock-icons/mail.webp"
-        name="Contact me via email"
-        link="mailto:hi@hloth.dev"
+        icon="/dock-icons/telegram.webp"
+        name="Contact me via Telegram"
+        link="https://t.me/hlothdev"
         bind:selectedNavItem
       />
       <NavItem
@@ -60,6 +63,12 @@
         bind:selectedNavItem
       />
       <NavSeparator />
+      <NavItem
+        icon="/dock-icons/mail.webp"
+        name="Contact me via email"
+        link="mailto:hi@hloth.dev"
+        bind:selectedNavItem
+      />
       <NavItem
         icon="/dock-icons/blog.webp"
         name="My blog"
