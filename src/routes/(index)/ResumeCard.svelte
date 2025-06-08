@@ -6,12 +6,12 @@
   href="https://cv.hloth.dev"
   rel="nofollow noreferrer noopener"
   target="_blank"
-  class="drop-background-shadow relative max-w-full flex-1 cursor-default rounded-[16px]"
+  class="drop-background-shadow relative max-w-full flex-1 shrink-0 cursor-default rounded-[16px] xl:shrink"
 >
   <Squircle class="bg-black/10" cornerRadius={16} arrow>
-    <div class="flex h-full items-center gap-[18px] rounded-[16px] px-4 py-4 select-none">
-      <div class="flex h-16 w-16 items-center justify-center rounded-full bg-[#3B82F7]">
-        <svg class="w-7" viewBox="0 0 57.7188 57.5312">
+    <div class="flex h-full items-center gap-2 px870:gap-[18px] rounded-[16px] px-4 select-none xl:py-4">
+      <div class="flex h-10 w-10 px870:h-12 px870:w-12 lg:h-16 lg:w-16 items-center justify-center rounded-full bg-[#3B82F7]">
+        <svg class="w-5 px870:w-7" viewBox="0 0 57.7188 57.5312">
           <g>
             <rect height="57.5312" opacity="0" width="57.7188" x="0" y="0" />
             <path
@@ -22,11 +22,13 @@
           </g>
         </svg>
       </div>
-      <div class="flex flex-1 flex-col gap-[6px]">
-        <span class="text-thick-typography text-[32px] leading-[38px] font-bold tracking-[-0.1px]">
+      <div class="flex flex-1 flex-col xl:gap-[6px]">
+        <span
+          class="text-thick-typography text-xl px870:text-2xl leading-[38px] font-bold tracking-[-0.1px] xl:text-[32px]"
+        >
           Jump to resume & CV
         </span>
-        <span class="text-thin-typography text-base leading-[19px] font-semibold">
+        <span class="text-thin-alt-typography hidden text-base leading-[19px] font-semibold lg:block">
           Svelte, React, TypeScript, PostgreSQL, Drizzle, Python
         </span>
       </div>

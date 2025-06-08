@@ -13,9 +13,9 @@
   <div class="flex h-full flex-col gap-4 pt-4">
     <div class="flex gap-4 px-4">
       <MeCard />
-      <div class="flex flex-[593] flex-col gap-4">
+      <div class="flex flex-1 px1380:flex-[593] flex-col gap-4">
         <ResumeCard />
-        <div class="flex flex-1 gap-4">
+        <div class="flex shrink-0 min-h-0 xl:min-h-auto xl:shrink flex-1 gap-4">
           <DonateCard />
           <OnionMirrorCard />
         </div>

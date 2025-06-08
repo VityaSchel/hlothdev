@@ -14,6 +14,7 @@ html {
 @theme {
   --color-thick-typography: #e5e5e5;
   --color-thin-typography: #7c7c7c;
+  --color-thin-alt-typography: #b7b7b7;
   --color-thick: rgba(36, 36, 36, 0.35);
   --color-thick-light: rgba(246, 246, 246, 0.72);
   --color-tooltip: rgba(50, 50, 50, 0.48);
@@ -37,6 +38,11 @@ html {
   --font-display: 'SF Pro Display', SF-Pro-Display, var(--default-fonts);
   --font-compact-display:
     'SF Compact Display', SF-Compact-Display, 'SF Compact', SF-Compact, var(--default-fonts);
+  --breakpoint-px1420: 1420px;
+  --breakpoint-px1380: 1380px;
+  --breakpoint-px1180: 1180px;
+  --breakpoint-px920: 920px;
+  --breakpoint-px870: 870px;
 }
 
 .one-storey-a {

@@ -10,7 +10,7 @@
   <img src="/bg.webp" alt="" class="absolute top-0 left-0 h-full w-full object-cover" />
 </div>
 <div
-  class="page-container relative flex w-full flex-col items-center justify-center gap-[2px] px-16 font-sf-pro"
+  class="page-container relative flex w-full flex-col items-center justify-center gap-[2px] px-8 font-sf-pro"
 >
   {@render children()}
 </div>

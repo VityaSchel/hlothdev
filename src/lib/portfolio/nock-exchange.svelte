@@ -1,7 +1,7 @@
 <script lang="ts" module>
-  import type { Project } from '$lib/portfolio'
+  import type { PortfolioItem } from '$lib/portfolio'
 
-  export const nockTradeProject: Project = {
+  export const nockTradeProject: PortfolioItem = {
     type: 'website',
     id: 'nock-trade',
     name: 'Nock Trade',
@@ -10,7 +10,22 @@
     images: [
       {
         url: '/projects/nock-trade/screenshot-1.webp',
-        alt: 'Nock Trade main page',
+        alt: 'Nock Trade main page'
+      }
+    ],
+    links: []
+  }
+
+  export const nockTradeWebsite: PortfolioItem = {
+    type: 'project',
+    id: 'nock-trade2',
+    name: 'Nock Trade',
+    description,
+    banner: '/projects/nock-trade/banner.webp',
+    images: [
+      {
+        url: '/projects/nock-trade/screenshot-1.webp',
+        alt: 'Nock Trade main page'
       }
     ],
     links: []

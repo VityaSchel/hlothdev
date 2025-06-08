@@ -1,6 +1,6 @@
-import { nockTradeProject } from './nock-exchange.svelte'
+import { nockTradeProject, nockTradeWebsite } from './nock-exchange.svelte'
 
-export type Project = {
+export type PortfolioItem = {
   type: 'website' | 'project'
   id: string
   name: string
@@ -13,4 +13,4 @@ export type Project = {
   }[]
 }
 
-export const portfolio: Project[] = [nockTradeProject]
+export const portfolio: PortfolioItem[] = [nockTradeWebsite, nockTradeProject]

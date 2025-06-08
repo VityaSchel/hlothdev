@@ -6,7 +6,7 @@
   let projects = $derived(portfolio.filter(p => p.type === 'project'))
 </script>
 
-<ScrollableSection name="Websites" childrenCount={projects.length}>
+<ScrollableSection name="Projects" childrenCount={projects.length}>
   {#each projects as project (project.id)}
     <ProfileItemCard id={project.id} name={project.name} banner={project.banner} />
   {/each}

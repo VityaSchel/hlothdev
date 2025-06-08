@@ -2,11 +2,11 @@
   import Squircle from '$lib/Squircle.svelte'
 </script>
 
-<div class="drop-background-shadow relative max-w-full flex-[171] rounded-[16px]">
+<div class="drop-background-shadow relative max-w-full flex-1 rounded-[16px] lg:flex-[171]">
   <Squircle class="bg-black/10" cornerRadius={16}>
-    <div class="flex h-full flex-col items-center gap-2 p-4 select-none">
+    <div class="flex h-full lg:flex-col items-center justify-center gap-3 px870:gap-4 lg:gap-2 p-4 py-2 select-none">
       <svg
-        class="h-[53px] w-[52px]"
+        class="h-10 w-10 aspect-square xl:h-12 xl:w-12 shrink-0"
         viewBox="0 0 52 52"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -25,7 +25,7 @@
           fill="#E2ECFE"
         />
       </svg>
-      <span class="text-thick-typography text-base leading-[19px] font-medium">Onion mirror</span>
+      <span class="text-thick-typography text-base px870:text-xl lg:text-base leading-5 px870:leading-6 lg:leading-[19px] font-bold lg:font-medium">Onion mirror</span>
     </div>
   </Squircle>
 </div>
