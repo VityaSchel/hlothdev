@@ -7,8 +7,8 @@
 <div
   class={[
     `
-      flex flex-1 flex-col gap-[5px] rounded-b-[32px] border border-x-0
-      border-b-0 pb-4 transition-colors
+      flex flex-1 flex-col justify-evenly gap-[5px] rounded-b-[32px] border
+      border-x-0 border-b-0 pb-4 transition-colors
       md:overflow-auto
     `,
     {

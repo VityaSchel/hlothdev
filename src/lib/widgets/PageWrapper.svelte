@@ -12,8 +12,9 @@
 
 <main
   class="
-    drop-background-shadow relative h-[645px] w-[1384px] max-w-full shrink-0
-    rounded-[32px] backdrop-blur-[48px]
+    drop-background-shadow relative min-h-0 w-[1384px] max-w-full flex-1
+    shrink-0 rounded-[32px] backdrop-blur-[48px]
+    md:max-h-[645px]
   "
   style={viewId ? `view-transition-name: ${viewId};` : undefined}
 >

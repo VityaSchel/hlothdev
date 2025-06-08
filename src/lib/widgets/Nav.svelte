@@ -29,7 +29,7 @@
         bind:selectedNavItem
         class="
           hidden
-          px550:block
+          px500:block
         "
       />
       <NavItem
@@ -47,13 +47,13 @@
         bind:selectedNavItem
         class="
           hidden
-          px400:block
+          px350:block
         "
       />
       <NavSeparator
         class="
           hidden
-          px450:block
+          px400:block
         "
       />
       <NavItem
@@ -70,7 +70,7 @@
         bind:selectedNavItem
         class="
           hidden
-          px350:block
+          px300:block
         "
       />
       <NavItem
@@ -86,7 +86,7 @@
       <NavSeparator
         class="
           hidden
-          px450:block
+          px400:block
         "
       />
       <NavItem
@@ -102,7 +102,7 @@
         bind:selectedNavItem
         class="
           hidden
-          px500:block
+          px450:block
         "
       />
       <NavItem
@@ -110,10 +110,6 @@
         name="My Instagram"
         link="https://instagram.com/vityaczech"
         bind:selectedNavItem
-        class="
-          hidden
-          px300:block
-        "
       />
     </div>
   </Squircle>

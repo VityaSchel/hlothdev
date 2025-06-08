@@ -10,11 +10,21 @@
   } = $props()
 
   let scrollX = $state(0)
-  let wrap = $state(false)
 </script>
 
-<section class="flex flex-col gap-[8px]">
-  <div class="flex items-end justify-between px-8">
+<input type="checkbox" class="checkbox hidden" autocomplete="off" id="checkbox-{name}" />
+<section
+  class="
+    checkbox-content flex flex-col gap-4
+    px470:gap-[8px]
+  "
+>
+  <div
+    class="
+      flex items-end justify-between px-4
+      px470:px-8
+    "
+  >
     <h2
       class="
         font-sf-pro-display text-base leading-[19px] font-semibold
@@ -23,31 +33,34 @@
     >
       {name}
     </h2>
-    <button
+    <!-- svelte-ignore a11y_click_events_have_key_events -->
+    <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
+    <label
+      for="checkbox-{name}"
       class="
         font-sf-pro-display text-sm font-medium tracking-[-0.2px]
         text-thin-typography
         hover:underline
       "
       onclick={() => {
-        wrap = !wrap
         scrollX = 0
       }}
     >
-      {#if wrap}
-        Show Less
-      {:else}
+      <span class="show-less">Show Less</span>
+      <span class="show-all">
         Show All ({childrenCount})
-      {/if}
-    </button>
+      </span>
+    </label>
   </div>
   <div
     class={[
-      'scrollbar-thin gap-[10px] overflow-scroll px-8 pt-[0.5px] pb-3',
+      `
+        scrollbar-thin nowrap-flex wrap-styles gap-[10px] overflow-scroll px-4
+        pt-[0.5px] pb-3
+        px470:px-8
+      `,
       {
-        'fade-out-mask': scrollX === 0 && !wrap,
-        flex: !wrap,
-        'grid grid-cols-1 px450:grid-cols-2 px600:grid-cols-3 md:flex md:flex-wrap': wrap
+        'nowrap-fade-out-mask': scrollX === 0
       }
     ]}
     onscroll={(e) => (scrollX = (e.target as HTMLDivElement).scrollLeft)}
@@ -56,16 +69,57 @@
   </div>
 </section>
 
-<style>
-  .fade-out-mask {
-    mask: linear-gradient(to right, black 0%, black 90%, transparent 100%);
-    mask-size: 200% 100%;
-    transition: mask-position 0.5s ease-in-out;
+<style lang="scss">
+  .checkbox:not(:checked) + .checkbox-content {
+    .show-less {
+      display: none;
+    }
+    .show-all {
+      display: inline;
+    }
+    .nowrap-fade-out-mask {
+      mask: linear-gradient(to right, black 0%, black 90%, transparent 100%);
+      mask-size: 200% 100%;
+      transition: mask-position 0.5s ease-in-out;
+
+      &:not(:hover) {
+        mask-position: 100% 0%;
+      }
+      &:hover {
+        mask-position: 20% 0%;
+      }
+    }
+    .nowrap-flex {
+      display: flex;
+    }
+    :global(.banner) {
+      max-height: 115px;
+    }
   }
-  .fade-out-mask:not(:hover) {
-    mask-position: 100% 0%;
-  }
-  .fade-out-mask:hover {
-    mask-position: 20% 0%;
+  .checkbox:checked + .checkbox-content {
+    .show-less {
+      display: inline;
+    }
+    .show-all {
+      display: none;
+    }
+    .wrap-styles {
+      // grid grid-cols-1 px450:grid-cols-2 px600:grid-cols-3 md:flex md:flex-wrap
+      display: grid;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+
+      @media screen and (min-width: 450px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      @media screen and (min-width: 600px) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
   }
 </style>

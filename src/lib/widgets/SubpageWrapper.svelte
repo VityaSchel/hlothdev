@@ -22,13 +22,20 @@
 
 <div class="flex h-full w-full flex-col">
   <header
-    class="border-px flex h-[52px] w-full shrink-0 items-center justify-between border border-x-0 border-t-0 border-white/25 px-[15px] py-[12px]"
+    class="
+      border-px flex h-[52px] w-full shrink-0 items-center justify-between
+      border border-x-0 border-t-0 border-white/25 px-[15px] py-[12px]
+    "
   >
     <div class="ml-[3px] flex flex-row items-center gap-2">
       <a
         href={backUrl}
         aria-label="Back to previous page"
-        class="flex h-3 w-3 cursor-default items-center justify-center rounded-full text-white/55 active:text-[#EAEAEA]"
+        class="
+          flex h-3 w-3 cursor-default items-center justify-center rounded-full
+          text-white/55
+          active:text-[#EAEAEA]
+        "
         draggable="false"
       >
         <svg
@@ -47,12 +54,21 @@
           </g>
         </svg>
       </a>
-      <div class="group flex flex-row items-center gap-1 text-[15px] font-semibold">
+      <div
+        class="
+          group flex flex-row items-center gap-1 text-[15px] font-semibold
+        "
+      >
         <a
           href="https://hloth.dev{page.url.pathname}"
           aria-label="Current page"
           class={[
-            'flex w-0 cursor-default overflow-clip transition-[width] duration-300 group-hover:w-5 focus-visible:w-5',
+            `
+              flex w-0 cursor-default overflow-clip transition-[width]
+              duration-300
+              group-hover:w-5
+              focus-visible:w-5
+            `,
             {
               'brightness-[48%]': pressed
             }
@@ -81,7 +97,13 @@
         href={button.href}
         rel={button.external ? 'noreferrer noopener' : undefined}
         target={button.external ? '_blank' : undefined}
-        class="flex h-[22px] cursor-default items-center justify-center rounded-md border border-[#b6a68e]/40 px-[7px] text-[13px] text-[#ede1cf]/90 select-none hover:border-[#9b8a76] hover:bg-[#9b8a76] active:border-[#af9c86] active:bg-[#af9c86] active:text-[#f7efe2]"
+        class="
+          flex h-[22px] cursor-default items-center justify-center rounded-md
+          border border-[#b6a68e]/40 px-[7px] text-[13px] text-[#ede1cf]/90
+          select-none
+          hover:border-[#9b8a76] hover:bg-[#9b8a76]
+          active:border-[#af9c86] active:bg-[#af9c86] active:text-[#f7efe2]
+        "
       >
         {button.text}
       </a>

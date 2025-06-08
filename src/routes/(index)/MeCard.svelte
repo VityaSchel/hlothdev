@@ -40,14 +40,21 @@
       />
       <div
         class="
-          flex flex-1 flex-col gap-1
+          flex flex-1 flex-col gap-2
+          px380:gap-1
           px1420:gap-3
         "
       >
-        <div class="flex flex-col gap-[3px]">
+        <div
+          class="
+            flex flex-col gap-2
+            px380:gap-[3px]
+          "
+        >
           <span
             class="
-              text-2xl font-bold tracking-[-0.1px] text-thick-typography
+              text-xl font-bold tracking-[-0.1px] text-thick-typography
+              px330:text-2xl
               px600:text-3xl
               px680:text-4xl px680:leading-12
               px870:text-2xl
@@ -78,13 +85,13 @@
         </div>
         <span
           class="
-            text-base font-semibold text-thin-typography
+            text-base font-semibold text-thick-alt-typography
             px530:text-lg
             px600:text-xl
             px680:text-2xl px680:leading-[29px]
             px870:text-lg
             px1180:text-xl px1180:text-[rgba(123,123,123,0.4)]
-            md:text-base
+            md:text-base md:text-thin-typography
             xl:text-2xl
           "
         >

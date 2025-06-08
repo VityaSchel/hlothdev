@@ -17,6 +17,7 @@ html {
   --color-thin-alt-typography: #b7b7b7;
   --color-thick: rgba(36, 36, 36, 0.35);
   --color-thick-light: rgba(246, 246, 246, 0.72);
+  --color-thick-alt-typography: rgba(200, 200, 200, 0.5);
   --color-tooltip: rgba(50, 50, 50, 0.48);
   --color-thin: rgba(0, 0, 0, 0.1);
   --color-thin-light: rgba(246, 246, 246, 0.48);
@@ -40,11 +41,15 @@ html {
     'SF Compact Display', SF-Compact-Display, 'SF Compact', SF-Compact, var(--default-fonts);
   --breakpoint-px1420: 1420px;
   --breakpoint-px1380: 1380px;
+  --breakpoint-xl: 1280px;
   --breakpoint-px1180: 1180px;
+  --breakpoint-lg: 1024px;
   --breakpoint-px920: 920px;
   --breakpoint-px870: 870px;
+  --breakpoint-md: 768px;
   --breakpoint-px680: 680px;
   --breakpoint-px620: 620px;
+  --breakpoint-sm: 640px;
   --breakpoint-px600: 600px;
   --breakpoint-px550: 550px;
   --breakpoint-px530: 530px;
@@ -53,7 +58,9 @@ html {
   --breakpoint-px450: 450px;
   --breakpoint-px420: 420px;
   --breakpoint-px400: 400px;
-  --breakpoint-px350: 450px;
+  --breakpoint-px350: 350px;
+  --breakpoint-px380: 380px;
+  --breakpoint-px330: 330px;
   --breakpoint-px300: 300px;
 }
 
