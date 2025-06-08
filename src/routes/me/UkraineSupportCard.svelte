@@ -6,7 +6,7 @@
   class="
     group col-start-2 col-end-4 row-start-8 row-end-9 flex flex-col
     justify-between bg-cover p-4
-    px463:col-start-4 px463:col-end-6 px463:row-start-1 px463:row-end-2
+    px470:col-start-4 px470:col-end-6 px470:row-start-1 px470:row-end-2
   "
   --bg="url(/support-ukraine.webp)"
   aria-label="Background image: photo of a couple wearing traditional Ukrainian embroidered clothing, holding hands in a field"

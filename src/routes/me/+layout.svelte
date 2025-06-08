@@ -20,7 +20,7 @@
       class="
         relative m-auto grid h-[1799px] w-[389px] shrink-0 grid-flow-col
         grid-cols-3 grid-rows-13 gap-4
-        px463:h-[1096px] px463:w-[659px] px463:grid-cols-5 px463:grid-rows-8
+        px470:h-[1096px] px470:w-[659px] px470:grid-cols-5 px470:grid-rows-8
         md:h-[682px] md:w-[1064px] md:grid-cols-8 md:grid-rows-5
         px1180:h-[540px] px1180:w-[1334px] px1180:grid-cols-10
         px1180:grid-rows-4
