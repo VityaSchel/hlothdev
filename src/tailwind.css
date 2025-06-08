@@ -69,6 +69,13 @@ html {
   --breakpoint-px300: 300px;
 }
 
+@custom-variant no-hover {
+  @media not (hover: hover) {
+    @slot
+  }
+}
+
+
 .one-storey-a {
   /* SF Pro */
   font-feature-settings: 'ss07' on;

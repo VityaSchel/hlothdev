@@ -42,9 +42,15 @@
       px680:h-[275px]
       md:h-[253px]
       px870:h-full px870:shrink
+      no-hover:h-full! no-hover:justify-between no-hover:gap-4
     "
   >
-    <div class="coins min-h-0 flex-1 overflow-clip">
+    <div
+      class="
+        coins min-h-0 flex-1 overflow-clip
+        no-hover:flex-none!
+      "
+    >
       <div class="flex h-[68px]">
         {@render coins()}
       </div>
@@ -93,12 +99,17 @@
             px870:text-sm px870:leading-5
             px1100:text-[17px]
             px1380:leading-6
+            no-hover:h-[var(--address-height)]
           "
           style="--address-height: {addressHeight ? `${addressHeight}px` : 'auto'}"
           ontransitionstart={() => (collapseAddress = false)}
           ontransitionend={() => (collapseAddress = true)}
         >
-          <span class={{ 'not-group-hover:whitespace-nowrap': collapseAddress }}>
+          <span
+            class={{
+              'not-group-hover:whitespace-nowrap no-hover:whitespace-normal!': collapseAddress
+            }}
+          >
             {address}
           </span>
           <span
@@ -115,7 +126,8 @@
             hidden h-0 shrink-0 overflow-clip transition-[height] duration-300
             group-hover:h-[47px]
             px320:block
-            px980:group-hover:h-[58px]
+            px980:group-hover:h-[58px] px980:no-hover:h-[58px]
+            no-hover:h-[47px]
           "
         >
           <div class="flex shrink-0 items-center pt-4" bind:offsetHeight={clickToPayHeight}>
@@ -149,8 +161,10 @@
 </SquircleThick>
 
 <style>
-  .coins {
-    mask-image: linear-gradient(to bottom, black 0%, black calc(100% - 20px), transparent 100%);
+  @media (hover: hover) {
+    .coins {
+      mask-image: linear-gradient(to bottom, black 0%, black calc(100% - 20px), transparent 100%);
+    }
   }
   .safari-fix-svgs-please :global(svg) {
     height: 100%;

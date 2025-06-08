@@ -21,9 +21,10 @@
   >
     <div
       class="
-        grid grid-cols-1 grid-rows-2 gap-[25px]
+        grid auto-rows-max grid-cols-1 grid-rows-2 gap-[25px]
         px630:grid-cols-2
         px870:h-full px870:grid-cols-3
+        no-hover:h-auto!
       "
     >
       <UsdtTrc20 />
