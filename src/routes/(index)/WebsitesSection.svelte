@@ -1,15 +1,13 @@
 <script>
+  import { portfolio } from '$lib/portfolio'
   import ScrollableSection from '$lib/ui/ScrollableSection.svelte'
-  import ProfileItemCard from '$lib/widgets/ProfileItemCard.svelte'
+  import ProfileItemCard from '$lib/widgets/ProjectItemCard.svelte'
+
+  const websites = $derived(portfolio.filter(p => p.type === 'website'))
 </script>
 
-<ScrollableSection name="Websites" childrenCount={10}>
-  <ProfileItemCard name="Nock Trade" banner="/portfolio-screenshots/nock-trade.png" />
-  <ProfileItemCard name="Nock Trade" banner="/portfolio-screenshots/nock-trade.png" />
-  <ProfileItemCard name="Nock Trade" banner="/portfolio-screenshots/nock-trade.png" />
-  <ProfileItemCard name="Nock Trade" banner="/portfolio-screenshots/nock-trade.png" />
-  <ProfileItemCard name="Nock Trade" banner="/portfolio-screenshots/nock-trade.png" />
-  <ProfileItemCard name="Nock Trade" banner="/portfolio-screenshots/nock-trade.png" />
-  <ProfileItemCard name="Nock Trade" banner="/portfolio-screenshots/nock-trade.png" />
-  <ProfileItemCard name="Nock Trade" banner="/portfolio-screenshots/nock-trade.png" />
+<ScrollableSection name="Websites" childrenCount={websites.length}>
+  {#each websites as website (website.id)}
+    <ProfileItemCard id={website.id} name={website.name} banner={website.banner} />
+  {/each}
 </ScrollableSection>

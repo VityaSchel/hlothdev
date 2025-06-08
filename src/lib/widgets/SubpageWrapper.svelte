@@ -20,7 +20,7 @@
   let pressed = $state(false)
 </script>
 
-<div class={['flex h-full w-full flex-col', className]}>
+<div class="flex h-full w-full flex-col">
   <header
     class="border-px flex h-[52px] w-full shrink-0 items-center justify-between border border-x-0 border-t-0 border-white/25 px-[15px] py-[12px]"
   >
@@ -87,7 +87,7 @@
       </a>
     {/if}
   </header>
-  <div class="max-h-[calc(100%-52px)] flex-1 p-[25px]">
+  <div class={['max-h-[calc(100%-52px)] flex-1 p-[25px]', className]}>
     {@render children?.()}
   </div>
 </div>
