@@ -6,7 +6,7 @@
   class="
     group relative col-start-2 col-end-3 row-start-4 row-end-5 flex
     flex-col-reverse justify-between bg-cover px-[7px] py-[6px]
-    px773:col-start-2 px773:col-end-3 px773:row-start-5 px773:row-end-6
+    md:col-start-2 md:col-end-3 md:row-start-5 md:row-end-6
     px1180:col-start-10 px1180:col-end-11 px1180:row-start-1 px1180:row-end-2
   "
   bg

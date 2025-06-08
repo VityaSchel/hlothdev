@@ -6,7 +6,7 @@
   class="
     group relative col-start-1 col-end-4 row-start-7 row-end-8 flex
     flex-col-reverse justify-between bg-cover
-    px773:col-start-1 px773:col-end-4 px773:row-start-4 px773:row-end-5
+    md:col-start-1 md:col-end-4 md:row-start-4 md:row-end-5
   "
   --bg="url(/me-with-dima-celebrating-one-year-anniversary-2024.webp)"
   aria-label="Background image: photo of me and my boyfriend Dima celebrating our one-year anniversary in 2024, on this photo we are hugging and smiling, a part of the 6-color LGBT flag is visible in the background"

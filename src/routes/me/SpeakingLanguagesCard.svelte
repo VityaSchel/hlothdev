@@ -6,7 +6,7 @@
   class="
     col-start-1 col-end-2 row-start-5 row-end-6 flex flex-col gap-[4px]
     bg-[#2E2E2E] px-[11px] py-2 text-white
-    px773:col-start-6 px773:col-end-7 px773:row-start-1 px773:row-end-2
+    md:col-start-6 md:col-end-7 md:row-start-1 md:row-end-2
   "
 >
   <h4 class="text-[10px] font-bold tracking-[-0.6px] text-[#FF9500]">Languages</h4>

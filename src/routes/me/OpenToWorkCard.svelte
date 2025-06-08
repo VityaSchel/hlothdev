@@ -9,7 +9,7 @@
   class="
     col-start-1 col-end-2 row-start-4 row-end-5 cursor-default bg-neutral-200
     bg-cover
-    px773:col-start-1 px773:col-end-2 px773:row-start-5 px773:row-end-6
+    md:col-start-1 md:col-end-2 md:row-start-5 md:row-end-6
     px1180:col-start-9 px1180:col-end-10 px1180:row-start-1 px1180:row-end-2
   "
   tag="a"
