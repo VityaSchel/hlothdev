@@ -1,4 +1,3 @@
-
 @media (prefers-reduced-motion: no-preference) {
   @view-transition {
     navigation: auto;
@@ -82,4 +81,8 @@
   background-image: url(/privacy-rights.webp);
   background-size: cover;
   background-position: 30%;
+}
+
+.scrollbar-thin {
+  scrollbar-width: thin;
 }

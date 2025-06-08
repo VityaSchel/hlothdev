@@ -10,12 +10,37 @@
 </script>
 
 <PageWrapper>
-  <div class="flex h-full flex-col gap-4 pt-4">
-    <div class="flex flex-col md:flex-row gap-4 px-4">
+  <div
+    class="
+      flex h-full flex-col gap-4 overflow-auto rounded-4xl pt-4
+      md:overflow-visible scrollbar-thin
+    "
+  >
+    <div
+      class="
+        flex flex-col gap-3 px-4
+        px470:gap-4
+        md:flex-row
+      "
+    >
       <MeCard />
-      <div class="flex flex-1 px1380:flex-[593] flex-col gap-4">
+      <div
+        class="
+          flex flex-col gap-3
+          px420:flex-1
+          px470:gap-4
+          px1380:flex-[593]
+        "
+      >
         <ResumeCard />
-        <div class="flex shrink-0 min-h-0 xl:min-h-auto xl:shrink flex-1 gap-4">
+        <div
+          class="
+            flex min-h-0 shrink-0 flex-col gap-2.5
+            px420:flex-1 px420:flex-row
+            px470:gap-4
+            xl:min-h-auto xl:shrink
+          "
+        >
           <DonateCard />
           <OnionMirrorCard />
         </div>

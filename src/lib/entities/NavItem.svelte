@@ -5,6 +5,7 @@
     icon,
     highlight,
     name,
+    class: className,
     link,
     selectedNavItem = $bindable()
   }: {
@@ -12,6 +13,7 @@
     name: string
     highlight?: boolean
     link: string
+    class?: import('svelte/elements').ClassValue
     selectedNavItem: {
       element: HTMLElement
       name: string
@@ -57,7 +59,13 @@
   href={link}
   rel="nofollow noopener noreferrer"
   target="_blank"
-  class="nav-item group flex shrink-0 cursor-default flex-col items-center gap-[3px] self-stretch pt-[5px] pb-[3px] select-none"
+  class={[
+    `
+      nav-item group flex shrink-0 cursor-default flex-col items-center
+      gap-[3px] self-stretch pt-[5px] pb-[3px] select-none
+    `,
+    className
+  ]}
   onpointerenter={() => {
     if (!dragging) {
       setTooltip()

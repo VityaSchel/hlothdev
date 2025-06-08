@@ -11,7 +11,10 @@
 </script>
 
 <main
-  class="drop-background-shadow relative h-[645px] w-[1384px] max-w-full shrink-0 rounded-[32px] backdrop-blur-[48px]"
+  class="
+    drop-background-shadow relative h-[645px] w-[1384px] max-w-full shrink-0
+    rounded-[32px] backdrop-blur-[48px]
+  "
   style={viewId ? `view-transition-name: ${viewId};` : undefined}
 >
   <Squircle class="bg-thick" innerStrokeWidth={2}>

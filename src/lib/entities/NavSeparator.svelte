@@ -1,4 +1,12 @@
-<hr />
+<script lang="ts">
+  let {
+    class: className
+  }: {
+    class?: import('svelte/elements').ClassValue
+  } = $props()
+</script>
+
+<hr class={className} />
 
 <style>
   hr {

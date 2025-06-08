@@ -16,12 +16,19 @@
 <section class="flex flex-col gap-[8px]">
   <div class="flex items-end justify-between px-8">
     <h2
-      class="font-sf-pro-display text-base leading-[19px] font-semibold tracking-[-0.2px] select-none"
+      class="
+        font-sf-pro-display text-base leading-[19px] font-semibold
+        tracking-[-0.2px] select-none
+      "
     >
       {name}
     </h2>
     <button
-      class="font-sf-pro-display text-thin-typography text-sm font-medium tracking-[-0.2px] hover:underline"
+      class="
+        font-sf-pro-display text-sm font-medium tracking-[-0.2px]
+        text-thin-typography
+        hover:underline
+      "
       onclick={() => {
         wrap = !wrap
         scrollX = 0
@@ -36,10 +43,11 @@
   </div>
   <div
     class={[
-      'scrollbar-thin flex gap-[10px] overflow-scroll px-8 pt-[0.5px] pb-3',
+      'scrollbar-thin gap-[10px] overflow-scroll px-8 pt-[0.5px] pb-3',
       {
         'fade-out-mask': scrollX === 0 && !wrap,
-        'flex-wrap': wrap
+        flex: !wrap,
+        'grid grid-cols-1 px450:grid-cols-2 px600:grid-cols-3 md:flex md:flex-wrap': wrap
       }
     ]}
     onscroll={(e) => (scrollX = (e.target as HTMLDivElement).scrollLeft)}
@@ -59,8 +67,5 @@
   }
   .fade-out-mask:hover {
     mask-position: 20% 0%;
-  }
-  .scrollbar-thin {
-    scrollbar-width: thin;
   }
 </style>

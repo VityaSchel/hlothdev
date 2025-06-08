@@ -45,6 +45,16 @@ html {
   --breakpoint-px870: 870px;
   --breakpoint-px680: 680px;
   --breakpoint-px620: 620px;
+  --breakpoint-px600: 600px;
+  --breakpoint-px550: 550px;
+  --breakpoint-px530: 530px;
+  --breakpoint-px500: 500px;
+  --breakpoint-px470: 470px;
+  --breakpoint-px450: 450px;
+  --breakpoint-px420: 420px;
+  --breakpoint-px400: 400px;
+  --breakpoint-px350: 450px;
+  --breakpoint-px300: 300px;
 }
 
 .one-storey-a {

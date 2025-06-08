@@ -27,6 +27,10 @@
         highlight
         link="https://www.upwork.com/freelancers/~01a1f59e7a4697be89"
         bind:selectedNavItem
+        class="
+          hidden
+          px550:block
+        "
       />
       <NavItem
         icon="/dock-icons/github.webp"
@@ -41,8 +45,17 @@
         highlight
         link="https://www.linkedin.com/in/hloth"
         bind:selectedNavItem
+        class="
+          hidden
+          px400:block
+        "
       />
-      <NavSeparator />
+      <NavSeparator
+        class="
+          hidden
+          px450:block
+        "
+      />
       <NavItem
         icon="/dock-icons/element.webp"
         highlight
@@ -55,14 +68,27 @@
         name="Contact me via Telegram"
         link="https://t.me/hlothdev"
         bind:selectedNavItem
+        class="
+          hidden
+          px350:block
+        "
       />
       <NavItem
         icon="/dock-icons/discord.webp"
         name="Contact me via Discord"
         link="https://discord.com/users/329249421332316166"
         bind:selectedNavItem
+        class="
+          hidden
+          px600:block
+        "
       />
-      <NavSeparator />
+      <NavSeparator
+        class="
+          hidden
+          px450:block
+        "
+      />
       <NavItem
         icon="/dock-icons/mail.webp"
         name="Contact me via email"
@@ -74,12 +100,20 @@
         name="My blog"
         link="https://blog.hloth.dev/"
         bind:selectedNavItem
+        class="
+          hidden
+          px500:block
+        "
       />
       <NavItem
         icon="/dock-icons/instagram.webp"
         name="My Instagram"
         link="https://instagram.com/vityaczech"
         bind:selectedNavItem
+        class="
+          hidden
+          px300:block
+        "
       />
     </div>
   </Squircle>

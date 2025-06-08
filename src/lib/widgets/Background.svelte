@@ -7,10 +7,14 @@
 </script>
 
 <div class="fixed top-0 left-0 h-full w-full select-none">
-  <img src="/bg.webp" alt="" class="absolute top-0 left-0 h-full w-full object-cover" />
+  <img class="absolute top-0 left-0 h-full w-full object-cover" src="/bg.webp" alt="" />
 </div>
 <div
-  class="page-container relative flex w-full flex-col items-center justify-center gap-[2px] px-8 font-sf-pro"
+  class="
+    page-container relative flex w-full flex-col items-center justify-center
+    gap-[2px] px-4 font-sf-pro
+    md:px-8
+  "
 >
   {@render children()}
 </div>

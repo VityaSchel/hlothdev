@@ -10,9 +10,14 @@
   } = $props()
 </script>
 
-<a href="/portfolio/{id}" class="flex flex-col items-center gap-[6px] shrink-0 select-none cursor-default">
-  <img src={banner} alt="{name} banner" class="w-auto h-[115px] banner rounded-[5px]">
-  <span class="font-sf-pro font-medium text-xs tracking-[-0.1px]">{name}</span>
+<a
+  href="/portfolio/{id}"
+  class="
+    flex shrink-0 cursor-default flex-col items-center gap-[6px] select-none
+  "
+>
+  <img class="banner max-h-[115px] rounded-[5px]" src={banner} alt="{name} banner" />
+  <span class="font-sf-pro text-xs font-medium tracking-[-0.1px]">{name}</span>
 </a>
 
 <style>

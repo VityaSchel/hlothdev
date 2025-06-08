@@ -13,4 +13,20 @@ export type PortfolioItem = {
   }[]
 }
 
-export const portfolio: PortfolioItem[] = [nockTradeWebsite, nockTradeProject]
+export const portfolio: PortfolioItem[] = [
+  nockTradeWebsite,
+  nockTradeWebsite,
+  nockTradeWebsite,
+  nockTradeWebsite,
+  nockTradeWebsite,
+  nockTradeWebsite,
+  nockTradeWebsite,
+  nockTradeProject,
+  nockTradeProject,
+  nockTradeProject,
+  nockTradeProject,
+  nockTradeProject,
+  nockTradeProject,
+  nockTradeProject,
+  nockTradeProject
+]

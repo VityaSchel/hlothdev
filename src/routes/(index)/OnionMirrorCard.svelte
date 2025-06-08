@@ -2,13 +2,31 @@
   import Squircle from '$lib/Squircle.svelte'
 </script>
 
-<div class="drop-background-shadow relative max-w-full flex-1 px680:flex-2/5 md:flex-1 rounded-[16px] lg:flex-[171]">
+<div
+  class="
+    drop-background-shadow relative max-w-full flex-1 rounded-[16px]
+    px680:flex-2/5
+    md:flex-1
+    lg:flex-[171]
+  "
+>
   <Squircle class="bg-black/10" cornerRadius={16}>
     <div
-      class="px870:gap-4 flex h-full items-center gap-4 p-4 select-none md:justify-center md:gap-3 md:py-2 lg:flex-col lg:gap-2"
+      class="
+        flex h-full items-center gap-3 p-3 select-none
+        px470:gap-4 px470:p-4
+        px870:gap-4
+        md:justify-center md:gap-3 md:py-2
+        lg:flex-col lg:gap-2
+      "
     >
       <svg
-        class="aspect-square h-12 w-12 shrink-0 md:h-10 md:w-10 xl:h-12 xl:w-12"
+        class="
+          aspect-square h-8 w-8 shrink-0
+          px470:h-12 px470:w-12
+          md:h-10 md:w-10
+          xl:h-12 xl:w-12
+        "
         viewBox="0 0 52 52"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +46,13 @@
         />
       </svg>
       <span
-        class="text-thick-typography px870:text-xl px870:leading-6 text-base leading-5 font-bold lg:text-base lg:leading-[19px] lg:font-medium"
+        class="
+          text-base leading-5 font-bold text-thick-typography
+          px530:text-xl
+          px680:text-base
+          px870:text-xl px870:leading-6
+          lg:text-base lg:leading-[19px] lg:font-medium
+        "
       >
         Onion mirror
       </span>
