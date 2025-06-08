@@ -21,7 +21,7 @@
   }
 </script>
 
-<div class="w-full h-full rounded-full bg-white p-[2.1%] text-[#1c1c1e]">
+<div class="h-full w-full rounded-full bg-white p-[2.1%] text-[#1c1c1e]">
   <div class="relative h-full w-full">
     {#snippet tick(rotation: number)}
       <div class="border-aligned-element tick" style="--rotate: {rotation}deg;">
@@ -68,7 +68,11 @@
     <div class="dot h-[3.36%] w-[3.36%] bg-[#ff9500]"></div>
     <div class="dot top h-[1.68%] w-[1.68%] bg-white"></div>
     <span
-      class="text-outline absolute top-2/3 left-1/2 z-[10] -translate-x-1/2 -translate-y-1/2 text-[10px] font-semibold text-white mix-blend-difference"
+      class="
+        text-outline absolute top-2/3 left-1/2 z-[10] -translate-x-1/2
+        -translate-y-1/2 text-[10px] font-semibold text-white
+        mix-blend-difference
+      "
     >
       {timezone}
     </span>

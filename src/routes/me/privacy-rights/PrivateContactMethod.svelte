@@ -16,13 +16,28 @@
   href={link}
   target="_blank"
   rel="nofollow noopener noreferrer"
-  class="relative flex flex-col items-center justify-center gap-1 rounded-md border border-[#bbbbbf] bg-white px-4 py-2 text-center text-sm font-medium tracking-tight flex-1"
+  class="
+    relative flex flex-1 flex-col items-center justify-center gap-1 rounded-md
+    border border-[#bbbbbf] bg-white px-4 py-2 text-center text-sm font-medium
+    tracking-tight
+  "
 >
-  <span class="h-7 w-7 flex justify-center items-end [&_svg]:w-full [&_svg]:h-full">{@render icon()}</span>
+  <span
+    class="
+      flex h-7 w-7 items-end justify-center
+      [&_svg]:h-full [&_svg]:w-full
+    "
+  >
+    {@render icon()}
+  </span>
   <span>{name}</span>
   {#if preferred}
     <span
-      class="shadow-badge absolute top-0 left-0 z-[1] h-[18px] w-[60px] -translate-x-1/4 -translate-y-2/3 rounded-full bg-[#FF3B30] text-[10px] leading-[18px] font-medium text-white"
+      class="
+        shadow-badge absolute top-0 left-0 z-[1] h-[18px] w-[60px]
+        -translate-x-1/4 -translate-y-2/3 rounded-full bg-[#FF3B30] text-[10px]
+        leading-[18px] font-medium text-white
+      "
     >
       Preferred
     </span>

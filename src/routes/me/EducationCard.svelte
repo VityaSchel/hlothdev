@@ -6,8 +6,9 @@
 <LgCard
   --bg="url(/education.webp)"
   class="
-    col-start-4 col-end-6 row-start-7 row-end-9 flex cursor-default flex-col
+    col-start-2 col-end-4 row-start-11 row-end-13 flex cursor-default flex-col
     justify-end gap-[1px] bg-cover px-[15px] py-[13px] text-white
+    px463:col-start-4 px463:col-end-6 px463:row-start-7 px463:row-end-9
     md:col-start-7 md:col-end-9 md:row-start-4 md:row-end-6
     px1180:col-start-9 px1180:col-end-11 px1180:row-start-3 px1180:row-end-5
   "

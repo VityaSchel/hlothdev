@@ -4,8 +4,9 @@
 
 <XsCard
   class="
-    group relative col-start-2 col-end-3 row-start-4 row-end-5 flex
+    group relative col-start-3 col-end-4 row-start-10 row-end-11 flex
     flex-col-reverse justify-between bg-cover px-[7px] py-[6px]
+    px463:col-start-2 px463:col-end-3 px463:row-start-4 px463:row-end-5
     md:col-start-2 md:col-end-3 md:row-start-5 md:row-end-6
     px1180:col-start-10 px1180:col-end-11 px1180:row-start-1 px1180:row-end-2
   "

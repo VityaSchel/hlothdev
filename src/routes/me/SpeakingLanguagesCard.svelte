@@ -4,8 +4,9 @@
 
 <XsCard
   class="
-    col-start-1 col-end-2 row-start-5 row-end-6 flex flex-col gap-[4px]
+    col-start-1 col-end-2 row-start-8 row-end-9 flex flex-col gap-[4px]
     bg-[#2E2E2E] px-[11px] py-2 text-white
+    px463:row-start-5 px463:row-end-6
     md:col-start-6 md:col-end-7 md:row-start-1 md:row-end-2
   "
 >

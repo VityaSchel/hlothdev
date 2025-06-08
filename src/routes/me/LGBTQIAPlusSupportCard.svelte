@@ -4,8 +4,9 @@
 
 <MdCard
   class="
-    group relative col-start-1 col-end-4 row-start-7 row-end-8 flex
+    group relative col-start-2 col-end-4 row-start-4 row-end-5 flex
     flex-col-reverse justify-between bg-cover
+    px463:col-start-1 px463:col-end-4 px463:row-start-7 px463:row-end-8
     md:col-start-1 md:col-end-4 md:row-start-4 md:row-end-5
   "
   --bg="url(/me-with-dima-celebrating-one-year-anniversary-2024.webp)"
