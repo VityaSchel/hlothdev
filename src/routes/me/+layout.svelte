@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { page } from '$app/state'
   import PageWrapper from '$lib/widgets/PageWrapper.svelte'
   import SubpageWrapper from '$lib/widgets/SubpageWrapper.svelte'
 
@@ -7,6 +8,8 @@
   }: {
     children: import('svelte').Snippet
   } = $props()
+
+  let isSubpage = $derived(page.route.id !== '/me')
 </script>
 
 <PageWrapper viewId="me">
@@ -17,14 +20,20 @@
     class="overflow-auto rounded-b-[32px] py-5"
   >
     <div
-      class="
-        relative m-auto grid h-[1799px] w-[389px] shrink-0 grid-flow-col
-        grid-cols-3 grid-rows-13 gap-4
-        px470:h-[1096px] px470:w-[659px] px470:grid-cols-5 px470:grid-rows-8
-        md:h-[682px] md:w-[1064px] md:grid-cols-8 md:grid-rows-5
-        px1180:h-[540px] px1180:w-[1334px] px1180:grid-cols-10
-        px1180:grid-rows-4
-      "
+      class={[
+        `
+          relative m-auto grid shrink-0 grid-flow-col grid-cols-3 grid-rows-13
+          gap-4
+          px470:grid-cols-5 px470:grid-rows-8
+          md:grid-cols-8 md:grid-rows-5
+          px1180:grid-cols-10 px1180:grid-rows-4
+        `,
+        {
+          'h-[1799px] w-[389px] px470:h-[1096px] px470:w-[659px] md:h-[682px] md:w-[1064px] px1180:h-[540px] px1180:w-[1334px]':
+            !isSubpage,
+          'w-full h-full': isSubpage
+        }
+      ]}
     >
       {@render children()}
     </div>
