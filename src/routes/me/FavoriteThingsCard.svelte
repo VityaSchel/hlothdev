@@ -45,13 +45,20 @@
 </script>
 
 <div
-  class="group relative col-start-9 col-end-11 row-start-2 row-end-3 rounded-4xl text-white select-none"
+  class="
+    group relative col-start-3 col-end-5 row-start-5 row-end-6 rounded-4xl
+    text-white select-none
+    px1178:col-start-9 px1178:col-end-11 px1178:row-start-2 px1178:row-end-3
+  "
   bind:clientWidth={width}
   bind:clientHeight={height}
   style={clipPathStyle}
 >
   <div
-    class="scrollbar-invisible absolute top-0 left-0 flex h-full w-full snap-x snap-mandatory gap-px overflow-auto"
+    class="
+      scrollbar-invisible absolute top-0 left-0 flex h-full w-full snap-x
+      snap-mandatory gap-px overflow-auto
+    "
     bind:this={scrollContainer}
     onscroll={() => (scroll = scrollContainer.scrollLeft)}
   >
@@ -60,7 +67,10 @@
         this={href ? 'a' : 'div'}
         rel={href ? 'noopener noreferrer' : undefined}
         target={href ? '_blank' : undefined}
-        class="animate-scroll h-full w-full shrink-0 cursor-default snap-center overflow-clip rounded-4xl"
+        class="
+          animate-scroll h-full w-full shrink-0 cursor-default snap-center
+          overflow-clip rounded-4xl
+        "
         style={clipPathStyle}
         {href}
       >
@@ -78,7 +88,12 @@
   </div>
   {#if browser}
     <div
-      class="absolute bottom-[5px] z-[1] flex h-[2px] w-full items-center justify-center gap-[2px] opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none"
+      class="
+        pointer-events-none absolute bottom-[5px] z-[1] flex h-[2px] w-full
+        items-center justify-center gap-[2px] opacity-0 transition-opacity
+        duration-300
+        group-hover:opacity-100
+      "
     >
       {#each images, i}
         <span

@@ -4,10 +4,22 @@
 </script>
 
 <XsCard
-  class="col-start-7 col-end-8 row-start-3 row-end-4 flex items-center justify-center bg-[#211b877a]"
+  class="
+    col-start-5 col-end-6 row-start-5 row-end-6 flex items-center justify-center
+    bg-[#211b877a]
+    px1178:col-start-7 px1178:col-end-8 px1178:row-start-3 px1178:row-end-4
+  "
 >
-  <div class="flex aspect-square h-full w-auto max-w-full items-center justify-center">
-    <div class="flex aspect-square h-auto max-h-full w-full items-center justify-center">
+  <div
+    class="
+      flex aspect-square h-full w-auto max-w-full items-center justify-center
+    "
+  >
+    <div
+      class="
+        flex aspect-square h-auto max-h-full w-full items-center justify-center
+      "
+    >
       <Clock />
     </div>
   </div>

@@ -2,16 +2,31 @@
   import XsCard from '$lib/widgets/grid-cards/XSCard.svelte'
 </script>
 
-<XsCard class="col-start-8 col-end-9 row-start-4 row-end-5 flex flex-col overflow-clip">
+<XsCard
+  class="
+    col-start-8 col-end-9 row-start-3 row-end-4 flex flex-col overflow-clip
+    px1178:col-start-8 px1178:col-end-9 px1178:row-start-4 px1178:row-end-5
+  "
+>
   <div
-    class="flex h-[31px] px-2 w-full shrink-0 items-center bg-gradient-to-b from-[#FED700] to-[#E6A600]"
+    class="
+      flex h-[31px] w-full shrink-0 items-center bg-gradient-to-b from-[#FED700]
+      to-[#E6A600] px-2
+    "
   >
-    <h4 class="block w-full text-center text-[11px] font-bold tracking-tight text-black">
+    <h4
+      class="
+        block w-full text-center text-[11px] font-bold tracking-tight text-black
+      "
+    >
       Fun fact about me
     </h4>
   </div>
   <div
-    class="flex flex-1 flex-col gap-[3px] bg-[#1E1E1E] px-[11px] py-3 text-[10px] font-medium text-white"
+    class="
+      flex flex-1 flex-col gap-[3px] bg-[#1E1E1E] px-[11px] py-3 text-[10px]
+      font-medium text-white
+    "
   >
     <span class="leading-[11px] tracking-tighter hyphens-auto">
       I started programming when I was six

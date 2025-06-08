@@ -70,6 +70,9 @@
 </section>
 
 <style lang="scss">
+  .checkbox-content :global(.banner) {
+    max-height: 115px;
+  }
   .checkbox:not(:checked) + .checkbox-content {
     .show-less {
       display: none;
@@ -91,9 +94,6 @@
     }
     .nowrap-flex {
       display: flex;
-    }
-    :global(.banner) {
-      max-height: 115px;
     }
   }
   .checkbox:checked + .checkbox-content {
@@ -119,6 +119,12 @@
       @media screen and (min-width: 768px) {
         display: flex;
         flex-wrap: wrap;
+      }
+    }
+
+    @media screen and not (min-width: 768px) {
+      :global(.banner) {
+        max-height: auto;
       }
     }
   }

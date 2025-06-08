@@ -33,18 +33,29 @@
     {@render children?.()}
   {:else}
     <div
-      class="flex h-full w-full flex-col justify-between px-8 py-[34px] text-black"
+      class="
+        flex h-full w-full flex-col justify-between px-8 py-[34px] text-black
+      "
       style:view-transition-name={inert ? undefined : 'about-me-content'}
     >
       <span class="h-[43px] w-[43px] shrink-0 rounded-full bg-black p-2">
-        <span class="animate-rotate flex h-full w-full items-center justify-center [&_svg]:w-full">
+        <span
+          class="
+            animate-rotate flex h-full w-full items-center justify-center
+            [&_svg]:w-full
+          "
+        >
           <WavingHandIcon />
         </span>
       </span>
-      <h1 class="one-storey-a text-[39px] leading-[39px] font-bold tracking-[0.35px]">
+      <h1
+        class="
+          one-storey-a text-[39px] leading-[39px] font-bold tracking-[0.35px]
+        "
+      >
         Hi, I’m Viktor, and my life is a roller coaster!
       </h1>
-      <a href="/me/about" class="flex w-full rounded-[30px]">
+      <a href="/me/about" class="flex w-full rounded-[30px]" draggable="false">
         <Button class="flex w-full items-center gap-6 select-none" tabindex={-1}>
           <svg
             width="23"
