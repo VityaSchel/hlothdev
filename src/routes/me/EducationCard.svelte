@@ -8,7 +8,7 @@
   class="
     col-start-7 col-end-9 row-start-4 row-end-6 flex cursor-default flex-col
     justify-end gap-[1px] bg-cover px-[15px] py-[13px] text-white
-    px1178:col-start-9 px1178:col-end-11 px1178:row-start-3 px1178:row-end-5
+    px1180:col-start-9 px1180:col-end-11 px1180:row-start-3 px1180:row-end-5
   "
   tag="a"
   href="https://web.archive.org/web/20170312123940/http://drugoigorod.ru/vitya-indigo/"

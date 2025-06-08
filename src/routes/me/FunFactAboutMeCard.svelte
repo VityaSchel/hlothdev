@@ -5,7 +5,7 @@
 <XsCard
   class="
     col-start-8 col-end-9 row-start-3 row-end-4 flex flex-col overflow-clip
-    px1178:col-start-8 px1178:col-end-9 px1178:row-start-4 px1178:row-end-5
+    px1180:col-start-8 px1180:col-end-9 px1180:row-start-4 px1180:row-end-5
   "
 >
   <div

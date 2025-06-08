@@ -18,10 +18,11 @@
   >
     <div
       class="
-        relative grid h-[682px] w-[1064px] grid-flow-col grid-cols-8 grid-rows-5
+        relative grid h-[682px] w-[659px] grid-flow-col grid-cols-5 grid-rows-8
         gap-4
-        px1178:h-[540px] px1178:w-[1334px] px1178:grid-cols-10
-        px1178:grid-rows-4
+        px773:w-[1064px] px773:grid-cols-8 px773:grid-rows-5
+        px1180:h-[540px] px1180:w-[1334px] px1180:grid-cols-10
+        px1180:grid-rows-4
       "
     >
       {@render children()}

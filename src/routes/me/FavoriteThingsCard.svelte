@@ -48,7 +48,7 @@
   class="
     group relative col-start-3 col-end-5 row-start-5 row-end-6 rounded-4xl
     text-white select-none
-    px1178:col-start-9 px1178:col-end-11 px1178:row-start-2 px1178:row-end-3
+    px1180:col-start-9 px1180:col-end-11 px1180:row-start-2 px1180:row-end-3
   "
   bind:clientWidth={width}
   bind:clientHeight={height}

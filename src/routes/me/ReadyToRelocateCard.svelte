@@ -6,7 +6,7 @@
   class="
     group relative col-start-2 col-end-3 row-start-5 row-end-6 flex
     flex-col-reverse justify-between bg-cover px-[7px] py-[6px]
-    px1178:col-start-10 px1178:col-end-11 px1178:row-start-1 px1178:row-end-2
+    px1180:col-start-10 px1180:col-end-11 px1180:row-start-1 px1180:row-end-2
   "
   bg
   --bg="url('/ready-to-relocate.webp')"
