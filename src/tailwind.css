@@ -43,6 +43,8 @@ html {
   --breakpoint-px1180: 1180px;
   --breakpoint-px920: 920px;
   --breakpoint-px870: 870px;
+  --breakpoint-px680: 680px;
+  --breakpoint-px620: 620px;
 }
 
 .one-storey-a {

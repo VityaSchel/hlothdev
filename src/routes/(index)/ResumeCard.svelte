@@ -9,9 +9,13 @@
   class="drop-background-shadow relative max-w-full flex-1 shrink-0 cursor-default rounded-[16px] xl:shrink"
 >
   <Squircle class="bg-black/10" cornerRadius={16} arrow>
-    <div class="flex h-full items-center gap-2 px870:gap-[18px] rounded-[16px] px-4 select-none xl:py-4">
-      <div class="flex h-10 w-10 px870:h-12 px870:w-12 lg:h-16 lg:w-16 items-center justify-center rounded-full bg-[#3B82F7]">
-        <svg class="w-5 px870:w-7" viewBox="0 0 57.7188 57.5312">
+    <div
+      class="px870:gap-[18px] flex h-full items-center gap-4 rounded-[16px] px-4 py-4 select-none md:gap-3 md:py-0 xl:py-4"
+    >
+      <div
+        class="px870:h-12 px870:w-12 flex h-12 w-12 items-center justify-center rounded-full bg-[#3B82F7] md:h-10 md:w-10 lg:h-16 lg:w-16"
+      >
+        <svg class="px870:w-7 w-6 md:w-5" viewBox="0 0 57.7188 57.5312">
           <g>
             <rect height="57.5312" opacity="0" width="57.7188" x="0" y="0" />
             <path
@@ -22,13 +26,15 @@
           </g>
         </svg>
       </div>
-      <div class="flex flex-1 flex-col xl:gap-[6px]">
+      <div class="flex flex-1 flex-col gap-1 md:gap-0 xl:gap-[6px]">
         <span
-          class="text-thick-typography text-xl px870:text-2xl leading-[38px] font-bold tracking-[-0.1px] xl:text-[32px]"
+          class="text-thick-typography px870:text-2xl text-xl font-bold tracking-[-0.1px] md:leading-[38px] xl:text-[32px]"
         >
           Jump to resume & CV
         </span>
-        <span class="text-thin-alt-typography hidden text-base leading-[19px] font-semibold lg:block">
+        <span
+          class="text-thin-alt-typography text-base leading-[19px] font-semibold md:hidden lg:block"
+        >
           Svelte, React, TypeScript, PostgreSQL, Drizzle, Python
         </span>
       </div>
