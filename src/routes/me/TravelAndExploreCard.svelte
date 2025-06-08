@@ -4,7 +4,11 @@
 
 <XlCard
   bg="url(/me-in-front-of-zeda-makhuntseti-waterfall-2024.webp)"
-  class="one-storey-a col-start-4 col-end-7 row-start-2 row-end-5 flex flex-col gap-3 bg-cover px-8 py-[34px]"
+  class="
+    one-storey-a col-start-3 col-end-6 row-start-4 row-end-7 flex flex-col gap-3
+    bg-cover px-8 py-[34px]
+    px773:col-start-4 px773:col-end-7 px773:row-start-2 px773:row-end-5
+  "
 >
   <h2 class="text-[39px] leading-[39px] font-bold tracking-[0.6px]">
     I love to travel and explore
