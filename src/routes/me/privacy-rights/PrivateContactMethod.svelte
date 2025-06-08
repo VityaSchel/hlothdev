@@ -30,7 +30,7 @@
   >
     {@render icon()}
   </span>
-  <span>{name}</span>
+  <span class="leading-4">{name}</span>
   {#if preferred}
     <span
       class="

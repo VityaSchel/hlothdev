@@ -7,15 +7,34 @@
 
 <PrivacyRightsCard>
   <div
-    class="content-container relative z-[1] flex h-full gap-8 rounded-[13px] p-8"
+    class="
+      content-container relative z-[1] h-full gap-8 overflow-auto rounded-[13px]
+      p-8
+      px680:flex px680:gap-4
+      lg:gap-8
+    "
     style="view-transition-name: privacy-rights-content;"
   >
-    <div class="flex h-full flex-1 flex-col justify-between gap-8">
-      <nav class="sticky top-0 left-0 z-[1] flex shrink-0 items-center gap-8">
+    <div
+      class="
+        mb-8 flex min-w-0 flex-1 flex-col justify-between gap-2
+        px680:mb-0
+        lg:w-auto lg:min-w-auto lg:flex-auto
+      "
+    >
+      <nav
+        class="
+          top-0 left-0 z-[1] flex shrink-0 items-center gap-8
+          px680:sticky
+        "
+      >
         <a
           href="/me"
           aria-label="Go back to the /me page"
-          class="flex w-fit cursor-default overflow-clip rounded-full text-white/60 active:text-neutral-300/80"
+          class="
+            flex w-fit cursor-default overflow-clip rounded-full text-white/60
+            active:text-neutral-300/80
+          "
           draggable="false"
         >
           <svg
@@ -36,7 +55,12 @@
             />
           </svg>
         </a>
-        <span class="text-base tracking-[-0.03px] text-[#4D4D4D]">
+        <span
+          class="
+            text-sm tracking-[-0.03px] text-[#4D4D4D]
+            lg:text-base
+          "
+        >
           Photo by <a
             href="https://unsplash.com/@srhhrbch"
             class="font-medium"
@@ -48,45 +72,88 @@
         </span>
       </nav>
       <div
-        class="content font-compact-display flex w-[610px] max-w-full flex-col leading-[19px] font-medium"
+        class="
+          mask-t-from-95% pt-3
+          px680:overflow-auto
+        "
       >
-        <h1 class="font-extra-condensed mb-2 text-5xl font-extrabold uppercase">
-          Privacy Is A Human Right
-        </h1>
-        <h2 class="font-condensed mb-4 text-2xl font-bold">
-          I'm committed to make privacy not just a feature, but a foundation.
-        </h2>
-        <p>
-          To me, privacy is a fundamental human right — non-negotiable, deeply personal, and
-          essential for freedom and dignity in the digital age. I deeply believe that people deserve
-          control over their data, their conversations, and their identities.
-        </p>
-        <p>
-          I contribute to a privacy-focused, end-to-end encrypted Session messenger that keeps
-          communication secure and people connected using decentralized network. All my open source
-          projects reflect the same philosophy.
-        </p>
-        <p>
-          Trusting your data to cloud means trusting whoever hosts it. I prefer selfhosting on
-          infrastructure that I can control. Same mindset shapes my approach to web: I make websites
-          that respect visitors decision to enable JavaScript, design them with privacy in mind and
-          host some of them in the onion network under the .loki domain.
-        </p>
-        <p>
-          I build for people who care about their digital lives, who understand that privacy isn’t a
-          trend.
-          <br />
-          It’s a right worth fighting for.
-        </p>
+        <div
+          class="
+            content flex max-w-full flex-col font-compact-display leading-[19px]
+            font-medium
+            lg:w-[400px]
+            px1150:w-[500px]
+            px1300:w-[550px]
+            px1380:w-[610px]
+          "
+        >
+          <h1
+            class="
+              mb-2 font-extra-condensed text-4xl font-extrabold uppercase
+              px1380:text-5xl
+            "
+          >
+            Privacy Is A Human Right
+          </h1>
+          <h2
+            class="
+              mb-4 w-[280px] max-w-full font-condensed text-xl leading-6
+              font-bold
+              px1380:w-max px1380:text-2xl
+            "
+          >
+            I'm committed to make privacy not just a feature, but a foundation.
+          </h2>
+          <p>
+            To me, privacy is a fundamental human right — non-negotiable, deeply personal, and
+            essential for freedom and dignity in the digital age. I deeply believe that people
+            deserve control over their data, their conversations, and their identities.
+          </p>
+          <p>
+            I contribute to a privacy-focused, end-to-end encrypted Session messenger that keeps
+            communication secure and people connected using decentralized network. All my open
+            source projects reflect the same philosophy.
+          </p>
+          <p>
+            Trusting your data to cloud means trusting whoever hosts it. I prefer selfhosting on
+            infrastructure that I can control. Same mindset shapes my approach to web: I make
+            websites that respect visitors decision to enable JavaScript, design them with privacy
+            in mind and host some of them in the onion network under the .loki domain.
+          </p>
+          <p>
+            I build for people who care about their digital lives, who understand that privacy isn’t
+            a trend.
+            <br />
+            It’s a right worth fighting for.
+          </p>
+        </div>
       </div>
     </div>
-    <div class="flex w-[540px] max-w-full flex-col gap-[15px]">
+    <div
+      class="
+        flex w-auto max-w-full min-w-0 flex-1 flex-col gap-[15px]
+        px680:overflow-auto px680:pl-4
+        lg:w-[540px] lg:min-w-auto lg:flex-auto
+      "
+    >
       {#snippet heading(text: string)}
-        <h2 class="text-center text-xl leading-5 font-semibold tracking-[-0.0075em]">{text}</h2>
+        <h2
+          class="
+            text-center text-lg leading-5 font-semibold tracking-[-0.0075em]
+            px1300:text-xl
+          "
+        >
+          {text}
+        </h2>
       {/snippet}
       {@render heading('My contributions to E2EE decentralized Session Messenger')}
       <div class="mb-2 flex shrink-0 flex-col items-center gap-2">
-        <div class="grid w-full shrink-0 grid-cols-2 gap-2">
+        <div
+          class="
+            grid w-full shrink-0 grid-cols-1 gap-2
+            lg:grid-cols-2
+          "
+        >
           <PrivacyRelatedProjectCard
             icon="/projects/session-native/logo-square-xs.webp"
             link="https://github.com/VityaSchel/session-native"
@@ -128,13 +195,21 @@
           href="https://session.community/"
           target="_blank"
           rel="noopener noreferrer"
-          class="rounded-full border border-[#bbbbbf] bg-white px-4 py-1 font-medium tracking-tight"
+          class="
+            rounded-full border border-[#bbbbbf] bg-white px-4 py-1 font-medium
+            tracking-tight
+          "
         >
           View more
         </a>
       </div>
       {@render heading('Ways to contact me securely')}
-      <div class="flex justify-center gap-2">
+      <div
+        class="
+          grid grid-cols-2 gap-2
+          lg:flex lg:justify-center
+        "
+      >
         <PrivateContactMethod link="https://matrix.to/#/@hloth:hloth.dev" name="Matrix" preferred>
           {#snippet icon()}
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -169,11 +244,7 @@
         </PrivateContactMethod>
         <PrivateContactMethod link="mailto:hi@hloth.dev" name="Email">
           {#snippet icon()}
-            <svg
-              viewBox="0 0 22 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M2 16C1.45 16 0.979333 15.8043 0.588 15.413C0.196667 15.0217 0.000666667 14.5507 0 14V2C0 1.45 0.196 0.979333 0.588 0.588C0.98 0.196666 1.45067 0.000666667 2 0H18C18.55 0 19.021 0.196 19.413 0.588C19.805 0.98 20.0007 1.45067 20 2V5.975H18V4L10 9L2 4V14H14V16H2ZM10 7L18 2H2L10 7ZM17 16C16.7167 16 16.4793 15.904 16.288 15.712C16.0967 15.52 16.0007 15.2827 16 15V12C16 11.7167 16.096 11.4793 16.288 11.288C16.48 11.0967 16.7173 11.0007 17 11V10C17 9.45 17.196 8.97933 17.588 8.588C17.98 8.19667 18.4507 8.00067 19 8C19.5493 7.99933 20.0203 8.19533 20.413 8.588C20.8057 8.98067 21.0013 9.45133 21 10V11C21.2833 11 21.521 11.096 21.713 11.288C21.905 11.48 22.0007 11.7173 22 12V15C22 15.2833 21.904 15.521 21.712 15.713C21.52 15.905 21.2827 16.0007 21 16H17ZM18 11H20V10C20 9.71667 19.904 9.47933 19.712 9.288C19.52 9.09667 19.2827 9.00067 19 9C18.7173 8.99933 18.48 9.09533 18.288 9.288C18.096 9.48067 18 9.718 18 10V11Z"
                 fill="black"
@@ -203,13 +274,31 @@
   @use 'sass:math';
 
   .content-container {
-    $radius: 610px + 32px;
-    background-image: radial-gradient(
-      circle farthest-side at bottom left,
-      rgba(255, 255, 255, 1),
-      rgba(255, 255, 255, 0.5) ($radius * 0.66),
-      rgba(255, 255, 255, 0) $radius
+    background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.7) 45%,
+      rgba(255, 255, 255, 0)
     );
+
+    @media (min-width: 680px) {
+      background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.7) 45%,
+        rgba(255, 255, 255, 0) 55%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+
+    @media (min-width: 1024px) {
+      $radius: 610px + 32px;
+      background-image: radial-gradient(
+        circle farthest-side at bottom left,
+        rgba(255, 255, 255, 1),
+        rgba(255, 255, 255, 0.5) calc($radius * 0.66),
+        rgba(255, 255, 255, 0) $radius
+      );
+    }
 
     .content {
       p {

@@ -42,9 +42,13 @@ html {
   --breakpoint-px1420: 1420px;
   --breakpoint-px1380: 1380px;
   --breakpoint-xl: 1280px;
+  --breakpoint-px1300: 1300px;
+  --breakpoint-px1205: 1205px;
   --breakpoint-px1180: 1180px;
+  --breakpoint-px1150: 1150px;
   --breakpoint-px1100: 1100px;
   --breakpoint-px1080: 1080px;
+  --breakpoint-px1050: 1050px;
   --breakpoint-lg: 1024px;
   --breakpoint-px980: 980px;
   --breakpoint-px920: 920px;
