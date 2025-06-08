@@ -1,6 +1,5 @@
 <script lang="ts">
   import { browser } from '$app/environment'
-  import { isIos } from '$lib/utils'
   import { getSvgPath } from 'figma-squircle'
 
   let {
@@ -63,13 +62,10 @@
       <clipPath id="clip-{uid}">
         <path d={squircle} />
       </clipPath>
-      <filter id="shadow-{uid}">
-        <feGaussianBlur stdDeviation="0.25" />
-        <feComponentTransfer>
-          <feFuncA type="gamma" exponent={isIos() ? 0.9 : 0.5} amplitude="2" />
-        </feComponentTransfer>
-        <feComposite operator="out" in2="SourceGraphic" />
-      </filter>
+      <mask id="mask-inverted-{uid}">
+        <rect x="-1" y="-1" width="{width + 2}px" height="{height + 2}px" fill="white" />
+        <path d={squircle} fill="black" clip-path="url(#clip-{uid})" />
+      </mask>
     </defs>
     <path
       d={squircle}
@@ -78,7 +74,13 @@
       stroke-width="{innerStrokeWidth}px"
       clip-path="url(#clip-{uid})"
     />
-    <path d={squircle} fill="black" filter="url(#shadow-{uid})" />
+    <path
+      d={squircle}
+      fill="transparent"
+      stroke="black"
+      stroke-width="1px"
+      mask="url(#mask-inverted-{uid})"
+    />
   </svg>
   <div
     class={[
