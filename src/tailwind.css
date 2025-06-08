@@ -43,11 +43,15 @@ html {
   --breakpoint-px1380: 1380px;
   --breakpoint-xl: 1280px;
   --breakpoint-px1180: 1180px;
+  --breakpoint-px1100: 1100px;
+  --breakpoint-px1080: 1080px;
   --breakpoint-lg: 1024px;
+  --breakpoint-px980: 980px;
   --breakpoint-px920: 920px;
   --breakpoint-px870: 870px;
   --breakpoint-md: 768px;
   --breakpoint-px680: 680px;
+  --breakpoint-px630: 630px;
   --breakpoint-px620: 620px;
   --breakpoint-sm: 640px;
   --breakpoint-px600: 600px;
@@ -61,6 +65,7 @@ html {
   --breakpoint-px350: 350px;
   --breakpoint-px380: 380px;
   --breakpoint-px330: 330px;
+  --breakpoint-px320: 320px;
   --breakpoint-px300: 300px;
 }
 

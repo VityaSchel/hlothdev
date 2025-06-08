@@ -12,8 +12,8 @@
 <PageWrapper>
   <div
     class="
-      flex h-full flex-col gap-4 overflow-auto rounded-4xl pt-4
-      md:overflow-visible scrollbar-thin
+      scrollbar-thin flex h-full flex-col gap-4 overflow-auto rounded-4xl pt-4
+      md:overflow-visible
     "
   >
     <div

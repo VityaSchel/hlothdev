@@ -23,7 +23,7 @@
 <div class="flex h-full w-full flex-col">
   <header
     class="
-      border-px flex h-[52px] w-full shrink-0 items-center justify-between
+      border-px flex h-[52px] w-full shrink-0 items-center justify-between gap-2
       border border-x-0 border-t-0 border-white/25 px-[15px] py-[12px]
     "
   >
@@ -98,14 +98,17 @@
         rel={button.external ? 'noreferrer noopener' : undefined}
         target={button.external ? '_blank' : undefined}
         class="
-          flex h-[22px] cursor-default items-center justify-center rounded-md
-          border border-[#b6a68e]/40 px-[7px] text-[13px] text-[#ede1cf]/90
-          select-none
-          hover:border-[#9b8a76] hover:bg-[#9b8a76]
-          active:border-[#af9c86] active:bg-[#af9c86] active:text-[#f7efe2]
+          flex h-[22px] min-w-0 cursor-default items-center justify-center
+          rounded-md border border-[#b6a68e]/40 px-[7px] text-[13px]
+          text-[#ede1cf]/90 select-none
+          hover:border-transparent hover:bg-[#b6a68e]/50
+          active:border-transparent active:bg-[#b6a68e]/80 active:text-[#f7efe2]
         "
+        draggable="false"
       >
-        {button.text}
+        <span class="max-w-full min-w-0 truncate">
+          {button.text}
+        </span>
       </a>
     {/if}
   </header>

@@ -10,11 +10,22 @@
 </script>
 
 <PageWrapper viewId="donate">
-  <SubpageWrapper title="donate.svelte" backUrl="/" button={{
-    text: 'Open PGP Signed List',
-    href: '/donate-pgp-signed.txt'
-  }}>
-    <div class="grid h-full grid-cols-3 grid-rows-2 gap-[25px]">
+  <SubpageWrapper
+    title="donate.svelte"
+    backUrl="/"
+    button={{
+      text: 'Open PGP Signed List',
+      href: '/donate-pgp-signed.txt'
+    }}
+    class="overflow-auto"
+  >
+    <div
+      class="
+        grid grid-cols-1 grid-rows-2 gap-[25px]
+        px630:grid-cols-2
+        px870:h-full px870:grid-cols-3
+      "
+    >
       <UsdtTrc20 />
       <UsdtErc20 />
       <Monero />
