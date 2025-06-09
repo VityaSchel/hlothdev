@@ -17,15 +17,15 @@
     title="me.svelte"
     backUrl="/"
     button={{ href: 'https://cv.hloth.dev', external: true, text: 'Open Developer Resume' }}
-    class="overflow-auto rounded-b-[32px] py-[26.5px]"
+    class="container-size overflow-auto rounded-b-[32px] py-[26.5px]"
   >
     <div
       class={[
         `
           relative m-auto grid shrink-0 grid-flow-col grid-cols-3 grid-rows-13
-          gap-4
-          px470:grid-cols-5 px470:grid-rows-8
-          md:grid-cols-8 md:grid-rows-5
+          gap-[3.404cqw]
+          px470:grid-cols-5 px470:grid-rows-8 px470:gap-[2.3121cqw]
+          md:grid-cols-8 md:grid-rows-5 md:gap-[2.6981450253cqh]
           px1180:grid-cols-10 px1180:grid-rows-4
         `,
         {
