@@ -14,7 +14,7 @@
 
 <svelte:element
   this={tag}
-  class={[`bg col-span-3 row-span-1 bg-neutral-600 font-semibold text-white`, className]}
+  class={[`bg col-span-3 row-span-1 font-semibold text-white`, className]}
   {...props}
   {@attach squircle({ cornerRadius: 0.0822622108, cornerSmoothing: 0.6 })}
 >

@@ -4,13 +4,17 @@
 
 <SmCard
   class="
-    container-size group col-start-2 col-end-4 row-start-8 row-end-9 bg-cover
+    container-size col-start-2 col-end-4 row-start-8 row-end-9
     px580:col-start-4 px580:col-end-6 px580:row-start-1 px580:row-end-2
   "
-  --bg="url(/support-ukraine.webp)"
   aria-label="Background image: photo of a couple wearing traditional Ukrainian embroidered clothing, holding hands in a field"
 >
-  <div class="flex h-full w-full flex-col justify-between p-[6.29cqw]">
+  <div
+    class="
+      group bg flex h-full w-full flex-col justify-between overflow-clip
+      rounded-[12.5984252cqw] bg-cover p-[6.29cqw]
+    "
+  >
     <span
       class="
         text-[3.54cqw] font-normal tracking-[-0.118cqw] opacity-0
@@ -30,12 +34,18 @@
     </span>
     <h3
       class="
-        text-[4.72cqw] leading-[4.72cqw] font-semibold tracking-[-0.2cqw]
-        @px175:tracking-[-0.1cqw]
-        @px188:tracking-[-0.08cqw]
+        text-[5cqw] leading-[5.25cqw] font-semibold tracking-[-0.2cqw]
+        @px175:tracking-[-0.12cqw]
+        @px188:tracking-[-0.2cqw]
       "
     >
       I’m on the Ukrainian side in the war with Russia.
     </h3>
   </div>
 </SmCard>
+
+<style>
+  .bg {
+    background-image: url('/support-ukraine.webp');
+  }
+</style>

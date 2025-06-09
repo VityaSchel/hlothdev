@@ -95,6 +95,7 @@
             text-ellipsis text-white/60 transition-[height] duration-300
             select-all
             group-hover:h-[var(--address-height)]
+            motion-reduce:duration-0
             px420:text-[17px] px420:leading-6
             px870:text-sm px870:leading-5
             px1100:text-[17px]
@@ -123,8 +124,10 @@
       {#if clickToPay}
         <div
           class="
-            hidden h-0 shrink-0 overflow-clip transition-[height] duration-300
+            hidden h-0 shrink-0 overflow-clip duration-300
             group-hover:h-[47px]
+            motion-safe:transition-[height]
+            motion-reduce:duration-0
             px320:block
             px980:group-hover:h-[58px] px980:no-hover:h-[58px]
             no-hover:h-[47px]

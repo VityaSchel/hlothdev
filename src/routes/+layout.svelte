@@ -74,6 +74,14 @@
 <Background>
   {@render children()}
   <Nav />
-  <JavascriptDisabledMessage />
-  <ReducedMotionMessage />
+  <div
+    class="
+      fixed right-0 bottom-15 z-[2000] flex max-w-full flex-col-reverse
+      items-end gap-4 px-4
+      md:pr-10
+    "
+  >
+    <JavascriptDisabledMessage />
+    <ReducedMotionMessage />
+  </div>
 </Background>

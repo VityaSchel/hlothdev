@@ -46,8 +46,8 @@
 
 <div
   class="
-    container-size group relative col-start-1 col-end-3 row-start-13 row-end-14
-    rounded-[12.59%] text-white select-none
+    container-size col-start-1 col-end-3 row-start-13 row-end-14 text-white
+    select-none
     px580:row-start-6 px580:row-end-7
     md:col-start-3 md:col-end-5 md:row-start-5 md:row-end-6
     px1180:col-start-9 px1180:col-end-11 px1180:row-start-2 px1180:row-end-3
@@ -56,59 +56,61 @@
   bind:clientHeight={height}
   style={clipPathStyle}
 >
-  <div
-    class="
-      scrollbar-invisible absolute top-0 left-0 flex h-full w-full snap-x
-      snap-mandatory gap-px overflow-auto
-    "
-    bind:this={scrollContainer}
-    onscroll={() => (scroll = scrollContainer.scrollLeft)}
-  >
-    {#snippet img(src: string, alt: string, href: string | undefined = undefined)}
-      <svelte:element
-        this={href ? 'a' : 'div'}
-        rel={href ? 'noopener noreferrer' : undefined}
-        target={href ? '_blank' : undefined}
-        class="
-          animate-scroll h-full w-full shrink-0 cursor-default snap-center
-          overflow-clip rounded-[12.59%]
-        "
-        style={clipPathStyle}
-        {href}
-      >
-        <img
-          src="/favorite-things/{src}.webp"
-          {alt}
-          class="h-full w-full shrink-0 rounded-[12.59%] object-cover"
-          style={clipPathStyle}
-        />
-      </svelte:element>
-    {/snippet}
-    {#each images as { img: src, alt, href }, i (i)}
-      {@render img(src, alt, href)}
-    {/each}
-  </div>
-  {#if browser}
+  <div class="group relative h-full w-full overflow-clip rounded-[12.59cqw]">
     <div
       class="
-        pointer-events-none absolute bottom-[1.96cqw] z-[1] flex h-[0.78cqw]
-        w-full items-center justify-center gap-[0.78cqw] opacity-0
-        transition-opacity duration-300
-        group-hover:opacity-100
+        scrollbar-invisible absolute top-0 left-0 flex h-full w-full snap-x
+        snap-mandatory gap-px overflow-auto
       "
+      bind:this={scrollContainer}
+      onscroll={() => (scroll = scrollContainer.scrollLeft)}
     >
-      {#each images, i}
-        <span
-          class="h-[0.78cqw] w-[0.78cqw] rounded-full backdrop-blur-3xl"
-          style="background-color: rgba(246, 246, 246, {transition(
-            0.3,
-            0.72,
-            Math.max(0, 1 - Math.abs(cardInViewport - i))
-          )})"
-        ></span>
+      {#snippet img(src: string, alt: string, href: string | undefined = undefined)}
+        <svelte:element
+          this={href ? 'a' : 'div'}
+          rel={href ? 'noopener noreferrer' : undefined}
+          target={href ? '_blank' : undefined}
+          class="
+            animate-scroll h-full w-full shrink-0 cursor-default snap-center
+            overflow-clip rounded-[12.59cqw]
+          "
+          style={clipPathStyle}
+          {href}
+        >
+          <img
+            src="/favorite-things/{src}.webp"
+            {alt}
+            class="h-full w-full shrink-0 rounded-[12.59cqw] object-cover"
+            style={clipPathStyle}
+          />
+        </svelte:element>
+      {/snippet}
+      {#each images as { img: src, alt, href }, i (i)}
+        {@render img(src, alt, href)}
       {/each}
     </div>
-  {/if}
+    {#if browser}
+      <div
+        class="
+          pointer-events-none absolute bottom-[1.96cqw] z-[1] flex h-[0.78cqw]
+          w-full items-center justify-center gap-[0.78cqw] opacity-0
+          transition-opacity duration-300
+          group-hover:opacity-100
+        "
+      >
+        {#each images, i}
+          <span
+            class="h-[0.78cqw] w-[0.78cqw] rounded-full backdrop-blur-3xl"
+            style="background-color: rgba(246, 246, 246, {transition(
+              0.3,
+              0.72,
+              Math.max(0, 1 - Math.abs(cardInViewport - i))
+            )})"
+          ></span>
+        {/each}
+      </div>
+    {/if}
+  </div>
 </div>
 
 <style lang="scss">
