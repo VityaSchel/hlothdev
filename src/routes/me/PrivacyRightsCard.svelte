@@ -17,7 +17,7 @@
 
 <LgCard
   class={[
-    'group overflow-clip rounded-[13px] bg-cover',
+    'container-size group overflow-clip bg-cover',
     {
       'absolute top-0 left-0 z-[1] col-span-full col-start-1 row-span-full row-start-1 h-full w-full':
         expanded,
@@ -28,6 +28,7 @@
   viewId={inert ? undefined : 'privacy-rights'}
   data-nosnippet={inert ? '' : undefined}
   {inert}
+  cornerRadius={expanded ? 13 : 0.05118110236}
 >
   <img
     src="/privacy-rights.webp"
@@ -42,14 +43,14 @@
   {:else}
     <div
       class="
-        relative z-[1] flex h-full flex-col justify-end gap-[6px] px-[15px]
-        py-[13px]
+        relative z-[1] flex h-full flex-col justify-end gap-[2.36cqw]
+        px-[5.90cqw] py-[5.11cqw]
       "
       style:view-transition-name={inert ? undefined : 'privacy-rights-content'}
     >
       <span
         class="
-          mb-auto text-[9px] tracking-[-0.03px] text-[#5D5D5D] opacity-0
+          mb-auto text-[3.54cqw] tracking-[-0.011cqw] text-[#5D5D5D] opacity-0
           transition-opacity duration-300
           group-hover:opacity-100
           has-focus-within:opacity-100
@@ -66,22 +67,25 @@
       </span>
       <h3
         class="
-          font-extra-condensed text-[20px] leading-5 font-extrabold
-          tracking-[-0.6px] uppercase
+          font-extra-condensed text-[7.87cqw] leading-5 font-extrabold
+          tracking-[-0.236cqw] uppercase
         "
       >
         Privacy Rights
       </h3>
       <p
         class="
-          pb-[9px] text-[11px] leading-[13px] font-semibold tracking-[-0.5px]
+          pb-[3.54cqw] text-[4.33cqw] leading-[5.11cqw] font-semibold
+          tracking-[-0.25cqw]
+          @px215:tracking-[-0.2cqw]
+          @px239:tracking-[-0.19cqw]
         "
       >
         I advocate for privacy and prefer selfhosting over SAAS. All my personal websites are
         available in lokinet under hloth.loki domain.
       </p>
       <a href="/me/privacy-rights" class="flex w-full rounded-lg" draggable="false">
-        <Button variant="md">Learn about my commitment</Button>
+        <Button class="h-[10.68cqh]" variant="md">Learn about my commitment</Button>
       </a>
     </div>
   {/if}

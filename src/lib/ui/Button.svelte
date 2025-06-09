@@ -13,10 +13,10 @@
 
 <div
   class={[
-    'container-size w-full bg-white text-black select-none',
+    'container-size w-full text-black select-none',
     {
-      'h-15 rounded-[30px]': variant === 'xl',
-      'h-7 rounded-lg': variant === 'md'
+      'h-15 rounded-full': variant === 'xl',
+      'h-7': variant === 'md'
     },
     className
   ]}
@@ -24,12 +24,12 @@
   <button
     class={[
       `
-        flex h-full w-full cursor-default items-center justify-center
+        flex h-full w-full cursor-default items-center justify-center bg-white
         select-none
       `,
       {
-        'text-[31.6cqh] gap-[40cqh] font-bold tracking-[-0.2px] ': variant === 'xl',
-        'text-[42.8cqh] font-bold tracking-[-0.5px] small-caps': variant === 'md'
+        'text-[31.6cqh] gap-[40cqh] font-bold tracking-[-0.2px] rounded-full': variant === 'xl',
+        'text-[42.8cqh] font-bold tracking-[-0.5px] small-caps rounded-[28cqh]': variant === 'md'
       }
     ]}
     {...props}
