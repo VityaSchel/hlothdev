@@ -5,7 +5,7 @@
 <SmCard
   class="
     container-size group col-start-2 col-end-4 row-start-8 row-end-9 bg-cover
-    px470:col-start-4 px470:col-end-6 px470:row-start-1 px470:row-end-2
+    px580:col-start-4 px580:col-end-6 px580:row-start-1 px580:row-end-2
   "
   --bg="url(/support-ukraine.webp)"
   aria-label="Background image: photo of a couple wearing traditional Ukrainian embroidered clothing, holding hands in a field"

@@ -21,7 +21,7 @@
     {
       'absolute top-0 left-0 z-[1] col-span-full col-start-1 row-span-full row-start-1 h-full w-full':
         expanded,
-      'relative col-start-1 col-end-3 row-start-9 row-end-11 px470:col-start-4 px470:col-end-6 px470:row-start-2 px470:row-end-4 md:col-start-7 md:col-end-9 md:row-start-1 md:row-end-3':
+      'relative col-start-1 col-end-3 row-start-9 row-end-11 px580:col-start-4 px580:col-end-6 px580:row-start-2 px580:row-end-4 md:col-start-7 md:col-end-9 md:row-start-1 md:row-end-3':
         !expanded
     }
   ]}

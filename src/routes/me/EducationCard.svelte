@@ -8,7 +8,7 @@
   class="
     container-size col-start-2 col-end-4 row-start-11 row-end-13 cursor-default
     bg-cover text-white
-    px470:col-start-4 px470:col-end-6 px470:row-start-7 px470:row-end-9
+    px580:col-start-4 px580:col-end-6 px580:row-start-7 px580:row-end-9
     md:col-start-7 md:col-end-9 md:row-start-4 md:row-end-6
     px1180:col-start-9 px1180:col-end-11 px1180:row-start-3 px1180:row-end-5
   "

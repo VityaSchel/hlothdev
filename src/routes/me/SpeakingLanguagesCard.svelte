@@ -6,7 +6,7 @@
   class="
     container-size col-start-1 col-end-2 row-start-8 row-end-9 bg-[#2E2E2E]
     text-white
-    px470:row-start-5 px470:row-end-6
+    px580:row-start-5 px580:row-end-6
     md:col-start-6 md:col-end-7 md:row-start-1 md:row-end-2
   "
 >

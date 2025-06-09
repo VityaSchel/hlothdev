@@ -7,7 +7,7 @@
   class="
     col-start-3 col-end-4 row-start-9 row-end-10 flex items-center
     justify-center bg-[#211b877a]
-    px470:row-start-8 px470:row-end-9
+    px580:row-start-8 px580:row-end-9
     md:col-start-5 md:col-end-6 md:row-start-5 md:row-end-6
     px1180:col-start-7 px1180:col-end-8 px1180:row-start-3 px1180:row-end-4
   "

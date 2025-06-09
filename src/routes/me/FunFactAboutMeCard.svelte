@@ -6,7 +6,7 @@
   class="
     container-size col-start-3 col-end-4 row-start-13 row-end-14 flex flex-col
     overflow-clip
-    px470:col-start-2 px470:col-end-3 px470:row-start-8 px470:row-end-9
+    px580:col-start-2 px580:col-end-3 px580:row-start-8 px580:row-end-9
     md:col-start-8 md:col-end-9 md:row-start-3 md:row-end-4
     px1180:col-start-8 px1180:col-end-9 px1180:row-start-4 px1180:row-end-5
   "

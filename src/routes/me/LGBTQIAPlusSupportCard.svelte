@@ -6,7 +6,7 @@
   class="
     container-size group relative col-start-2 col-end-4 row-start-4 row-end-5
     bg-cover
-    px470:col-start-1 px470:col-end-4 px470:row-start-7 px470:row-end-8
+    px580:col-start-1 px580:col-end-4 px580:row-start-7 px580:row-end-8
     md:col-start-1 md:col-end-4 md:row-start-4 md:row-end-5
   "
   --bg="url(/me-with-dima-celebrating-one-year-anniversary-2024.webp)"
@@ -16,7 +16,7 @@
     class="
       flex h-full w-full flex-col-reverse justify-between rounded-[8.22cqw]
       p-[4.11cqw] text-[4.72cqw] tracking-[-0.18cqw]
-      px470:text-[3.08cqw]
+      px580:text-[3.08cqw]
       @px273:tracking-[-0.15cqw]
     "
   >
@@ -25,21 +25,21 @@
         relative z-[1] leading-[5.5cqw] opacity-100 transition-opacity
         duration-300
         group-hover:opacity-50
-        px470:leading-[3.08cqw]
+        px580:leading-[3.08cqw]
       "
     >
       I’m openly gay and fight
       <br
         class="
           inline
-          px470:hidden
+          px580:hidden
         "
       />
       for LGBTQIA+ rights
       <br
         class="
           inline
-          px470:hidden
+          px580:hidden
         "
       />
       and representation

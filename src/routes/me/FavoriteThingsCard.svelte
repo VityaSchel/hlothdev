@@ -49,7 +49,7 @@
   class="
     container-size group relative col-start-1 col-end-3 row-start-13 row-end-14
     rounded-[12.59%] text-white select-none
-    px470:row-start-6 px470:row-end-7
+    px580:row-start-6 px580:row-end-7
     md:col-start-3 md:col-end-5 md:row-start-5 md:row-end-6
     px1180:col-start-9 px1180:col-end-11 px1180:row-start-2 px1180:row-end-3
   "
