@@ -21,7 +21,11 @@
   }
 </script>
 
-<div class="h-full w-full rounded-full bg-white p-[2.1%] text-[#1c1c1e]">
+<div
+  class="
+    container-size h-full w-full rounded-full bg-white p-[2.1%] text-[#1c1c1e]
+  "
+>
   <div class="relative h-full w-full">
     {#snippet tick(rotation: number)}
       <div class="border-aligned-element tick" style="--rotate: {rotation}deg;">
@@ -70,7 +74,7 @@
     <span
       class="
         text-outline absolute top-2/3 left-1/2 z-[10] -translate-x-1/2
-        -translate-y-1/2 text-[10px] font-semibold text-white
+        -translate-y-1/2 text-[8.8cqw] font-semibold text-white
         mix-blend-difference
       "
     >
@@ -150,6 +154,7 @@
       border-radius: calc(infinity * 1px);
       text-align: center;
       font-size: 13.5px;
+      font-size: 11.7cqw;
       font-weight: bold;
       letter-spacing: -0.05em;
       user-select: none;
