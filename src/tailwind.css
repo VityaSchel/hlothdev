@@ -72,6 +72,10 @@ html {
   --breakpoint-px330: 330px;
   --breakpoint-px320: 320px;
   --breakpoint-px300: 300px;
+  --container-px114: 114px;
+  --container-px98: 98px;
+  --container-px84: 84px;
+  --container-px77: 77px;
 }
 
 @custom-variant no-hover {

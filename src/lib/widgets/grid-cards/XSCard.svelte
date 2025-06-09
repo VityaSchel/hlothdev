@@ -16,9 +16,9 @@
 
 <svelte:element
   this={tag}
-  class={['col-span-1 row-span-1 rounded-[14px]', className, { bg }]}
+  class={['col-span-1 row-span-1 rounded-[11.76%]', className, { bg }]}
   {...props}
-  {@attach squircle({ cornerRadius: 14, cornerSmoothing: 1 })}
+  {@attach squircle({ cornerRadius: 0.1176470588, cornerSmoothing: 1 })}
 >
   {@render children?.()}
 </svelte:element>
