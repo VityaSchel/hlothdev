@@ -8,9 +8,10 @@
   let height = $state(0)
   let clipPath = $derived.by(() => {
     if (!width || !height) return ''
+    console.log(0.125984252 * width)
     return getSvgPath({
       cornerSmoothing: 0.6,
-      cornerRadius: 32,
+      cornerRadius: 0.125984252 * width,
       width,
       height
     })
@@ -46,8 +47,8 @@
 
 <div
   class="
-    group relative col-start-1 col-end-3 row-start-13 row-end-14 rounded-4xl
-    text-white select-none
+    container-size group relative col-start-1 col-end-3 row-start-13 row-end-14
+    rounded-[12.59%] text-white select-none
     px470:row-start-6 px470:row-end-7
     md:col-start-3 md:col-end-5 md:row-start-5 md:row-end-6
     px1180:col-start-9 px1180:col-end-11 px1180:row-start-2 px1180:row-end-3
@@ -71,7 +72,7 @@
         target={href ? '_blank' : undefined}
         class="
           animate-scroll h-full w-full shrink-0 cursor-default snap-center
-          overflow-clip rounded-4xl
+          overflow-clip rounded-[12.59%]
         "
         style={clipPathStyle}
         {href}
@@ -79,7 +80,7 @@
         <img
           src="/favorite-things/{src}.webp"
           {alt}
-          class="h-full w-full shrink-0 rounded-4xl object-cover"
+          class="h-full w-full shrink-0 rounded-[12.59%] object-cover"
           style={clipPathStyle}
         />
       </svelte:element>
@@ -91,15 +92,15 @@
   {#if browser}
     <div
       class="
-        pointer-events-none absolute bottom-[5px] z-[1] flex h-[2px] w-full
-        items-center justify-center gap-[2px] opacity-0 transition-opacity
-        duration-300
+        pointer-events-none absolute bottom-[1.96cqw] z-[1] flex h-[0.78cqw]
+        w-full items-center justify-center gap-[0.78cqw] opacity-0
+        transition-opacity duration-300
         group-hover:opacity-100
       "
     >
       {#each images, i}
         <span
-          class="h-[2px] w-[2px] rounded-full backdrop-blur-3xl"
+          class="h-[0.78cqw] w-[0.78cqw] rounded-full backdrop-blur-3xl"
           style="background-color: rgba(246, 246, 246, {transition(
             0.3,
             0.72,
