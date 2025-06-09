@@ -35,7 +35,7 @@
         @px188:tracking-[-0.08cqw]
       "
     >
-      I’m on Ukraine side in war with Russia
+      I’m on the Ukrainian side in the war with Russia.
     </h3>
   </div>
 </SmCard>

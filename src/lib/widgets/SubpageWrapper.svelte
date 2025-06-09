@@ -24,16 +24,16 @@
   <header
     class="
       border-px flex h-[52px] w-full shrink-0 items-center justify-between gap-2
-      border border-x-0 border-t-0 border-white/25 px-[15px] py-[12px]
+      border border-x-0 border-t-0 border-white/25 px-[15px] pl-0
     "
   >
-    <div class="ml-[3px] flex flex-row items-center gap-2">
+    <div class="flex h-full flex-row items-center">
       <a
         href={backUrl}
         aria-label="Back to previous page"
         class="
-          flex h-3 w-3 cursor-default items-center justify-center rounded-full
-          text-white/55
+          flex h-full cursor-default items-center justify-center
+          rounded-tl-[32px] pr-2 pl-[18px] text-white/55
           active:text-[#EAEAEA]
         "
         draggable="false"

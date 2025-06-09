@@ -39,7 +39,7 @@
       for="checkbox-{name}"
       class="
         font-sf-pro-display text-sm font-medium tracking-[-0.2px]
-        text-thin-typography
+        text-thin-typography select-none
         hover:underline
       "
       onclick={() => {

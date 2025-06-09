@@ -3,8 +3,9 @@
   import '../tailwind.css'
   import Background from '$lib/widgets/Background.svelte'
   import Nav from '$lib/widgets/Nav.svelte'
-  import JavascriptDisabledMessage from '$lib/widgets/JavascriptDisabledMessage.svelte'
   import { onNavigate } from '$app/navigation'
+  import JavascriptDisabledMessage from '$lib/widgets/JavascriptDisabledMessage.svelte'
+  import ReducedMotionMessage from '$lib/widgets/ReducedMotionMessage.svelte'
 
   let { children } = $props()
 
@@ -60,7 +61,7 @@
         sendTransitionToFront(viewId)
         sendTransitionToFrontTimer = setTimeout(() => {
           unsend()
-        }, 350)
+        }, 500)
       }
       document.startViewTransition(async () => {
         resolve()
@@ -74,4 +75,5 @@
   {@render children()}
   <Nav />
   <JavascriptDisabledMessage />
+  <ReducedMotionMessage />
 </Background>

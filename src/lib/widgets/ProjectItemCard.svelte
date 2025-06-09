@@ -16,7 +16,7 @@
     flex shrink-0 cursor-default flex-col items-center gap-[6px] select-none
   "
 >
-  <img class="banner rounded-[5px]" src={banner} alt="{name} banner" />
+  <img class="banner rounded-[5px]" src={banner} alt="{name} banner" draggable="false" />
   <span class="font-sf-pro text-xs font-medium tracking-[-0.1px]">{name}</span>
 </a>
 
