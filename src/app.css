@@ -23,7 +23,7 @@
 ::view-transition-group(about-me-content),
 ::view-transition-group(privacy-rights),
 ::view-transition-group(privacy-rights-content) {
-  animation-duration: 350ms;
+  animation-duration: 35000ms;
   animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -77,7 +77,9 @@
   display: none;
 }
 
-::view-transition-group(privacy-rights) {
+::view-transition-old(privacy-rights),
+::view-transition-new(privacy-rights) {
+  /* how to hide it when we hide animation? */
   background-image: url(/privacy-rights.webp);
   background-size: cover;
   background-position: 30%;
