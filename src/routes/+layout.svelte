@@ -8,11 +8,61 @@
 
   let { children } = $props()
 
+  // Couldn't find a way to fix z-indexes with CSS only,
+  // until we have :has() support for view transition API js is required
+  const sendTransitionToFront = (viewId: string) => {
+    const style = document.createElement('style')
+    style.innerHTML = `
+      ::view-transition-group(${viewId}) {
+        z-index: 1000;
+      }
+    `
+    style.setAttribute('data-send-transition-to-front', viewId)
+    document.head.appendChild(style)
+    return () => {
+      document.head.removeChild(style)
+    }
+  }
+
+  const viewIds = {
+    me: [
+      ['/(index)', '/me'],
+      ['/me', '/(index)']
+    ],
+    donate: [
+      ['/(index)', '/donate'],
+      ['/donate', '/(index)']
+    ]
+  }
+
+  let sendTransitionToFrontTimer: ReturnType<typeof setTimeout> | undefined = $state()
+
+  const unsend = () => {
+    document.querySelectorAll('style[data-send-transition-to-front]').forEach((style) => {
+      style.remove()
+    })
+  }
+
   onNavigate((navigation) => {
     if (!document.startViewTransition) return
 
     return new Promise((resolve) => {
       document.startViewTransition(async () => {
+        if (sendTransitionToFrontTimer) {
+          unsend()
+          clearTimeout(sendTransitionToFrontTimer)
+        }
+        let viewId = Object.entries(viewIds).find(([, value]) =>
+          value.some(
+            ([from, to]) => from === navigation.from?.route.id && to === navigation.to?.route.id
+          )
+        )?.[0]
+        if (viewId) {
+          sendTransitionToFront(viewId)
+          sendTransitionToFrontTimer = setTimeout(() => {
+            unsend()
+          }, 350)
+        }
         resolve()
         await navigation.complete
       })

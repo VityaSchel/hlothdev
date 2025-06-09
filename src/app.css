@@ -12,6 +12,10 @@
   }
 }
 
+::view-transition-group(root) {
+  animation-duration: 350ms;
+}
+
 ::view-transition-group(donate),
 ::view-transition-group(me) {
   border-radius: 32px;
@@ -23,7 +27,7 @@
 ::view-transition-group(about-me-content),
 ::view-transition-group(privacy-rights),
 ::view-transition-group(privacy-rights-content) {
-  animation-duration: 35000ms;
+  animation-duration: 350ms;
   animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -38,6 +42,15 @@
   border-radius: 13px;
   overflow: clip;
 }
+
+/* Locked aspect ratio looks better */
+/* ::view-transition-old(me),
+::view-transition-new(me),
+::view-transition-old(donate),
+::view-transition-new(donate) {
+  width: 100%;
+  height: 100%;
+} */
 
 ::view-transition-old(about-me),
 ::view-transition-new(about-me),
@@ -54,6 +67,11 @@
 ::view-transition-new(privacy-rights-content) {
   width: auto;
   height: 100%;
+}
+
+::view-transition-old(donate):only-child,
+::view-transition-new(donate):only-child {
+  z-index: -1;
 }
 
 ::view-transition-old(about-me):only-child,

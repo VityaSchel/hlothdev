@@ -8,7 +8,6 @@
   let height = $state(0)
   let clipPath = $derived.by(() => {
     if (!width || !height) return ''
-    console.log(0.125984252 * width)
     return getSvgPath({
       cornerSmoothing: 0.6,
       cornerRadius: 0.125984252 * width,

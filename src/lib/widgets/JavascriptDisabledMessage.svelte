@@ -2,18 +2,27 @@
   <input
     type="checkbox"
     id="hideJavascriptDisabledMessage"
-    autocomplete="off"
     checked={false}
     class="peer hidden"
     tabindex={-1}
   />
   <aside
     role="alert"
-    class="sosaka animate-in fixed right-10 bottom-15 z-[100] w-[594px] max-w-full rounded-[10px] bg-gradient-to-br from-[#b5acac] to-[#a3aca0] p-[10px] pr-3 text-right leading-[19px] font-medium text-[#373737] transition-opacity peer-checked:pointer-events-none peer-checked:opacity-0 [&_br]:hidden sm:[&_br]:block"
+    class="
+      animate-in fixed right-10 bottom-15 z-[100] w-[594px] max-w-full
+      rounded-[10px] bg-gradient-to-br from-[#b5acac] to-[#a3aca0] p-[10px] pr-3
+      text-right leading-[19px] font-medium text-[#373737] transition-opacity
+      peer-checked:pointer-events-none peer-checked:opacity-0
+      [&_br]:hidden
+      sm:[&_br]:block
+    "
   >
     <label
       for="hideJavascriptDisabledMessage"
-      class="absolute top-3 left-3 rounded-full text-black/50 active:text-black/70"
+      class="
+        absolute top-3 left-3 rounded-full text-black/50
+        active:text-black/70
+      "
       draggable="false"
     >
       <svg

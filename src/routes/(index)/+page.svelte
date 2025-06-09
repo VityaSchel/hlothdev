@@ -41,7 +41,14 @@
             xl:min-h-auto xl:shrink
           "
         >
-          <DonateCard />
+          <div class="
+            relative max-w-full flex-1
+            px680:flex-3/5
+            md:flex-1
+            lg:flex-[412]
+          ">
+            <DonateCard />
+          </div>
           <OnionMirrorCard />
         </div>
       </div>
