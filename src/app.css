@@ -69,11 +69,6 @@
   height: 100%;
 }
 
-::view-transition-old(donate):only-child,
-::view-transition-new(donate):only-child {
-  z-index: -1;
-}
-
 ::view-transition-old(about-me):only-child,
 ::view-transition-new(about-me):only-child,
 ::view-transition-old(about-me-content):only-child,

@@ -47,22 +47,22 @@
     if (!document.startViewTransition) return
 
     return new Promise((resolve) => {
-      document.startViewTransition(async () => {
-        if (sendTransitionToFrontTimer) {
+      if (sendTransitionToFrontTimer) {
+        unsend()
+        clearTimeout(sendTransitionToFrontTimer)
+      }
+      let viewId = Object.entries(viewIds).find(([, value]) =>
+        value.some(
+          ([from, to]) => from === navigation.from?.route.id && to === navigation.to?.route.id
+        )
+      )?.[0]
+      if (viewId) {
+        sendTransitionToFront(viewId)
+        sendTransitionToFrontTimer = setTimeout(() => {
           unsend()
-          clearTimeout(sendTransitionToFrontTimer)
-        }
-        let viewId = Object.entries(viewIds).find(([, value]) =>
-          value.some(
-            ([from, to]) => from === navigation.from?.route.id && to === navigation.to?.route.id
-          )
-        )?.[0]
-        if (viewId) {
-          sendTransitionToFront(viewId)
-          sendTransitionToFrontTimer = setTimeout(() => {
-            unsend()
-          }, 350)
-        }
+        }, 350)
+      }
+      document.startViewTransition(async () => {
         resolve()
         await navigation.complete
       })
