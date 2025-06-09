@@ -26,7 +26,7 @@
     clickToPay?: ClickToPay
   } = $props()
 
-  // I thought about using interpolate-size but 1) it's only implemented in Chrome/Edge
+  // I thought about using interpolate-size but 1) it’s only implemented in Chrome/Edge
   // and 2) it does not work with text-overflow: ellipsis
 
   let addressHeight: number = $state(0)

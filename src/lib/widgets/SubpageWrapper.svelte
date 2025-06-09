@@ -81,7 +81,7 @@
         >
           <img
             src="/file-icon.webp"
-            alt="Steve Job's quote as a text file icon"
+            alt="Steve Job’s quote as a text file icon"
             width="20"
             height="20"
             class="h-[20.5px] object-cover object-right"

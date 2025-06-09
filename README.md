@@ -12,9 +12,13 @@ Visit the website:
 
 ## Features
 
-- Written with [Svelte](https://svelte.dev) framework, the website works perfectly fine with JavaScript disabled and enhances user experience with animations and background data fetching when JavaScript is enabled
-- Designed entirely by me, this website follows macOS design guide and uses Apple's official design documentation to replicate familiar intuitive interface that allows visitor to instantly navigate through the pages
-- Content of the website is separated from the technical resume, because the goal of my personal website is to concisely tell visitor about me allowing them to learn more about specific topics as they navigate
+- Written with [Svelte](https://svelte.dev) framework
+- Works perfectly fine with JavaScript disabled
+- All transitions are made using CSS and View Transition API
+- Respects prefers-reduced-motion
+- Respects prefers-reduced-transparency
+- Designed entirely by me
+- Content of the website is separated from the technical resume
 - Takes full advantage of Retina screens by displaying all rasterized graphic elements in 2x size and applying subpixel outline/shadow effects
 
 Feel free to review the code and contact me if you have any questions!

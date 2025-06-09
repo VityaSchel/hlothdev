@@ -9,7 +9,7 @@
   <aside
     role="alert"
     class="
-      animate-in fixed right-10 bottom-15 z-[100] w-[594px] max-w-full
+      animate-in fixed right-10 bottom-15 z-[2000] w-[594px] max-w-full
       rounded-[10px] bg-gradient-to-br from-[#b5acac] to-[#a3aca0] p-[10px] pr-3
       text-right leading-[19px] font-medium text-[#373737] transition-opacity
       peer-checked:pointer-events-none peer-checked:opacity-0
@@ -49,15 +49,27 @@
 
 <style>
   .animate-in {
-    animation: fadeIn 0.3s ease-in-out;
+    animation: fade-in 0.3s ease-in-out;
+    animation-name: fade-in, slide-in;
   }
-  @keyframes fadeIn {
+  @media (prefers-reduced-motion: reduce) {
+    .animate-in {
+      animation-name: fade-in;
+    }
+  }
+  @keyframes fade-in {
     from {
       opacity: 0;
-      transform: translateY(10px);
     }
     to {
       opacity: 1;
+    }
+  }
+  @keyframes slide-in {
+    from {
+      transform: translateY(10px);
+    }
+    to {
       transform: translateY(0);
     }
   }

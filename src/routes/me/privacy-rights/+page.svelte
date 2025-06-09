@@ -102,7 +102,7 @@
               px1380:w-max px1380:text-2xl
             "
           >
-            I'm committed to make privacy not just a feature, but a foundation.
+            I’m committed to make privacy not just a feature, but a foundation.
           </h2>
           <p>
             To me, privacy is a fundamental human right — non-negotiable, deeply personal, and

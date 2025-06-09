@@ -14,7 +14,7 @@
   <aside
     role="alert"
     class="
-      animate-in fixed right-10 bottom-15 z-[100] w-[560px] max-w-full
+      animate-in fixed right-10 bottom-15 z-[2000] w-[560px] max-w-full
       rounded-[10px] bg-gradient-to-br from-[#b5acac] to-[#a3aca0] p-[10px] pr-3
       text-right leading-[19px] font-medium text-[#373737] transition-opacity
       peer-checked:pointer-events-none peer-checked:opacity-0
@@ -47,7 +47,7 @@
     <b class="font-semibold">reduce motion</b>
     setting in your system.
     <br />
-    I have disabled all animations and transitions on this page for you!
+    I have replaced all motion animations with fade on this page for you!
     <br />
     In case you have enabled it accidentally,
     <a
@@ -56,7 +56,7 @@
       rel="noopener noreferrer nofollow"
       class="font-semibold"
     >
-      here's how to disable it.
+      here’s how to disable it.
     </a>
     <br />
   </aside>
