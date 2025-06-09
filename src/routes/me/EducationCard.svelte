@@ -6,8 +6,8 @@
 <LgCard
   --bg="url(/education.webp)"
   class="
-    col-start-2 col-end-4 row-start-11 row-end-13 flex cursor-default flex-col
-    justify-end gap-[1px] bg-cover px-[15px] py-[13px] text-white
+    container-size col-start-2 col-end-4 row-start-11 row-end-13 cursor-default
+    bg-cover text-white
     px470:col-start-4 px470:col-end-6 px470:row-start-7 px470:row-end-9
     md:col-start-7 md:col-end-9 md:row-start-4 md:row-end-6
     px1180:col-start-9 px1180:col-end-11 px1180:row-start-3 px1180:row-end-5
@@ -18,16 +18,35 @@
   rel="nofollow noopener noreferrer"
   target="_blank"
 >
-  <h3
+  <div
     class="
-      mb-[6px] font-extra-condensed text-[20px] leading-5 font-extrabold
-      tracking-[-0.6px] uppercase
+      flex h-full w-full flex-col justify-end gap-[0.39cqw] px-[5.90cqw]
+      py-[5.11cqw]
     "
   >
-    Education
-  </h3>
-  <p class="pb-[9px] text-[11px] leading-[13px] font-bold tracking-[-0.6px]">
-    I’m self-taught talent who skipped univer-sity degree. I only have high school diploma.
-  </p>
-  <Button variant="md" tabindex={-1}>Read an article about 10 y.o. me</Button>
+    <h3
+      class="
+        mb-[2.36cqw] font-extra-condensed text-[7.87cqw] leading-[7.87cqw]
+        font-extrabold tracking-[-0.23cqw] uppercase
+      "
+    >
+      Education
+    </h3>
+    <p
+      class="
+        pb-[3.54cqw] text-[4.33cqw] leading-[5.11cqw] font-bold
+        tracking-[-0.4cqw]
+        @px165:tracking-[-0.3cqw]
+        @px198:tracking-[-0.27cqw]
+        @px239:tracking-[-0.23cqw]
+      "
+    >
+      I’m self-taught talent who skipped univer-
+      <wbr />
+      sity degree. I only have high school diploma.
+    </p>
+    <Button variant="md" class="h-[10.68cqh]" tabindex={-1}>
+      Read an article about 10 y.o. me
+    </Button>
+  </div>
 </LgCard>

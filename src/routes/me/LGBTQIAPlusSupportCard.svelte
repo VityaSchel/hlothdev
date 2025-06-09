@@ -15,7 +15,8 @@
   <div
     class="
       flex h-full w-full flex-col-reverse justify-between rounded-[8.22cqw]
-      p-[4.11cqw] text-[3.08cqw] tracking-[-0.15cqw]
+      p-[4.11cqw] text-[3.08cqw] tracking-[-0.18cqw]
+      @px273:tracking-[-0.15cqw]
     "
   >
     <h3

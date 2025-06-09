@@ -30,7 +30,9 @@
     </span>
     <h3
       class="
-        text-[4.72cqw] leading-[4.72cqw] font-semibold tracking-[-0.08cqw]
+        text-[4.72cqw] leading-[4.72cqw] font-semibold tracking-[-0.2cqw]
+        @px175:tracking-[-0.1cqw]
+        @px188:tracking-[-0.08cqw]
       "
     >
       I’m on Ukraine side in war with Russia

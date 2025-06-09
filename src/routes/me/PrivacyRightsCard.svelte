@@ -76,7 +76,8 @@
       <p
         class="
           pb-[3.54cqw] text-[4.33cqw] leading-[5.11cqw] font-semibold
-          tracking-[-0.25cqw]
+          tracking-[-0.3cqw]
+          @px170:tracking-[-0.25cqw]
           @px215:tracking-[-0.2cqw]
           @px239:tracking-[-0.19cqw]
         "
