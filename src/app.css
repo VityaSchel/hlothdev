@@ -4,11 +4,26 @@
 
 @media (prefers-reduced-motion: reduce) {
   ::view-transition-group(donate),
-  ::view-transition-new(donate) {
+  ::view-transition-new(donate),
+  ::view-transition-group(me),
+  ::view-transition-new(me),
+  ::view-transition-group(about-me),
+  ::view-transition-new(about-me),
+  ::view-transition-group(about-me-content),
+  ::view-transition-new(about-me-content),
+  ::view-transition-group(privacy-rights),
+  ::view-transition-new(privacy-rights),
+  ::view-transition-group(privacy-rights-content),
+  ::view-transition-new(privacy-rights-content) {
     animation-name: fade-in;
   }
 
-  ::view-transition-old(donate) {
+  ::view-transition-old(donate),
+  ::view-transition-old(me),
+  ::view-transition-old(about-me),
+  ::view-transition-old(about-me-content),
+  ::view-transition-old(privacy-rights),
+  ::view-transition-old(privacy-rights-content) {
     animation-name: fade-out;
   }
 }

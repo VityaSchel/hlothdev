@@ -6,7 +6,9 @@
   import { onNavigate } from '$app/navigation'
   import JavascriptDisabledMessage from '$lib/widgets/JavascriptDisabledMessage.svelte'
   import ReducedMotionMessage from '$lib/widgets/ReducedMotionMessage.svelte'
+  import ReducedTransparencyMessage from '$lib/widgets/ReducedTransparencyMessage.svelte'
   import type { LayoutProps } from './$types'
+  import { browser } from '$app/environment'
 
   let { children, data }: LayoutProps = $props()
 
@@ -71,21 +73,48 @@
     })
   })
 
-  let jsDisabledAlertDismissed = $state(!data.alertsDismissed.jsDisabled)
-  let reducedMotionAlertDismissed = $state(!data.alertsDismissed.reducedMotion)
+  let jsDisabledAlertVisible = $derived(!data.alertsDismissed.jsDisabled)
+  let reducedMotionAlertVisible = $derived(!data.alertsDismissed.reducedMotion)
+  let reducedTransparencyAlertVisible = $derived(!data.alertsDismissed.reducedTransparency)
+  console.log(data)
 </script>
 
 <Background>
   {@render children()}
   <Nav />
   <div
-    class="
-      fixed right-0 bottom-15 z-[2000] flex max-w-full flex-col items-end gap-4
-      px-4
-      md:pr-10
-    "
+    class={[
+      `
+        fixed right-0 bottom-0 z-[2000] max-w-full flex-col items-end gap-4 px-4
+        pt-5 pb-15
+        md:pr-10
+      `,
+      {
+        hidden:
+          browser &&
+          !jsDisabledAlertVisible &&
+          !reducedMotionAlertVisible &&
+          !reducedTransparencyAlertVisible,
+        flex: !browser,
+        'motion-reduce:flex': reducedMotionAlertVisible,
+        'transparency-reduce:flex': reducedTransparencyAlertVisible
+      }
+    ]}
   >
-    <ReducedMotionMessage bind:visible={reducedMotionAlertDismissed} />
-    <JavascriptDisabledMessage bind:visible={jsDisabledAlertDismissed} />
+    <ReducedTransparencyMessage bind:visible={reducedTransparencyAlertVisible} />
+    <ReducedMotionMessage bind:visible={reducedMotionAlertVisible} />
+    <JavascriptDisabledMessage bind:visible={jsDisabledAlertVisible} />
+    <!-- <div
+      class="
+        bg-dark-spot pointer-events-none absolute top-0 left-0 z-[-1] h-full
+        w-full mask-t-from-80% mask-x-from-80% mask-b-from-60%
+      "
+    ></div> -->
   </div>
 </Background>
+<!-- 
+<style>
+  .bg-dark-spot {
+    background-color: rgba(27, 27, 27, 0.7);
+  }
+</style> -->

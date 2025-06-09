@@ -1,5 +1,6 @@
 <script lang="ts">
   import { enhance } from '$app/forms'
+  import { invalidate } from '$app/navigation'
   import { page } from '$app/state'
 
   let {
@@ -31,9 +32,11 @@
   role="alert"
   class={[
     `
-      animate-in relative max-w-full rounded-[10px] bg-gradient-to-br
-      from-[#b5acac] to-[#a3aca0] p-[10px] pr-3 text-right leading-[19px]
-      font-medium text-[#373737] transition-opacity
+      animate-in alert-shadow relative max-w-full rounded-[10px]
+      bg-gradient-to-br from-[#b5acac] to-[#a3aca0] p-[10px] pr-3 text-right
+      leading-[19px] font-medium text-[#373737] transition-opacity
+      transparency-reduce:bg-[#b9b9b9]
+      transparency-reduce:[background-image:none]
       [&_br]:hidden
       sm:[&_br]:block
     `,
@@ -46,10 +49,18 @@
 >
   <form
     action="/?/dismiss"
-    class="float-left inline-block"
+    class="float-left inline-block h-[19px]"
     method="POST"
     use:enhance={() => {
       visible = false
+      return ({ update, result }) => {
+        if (result.type === 'success' || result.type === 'redirect') {
+          invalidate('app:alerts-dismissed')
+        } else {
+          visible = true
+        }
+        update()
+      }
     }}
   >
     <input type="hidden" name="redirect" value={page.url.pathname} />
@@ -57,7 +68,7 @@
     <!-- <label for={id} /> -->
     <button
       class="
-        p-1 pr-2 text-black/50
+        flex h-full items-center justify-center pr-2 pl-0.5 text-black/50
         active:text-black/70
       "
       draggable="false"
@@ -106,5 +117,8 @@
     to {
       transform: translateY(0);
     }
+  }
+  .alert-shadow {
+    box-shadow: 0 4px 35px rgba(0, 0, 0, 0.4), 0 12px 45px rgba(0, 0, 0, 0.7);
   }
 </style>

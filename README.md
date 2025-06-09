@@ -15,8 +15,8 @@ Visit the website:
 - Written with [Svelte](https://svelte.dev) framework
 - Works perfectly fine with JavaScript disabled
 - All transitions are made using CSS and View Transition API
-- Respects prefers-reduced-motion
-- Respects prefers-reduced-transparency
+- Respects `prefers-reduced-motion`
+- Respects `prefers-reduced-transparency`
 - Designed entirely by me
 - Content of the website is separated from the technical resume
 - Takes full advantage of Retina screens by displaying all rasterized graphic elements in 2x size and applying subpixel outline/shadow effects

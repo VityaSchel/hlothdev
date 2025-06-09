@@ -19,7 +19,14 @@
   {#if selectedNavItem !== null}
     <Tooltip {selectedNavItem}>{selectedNavItem.name}</Tooltip>
   {/if}
-  <Squircle class="bg-thick" cornerRadius={16} translucent>
+  <Squircle
+    class="
+      bg-thick
+      transparency-reduce:bg-opaque-row
+    "
+    cornerRadius={16}
+    translucent
+  >
     <div class="flex items-center gap-[2px] px-[5px]">
       <NavItem
         icon="/dock-icons/upwork.webp"

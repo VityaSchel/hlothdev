@@ -15,10 +15,17 @@
     drop-background-shadow relative min-h-0 w-[1384px] max-w-full flex-1
     shrink-0 rounded-[32px] backdrop-blur-[48px]
     md:max-h-[645px]
+    transparency-reduce:bg-transparent transparency-reduce:backdrop-blur-none
   "
   style={viewId ? `view-transition-name: ${viewId};` : undefined}
 >
-  <Squircle class="bg-thick" innerStrokeWidth={2}>
+  <Squircle
+    class="
+      bg-thick
+      transparency-reduce:bg-opaque-sheet
+    "
+    innerStrokeWidth={2}
+  >
     {@render children()}
   </Squircle>
 </main>

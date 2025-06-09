@@ -1,8 +1,8 @@
-export const load = async ({ cookies }) => {
+import { getAlertsDismissedProps } from '$lib/dismiss-alerts.server.js'
+
+export const load = async ({ cookies, depends }) => {
+  depends('app:alerts-dismissed')
   return {
-    alertsDismissed: {
-      jsDisabled: cookies.get('hloth-dev_js-disabled-alert-dismissed') === 'true',
-      reducedMotion: cookies.get('hloth-dev_reduced-motion-alert-dismissed') === 'true'
-    }
+    ...getAlertsDismissedProps(cookies)
   }
 }

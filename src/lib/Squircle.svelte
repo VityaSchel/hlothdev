@@ -46,7 +46,7 @@
       'absolute top-0 left-0 z-[0] h-full w-full',
       classes,
       {
-        'backdrop-blur-[48px]': translucent,
+        'backdrop-blur-[48px] transparency-reduce:backdrop-blur-none': translucent,
         'squircle-card': !browser
       }
     ]}

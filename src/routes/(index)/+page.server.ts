@@ -14,7 +14,9 @@ export const actions: Actions = {
         })
       }
       const formData = await request.formData()
-      const id = z.enum(['javascript-disabled', 'reduced-motion']).parse(formData.get('alert'))
+      const id = z
+        .enum(['javascript-disabled', 'reduced-motion', 'reduced-transparency'])
+        .parse(formData.get('alert'))
       originPathname = z
         .string()
         .refine(
@@ -29,6 +31,9 @@ export const actions: Actions = {
           break
         case 'reduced-motion':
           setCookie('hloth-dev_reduced-motion-alert-dismissed')
+          break
+        case 'reduced-transparency':
+          setCookie('hloth-dev_reduced-transparency-alert-dismissed')
           break
       }
     } catch {

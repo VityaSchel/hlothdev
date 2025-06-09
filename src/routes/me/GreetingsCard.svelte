@@ -93,6 +93,12 @@
     transform-origin: 73% 80%;
   }
 
+  @media (prefers-reduced-motion: reduce) {
+    .animate-rotate {
+      animation: none;
+    }
+  }
+
   @keyframes rotate {
     0% {
       transform: rotate(0deg);

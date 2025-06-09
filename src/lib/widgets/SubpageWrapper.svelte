@@ -103,6 +103,10 @@
           text-[#ede1cf]/90 select-none
           hover:border-transparent hover:bg-[#b6a68e]/50
           active:border-transparent active:bg-[#b6a68e]/80 active:text-[#f7efe2]
+          active:transparency-reduce:bg-white/20
+          transparency-reduce:border-white/7 transparency-reduce:text-zinc-400
+          transparency-reduce:hover:bg-white/7
+          transparency-reduce:active:text-zinc-200
         "
         draggable="false"
       >

@@ -34,7 +34,13 @@
   let collapseAddress = $state(true)
 </script>
 
-<SquircleThick class="bg-[#242424]/40" translucent>
+<SquircleThick
+  class="
+    bg-[#242424]/40
+    transparency-reduce:bg-black/25
+  "
+  translucent
+>
   <div
     class="
       group flex h-[253px] shrink-0 flex-col rounded-[30px] p-8

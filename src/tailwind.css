@@ -21,6 +21,8 @@ html {
   --color-tooltip: rgba(50, 50, 50, 0.48);
   --color-thin: rgba(0, 0, 0, 0.1);
   --color-thin-light: rgba(246, 246, 246, 0.48);
+  --color-opaque-sheet: #282828;
+  --color-opaque-row: #202020;
   --blur-thick: 128px;
   --blur-thin: 30px;
   --emoji-font: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
@@ -95,6 +97,12 @@ html {
 
 @custom-variant no-hover {
   @media not (hover: hover) {
+    @slot;
+  }
+}
+
+@custom-variant transparency-reduce {
+  @media (prefers-reduced-transparency: reduce) {
     @slot;
   }
 }

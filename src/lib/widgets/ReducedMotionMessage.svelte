@@ -9,19 +9,21 @@
 </script>
 
 <div
-  class="
-    hidden max-w-full
-    motion-reduce:block
-  "
+  class={[
+    'hidden max-w-full',
+    {
+      'motion-reduce:block': visible
+    }
+  ]}
 >
-  <Alert class="w-[560px]" id="reduced-motion" {visible}>
-    Looks like you have enabled
+  <Alert class="w-[490px]" id="reduced-motion" {visible}>
+    You have enabled
     <b class="font-semibold">reduce motion</b>
     setting in your system.
     <br />
-    I have replaced all motion animations with fade on this page for you!
+    All motion animations will be playing as fade on this page.
     <br />
-    In case you have enabled it accidentally,
+    In case you’ve enabled it accidentally,
     <a
       href="https://prefers-reduced-motion.com/"
       target="_blank"
