@@ -39,6 +39,7 @@
 		"@fontsource-variable/sofia-sans-condensed": "^5.2.5",
 		"@fontsource-variable/sofia-sans-extra-condensed": "^5.2.5",
 		"figma-squircle": "^1.1.0",
-		"svelte-portal": "^2.2.1"
+		"svelte-portal": "^2.2.1",
+		"zod": "^3.25.56"
 	}
 }

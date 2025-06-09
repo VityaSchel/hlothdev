@@ -1,5 +1,11 @@
-<script>
+<script lang="ts">
   import Alert from '$lib/ui/Alert.svelte'
+
+  let {
+    visible = $bindable()
+  }: {
+    visible: boolean
+  } = $props()
 </script>
 
 <div
@@ -8,7 +14,7 @@
     motion-reduce:block
   "
 >
-  <Alert class="w-[560px]" id="hideReducedMotionMessage">
+  <Alert class="w-[560px]" id="reduced-motion" {visible}>
     Looks like you have enabled
     <b class="font-semibold">reduce motion</b>
     setting in your system.

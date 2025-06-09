@@ -6,8 +6,9 @@
   import { onNavigate } from '$app/navigation'
   import JavascriptDisabledMessage from '$lib/widgets/JavascriptDisabledMessage.svelte'
   import ReducedMotionMessage from '$lib/widgets/ReducedMotionMessage.svelte'
+  import type { LayoutProps } from './$types'
 
-  let { children } = $props()
+  let { children, data }: LayoutProps = $props()
 
   // Couldn't find a way to fix z-indexes with CSS only,
   // until we have :has() support for view transition API js is required
@@ -69,6 +70,9 @@
       })
     })
   })
+
+  let jsDisabledAlertDismissed = $state(!data.alertsDismissed.jsDisabled)
+  let reducedMotionAlertDismissed = $state(!data.alertsDismissed.reducedMotion)
 </script>
 
 <Background>
@@ -76,12 +80,12 @@
   <Nav />
   <div
     class="
-      fixed right-0 bottom-15 z-[2000] flex max-w-full flex-col-reverse
-      items-end gap-4 px-4
+      fixed right-0 bottom-15 z-[2000] flex max-w-full flex-col items-end gap-4
+      px-4
       md:pr-10
     "
   >
-    <JavascriptDisabledMessage />
-    <ReducedMotionMessage />
+    <ReducedMotionMessage bind:visible={reducedMotionAlertDismissed} />
+    <JavascriptDisabledMessage bind:visible={jsDisabledAlertDismissed} />
   </div>
 </Background>

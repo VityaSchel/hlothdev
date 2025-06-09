@@ -1,15 +1,23 @@
-<script>
+<script lang="ts">
   import Alert from '$lib/ui/Alert.svelte'
+
+  let {
+    visible = $bindable()
+  }: {
+    visible: boolean
+  } = $props()
 </script>
 
 <div
-  class="
-    max-w-full
-    has-checked:hidden
-  "
+  class={[
+    'max-w-full',
+    {
+      hidden: !visible
+    }
+  ]}
 >
   <noscript>
-    <Alert id="hideJavascriptDisabledMessage" class="w-[594px]">
+    <Alert id="javascript-disabled" class="w-[594px]" {visible}>
       Looks like you’re visiting this website with
       <b class="font-semibold">JavaScript disabled.</b>
       <br />
