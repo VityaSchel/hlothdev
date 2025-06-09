@@ -17,7 +17,7 @@
     title="me.svelte"
     backUrl="/"
     button={{ href: 'https://cv.hloth.dev', external: true, text: 'Open Developer Resume' }}
-    class="overflow-auto rounded-b-[32px] py-5"
+    class="overflow-auto rounded-b-[32px] py-[26.5px]"
   >
     <div
       class={[
@@ -29,7 +29,7 @@
           px1180:grid-cols-10 px1180:grid-rows-4
         `,
         {
-          'h-[1799px] w-[389px] px470:h-[1096px] px470:w-[659px] md:h-[682px] md:w-[1064px] px1180:h-[540px] px1180:w-[1334px]':
+          'aspect-[389/1799] px470:aspect-[659/1096] h-auto w-full md:aspect-[1064/682] md:h-full md:w-auto px957:h-auto px957:w-full px1180:aspect-[1334/540] px1180:h-full px1180:w-auto':
             !isSubpage,
           'w-full h-full': isSubpage
         }

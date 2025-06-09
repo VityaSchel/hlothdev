@@ -1,0 +1,3 @@
+- smaller scrollbars to fit with rounded corners
+- flipping cards
+- scalable cards

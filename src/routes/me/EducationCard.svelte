@@ -15,6 +15,8 @@
   tag="a"
   href="https://web.archive.org/web/20170312123940/http://drugoigorod.ru/vitya-indigo/"
   aria-label="Background image: photo of me at 10 years old, sitting in front of my old laptop typing code, screen displays three colorful interface buttons from one of my programs"
+  rel="nofollow noopener noreferrer"
+  target="_blank"
 >
   <h3
     class="
