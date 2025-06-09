@@ -86,3 +86,7 @@
 .scrollbar-thin {
   scrollbar-width: thin;
 }
+
+.container-size {
+  container-type: size;
+}

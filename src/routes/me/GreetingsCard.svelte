@@ -17,7 +17,7 @@
 
 <XlCard
   class={[
-    'h-full w-full overflow-clip text-black',
+    'container-size h-full w-full overflow-clip text-black',
     {
       'absolute top-0 left-0 z-[1] col-span-full col-start-1 row-span-full row-start-1 h-full w-full':
         expanded,
@@ -28,20 +28,27 @@
   viewId={inert ? undefined : 'about-me'}
   data-nosnippet={inert ? '' : undefined}
   {inert}
+  cornerRadius={expanded ? 55 : 0.1375}
 >
   {#if expanded}
     {@render children?.()}
   {:else}
     <div
       class="
-        flex h-full w-full flex-col justify-between px-8 py-[34px] text-black
+        flex h-full w-full flex-col justify-between px-[8.22cqw] py-[8.74cqw]
+        text-black
       "
       style:view-transition-name={inert ? undefined : 'about-me-content'}
     >
-      <span class="h-[43px] w-[43px] shrink-0 rounded-full bg-black p-2">
+      <span
+        class="
+          h-[11.05cqw] w-[11.05cqw] shrink-0 rounded-full bg-black p-[2.05cqw]
+        "
+      >
         <span
           class="
             animate-rotate flex h-full w-full items-center justify-center
+            text-[4.13cqw]
             [&_svg]:w-full
           "
         >
@@ -50,16 +57,17 @@
       </span>
       <h1
         class="
-          one-storey-a text-[39px] leading-[39px] font-bold tracking-[0.35px]
+          one-storey-a text-[10cqw] leading-[10cqw] font-bold
+          tracking-[0.089cqw]
         "
       >
         Hi, I’m Viktor, and my life is a roller coaster!
       </h1>
-      <a href="/me/about" class="flex w-full rounded-[30px]" draggable="false">
-        <Button class="flex w-full items-center gap-6 select-none" tabindex={-1}>
+      <a href="/me/about" class="flex w-full rounded-[7.71cqw]" draggable="false">
+        <Button tabindex={-1} class="h-[15cqh]">
           <svg
-            width="23"
-            height="23"
+            width="38cqh"
+            height="38cqh"
             viewBox="0 0 23 23"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

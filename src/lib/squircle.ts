@@ -16,9 +16,10 @@ export const squircle =
     const onResize = () => {
       const width = element.offsetWidth
       const height = element.offsetHeight
+      const cornerRadiusPx = cornerRadius < 1 ? cornerRadius * width : cornerRadius
       const svgPath = getSvgPath({
         cornerSmoothing,
-        cornerRadius,
+        cornerRadius: cornerRadiusPx,
         width,
         height
       })

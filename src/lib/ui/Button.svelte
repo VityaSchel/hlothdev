@@ -7,20 +7,33 @@
   }: {
     variant?: 'xl' | 'md'
     children: import('svelte').Snippet
-    class: import('svelte/elements').SvelteHTMLElements['button']['class']
+    class?: import('svelte/elements').ClassValue
   } & import('svelte/elements').SvelteHTMLElements['button'] = $props()
 </script>
 
-<button
+<div
   class={[
+    'container-size w-full bg-white text-black select-none',
     {
-      'flex h-15 items-center justify-center rounded-[30px] bg-white text-[19px] font-bold tracking-[-0.2px] text-black':
-        variant === 'xl',
-      'h-7 rounded-lg bg-white text-xs font-bold tracking-[-0.5px]': variant === 'md'
+      'h-15 rounded-[30px]': variant === 'xl',
+      'h-7 rounded-lg': variant === 'md'
     },
     className
   ]}
-  {...props}
 >
-  {@render children()}
-</button>
+  <button
+    class={[
+      `
+        flex h-full w-full cursor-default items-center justify-center
+        select-none
+      `,
+      {
+        'text-[31.6cqh] gap-[40cqh] font-bold tracking-[-0.2px] ': variant === 'xl',
+        'text-[42.8cqh] font-bold tracking-[-0.5px] small-caps': variant === 'md'
+      }
+    ]}
+    {...props}
+  >
+    {@render children()}
+  </button>
+</div>

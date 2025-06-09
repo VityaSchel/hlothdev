@@ -81,9 +81,7 @@
         available in lokinet under hloth.loki domain.
       </p>
       <a href="/me/privacy-rights" class="flex w-full rounded-lg" draggable="false">
-        <Button variant="md" class="small-caps w-full select-none">
-          Learn about my commitment
-        </Button>
+        <Button variant="md">Learn about my commitment</Button>
       </a>
     </div>
   {/if}

@@ -7,22 +7,25 @@
     children,
     bg,
     viewId,
+    cornerRadius = 0.1375,
     ...props
   }: {
     tag?: T
     children?: import('svelte').Snippet
     bg?: string
     viewId?: string
+    cornerRadius?: number
   } & import('svelte/elements').SvelteHTMLElements[T] = $props()
 </script>
 
 <svelte:element
   this={tag}
   {...props}
-  class={['bg bg-neutral-200] col-span-3 row-span-3 rounded-[55px]', className]}
+  class={['bg col-span-3 row-span-3 bg-neutral-200', className]}
+  style:border-radius={cornerRadius < 1 ? cornerRadius * 100 + '%' : cornerRadius + 'px'}
   style:--bg={bg}
   style:view-transition-name={viewId}
-  {@attach squircle({ cornerRadius: 55, cornerSmoothing: 0.6 })}
+  {@attach squircle({ cornerRadius, cornerSmoothing: 0.6 })}
 >
   {@render children?.()}
 </svelte:element>

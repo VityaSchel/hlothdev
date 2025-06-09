@@ -29,7 +29,5 @@
   <p class="pb-[9px] text-[11px] leading-[13px] font-bold tracking-[-0.6px]">
     I’m self-taught talent who skipped univer-sity degree. I only have high school diploma.
   </p>
-  <Button variant="md" class="small-caps cursor-default text-black select-none" tabindex={-1}>
-    Read an article about 10 y.o. me
-  </Button>
+  <Button variant="md" tabindex={-1}>Read an article about 10 y.o. me</Button>
 </LgCard>
