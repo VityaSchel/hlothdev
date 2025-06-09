@@ -23,7 +23,7 @@
     <h4
       class="
         text-[9.3cqw] font-semibold tracking-[-0.075em]
-        @px103:text-[10.08cqw]
+        @px105:text-[10.08cqw]
       "
     >
       I’m ready to relocate

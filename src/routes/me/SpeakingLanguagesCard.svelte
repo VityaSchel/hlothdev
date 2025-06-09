@@ -29,7 +29,7 @@
             text-[8.40cqw] font-medium tracking-[-1cqw]
             @px77:tracking-[-0.8cqw]
             @px84:tracking-[-0.7cqw]
-            @px98:tracking-[-0.5cqw]
+            @px99:tracking-[-0.5cqw]
             @px114:tracking-[-0.336cqw]
           ">{label}</span>
         </div>
