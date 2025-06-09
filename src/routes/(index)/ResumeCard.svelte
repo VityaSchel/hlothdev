@@ -8,7 +8,7 @@
   target="_blank"
   class="
     drop-background-shadow relative max-w-full flex-1 shrink-0 cursor-default
-    rounded-[16px]
+    rounded-[16px] focus-lg
     xl:shrink
   "
 >
@@ -17,8 +17,8 @@
       class="
         flex h-full items-center gap-3 rounded-[16px] p-3 select-none
         px470:gap-4 px470:p-4
-        px870:gap-[18px]
         md:gap-3 md:py-0
+        px870:gap-[18px]
         xl:py-4
       "
     >
@@ -26,8 +26,8 @@
         class="
           flex h-8 w-8 items-center justify-center rounded-full bg-[#3B82F7]
           px400:h-12 px400:w-12
-          px870:h-12 px870:w-12
           md:h-10 md:w-10
+          px870:h-12 px870:w-12
           lg:h-16 lg:w-16
         "
       >
@@ -35,8 +35,8 @@
           class="
             w-4
             px400:w-6
-            px870:w-7
             md:w-5
+            px870:w-7
           "
           viewBox="0 0 57.7188 57.5312"
         >
@@ -61,8 +61,8 @@
           class="
             text-base font-bold tracking-[-0.1px] text-thick-typography
             px400:text-xl
-            px870:text-2xl
             md:leading-[38px]
+            px870:text-2xl
             xl:text-[32px]
           "
         >

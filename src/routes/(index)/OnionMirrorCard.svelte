@@ -2,9 +2,10 @@
   import Squircle from '$lib/Squircle.svelte'
 </script>
 
-<div
+<a
+  href="http://hlothadmob6vsssnjd7ovwyz4z2le4pbpbyfhqbuwooyq62ona3l4bid.onion/"
   class="
-    drop-background-shadow relative max-w-full flex-1 rounded-[16px]
+    drop-background-shadow relative max-w-full flex-1 rounded-[16px] focus-lg
     px680:flex-2/5
     md:flex-1
     lg:flex-[171]
@@ -15,8 +16,8 @@
       class="
         flex h-full items-center gap-3 p-3 select-none
         px470:gap-4 px470:p-4
-        px870:gap-4
         md:justify-center md:gap-3 md:py-2
+        px870:gap-4
         lg:flex-col lg:gap-2
       "
     >
@@ -58,7 +59,7 @@
       </span>
     </div>
   </Squircle>
-</div>
+</a>
 
 <style>
   .drop-background-shadow {

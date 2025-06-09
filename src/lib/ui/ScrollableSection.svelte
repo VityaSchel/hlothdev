@@ -1,23 +1,27 @@
 <script lang="ts">
   let {
+    id,
     name,
     children,
-    childrenCount
+    childrenCount,
+    skip
   }: {
+    id?: string
     name: string
     children: import('svelte').Snippet
     childrenCount: number
+    skip?: { label: string; id: string }
   } = $props()
 
   let scrollX = $state(0)
 </script>
 
-<input type="checkbox" class="checkbox hidden" autocomplete="off" id="checkbox-{name}" />
 <section
   class="
     checkbox-content flex flex-col gap-4
     px470:gap-[8px]
   "
+  {id}
 >
   <div
     class="
@@ -33,18 +37,51 @@
     >
       {name}
     </h2>
-    <!-- svelte-ignore a11y_click_events_have_key_events -->
-    <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
+    {#if skip}
+      <a
+        href="#{skip.id}"
+        class="
+          pointer-events-none mr-auto ml-2 rounded-md px-1 text-xs font-bold
+          opacity-0
+          focus:outline-0
+          focus-visible:bg-blue-600/50 focus-visible:opacity-100
+        "
+        onclick={(e) => {
+          e.preventDefault()
+          const element = document.getElementById(skip.id)
+          if (element) {
+            const interactableElement = element.querySelector(
+              'input, button, a, [tabindex]:not([tabindex="-1"])'
+            )
+            if (interactableElement instanceof HTMLElement) {
+              interactableElement?.focus()
+            }
+          }
+        }}
+      >
+        {skip.label}
+      </a>
+    {/if}
+    <input
+      type="checkbox"
+      class="checkbox pointer-events-none absolute opacity-0"
+      tabindex="0"
+      autocomplete="off"
+      id="checkbox-{name}"
+      role="switch"
+      aria-label="Toggle wrapping of {name} section"
+    />
     <label
       for="checkbox-{name}"
       class="
-        font-sf-pro-display text-sm font-medium tracking-[-0.2px]
+        font-sf-pro-display checkbox-label text-sm font-medium tracking-[-0.2px]
         text-thin-typography select-none
         hover:underline
       "
       onclick={() => {
         scrollX = 0
       }}
+      aria-hidden="true"
     >
       <span class="show-less">Show Less</span>
       <span class="show-all">
@@ -57,12 +94,15 @@
       `
         scrollbar-thin nowrap-flex wrap-styles gap-[10px] overflow-scroll px-4
         pt-[0.5px] pb-3
+        focus:outline-none
+        focus-visible:bg-stone-600/50
         px470:px-8
       `,
       {
         'nowrap-fade-out-mask': scrollX === 0
       }
     ]}
+    aria-label="Section {name} of portfolio, containing {childrenCount} items"
     onscroll={(e) => (scrollX = (e.target as HTMLDivElement).scrollLeft)}
   >
     {@render children()}
@@ -73,7 +113,7 @@
   .checkbox-content :global(.banner) {
     max-height: 115px;
   }
-  .checkbox:not(:checked) + .checkbox-content {
+  .checkbox-content:has(.checkbox:not(:checked)) {
     .show-less {
       display: none;
     }
@@ -96,7 +136,11 @@
       display: flex;
     }
   }
-  .checkbox:checked + .checkbox-content {
+  .checkbox-content:has(.checkbox:focus-visible) .checkbox-label {
+    text-decoration: underline;
+    color: #fff;
+  }
+  .checkbox-content:has(.checkbox:checked) {
     .show-less {
       display: inline;
     }

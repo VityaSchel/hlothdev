@@ -15,6 +15,7 @@
 <nav
   class="relative h-[65px] shrink-0 rounded-[16px] select-none"
   onpointerleave={() => (selectedNavItem = null)}
+  id="footer-nav"
 >
   {#if selectedNavItem !== null}
     <Tooltip {selectedNavItem}>{selectedNavItem.name}</Tooltip>

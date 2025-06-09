@@ -6,7 +6,11 @@
   const websites = $derived(portfolio.filter((p) => p.type === 'website'))
 </script>
 
-<ScrollableSection name="Websites" childrenCount={websites.length}>
+<ScrollableSection
+  name="Websites"
+  childrenCount={websites.length}
+  skip={{ label: 'Skip to projects section of portfolio', id: 'projects' }}
+>
   {#each websites as website (website.id + Math.random())}
     <ProfileItemCard id={website.id} name={website.name} banner={website.banner} />
   {/each}

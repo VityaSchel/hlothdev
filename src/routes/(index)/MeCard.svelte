@@ -5,7 +5,8 @@
 <a
   href="/me"
   class="
-    drop-background-shadow relative max-w-full cursor-default rounded-[16px]
+    drop-background-shadow focus-lg relative max-w-full cursor-default
+    rounded-[16px]
     px420:flex-1
     px1380:flex-[743]
   "

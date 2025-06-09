@@ -95,6 +95,14 @@ html {
   --container-px77: 77px;
 }
 
+@utility focus-lg {
+  @apply focus-visible:outline-3 focus-visible:outline-offset-6 focus-visible:outline-stone-200/40;
+}
+
+@utility focus-sm {
+  @apply focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-stone-200/60;
+}
+
 @custom-variant no-hover {
   @media not (hover: hover) {
     @slot;

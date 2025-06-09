@@ -5,7 +5,7 @@
 <a
   href="/donate"
   class="
-    drop-background-shadow relative max-w-full flex-1 cursor-default
+    drop-background-shadow focus-lg relative max-w-full flex-1 cursor-default
     rounded-[16px]
     px680:flex-3/5
     md:flex-1

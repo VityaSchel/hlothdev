@@ -14,6 +14,8 @@
   href="/portfolio/{id}"
   class="
     flex shrink-0 cursor-default flex-col items-center gap-[6px] select-none
+    focus:outline-[8px] focus:outline-stone-600/50
+    focus-visible:bg-stone-600/50
   "
 >
   <img class="banner rounded-[5px]" src={banner} alt="{name} banner" draggable="false" />

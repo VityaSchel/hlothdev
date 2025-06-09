@@ -63,6 +63,7 @@
     `
       nav-item group flex shrink-0 cursor-default flex-col items-center
       gap-[3px] self-stretch pt-[5px] pb-[3px] select-none
+      focus-sm
     `,
     className
   ]}
