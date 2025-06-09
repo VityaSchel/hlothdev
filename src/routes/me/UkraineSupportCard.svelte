@@ -28,7 +28,11 @@
         Kateryna Hliznitsova
       </a>
     </span>
-    <h3 class="text-[4.72cqw] font-semibold tracking-[-0.08cqw]">
+    <h3
+      class="
+        text-[4.72cqw] leading-[4.72cqw] font-semibold tracking-[-0.08cqw]
+      "
+    >
       I’m on Ukraine side in war with Russia
     </h3>
   </div>
