@@ -15,18 +15,34 @@
   <div
     class="
       flex h-full w-full flex-col-reverse justify-between rounded-[8.22cqw]
-      p-[4.11cqw] text-[3.08cqw] tracking-[-0.18cqw]
+      p-[4.11cqw] text-[4.72cqw] tracking-[-0.18cqw]
+      px470:text-[3.08cqw]
       @px273:tracking-[-0.15cqw]
     "
   >
     <h3
       class="
-        relative z-[1] leading-[3.08cqw] opacity-100 transition-opacity
+        relative z-[1] leading-[5.5cqw] opacity-100 transition-opacity
         duration-300
         group-hover:opacity-50
+        px470:leading-[3.08cqw]
       "
     >
-      I’m openly gay and fight for LGBTQIA+ rights and representation
+      I’m openly gay and fight
+      <br
+        class="
+          inline
+          px470:hidden
+        "
+      />
+      for LGBTQIA+ rights
+      <br
+        class="
+          inline
+          px470:hidden
+        "
+      />
+      and representation
     </h3>
     <span
       class="
