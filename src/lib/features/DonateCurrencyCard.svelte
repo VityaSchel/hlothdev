@@ -37,7 +37,8 @@
 >
   <div
     class="
-      group flex h-[253px] shrink-0 flex-col rounded-[30px] p-8
+      group flex h-[253px] shrink-0 flex-col rounded-[30px] p-6
+      px470:p-8
       px630:h-[285px]
       px680:h-[275px]
       md:h-[253px]

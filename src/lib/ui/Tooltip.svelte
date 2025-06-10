@@ -33,7 +33,7 @@
         class="
           tooltip-bg font-sf-pro-display flex h-[24px] items-center
           justify-center rounded-[4px] bg-tooltip px-[13px] text-sm font-normal
-          tracking-[-0.1px] text-white backdrop-blur-2xl
+          tracking-[-0.1px] whitespace-nowrap text-white backdrop-blur-2xl
           transparency-reduce:bg-[#323232]
           transparency-reduce:backdrop-blur-none
         "

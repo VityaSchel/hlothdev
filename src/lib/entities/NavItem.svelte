@@ -75,9 +75,16 @@
   }}
   onpointerdown={() => {
     pressed = true
-  }}
-  onpointerup={() => {
-    pressed = false
+    const onPointerUp = () => {
+      pressed = false
+      selectedNavItem = null
+      window.removeEventListener('pointerup', onPointerUp)
+      window.removeEventListener('touchend', onPointerUp)
+      window.removeEventListener('touchcancel', onPointerUp)
+    }
+    window.addEventListener('pointerup', onPointerUp, { once: true })
+    window.addEventListener('touchend', onPointerUp, { once: true })
+    window.addEventListener('touchcancel', onPointerUp, { once: true })
   }}
   onblur={() => {
     pressed = false

@@ -37,15 +37,13 @@
       <p
         class="
           pb-[3.54cqw] text-[4.33cqw] leading-[5.11cqw] font-bold
-          tracking-[-0.4cqw]
+          tracking-[-0.4cqw] hyphens-auto
           @px165:tracking-[-0.3cqw]
           @px198:tracking-[-0.27cqw]
           @px239:tracking-[-0.23cqw]
         "
       >
-        I’m self-taught talent who skipped univer-
-        <wbr />
-        sity degree. I only have high school diploma.
+        I’m self-taught talent who skipped university degree. I only have high school diploma.
       </p>
       <Button variant="md" class="h-[10.68cqh]" tabindex={-1}>
         Read an article about 10 y.o. me

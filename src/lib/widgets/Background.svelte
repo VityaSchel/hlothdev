@@ -6,7 +6,7 @@
   } = $props()
 </script>
 
-<div class="fixed top-0 left-0 h-full w-full select-none" aria-hidden="true">
+<div class="page-background fixed top-0 left-0 w-full select-none" aria-hidden="true">
   <img
     class="absolute top-0 left-0 h-full w-full object-cover text-[0px]"
     src="/bg.webp"
@@ -37,6 +37,14 @@
     .no-py-when-short {
       padding-top: 0;
       padding-bottom: 0;
+    }
+  }
+  .page-background {
+    height: 100vh;
+  }
+  @supports (height: 100lvh) {
+    .page-background {
+      height: 100lvh;
     }
   }
 </style>
