@@ -15,7 +15,7 @@
 {#if project}
   <PageWrapper viewId="project-{project.id}">
     <SubpageWrapper
-      class="overflow-auto"
+      class="overflow-auto rounded-b-[32px] focus-scrollable"
       title="{project.id}.svelte"
       srTitle="Portfolio project page: {project.name}"
       backUrl="/"

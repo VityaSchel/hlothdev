@@ -75,9 +75,7 @@
     class={[
       `
         scrollbar-thin nowrap-flex wrap-styles gap-[10px] overflow-scroll px-4
-        pt-[0.5px] pb-3
-        focus:outline-none
-        focus-visible:bg-stone-600/50
+        pt-[0.5px] pb-3 focus-scrollable
         px470:px-8
       `,
       {

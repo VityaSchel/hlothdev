@@ -74,7 +74,7 @@
       </nav>
       <div
         class="
-          mask-t-from-95% pt-3
+          mask-t-from-95% pt-3 focus-scrollable
           px680:overflow-auto
         "
       >
@@ -133,6 +133,7 @@
     <div
       class="
         flex w-auto max-w-full min-w-0 flex-1 flex-col gap-[15px]
+        focus-scrollable
         px680:overflow-auto px680:pl-4
         lg:w-[540px] lg:min-w-auto lg:flex-auto
       "

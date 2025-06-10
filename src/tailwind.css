@@ -115,6 +115,10 @@ html {
   @apply focus-visible:outline-3 focus-visible:-outline-offset-4 focus-visible:outline-stone-700/40;
 }
 
+@utility focus-scrollable {
+  @apply focus:outline-0 focus-visible:outline-6 focus-visible:outline-blue-500/50 focus-visible:-outline-offset-6;
+}
+
 @custom-variant no-hover {
   @media not (hover: hover) {
     @slot;
