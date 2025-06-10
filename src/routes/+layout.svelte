@@ -55,11 +55,17 @@
         unsend()
         clearTimeout(sendTransitionToFrontTimer)
       }
-      let viewId = Object.entries(viewIds).find(([, value]) =>
-        value.some(
-          ([from, to]) => from === navigation.from?.route.id && to === navigation.to?.route.id
-        )
-      )?.[0]
+      let viewId: string | undefined
+      if ([navigation.from?.route.id, navigation.to?.route.id].includes('/portfolio/[id]')) {
+        const projectId = (navigation.from?.params?.id || navigation.to?.params?.id) as string
+        viewId = `project-${projectId}`
+      } else {
+        viewId = Object.entries(viewIds).find(([, value]) =>
+          value.some(
+            ([from, to]) => from === navigation.from?.route.id && to === navigation.to?.route.id
+          )
+        )?.[0]
+      }
       if (viewId) {
         sendTransitionToFront(viewId)
         sendTransitionToFrontTimer = setTimeout(() => {

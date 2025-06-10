@@ -14,6 +14,7 @@
   <div
     class="
       scrollbar-thin flex h-full flex-col gap-4 overflow-auto rounded-4xl pt-4
+      focus-scrollable
       md:overflow-visible
     "
   >

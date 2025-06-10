@@ -18,7 +18,7 @@
       text: 'Open PGP Signed List',
       href: '/donate-pgp-signed.txt'
     }}
-    class="overflow-auto"
+    class="overflow-auto rounded-b-[32px] focus-scrollable"
   >
     <div
       class="

@@ -47,11 +47,11 @@
   >
     <div
       class="
-        coins min-h-0 flex-1 overflow-clip
+        coins min-h-0 flex-1 overflow-clip select-none
         no-hover:flex-none!
       "
     >
-      <div class="flex h-[68px]">
+      <div class="flex h-[68px] select-none">
         {@render coins()}
       </div>
     </div>

@@ -13,7 +13,7 @@
 </script>
 
 {#if project}
-  <PageWrapper viewId="project-{project.id}">
+  <PageWrapper viewId="project-{project.id}" class="project-view-transition">
     <SubpageWrapper
       class="overflow-auto rounded-b-[32px] focus-scrollable"
       title="{project.id}.svelte"

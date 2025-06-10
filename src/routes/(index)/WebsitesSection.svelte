@@ -11,7 +11,7 @@
   childrenCount={websites.length}
   skip={{ label: 'Skip to projects section of portfolio', id: 'projects' }}
 >
-  {#each websites as website (website.id + Math.random())}
+  {#each websites as website (website.id)}
     <ProfileItemCard id={website.id} name={website.name} banner={website.banner} />
   {/each}
 </ScrollableSection>

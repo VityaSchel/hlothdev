@@ -4,7 +4,7 @@
 
 <div
   class="
-    h-full w-[52px] overflow-visible
+    h-full w-[52px] overflow-visible select-none
     [&>svg]:min-h-full
   "
 >
