@@ -11,6 +11,9 @@
 </script>
 
 <PageMetadata />
+<svelte:head>
+  <link rel="preload" href="/me-avatar.webp" as="image" />
+</svelte:head>
 <PageWrapper>
   <h1 class="sr-only">Main page</h1>
   <div

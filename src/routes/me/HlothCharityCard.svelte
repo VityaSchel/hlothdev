@@ -14,7 +14,11 @@
     px1180:col-start-7 px1180:col-end-8 px1180:row-start-4 px1180:row-end-5
   "
 >
-  <XsCard class="flex h-full w-full items-end bg-cover" bg --bg="url('/hloth-charity.webp')">
+  <XsCard
+    class="flex h-full w-full items-end bg-cover"
+    bg
+    --bg="url('/hloth-charity.webp'), linear-gradient(to bottom, var(--color-neutral-600), var(--color-neutral-600))"
+  >
     <span
       class="
         one-storey-a p-[6.72cqw] text-[16.8cqw] leading-[20.16cqw] font-semibold

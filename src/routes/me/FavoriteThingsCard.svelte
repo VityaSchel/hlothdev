@@ -108,7 +108,10 @@
           <img
             src="/favorite-things/{src}.webp"
             {alt}
-            class="h-full w-full shrink-0 rounded-[12.59cqw] object-cover"
+            class="
+              h-full w-full shrink-0 rounded-[12.59cqw] bg-neutral-600
+              object-cover indent-[8cqw] text-[6.22cqw]
+            "
             style={clipPathStyle}
             draggable="false"
           />

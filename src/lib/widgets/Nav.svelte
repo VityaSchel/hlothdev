@@ -35,6 +35,7 @@
       <NavItem
         icon="/dock-icons/upwork.webp"
         name="My Upwork"
+        alt="Upwork icon"
         highlight
         link="https://www.upwork.com/freelancers/~01a1f59e7a4697be89"
         bind:selectedNavItem
@@ -46,6 +47,7 @@
       <NavItem
         icon="/dock-icons/github.webp"
         name="My GitHub"
+        alt="GitHub icon"
         highlight
         link="https://github.com/VityaSchel/"
         bind:selectedNavItem
@@ -53,6 +55,7 @@
       <NavItem
         icon="/dock-icons/linkedin.webp"
         name="My LinkedIn"
+        alt="Linkedin icon"
         highlight
         link="https://www.linkedin.com/in/hloth"
         bind:selectedNavItem
@@ -71,12 +74,14 @@
         icon="/dock-icons/element.webp"
         highlight
         name="Contact me via Matrix (preferred)"
+        alt="Element icon"
         link="https://matrix.to/#/@hloth:hloth.dev"
         bind:selectedNavItem
       />
       <NavItem
         icon="/dock-icons/telegram.webp"
         name="Contact me via Telegram"
+        alt="Telegram icon"
         link="https://t.me/hlothdev"
         bind:selectedNavItem
         class="
@@ -87,6 +92,7 @@
       <NavItem
         icon="/dock-icons/discord.webp"
         name="Contact me via Discord"
+        alt="Discord icon"
         link="https://discord.com/users/329249421332316166"
         bind:selectedNavItem
         class="
@@ -103,12 +109,14 @@
       <NavItem
         icon="/dock-icons/mail.webp"
         name="Contact me via email"
+        alt="Email icon"
         link="mailto:hi@hloth.dev"
         bind:selectedNavItem
       />
       <NavItem
         icon="/dock-icons/blog.webp"
         name="My blog"
+        alt="My blog icon"
         link="https://blog.hloth.dev/"
         bind:selectedNavItem
         class="
@@ -119,6 +127,7 @@
       <NavItem
         icon="/dock-icons/instagram.webp"
         name="My Instagram"
+        alt="Instagram icon"
         link="https://instagram.com/vityaczech"
         bind:selectedNavItem
       />

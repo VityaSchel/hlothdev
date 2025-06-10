@@ -22,7 +22,7 @@
       <img
         src="/error-icon.webp"
         alt="Cartoon warthog head with its top blown off, revealing an exploding brain like a mushroom cloud"
-        class="h-16 w-16"
+        class="h-16 w-16 text-center text-[7px] leading-[8px]"
       />
       <div class="flex flex-col gap-[10px] text-white/85">
         <h1 class="text-[13px] leading-4 font-bold">Error {page.status}</h1>

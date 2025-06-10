@@ -71,8 +71,8 @@
               src={url}
               {alt}
               class="
-                rounded-md outline-[0.5px] outline-offset-[-0.5px]
-                outline-white/25
+                rounded-md bg-neutral-600 text-center outline-[0.5px]
+                outline-offset-[-0.5px] outline-white/25
               "
             />
           {/each}

@@ -5,6 +5,7 @@
     icon,
     highlight,
     name,
+    alt,
     class: className,
     link,
     selectedNavItem = $bindable()
@@ -13,6 +14,7 @@
     name: string
     highlight?: boolean
     link: string
+    alt: string
     class?: import('svelte/elements').ClassValue
     selectedNavItem: {
       element: HTMLElement
@@ -99,9 +101,9 @@
 >
   <img
     src={icon}
-    alt={name}
+    {alt}
     class={[
-      'h-[50px] w-[50px] text-[0px]',
+      'h-[50px] w-[50px] text-center text-[10px]',
       {
         'brightness-[48%]': pressed
       }

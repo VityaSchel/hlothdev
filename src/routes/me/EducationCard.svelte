@@ -16,7 +16,7 @@
   "
 >
   <LgCard
-    --bg="url(/education.webp)"
+    --bg="url(/education.webp), linear-gradient(to bottom, var(--color-neutral-600), var(--color-neutral-600))"
     class="h-full w-full bg-cover text-white"
     aria-label="Background image: photo of me at 10 years old, sitting in front of my old laptop typing code, screen displays three colorful interface buttons from one of my programs"
   >

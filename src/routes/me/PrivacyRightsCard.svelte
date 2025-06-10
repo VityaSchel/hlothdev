@@ -33,7 +33,8 @@
   <img
     src="/privacy-rights.webp"
     class="
-      absolute top-0 left-0 h-full w-full object-cover object-[30%] select-none
+      absolute top-0 left-0 h-full w-full bg-neutral-200 object-cover
+      object-[30%] text-[0px] select-none
     "
     alt="Background: a surveillance camera mounted on a wall"
     style={inert ? undefined : 'view-transition-name: privacy-rights-content-ignore'}

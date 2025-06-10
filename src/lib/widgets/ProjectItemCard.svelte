@@ -22,7 +22,12 @@
   draggable="false"
   style:view-transition-name="project-{id}"
 >
-  <img class="banner rounded-[5px]" src={banner} alt="{name} banner" draggable="false" />
+  <img
+    class="banner rounded-[5px] bg-neutral-600 text-center"
+    src={banner}
+    alt="{name} banner"
+    draggable="false"
+  />
   <span class="font-sf-pro text-xs font-medium tracking-[-0.1px]">{name}</span>
 </a>
 

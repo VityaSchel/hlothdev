@@ -30,15 +30,16 @@
     >
       <img
         class="
-          aspect-square h-auto w-[100px] rounded-full
-          px530:w-[140px]
-          md:w-[90px]
-          px870:w-[100px]
-          px920:w-[140px]
-          px1380:w-[164px]
+          aspect-square h-auto w-[100px] rounded-full bg-neutral-600 text-center
+          leading-[100px]
+          px530:w-[140px] px530:leading-[140px]
+          md:w-[90px] md:leading-[90px]
+          px870:w-[100px] px870:leading-[100px]
+          px920:w-[140px] px920:leading-[140px]
+          px1380:w-[164px] px1380:leading-[164px]
         "
         src="/me-avatar.webp"
-        alt="Me"
+        alt="Me in a suit"
         draggable="false"
       />
       <div

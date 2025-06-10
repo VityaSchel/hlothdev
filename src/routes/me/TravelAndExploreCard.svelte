@@ -3,7 +3,7 @@
 </script>
 
 <XlCard
-  bg="url(/me-in-front-of-zeda-makhuntseti-waterfall-2024.webp)"
+  bg="url(/me-in-front-of-zeda-makhuntseti-waterfall-2024.webp), linear-gradient(to bottom, #525252, #525252)"
   class="
     container-size one-storey-a col-start-1 col-end-4 row-start-5 row-end-8
     bg-cover

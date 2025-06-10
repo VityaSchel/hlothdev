@@ -91,7 +91,7 @@
 
 <style lang="scss">
   .checkbox-content :global(.banner) {
-    max-height: 115px;
+    height: 115px;
   }
   .checkbox-content:has(.checkbox:not(:checked)) {
     .show-less {
@@ -148,7 +148,7 @@
 
     @media screen and not (min-width: 768px) {
       :global(.banner) {
-        max-height: fit-content;
+        height: fit-content;
       }
     }
   }

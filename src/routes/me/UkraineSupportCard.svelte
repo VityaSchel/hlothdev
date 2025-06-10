@@ -47,6 +47,6 @@
 
 <style>
   .bg {
-    background-image: url('/support-ukraine.webp');
+    background-image: url('/support-ukraine.webp'), linear-gradient(to bottom, #525252, #525252);
   }
 </style>

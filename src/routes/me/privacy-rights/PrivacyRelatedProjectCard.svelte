@@ -22,7 +22,13 @@
     px1205:py-[11px] px1205:pr-6 px1205:pl-[21px]
   "
 >
-  <img class="shrink-0 rounded-sm" src={icon} alt="Icon of {name}" width="28" height="28" />
+  <img
+    class="shrink-0 rounded-sm text-[8px]"
+    src={icon}
+    alt="Icon of {name}"
+    width="28"
+    height="28"
+  />
   <div class="flex flex-1 flex-col">
     <span
       class="

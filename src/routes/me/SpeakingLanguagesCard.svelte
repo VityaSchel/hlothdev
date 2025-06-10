@@ -20,6 +20,7 @@
         <div class="flex items-center gap-[5.04cqw]">
           <img
             src="/languages-icons/{icon}.webp"
+            class="text-[3px]"
             alt="{icon} icon"
             width="12"
             height="12"

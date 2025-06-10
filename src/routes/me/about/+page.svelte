@@ -107,7 +107,8 @@
     </div>
     <img
       class="
-        hidden min-w-0 flex-1/5 object-cover object-[52%_50%]
+        hidden min-w-0 flex-1/5 bg-neutral-200 object-cover object-[52%_50%]
+        text-center
         px450:block
         px500:flex-1/3
         md:flex-1
