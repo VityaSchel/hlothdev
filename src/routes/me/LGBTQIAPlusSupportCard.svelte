@@ -67,11 +67,12 @@
     <span
       class="
         small-caps pointer-events-none absolute top-[3cqw] right-[6.15cqw] z-[1]
-        hidden w-[30cqw] text-right text-[3.07cqw] leading-[3.5cqw] font-bold
+        hidden w-[60cqw] text-right text-[6cqw] leading-[6cqw] font-bold
         text-stone-200/80 uppercase opacity-100 transition-opacity duration-300
         select-none text-shadow-md
         group-focus-within:opacity-0
         group-hover:opacity-0
+        px580:w-[30cqw] px580:text-[3.07cqw] px580:leading-[3.5cqw]
         no-hover:block
       "
       aria-hidden="true"

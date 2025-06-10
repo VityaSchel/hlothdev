@@ -27,7 +27,7 @@ html {
   --blur-thin: 30px;
   --emoji-font: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   --default-fonts:
-    -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif, var(--emoji-font);
+    -apple-system, BlinkMacSystemFont, 'Inter Variable', Roboto, Helvetica, Arial, sans-serif, var(--emoji-font);
   --font-sf-pro: 'SF Pro', SF-Pro, var(--default-fonts);
   --font-mono:
     'SF Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',

@@ -129,7 +129,16 @@
   <KeyboardNavigationSkipLink class="top-15 left-2" id="footer-nav">
     Skip to footer navigation
   </KeyboardNavigationSkipLink>
-  <div class={['max-h-[calc(100%-52px)] flex-1 p-[25px]', className]} role="main">
+  <div
+    class={[
+      `
+        max-h-[calc(100%-52px)] flex-1 p-4
+        px470:p-[25px]
+      `,
+      className
+    ]}
+    role="main"
+  >
     {@render children?.()}
   </div>
 </div>

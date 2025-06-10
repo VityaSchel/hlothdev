@@ -42,6 +42,9 @@
   let scrollContainer: HTMLDivElement
   onMount(() => (scroll = scrollContainer.scrollLeft))
   let cardInViewport = $derived(scroll / (width + 1))
+
+  let touch = $state(false)
+  let touchEndTimer: ReturnType<typeof setTimeout> | null = $state(null)
 </script>
 
 <div
@@ -58,9 +61,24 @@
   <div
     class="
       group relative h-full w-full overflow-clip rounded-[12.59cqw]
-      focus-within:outline-3 focus-within:outline-offset-6
-      focus-within:outline-stone-200/40
+      has-focus-visible:outline-3 has-focus-visible:outline-offset-6
+      has-focus-visible:outline-stone-200/40
     "
+    ontouchstartcapture={() => {
+      if (touchEndTimer) {
+        clearTimeout(touchEndTimer)
+      }
+      touch = true
+      const onTouchEnd = () => {
+        touchEndTimer = setTimeout(() => {
+          touch = false
+        }, 1000)
+        window.removeEventListener('touchend', onTouchEnd)
+        window.removeEventListener('touchcancel', onTouchEnd)
+      }
+      window.addEventListener('touchend', onTouchEnd, { once: true })
+      window.addEventListener('touchcancel', onTouchEnd, { once: true })
+    }}
   >
     <div
       class="
@@ -102,13 +120,19 @@
     </div>
     {#if browser}
       <div
-        class="
-          pointer-events-none absolute bottom-[1.96cqw] z-[1] flex h-[0.78cqw]
-          w-full items-center justify-center gap-[0.78cqw] opacity-0
-          transition-opacity duration-300
-          group-focus-within:opacity-100
-          group-hover:opacity-100
-        "
+        class={[
+          `
+            pointer-events-none absolute bottom-[1.96cqw] z-[1] flex h-[0.78cqw]
+            w-full items-center justify-center gap-[0.78cqw] transition-opacity
+            duration-300
+            group-hover:opacity-100
+            group-has-focus-visible:opacity-100
+          `,
+          {
+            'opacity-0': !touch,
+            'opacity-100': touch
+          }
+        ]}
       >
         {#each images, i}
           <span

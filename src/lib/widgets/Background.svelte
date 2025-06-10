@@ -16,8 +16,8 @@
 </div>
 <div
   class="
-    page-container relative flex w-full flex-col items-center justify-center
-    gap-[2px] p-3 pb-2 font-sf-pro
+    page-container no-py-when-short relative flex w-full flex-col items-center
+    justify-center gap-[2px] p-3 pb-2 font-sf-pro
     md:p-8 md:pb-5
   "
 >
@@ -31,6 +31,12 @@
   @supports (height: 100dvh) {
     .page-container {
       height: 100dvh;
+    }
+  }
+  @media (max-height: 250px) {
+    .no-py-when-short {
+      padding-top: 0;
+      padding-bottom: 0;
     }
   }
 </style>
