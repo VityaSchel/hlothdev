@@ -6,6 +6,8 @@
     id: 'nock-trade',
     name: 'Nock Trade',
     description,
+    shortDescription:
+      'Nock Trade is a trading platform that allows users to trade various assets seamlessly.',
     banner: '/projects/nock-trade/banner.webp',
     images: [
       {
@@ -50,6 +52,8 @@
     id: 'nock-trade2',
     name: 'Nock Trade',
     description,
+    shortDescription:
+      'Nock Trade is a trading platform that allows users to trade various assets seamlessly.',
     banner: '/projects/nock-trade/banner.webp',
     images: [
       {

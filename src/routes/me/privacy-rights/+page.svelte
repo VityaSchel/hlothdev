@@ -3,8 +3,13 @@
   import PrivacyRightsCard from '../PrivacyRightsCard.svelte'
   import PrivacyRelatedProjectCard from './PrivacyRelatedProjectCard.svelte'
   import PrivateContactMethod from './PrivateContactMethod.svelte'
+  import PageMetadata from '$lib/widgets/PageMetadata.svelte'
 </script>
 
+<PageMetadata
+  name="How I support digital privacy rights"
+  description="Privacy Is A Human Right. I’m committed to make privacy not just a feature, but a foundation. I build for people who understand it’s a right worth fighting for."
+/>
 <PrivacyRightsCard>
   <div
     class="

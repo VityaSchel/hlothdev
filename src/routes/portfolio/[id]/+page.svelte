@@ -4,6 +4,7 @@
   import SubpageWrapper from '$lib/widgets/SubpageWrapper.svelte'
   import { error } from '@sveltejs/kit'
   import type { PageProps } from './$types'
+  import PageMetadata from '$lib/widgets/PageMetadata.svelte'
 
   let { data }: PageProps = $props()
   const project = $derived(portfolio.find((p) => p.id === data.id))
@@ -13,6 +14,7 @@
 </script>
 
 {#if project}
+  <PageMetadata name={project.name} description={project.shortDescription} />
   <PageWrapper viewId="project-{project.id}" class="project-view-transition">
     <SubpageWrapper
       class="overflow-auto rounded-b-[32px] focus-scrollable"

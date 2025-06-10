@@ -7,8 +7,10 @@
   import WebsitesSection from './WebsitesSection.svelte'
   import ProjectsSection from './ProjectsSection.svelte'
   import PortfolioSection from './PortfolioSection.svelte'
+  import PageMetadata from '$lib/widgets/PageMetadata.svelte'
 </script>
 
+<PageMetadata />
 <PageWrapper>
   <h1 class="sr-only">Main page</h1>
   <div

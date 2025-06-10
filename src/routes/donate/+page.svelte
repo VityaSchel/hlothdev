@@ -7,8 +7,13 @@
   import Bitcoin from './Bitcoin.svelte'
   import Etherium from './Etherium.svelte'
   import Litecoin from './Litecoin.svelte'
+  import PageMetadata from '$lib/widgets/PageMetadata.svelte'
 </script>
 
+<PageMetadata
+  name="Donate"
+  description="I create open-source apps, developer tools and fun projects. If you want to support me and my creativity, donate to one of my crypto wallets."
+/>
 <PageWrapper viewId="donate">
   <SubpageWrapper
     title="donate.svelte"

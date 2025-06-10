@@ -1,7 +1,9 @@
 <script lang="ts">
+  import PageMetadata from '$lib/widgets/PageMetadata.svelte'
   import GreetingsCard from '../GreetingsCard.svelte'
 </script>
 
+<PageMetadata />
 <GreetingsCard>
   <div class="flex h-full" style="view-transition-name: about-me-content;">
     <div

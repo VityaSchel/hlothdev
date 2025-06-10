@@ -5,6 +5,8 @@ export type PortfolioItem = {
   id: string
   name: string
   description: import('svelte').Snippet
+  /** Description for meta-tags under 160 characters */
+  shortDescription: string
   banner: string
   images: { url: string; alt: string }[]
   links: {
