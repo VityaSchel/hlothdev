@@ -64,6 +64,20 @@
         group-hover:opacity-100
       "
     ></div>
+    <span
+      class="
+        small-caps pointer-events-none absolute top-[3cqw] right-[6.15cqw] z-[1]
+        hidden w-[30cqw] text-right text-[3.07cqw] leading-[3.5cqw] font-bold
+        text-stone-200/80 uppercase opacity-100 transition-opacity duration-300
+        select-none text-shadow-md
+        group-focus-within:opacity-0
+        group-hover:opacity-0
+        no-hover:block
+      "
+      aria-hidden="true"
+    >
+      Tap to reveal more information
+    </span>
   </div>
 </MdCard>
 

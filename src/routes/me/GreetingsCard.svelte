@@ -67,8 +67,7 @@
       <a class="flex w-full rounded-[7.71cqw] focus-xl" href="/me/about" draggable="false">
         <Button tabindex={-1} class="h-[15cqh]">
           <svg
-            width="38cqh"
-            height="38cqh"
+            class="h-[38cqh] w-[38cqh]"
             viewBox="0 0 23 23"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

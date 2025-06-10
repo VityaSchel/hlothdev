@@ -92,6 +92,7 @@
             {alt}
             class="h-full w-full shrink-0 rounded-[12.59cqw] object-cover"
             style={clipPathStyle}
+            draggable="false"
           />
         </svelte:element>
       {/snippet}
@@ -105,6 +106,7 @@
           pointer-events-none absolute bottom-[1.96cqw] z-[1] flex h-[0.78cqw]
           w-full items-center justify-center gap-[0.78cqw] opacity-0
           transition-opacity duration-300
+          group-focus-within:opacity-100
           group-hover:opacity-100
         "
       >

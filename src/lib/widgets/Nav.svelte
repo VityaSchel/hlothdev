@@ -13,7 +13,11 @@
 </script>
 
 <nav
-  class="relative h-[65px] shrink-0 rounded-[16px] select-none"
+  class="
+    nav-fake-view-transition relative h-[65px] shrink-0 rounded-[16px]
+    backdrop-blur-[48px] select-none
+    transparency-reduce:bg-transparent transparency-reduce:backdrop-blur-none
+  "
   onpointerleave={() => (selectedNavItem = null)}
   id="footer-nav"
 >
@@ -26,7 +30,6 @@
       transparency-reduce:bg-opaque-row
     "
     cornerRadius={16}
-    translucent
   >
     <div class="flex items-center gap-[2px] px-[5px]">
       <NavItem

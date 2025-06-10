@@ -148,7 +148,7 @@
 
     @media screen and not (min-width: 768px) {
       :global(.banner) {
-        max-height: auto;
+        max-height: fit-content;
       }
     }
   }

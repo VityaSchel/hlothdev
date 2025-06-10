@@ -10,6 +10,8 @@
     md:col-start-2 md:col-end-3 md:row-start-5 md:row-end-6
     px1180:col-start-10 px1180:col-end-11 px1180:row-start-1 px1180:row-end-2
   "
+  tabindex="0"
+  role="button"
 >
   <XsCard
     class="
@@ -29,6 +31,20 @@
     >
       I’m ready to relocate
     </h4>
+    <span
+      class="
+        small-caps text-shadow-reveal pointer-events-none absolute top-[7cqw]
+        right-[10cqw] z-[1] hidden w-[65cqw] text-right text-[12cqw]
+        leading-[12cqw] font-bold tracking-[-0.5cqw] text-stone-200 uppercase
+        opacity-100 transition-opacity duration-300 select-none
+        group-focus-within:opacity-0
+        group-hover:opacity-0
+        no-hover:inline
+      "
+      aria-hidden="true"
+    >
+      Tap to reveal
+    </span>
   </XsCard>
   <XsCard
     class="

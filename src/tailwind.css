@@ -130,12 +130,3 @@ html {
     @slot;
   }
 }
-
-.one-storey-a {
-  /* SF Pro */
-  font-feature-settings: 'ss07' on;
-}
-
-.small-caps {
-  font-variant-caps: all-small-caps;
-}

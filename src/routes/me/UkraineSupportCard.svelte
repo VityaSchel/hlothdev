@@ -21,6 +21,7 @@
         transition-opacity duration-300
         group-hover:opacity-100
         has-focus-within:opacity-100
+        no-hover:opacity-100
       "
     >
       Photo by <a

@@ -118,6 +118,12 @@
   background-position: 30%;
 }
 
+::view-transition-group(nav-fake-view-transition) {
+  z-index: 1001;
+  border-radius: 16px;
+  /* overflow: clip; */
+}
+
 .scrollbar-thin {
   scrollbar-width: thin;
 }
@@ -158,4 +164,30 @@
 
 .project-view-transition {
   view-transition-class: project-view-transition;
+}
+
+.one-storey-a {
+  /* SF Pro */
+  font-feature-settings: 'ss07' on;
+}
+
+.small-caps {
+  font-variant-caps: all-small-caps;
+}
+
+.text-shadow-reveal {
+  text-shadow:
+    rgb(0, 0, 0, 0.2) 1cqw 0cqw 0cqw,
+    rgb(0, 0, 0, 0.2) 0.540302cqw 0.841471cqw 0cqw,
+    rgb(0, 0, 0, 0.2) -0.416147cqw 0.909297cqw 0cqw,
+    rgb(0, 0, 0, 0.2) -0.989993cqw 0.14112cqw 0cqw,
+    rgb(0, 0, 0, 0.2) -0.653644cqw -0.756803cqw 0cqw,
+    rgb(0, 0, 0, 0.2) 0.283662cqw -0.958924cqw 0cqw,
+    rgb(0, 0, 0, 0.2) 0.96017cqw -0.279416cqw 0cqw,
+    0cqw 0cqw 5px black,
+    0cqw 0cqw 15px black;
+}
+
+.nav-fake-view-transition {
+  view-transition-name: nav-fake-view-transition;
 }

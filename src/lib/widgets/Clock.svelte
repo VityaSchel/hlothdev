@@ -28,17 +28,18 @@
 
 <div
   class="
-    container-size h-full w-full rounded-full bg-white p-[2.1%] text-[#1c1c1e]
+    container-size h-full w-full cursor-default rounded-full bg-white p-[2.1%]
+    text-[#1c1c1e] select-none
   "
 >
   <div class="relative h-full w-full">
     {#snippet tick(rotation: number)}
-      <div class="border-aligned-element tick" style="--rotate: {rotation}deg;">
+      <div class="border-aligned-element tick select-none" style="--rotate: {rotation}deg;">
         <span></span>
       </div>
     {/snippet}
     {#snippet hour(rotation: number, hour: string)}
-      <div class="border-aligned-element hour" style="--rotate: {rotation}deg;">
+      <div class="border-aligned-element hour select-none" style="--rotate: {rotation}deg;">
         <span style="transform: rotate({360 - rotation}deg);">
           {hour}
         </span>
@@ -48,21 +49,30 @@
       {@render hour(i * hourRotation + hourRotation, String(i + 1))}
     {/each}
     <div
-      class="center-aligned-element arrow rotate-86400sec h-[27.73%] w-[4.2%]"
+      class="
+        center-aligned-element arrow rotate-86400sec h-[27.73%] w-[4.2%]
+        select-none
+      "
       style="--initial-rotation: {hourRotation * (time.hours % 12)}deg;"
     >
       <span class="bottom-[24%] h-[78%] w-full"></span>
       <span class="bottom-0 h-[36.36%] w-[40%]"></span>
     </div>
     <div
-      class="center-aligned-element arrow rotate-3600sec h-[46.21%] w-[4.2%]"
+      class="
+        center-aligned-element arrow rotate-3600sec h-[46.21%] w-[4.2%]
+        select-none
+      "
       style="--initial-rotation: {minuteRotation * time.minutes}deg;"
     >
       <span class="bottom-[14.54%] h-[90%] w-full"></span>
       <span class="bottom-0 h-[21.81%] w-[40%]"></span>
     </div>
     <div
-      class="center-aligned-element arrow seconds rotate-60sec h-[49%] w-[1%]"
+      class="
+        center-aligned-element arrow seconds rotate-60sec h-[49%] w-[1%]
+        select-none
+      "
       style="--initial-rotation: {secondRotation * time.seconds}deg;"
     >
       <span class="bottom-0 h-full w-full"></span>
@@ -73,14 +83,14 @@
         {@render tick(minuteRotation * (i * minutesBlock + j))}
       {/each}
     {/each}
-    <div class="dot h-[5.88%] w-[5.88%] bg-[#1c1c1e]"></div>
-    <div class="dot h-[3.36%] w-[3.36%] bg-[#ff9500]"></div>
-    <div class="dot top h-[1.68%] w-[1.68%] bg-white"></div>
+    <div class="dot h-[5.88%] w-[5.88%] bg-[#1c1c1e] select-none"></div>
+    <div class="dot h-[3.36%] w-[3.36%] bg-[#ff9500] select-none"></div>
+    <div class="dot top h-[1.68%] w-[1.68%] bg-white select-none"></div>
     <span
       class="
         text-outline absolute top-2/3 left-1/2 z-[10] -translate-x-1/2
-        -translate-y-1/2 text-[8.8cqw] font-semibold text-white
-        mix-blend-difference
+        -translate-y-1/2 cursor-auto text-[8.8cqw] font-semibold text-white
+        mix-blend-difference select-auto
       "
     >
       {timezone}
