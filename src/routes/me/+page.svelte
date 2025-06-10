@@ -28,6 +28,6 @@
 <GitHubRepositoriesCard />
 <FunFactAboutMeCard />
 <OpenToWorkCard />
+<ReadyToRelocateCard />
 <FavoriteThingsCard />
 <EducationCard />
-<ReadyToRelocateCard />

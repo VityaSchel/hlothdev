@@ -5,11 +5,16 @@
   const hourRotation = 360 / hours
   const secondRotation = minuteRotation
 
-  const utcOffsetHours: number = 4
-  const utcOffsetMinutes: number = 0
-  const timezone = `UTC${utcOffsetHours >= 0 ? '+' : ''}${utcOffsetHours}${
-    utcOffsetMinutes ? ':' + utcOffsetMinutes.toString().padStart(2, '0') : ''
-  }`
+  let {
+    utcOffsetHours,
+    utcOffsetMinutes,
+    timezone
+  }: {
+    utcOffsetHours: number
+    utcOffsetMinutes: number
+    timezone: string
+  } = $props()
+
   const utcHours = new Date().getUTCHours() + utcOffsetHours
   const utcMinutes = new Date().getUTCMinutes() + utcOffsetMinutes
   const utcSeconds = new Date().getUTCSeconds()

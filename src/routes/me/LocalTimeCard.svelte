@@ -1,6 +1,12 @@
 <script lang="ts">
   import XsCard from '$lib/widgets/grid-cards/XSCard.svelte'
   import Clock from '$lib/widgets/Clock.svelte'
+
+  const utcOffsetHours: number = 4
+  const utcOffsetMinutes: number = 0
+  const timezone = `UTC${utcOffsetHours >= 0 ? '+' : ''}${utcOffsetHours}${
+    utcOffsetMinutes ? ':' + utcOffsetMinutes.toString().padStart(2, '0') : ''
+  }`
 </script>
 
 <XsCard
@@ -13,17 +19,19 @@
     transparency-reduce:bg-[rgba(0,0,0,0.3)]
   "
 >
+  <h3 class="sr-only">My timezone: {timezone}</h3>
   <div
     class="
       flex aspect-square h-full w-auto max-w-full items-center justify-center
     "
+    aria-hidden="true"
   >
     <div
       class="
         flex aspect-square h-auto max-h-full w-full items-center justify-center
       "
     >
-      <Clock />
+      <Clock {utcOffsetHours} {utcOffsetMinutes} {timezone} />
     </div>
   </div>
 </XsCard>

@@ -18,7 +18,7 @@
   target="_blank"
   class="
     flex w-full items-center gap-3 rounded-xl border border-[#bbbbbf] bg-white
-    px-3 py-2
+    px-3 py-2 focus-sm-dark
     px1205:py-[11px] px1205:pr-6 px1205:pl-[21px]
   "
 >

@@ -14,15 +14,18 @@
     class="
       bg group relative flex h-full w-full flex-col-reverse justify-between
       overflow-clip rounded-[8.22cqw] bg-cover p-[4.11cqw] text-[4.72cqw]
-      tracking-[-0.18cqw]
+      tracking-[-0.18cqw] focus-lg
       px580:text-[3.08cqw]
       @px273:tracking-[-0.15cqw]
     "
+    tabindex="0"
+    role="button"
   >
     <h3
       class="
         relative z-[1] leading-[5.5cqw] opacity-100 transition-opacity
         duration-300
+        group-focus-within:opacity-50
         group-hover:opacity-50
         px580:leading-[3.08cqw]
       "
@@ -46,6 +49,7 @@
     <span
       class="
         relative z-[1] opacity-0 transition-opacity duration-300
+        group-focus-within:opacity-100
         group-hover:opacity-100
       "
     >
@@ -56,6 +60,7 @@
       class="
         absolute top-0 left-0 h-full w-full bg-black/50 opacity-0
         transition-opacity duration-300
+        group-focus-within:opacity-100
         group-hover:opacity-100
       "
     ></div>

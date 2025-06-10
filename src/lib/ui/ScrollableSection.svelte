@@ -1,4 +1,6 @@
 <script lang="ts">
+  import KeyboardNavigationSkipLink from '$lib/features/KeyboardNavigationSkipLink.svelte'
+
   let {
     id,
     name,
@@ -38,29 +40,9 @@
       {name}
     </h2>
     {#if skip}
-      <a
-        href="#{skip.id}"
-        class="
-          pointer-events-none mr-auto ml-2 rounded-md px-1 text-xs font-bold
-          opacity-0
-          focus:outline-0
-          focus-visible:bg-blue-600/50 focus-visible:opacity-100
-        "
-        onclick={(e) => {
-          e.preventDefault()
-          const element = document.getElementById(skip.id)
-          if (element) {
-            const interactableElement = element.querySelector(
-              'input, button, a, [tabindex]:not([tabindex="-1"])'
-            )
-            if (interactableElement instanceof HTMLElement) {
-              interactableElement?.focus()
-            }
-          }
-        }}
-      >
+      <KeyboardNavigationSkipLink class="mr-auto" id={skip.id}>
         {skip.label}
-      </a>
+      </KeyboardNavigationSkipLink>
     {/if}
     <input
       type="checkbox"

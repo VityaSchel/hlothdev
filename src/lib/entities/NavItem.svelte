@@ -62,8 +62,7 @@
   class={[
     `
       nav-item group flex shrink-0 cursor-default flex-col items-center
-      gap-[3px] self-stretch pt-[5px] pb-[3px] select-none
-      focus-sm
+      gap-[3px] self-stretch pt-[5px] pb-[3px] focus-sm select-none
     `,
     className
   ]}
@@ -96,6 +95,7 @@
   }}
   bind:this={a}
   title={browser ? undefined : name}
+  aria-label={name}
 >
   <img
     src={icon}

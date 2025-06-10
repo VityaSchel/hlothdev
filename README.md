@@ -17,6 +17,8 @@ Visit the website:
 - All transitions are made using CSS and View Transition API
 - Respects `prefers-reduced-motion`
 - Respects `prefers-reduced-transparency`
+- Fully accessible with `aria-label`s, screen reader enhancements and keyboard navigation
+- Entirely semantically correct markup, checked by svelte
 - Designed entirely by me
 - Content of the website is separated from the technical resume
 - Takes full advantage of Retina screens by displaying all rasterized graphic elements in 2x size and applying subpixel outline/shadow effects

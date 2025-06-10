@@ -1,15 +1,18 @@
 <script lang="ts">
   import { page } from '$app/state'
+  import KeyboardNavigationSkipLink from '$lib/features/KeyboardNavigationSkipLink.svelte'
 
   let {
     button,
     title,
+    srTitle,
     children,
     backUrl,
     class: className
   }: {
     button?: { href: string; external?: boolean; text: string }
     title: string
+    srTitle: string
     children?: import('svelte').Snippet
     backUrl: string
     class?: import('svelte/elements').ClassValue
@@ -34,6 +37,9 @@
         class="
           flex h-full cursor-default items-center justify-center
           rounded-tl-[32px] pr-2 pl-[18px] text-white/55
+          focus:outline-0
+          focus-visible:outline-stone-200/60 focus-visible:[&_svg]:outline-3
+          focus-visible:[&_svg]:outline-offset-3
           active:text-[#EAEAEA]
         "
         draggable="false"
@@ -44,6 +50,7 @@
           viewBox="0 0 12 12"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          class="rounded-full"
         >
           <g>
             <!-- Only Safari supports style="mix-blend-mode:plus-darker" -->
@@ -78,6 +85,8 @@
           onblur={() => (pressed = false)}
           ondragstart={() => (pressed = false)}
           ondragend={() => (pressed = false)}
+          tabindex={-1}
+          aria-hidden="true"
         >
           <img
             src="/file-icon.webp"
@@ -90,6 +99,7 @@
         <span class="select-none" aria-hidden="true">
           {title}
         </span>
+        <h1 class="sr-only">{srTitle}</h1>
       </div>
     </div>
     {#if button}
@@ -100,7 +110,7 @@
         class="
           flex h-[22px] min-w-0 cursor-default items-center justify-center
           rounded-md border border-[#b6a68e]/40 px-[7px] text-[13px]
-          text-[#ede1cf]/90 select-none
+          text-[#ede1cf]/90 focus-sm select-none
           hover:border-transparent hover:bg-[#b6a68e]/50
           active:border-transparent active:bg-[#b6a68e]/80 active:text-[#f7efe2]
           active:transparency-reduce:bg-white/20
@@ -116,7 +126,10 @@
       </a>
     {/if}
   </header>
-  <div class={['max-h-[calc(100%-52px)] flex-1 p-[25px]', className]}>
+  <KeyboardNavigationSkipLink class="top-15 left-2" id="footer-nav">
+    Skip to footer navigation
+  </KeyboardNavigationSkipLink>
+  <div class={['max-h-[calc(100%-52px)] flex-1 p-[25px]', className]} role="main">
     {@render children?.()}
   </div>
 </div>

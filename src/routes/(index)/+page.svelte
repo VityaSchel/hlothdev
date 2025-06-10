@@ -10,6 +10,7 @@
 </script>
 
 <PageWrapper>
+  <h1 class="sr-only">Main page</h1>
   <div
     class="
       scrollbar-thin flex h-full flex-col gap-4 overflow-auto rounded-4xl pt-4

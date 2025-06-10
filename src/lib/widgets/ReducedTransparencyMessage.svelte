@@ -16,7 +16,7 @@
     }
   ]}
 >
-  <Alert class="w-[550px]" id="reduced-transparency" {visible}>
+  <Alert class="w-[550px]" id="reduced-transparency" srName="Transparency reduced" {visible}>
     <b class="font-semibold">Reduce transparency</b>
     preference was detected in your OS settings.
     <br />

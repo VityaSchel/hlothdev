@@ -17,7 +17,7 @@
   ]}
 >
   <noscript>
-    <Alert id="javascript-disabled" class="w-[575px]" {visible}>
+    <Alert class="w-[575px]" id="javascript-disabled" srName="JavaScript disabled" {visible}>
       Looks like you’re visiting this website with
       <b class="font-semibold">JavaScript disabled.</b>
       <br />

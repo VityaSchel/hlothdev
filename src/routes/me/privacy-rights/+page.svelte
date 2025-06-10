@@ -33,6 +33,7 @@
           aria-label="Go back to the /me page"
           class="
             flex w-fit cursor-default overflow-clip rounded-full text-white/60
+            focus-lg-dark
             active:text-neutral-300/80
           "
           draggable="false"
@@ -135,6 +136,7 @@
         px680:overflow-auto px680:pl-4
         lg:w-[540px] lg:min-w-auto lg:flex-auto
       "
+      role="complementary"
     >
       {#snippet heading(text: string)}
         <h2
@@ -197,7 +199,7 @@
           rel="noopener noreferrer"
           class="
             rounded-full border border-[#bbbbbf] bg-white px-4 py-1 font-medium
-            tracking-tight
+            tracking-tight focus-sm-dark
           "
         >
           View more

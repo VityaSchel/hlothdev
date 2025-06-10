@@ -14,7 +14,7 @@
   <div class="
     flex h-full w-full flex-col gap-[3.36cqw] px-[9.24cqw] py-[6.72cqw]
   ">
-    <h4 class="text-[8.40cqw] font-bold tracking-[-0.504cqw] text-[#FF9500]">Languages</h4>
+    <h4 class="text-[8.40cqw] font-bold tracking-[-0.504cqw] text-[#FF9500]" aria-label="Languages I speak">Languages</h4>
     <div class="flex flex-1 flex-col justify-between pb-[3.36cqw]">
       {#snippet lang(icon: string, label: string)}
         <div class="flex items-center gap-[5.04cqw]">

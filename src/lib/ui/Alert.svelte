@@ -5,11 +5,13 @@
 
   let {
     id,
+    srName,
     class: className,
     children,
     visible = $bindable(false)
   }: {
     id: string
+    srName: string
     class?: import('svelte/elements').ClassValue
     children: import('svelte').Snippet
     visible?: boolean
@@ -47,6 +49,7 @@
     className
   ]}
 >
+  <h2 class="sr-only">{srName} alert</h2>
   <form
     action="/?/dismiss"
     class="float-left inline-block h-[19px]"
@@ -72,7 +75,7 @@
         active:text-black/70
       "
       draggable="false"
-      aria-label="Close alert"
+      aria-label="Close {srName} alert"
       type="submit"
     >
       <svg
@@ -119,6 +122,8 @@
     }
   }
   .alert-shadow {
-    box-shadow: 0 4px 35px rgba(0, 0, 0, 0.4), 0 12px 45px rgba(0, 0, 0, 0.7);
+    box-shadow:
+      0 4px 35px rgba(0, 0, 0, 0.4),
+      0 12px 45px rgba(0, 0, 0, 0.7);
   }
 </style>

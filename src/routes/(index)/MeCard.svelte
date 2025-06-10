@@ -5,12 +5,13 @@
 <a
   href="/me"
   class="
-    drop-background-shadow focus-lg relative max-w-full cursor-default
-    rounded-[16px]
+    drop-background-shadow relative max-w-full cursor-default rounded-[16px]
+    focus-lg
     px420:flex-1
     px1380:flex-[743]
   "
   style="view-transition-name: me;"
+  aria-label="Go to About me page"
 >
   <Squircle class="bg-black/10" cornerRadius={16} arrow>
     <div

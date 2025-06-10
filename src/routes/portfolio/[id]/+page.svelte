@@ -14,7 +14,12 @@
 
 {#if project}
   <PageWrapper viewId="project-{project.id}">
-    <SubpageWrapper class="overflow-auto" title="{project.id}.svelte" backUrl="/">
+    <SubpageWrapper
+      class="overflow-auto"
+      title="{project.id}.svelte"
+      srTitle="Portfolio project page: {project.name}"
+      backUrl="/"
+    >
       <div
         class="
           flex flex-col gap-4 overflow-auto
@@ -32,7 +37,7 @@
           <article class="text-base leading-relaxed font-medium">
             {@render project.description()}
           </article>
-          <div class="flex flex-col gap-2">
+          <div class="flex flex-col gap-2" role="list" aria-label="Project links">
             {#each project.links as { url, label }, i (i)}
               <a
                 href={url}
@@ -56,6 +61,8 @@
             md:flex md:flex-col
             lg:flex-1
           "
+          role="list"
+          aria-label="Project images"
         >
           {#each project.images as { url, alt }, i (i)}
             <img

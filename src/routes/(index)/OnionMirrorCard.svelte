@@ -10,6 +10,7 @@
     md:flex-1
     lg:flex-[171]
   "
+  aria-label="Open onion mirror of this website"
 >
   <Squircle class="bg-black/10" cornerRadius={16}>
     <div

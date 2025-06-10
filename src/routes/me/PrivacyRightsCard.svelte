@@ -85,8 +85,8 @@
         I advocate for privacy and prefer selfhosting over SAAS. All my personal websites are
         available in lokinet under hloth.loki domain.
       </p>
-      <a href="/me/privacy-rights" class="flex w-full rounded-lg" draggable="false">
-        <Button class="h-[10.68cqh]" variant="md">Learn about my commitment</Button>
+      <a href="/me/privacy-rights" class="flex w-full rounded-lg focus-xl" draggable="false">
+        <Button class="h-[10.68cqh]" variant="md" tabindex={-1}>Learn about my commitment</Button>
       </a>
     </div>
   {/if}

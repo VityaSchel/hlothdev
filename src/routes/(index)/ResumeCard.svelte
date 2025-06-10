@@ -11,6 +11,7 @@
     rounded-[16px] focus-lg
     xl:shrink
   "
+  aria-label="Open my developer resume website"
 >
   <Squircle class="bg-black/10" cornerRadius={16} arrow>
     <div

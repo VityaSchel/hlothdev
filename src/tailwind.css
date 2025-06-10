@@ -99,8 +99,20 @@ html {
   @apply focus-visible:outline-3 focus-visible:outline-offset-6 focus-visible:outline-stone-200/40;
 }
 
+@utility focus-lg-dark {
+  @apply focus-visible:outline-3 focus-visible:outline-offset-6 focus-visible:outline-stone-700/40;
+}
+
+@utility focus-xl {
+  @apply focus-visible:outline-4 focus-visible:outline-offset-6 focus-visible:outline-white/90;
+}
+
 @utility focus-sm {
   @apply focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-stone-200/60;
+}
+
+@utility focus-sm-dark {
+  @apply focus-visible:outline-3 focus-visible:-outline-offset-4 focus-visible:outline-stone-700/40;
 }
 
 @custom-variant no-hover {

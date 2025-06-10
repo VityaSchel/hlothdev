@@ -7,6 +7,9 @@
     <div
       class="
         relative flex min-w-0 flex-4/5 flex-col items-start gap-6 overflow-auto
+        rounded-l-[55px]
+        focus:outline-6 focus:outline-blue-500/50
+        focus-visible:-outline-offset-6
         px500:flex-2/3
         px600:flex-row px600:p-[34px]
         md:flex-1
@@ -25,6 +28,7 @@
           aria-label="Go back to the /me page"
           class="
             flex w-fit cursor-default overflow-clip rounded-full text-white/60
+            focus-lg-dark
             active:text-neutral-300/80
           "
           draggable="false"

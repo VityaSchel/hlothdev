@@ -5,16 +5,39 @@
 </script>
 
 <PageWrapper viewId="error">
-  <SubpageWrapper title="+error.svelte" backUrl="/" class="flex justify-center items-center">
-    <div class="bg-[#282828]/50 p-4 rounded-[10px] pt-5 flex flex-col gap-4 justify-center items-center text-center w-[260px] shadow-container mb-[10%]">
-      <img src="/error-icon.webp" alt="Cartoon warthog head with its top blown off, revealing an exploding brain like a mushroom cloud" class="w-16 h-16">
+  <SubpageWrapper
+    class="flex items-center justify-center"
+    title="+error.svelte"
+    srTitle="Error page"
+    backUrl="/"
+  >
+    <div
+      class="
+        shadow-container mb-[10%] flex w-[260px] flex-col items-center
+        justify-center gap-4 rounded-[10px] bg-[#282828]/50 p-4 pt-5 text-center
+      "
+    >
+      <img
+        src="/error-icon.webp"
+        alt="Cartoon warthog head with its top blown off, revealing an exploding brain like a mushroom cloud"
+        class="h-16 w-16"
+      />
       <div class="flex flex-col gap-[10px] text-white/85">
-        <h1 class="text-[13px] font-bold leading-4">Error {page.status}</h1>
-        <p class="text-[11px] font-normal leading-[14px]">
+        <h1 class="text-[13px] leading-4 font-bold">Error {page.status}</h1>
+        <p class="text-[11px] leading-[14px] font-normal">
           {page.error?.message || 'An unexpected error occurred'}
         </p>
       </div>
-      <a href="/" class="bg rounded-[5px] w-full min-h-[28px] py-[6px] text-[13px] leading-4 inset-shadow-top select-none" draggable="false">Return to Home Page</a>
+      <a
+        href="/"
+        class="
+          bg inset-shadow-top min-h-[28px] w-full rounded-[5px] py-[6px]
+          text-[13px] leading-4 select-none
+        "
+        draggable="false"
+      >
+        Return to Home Page
+      </a>
     </div>
   </SubpageWrapper>
 </PageWrapper>
@@ -34,7 +57,7 @@
     box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.35);
   }
   .shadow-container {
-    box-shadow: 
+    box-shadow:
       0 0 1px 0 rgba(0, 0, 0, 0.6),
       0 0 2px 0 rgba(0, 0, 0, 0.05),
       0 38px 90px 0 rgba(0, 0, 0, 0.25),

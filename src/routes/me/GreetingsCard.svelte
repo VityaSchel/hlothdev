@@ -44,6 +44,7 @@
         class="
           h-[11.05cqw] w-[11.05cqw] shrink-0 rounded-full bg-black p-[2.05cqw]
         "
+        aria-hidden="true"
       >
         <span
           class="
@@ -63,7 +64,7 @@
       >
         Hi, I’m Viktor, and my life is a roller coaster!
       </h1>
-      <a href="/me/about" class="flex w-full rounded-[7.71cqw]" draggable="false">
+      <a class="flex w-full rounded-[7.71cqw] focus-xl" href="/me/about" draggable="false">
         <Button tabindex={-1} class="h-[15cqh]">
           <svg
             width="38cqh"

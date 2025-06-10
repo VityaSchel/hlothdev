@@ -16,7 +16,7 @@
     }
   ]}
 >
-  <Alert class="w-[490px]" id="reduced-motion" {visible}>
+  <Alert class="w-[490px]" id="reduced-motion" srName="Motion reduced" {visible}>
     You have enabled
     <b class="font-semibold">reduce motion</b>
     setting in your system.

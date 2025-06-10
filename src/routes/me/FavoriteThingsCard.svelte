@@ -54,9 +54,14 @@
   "
   bind:clientWidth={width}
   bind:clientHeight={height}
-  style={clipPathStyle}
 >
-  <div class="group relative h-full w-full overflow-clip rounded-[12.59cqw]">
+  <div
+    class="
+      group relative h-full w-full overflow-clip rounded-[12.59cqw]
+      focus-within:outline-3 focus-within:outline-offset-6
+      focus-within:outline-stone-200/40
+    "
+  >
     <div
       class="
         scrollbar-invisible absolute top-0 left-0 flex h-full w-full snap-x
@@ -64,6 +69,10 @@
       "
       bind:this={scrollContainer}
       onscroll={() => (scroll = scrollContainer.scrollLeft)}
+      tabindex="0"
+      role="listbox"
+      aria-roledescription="My favorite things"
+      style={clipPathStyle}
     >
       {#snippet img(src: string, alt: string, href: string | undefined = undefined)}
         <svelte:element
@@ -75,6 +84,7 @@
             overflow-clip rounded-[12.59cqw]
           "
           style={clipPathStyle}
+          role="listitem"
           {href}
         >
           <img

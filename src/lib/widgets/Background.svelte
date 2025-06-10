@@ -6,8 +6,13 @@
   } = $props()
 </script>
 
-<div class="fixed top-0 left-0 h-full w-full select-none">
-  <img class="absolute top-0 left-0 h-full w-full object-cover" src="/bg.webp" alt="" />
+<div class="fixed top-0 left-0 h-full w-full select-none" aria-hidden="true">
+  <img
+    class="absolute top-0 left-0 h-full w-full object-cover text-[0px]"
+    src="/bg.webp"
+    alt="Background image"
+    aria-hidden="true"
+  />
 </div>
 <div
   class="

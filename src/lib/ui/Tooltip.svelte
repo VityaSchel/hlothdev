@@ -19,6 +19,8 @@
     class="
       pointer-events-none fixed top-0 left-0 z-[5] h-full w-full select-none
     "
+    role="tooltip"
+    aria-labelledby="tooltip-title-{uid}"
   >
     <div
       class="
@@ -35,6 +37,7 @@
           transparency-reduce:bg-[#323232]
           transparency-reduce:backdrop-blur-none
         "
+        id="tooltip-title-{uid}"
       >
         {@render children()}
       </div>

@@ -66,53 +66,48 @@ export const ledgerLive = (coin: Network) => {
 }
 
 const walletNetworks: Record<string, NetworkName[]> = {
-  trustWallet: ['eth', 'tron'],
+  trustWallet: ['eth', 'tron', 'btc', 'ltc'],
   metamask: ['eth'],
-  ledgerLive: ['eth', 'tron']
+  ledgerLive: ['eth', 'tron', 'btc', 'ltc']
+}
+
+export type ClickToPay = {
+  trustWallet?: string
+  metamask?: string
+  ledgerLive?: string
+  monero?: string
 }
 
 export const clickToPayToken = (token: Token) => {
-  let trustWalletLink: string | undefined
-  let metamaskLink: string | undefined
-  let ledgerLiveLink: string | undefined
+  const links: ClickToPay = {}
 
   const networkName = tokens[token].network
   if (walletNetworks.trustWallet.includes(networkName)) {
-    trustWalletLink = trustWalletToken(token)
+    links.trustWallet = trustWalletToken(token)
   }
   if (walletNetworks.metamask.includes(networkName)) {
-    metamaskLink = metaMaskToken(token)
+    links.metamask = metaMaskToken(token)
   }
   if (walletNetworks.ledgerLive.includes(networkName)) {
-    ledgerLiveLink = ledgerLive(networks[networkName])
+    links.ledgerLive = ledgerLive(networks[networkName])
   }
 
-  return {
-    trustWallet: trustWalletLink,
-    metamask: metamaskLink,
-    ledgerLive: ledgerLiveLink
-  }
+  return links
 }
 
 export const clickToPayCoin = (networkName: NetworkName) => {
-  let trustWalletLink: string | undefined
-  let metamaskLink: string | undefined
-  let ledgerLiveLink: string | undefined
+  const links: ClickToPay = {}
 
   const coin = networks[networkName]
   if (walletNetworks.trustWallet.includes(networkName)) {
-    trustWalletLink = trustWalletCoin(coin)
+    links.trustWallet = trustWalletCoin(coin)
   }
   if (networkName === 'eth') {
-    metamaskLink = metaMaskCoin('eth')
+    links.metamask = metaMaskCoin('eth')
   }
   if (walletNetworks.ledgerLive.includes(networkName)) {
-    ledgerLiveLink = ledgerLive(coin)
+    links.ledgerLive = ledgerLive(coin)
   }
 
-  return {
-    trustWallet: trustWalletLink,
-    metamask: metamaskLink,
-    ledgerLive: ledgerLiveLink
-  }
+  return links
 }

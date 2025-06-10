@@ -4,13 +4,7 @@
   import MoneroIcon from '$lib/icons/MoneroIcon.svelte'
   import TrustWalletIcon from '$lib/icons/TrustWalletIcon.svelte'
   import SquircleThick from '$lib/SquircleThick.svelte'
-
-  type ClickToPay = {
-    trustWallet?: string
-    metamask?: string
-    ledgerLive?: string
-    monero?: string
-  }
+  import type { ClickToPay } from '../../routes/donate/consts'
 
   let {
     preferred,
@@ -67,11 +61,12 @@
           class="
             980px:text-lg 980px:leading-8
             text-[23px] leading-7 font-medium tracking-[-0.5px] text-white/30
+            uppercase
             px870:text-sm px870:leading-4
             px1100:text-[23px] px1100:leading-7
           "
         >
-          PREFERRED
+          Preferred
         </span>
       {/if}
       <div
@@ -82,7 +77,7 @@
           px980:h-[46px]
         "
       >
-        <span
+        <h2
           class="
             h-full text-2xl font-bold text-white
             px680:text-[32px]
@@ -91,7 +86,7 @@
           "
         >
           {name}
-        </span>
+        </h2>
       </div>
       <div class="flex w-full items-end pt-1.5">
         <div
@@ -100,7 +95,9 @@
             text-sm leading-5 font-semibold tracking-[-0.2px] break-all
             text-ellipsis text-white/60 transition-[height] duration-300
             select-all
+            group-focus-within:h-[var(--address-height)]
             group-hover:h-[var(--address-height)]
+            focus:outline-0
             motion-reduce:duration-0
             px420:text-[17px] px420:leading-6
             px870:text-sm px870:leading-5
@@ -114,14 +111,24 @@
         >
           <span
             class={{
-              'not-group-hover:whitespace-nowrap no-hover:whitespace-normal!': collapseAddress
+              'not-group-hover:whitespace-nowrap no-hover:whitespace-normal! group-focus-within:whitespace-normal! focus:outline-0 focus-visible:outline-0 focus-visible:bg-stone-500/50':
+                collapseAddress
             }}
+            role="textbox"
+            tabindex="0"
+            aria-label="Donation crypto wallet address"
+            aria-readonly="true"
           >
             {address}
           </span>
           <span
-            class="pointer-events-none absolute top-0 left-0 w-full opacity-0"
+            class="
+              pointer-events-none absolute top-0 left-0 w-full opacity-0
+              focus:outline-0
+            "
             bind:offsetHeight={addressHeight}
+            aria-hidden="true"
+            tabindex="-1"
           >
             {address}
           </span>
@@ -131,11 +138,13 @@
         <div
           class="
             hidden h-0 shrink-0 overflow-clip duration-300
+            group-focus-within:h-[47px]
             group-hover:h-[47px]
             motion-safe:transition-[height]
             motion-reduce:duration-0
             px320:block
-            px980:group-hover:h-[58px] px980:no-hover:h-[58px]
+            px980:group-focus-within:h-[58px] px980:group-hover:h-[58px]
+            px980:no-hover:h-[58px]
             no-hover:h-[47px]
           "
         >
@@ -146,6 +155,7 @@
                 href={value}
                 class="
                   safari-fix-svgs-please flex h-[29px] w-auto px-2
+                  focus:bg-stone-500/50 focus:outline-0
                   px980:h-[40px]
                 "
                 target="_blank"

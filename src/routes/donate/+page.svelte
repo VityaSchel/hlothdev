@@ -12,6 +12,7 @@
 <PageWrapper viewId="donate">
   <SubpageWrapper
     title="donate.svelte"
+    srTitle="Donate with cryptocurrencies"
     backUrl="/"
     button={{
       text: 'Open PGP Signed List',

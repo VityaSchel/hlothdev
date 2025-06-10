@@ -5,13 +5,14 @@
 <a
   href="/donate"
   class="
-    drop-background-shadow focus-lg relative max-w-full flex-1 cursor-default
-    rounded-[16px]
+    drop-background-shadow relative max-w-full flex-1 cursor-default
+    rounded-[16px] focus-lg
     px680:flex-3/5
     md:flex-1
     lg:flex-[412]
   "
   style:view-transition-name="donate"
+  aria-label="Open donate to me page"
 >
   <Squircle class="bg-black/10" cornerRadius={16} arrow>
     <div

@@ -19,7 +19,7 @@
   class="
     relative flex flex-1 flex-col items-center justify-center gap-1 rounded-md
     border border-[#bbbbbf] bg-white px-4 py-2 text-center text-sm font-medium
-    tracking-tight
+    tracking-tight focus-sm-dark
   "
 >
   <span
@@ -27,6 +27,7 @@
       flex h-7 w-7 items-end justify-center
       [&_svg]:h-full [&_svg]:w-full
     "
+    aria-hidden="true"
   >
     {@render icon()}
   </span>

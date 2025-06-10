@@ -76,7 +76,6 @@
   let jsDisabledAlertVisible = $derived(!data.alertsDismissed.jsDisabled)
   let reducedMotionAlertVisible = $derived(!data.alertsDismissed.reducedMotion)
   let reducedTransparencyAlertVisible = $derived(!data.alertsDismissed.reducedTransparency)
-  console.log(data)
 </script>
 
 <Background>

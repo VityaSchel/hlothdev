@@ -15,6 +15,7 @@
 <PageWrapper viewId="me">
   <SubpageWrapper
     title="me.svelte"
+    srTitle="About Me page"
     backUrl="/"
     button={{ href: 'https://cv.hloth.dev', external: true, text: 'Open Developer Resume' }}
     class="container-size overflow-auto rounded-b-[32px] py-[26.5px]"
