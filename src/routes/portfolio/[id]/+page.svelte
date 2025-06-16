@@ -31,7 +31,7 @@
       >
         <div
           class="
-            flex flex-3/5 flex-col gap-4 p-2
+            text-content flex flex-3/5 flex-col gap-4 p-2
             lg:flex-1
           "
         >
@@ -39,22 +39,15 @@
           <article class="text-base leading-relaxed font-medium">
             {@render project.description()}
           </article>
-          <div class="flex flex-col gap-2" role="list" aria-label="Project links">
-            {#each project.links as { url, label }, i (i)}
-              <a
-                href={url}
-                class="
-                  w-fit leading-5 font-medium text-[#429EFF]
-                  active:text-blue-300
-                "
-                draggable="false"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {label}
-              </a>
-            {/each}
-          </div>
+          {#if project.links}
+            <div class="flex flex-col gap-2" role="list" aria-label="Project links">
+              {#each project.links as { url, label }, i (i)}
+                <a href={url} draggable="false" target="_blank" rel="noopener noreferrer nofollow">
+                  {label}
+                </a>
+              {/each}
+            </div>
+          {/if}
         </div>
         <div
           class="
@@ -66,14 +59,17 @@
           role="list"
           aria-label="Project images"
         >
-          {#each project.images as { url, alt }, i (i)}
+          {#each project.images as { url, alt, class: className }, i (i)}
             <img
               src={url}
               {alt}
-              class="
-                rounded-md bg-neutral-600 text-center outline-[0.5px]
-                outline-offset-[-0.5px] outline-white/25
-              "
+              class={[
+                `
+                  rounded-md bg-neutral-600 text-center outline-[0.5px]
+                  outline-offset-[-0.5px] outline-white/25
+                `,
+                className
+              ]}
             />
           {/each}
         </div>
@@ -82,10 +78,22 @@
   </PageWrapper>
 {/if}
 
-<style>
+<style lang="scss">
   article :global(h2) {
     font-size: 1.25rem;
     font-weight: 600;
     margin-top: 1rem;
+  }
+  .text-content :global(a) {
+    width: fit-content;
+    line-height: 20px;
+    font-weight: 500;
+    color: lch(64.02% 56.14 274.89);
+    &:active {
+      color: oklch(80.9% 0.105 251.813);
+    }
+  }
+  article :global(p + p) {
+    margin-top: 0.5rem;
   }
 </style>
