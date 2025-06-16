@@ -1,55 +1,9 @@
 <script lang="ts" module>
   import type { PortfolioItem } from '$lib/portfolio'
 
-  export const nockTradeProject: PortfolioItem = {
+  export const nockTradeWebsite: PortfolioItem = {
     type: 'website',
     id: 'nock-trade',
-    name: 'Nock Trade',
-    description,
-    shortDescription:
-      'Nock Trade is a trading platform that allows users to trade various assets seamlessly.',
-    banner: '/projects/nock-trade/banner.webp',
-    images: [
-      {
-        url: '/projects/nock-trade/screenshot-1.webp',
-        alt: 'Nock Trade main page'
-      },
-      {
-        url: '/projects/nock-trade/screenshot-1.webp',
-        alt: 'Nock Trade main page'
-      },
-      {
-        url: '/projects/nock-trade/screenshot-1.webp',
-        alt: 'Nock Trade main page'
-      },
-      {
-        url: '/projects/nock-trade/screenshot-1.webp',
-        alt: 'Nock Trade main page'
-      }
-    ],
-    links: [
-      {
-        url: 'https://nock.trade',
-        label: 'Visit Nock Trade (https://nock.trade)'
-      },
-      {
-        url: 'https://nock.trade',
-        label: 'Read more about Nock trade'
-      },
-      {
-        url: 'https://nock.trade',
-        label: 'Another link'
-      },
-      {
-        url: 'https://nock.trade',
-        label: 'Another link 2'
-      }
-    ]
-  }
-
-  export const nockTradeWebsite: PortfolioItem = {
-    type: 'project',
-    id: 'nock-trade2',
     name: 'Nock Trade',
     description,
     shortDescription:

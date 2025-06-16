@@ -1,4 +1,5 @@
-import { nockTradeProject, nockTradeWebsite } from './nock-exchange.svelte'
+import { nockTradeWebsite } from './nock-trade.svelte'
+import { moreOfMeWebsite } from './moreofme.svelte'
 
 export type PortfolioItem = {
   type: 'website' | 'project'
@@ -15,7 +16,30 @@ export type PortfolioItem = {
   }[]
 }
 
-export const portfolio: PortfolioItem[] = [
+const websites: PortfolioItem[] = [
   nockTradeWebsite,
-  nockTradeProject
+  moreOfMeWebsite,
+  // x5Websites,
+  // undditWebsite,
+  // ryoCoinWebsite,
+  // batumiBikeWebsite,
+  // sessionWebWebsite
+  // sipackerWebsite,
+  // ogeGeneratorWebsite,
+  // atmosCraftWebsite
 ]
+
+const projects: PortfolioItem[] = [
+  // lufinProject,
+  // onsRegistryProject,
+  // samsungPingerProject,
+  // sessionNativeProject,
+  // bunsogsProject,
+  // sessionNotifierProject,
+  // jswitcherProject,
+  // sessionWatchosProject,
+  // mtprotoMobileProject,
+  // ps4mergerProject
+]
+
+export const portfolio: PortfolioItem[] = [...websites, ...projects]
