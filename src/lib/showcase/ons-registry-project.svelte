@@ -10,8 +10,8 @@
 		banner: "/showcase/ons-registry/banner.webp",
 		images: [
 			{
-				url: "/showcase/ons-registry/screenshot-1.webp",
-				alt: "ONS Registry website screenshot 1",
+				url: "/showcase/ons-registry/screenshot.webp",
+				alt: "ONS Registry website screenshot TODO: alt",
 			},
 		],
 		links: [

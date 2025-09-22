@@ -10,8 +10,8 @@
 		banner: "/showcase/mtproto-mobile/banner.webp",
 		images: [
 			{
-				url: "/showcase/mtproto-mobile/screenshot-1.webp",
-				alt: "Mtproto Mobile screenshot 1",
+				url: "/showcase/mtproto-mobile/screenshots.webp",
+				alt: "Mtproto Mobile screenshots TODO: alt",
 			},
 		],
 		links: [

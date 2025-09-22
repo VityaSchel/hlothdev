@@ -11,11 +11,11 @@
 		images: [
 			{
 				url: "/showcase/lufin/screenshot-1.webp",
-				alt: "Lufin frontend screenshot 1",
+				alt: "Lufin frontend screenshot 1 TODO: alt",
 			},
 			{
 				url: "/showcase/lufin/screenshot-2.webp",
-				alt: "Lufin frontend screenshot 2",
+				alt: "Lufin frontend screenshot 2 TODO: alt",
 			},
 			{
 				url: "/showcase/lufin/lufin-screenshotter.webp",

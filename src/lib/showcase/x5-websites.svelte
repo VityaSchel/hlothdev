@@ -38,32 +38,32 @@
 			},
 			{
 				url: "/showcase/x5-websites/bot-biz-admin-dashboard-1.webp",
-				alt: "Bot.biz admin dashboard screenshot",
+				alt: "Bot.biz admin dashboard screenshot TODO: alt",
 			},
 			{
 				url: "/showcase/x5-websites/bot-biz-admin-dashboard-2.webp",
-				alt: "Bot.biz admin dashboard screenshot",
+				alt: "Bot.biz admin dashboard screenshot TODO: alt",
 				class: "px1100:hidden",
 			},
 			{
 				url: "/showcase/x5-websites/lovebot.webp",
-				alt: "Lovebot screenshot",
+				alt: "Lovebot screenshot TODO: alt",
 			},
 			{
 				url: "/showcase/x5-websites/glassbot.webp",
-				alt: "Glassbot screenshot",
+				alt: "Glassbot screenshot TODO: alt",
 			},
 			{
 				url: "/showcase/x5-websites/prankbot.webp",
-				alt: "Prankbot screenshot",
+				alt: "Prankbot screenshot TODO: alt",
 			},
 			{
 				url: "/showcase/x5-websites/checkout-dialog.webp",
-				alt: "Checkout dialog",
+				alt: "Checkout dialog TODO: alt",
 			},
 			{
 				url: "/showcase/x5-websites/flat-ui-kit.webp",
-				alt: "Flat UI kit demo",
+				alt: "Flat UI kit demo TODO: alt",
 			},
 		],
 		links: [

@@ -10,8 +10,8 @@
 		banner: "/showcase/jswitcher/banner.webp",
 		images: [
 			{
-				url: "/showcase/jswitcher/screenshot-1.webp",
-				alt: "JSwitcher screenshot 1",
+				url: "/showcase/jswitcher/TODO: screenshot.webp",
+				alt: "JSwitcher screenshot 1 TODO: alt",
 			},
 		],
 		links: [

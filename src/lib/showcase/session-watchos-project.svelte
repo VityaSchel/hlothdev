@@ -11,7 +11,27 @@
 		images: [
 			{
 				url: "/showcase/session-watchos/screenshot-1.webp",
-				alt: "Session Watchos screenshot 1",
+				alt: "Session Watchos screenshot 1 TODO: alt",
+			},
+			{
+				url: "/showcase/session-watchos/screenshot-2.webp",
+				alt: "Session Watchos screenshot 2 TODO: alt",
+			},
+			{
+				url: "/showcase/session-watchos/screenshot-3.webp",
+				alt: "Session Watchos screenshot 3 TODO: alt",
+			},
+			{
+				url: "/showcase/session-watchos/screenshot-4.webp",
+				alt: "Session Watchos screenshot 4 TODO: alt",
+			},
+			{
+				url: "/showcase/session-watchos/screenshot-5.webp",
+				alt: "Session Watchos screenshot 5 TODO: alt",
+			},
+			{
+				url: "/showcase/session-watchos/screenshot-6.webp",
+				alt: "Session Watchos screenshot 6 TODO: alt",
 			},
 		],
 		links: [

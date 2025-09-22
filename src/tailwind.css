@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 html {
-	image-rendering: optimizeQuality;
+	image-rendering: smooth;
 	text-rendering: geometricPrecision;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;

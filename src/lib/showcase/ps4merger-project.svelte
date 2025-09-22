@@ -10,8 +10,8 @@
 		banner: "/showcase/ps4-merger/banner.webp",
 		images: [
 			{
-				url: "/showcase/ps4-merger/screenshot-1.webp",
-				alt: "PS4 Merger screenshot 1",
+				url: "/showcase/ps4-merger/screenshot.webp",
+				alt: "PS4 Merger screenshot TODO: alt",
 			},
 		],
 		links: [

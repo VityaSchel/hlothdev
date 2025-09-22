@@ -10,8 +10,8 @@
 		banner: "/showcase/session-web/banner.webp",
 		images: [
 			{
-				url: "/showcase/session-web/screenshot-1.webp",
-				alt: "Session Web website screenshot 1",
+				url: "/showcase/session-web/screenshot.webp",
+				alt: "Session Web website screenshot 1 TODO: alt",
 			},
 		],
 		links: [

@@ -10,8 +10,8 @@
 		banner: "/showcase/samsung-pinger/banner.webp",
 		images: [
 			{
-				url: "/showcase/samsung-pinger/screenshot-1.webp",
-				alt: "Samsung Pinger screenshot 1",
+				url: "/showcase/samsung-pinger/screenshot.webp",
+				alt: "Samsung Pinger screenshot TODO: alt",
 			},
 		],
 		links: [

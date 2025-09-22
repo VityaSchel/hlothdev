@@ -12,19 +12,27 @@
 		images: [
 			{
 				url: "/showcase/nock-trade/screenshot-1.webp",
-				alt: "Nock Trade main page",
+				alt: "TODO: alt",
 			},
 			{
-				url: "/showcase/nock-trade/screenshot-1.webp",
-				alt: "Nock Trade main page",
+				url: "/showcase/nock-trade/screenshot-2.webp",
+				alt: "TODO: alt",
 			},
 			{
-				url: "/showcase/nock-trade/screenshot-1.webp",
-				alt: "Nock Trade main page",
+				url: "/showcase/nock-trade/screenshot-3.webp",
+				alt: "TODO: alt",
 			},
 			{
-				url: "/showcase/nock-trade/screenshot-1.webp",
-				alt: "Nock Trade main page",
+				url: "/showcase/nock-trade/screenshot-4.webp",
+				alt: "TODO: alt",
+			},
+			{
+				url: "/showcase/nock-trade/screenshot-5.webp",
+				alt: "TODO: alt",
+			},
+			{
+				url: "/showcase/nock-trade/screenshot-6.webp",
+				alt: "TODO: alt",
 			},
 		],
 		links: [

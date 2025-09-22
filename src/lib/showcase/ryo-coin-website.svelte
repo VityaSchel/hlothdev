@@ -10,8 +10,32 @@
 		banner: "/showcase/ryo-coin/banner.webp",
 		images: [
 			{
-				url: "/showcase/ryo-coin/screenshot-1.webp",
-				alt: "RYO coin website screenshot 1",
+				url: "/showcase/ryo-coin/v1-screenshot-1.webp",
+				alt: "RYO coin website v1 screenshot 1 TODO: alt",
+			},
+			{
+				url: "/showcase/ryo-coin/v1-screenshot-2.webp",
+				alt: "RYO coin website v1 screenshot 2 TODO: alt",
+			},
+			{
+				url: "/showcase/ryo-coin/v2-screenshot.webp",
+				alt: "RYO coin website v2 screenshot TODO: alt",
+			},
+			{
+				url: "/showcase/ryo-coin/v3-screenshot.webp",
+				alt: "RYO coin website v3 screenshot TODO: alt",
+			},
+			{
+				url: "/showcase/ryo-coin/v4-screenshot-1.webp",
+				alt: "RYO coin website v4 screenshot 1 TODO: alt",
+			},
+			{
+				url: "/showcase/ryo-coin/v4-screenshot-2.webp",
+				alt: "RYO coin website v4 screenshot 2 TODO: alt",
+			},
+			{
+				url: "/showcase/ryo-coin/v4-screenshot-3.webp",
+				alt: "RYO coin website v4 screenshot 3 TODO: alt",
 			},
 		],
 		links: [

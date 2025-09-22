@@ -11,7 +11,11 @@
 		images: [
 			{
 				url: "/showcase/unddit/screenshot-1.webp",
-				alt: "Unddit website screenshot 1",
+				alt: "Unddit website screenshot 1 TODO: alt",
+			},
+			{
+				url: "/showcase/unddit/screenshot-2.webp",
+				alt: "Unddit website screenshot 2 TODO: alt",
 			},
 		],
 		links: [

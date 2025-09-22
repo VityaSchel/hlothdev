@@ -11,7 +11,15 @@
 		images: [
 			{
 				url: "/showcase/mit-hloth-dev/screenshot-1.webp",
-				alt: "mit.hloth.dev screenshot 1",
+				alt: "mit.hloth.dev screenshot TODO: alt",
+			},
+			{
+				url: "/showcase/mit-hloth-dev/screenshot-2.webp",
+				alt: "change.mit.hloth.dev screenshot TODO: alt",
+			},
+			{
+				url: "/showcase/mit-hloth-dev/screenshot-3.webp",
+				alt: "mit.hloth.dev screenshot 2 TODO: alt",
 			},
 		],
 		links: [
@@ -22,6 +30,14 @@
 			{
 				url: "https://git.hloth.dev/hloth/mit.hloth.dev",
 				label: "Open mit.hloth.dev source code",
+			},
+			{
+				url: "https://mit.hloth.dev",
+				label: "Visit change.mit.hloth.dev",
+			},
+			{
+				url: "https://git.hloth.dev/hloth/change.mit.hloth.dev",
+				label: "Open change.mit.hloth.dev source code",
 			},
 		],
 	};

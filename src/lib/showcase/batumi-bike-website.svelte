@@ -11,7 +11,7 @@
 		images: [
 			{
 				url: "/showcase/batumi-bike/screenshot.webp",
-				alt: "Batumi.bike website screenshot",
+				alt: "Batumi.bike website screenshot TODO: alt",
 			},
 		],
 		links: [

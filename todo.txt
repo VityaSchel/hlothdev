@@ -3,3 +3,4 @@
 - detect tor network and replace links from *.hloth.dev to onion mirrors
 - accessibility audit
 - resize images to save bandwidth
+- standartize showcase banners size

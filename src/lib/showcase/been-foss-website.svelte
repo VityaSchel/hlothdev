@@ -11,7 +11,7 @@
 		images: [
 			{
 				url: "/showcase/been-foss/screenshot.webp",
-				alt: "been-foss screenshot",
+				alt: "been-foss screenshot TODO: alt",
 			},
 		],
 		links: [

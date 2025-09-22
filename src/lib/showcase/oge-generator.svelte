@@ -11,7 +11,11 @@
 		images: [
 			{
 				url: "/showcase/oge-generator/screenshot-1.webp",
-				alt: "OGE generator website screenshot 1",
+				alt: "OGE generator website screenshot 1 TODO: alt",
+			},
+			{
+				url: "/showcase/oge-generator/screenshot-2.webp",
+				alt: "OGE generator website screenshot 2 TODO: alt",
 			},
 		],
 		links: [

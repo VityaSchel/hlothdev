@@ -11,7 +11,19 @@
 		images: [
 			{
 				url: "/showcase/sipacker/screenshot-1.webp",
-				alt: "SIPacker website screenshot 1",
+				alt: "SIPacker website screenshot 1 TODO: alt",
+			},
+			{
+				url: "/showcase/sipacker/screenshot-2.webp",
+				alt: "SIPacker website screenshot 2 TODO: alt",
+			},
+			{
+				url: "/showcase/sipacker/screenshot-3.webp",
+				alt: "SIPacker website screenshot 3 TODO: alt",
+			},
+			{
+				url: "/showcase/sipacker/screenshot-4.webp",
+				alt: "SIPacker website screenshot 4 TODO: alt",
 			},
 		],
 		links: [

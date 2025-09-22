@@ -10,8 +10,8 @@
 		banner: "/showcase/pow-reaction/banner.webp",
 		images: [
 			{
-				url: "/showcase/pow-reaction/screenshot-1.webp",
-				alt: "Pow-reaction demo website screenshot 1",
+				url: "/showcase/pow-reaction/screenshot.webp",
+				alt: "Pow-reaction demo website screenshot TODO: alt",
 			},
 		],
 		links: [

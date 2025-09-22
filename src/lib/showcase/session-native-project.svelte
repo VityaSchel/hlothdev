@@ -10,8 +10,8 @@
 		banner: "/showcase/session-native/banner.webp",
 		images: [
 			{
-				url: "/showcase/session-native/screenshot-1.webp",
-				alt: "Session Native screenshot 1",
+				url: "/showcase/session-native/screenshot.webp",
+				alt: "Session Native screenshot TODO: alt",
 			},
 		],
 		links: [

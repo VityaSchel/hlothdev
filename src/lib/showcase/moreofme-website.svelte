@@ -12,7 +12,7 @@
 		images: [
 			{
 				url: "/showcase/moreofme/image.webp",
-				alt: "Moreof.me pages screenshots",
+				alt: "Moreof.me pages screenshots TODO: alt",
 			},
 		],
 		links: [

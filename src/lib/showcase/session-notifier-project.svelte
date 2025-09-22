@@ -10,8 +10,8 @@
 		banner: "/showcase/session-notifier/banner.webp",
 		images: [
 			{
-				url: "/showcase/session-notifier/screenshot-1.webp",
-				alt: "Session Notifier screenshot 1",
+				url: "/showcase/session-notifier/screenshot.webp",
+				alt: "Session Notifier screenshot 1 TODO: alt",
 			},
 		],
 		links: [

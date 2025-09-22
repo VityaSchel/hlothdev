@@ -11,7 +11,7 @@
 		images: [
 			{
 				url: "/showcase/hloth-blog/screenshot.webp",
-				alt: "blog.hloth.dev screenshot",
+				alt: "blog.hloth.dev screenshot TODO: alt",
 			},
 		],
 		links: [

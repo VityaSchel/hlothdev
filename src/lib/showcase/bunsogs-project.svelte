@@ -11,7 +11,7 @@
 		images: [
 			{
 				url: "/showcase/bunsogs/demo.webp",
-				alt: "Bunsogs video demo",
+				alt: "Bunsogs video demo TODO: alt",
 			},
 		],
 		links: [

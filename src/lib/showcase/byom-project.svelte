@@ -8,11 +8,13 @@
 		description,
 		shortDescription: "",
 		banner: "/showcase/byom/banner.webp",
-		images: [],
+		images: [
+			// TODO: add images
+		],
 		links: [
 			{
 				url: "https://git.hloth.dev/hloth/byom",
-				label: "Open byom source code",
+				label: "Open byom source code TODO: alt",
 			},
 		],
 	};
