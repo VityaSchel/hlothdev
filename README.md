@@ -28,7 +28,7 @@ Feel free to review the code and contact me if you have any questions!
 Ways to contact me securely:
 
 - Create a **"secret"** Telegram dialogue and send a message to ([@hlothdev](https://t.me/hlothdev))
-- Send me a **PGP-encrypted mail** to my selfhosted email server ([hi@hloth.dev](mailto:hi@hloth.dev))
+- Send me a **PGP-encrypted mail** to my self-hosted email server ([hi@hloth.dev](mailto:hi@hloth.dev))
 - Send me a message in [Session messenger](https://getsession.org) (my ONS is `hloth`, my Session/Account ID is `057aeb66e45660c3bdfb7c62706f6440226af43ec13f3b6f899c1dd4db1b8fce5b`)
 
 <details> 
@@ -60,4 +60,4 @@ AP9cl51RDYKv0nJYrhLlD4xIogDNlHqsCvRfjT2q8FokCQ==
 
 ## Donate
 
-[hloth.dev/donate](https://hloth.dev/donate) · Tor: [hlothdevzkti6suoksy7lcy7hmpxnr3msu5waokzaslsi2mnx5ouu4qd.onion](http://hlothdevzkti6suoksy7lcy7hmpxnr3msu5waokzaslsi2mnx5ouu4qd.onion)
+[hloth.dev/donate](https://hloth.dev/donate) · Tor: [hlothdevzkti6suoksy7lcy7hmpxnr3msu5waokzaslsi2mnx5ouu4qd.onion/donate](http://hlothdevzkti6suoksy7lcy7hmpxnr3msu5waokzaslsi2mnx5ouu4qd.onion/donate)

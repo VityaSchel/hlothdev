@@ -91,7 +91,7 @@
 					</p>
 					<p class="break-words">
 						Trusting your data to cloud means trusting whoever hosts it. I
-						prefer selfhosting on infrastructure that I can control. Same
+						prefer self-hosting on infrastructure that I can control. Same
 						mindset shapes my approach to web: I make websites that respect
 						visitors decision to enable JavaScript, design them with privacy in
 						mind and host some of them in the Tor onion network under the <a
@@ -133,7 +133,7 @@
 				<div class="grid w-full shrink-0 grid-cols-1 gap-2 lg:grid-cols-2">
 					<PrivacyRelatedProjectCard
 						icon="/projects/session-native/logo-square-xs.webp"
-						link="https://github.com/VityaSchel/session-native"
+						link="https://git.hloth.dev/hloth/session-native"
 						name="Session Native"
 						caption="Native Session macOS client written in Swift"
 					/>
@@ -151,7 +151,7 @@
 					/>
 					<PrivacyRelatedProjectCard
 						icon="/projects/session-web/logo-square-xs.webp"
-						link="https://github.com/VityaSchel/session-web"
+						link="https://git.hloth.dev/hloth/session-web"
 						name="Session Web"
 						caption="Session client running in a web browser"
 					/>

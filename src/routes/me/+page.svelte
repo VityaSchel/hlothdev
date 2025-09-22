@@ -7,7 +7,7 @@
 	import PrivacySupportCard from "./PrivacyRightsCard.svelte";
 	import LocalTimeCard from "./LocalTimeCard.svelte";
 	import HlothCharityCard from "./HlothCharityCard.svelte";
-	import GitHubRepositoriesCard from "./GitHubRepositoriesCard.svelte";
+	import GitRepositoriesCard from "./GitRepositoriesCard.svelte";
 	import FunFactAboutMeCard from "./FunFactAboutMeCard.svelte";
 	import OpenToWorkCard from "./OpenToWorkCard.svelte";
 	import ReadyToRelocateCard from "./ReadyToRelocateCard.svelte";
@@ -27,7 +27,7 @@
 <PrivacySupportCard />
 <LocalTimeCard />
 <HlothCharityCard />
-<GitHubRepositoriesCard />
+<GitRepositoriesCard />
 <FunFactAboutMeCard />
 <OpenToWorkCard />
 <ReadyToRelocateCard />

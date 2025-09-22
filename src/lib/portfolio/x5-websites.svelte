@@ -112,7 +112,7 @@
 	)}
 	{@render link(
 		"Open Ketoplan Diet website source code",
-		"https://github.com/VityaSchel/ketoplan-diet",
+		"https://git.hloth.dev/hloth/ketoplan-diet",
 	)}
 	<h2>Mental Health Quiz Website</h2>
 	<p>
@@ -137,7 +137,7 @@
 	)}
 	{@render link(
 		"Open Mental Health Quiz website source code",
-		"https://github.com/VityaSchel/mental-health-quiz/",
+		"https://git.hloth.dev/hloth/mental-health-quiz/",
 	)}
 	<h2>Bot.biz Admin Dashboard Website</h2>
 	<p>
@@ -166,7 +166,7 @@
 	)}
 	{@render link(
 		"Open Bot.biz Admin Dashboard source code",
-		"https://github.com/VityaSchel/bot-biz-admin-panel/",
+		"https://git.hloth.dev/hloth/bot-biz-admin-panel/",
 	)}
 	<h2>Lovebot Website</h2>
 	<p>
@@ -183,7 +183,7 @@
 	)}
 	{@render link(
 		"Open Lovebot website source code",
-		"https://github.com/VityaSchel/lovebot",
+		"https://git.hloth.dev/hloth/lovebot",
 	)}
 	<h2>Glassbot Website</h2>
 	<p>
@@ -200,7 +200,7 @@
 	)}
 	{@render link(
 		"Open Glassbot website source code",
-		"https://github.com/VityaSchel/glassbot/",
+		"https://git.hloth.dev/hloth/glassbot",
 	)}
 	<h2>Prankbot</h2>
 	<p>
@@ -217,7 +217,7 @@
 	)}
 	{@render link(
 		"Open Prankbot website source code",
-		"https://github.com/VityaSchel/prankbot?tab=readme-ov-file",
+		"https://git.hloth.dev/hloth/prankbot",
 	)}
 	<h2>Checkout Dialog Component</h2>
 	<p>
@@ -230,11 +230,11 @@
 	</p>
 	{@render link(
 		"Visit Checkout Dialog demo",
-		"https://vityaschel.github.io/checkout-dialog/",
+		"https://vityaschel.github.io/checkout-dialog",
 	)}
 	{@render link(
 		"Open Checkout Dialog source code",
-		"https://github.com/VityaSchel/checkout-dialog/",
+		"https://git.hloth.dev/hloth/checkout-dialog",
 	)}
 	<h2>Flat UI Kit</h2>
 	<p>
@@ -247,6 +247,6 @@
 	</p>
 	{@render link(
 		"Open Flat UI kit source code",
-		"https://github.com/VityaSchel/x5io-flat-ui-kit/",
+		"https://git.hloth.dev/hloth/x5io-flat-ui-kit",
 	)}
 {/snippet}

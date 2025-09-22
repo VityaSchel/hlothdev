@@ -37,11 +37,11 @@
 				class="hidden px500:block"
 			/>
 			<NavItem
-				icon="/dock-icons/github.webp"
-				name="My GitHub"
-				alt="GitHub icon"
+				icon="/dock-icons/forgejo.webp"
+				name="My Forgejo (git server)"
+				alt="Forgejo icon"
 				highlight
-				link="https://github.com/VityaSchel/"
+				link="https://git.hloth.dev/hloth/"
 				bind:selectedNavItem
 			/>
 			<NavItem

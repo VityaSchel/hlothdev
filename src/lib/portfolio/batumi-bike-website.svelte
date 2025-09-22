@@ -20,7 +20,7 @@
 				label: "Visit Batumi.bike",
 			},
 			{
-				url: "https://github.com/VityaSchel/batumi.bike",
+				url: "https://git.hloth.dev/hloth/batumi.bike",
 				label: "Open Batumi.bike source code",
 			},
 		],

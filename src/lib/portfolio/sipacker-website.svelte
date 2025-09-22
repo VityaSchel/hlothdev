@@ -20,7 +20,7 @@
 				label: "Visit SIPacker",
 			},
 			{
-				url: "https://github.com/VityaSchel/SIPacker",
+				url: "https://git.hloth.dev/hloth/SIPacker",
 				label: "Open SIPacker source code",
 			},
 		],

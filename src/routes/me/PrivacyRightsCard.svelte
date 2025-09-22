@@ -85,7 +85,7 @@
           @px239:tracking-[-0.19cqw]
         "
 			>
-				I advocate for privacy and prefer selfhosting over SAAS. All my personal
+				I advocate for privacy and prefer self-hosting over SAAS. All my personal
 				websites are available in Tor onion network under <a
 					href="http://hlothdevzkti6suoksy7lcy7hmpxnr3msu5waokzaslsi2mnx5ouu4qd.onion/me"
 					rel="nofollow noreferrer noopener"
