@@ -1,9 +1,9 @@
 <script>
-	import { portfolio } from "$lib/portfolio";
+	import { showcase } from "$lib/showcase";
 	import ScrollableSection from "$lib/ui/ScrollableSection.svelte";
 	import ProfileItemCard from "$lib/widgets/ProjectItemCard.svelte";
 
-	let projects = $derived(portfolio.filter((p) => p.type === "project"));
+	let projects = $derived(showcase.filter((p) => p.type === "project"));
 </script>
 
 <ScrollableSection

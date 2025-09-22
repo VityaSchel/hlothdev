@@ -15,8 +15,8 @@
 	::view-transition-new(privacy-rights),
 	::view-transition-group(privacy-rights-content),
 	::view-transition-new(privacy-rights-content),
-	::view-transition-group(.project-view-transition),
-	::view-transition-new(.project-view-transition) {
+	::view-transition-group(.showcase-view-transition),
+	::view-transition-new(.showcase-view-transition) {
 		animation-name: fade-in;
 	}
 
@@ -26,7 +26,7 @@
 	::view-transition-old(about-me-content),
 	::view-transition-old(privacy-rights),
 	::view-transition-old(privacy-rights-content),
-	::view-transition-old(.project-view-transition) {
+	::view-transition-old(.showcase-view-transition) {
 		animation-name: fade-out;
 	}
 }
@@ -36,7 +36,7 @@
 }
 
 ::view-transition-group(donate),
-::view-transition-group(.project-view-transition),
+::view-transition-group(.showcase-view-transition),
 ::view-transition-group(me) {
 	border-radius: 32px;
 }
@@ -47,7 +47,7 @@
 ::view-transition-group(about-me-content),
 ::view-transition-group(privacy-rights),
 ::view-transition-group(privacy-rights-content),
-::view-transition-group(.project-view-transition) {
+::view-transition-group(.showcase-view-transition) {
 	animation-duration: 500ms;
 	animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -162,8 +162,8 @@
 	border: 0;
 }
 
-.project-view-transition {
-	view-transition-class: project-view-transition;
+.showcase-view-transition {
+	view-transition-class: showcase-view-transition;
 }
 
 .one-storey-a {

@@ -23,7 +23,7 @@ export const actions: Actions = {
 					(value) =>
 						["/", "/me", "/me/about", "/me/privacy-rights", "/donate"].includes(
 							value,
-						) || /^\/portfolio\/[a-zA-Z0-9_-]+$/.test(value),
+						) || /^\/showcase\/[a-zA-Z0-9_-]+$/.test(value),
 				)
 				.safeParse(formData.get("redirect")).data;
 			switch (id) {

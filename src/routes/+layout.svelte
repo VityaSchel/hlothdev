@@ -62,7 +62,7 @@
 			let viewId: string | undefined;
 			if (
 				[navigation.from?.route.id, navigation.to?.route.id].includes(
-					"/portfolio/[id]",
+					"/showcase/[id]",
 				)
 			) {
 				const projectId = (navigation.from?.params?.id ||

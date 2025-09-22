@@ -6,7 +6,7 @@
 	import OnionMirrorCard from "./OnionMirrorCard.svelte";
 	import WebsitesSection from "./WebsitesSection.svelte";
 	import ProjectsSection from "./ProjectsSection.svelte";
-	import PortfolioSection from "./PortfolioSection.svelte";
+	import ShowcaseSection from "./ShowcaseSection.svelte";
 	import PageMetadata from "$lib/widgets/PageMetadata.svelte";
 </script>
 
@@ -35,10 +35,10 @@
 				</div>
 			</div>
 		</div>
-		<PortfolioSection>
+		<ShowcaseSection>
 			<WebsitesSection />
 			<ProjectsSection />
-		</PortfolioSection>
+		</ShowcaseSection>
 	</div>
 </PageWrapper>
 

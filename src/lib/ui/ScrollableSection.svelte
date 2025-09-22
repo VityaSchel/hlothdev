@@ -63,7 +63,7 @@
 				"nowrap-fade-out-mask": scrollX === 0,
 			},
 		]}
-		aria-label="Section {name} of portfolio, containing {childrenCount} items"
+		aria-label="Section {name} of showcase, containing {childrenCount} items"
 		onscroll={(e) => (scrollX = (e.target as HTMLDivElement).scrollLeft)}
 	>
 		{@render children()}
