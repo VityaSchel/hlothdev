@@ -2,22 +2,26 @@
 	import type { PortfolioItem } from "$lib/portfolio";
 
 	export const blogHlothDevWebsite: PortfolioItem = {
-		type: "project",
-		id: "blog-hloth-dev",
-		name: "blog.hloth.dev",
+		type: "website",
+		id: "hloth-blog",
+		name: "hloth blog",
 		description,
 		shortDescription: "",
-		banner: "/projects/bunsogs/banner.webp",
+		banner: "/projects/hloth-blog/banner.webp",
 		images: [
 			{
-				url: "/projects/bunsogs/screenshot-1.webp",
-				alt: "Bunsogs screenshot 1",
+				url: "/projects/hloth-blog/screenshot-1.webp",
+				alt: "blog.hloth.dev screenshot 1",
 			},
 		],
 		links: [
 			{
-				url: "https://example.org",
-				label: "Visit Bunsogs",
+				url: "https://blog.hloth.dev",
+				label: "Visit hloth blog",
+			},
+			{
+				url: "https://git.hloth.dev/hloth/blog.hloth.dev",
+				label: "Open hloth blog source code",
 			},
 		],
 	};

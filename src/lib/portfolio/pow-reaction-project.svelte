@@ -4,20 +4,24 @@
 	export const powReactionProject: PortfolioItem = {
 		type: "project",
 		id: "pow-reaction",
-		name: "pow reaction",
+		name: "pow-reaction",
 		description,
 		shortDescription: "",
-		banner: "/projects/ons-registry/banner.webp",
+		banner: "/projects/pow-reaction/banner.webp",
 		images: [
 			{
-				url: "/projects/ons-registry/screenshot-1.webp",
-				alt: "ONS Registry website screenshot 1",
+				url: "/projects/pow-reaction/screenshot-1.webp",
+				alt: "Pow-reaction demo website screenshot 1",
 			},
 		],
 		links: [
 			{
-				url: "https://example.org",
-				label: "Visit ONS Registry",
+				url: "https://pow-reaction.pages.dev/",
+				label: "Open pow-reaction demo website",
+			},
+			{
+				url: "https://git.hloth.dev/hloth/pow-reaction",
+				label: "Open pow-reaction source code",
 			},
 		],
 	};

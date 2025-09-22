@@ -16,8 +16,12 @@
 		],
 		links: [
 			{
-				url: "https://example.org",
-				label: "Visit Session Watchos",
+				url: "https://git.hloth.dev/hloth/session-watchos",
+				label: "Open Session Watchos source code",
+			},
+			{
+				url: "https://git.hloth.dev/hloth/session-watchos-website",
+				label: "Open Session Watchos linking website source code",
 			},
 		],
 	};

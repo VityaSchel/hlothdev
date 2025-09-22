@@ -16,8 +16,8 @@
 		],
 		links: [
 			{
-				url: "https://example.org",
-				label: "Visit ONS Registry",
+				url: "https://git.hloth.dev/hloth/ons-registry",
+				label: "Open ONS registry source code",
 			},
 		],
 	};

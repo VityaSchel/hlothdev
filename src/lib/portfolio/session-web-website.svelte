@@ -16,8 +16,8 @@
 		],
 		links: [
 			{
-				url: "https://example.org",
-				label: "Visit Session Web",
+				url: "https://git.hloth.dev/hloth/session-web",
+				label: "Open Session Web source code",
 			},
 		],
 	};

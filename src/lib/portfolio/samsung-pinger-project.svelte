@@ -16,8 +16,8 @@
 		],
 		links: [
 			{
-				url: "https://example.org",
-				label: "Visit Samsung Pinger",
+				url: "https://git.hloth.dev/hloth/samsung-pinger",
+				label: "Open Samsung Pinger source code",
 			},
 		],
 	};

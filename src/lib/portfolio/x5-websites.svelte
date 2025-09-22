@@ -66,6 +66,9 @@
 				alt: "Flat UI kit demo",
 			},
 		],
+		links: [
+			// TODO: add links from netlify
+		]
 	};
 </script>
 

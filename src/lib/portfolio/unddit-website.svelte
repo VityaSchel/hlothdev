@@ -16,7 +16,7 @@
 		],
 		links: [
 			{
-				url: "https://unddit.com",
+				url: "https://unddit.netlify.app/",
 				label: "Visit Unddit",
 			},
 		],

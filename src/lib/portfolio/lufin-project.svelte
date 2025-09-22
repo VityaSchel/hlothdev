@@ -16,8 +16,12 @@
 		],
 		links: [
 			{
-				url: "https://example.org",
-				label: "Visit Lufin",
+				url: "https://lufin.hloth.dev",
+				label: "Visit Lufin demo website",
+			},
+			{
+				url: "https://git.hloth.dev/hloth/lufin",
+				label: "Open lufin source code",
 			},
 		],
 	};

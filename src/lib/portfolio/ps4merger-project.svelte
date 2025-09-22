@@ -16,8 +16,8 @@
 		],
 		links: [
 			{
-				url: "https://example.org",
-				label: "Visit PS4 Merger",
+				url: "https://git.hloth.dev/hloth/ps4-app-merge-pkgs",
+				label: "Open PS4 merger source code",
 			},
 		],
 	};

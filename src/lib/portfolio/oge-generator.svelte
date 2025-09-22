@@ -10,14 +10,14 @@
 		banner: "/projects/oge-generator/banner.webp",
 		images: [
 			{
-				url: "/projects/batumi-bike/screenshot-1.webp",
+				url: "/projects/oge-generator/screenshot-1.webp",
 				alt: "OGE generator website screenshot 1",
 			},
 		],
 		links: [
 			{
-				url: "https://example.org",
-				label: "Visit OGE generator",
+				url: "https://git.hloth.dev/hloth/informatics-oge-generator",
+				label: "Open OGE generator source code",
 			},
 		],
 	};

@@ -1,23 +1,27 @@
 <script lang="ts" module>
 	import type { PortfolioItem } from "$lib/portfolio";
 
-	export const atmosCraftWebsite: PortfolioItem = {
+	export const mitLicenseWebsite: PortfolioItem = {
 		type: "website",
-		id: "atmos-craft",
-		name: "Atmos Craft",
+		id: "mit-hloth-dev",
+		name: "mit.hloth.dev",
 		description,
 		shortDescription: "",
-		banner: "/projects/atmos-craft/banner.webp",
+		banner: "/projects/mit-hloth-dev/banner.webp",
 		images: [
 			{
-				url: "/projects/atmos-craft/screenshot-1.webp",
-				alt: "Atmos Craft website screenshot 1",
+				url: "/projects/mit-hloth-dev/screenshot-1.webp",
+				alt: "mit.hloth.dev screenshot 1",
 			},
 		],
 		links: [
 			{
-				url: "https://example.org",
-				label: "Visit Atmos Craft",
+				url: "https://mit.hloth.dev",
+				label: "Visit mit.hloth.dev",
+			},
+			{
+				url: "https://git.hloth.dev/hloth/mit.hloth.dev",
+				label: "Open mit.hloth.dev source code",
 			},
 		],
 	};

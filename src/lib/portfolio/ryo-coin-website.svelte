@@ -16,9 +16,9 @@
 		],
 		links: [
 			{
-				url: "https://example.org",
-				label: "Visit RYO Coin v1",
-			},
+				url: "https://ryocoin.netlify.app/",
+				label: "Visit RYO Coin v1 demo website",
+			}
 		],
 	};
 </script>

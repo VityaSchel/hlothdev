@@ -2,22 +2,26 @@
 	import type { PortfolioItem } from "$lib/portfolio";
 
 	export const beenFossWebsite: PortfolioItem = {
-		type: "project",
+		type: "website",
 		id: "been-foss",
 		name: "been-foss",
 		description,
 		shortDescription: "",
-		banner: "/projects/bunsogs/banner.webp",
+		banner: "/projects/been-foss/banner.webp",
 		images: [
 			{
-				url: "/projects/bunsogs/screenshot-1.webp",
-				alt: "Bunsogs screenshot 1",
+				url: "/projects/been-foss/screenshot-1.webp",
+				alt: "been-foss screenshot 1",
 			},
 		],
 		links: [
 			{
-				url: "https://example.org",
-				label: "Visit Bunsogs",
+				url: "https://beenfoss.netlify.app/",
+				label: "Visit been-foss",
+			},
+			{
+				url: "https://git.hloth.dev/hloth/been-foss",
+				label: "Open been-foss source code",
 			},
 		],
 	};

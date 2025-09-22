@@ -38,7 +38,7 @@
 			/>
 			<NavItem
 				icon="/dock-icons/forgejo.webp"
-				name="My Forgejo (git server)"
+				name="My Git server (Forgejo)"
 				alt="Forgejo icon"
 				highlight
 				link="https://git.hloth.dev/hloth/"

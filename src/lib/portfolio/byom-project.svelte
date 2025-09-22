@@ -7,17 +7,17 @@
 		name: "BYOM",
 		description,
 		shortDescription: "",
-		banner: "/projects/ons-registry/banner.webp",
+		banner: "/projects/byom/banner.webp",
 		images: [
 			{
-				url: "/projects/ons-registry/screenshot-1.webp",
-				alt: "ONS Registry website screenshot 1",
+				url: "/projects/byom/screenshot-1.webp",
+				alt: "BYOM screenshot 1",
 			},
 		],
 		links: [
 			{
-				url: "https://example.org",
-				label: "Visit ONS Registry",
+				url: "https://git.hloth.dev/hloth/byom",
+				label: "Open byom source code",
 			},
 		],
 	};

@@ -16,8 +16,8 @@
 		],
 		links: [
 			{
-				url: "https://example.org",
-				label: "Visit JSwitcher",
+				url: "https://git.hloth.dev/hloth/jswitcher",
+				label: "Open jswitcher source code",
 			},
 		],
 	};

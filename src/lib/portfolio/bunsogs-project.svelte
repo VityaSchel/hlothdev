@@ -16,8 +16,8 @@
 		],
 		links: [
 			{
-				url: "https://example.org",
-				label: "Visit Bunsogs",
+				url: "https://git.hloth.dev/hloth/bunsogs",
+				label: "Open bunsogs source code",
 			},
 		],
 	};

@@ -16,8 +16,8 @@
 		],
 		links: [
 			{
-				url: "https://example.org",
-				label: "Visit Mtproto Mobile",
+				url: "https://git.hloth.dev/hloth/mtproto-mobile",
+				label: "Open Mtproto Mobile source code",
 			},
 		],
 	};

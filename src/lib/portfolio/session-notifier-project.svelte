@@ -17,7 +17,7 @@
 		links: [
 			{
 				url: "https://example.org",
-				label: "Visit Session Notifier",
+				label: "TODO: add links",
 			},
 		],
 	};

@@ -16,8 +16,8 @@
 		],
 		links: [
 			{
-				url: "https://example.org",
-				label: "Visit Session Native",
+				url: "https://git.hloth.dev/hloth/session-native",
+				label: "Open Session Native source code",
 			},
 		],
 	};

@@ -2,6 +2,7 @@ import { nockTradeWebsite } from "./nock-trade-website.svelte";
 import { moreOfMeWebsite } from "./moreofme-website.svelte";
 import { blogHlothDevWebsite } from "./blog-hloth-dev-website.svelte";
 import { beenFossWebsite } from "./been-foss-website.svelte";
+import { mitLicenseWebsite } from "./mit-license-website.svelte";
 import { x5Websites } from "./x5-websites.svelte";
 import { undditWebsite } from "./unddit-website.svelte";
 import { ryoCoinWebsite } from "./ryo-coin-website.svelte";
@@ -9,7 +10,6 @@ import { batumiBikeWebsite } from "./batumi-bike-website.svelte";
 import { sessionWebWebsite } from "./session-web-website.svelte";
 import { sipackerWebsite } from "./sipacker-website.svelte";
 import { ogeGeneratorWebsite } from "./oge-generator.svelte";
-import { atmosCraftWebsite } from "./atmos-craft-website.svelte";
 
 import { lufinProject } from "./lufin-project.svelte";
 import { samsungPingerProject } from "./samsung-pinger-project.svelte";
@@ -48,6 +48,7 @@ const websites: PortfolioItem[] = [
 	moreOfMeWebsite,
 	blogHlothDevWebsite,
 	beenFossWebsite,
+	mitLicenseWebsite,
 	x5Websites,
 	undditWebsite,
 	ryoCoinWebsite,
@@ -55,7 +56,6 @@ const websites: PortfolioItem[] = [
 	sessionWebWebsite,
 	sipackerWebsite,
 	ogeGeneratorWebsite,
-	atmosCraftWebsite,
 ];
 
 const projects: PortfolioItem[] = [
