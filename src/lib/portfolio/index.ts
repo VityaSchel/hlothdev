@@ -1,5 +1,7 @@
-import { nockTradeWebsite } from './nock-trade.svelte'
-import { moreOfMeWebsite } from './moreofme.svelte'
+import { nockTradeWebsite } from './nock-trade-website.svelte'
+import { moreOfMeWebsite } from './moreofme-website.svelte'
+import { blogHlothDevWebsite } from './blog-hloth-dev-website.svelte'
+import { beenFossWebsite } from './been-foss-website.svelte'
 import { x5Websites } from './x5-websites.svelte'
 import { undditWebsite } from './unddit-website.svelte'
 import { ryoCoinWebsite } from './ryo-coin-website.svelte'
@@ -10,15 +12,17 @@ import { ogeGeneratorWebsite } from './oge-generator.svelte'
 import { atmosCraftWebsite } from './atmos-craft-website.svelte'
 
 import { lufinProject } from './lufin-project.svelte'
-import { onsRegistryProject } from './ons-registry-project.svelte'
 import { samsungPingerProject } from './samsung-pinger-project.svelte'
-import { sessionNativeProject } from './session-native-project.svelte'
+import { powReactionProject } from './pow-reaction-project.svelte'
+import { byomProject } from './byom-project.svelte'
 import { bunsogsProject } from './bunsogs-project.svelte'
 import { sessionNotifierProject } from './session-notifier-project.svelte'
+import { onsRegistryProject } from './ons-registry-project.svelte'
+import { sessionNativeProject } from './session-native-project.svelte'
 import { jswitcherProject } from './jswitcher-project.svelte'
 import { sessionWatchosProject } from './session-watchos-project.svelte'
-import { mtprotoMobileProject } from './mtproto-mobile-project.svelte'
 import { ps4mergerProject } from './ps4merger-project.svelte'
+import { mtprotoMobileProject } from './mtproto-mobile-project.svelte'
 
 export type PortfolioItem = {
   type: 'website' | 'project'
@@ -42,6 +46,8 @@ export type PortfolioItem = {
 const websites: PortfolioItem[] = [
   nockTradeWebsite,
   moreOfMeWebsite,
+  blogHlothDevWebsite,
+  beenFossWebsite,
   x5Websites,
   undditWebsite,
   ryoCoinWebsite,
@@ -54,15 +60,17 @@ const websites: PortfolioItem[] = [
 
 const projects: PortfolioItem[] = [
   lufinProject,
-  onsRegistryProject,
   samsungPingerProject,
-  sessionNativeProject,
+  powReactionProject,
+  byomProject,
   bunsogsProject,
   sessionNotifierProject,
+  onsRegistryProject,
+  sessionNativeProject,
   jswitcherProject,
   sessionWatchosProject,
-  mtprotoMobileProject,
-  ps4mergerProject
+  ps4mergerProject,
+  mtprotoMobileProject
 ]
 
 export const portfolio: PortfolioItem[] = [...websites, ...projects]

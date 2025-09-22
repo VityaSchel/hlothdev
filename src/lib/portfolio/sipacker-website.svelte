@@ -4,20 +4,24 @@
   export const sipackerWebsite: PortfolioItem = {
     type: 'website',
     id: 'sipacker',
-    name: 'Sipacker',
+    name: 'SIPacker',
     description,
     shortDescription: '',
     banner: '/projects/sipacker/banner.webp',
     images: [
       {
         url: '/projects/sipacker/screenshot-1.webp',
-        alt: 'Sipacker website screenshot 1'
+        alt: 'SIPacker website screenshot 1'
       }
     ],
     links: [
       {
-        url: 'https://example.org',
-        label: 'Visit Sipacker'
+        url: 'https://sipacker.netlify.app/',
+        label: 'Visit SIPacker'
+      },
+      {
+        url: 'https://github.com/VityaSchel/SIPacker',
+        label: 'Open SIPacker source code'
       }
     ]
   }

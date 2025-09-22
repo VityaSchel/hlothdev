@@ -16,9 +16,13 @@
     ],
     links: [
       {
-        url: 'https://example.org',
+        url: 'https://batumibike.netlify.app',
         label: 'Visit Batumi.bike'
-      }
+      },
+      {
+        url: 'https://github.com/VityaSchel/batumi.bike',
+        label: 'Open Batumi.bike source code'
+      },
     ]
   }
 </script>
