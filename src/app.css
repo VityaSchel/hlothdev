@@ -1,44 +1,44 @@
 @view-transition {
-  navigation: auto;
+	navigation: auto;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  ::view-transition-group(donate),
-  ::view-transition-new(donate),
-  ::view-transition-group(me),
-  ::view-transition-new(me),
-  ::view-transition-group(about-me),
-  ::view-transition-new(about-me),
-  ::view-transition-group(about-me-content),
-  ::view-transition-new(about-me-content),
-  ::view-transition-group(privacy-rights),
-  ::view-transition-new(privacy-rights),
-  ::view-transition-group(privacy-rights-content),
-  ::view-transition-new(privacy-rights-content),
-  ::view-transition-group(.project-view-transition),
-  ::view-transition-new(.project-view-transition) {
-    animation-name: fade-in;
-  }
+	::view-transition-group(donate),
+	::view-transition-new(donate),
+	::view-transition-group(me),
+	::view-transition-new(me),
+	::view-transition-group(about-me),
+	::view-transition-new(about-me),
+	::view-transition-group(about-me-content),
+	::view-transition-new(about-me-content),
+	::view-transition-group(privacy-rights),
+	::view-transition-new(privacy-rights),
+	::view-transition-group(privacy-rights-content),
+	::view-transition-new(privacy-rights-content),
+	::view-transition-group(.project-view-transition),
+	::view-transition-new(.project-view-transition) {
+		animation-name: fade-in;
+	}
 
-  ::view-transition-old(donate),
-  ::view-transition-old(me),
-  ::view-transition-old(about-me),
-  ::view-transition-old(about-me-content),
-  ::view-transition-old(privacy-rights),
-  ::view-transition-old(privacy-rights-content),
-  ::view-transition-old(.project-view-transition) {
-    animation-name: fade-out;
-  }
+	::view-transition-old(donate),
+	::view-transition-old(me),
+	::view-transition-old(about-me),
+	::view-transition-old(about-me-content),
+	::view-transition-old(privacy-rights),
+	::view-transition-old(privacy-rights-content),
+	::view-transition-old(.project-view-transition) {
+		animation-name: fade-out;
+	}
 }
 
 ::view-transition-group(root) {
-  animation-duration: 500ms;
+	animation-duration: 500ms;
 }
 
 ::view-transition-group(donate),
 ::view-transition-group(.project-view-transition),
 ::view-transition-group(me) {
-  border-radius: 32px;
+	border-radius: 32px;
 }
 
 ::view-transition-group(donate),
@@ -48,20 +48,20 @@
 ::view-transition-group(privacy-rights),
 ::view-transition-group(privacy-rights-content),
 ::view-transition-group(.project-view-transition) {
-  animation-duration: 500ms;
-  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+	animation-duration: 500ms;
+	animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 ::view-transition-group(about-me),
 ::view-transition-group(about-me-content) {
-  border-radius: 55px;
-  overflow: clip;
+	border-radius: 55px;
+	overflow: clip;
 }
 
 ::view-transition-group(privacy-rights),
 ::view-transition-group(privacy-rights-content) {
-  border-radius: 13px;
-  overflow: clip;
+	border-radius: 13px;
+	overflow: clip;
 }
 
 /* Locked aspect ratio looks better */
@@ -77,17 +77,17 @@
 ::view-transition-new(about-me),
 ::view-transition-old(privacy-rights),
 ::view-transition-new(privacy-rights) {
-  animation: none;
-  width: 100%;
-  height: 100%;
+	animation: none;
+	width: 100%;
+	height: 100%;
 }
 
 ::view-transition-old(about-me-content),
 ::view-transition-new(about-me-content),
 ::view-transition-old(privacy-rights-content),
 ::view-transition-new(privacy-rights-content) {
-  width: auto;
-  height: 100%;
+	width: auto;
+	height: 100%;
 }
 
 ::view-transition-old(about-me):only-child,
@@ -98,100 +98,100 @@
 ::view-transition-new(privacy-rights):only-child,
 ::view-transition-old(privacy-rights-content):only-child,
 ::view-transition-new(privacy-rights-content):only-child {
-  animation: none;
-  animation-duration: 1ms;
-  display: none;
+	animation: none;
+	animation-duration: 1ms;
+	display: none;
 }
 
 ::view-transition-group(privacy-rights-content-ignore),
 ::view-transition-old(privacy-rights-content-ignore),
 ::view-transition-new(privacy-rights-content-ignore) {
-  animation: none;
-  animation-duration: 1ms;
-  display: none;
+	animation: none;
+	animation-duration: 1ms;
+	display: none;
 }
 
 ::view-transition-old(privacy-rights),
 ::view-transition-new(privacy-rights) {
-  background-image: url(/privacy-rights.webp);
-  background-size: cover;
-  background-position: 30%;
+	background-image: url(/privacy-rights.webp);
+	background-size: cover;
+	background-position: 30%;
 }
 
 ::view-transition-group(nav-fake-view-transition) {
-  z-index: 1001;
-  border-radius: 16px;
-  /* overflow: clip; */
+	z-index: 1001;
+	border-radius: 16px;
+	/* overflow: clip; */
 }
 
 .scrollbar-thin {
-  scrollbar-width: thin;
+	scrollbar-width: thin;
 }
 
 .container-size {
-  container-type: size;
+	container-type: size;
 }
 
 @keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 @keyframes fade-out {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
 }
 
 .sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
 }
 
 .project-view-transition {
-  view-transition-class: project-view-transition;
+	view-transition-class: project-view-transition;
 }
 
 .one-storey-a {
-  /* SF Pro */
-  font-feature-settings: 'ss07' on;
+	/* SF Pro */
+	font-feature-settings: "ss07" on;
 }
 
 .small-caps {
-  font-variant-caps: all-small-caps;
+	font-variant-caps: all-small-caps;
 }
 
 .text-shadow-reveal {
-  text-shadow:
-    rgb(0, 0, 0, 0.2) 1cqw 0cqw 0cqw,
-    rgb(0, 0, 0, 0.2) 0.540302cqw 0.841471cqw 0cqw,
-    rgb(0, 0, 0, 0.2) -0.416147cqw 0.909297cqw 0cqw,
-    rgb(0, 0, 0, 0.2) -0.989993cqw 0.14112cqw 0cqw,
-    rgb(0, 0, 0, 0.2) -0.653644cqw -0.756803cqw 0cqw,
-    rgb(0, 0, 0, 0.2) 0.283662cqw -0.958924cqw 0cqw,
-    rgb(0, 0, 0, 0.2) 0.96017cqw -0.279416cqw 0cqw,
-    0cqw 0cqw 5px black,
-    0cqw 0cqw 15px black;
+	text-shadow:
+		rgb(0, 0, 0, 0.2) 1cqw 0cqw 0cqw,
+		rgb(0, 0, 0, 0.2) 0.540302cqw 0.841471cqw 0cqw,
+		rgb(0, 0, 0, 0.2) -0.416147cqw 0.909297cqw 0cqw,
+		rgb(0, 0, 0, 0.2) -0.989993cqw 0.14112cqw 0cqw,
+		rgb(0, 0, 0, 0.2) -0.653644cqw -0.756803cqw 0cqw,
+		rgb(0, 0, 0, 0.2) 0.283662cqw -0.958924cqw 0cqw,
+		rgb(0, 0, 0, 0.2) 0.96017cqw -0.279416cqw 0cqw,
+		0cqw 0cqw 5px black,
+		0cqw 0cqw 15px black;
 }
 
 .nav-fake-view-transition {
-  view-transition-name: nav-fake-view-transition;
+	view-transition-name: nav-fake-view-transition;
 }
 
 #root {
-  min-height: 250px;
+	min-height: 250px;
 }

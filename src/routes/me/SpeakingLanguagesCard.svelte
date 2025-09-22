@@ -1,17 +1,14 @@
 <script lang="ts">
-  import XsCard from '$lib/widgets/grid-cards/XSCard.svelte'
+	import XsCard from "$lib/widgets/grid-cards/XSCard.svelte";
 </script>
 
 <XsCard
-  class="
-    container-size col-start-1 col-end-2 row-start-8 row-end-9 bg-[#2E2E2E]
-    text-white
-    px580:row-start-5 px580:row-end-6
-    md:col-start-6 md:col-end-7 md:row-start-1 md:row-end-2
-  "
+	class="container-size col-start-1 col-end-2 row-start-8 row-end-9 bg-[#2E2E2E]
+		text-white px580:row-start-5 px580:row-end-6 md:col-start-6 md:col-end-7
+		md:row-start-1 md:row-end-2"
 >
-  <!-- prettier-ignore -->
-  <div class="
+	<!-- prettier-ignore -->
+	<div class="
     flex h-full w-full flex-col gap-[3.36cqw] px-[9.24cqw] py-[6.72cqw]
   ">
     <h4 class="text-[8.40cqw] font-bold tracking-[-0.504cqw] text-[#FF9500]" aria-label="Languages I speak">Languages</h4>

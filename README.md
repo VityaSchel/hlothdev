@@ -4,11 +4,7 @@ My personal website tells my story, outlines my achievements, contains resources
 
 (insert banner here)
 
-Visit the website:
-
-- Clearnet: [hloth.dev](https://hloth.dev)
-- Onion network: (insert onion mirror link here)
-- Lokinet: [hloth.loki](https://hloth.loki)
+Visit the website: [hloth.dev](https://hloth.dev) · Tor: [hlothdevzkti6suoksy7lcy7hmpxnr3msu5waokzaslsi2mnx5ouu4qd.onion](http://hlothdevzkti6suoksy7lcy7hmpxnr3msu5waokzaslsi2mnx5ouu4qd.onion)
 
 ## Features
 
@@ -57,3 +53,11 @@ AP9cl51RDYKv0nJYrhLlD4xIogDNlHqsCvRfjT2q8FokCQ==
 ```
 
 </details>
+
+## License
+
+[MIT](./LICENSE)
+
+## Donate
+
+[hloth.dev/donate](https://hloth.dev/donate) · Tor: [hlothdevzkti6suoksy7lcy7hmpxnr3msu5waokzaslsi2mnx5ouu4qd.onion](http://hlothdevzkti6suoksy7lcy7hmpxnr3msu5waokzaslsi2mnx5ouu4qd.onion)

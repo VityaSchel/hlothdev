@@ -1,13 +1,11 @@
 {
-	"useTabs": false,
-	"singleQuote": true,
-	"trailingComma": "none",
-	"htmlWhitespaceSensitivity": "ignore",
-	"semi": false,
-	"printWidth": 100,
+	"useTabs": true,
+	"htmlWhitespaceSensitivity": "strict",
 	"plugins": [
 		"prettier-plugin-svelte",
-		"prettier-plugin-tailwindcss"
+		"prettier-plugin-tailwindcss",
+		"prettier-plugin-classnames",
+		"prettier-plugin-merge"
 	],
 	"overrides": [
 		{
@@ -16,5 +14,6 @@
 				"parser": "svelte"
 			}
 		}
-	]
+	],
+	"tailwindStylesheet": "./src/tailwind.css"
 }

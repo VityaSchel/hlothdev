@@ -1,132 +1,136 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 html {
-  image-rendering: optimizeQuality;
-  text-rendering: geometricPrecision;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-tap-highlight-color: transparent;
-  isolation: isolate;
-  color-scheme: dark;
-  color: #ffffff;
+	image-rendering: optimizeQuality;
+	text-rendering: geometricPrecision;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-tap-highlight-color: transparent;
+	isolation: isolate;
+	color-scheme: dark;
+	color: #ffffff;
 }
 
 @theme {
-  --color-thick-typography: #e5e5e5;
-  --color-thin-typography: #7c7c7c;
-  --color-thin-alt-typography: #b7b7b7;
-  --color-thick: rgba(36, 36, 36, 0.35);
-  --color-thick-light: rgba(246, 246, 246, 0.72);
-  --color-thick-alt-typography: rgba(200, 200, 200, 0.5);
-  --color-tooltip: rgba(50, 50, 50, 0.48);
-  --color-thin: rgba(0, 0, 0, 0.1);
-  --color-thin-light: rgba(246, 246, 246, 0.48);
-  --color-opaque-sheet: #282828;
-  --color-opaque-row: #202020;
-  --blur-thick: 128px;
-  --blur-thin: 30px;
-  --emoji-font: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-  --default-fonts:
-    -apple-system, BlinkMacSystemFont, 'Inter Variable', Roboto, Helvetica, Arial, sans-serif, var(--emoji-font);
-  --font-sf-pro: 'SF Pro', SF-Pro, var(--default-fonts);
-  --font-mono:
-    'SF Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
-    'Courier New', monospace, var(--default-fonts);
-  --font-condensed:
-    'Sofia Sans Condensed Variable', 'Sofia Sans Condensed', 'Sofia Sans Extra Condensed Variable',
-    'Sofia Extra Sans Condensed', 'Impact', var(--default-fonts);
-  --font-extra-condensed:
-    'Sofia Sans Extra Condensed Variable', 'Sofia Sans Extra Condensed',
-    'Sofia Sans Condensed Variable', 'Sofia Sans Condensed', 'Impact', var(--default-fonts);
-  --font-display: 'SF Pro Display', SF-Pro-Display, var(--default-fonts);
-  --font-compact-display:
-    'SF Compact Display', SF-Compact-Display, 'SF Compact', SF-Compact, var(--default-fonts);
-  --breakpoint-px1420: 1420px;
-  --breakpoint-px1380: 1380px;
-  --breakpoint-xl: 1280px;
-  --breakpoint-px1300: 1300px;
-  --breakpoint-px1205: 1205px;
-  --breakpoint-px1180: 1180px;
-  --breakpoint-px1150: 1150px;
-  --breakpoint-px1100: 1100px;
-  --breakpoint-px1080: 1080px;
-  --breakpoint-px1050: 1050px;
-  --breakpoint-lg: 1024px;
-  --breakpoint-px980: 980px;
-  --breakpoint-px957: 957px;
-  --breakpoint-px920: 920px;
-  --breakpoint-px870: 870px;
-  --breakpoint-md: 768px;
-  --breakpoint-px680: 680px;
-  --breakpoint-px630: 630px;
-  --breakpoint-px620: 620px;
-  --breakpoint-sm: 640px;
-  --breakpoint-px600: 600px;
-  --breakpoint-px580: 580px;
-  --breakpoint-px550: 550px;
-  --breakpoint-px530: 530px;
-  --breakpoint-px500: 500px;
-  --breakpoint-px470: 470px;
-  --breakpoint-px450: 450px;
-  --breakpoint-px420: 420px;
-  --breakpoint-px400: 400px;
-  --breakpoint-px350: 350px;
-  --breakpoint-px380: 380px;
-  --breakpoint-px330: 330px;
-  --breakpoint-px320: 320px;
-  --breakpoint-px300: 300px;
-  --container-px273: 273px;
-  --container-px239: 239px;
-  --container-px215: 215px;
-  --container-px198: 198px;
-  --container-px188: 188px;
-  --container-px175: 175px;
-  --container-px170: 170px;
-  --container-px165: 165px;
-  --container-px114: 114px;
-  --container-px105: 105px;
-  --container-px103: 103px;
-  --container-px99: 99px;
-  --container-px98: 98px;
-  --container-px95: 95px;
-  --container-px90: 90px;
-  --container-px84: 84px;
-  --container-px80: 80px;
-  --container-px77: 77px;
+	--color-thick-typography: #e5e5e5;
+	--color-thin-typography: #7c7c7c;
+	--color-thin-alt-typography: #b7b7b7;
+	--color-thick: rgba(36, 36, 36, 0.35);
+	--color-thick-light: rgba(246, 246, 246, 0.72);
+	--color-thick-alt-typography: rgba(200, 200, 200, 0.5);
+	--color-tooltip: rgba(50, 50, 50, 0.48);
+	--color-thin: rgba(0, 0, 0, 0.1);
+	--color-thin-light: rgba(246, 246, 246, 0.48);
+	--color-opaque-sheet: #282828;
+	--color-opaque-row: #202020;
+	--blur-thick: 128px;
+	--blur-thin: 30px;
+	--emoji-font: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--default-fonts:
+		-apple-system, BlinkMacSystemFont, "Inter Variable", Roboto, Helvetica,
+		Arial, sans-serif, var(--emoji-font);
+	--font-sf-pro: "SF Pro", SF-Pro, var(--default-fonts);
+	--font-mono:
+		"SF Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+		"Liberation Mono", "Courier New", monospace, var(--default-fonts);
+	--font-condensed:
+		"Sofia Sans Condensed Variable", "Sofia Sans Condensed",
+		"Sofia Sans Extra Condensed Variable", "Sofia Extra Sans Condensed",
+		"Impact", var(--default-fonts);
+	--font-extra-condensed:
+		"Sofia Sans Extra Condensed Variable", "Sofia Sans Extra Condensed",
+		"Sofia Sans Condensed Variable", "Sofia Sans Condensed", "Impact",
+		var(--default-fonts);
+	--font-display: "SF Pro Display", SF-Pro-Display, var(--default-fonts);
+	--font-compact-display:
+		"SF Compact Display", SF-Compact-Display, "SF Compact", SF-Compact,
+		var(--default-fonts);
+	--breakpoint-px1420: 1420px;
+	--breakpoint-px1380: 1380px;
+	--breakpoint-xl: 1280px;
+	--breakpoint-px1300: 1300px;
+	--breakpoint-px1205: 1205px;
+	--breakpoint-px1180: 1180px;
+	--breakpoint-px1150: 1150px;
+	--breakpoint-px1100: 1100px;
+	--breakpoint-px1080: 1080px;
+	--breakpoint-px1050: 1050px;
+	--breakpoint-lg: 1024px;
+	--breakpoint-px980: 980px;
+	--breakpoint-px957: 957px;
+	--breakpoint-px920: 920px;
+	--breakpoint-px870: 870px;
+	--breakpoint-md: 768px;
+	--breakpoint-px680: 680px;
+	--breakpoint-px630: 630px;
+	--breakpoint-px620: 620px;
+	--breakpoint-sm: 640px;
+	--breakpoint-px600: 600px;
+	--breakpoint-px580: 580px;
+	--breakpoint-px550: 550px;
+	--breakpoint-px530: 530px;
+	--breakpoint-px500: 500px;
+	--breakpoint-px470: 470px;
+	--breakpoint-px450: 450px;
+	--breakpoint-px420: 420px;
+	--breakpoint-px400: 400px;
+	--breakpoint-px350: 350px;
+	--breakpoint-px380: 380px;
+	--breakpoint-px330: 330px;
+	--breakpoint-px320: 320px;
+	--breakpoint-px300: 300px;
+	--container-px273: 273px;
+	--container-px239: 239px;
+	--container-px215: 215px;
+	--container-px198: 198px;
+	--container-px188: 188px;
+	--container-px175: 175px;
+	--container-px170: 170px;
+	--container-px165: 165px;
+	--container-px114: 114px;
+	--container-px105: 105px;
+	--container-px103: 103px;
+	--container-px99: 99px;
+	--container-px98: 98px;
+	--container-px95: 95px;
+	--container-px90: 90px;
+	--container-px84: 84px;
+	--container-px80: 80px;
+	--container-px77: 77px;
 }
 
 @utility focus-lg {
-  @apply focus-visible:outline-3 focus-visible:outline-offset-6 focus-visible:outline-stone-200/40;
+	@apply focus-visible:outline-3 focus-visible:outline-offset-6 focus-visible:outline-stone-200/40;
 }
 
 @utility focus-lg-dark {
-  @apply focus-visible:outline-3 focus-visible:outline-offset-6 focus-visible:outline-stone-700/40;
+	@apply focus-visible:outline-3 focus-visible:outline-offset-6 focus-visible:outline-stone-700/40;
 }
 
 @utility focus-xl {
-  @apply focus-visible:outline-4 focus-visible:outline-offset-6 focus-visible:outline-white/90;
+	@apply focus-visible:outline-4 focus-visible:outline-offset-6 focus-visible:outline-white/90;
 }
 
 @utility focus-sm {
-  @apply focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-stone-200/60;
+	@apply focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-stone-200/60;
 }
 
 @utility focus-sm-dark {
-  @apply focus-visible:outline-3 focus-visible:-outline-offset-4 focus-visible:outline-stone-700/40;
+	@apply focus-visible:outline-3 focus-visible:-outline-offset-4 focus-visible:outline-stone-700/40;
 }
 
 @utility focus-scrollable {
-  @apply focus:outline-0 focus-visible:outline-6 focus-visible:outline-blue-500/50 focus-visible:-outline-offset-6;
+	@apply focus:outline-0 focus-visible:outline-6 focus-visible:-outline-offset-6 focus-visible:outline-blue-500/50;
 }
 
 @custom-variant no-hover {
-  @media not (hover: hover) {
-    @slot;
-  }
+	@media not (hover: hover) {
+		@slot;
+	}
 }
 
 @custom-variant transparency-reduce {
-  @media (prefers-reduced-transparency: reduce) {
-    @slot;
-  }
+	@media (prefers-reduced-transparency: reduce) {
+		@slot;
+	}
 }
