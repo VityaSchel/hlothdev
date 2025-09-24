@@ -7,16 +7,17 @@
 		id: "oge-generator",
 		name: "OGE generator",
 		description,
-		shortDescription: "",
+		shortDescription:
+			"Next-generation generator for the national informatics exam in Russia.",
 		banner: await getShowcasePicture("oge-generator", "banner"),
 		images: [
 			{
 				...(await getShowcasePicture("oge-generator", "screenshot-1")),
-				alt: "OGE generator website screenshot 1 TODO: alt",
+				alt: "OGE generator website screenshot with code editor for one of the exam tasks",
 			},
 			{
 				...(await getShowcasePicture("oge-generator", "screenshot-2")),
-				alt: "OGE generator website screenshot 2 TODO: alt",
+				alt: "OGE generator website screenshot with ZIP file download dialog for one of the exam tasks",
 			},
 		],
 		links: [
@@ -30,29 +31,30 @@
 
 {#snippet description()}
 	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-		non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		In Russia there is a national exam for 9th-grade students called OGE
+		(Основной государственный экзамен). One of the subjects is Informatics,
+		which includes a programming task. It so happens I was going to take this
+		exam despite knowing more than any of my teachers.
 	</p>
-	<h2>Heading</h2>
+	<h2>The problem</h2>
 	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-		non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		The official exam provider offers a basic training suite that shuffles
+		pre-made tasks. It also does not support harder tasks and has no code
+		testing.
 	</p>
-	<h2>Heading</h2>
+	<h2>The solution</h2>
 	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-		non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		My generator is real. It creates a problem randomly and generates a solution
+		based on its conditions. It can compile and test JavaScript and Python for
+		the last exam problem. It allows user to test their word processors
+		knowledge by embedding a rich text editor into the page and checking the
+		submitted formatted text. It also embeds a table editor for spreadsheet
+		operations exam problem. It checks the solution instantly and automatically
+		and works offline.
+	</p>
+	<p>
+		I used React, Reactstrap based on Bootstrap, EditorJS, html2canvas, jszip,
+		xlsx and codemirror. The website is absolutely free, 100% open-source, has
+		no ads and works entirely inside of the browser.
 	</p>
 {/snippet}

@@ -60,6 +60,7 @@
 	</p>
 	<h2>Built with security in mind</h2>
 	<p></p>
+	TODO: description
 	<h2>Subheading</h2>
 	<p>
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
