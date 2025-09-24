@@ -3,6 +3,7 @@
 	import { transition } from "$lib/utils";
 	import { getSvgPath } from "figma-squircle";
 	import { onMount } from "svelte";
+	import { images } from "./favorite-things";
 
 	let width = $state(0);
 	let height = $state(0);
@@ -19,35 +20,6 @@
 	const clipPathStyle = $derived(
 		clipPath ? `clip-path: path('${clipPath}')` : undefined,
 	);
-
-	const images: { img: string; alt: string; href?: string }[] = [
-		{ img: "favorite-things", alt: "Scroll to see my favorite things ➜" },
-		{
-			img: "games",
-			alt: "I love puzzle platformers, survival horrors and adventure sandboxes",
-		},
-		{ img: "cinema", alt: "I love criminals, dramas and detectives" },
-		{ img: "music", alt: "Pop is always in my playlist" },
-		{
-			img: "dish",
-			alt: "The best Tom Yum I tasted was in my  home city local bar",
-		},
-		{
-			img: "influencer",
-			alt: "I admire Jerma985 unique personality and love watching his livestreams",
-		},
-		{
-			img: "book",
-			alt: "Steve Krug — Don’t make me think is a must-read for all web designers",
-		},
-		{ img: "series", alt: "Severance is my favorite TV series" },
-		{ img: "quote", alt: "My favorite quote is one of my own" },
-		{
-			img: "love",
-			alt: "But my most favorite thing in life is love",
-			href: "https://www.instagram.com/devio.10/",
-		},
-	];
 
 	let scroll = $state(0);
 	let scrollContainer: HTMLDivElement;
@@ -96,37 +68,26 @@
 			aria-roledescription="My favorite things"
 			style={clipPathStyle}
 		>
-			{#snippet img(
-				src: string,
-				alt: string,
-				href: string | undefined = undefined,
-			)}
+			{#each images as { img: { src, lqip }, alt, href }, i (i)}
 				<svelte:element
 					this={href ? "a" : "div"}
 					rel={href ? "noopener noreferrer" : undefined}
 					target={href ? "_blank" : undefined}
-					class="
-            animate-scroll h-full w-full shrink-0 cursor-default snap-center
-            overflow-clip rounded-[12.59cqw]
-          "
+					class="animate-scroll h-full w-full shrink-0 cursor-default snap-center overflow-clip rounded-[12.59cqw]"
 					style={clipPathStyle}
 					role="listitem"
 					{href}
 				>
-					<img
-						src="/favorite-things/{src}.webp"
+					<enhanced:img
+						{src}
 						{alt}
-						class="
-              h-full w-full shrink-0 rounded-[12.59cqw] bg-neutral-600
-              object-cover indent-[8cqw] text-[6.22cqw]
-            "
-						style={clipPathStyle}
+						class="h-full w-full shrink-0 rounded-[12.59cqw] bg-cover object-cover indent-[8cqw] text-[6.22cqw]"
+						style="background-image: url({lqip.lqip}), linear-gradient(to top, #525252, #525252); {clipPathStyle}"
 						draggable="false"
+						width="254"
+						height="123"
 					/>
 				</svelte:element>
-			{/snippet}
-			{#each images as { img: src, alt, href }, i (i)}
-				{@render img(src, alt, href)}
 			{/each}
 		</div>
 		{#if browser}
