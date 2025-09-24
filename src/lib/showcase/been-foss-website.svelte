@@ -13,7 +13,7 @@
 		images: [
 			{
 				...(await getShowcasePicture("been-foss", "screenshot")),
-				alt: "been-foss website main page screenshot with the global map",
+				alt: "been-foss website main page screenshot with a world map",
 			},
 		],
 		links: [
@@ -47,6 +47,6 @@
 		For something as simple as a world map with selected countries highlighted,
 		I decided to create my own open source alternative called "been-foss". It is
 		built with Svelte 5 and works entirely offline. No ads, no trackers, no
-		auth. It's simple, elegant and built in one day (the day of birthday!)
+		auth. It's simple, elegant and built in one day (the day of my birthday!)
 	</p>
 {/snippet}
