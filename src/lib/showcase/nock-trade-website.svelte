@@ -49,7 +49,7 @@
 	<p>
 		Nock Exchange is a cryptotrading OTC marketplace for NOCK cryptocoin. It
 		allows user to effortlessly sell their NOCK or place a buy order with a
-		single click.
+		single click. The project was built for my freelance client in mid-2025.
 	</p>
 	<h2>Designed for everyone</h2>
 	<p>
