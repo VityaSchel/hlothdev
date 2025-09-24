@@ -7,12 +7,13 @@
 		id: "been-foss",
 		name: "been-foss",
 		description,
-		shortDescription: "",
+		shortDescription:
+			'Free open source alternative to ad and trackers cluttered "been" app made with Svelte 5',
 		banner: await getShowcasePicture("been-foss", "banner"),
 		images: [
 			{
 				...(await getShowcasePicture("been-foss", "screenshot")),
-				alt: "been-foss screenshot TODO: alt",
+				alt: "been-foss website main page screenshot with the global map",
 			},
 		],
 		links: [
@@ -30,29 +31,22 @@
 
 {#snippet description()}
 	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-		non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		As someone who enjoys traveling, I often find myself using the visited
+		places tracking apps. These apps keep track of the countries and regions you
+		visited and highlight them on a world map.
 	</p>
-	<h2>Heading</h2>
+	<h2>The problem</h2>
 	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-		non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		After using one called "been" for a while, I got tired of how it was filled
+		with ads and I wasn't comfortable with using Google for login. The final
+		straw was an enormous wall of consent settings when I opened it in Europe. I
+		realized it has hundreds if not thousands of unnecessary user trackers.
 	</p>
-	<h2>Heading</h2>
+	<h2>The solution</h2>
 	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-		non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		For something as simple as a world map with selected countries highlighted,
+		I decided to create my own open source alternative called "been-foss". It is
+		built with Svelte 5 and works entirely offline. No ads, no trackers, no
+		auth. It's simple, elegant and built in one day (the day of birthday!)
 	</p>
 {/snippet}
