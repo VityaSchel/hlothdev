@@ -1,5 +1,6 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase";
+	import { getShowcasePicture } from "$lib/showcase/picture";
 
 	export const sessionWatchosProject: ShowcaseItem = {
 		type: "project",
@@ -7,44 +8,30 @@
 		name: "Session watchOS",
 		description,
 		shortDescription: "",
-		banner: await import("$showcase/session-watchos/banner.webp?enhanced").then(
-			(m) => m.default,
-		),
+		banner: await getShowcasePicture("session-watchos", "banner"),
 		images: [
 			{
-				src: await import(
-					"$showcase/session-watchos/screenshot-1.webp?enhanced"
-				).then((m) => m.default),
+				...(await getShowcasePicture("session-watchos", "screenshot-1")),
 				alt: "Session Watchos screenshot 1 TODO: alt",
 			},
 			{
-				src: await import(
-					"$showcase/session-watchos/screenshot-2.webp?enhanced"
-				).then((m) => m.default),
+				...(await getShowcasePicture("session-watchos", "screenshot-2")),
 				alt: "Session Watchos screenshot 2 TODO: alt",
 			},
 			{
-				src: await import(
-					"$showcase/session-watchos/screenshot-3.webp?enhanced"
-				).then((m) => m.default),
+				...(await getShowcasePicture("session-watchos", "screenshot-3")),
 				alt: "Session Watchos screenshot 3 TODO: alt",
 			},
 			{
-				src: await import(
-					"$showcase/session-watchos/screenshot-4.webp?enhanced"
-				).then((m) => m.default),
+				...(await getShowcasePicture("session-watchos", "screenshot-4")),
 				alt: "Session Watchos screenshot 4 TODO: alt",
 			},
 			{
-				src: await import(
-					"$showcase/session-watchos/screenshot-5.webp?enhanced"
-				).then((m) => m.default),
+				...(await getShowcasePicture("session-watchos", "screenshot-5")),
 				alt: "Session Watchos screenshot 5 TODO: alt",
 			},
 			{
-				src: await import(
-					"$showcase/session-watchos/screenshot-6.webp?enhanced"
-				).then((m) => m.default),
+				...(await getShowcasePicture("session-watchos", "screenshot-6")),
 				alt: "Session Watchos screenshot 6 TODO: alt",
 			},
 		],

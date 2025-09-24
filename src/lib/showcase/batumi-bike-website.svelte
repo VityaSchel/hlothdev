@@ -1,5 +1,6 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase";
+	import { getShowcasePicture } from "$lib/showcase/picture";
 
 	export const batumiBikeWebsite: ShowcaseItem = {
 		type: "website",
@@ -7,14 +8,10 @@
 		name: "Batumi.bike",
 		description,
 		shortDescription: "",
-		banner: await import("$showcase/batumi-bike/banner.webp?enhanced").then(
-			(m) => m.default,
-		),
+		banner: await getShowcasePicture("batumi-bike", "banner"),
 		images: [
 			{
-				src: await import(
-					"$showcase/batumi-bike/screenshot.webp?enhanced"
-				).then((m) => m.default),
+				...(await getShowcasePicture("batumi-bike", "screenshot")),
 				alt: "Batumi.bike website screenshot TODO: alt",
 			},
 		],

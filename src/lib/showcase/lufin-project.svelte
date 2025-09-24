@@ -1,5 +1,6 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase";
+	import { getShowcasePicture } from "$lib/showcase/picture";
 
 	export const lufinProject: ShowcaseItem = {
 		type: "project",
@@ -7,26 +8,18 @@
 		name: "Lufin",
 		description,
 		shortDescription: "",
-		banner: await import("$showcase/lufin/banner.webp?enhanced").then(
-			(m) => m.default,
-		),
+		banner: await getShowcasePicture("lufin", "banner"),
 		images: [
 			{
-				src: await import("$showcase/lufin/screenshot-1.webp?enhanced").then(
-					(m) => m.default,
-				),
+				...(await getShowcasePicture("lufin", "screenshot-1")),
 				alt: "Lufin frontend screenshot 1 TODO: alt",
 			},
 			{
-				src: await import("$showcase/lufin/screenshot-2.webp?enhanced").then(
-					(m) => m.default,
-				),
+				...(await getShowcasePicture("lufin", "screenshot-2")),
 				alt: "Lufin frontend screenshot 2 TODO: alt",
 			},
 			{
-				src: await import(
-					"$showcase/lufin/lufin-screenshotter.webp?enhanced"
-				).then((m) => m.default),
+				...(await getShowcasePicture("lufin", "lufin-screenshotter")),
 				alt: "Lufin screenshotter",
 			},
 		],

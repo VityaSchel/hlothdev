@@ -1,5 +1,6 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase";
+	import { getShowcasePicture } from "$lib/showcase/picture";
 
 	export const jswitcherProject: ShowcaseItem = {
 		type: "project",
@@ -7,20 +8,14 @@
 		name: "JSwitcher",
 		description,
 		shortDescription: "",
-		banner: await import("$showcase/jswitcher/banner.webp?enhanced").then(
-			(m) => m.default,
-		),
+		banner: await getShowcasePicture("jswitcher", "banner"),
 		images: [
 			{
-				src: await import(
-					"$showcase/jswitcher/screenshot-1.webp?enhanced"
-				).then((m) => m.default),
+				...(await getShowcasePicture("jswitcher", "screenshot-1")),
 				alt: "JSwitcher screenshot 1 TODO: alt",
 			},
 			{
-				src: await import(
-					"$showcase/jswitcher/screenshot-2.webp?enhanced"
-				).then((m) => m.default),
+				...(await getShowcasePicture("jswitcher", "screenshot-2")),
 				alt: "JSwitcher screenshot 2 TODO: alt",
 			},
 		],

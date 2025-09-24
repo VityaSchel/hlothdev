@@ -1,5 +1,6 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase";
+	import { getShowcasePicture } from "$lib/showcase/picture";
 
 	export const ryoCoinWebsite: ShowcaseItem = {
 		type: "website",
@@ -7,50 +8,34 @@
 		name: "RYO Coin",
 		description,
 		shortDescription: "",
-		banner: await import("$showcase/ryo-coin/banner.webp?enhanced").then(
-			(m) => m.default,
-		),
+		banner: await getShowcasePicture("ryo-coin", "banner"),
 		images: [
 			{
-				src: await import(
-					"$showcase/ryo-coin/v1-screenshot-1.webp?enhanced"
-				).then((m) => m.default),
+				...(await getShowcasePicture("ryo-coin", "v1-screenshot-1")),
 				alt: "RYO coin website v1 screenshot 1 TODO: alt",
 			},
 			{
-				src: await import(
-					"$showcase/ryo-coin/v1-screenshot-2.webp?enhanced"
-				).then((m) => m.default),
+				...(await getShowcasePicture("ryo-coin", "v1-screenshot-2")),
 				alt: "RYO coin website v1 screenshot 2 TODO: alt",
 			},
 			{
-				src: await import(
-					"$showcase/ryo-coin/v2-screenshot.webp?enhanced"
-				).then((m) => m.default),
+				...(await getShowcasePicture("ryo-coin", "v2-screenshot")),
 				alt: "RYO coin website v2 screenshot TODO: alt",
 			},
 			{
-				src: await import(
-					"$showcase/ryo-coin/v3-screenshot.webp?enhanced"
-				).then((m) => m.default),
+				...(await getShowcasePicture("ryo-coin", "v3-screenshot")),
 				alt: "RYO coin website v3 screenshot TODO: alt",
 			},
 			{
-				src: await import(
-					"$showcase/ryo-coin/v4-screenshot-1.webp?enhanced"
-				).then((m) => m.default),
+				...(await getShowcasePicture("ryo-coin", "v4-screenshot-1")),
 				alt: "RYO coin website v4 screenshot 1 TODO: alt",
 			},
 			{
-				src: await import(
-					"$showcase/ryo-coin/v4-screenshot-2.webp?enhanced"
-				).then((m) => m.default),
+				...(await getShowcasePicture("ryo-coin", "v4-screenshot-2")),
 				alt: "RYO coin website v4 screenshot 2 TODO: alt",
 			},
 			{
-				src: await import(
-					"$showcase/ryo-coin/v4-screenshot-3.webp?enhanced"
-				).then((m) => m.default),
+				...(await getShowcasePicture("ryo-coin", "v4-screenshot-3")),
 				alt: "RYO coin website v4 screenshot 3 TODO: alt",
 			},
 		],

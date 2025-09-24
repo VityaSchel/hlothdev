@@ -1,5 +1,6 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase";
+	import { getShowcasePicture } from "$lib/showcase/picture";
 
 	export const sessionNativeProject: ShowcaseItem = {
 		type: "project",
@@ -7,14 +8,10 @@
 		name: "Session Native",
 		description,
 		shortDescription: "",
-		banner: await import("$showcase/session-native/banner.webp?enhanced").then(
-			(m) => m.default,
-		),
+		banner: await getShowcasePicture("session-native", "banner"),
 		images: [
 			{
-				src: await import(
-					"$showcase/session-native/screenshot.webp?enhanced"
-				).then((m) => m.default),
+				...(await getShowcasePicture("session-native", "screenshot")),
 				alt: "Session Native screenshot TODO: alt",
 			},
 		],

@@ -1,5 +1,6 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase";
+	import { getShowcasePicture } from "$lib/showcase/picture";
 
 	export const ps4mergerProject: ShowcaseItem = {
 		type: "project",
@@ -7,14 +8,10 @@
 		name: "PS4 Merger",
 		description,
 		shortDescription: "",
-		banner: await import("$showcase/ps4-merger/banner.webp?enhanced").then(
-			(m) => m.default,
-		),
+		banner: await getShowcasePicture("ps4-merger", "banner"),
 		images: [
 			{
-				src: await import("$showcase/ps4-merger/screenshot.webp?enhanced").then(
-					(m) => m.default,
-				),
+				...(await getShowcasePicture("ps4-merger", "screenshot")),
 				alt: "PS4 Merger screenshot TODO: alt",
 			},
 		],

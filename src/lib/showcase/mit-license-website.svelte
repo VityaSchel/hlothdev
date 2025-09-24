@@ -1,5 +1,6 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase";
+	import { getShowcasePicture } from "$lib/showcase/picture";
 
 	export const mitLicenseWebsite: ShowcaseItem = {
 		type: "website",
@@ -7,26 +8,18 @@
 		name: "mit.hloth.dev",
 		description,
 		shortDescription: "",
-		banner: await import("$showcase/mit-hloth-dev/banner.webp?enhanced").then(
-			(m) => m.default,
-		),
+		banner: await getShowcasePicture("mit-hloth-dev", "banner"),
 		images: [
 			{
-				src: await import(
-					"$showcase/mit-hloth-dev/screenshot-1.webp?enhanced"
-				).then((m) => m.default),
+				...(await getShowcasePicture("mit-hloth-dev", "screenshot-1")),
 				alt: "mit.hloth.dev screenshot TODO: alt",
 			},
 			{
-				src: await import(
-					"$showcase/mit-hloth-dev/screenshot-2.webp?enhanced"
-				).then((m) => m.default),
+				...(await getShowcasePicture("mit-hloth-dev", "screenshot-2")),
 				alt: "change.mit.hloth.dev screenshot TODO: alt",
 			},
 			{
-				src: await import(
-					"$showcase/mit-hloth-dev/screenshot-3.webp?enhanced"
-				).then((m) => m.default),
+				...(await getShowcasePicture("mit-hloth-dev", "screenshot-3")),
 				alt: "mit.hloth.dev screenshot 2 TODO: alt",
 			},
 		],

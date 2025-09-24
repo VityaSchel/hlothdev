@@ -1,5 +1,6 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase";
+	import { getShowcasePicture } from "$lib/showcase/picture";
 
 	export const sessionWebWebsite: ShowcaseItem = {
 		type: "website",
@@ -7,14 +8,10 @@
 		name: "Session Web",
 		description,
 		shortDescription: "",
-		banner: await import("$showcase/session-web/banner.webp?enhanced").then(
-			(m) => m.default,
-		),
+		banner: await getShowcasePicture("session-web", "banner"),
 		images: [
 			{
-				src: await import(
-					"$showcase/session-web/screenshot.webp?enhanced"
-				).then((m) => m.default),
+				...(await getShowcasePicture("session-web", "screenshot")),
 				alt: "Session Web website screenshot 1 TODO: alt",
 			},
 		],

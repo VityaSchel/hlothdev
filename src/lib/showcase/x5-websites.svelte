@@ -1,5 +1,6 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase";
+	import { getShowcasePicture } from "$lib/showcase/picture";
 
 	export const x5Websites: ShowcaseItem = {
 		type: "website",
@@ -7,90 +8,68 @@
 		name: "X5.io Websites",
 		description,
 		shortDescription: "",
-		banner: await import("$showcase/x5-websites/banner.webp?enhanced").then(
-			(m) => m.default,
-		),
+		banner: await getShowcasePicture("x5-websites", "banner"),
 		images: [
 			{
-				src: await import(
-					"$showcase/x5-websites/ketoplan-1.webp?enhanced"
-				).then((m) => m.default),
+				...(await getShowcasePicture("x5-websites", "ketoplan-1")),
 				alt: "Ketoplan website screenshot 1",
 			},
 			{
-				src: await import(
-					"$showcase/x5-websites/ketoplan-2.webp?enhanced"
-				).then((m) => m.default),
+				...(await getShowcasePicture("x5-websites", "ketoplan-2")),
 				alt: "Ketoplan website screenshot 2",
 			},
 			{
-				src: await import(
-					"$showcase/x5-websites/ketoplan-3.webp?enhanced"
-				).then((m) => m.default),
+				...(await getShowcasePicture("x5-websites", "ketoplan-3")),
 				alt: "Ketoplan website screenshot 3",
 				class: "xl:hidden",
 			},
 			{
-				src: await import(
-					"$showcase/x5-websites/mental-health-1.webp?enhanced"
-				).then((m) => m.default),
+				...(await getShowcasePicture("x5-websites", "mental-health-1")),
 				alt: "Mental health website screenshot 1",
 			},
 			{
-				src: await import(
-					"$showcase/x5-websites/mental-health-2.webp?enhanced"
-				).then((m) => m.default),
+				...(await getShowcasePicture("x5-websites", "mental-health-2")),
 				alt: "Mental health website screenshot 2",
 				class: "xl:hidden",
 			},
 			{
-				src: await import(
-					"$showcase/x5-websites/mental-health-3.webp?enhanced"
-				).then((m) => m.default),
+				...(await getShowcasePicture("x5-websites", "mental-health-3")),
 				alt: "Mental health website screenshot 3",
 				class: "px1180:hidden",
 			},
 			{
-				src: await import(
-					"$showcase/x5-websites/bot-biz-admin-dashboard-1.webp?enhanced"
-				).then((m) => m.default),
+				...(await getShowcasePicture(
+					"x5-websites",
+					"bot-biz-admin-dashboard-1",
+				)),
 				alt: "Bot.biz admin dashboard screenshot TODO: alt",
 			},
 			{
-				src: await import(
-					"$showcase/x5-websites/bot-biz-admin-dashboard-2.webp?enhanced"
-				).then((m) => m.default),
+				...(await getShowcasePicture(
+					"x5-websites",
+					"bot-biz-admin-dashboard-2",
+				)),
 				alt: "Bot.biz admin dashboard screenshot TODO: alt",
 				class: "px1100:hidden",
 			},
 			{
-				src: await import("$showcase/x5-websites/lovebot.webp?enhanced").then(
-					(m) => m.default,
-				),
+				...(await getShowcasePicture("x5-websites", "lovebot")),
 				alt: "Lovebot screenshot TODO: alt",
 			},
 			{
-				src: await import("$showcase/x5-websites/glassbot.webp?enhanced").then(
-					(m) => m.default,
-				),
+				...(await getShowcasePicture("x5-websites", "glassbot")),
 				alt: "Glassbot screenshot TODO: alt",
 			},
 			{
-				src: await import("$showcase/x5-websites/prankbot.webp?enhanced").then(
-					(m) => m.default,
-				),
+				...(await getShowcasePicture("x5-websites", "prankbot")),
 				alt: "Prankbot screenshot TODO: alt",
 			},
 			{
-				src: await import(
-					"$showcase/x5-websites/checkout-dialog.webp?enhanced"
-				).then((m) => m.default),
+				...(await getShowcasePicture("x5-websites", "checkout-dialog")),
 				alt: "Checkout dialog TODO: alt",
 			},
 			{
-				src: await import(
-					"$showcase/x5-websites/flat-ui-kit.webp?enhanced"
-				).then((m) => m.default),
+				...(await getShowcasePicture("x5-websites", "flat-ui-kit")),
 				alt: "Flat UI kit demo TODO: alt",
 			},
 		],

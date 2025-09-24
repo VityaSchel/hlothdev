@@ -1,5 +1,6 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase";
+	import { getShowcasePicture } from "$lib/showcase/picture";
 
 	export const moreOfMeWebsite: ShowcaseItem = {
 		type: "website",
@@ -8,14 +9,10 @@
 		description,
 		shortDescription:
 			"Moreof.me is a a personal web space, encouraging users to express their thoughts and hobbies, which I was hired to build as a sole full-stack developer in 2024.",
-		banner: await import("$showcase/moreofme/banner.webp?enhanced").then(
-			(m) => m.default,
-		),
+		banner: await getShowcasePicture("moreofme", "banner"),
 		images: [
 			{
-				src: await import("$showcase/moreofme/image.webp?enhanced").then(
-					(m) => m.default,
-				),
+				...(await getShowcasePicture("moreofme", "image")),
 				alt: "Moreof.me pages screenshots TODO: alt",
 			},
 		],

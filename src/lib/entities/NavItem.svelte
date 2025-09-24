@@ -57,6 +57,9 @@
 	});
 </script>
 
+<svelte:head>
+	<link rel="preload" href={icon} as="image" />
+</svelte:head>
 <a
 	href={link}
 	rel="nofollow noopener noreferrer"

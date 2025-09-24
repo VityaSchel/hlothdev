@@ -1,5 +1,6 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase";
+	import { getShowcasePicture } from "$lib/showcase/picture";
 
 	export const mtprotoMobileProject: ShowcaseItem = {
 		type: "project",
@@ -7,14 +8,10 @@
 		name: "Mtproto Mobile",
 		description,
 		shortDescription: "",
-		banner: await import("$showcase/mtproto-mobile/banner.webp?enhanced").then(
-			(m) => m.default,
-		),
+		banner: await getShowcasePicture("mtproto-mobile", "banner"),
 		images: [
 			{
-				src: await import(
-					"$showcase/mtproto-mobile/screenshots.webp?enhanced"
-				).then((m) => m.default),
+				...(await getShowcasePicture("mtproto-mobile", "screenshots")),
 				alt: "Mtproto Mobile screenshots TODO: alt",
 			},
 		],

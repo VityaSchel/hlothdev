@@ -1,5 +1,6 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase";
+	import { getShowcasePicture } from "$lib/showcase/picture";
 
 	export const powReactionProject: ShowcaseItem = {
 		type: "project",
@@ -7,14 +8,10 @@
 		name: "pow-reaction",
 		description,
 		shortDescription: "",
-		banner: await import("$showcase/pow-reaction/banner.webp?enhanced").then(
-			(m) => m.default,
-		),
+		banner: await getShowcasePicture("pow-reaction", "banner"),
 		images: [
 			{
-				src: await import(
-					"$showcase/pow-reaction/screenshot.webp?enhanced"
-				).then((m) => m.default),
+				...(await getShowcasePicture("pow-reaction", "screenshot")),
 				alt: "Pow-reaction demo website screenshot TODO: alt",
 			},
 		],

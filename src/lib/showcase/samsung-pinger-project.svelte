@@ -1,5 +1,6 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase";
+	import { getShowcasePicture } from "$lib/showcase/picture";
 
 	export const samsungPingerProject: ShowcaseItem = {
 		type: "project",
@@ -7,14 +8,10 @@
 		name: "Samsung Pinger",
 		description,
 		shortDescription: "",
-		banner: await import("$showcase/samsung-pinger/banner.webp?enhanced").then(
-			(m) => m.default,
-		),
+		banner: await getShowcasePicture("samsung-pinger", "banner"),
 		images: [
 			{
-				src: await import(
-					"$showcase/samsung-pinger/screenshot.webp?enhanced"
-				).then((m) => m.default),
+				...(await getShowcasePicture("samsung-pinger", "screenshot")),
 				alt: "Samsung Pinger screenshot TODO: alt",
 			},
 		],

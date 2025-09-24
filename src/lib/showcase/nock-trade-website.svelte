@@ -1,6 +1,6 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase";
-	import { getPicture } from "$lib/showcase/picture";
+	import { getShowcasePicture } from "$lib/showcase/picture";
 
 	export const nockTradeWebsite: ShowcaseItem = {
 		type: "website",
@@ -9,30 +9,30 @@
 		description,
 		shortDescription:
 			"Nock Trade is a trading platform that allows users to trade various assets seamlessly.",
-		banner: await getPicture("nock-trade", "banner"),
+		banner: await getShowcasePicture("nock-trade", "banner"),
 		images: [
 			{
-				...(await getPicture("nock-trade", "screenshot-1")),
+				...(await getShowcasePicture("nock-trade", "screenshot-1")),
 				alt: "TODO: alt",
 			},
 			{
-				...(await getPicture("nock-trade", "screenshot-2")),
+				...(await getShowcasePicture("nock-trade", "screenshot-2")),
 				alt: "TODO: alt",
 			},
 			{
-				...(await getPicture("nock-trade", "screenshot-3")),
+				...(await getShowcasePicture("nock-trade", "screenshot-3")),
 				alt: "TODO: alt",
 			},
 			{
-				...(await getPicture("nock-trade", "screenshot-4")),
+				...(await getShowcasePicture("nock-trade", "screenshot-4")),
 				alt: "TODO: alt",
 			},
 			{
-				...(await getPicture("nock-trade", "screenshot-5")),
+				...(await getShowcasePicture("nock-trade", "screenshot-5")),
 				alt: "TODO: alt",
 			},
 			{
-				...(await getPicture("nock-trade", "screenshot-6")),
+				...(await getShowcasePicture("nock-trade", "screenshot-6")),
 				alt: "TODO: alt",
 			},
 		],

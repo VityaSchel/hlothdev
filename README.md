@@ -54,10 +54,16 @@ AP9cl51RDYKv0nJYrhLlD4xIogDNlHqsCvRfjT2q8FokCQ==
 
 </details>
 
-## License
-
-[MIT](./LICENSE)
-
 ## Donate
 
 [hloth.dev/donate](https://hloth.dev/donate) · Tor: [hlothdevzkti6suoksy7lcy7hmpxnr3msu5waokzaslsi2mnx5ouu4qd.onion/donate](http://hlothdevzkti6suoksy7lcy7hmpxnr3msu5waokzaslsi2mnx5ouu4qd.onion/donate)
+
+## Acknowledgements
+
+- Design inspired by pre-liquid-glass era of macOS by Apple.
+- [Svelte & SvelteKit](https://svelte.dev/) ❤️
+- Thank you to all authors of these projects used in my website: [TailwindCSS](https://tailwindcss.com/), [ESLint](https://eslint.org), [Prettier](https://prettier.io), [Fontsource](https://fontsource.org/), [vite-plugin-lqip](https://github.com/drwpow/vite-plugin-lqip/), [sharp](https://sharp.pixelplumbing.com/), [super-sitemap](https://github.com/jasongitmail/super-sitemap/), [SASS](https://sass-lang.com), [figma-squircle](https://github.com/phamfoo/figma-squircle) and [zod](https://zod.dev/).
+
+## License
+
+[MIT](./LICENSE)

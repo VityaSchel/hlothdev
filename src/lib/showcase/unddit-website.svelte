@@ -1,5 +1,6 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase";
+	import { getShowcasePicture } from "$lib/showcase/picture";
 
 	export const undditWebsite: ShowcaseItem = {
 		type: "website",
@@ -7,20 +8,14 @@
 		name: "Unddit",
 		description,
 		shortDescription: "",
-		banner: await import("$showcase/unddit/banner.webp?enhanced").then(
-			(m) => m.default,
-		),
+		banner: await getShowcasePicture("unddit", "banner"),
 		images: [
 			{
-				src: await import("$showcase/unddit/screenshot-1.webp?enhanced").then(
-					(m) => m.default,
-				),
+				...(await getShowcasePicture("unddit", "screenshot-1")),
 				alt: "Unddit website screenshot 1 TODO: alt",
 			},
 			{
-				src: await import("$showcase/unddit/screenshot-2.webp?enhanced").then(
-					(m) => m.default,
-				),
+				...(await getShowcasePicture("unddit", "screenshot-2")),
 				alt: "Unddit website screenshot 2 TODO: alt",
 			},
 		],

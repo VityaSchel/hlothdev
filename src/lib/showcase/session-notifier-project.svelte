@@ -1,5 +1,6 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase";
+	import { getShowcasePicture } from "$lib/showcase/picture";
 
 	export const sessionNotifierProject: ShowcaseItem = {
 		type: "project",
@@ -7,14 +8,10 @@
 		name: "Session Notifier",
 		description,
 		shortDescription: "",
-		banner: await import(
-			"$showcase/session-notifier/banner.webp?enhanced"
-		).then((m) => m.default),
+		banner: await getShowcasePicture("session-notifier", "banner"),
 		images: [
 			{
-				src: await import(
-					"$showcase/session-notifier/screenshot.webp?enhanced"
-				).then((m) => m.default),
+				...(await getShowcasePicture("session-notifier", "screenshot")),
 				alt: "Session Notifier screenshot 1 TODO: alt",
 			},
 		],

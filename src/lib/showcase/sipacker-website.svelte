@@ -1,5 +1,6 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase";
+	import { getShowcasePicture } from "$lib/showcase/picture";
 
 	export const sipackerWebsite: ShowcaseItem = {
 		type: "website",
@@ -7,32 +8,22 @@
 		name: "SIPacker",
 		description,
 		shortDescription: "",
-		banner: await import("$showcase/sipacker/banner.webp?enhanced").then(
-			(m) => m.default,
-		),
+		banner: await getShowcasePicture("sipacker", "banner"),
 		images: [
 			{
-				src: await import("$showcase/sipacker/screenshot-1.webp?enhanced").then(
-					(m) => m.default,
-				),
+				...(await getShowcasePicture("sipacker", "screenshot-1")),
 				alt: "SIPacker website screenshot 1 TODO: alt",
 			},
 			{
-				src: await import("$showcase/sipacker/screenshot-2.webp?enhanced").then(
-					(m) => m.default,
-				),
+				...(await getShowcasePicture("sipacker", "screenshot-2")),
 				alt: "SIPacker website screenshot 2 TODO: alt",
 			},
 			{
-				src: await import("$showcase/sipacker/screenshot-3.webp?enhanced").then(
-					(m) => m.default,
-				),
+				...(await getShowcasePicture("sipacker", "screenshot-3")),
 				alt: "SIPacker website screenshot 3 TODO: alt",
 			},
 			{
-				src: await import("$showcase/sipacker/screenshot-4.webp?enhanced").then(
-					(m) => m.default,
-				),
+				...(await getShowcasePicture("sipacker", "screenshot-4")),
 				alt: "SIPacker website screenshot 4 TODO: alt",
 			},
 		],

@@ -1,5 +1,6 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase";
+	import { getShowcasePicture } from "$lib/showcase/picture";
 
 	export const ogeGeneratorWebsite: ShowcaseItem = {
 		type: "website",
@@ -7,20 +8,14 @@
 		name: "OGE generator",
 		description,
 		shortDescription: "",
-		banner: await import("$showcase/oge-generator/banner.webp?enhanced").then(
-			(m) => m.default,
-		),
+		banner: await getShowcasePicture("oge-generator", "banner"),
 		images: [
 			{
-				src: await import(
-					"$showcase/oge-generator/screenshot-1.webp?enhanced"
-				).then((m) => m.default),
+				...(await getShowcasePicture("oge-generator", "screenshot-1")),
 				alt: "OGE generator website screenshot 1 TODO: alt",
 			},
 			{
-				src: await import(
-					"$showcase/oge-generator/screenshot-2.webp?enhanced"
-				).then((m) => m.default),
+				...(await getShowcasePicture("oge-generator", "screenshot-2")),
 				alt: "OGE generator website screenshot 2 TODO: alt",
 			},
 		],

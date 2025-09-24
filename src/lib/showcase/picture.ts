@@ -3,7 +3,7 @@ export type PictureWithLqip = {
 	lqip: typeof import("*?lqip").default;
 };
 
-export async function getPicture(
+export async function getShowcasePicture(
 	project: string,
 	file: string,
 ): Promise<PictureWithLqip> {

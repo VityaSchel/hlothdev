@@ -1,5 +1,6 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase";
+	import { getShowcasePicture } from "$lib/showcase/picture";
 
 	export const blogHlothDevWebsite: ShowcaseItem = {
 		type: "website",
@@ -7,14 +8,10 @@
 		name: "hloth blog",
 		description,
 		shortDescription: "",
-		banner: await import("$showcase/hloth-blog/banner.webp?enhanced").then(
-			(m) => m.default,
-		),
+		banner: await getShowcasePicture("hloth-blog", "banner"),
 		images: [
 			{
-				src: await import("$showcase/hloth-blog/screenshot.webp?enhanced").then(
-					(m) => m.default,
-				),
+				...(await getShowcasePicture("hloth-blog", "screenshot")),
 				alt: "blog.hloth.dev screenshot TODO: alt",
 			},
 		],

@@ -1,5 +1,6 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase";
+	import { getShowcasePicture } from "$lib/showcase/picture";
 
 	export const onsRegistryProject: ShowcaseItem = {
 		type: "project",
@@ -7,14 +8,10 @@
 		name: "ONS Registry",
 		description,
 		shortDescription: "",
-		banner: await import("$showcase/ons-registry/banner.webp?enhanced").then(
-			(m) => m.default,
-		),
+		banner: await getShowcasePicture("ons-registry", "banner"),
 		images: [
 			{
-				src: await import(
-					"$showcase/ons-registry/screenshot.webp?enhanced"
-				).then((m) => m.default),
+				...(await getShowcasePicture("ons-registry", "screenshot")),
 				alt: "ONS Registry website screenshot TODO: alt",
 			},
 		],
