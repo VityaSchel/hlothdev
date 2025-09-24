@@ -47,6 +47,7 @@
 		For something as simple as a world map with selected countries highlighted,
 		I decided to create my own open source alternative called "been-foss". It is
 		built with Svelte 5 and works entirely offline. No ads, no trackers, no
-		auth. It's simple, elegant and built in one day (the day of my birthday!)
+		auth, free, libre and 100% open-source. It's simple, elegant and built in
+		one day (the day of my birthday!)
 	</p>
 {/snippet}

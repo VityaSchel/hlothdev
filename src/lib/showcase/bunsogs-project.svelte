@@ -64,11 +64,12 @@
 	</p>
 	<h2>The solution</h2>
 	<p>
-		A modern reimplementation of PySogs in TypeScript with Bun runtime focusing
-		on ease of use, performance and security. It features an interactive CLI
-		which user can navigate with arrow keys, a custom-crafted in-house plugin
-		system for easy extensibility, a 100% compatibility with PySogs database for
-		easy migration and documentation on all of its parts.
+		I made a free and 100% open-source reimplementation of PySogs in TypeScript
+		with Bun runtime focusing on ease of use, performance and security. It
+		features an interactive CLI which user can navigate with arrow keys, a
+		custom-crafted in-house plugin system for easy extensibility, full
+		compatibility with PySogs database for easy migration and documentation on
+		all of its parts.
 	</p>
 	<h2>Plugins</h2>
 	<p>

@@ -68,6 +68,7 @@
 	</p>
 	<p>
 		As of 2025, the domain batumi.bike expired and the website continues to
-		exist at batumibike.netlify.app.
+		exist at batumibike.netlify.app. The source code is freely available on my
+		git server for anyone to use and modify.
 	</p>
 {/snippet}

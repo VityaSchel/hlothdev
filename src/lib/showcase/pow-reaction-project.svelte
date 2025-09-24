@@ -31,7 +31,7 @@
 
 {#snippet description()}
 	<p>
-		free and open-source proof-of-work reactions library for Svelte web apps
+		Free and open-source proof-of-work reactions library for Svelte web apps
 		providing privacy-friendly way to stop reactions flooding
 	</p>
 	<h2>How POW captcha works</h2>

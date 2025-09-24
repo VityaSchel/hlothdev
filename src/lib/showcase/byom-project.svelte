@@ -27,8 +27,8 @@
 
 {#snippet description()}
 	<p>
-		A set of pure and determenistic JavaScript modules that anyone can use to
-		create an end-to-end encrypted messenger.
+		A set of open-source, pure and determenistic JavaScript modules that anyone
+		can use to create an end-to-end encrypted messenger.
 	</p>
 	<h2>The problem</h2>
 	<p>

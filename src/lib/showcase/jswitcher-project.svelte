@@ -36,9 +36,10 @@
 	</p>
 	<h2>The task</h2>
 	<p>
-		Designer team of Russian division of the international Joom marketplace
-		contacted me to make a Figma plugin for them that would automatically
-		convert existing mobile layouts between Android and iOS platforms.
+		The designer team of Russian division of the international Joom marketplace
+		contacted me in 2021 to make a Figma plugin for them that would
+		automatically convert existing mobile layouts between Android and iOS
+		platforms.
 	</p>
 	<h2>Challenges</h2>
 	<p>
@@ -53,5 +54,11 @@
 		A few weeks later I presented the plugin that connects to the Figma team
 		library and allows user to convert layouts with a single mouse click,
 		including fonts, component instances and frame properties.
+	</p>
+	<h2>Open sourcing the code</h2>
+	<p>
+		In 2025, after 4 years since the initial release, I decided to open source
+		the code of the plugin. It is now available on my git server under MIT
+		license.
 	</p>
 {/snippet}

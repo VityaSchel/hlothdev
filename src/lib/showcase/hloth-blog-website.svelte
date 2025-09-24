@@ -32,7 +32,7 @@
 {#snippet description()}
 	<p>
 		My personal blog about web development stuff and my IRL stuff. No ads, no
-		JavaScript required, pure shitpost 😻
+		JavaScript required, pure shitpost 😻 100% open-source!
 	</p>
 	<h2>Design</h2>
 	<p>

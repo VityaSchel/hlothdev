@@ -59,4 +59,11 @@
 		way of controlling the ONS. In its essence it was just a simplified way of
 		purchasing an ONS name in the blockchain.
 	</p>
+	<h2>End of life & open sourcing the code</h2>
+	<p>
+		In 2025 Oxen Foundation announced they were transitioning into Session
+		Foundation and discontinuing ONS in favor of SNS and new crypto token. It
+		was the time I decided to shut down ONS Registry and open source all the
+		code.
+	</p>
 {/snippet}
