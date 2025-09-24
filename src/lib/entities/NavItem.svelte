@@ -57,9 +57,6 @@
 	});
 </script>
 
-<svelte:head>
-	<link rel="preload" href={icon} as="image" />
-</svelte:head>
 <a
 	href={link}
 	rel="nofollow noopener noreferrer"
@@ -110,8 +107,10 @@
 	<img
 		src={icon}
 		{alt}
+		width="50"
+		height="50"
 		class={[
-			"h-[50px] w-[50px] text-center text-[10px]",
+			"text-center text-[0px]",
 			{
 				"brightness-[48%]": pressed,
 			},

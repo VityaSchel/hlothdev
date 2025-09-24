@@ -8,7 +8,7 @@ export async function getShowcasePicture(
 	file: string,
 ): Promise<PictureWithLqip> {
 	const [src, lqip] = await Promise.all([
-		import(`$showcase/${project}/${file}.webp?enhanced`).then((m) => m.default),
+		import(`$showcase/${project}/${file}.webp?enhanced&quality=100`).then((m) => m.default),
 		import(`$showcase/${project}/${file}.webp?lqip`).then((m) => m.default),
 	]);
 	return { src, lqip };

@@ -10,9 +10,9 @@
 	class="page-background fixed top-0 left-0 w-full select-none"
 	aria-hidden="true"
 >
-	<img
+	<enhanced:img
 		class="absolute top-0 left-0 h-full w-full object-cover text-[0px]"
-		src="/bg.webp"
+		src="$lib/assets/bg.webp?quality=100"
 		alt="Background image"
 		aria-hidden="true"
 	/>

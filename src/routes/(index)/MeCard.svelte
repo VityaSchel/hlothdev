@@ -1,5 +1,6 @@
 <script>
 	import Squircle from "$lib/Squircle.svelte";
+	import meAvatarLqip from "$lib/assets/me-avatar.webp?lqip";
 </script>
 
 <a
@@ -16,15 +17,17 @@
 				px600:py-9 px620:gap-8 px620:px-8 md:gap-3 md:px-4 md:py-4 px870:gap-4
 				px920:gap-6 px1180:gap-8 px1180:px-8 px1180:py-9"
 		>
-			<img
-				class="aspect-square h-auto w-[100px] rounded-full bg-neutral-600
-					text-center leading-[100px] px530:w-[140px] px530:leading-[140px]
-					md:w-[90px] md:leading-[90px] px870:w-[100px] px870:leading-[100px]
+			<enhanced:img
+				class="aspect-square h-auto w-[100px] rounded-full bg-cover text-[0px]
+					leading-[100px] px530:w-[140px] px530:leading-[140px] md:w-[90px]
+					md:leading-[90px] px870:w-[100px] px870:leading-[100px]
 					px920:w-[140px] px920:leading-[140px] px1380:w-[164px]
 					px1380:leading-[164px]"
-				src="/me-avatar.webp"
+				sizes="(1380px <= width) 164px, (920px <= width < 1380px) 140px, (870px <= width < 920px) 100px, (768px <= width < 870px) 90px, (530px <= width < 768px) 140px, (width < 530px) 100px"
+				src="$lib/assets/me-avatar.webp?quality=100"
 				alt="Me in a suit"
 				draggable="false"
+				style="background-image: url({meAvatarLqip.lqip}), linear-gradient(to top, #525252, #525252);"
 			/>
 			<div class="flex flex-1 flex-col gap-2 px380:gap-1 px1420:gap-3">
 				<div class="flex flex-col gap-2 px380:gap-[3px]">

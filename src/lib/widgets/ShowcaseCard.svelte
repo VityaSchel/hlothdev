@@ -10,7 +10,6 @@
 		name: string;
 		banner: PictureWithLqip;
 	} = $props();
-	console.log(banner);
 </script>
 
 <a
