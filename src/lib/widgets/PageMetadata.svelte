@@ -13,7 +13,7 @@
 	} = $props();
 
 	let title = $derived(
-		name ? `${name} - @hloth` : `Viktor Shchelochkov / @hloth`,
+		name ? `${name} – @hloth` : `Viktor Shchelochkov / @hloth`,
 	);
 </script>
 

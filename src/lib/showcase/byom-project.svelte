@@ -5,14 +5,15 @@
 	export const byomProject: ShowcaseItem = {
 		type: "project",
 		id: "byom",
-		name: "BYOM",
+		name: "byom",
 		description,
-		shortDescription: "",
+		shortDescription:
+			"Build Your Own post-quantum self-hosted end-to-end encrypted Messenger",
 		banner: await getShowcasePicture("byom", "banner"),
 		images: [
 			{
 				...(await getShowcasePicture("byom", "screenshot")),
-				alt: "BYOM screenshot 1 TODO: alt",
+				alt: "An example code demonstrating how byom library can be used for secure quantim-resistant communication",
 			},
 		],
 		links: [
@@ -26,29 +27,30 @@
 
 {#snippet description()}
 	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-		non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		A set of pure and determenistic JavaScript modules that anyone can use to
+		create an end-to-end encrypted messenger.
 	</p>
-	<h2>Heading</h2>
+	<h2>The problem</h2>
 	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-		non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		Once again disappointed in Session Messenger after their authors poorly
+		launched a second failed cryptocoin, complicating stuff, ruining everything,
+		I've decided to build my own e2ee thing.
 	</p>
-	<h2>Heading</h2>
+	<h2>The solution</h2>
 	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-		non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		To start with something simple, I wanted to create a cryptographically
+		secure backend that developers can use to build their own messengers. My
+		library contains basic logic that every messenger such as Session, Signal,
+		Matrix, Simplex has under the hood. UI, UX, networking, file I/O, frontend,
+		backend, auth flow, data flow, features, attachments is entirely up to the
+		library user.
+	</p>
+	<h2>Quantum-resistance</h2>
+	<p>
+		I also wanted to build a future-proof library. As we're approaching 2030
+		quantum computers transition from fantasy to reality. Assymmetric
+		cryptography is dying. It wasn't good anyway, since it relies on a single
+		public key instead of creating a separate one for each recipient (what's
+		called PFS).
 	</p>
 {/snippet}
