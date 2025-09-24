@@ -7,32 +7,33 @@
 		id: "session-watchos",
 		name: "Session watchOS",
 		description,
-		shortDescription: "",
+		shortDescription:
+			"Unofficial native Apple Watch watchOS client for Session Messenger",
 		banner: await getShowcasePicture("session-watchos", "banner"),
 		images: [
 			{
 				...(await getShowcasePicture("session-watchos", "screenshot-1")),
-				alt: "Session Watchos screenshot 1 TODO: alt",
+				alt: "Session Watchos linking website home page screenshot with text: Open Session on your Apple Watch. First Session messenger client that runs on WatchOS. Send and receive messages like in movies. No companion app required, everything runs inside of your watches. Button: Download, Open sources.",
 			},
 			{
 				...(await getShowcasePicture("session-watchos", "screenshot-2")),
-				alt: "Session Watchos screenshot 2 TODO: alt",
+				alt: "Session Watchos linking website login page screenshot with text: Log in with existing account. [Input with placeholder: Mnemonic phrase]. \"Continue\" button. — Am I just sending you my mnemonic phrase? Is this secure? — See that tiny # character in your address bar? It's called URL fragment and what follows it - is a decryption key, which was generated along with qr code on your device. When you press Continue, this key is used to encrypt your mnemonic phrase and this gibberish is sent back to your watches where the same key is used to decrypt it. Basically, your browser sends encrypted mnemonic so we can't read it, then your watches turn it back. It's that simple and works on AES-256 symmetric encryption. Your mnemonic phrase never leaves your devices unencrypted.",
 			},
 			{
 				...(await getShowcasePicture("session-watchos", "screenshot-3")),
-				alt: "Session Watchos screenshot 3 TODO: alt",
+				alt: "Session Watchos screenshot with main menu",
 			},
 			{
 				...(await getShowcasePicture("session-watchos", "screenshot-4")),
-				alt: "Session Watchos screenshot 4 TODO: alt",
+				alt: "Session Watchos screenshot with chats list",
 			},
 			{
 				...(await getShowcasePicture("session-watchos", "screenshot-5")),
-				alt: "Session Watchos screenshot 5 TODO: alt",
+				alt: "Session Watchos screenshot with conversation view",
 			},
 			{
 				...(await getShowcasePicture("session-watchos", "screenshot-6")),
-				alt: "Session Watchos screenshot 6 TODO: alt",
+				alt: "Session Watchos screenshot with conversation settings view",
 			},
 		],
 		links: [
@@ -50,29 +51,26 @@
 
 {#snippet description()}
 	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-		non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		As one of my experiments with what you can run on Apple Watches, I decided
+		to try to build the first truly independant watchOS client that works
+		entirely on the device itself without requiring a companion iPhone app.
 	</p>
-	<h2>Heading</h2>
+	<h2>Challenges</h2>
 	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-		non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		As you might expect, there were a lot of challenges. At the very least, I
+		had to reimplement everything from my JavaScript Session SDK in Swift, then
+		run cryptographic dependencies such as OpenSSL and port libsession written
+		in C++. This was even more difficult because I don't have Apple Watch, so I
+		was mostly using an official simulator and once tried running it on my
+		boyfriend's real Apple Watch. I also had to invent a way to allow user to
+		securely input their private key (mnemonic/passphrase) without sending it in
+		plaintext over the internet. I ended up building a small website that
+		encrypts it client-side.
 	</p>
-	<h2>Heading</h2>
+	<h2>The final result</h2>
 	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-		non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		The app works and you can even send messages. Polling works poorly and it
+		only allows for very basic operations. It also didn't work on real Apple
+		Watches so it was more of proof-of-concept than a real app.
 	</p>
 {/snippet}
