@@ -12,7 +12,7 @@
 		images: [
 			{
 				...(await getShowcasePicture("session-native", "screenshot")),
-				alt: "Session Native screenshot TODO: alt",
+				alt: "Session Native screenshot with a bunch of chats, archive tab, a conversation with media files attached",
 			},
 		],
 		links: [
@@ -26,29 +26,21 @@
 
 {#snippet description()}
 	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-		non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		I'm a big hater of Electron and everything that runs web inside of native
+		containers (except web browsers).
 	</p>
-	<h2>Heading</h2>
+	<h2>The problem</h2>
 	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-		non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		The official Session Desktop app is an Electron app. Each update is about
+		200 MB, it uses a lot of RAM, it starts up very slow, poorly integrates with
+		native features and just bad. Yuck.
 	</p>
-	<h2>Heading</h2>
+	<h2>The solution</h2>
 	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-		non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		I made a native Session client using SwiftUI and CoreData for macOS. It's
+		more of a prototype but it works. The app size is about 2 MB but since I
+		used JavaScript backend it added about 50 MB of Bun executable to the final
+		app size. It was archived before I published it to App Store. The code is
+		100% open source and free to use.
 	</p>
 {/snippet}

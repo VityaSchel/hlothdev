@@ -4,15 +4,15 @@
 
 <a
 	href="http://hlothdevzkti6suoksy7lcy7hmpxnr3msu5waokzaslsi2mnx5ouu4qd.onion/"
-	class="drop-background-shadow relative max-w-full flex-1 rounded-[16px]
-		focus-lg px680:flex-2/5 md:flex-1 lg:flex-[171]"
+	class="drop-background-shadow relative max-w-full flex-1 cursor-default
+		rounded-[16px] focus-lg px680:flex-2/5 md:flex-1 lg:flex-[171]"
 	aria-label="Open onion mirror of this website"
 >
 	<Squircle class="bg-black/10" cornerRadius={16}>
 		<div
-			class="flex h-full items-center gap-3 p-3 select-none px470:gap-4
-				px470:p-4 md:justify-center md:gap-3 md:py-2 px870:gap-4 lg:flex-col
-				lg:gap-2"
+			class="flex h-full items-center gap-3 rounded-2xl p-3 select-none
+				px470:gap-4 px470:p-4 md:justify-center md:gap-3 md:py-2 px870:gap-4
+				lg:flex-col lg:gap-2"
 		>
 			<svg
 				class="aspect-square h-8 w-8 shrink-0 px470:h-12 px470:w-12 md:h-10
