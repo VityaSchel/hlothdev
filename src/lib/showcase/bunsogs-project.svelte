@@ -7,7 +7,8 @@
 		id: "bunsogs",
 		name: "Bunsogs",
 		description,
-		shortDescription: "",
+		shortDescription:
+			"A better Session Open Group Server implementation in TypeScript with Bun",
 		banner: await getShowcasePicture("bunsogs", "banner"),
 		images: [
 			{

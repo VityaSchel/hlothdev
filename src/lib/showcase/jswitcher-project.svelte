@@ -7,7 +7,8 @@
 		id: "jswitcher",
 		name: "JSwitcher",
 		description,
-		shortDescription: "",
+		shortDescription:
+			"A Figma plugin for seamless component and font conversion",
 		banner: await getShowcasePicture("jswitcher", "banner"),
 		images: [
 			{

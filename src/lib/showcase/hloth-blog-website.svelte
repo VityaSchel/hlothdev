@@ -8,7 +8,7 @@
 		name: "hloth blog",
 		description,
 		shortDescription:
-			"My personal blog about web development and personal projects.",
+			"My personal blog about web development and personal projects",
 		banner: await getShowcasePicture("hloth-blog", "banner"),
 		images: [
 			{
