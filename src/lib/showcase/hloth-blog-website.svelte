@@ -52,7 +52,7 @@
 		project size in half while keeping all existing features and adding new
 		ones. I also migrated from MongoDB to PostgreSQL and Drizzle ORM. A few
 		weeks later I added reactions to posts that use proof-of-work algorithm to
-		prevent flooding. The pow-reaction library is a standalone opensource
+		prevent flooding. The pow-reaction library is a standalone open-source
 		project that can be used by anyone for free!
 	</p>
 {/snippet}
