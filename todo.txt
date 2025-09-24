@@ -4,3 +4,4 @@
 - accessibility audit
 - resize images to save bandwidth
 - standartize showcase banners size
+- tooltip arrow

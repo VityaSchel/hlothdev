@@ -7,12 +7,13 @@
 		id: "hloth-blog",
 		name: "hloth blog",
 		description,
-		shortDescription: "",
+		shortDescription:
+			"My personal blog about web development and personal projects.",
 		banner: await getShowcasePicture("hloth-blog", "banner"),
 		images: [
 			{
 				...(await getShowcasePicture("hloth-blog", "screenshot")),
-				alt: "blog.hloth.dev screenshot TODO: alt",
+				alt: "Screenshot of the homepage of blog.hloth.dev with the following posts: Migrating 200 projects from GitHub to self-hosted Forgejo; macOS 26 Tahoe Day, Morning, Evening, and Night based on clock; How to add custom bitcoin signet to NBitcoin and NBXplorer",
 			},
 		],
 		links: [
@@ -30,29 +31,28 @@
 
 {#snippet description()}
 	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-		non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		My personal blog about web development stuff and my IRL stuff. No ads, no
+		JavaScript required, pure shitpost 😻
 	</p>
-	<h2>Heading</h2>
+	<h2>Design</h2>
 	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-		non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		I was looking for a bold, bright, fashionable design for my blog. No
+		distrctions, straight to the point and content. Rich formatting, stylish
+		typeface, innovative features. I took inspiration from Milos Bojkovic's
+		"Blog post exploration" shot on Dribbble. I added my own touch to make it
+		more personal and unique. Like the dark mode toggle which slowly fades the
+		colors based on the time of the day or a precisely-animated back arrow in
+		menu that sticks to the closing menu edge.
 	</p>
-	<h2>Heading</h2>
+	<h2>Remake in Svelte</h2>
 	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-		non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		Initially built with React v18 and Next.js v14 it was a slow mess that
+		couldn't handle more than a few tens of requests per second. After migrating
+		the project to SvelteKit exactly one year after release I managed to cut
+		project size in half while keeping all existing features and adding new
+		ones. I also migrated from MongoDB to PostgreSQL and Drizzle ORM. A few
+		weeks later I added reactions to posts that use proof-of-work algorithm to
+		prevent flooding. The pow-reaction library is a standalone opensource
+		project that can be used by anyone for free!
 	</p>
 {/snippet}
