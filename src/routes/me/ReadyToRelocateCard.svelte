@@ -1,5 +1,7 @@
 <script lang="ts">
 	import XsCard from "$lib/widgets/grid-cards/XSCard.svelte";
+	import bg from "$lib/assets/ready-to-relocate.webp?enhanced";
+	import bgLqip from "$lib/assets/ready-to-relocate.webp?lqip";
 </script>
 
 <div
@@ -18,7 +20,8 @@
 			motion-safe:group-focus-within:rotate-y-180
 			motion-safe:group-hover:rotate-y-180"
 		aria-label="Background image: photo of me from my back standing in front of a chinese temple titled 三洞講法堂 (rougly translates to Hall of Preaching the Teachings of the Three Caverns), part of City God Temple of Shanghai, located in the city of Shanghai, China"
-		--bg="url('/ready-to-relocate.webp'), linear-gradient(to bottom, var(--color-neutral-600), var(--color-neutral-600))"
+		--bg="url({bg.img
+			.src}), url({bgLqip.lqip}), linear-gradient(to bottom, var(--color-neutral-600), var(--color-neutral-600))"
 		bg
 	>
 		<h4
@@ -55,8 +58,8 @@
 				@px114:leading-[11.76cqw] @px114:tracking-[-0.051em]"
 		>
 			<span>
-				<span class="mr-[1.68cqw] font-semibold text-[#28c841]">best:</span>
-				North America, Western Europe
+				<span class="mr-[1.68cqw] font-semibold text-[#28c841]">good:</span>
+				West. Europe
 			</span>
 			<span>
 				<span class="mr-[1.68cqw] font-semibold text-[#fdbc2c]">ok:</span>
@@ -72,6 +75,11 @@
 			</span>
 			<span>
 				<span class="mr-[1.68cqw] font-semibold text-[#EF8980]">no-go:</span>
+				<span
+					title="Until Trump is either dead or imprisoned"
+					class="cursor-help border border-x-0 border-t-0 border-dashed"
+					>USA
+				</span>, Canada,
 				<a
 					href="https://en.wikipedia.org/wiki/Global_North_and_Global_South#/media/File:World_map._UNCTAD_classification_of_economies.png"
 					target="_blank"

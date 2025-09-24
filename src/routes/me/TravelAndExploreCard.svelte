@@ -1,9 +1,12 @@
 <script lang="ts">
 	import XlCard from "$lib/widgets/grid-cards/XLCard.svelte";
+	import bg from "$lib/assets/me-in-front-of-zeda-makhuntseti-waterfall-2024.webp?enhanced";
+	import bgLqip from "$lib/assets/me-in-front-of-zeda-makhuntseti-waterfall-2024.webp?lqip";
 </script>
 
 <XlCard
-	bg="url(/me-in-front-of-zeda-makhuntseti-waterfall-2024.webp), linear-gradient(to bottom, #525252, #525252)"
+	bg="url({bg.img
+		.src}), url({bgLqip.lqip}), linear-gradient(to bottom, var(--color-neutral-600), var(--color-neutral-600))"
 	class="container-size one-storey-a col-start-1 col-end-4 row-start-5 row-end-8
 		bg-cover px580:col-start-3 px580:col-end-6 px580:row-start-4 px580:row-end-7
 		md:col-start-4 md:col-end-7 md:row-start-2 md:row-end-5"

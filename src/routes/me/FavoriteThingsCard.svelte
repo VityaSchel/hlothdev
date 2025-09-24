@@ -81,11 +81,11 @@
 					<enhanced:img
 						{src}
 						{alt}
-						class="h-full w-full shrink-0 rounded-[12.59cqw] bg-cover object-cover indent-[8cqw] text-[6.22cqw]"
-						style="background-image: url({lqip.lqip}), linear-gradient(to top, #525252, #525252); {clipPathStyle}"
+						class="h-[123px] w-[254px] shrink-0 rounded-[12.59cqw] bg-cover object-cover indent-[8cqw] text-[6.22cqw]"
+						style="background-image: url({lqip.lqip}), linear-gradient(to top, var(--color-neutral-600), var(--color-neutral-600)); {clipPathStyle}"
 						draggable="false"
-						width="254"
-						height="123"
+						width="508"
+						height="246"
 					/>
 				</svelte:element>
 			{/each}

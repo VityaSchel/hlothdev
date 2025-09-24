@@ -86,13 +86,18 @@
 				</div>
 			</div>
 		</div>
-		<img
-			class="hidden min-w-0 flex-1/5 bg-neutral-200 object-cover
-				object-[52%_50%] text-center px450:block px500:flex-1/3 md:flex-1
-				px980:flex-2/5 px1100:flex-[32]"
-			src="/me-in-pink-hat.webp"
-			alt="Me in a pink hat"
-		/>
+		<div
+			class="relative hidden h-full min-w-0 flex-1/5 px450:block px500:flex-1/3
+				md:flex-1 px980:flex-2/5 px1100:flex-[32]"
+		>
+			<enhanced:img
+				class="absolute top-0 left-0 h-full w-full bg-neutral-200 object-cover
+					object-[52%_50%] text-center"
+				src="$lib/assets/me-in-pink-hat.webp"
+				alt="Me in a pink hat"
+				width="860"
+			/>
+		</div>
 	</div>
 </GreetingsCard>
 

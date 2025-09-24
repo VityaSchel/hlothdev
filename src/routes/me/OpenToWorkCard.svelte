@@ -1,5 +1,6 @@
 <script lang="ts">
 	import XsCard from "$lib/widgets/grid-cards/XSCard.svelte";
+	import bgLqip from "$lib/assets/open-to-work.webp?lqip";
 </script>
 
 <a
@@ -15,11 +16,13 @@
 		class="h-full w-full overflow-clip bg-cover"
 		aria-label="Open to work"
 	>
-		<img
-			src="/open-to-work.webp"
+		<enhanced:img
+			src="$lib/assets/open-to-work.webp"
+			style="background-image: url({bgLqip.lqip}), linear-gradient(to bottom, var(--color-neutral-600), var(--color-neutral-600))"
 			alt="Link to my LinkedIn profile; Background: me with a sign saying 'Open to work'"
-			class="h-full w-full bg-neutral-600 indent-[12cqw] text-[10cqw]
-				leading-[12cqw]"
+			class="h-full w-full bg-cover object-cover text-[0px] leading-[12cqw]"
+			width="238"
+			height="238"
 		/>
 	</XsCard>
 </a>

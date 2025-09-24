@@ -22,15 +22,15 @@
 	style:view-transition-name="showcase-{id}"
 >
 	<enhanced:img
-		class="banner aspect-[2/1] w-auto rounded-[5px] object-cover text-center
-			text-[0px] bg-cover"
+		class="banner aspect-[2/1] w-[230px] h-[115px] rounded-[5px] bg-cover object-cover
+			text-center text-[0px]"
 		style="background-image: url({banner.lqip
-			.lqip}), linear-gradient(to bottom, #525252, #525252);"
+			.lqip}), linear-gradient(to bottom, var(--color-neutral-600), var(--color-neutral-600));"
 		src={banner.src}
 		alt="{name} banner"
 		draggable="false"
-		width="230"
-		height="115"
+		width="460"
+		height="230"
 		sizes="460px"
 	/>
 	<span class="font-sf-pro text-xs font-medium tracking-[-0.1px]">{name}</span>

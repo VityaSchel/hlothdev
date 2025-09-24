@@ -1,5 +1,8 @@
 <script lang="ts">
 	import XsCard from "$lib/widgets/grid-cards/XSCard.svelte";
+	import americanEnglishIcon from "$lib/assets/languages-icons/american-english.webp?inline";
+	import russianIcon from "$lib/assets/languages-icons/russian.webp?inline";
+	import spanishIcon from "$lib/assets/languages-icons/spanish.webp?inline";
 </script>
 
 <XsCard
@@ -16,9 +19,9 @@
       {#snippet lang(icon: string, label: string)}
         <div class="flex items-center gap-[5.04cqw]">
           <img
-            src="/languages-icons/{icon}.webp"
+            src={icon}
             class="text-[3px]"
-            alt="{icon} icon"
+            alt="{label} icon"
             width="12"
             height="12"
             draggable="false"
@@ -42,11 +45,11 @@
           />
         </div>
       {/snippet}
-      {@render lang('american-english', 'English — Fluent')}
+      {@render lang(americanEnglishIcon, 'English — Fluent')}
       {@render hr()}
-      {@render lang('russian', 'Russian — Native')}
+      {@render lang(russianIcon, 'Russian — Native')}
       {@render hr()}
-      {@render lang('spanish', 'Spanish — A1')}
+      {@render lang(spanishIcon, 'Spanish — A1')}
     </div>
   </div>
 </XsCard>

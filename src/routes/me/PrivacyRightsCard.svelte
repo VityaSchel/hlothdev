@@ -3,6 +3,7 @@
 	import "@fontsource-variable/sofia-sans-extra-condensed";
 	import LgCard from "$lib/widgets/grid-cards/LGCard.svelte";
 	import Button from "$lib/ui/Button.svelte";
+	import bgLqip from "$lib/assets/privacy-rights.webp?lqip";
 
 	let {
 		inert,
@@ -13,6 +14,10 @@
 	} = $props();
 
 	let expanded = $derived(page.route.id === "/me/privacy-rights" && !inert);
+
+	let viewTransitionStyle = $derived(
+		inert ? undefined : "view-transition-name: privacy-rights-content-ignore",
+	);
 </script>
 
 <LgCard
@@ -20,7 +25,7 @@
 		"container-size group overflow-clip bg-cover",
 		{
 			[`absolute top-0 left-0 z-[1] col-span-full col-start-1 row-span-full
-	row-start-1 h-full w-full`]: expanded,
+row-start-1 h-full w-full`]: expanded,
 			[`relative col-start-1 col-end-3 row-start-9 row-end-11 px580:col-start-4
 		px580:col-end-6 px580:row-start-2 px580:row-end-4 md:col-start-7
 		md:col-end-9 md:row-start-1 md:row-end-3`]: !expanded,
@@ -31,14 +36,14 @@
 	{inert}
 	cornerRadius={expanded ? 13 : 0.05118110236}
 >
-	<img
-		src="/privacy-rights.webp"
-		class="absolute top-0 left-0 h-full w-full bg-neutral-200 object-cover
-			object-[30%] text-[0px] select-none"
+	<enhanced:img
+		src="$lib/assets/privacy-rights.webp"
+		class="absolute top-0 left-0 h-full w-full bg-neutral-200 bg-cover
+			object-cover object-[30%] text-[0px] select-none"
 		alt="Background: a surveillance camera mounted on a wall"
-		style={inert
-			? undefined
-			: "view-transition-name: privacy-rights-content-ignore"}
+		width="2400"
+		height="1138"
+		style="background-image: url({bgLqip.lqip}); {viewTransitionStyle}"
 	/>
 	{#if expanded}
 		{@render children?.()}
@@ -69,29 +74,19 @@
 				</a>
 			</span>
 			<h3
-				class="
-          font-extra-condensed text-[7.87cqw] leading-5 font-extrabold
-          tracking-[-0.236cqw] uppercase
-        "
+				class="font-extra-condensed text-[7.87cqw] leading-5 font-extrabold tracking-[-0.236cqw] uppercase"
 			>
 				Privacy Rights
 			</h3>
 			<p
-				class="
-          pb-[3.54cqw] text-[4.33cqw] leading-[5.11cqw] font-medium
-          tracking-[-0.3cqw] break-words
-          @px170:tracking-[-0.25cqw]
-          @px215:tracking-[-0.2cqw]
-          @px239:tracking-[-0.19cqw]
-        "
+				class="pb-[3.54cqw] text-[4.33cqw] leading-[5.11cqw] font-medium tracking-[-0.3cqw] break-words @px170:tracking-[-0.25cqw] @px215:tracking-[-0.2cqw] @px239:tracking-[-0.19cqw]"
 			>
-				I advocate for privacy and prefer self-hosting over SAAS. All my personal
-				websites are available in Tor onion network under <a
+				I advocate for privacy and prefer self-hosting over SAAS. All my
+				personal websites are available in Tor onion network under <a
 					href="http://hlothdevzkti6suoksy7lcy7hmpxnr3msu5waokzaslsi2mnx5ouu4qd.onion/me"
 					rel="nofollow noreferrer noopener"
-					class="
-          font-semibold
-        ">hlothdevzkti6suoksy7lcy7hmpxnr3msu5waokzaslsi2mnx5ouu4qd.onion</a
+					class="font-semibold"
+					>hlothdevzkti6suoksy7lcy7hmpxnr3msu5waokzaslsi2mnx5ouu4qd.onion</a
 				> domain.
 			</p>
 			<a

@@ -1,5 +1,7 @@
 <script lang="ts">
 	import SmCard from "$lib/widgets/grid-cards/SMCard.svelte";
+	import bg from "$lib/assets/support-ukraine.webp?enhanced";
+	import bgLqip from "$lib/assets/support-ukraine.webp?lqip";
 </script>
 
 <SmCard
@@ -8,8 +10,10 @@
 	aria-label="Background image: photo of a couple wearing traditional Ukrainian embroidered clothing, holding hands in a field"
 >
 	<div
-		class="group bg flex h-full w-full flex-col justify-between overflow-clip
+		class="group flex h-full w-full flex-col justify-between overflow-clip
 			rounded-[12.5984252cqw] bg-cover p-[6.29cqw]"
+		style="background-image: url({bg.img
+			.src}), url({bgLqip.lqip}), linear-gradient(to bottom, var(--color-neutral-600), var(--color-neutral-600));"
 	>
 		<span
 			class="text-[3.54cqw] font-normal tracking-[-0.118cqw] opacity-0
@@ -33,10 +37,3 @@
 		</h3>
 	</div>
 </SmCard>
-
-<style>
-	.bg {
-		background-image:
-			url("/support-ukraine.webp"), linear-gradient(to bottom, #525252, #525252);
-	}
-</style>

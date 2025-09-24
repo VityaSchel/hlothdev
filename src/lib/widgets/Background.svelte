@@ -1,4 +1,6 @@
 <script lang="ts">
+	import bgLqip from "$lib/assets/bg.webp?lqip";
+
 	let {
 		children,
 	}: {
@@ -11,8 +13,11 @@
 	aria-hidden="true"
 >
 	<enhanced:img
-		class="absolute top-0 left-0 h-full w-full object-cover text-[0px]"
+		class="absolute top-0 left-0 h-full w-full bg-cover object-cover text-[0px]"
 		src="$lib/assets/bg.webp?quality=100"
+		style="background-image: url({bgLqip.lqip});"
+		width="1513"
+		height="845"
 		alt="Background image"
 		aria-hidden="true"
 	/>

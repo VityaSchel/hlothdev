@@ -1,5 +1,7 @@
 <script lang="ts">
 	import XsCard from "$lib/widgets/grid-cards/XSCard.svelte";
+	import bg from "$lib/assets/hloth-charity.webp?enhanced";
+	import bgLqip from "$lib/assets/hloth-charity.webp?lqip";
 </script>
 
 <a
@@ -14,7 +16,8 @@
 	<XsCard
 		class="flex h-full w-full items-end bg-cover"
 		bg
-		--bg="url('/hloth-charity.webp'), linear-gradient(to bottom, var(--color-neutral-600), var(--color-neutral-600))"
+		--bg="url({bg.img
+			.src}), url({bgLqip.lqip}), linear-gradient(to bottom, var(--color-neutral-600), var(--color-neutral-600))"
 	>
 		<span
 			class="one-storey-a p-[6.72cqw] text-[16.8cqw] leading-[20.16cqw]

@@ -20,10 +20,13 @@
 				justify-center gap-4 rounded-[10px] bg-[#282828]/50 p-4 pt-5
 				text-center"
 		>
-			<img
-				src="/error-icon.webp"
+			<enhanced:img
+				src="$lib/assets/error.webp?enhanced"
 				alt="Cartoon warthog head with its top blown off, revealing an exploding brain like a mushroom cloud"
-				class="h-16 w-16 text-center text-[7px] leading-[8px]"
+				class="text-center text-[0px]"
+				width="128"
+				height="128"
+				style="width: 64px; height: 64px"
 			/>
 			<div class="flex flex-col gap-[10px] text-white/85">
 				<h1 class="text-[13px] leading-4 font-bold">Error {page.status}</h1>

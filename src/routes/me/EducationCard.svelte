@@ -1,6 +1,8 @@
 <script lang="ts">
 	import LgCard from "$lib/widgets/grid-cards/LGCard.svelte";
 	import Button from "$lib/ui/Button.svelte";
+	import bg from "$lib/assets/education.webp?enhanced";
+	import bgLqip from "$lib/assets/education.webp?lqip";
 </script>
 
 <a
@@ -14,7 +16,8 @@
 		px1180:row-end-5"
 >
 	<LgCard
-		--bg="url(/education.webp), linear-gradient(to bottom, var(--color-neutral-600), var(--color-neutral-600))"
+		--bg="url({bg.img
+			.src}), url({bgLqip.lqip}), linear-gradient(to bottom, var(--color-neutral-600), var(--color-neutral-600))"
 		class="h-full w-full bg-cover text-white"
 		aria-label="Background image: photo of me at 10 years old, sitting in front of my old laptop typing code, screen displays three colorful interface buttons from one of my programs"
 	>

@@ -27,7 +27,7 @@
 				src="$lib/assets/me-avatar.webp?quality=100"
 				alt="Me in a suit"
 				draggable="false"
-				style="background-image: url({meAvatarLqip.lqip}), linear-gradient(to top, #525252, #525252);"
+				style="background-image: url({meAvatarLqip.lqip}), linear-gradient(to top, var(--color-neutral-600), var(--color-neutral-600));"
 			/>
 			<div class="flex flex-1 flex-col gap-2 px380:gap-1 px1420:gap-3">
 				<div class="flex flex-col gap-2 px380:gap-[3px]">
