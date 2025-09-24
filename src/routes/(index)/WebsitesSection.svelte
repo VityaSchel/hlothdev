@@ -1,7 +1,7 @@
 <script>
 	import { showcase } from "$lib/showcase";
 	import ScrollableSection from "$lib/ui/ScrollableSection.svelte";
-	import ProfileItemCard from "$lib/widgets/ProjectItemCard.svelte";
+	import ProfileItemCard from "$lib/widgets/ShowcaseCard.svelte";
 
 	const websites = $derived(showcase.filter((p) => p.type === "website"));
 </script>

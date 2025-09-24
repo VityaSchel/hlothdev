@@ -91,7 +91,7 @@
 	</svg>
 	<div
 		class={[
-			"relative top-0 left-0 z-[2] h-full w-full",
+			"relative top-0 left-0 z-[2] h-full w-full overflow-clip",
 			{
 				"squircle-content-maskable": arrow,
 			},

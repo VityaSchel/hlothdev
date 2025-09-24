@@ -20,7 +20,7 @@
 	style:view-transition-name="showcase-{id}"
 >
 	<img
-		class="banner rounded-[5px] bg-neutral-600 text-center"
+		class="banner rounded-[5px] bg-neutral-600 text-center aspect-[2/1] object-cover"
 		src={banner}
 		alt="{name} banner"
 		draggable="false"
