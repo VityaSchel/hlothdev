@@ -7,11 +7,21 @@
 		name: "JSwitcher",
 		description,
 		shortDescription: "",
-		banner: "/showcase/jswitcher/banner.webp",
+		banner: await import("$showcase/jswitcher/banner.webp?enhanced").then(
+			(m) => m.default,
+		),
 		images: [
 			{
-				url: "/showcase/jswitcher/TODO: screenshot.webp",
+				src: await import(
+					"$showcase/jswitcher/screenshot-1.webp?enhanced"
+				).then((m) => m.default),
 				alt: "JSwitcher screenshot 1 TODO: alt",
+			},
+			{
+				src: await import(
+					"$showcase/jswitcher/screenshot-2.webp?enhanced"
+				).then((m) => m.default),
+				alt: "JSwitcher screenshot 2 TODO: alt",
 			},
 		],
 		links: [

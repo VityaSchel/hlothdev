@@ -7,10 +7,14 @@
 		name: "Bunsogs",
 		description,
 		shortDescription: "",
-		banner: "/showcase/bunsogs/banner.webp",
+		banner: await import("$showcase/bunsogs/banner.webp?enhanced").then(
+			(m) => m.default,
+		),
 		images: [
 			{
-				url: "/showcase/bunsogs/demo.webp",
+				src: await import("$showcase/bunsogs/demo.webp?enhanced").then(
+					(m) => m.default,
+				),
 				alt: "Bunsogs video demo TODO: alt",
 			},
 		],

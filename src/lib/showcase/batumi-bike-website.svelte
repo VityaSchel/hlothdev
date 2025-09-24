@@ -7,10 +7,14 @@
 		name: "Batumi.bike",
 		description,
 		shortDescription: "",
-		banner: "/showcase/batumi-bike/banner.webp",
+		banner: await import("$showcase/batumi-bike/banner.webp?enhanced").then(
+			(m) => m.default,
+		),
 		images: [
 			{
-				url: "/showcase/batumi-bike/screenshot.webp",
+				src: await import(
+					"$showcase/batumi-bike/screenshot.webp?enhanced"
+				).then((m) => m.default),
 				alt: "Batumi.bike website screenshot TODO: alt",
 			},
 		],

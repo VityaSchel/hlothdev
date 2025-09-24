@@ -7,67 +7,130 @@
 		name: "X5.io Websites",
 		description,
 		shortDescription: "",
-		banner: "/showcase/x5-websites/banner.webp",
+		banner: await import("$showcase/x5-websites/banner.webp?enhanced").then(
+			(m) => m.default,
+		),
 		images: [
 			{
-				url: "/showcase/x5-websites/ketoplan-1.webp",
+				src: await import(
+					"$showcase/x5-websites/ketoplan-1.webp?enhanced"
+				).then((m) => m.default),
 				alt: "Ketoplan website screenshot 1",
 			},
 			{
-				url: "/showcase/x5-websites/ketoplan-2.webp",
+				src: await import(
+					"$showcase/x5-websites/ketoplan-2.webp?enhanced"
+				).then((m) => m.default),
 				alt: "Ketoplan website screenshot 2",
 			},
 			{
-				url: "/showcase/x5-websites/ketoplan-3.webp",
+				src: await import(
+					"$showcase/x5-websites/ketoplan-3.webp?enhanced"
+				).then((m) => m.default),
 				alt: "Ketoplan website screenshot 3",
 				class: "xl:hidden",
 			},
 			{
-				url: "/showcase/x5-websites/mental-health-1.webp",
+				src: await import(
+					"$showcase/x5-websites/mental-health-1.webp?enhanced"
+				).then((m) => m.default),
 				alt: "Mental health website screenshot 1",
 			},
 			{
-				url: "/showcase/x5-websites/mental-health-2.webp",
+				src: await import(
+					"$showcase/x5-websites/mental-health-2.webp?enhanced"
+				).then((m) => m.default),
 				alt: "Mental health website screenshot 2",
 				class: "xl:hidden",
 			},
 			{
-				url: "/showcase/x5-websites/mental-health-3.webp",
+				src: await import(
+					"$showcase/x5-websites/mental-health-3.webp?enhanced"
+				).then((m) => m.default),
 				alt: "Mental health website screenshot 3",
 				class: "px1180:hidden",
 			},
 			{
-				url: "/showcase/x5-websites/bot-biz-admin-dashboard-1.webp",
+				src: await import(
+					"$showcase/x5-websites/bot-biz-admin-dashboard-1.webp?enhanced"
+				).then((m) => m.default),
 				alt: "Bot.biz admin dashboard screenshot TODO: alt",
 			},
 			{
-				url: "/showcase/x5-websites/bot-biz-admin-dashboard-2.webp",
+				src: await import(
+					"$showcase/x5-websites/bot-biz-admin-dashboard-2.webp?enhanced"
+				).then((m) => m.default),
 				alt: "Bot.biz admin dashboard screenshot TODO: alt",
 				class: "px1100:hidden",
 			},
 			{
-				url: "/showcase/x5-websites/lovebot.webp",
+				src: await import("$showcase/x5-websites/lovebot.webp?enhanced").then(
+					(m) => m.default,
+				),
 				alt: "Lovebot screenshot TODO: alt",
 			},
 			{
-				url: "/showcase/x5-websites/glassbot.webp",
+				src: await import("$showcase/x5-websites/glassbot.webp?enhanced").then(
+					(m) => m.default,
+				),
 				alt: "Glassbot screenshot TODO: alt",
 			},
 			{
-				url: "/showcase/x5-websites/prankbot.webp",
+				src: await import("$showcase/x5-websites/prankbot.webp?enhanced").then(
+					(m) => m.default,
+				),
 				alt: "Prankbot screenshot TODO: alt",
 			},
 			{
-				url: "/showcase/x5-websites/checkout-dialog.webp",
+				src: await import(
+					"$showcase/x5-websites/checkout-dialog.webp?enhanced"
+				).then((m) => m.default),
 				alt: "Checkout dialog TODO: alt",
 			},
 			{
-				url: "/showcase/x5-websites/flat-ui-kit.webp",
+				src: await import(
+					"$showcase/x5-websites/flat-ui-kit.webp?enhanced"
+				).then((m) => m.default),
 				alt: "Flat UI kit demo TODO: alt",
 			},
 		],
 		links: [
-			// TODO: add links from netlify
+			{
+				label: "Visit Ketoplan Diet website demo",
+				url: "https://x5io-ketoplan.netlify.app/",
+			},
+			{
+				label: "Visit Mental Health Quiz website demo",
+				url: "https://x5io-mental-health.netlify.app/",
+			},
+			{
+				label: "Visit Bot.biz Admin Dashboard demo",
+				url: "https://x5io-admin-panel.netlify.app/",
+			},
+			{
+				label: "Visit old Bot.biz Admin Dashboard demo",
+				url: "https://main--x5io-admin-panel.netlify.app/",
+			},
+			{
+				label: "Visit Lovebot website demo",
+				url: "https://x5io-lovebot.netlify.app/",
+			},
+			{
+				label: "Visit Glassbot website demo",
+				url: "https://x5io-glassbot.netlify.app/",
+			},
+			{
+				label: "Visit Prankbot website demo",
+				url: "https://x5io-prankbot.netlify.app/",
+			},
+			{
+				label: "Visit Checkout Dialog demo",
+				url: "https://x5io-coupone.netlify.app/",
+			},
+			{
+				label: "Open Flat UI kit source code",
+				url: "https://vityaschel.github.io/checkout-dialog/",
+			},
 		],
 	};
 </script>

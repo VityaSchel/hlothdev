@@ -7,10 +7,14 @@
 		name: "Session Notifier",
 		description,
 		shortDescription: "",
-		banner: "/showcase/session-notifier/banner.webp",
+		banner: await import(
+			"$showcase/session-notifier/banner.webp?enhanced"
+		).then((m) => m.default),
 		images: [
 			{
-				url: "/showcase/session-notifier/screenshot.webp",
+				src: await import(
+					"$showcase/session-notifier/screenshot.webp?enhanced"
+				).then((m) => m.default),
 				alt: "Session Notifier screenshot 1 TODO: alt",
 			},
 		],

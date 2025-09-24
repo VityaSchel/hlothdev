@@ -6,7 +6,7 @@
 	}: {
 		id: string;
 		name: string;
-		banner: string;
+		banner: import("vite-imagetools").Picture;
 	} = $props();
 </script>
 
@@ -19,11 +19,15 @@
 	draggable="false"
 	style:view-transition-name="showcase-{id}"
 >
-	<img
-		class="banner rounded-[5px] bg-neutral-600 text-center aspect-[2/1] object-cover"
+	<enhanced:img
+		class="banner aspect-[2/1] w-auto rounded-[5px] bg-neutral-600 object-cover
+			text-center"
 		src={banner}
 		alt="{name} banner"
 		draggable="false"
+		width="230"
+		height="115"
+		sizes="460px"
 	/>
 	<span class="font-sf-pro text-xs font-medium tracking-[-0.1px]">{name}</span>
 </a>

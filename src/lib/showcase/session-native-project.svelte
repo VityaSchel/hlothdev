@@ -7,10 +7,14 @@
 		name: "Session Native",
 		description,
 		shortDescription: "",
-		banner: "/showcase/session-native/banner.webp",
+		banner: await import("$showcase/session-native/banner.webp?enhanced").then(
+			(m) => m.default,
+		),
 		images: [
 			{
-				url: "/showcase/session-native/screenshot.webp",
+				src: await import(
+					"$showcase/session-native/screenshot.webp?enhanced"
+				).then((m) => m.default),
 				alt: "Session Native screenshot TODO: alt",
 			},
 		],

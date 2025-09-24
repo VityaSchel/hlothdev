@@ -7,18 +7,26 @@
 		name: "mit.hloth.dev",
 		description,
 		shortDescription: "",
-		banner: "/showcase/mit-hloth-dev/banner.webp",
+		banner: await import("$showcase/mit-hloth-dev/banner.webp?enhanced").then(
+			(m) => m.default,
+		),
 		images: [
 			{
-				url: "/showcase/mit-hloth-dev/screenshot-1.webp",
+				src: await import(
+					"$showcase/mit-hloth-dev/screenshot-1.webp?enhanced"
+				).then((m) => m.default),
 				alt: "mit.hloth.dev screenshot TODO: alt",
 			},
 			{
-				url: "/showcase/mit-hloth-dev/screenshot-2.webp",
+				src: await import(
+					"$showcase/mit-hloth-dev/screenshot-2.webp?enhanced"
+				).then((m) => m.default),
 				alt: "change.mit.hloth.dev screenshot TODO: alt",
 			},
 			{
-				url: "/showcase/mit-hloth-dev/screenshot-3.webp",
+				src: await import(
+					"$showcase/mit-hloth-dev/screenshot-3.webp?enhanced"
+				).then((m) => m.default),
 				alt: "mit.hloth.dev screenshot 2 TODO: alt",
 			},
 		],

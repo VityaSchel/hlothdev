@@ -7,10 +7,14 @@
 		name: "hloth blog",
 		description,
 		shortDescription: "",
-		banner: "/showcase/hloth-blog/banner.webp",
+		banner: await import("$showcase/hloth-blog/banner.webp?enhanced").then(
+			(m) => m.default,
+		),
 		images: [
 			{
-				url: "/showcase/hloth-blog/screenshot.webp",
+				src: await import("$showcase/hloth-blog/screenshot.webp?enhanced").then(
+					(m) => m.default,
+				),
 				alt: "blog.hloth.dev screenshot TODO: alt",
 			},
 		],

@@ -8,30 +8,44 @@
 		description,
 		shortDescription:
 			"Nock Trade is a trading platform that allows users to trade various assets seamlessly.",
-		banner: "/showcase/nock-trade/banner.webp",
+		banner: await import("$showcase/nock-trade/banner.webp?enhanced").then(
+			(m) => m.default,
+		),
 		images: [
 			{
-				url: "/showcase/nock-trade/screenshot-1.webp",
+				src: await import(
+					"$showcase/nock-trade/screenshot-1.webp?enhanced"
+				).then((m) => m.default),
 				alt: "TODO: alt",
 			},
 			{
-				url: "/showcase/nock-trade/screenshot-2.webp",
+				src: await import(
+					"$showcase/nock-trade/screenshot-2.webp?enhanced"
+				).then((m) => m.default),
 				alt: "TODO: alt",
 			},
 			{
-				url: "/showcase/nock-trade/screenshot-3.webp",
+				src: await import(
+					"$showcase/nock-trade/screenshot-3.webp?enhanced"
+				).then((m) => m.default),
 				alt: "TODO: alt",
 			},
 			{
-				url: "/showcase/nock-trade/screenshot-4.webp",
+				src: await import(
+					"$showcase/nock-trade/screenshot-4.webp?enhanced"
+				).then((m) => m.default),
 				alt: "TODO: alt",
 			},
 			{
-				url: "/showcase/nock-trade/screenshot-5.webp",
+				src: await import(
+					"$showcase/nock-trade/screenshot-5.webp?enhanced"
+				).then((m) => m.default),
 				alt: "TODO: alt",
 			},
 			{
-				url: "/showcase/nock-trade/screenshot-6.webp",
+				src: await import(
+					"$showcase/nock-trade/screenshot-6.webp?enhanced"
+				).then((m) => m.default),
 				alt: "TODO: alt",
 			},
 		],
@@ -58,7 +72,7 @@
 		start trading assets right away.
 	</p>
 	<h2>Built with security in mind</h2>
-	<p> </p>
+	<p></p>
 	<h2>Subheading</h2>
 	<p>
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

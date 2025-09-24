@@ -7,34 +7,50 @@
 		name: "RYO Coin",
 		description,
 		shortDescription: "",
-		banner: "/showcase/ryo-coin/banner.webp",
+		banner: await import("$showcase/ryo-coin/banner.webp?enhanced").then(
+			(m) => m.default,
+		),
 		images: [
 			{
-				url: "/showcase/ryo-coin/v1-screenshot-1.webp",
+				src: await import(
+					"$showcase/ryo-coin/v1-screenshot-1.webp?enhanced"
+				).then((m) => m.default),
 				alt: "RYO coin website v1 screenshot 1 TODO: alt",
 			},
 			{
-				url: "/showcase/ryo-coin/v1-screenshot-2.webp",
+				src: await import(
+					"$showcase/ryo-coin/v1-screenshot-2.webp?enhanced"
+				).then((m) => m.default),
 				alt: "RYO coin website v1 screenshot 2 TODO: alt",
 			},
 			{
-				url: "/showcase/ryo-coin/v2-screenshot.webp",
+				src: await import(
+					"$showcase/ryo-coin/v2-screenshot.webp?enhanced"
+				).then((m) => m.default),
 				alt: "RYO coin website v2 screenshot TODO: alt",
 			},
 			{
-				url: "/showcase/ryo-coin/v3-screenshot.webp",
+				src: await import(
+					"$showcase/ryo-coin/v3-screenshot.webp?enhanced"
+				).then((m) => m.default),
 				alt: "RYO coin website v3 screenshot TODO: alt",
 			},
 			{
-				url: "/showcase/ryo-coin/v4-screenshot-1.webp",
+				src: await import(
+					"$showcase/ryo-coin/v4-screenshot-1.webp?enhanced"
+				).then((m) => m.default),
 				alt: "RYO coin website v4 screenshot 1 TODO: alt",
 			},
 			{
-				url: "/showcase/ryo-coin/v4-screenshot-2.webp",
+				src: await import(
+					"$showcase/ryo-coin/v4-screenshot-2.webp?enhanced"
+				).then((m) => m.default),
 				alt: "RYO coin website v4 screenshot 2 TODO: alt",
 			},
 			{
-				url: "/showcase/ryo-coin/v4-screenshot-3.webp",
+				src: await import(
+					"$showcase/ryo-coin/v4-screenshot-3.webp?enhanced"
+				).then((m) => m.default),
 				alt: "RYO coin website v4 screenshot 3 TODO: alt",
 			},
 		],

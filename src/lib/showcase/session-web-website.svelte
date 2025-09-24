@@ -7,10 +7,14 @@
 		name: "Session Web",
 		description,
 		shortDescription: "",
-		banner: "/showcase/session-web/banner.webp",
+		banner: await import("$showcase/session-web/banner.webp?enhanced").then(
+			(m) => m.default,
+		),
 		images: [
 			{
-				url: "/showcase/session-web/screenshot.webp",
+				src: await import(
+					"$showcase/session-web/screenshot.webp?enhanced"
+				).then((m) => m.default),
 				alt: "Session Web website screenshot 1 TODO: alt",
 			},
 		],

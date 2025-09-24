@@ -7,14 +7,21 @@
 		name: "BYOM",
 		description,
 		shortDescription: "",
-		banner: "/showcase/byom/banner.webp",
+		banner: await import("$showcase/byom/banner.webp?enhanced").then(
+			(m) => m.default,
+		),
 		images: [
-			// TODO: add images
+			{
+				src: await import("$showcase/byom/screenshot.webp?enhanced").then(
+					(m) => m.default,
+				),
+				alt: "BYOM screenshot 1 TODO: alt",
+			},
 		],
 		links: [
 			{
 				url: "https://git.hloth.dev/hloth/byom",
-				label: "Open byom source code TODO: alt",
+				label: "Open byom source code",
 			},
 		],
 	};

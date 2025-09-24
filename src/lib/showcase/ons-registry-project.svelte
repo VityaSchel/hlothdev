@@ -7,10 +7,14 @@
 		name: "ONS Registry",
 		description,
 		shortDescription: "",
-		banner: "/showcase/ons-registry/banner.webp",
+		banner: await import("$showcase/ons-registry/banner.webp?enhanced").then(
+			(m) => m.default,
+		),
 		images: [
 			{
-				url: "/showcase/ons-registry/screenshot.webp",
+				src: await import(
+					"$showcase/ons-registry/screenshot.webp?enhanced"
+				).then((m) => m.default),
 				alt: "ONS Registry website screenshot TODO: alt",
 			},
 		],

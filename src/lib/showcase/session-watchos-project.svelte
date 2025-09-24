@@ -7,30 +7,44 @@
 		name: "Session watchOS",
 		description,
 		shortDescription: "",
-		banner: "/showcase/session-watchos/banner.webp",
+		banner: await import("$showcase/session-watchos/banner.webp?enhanced").then(
+			(m) => m.default,
+		),
 		images: [
 			{
-				url: "/showcase/session-watchos/screenshot-1.webp",
+				src: await import(
+					"$showcase/session-watchos/screenshot-1.webp?enhanced"
+				).then((m) => m.default),
 				alt: "Session Watchos screenshot 1 TODO: alt",
 			},
 			{
-				url: "/showcase/session-watchos/screenshot-2.webp",
+				src: await import(
+					"$showcase/session-watchos/screenshot-2.webp?enhanced"
+				).then((m) => m.default),
 				alt: "Session Watchos screenshot 2 TODO: alt",
 			},
 			{
-				url: "/showcase/session-watchos/screenshot-3.webp",
+				src: await import(
+					"$showcase/session-watchos/screenshot-3.webp?enhanced"
+				).then((m) => m.default),
 				alt: "Session Watchos screenshot 3 TODO: alt",
 			},
 			{
-				url: "/showcase/session-watchos/screenshot-4.webp",
+				src: await import(
+					"$showcase/session-watchos/screenshot-4.webp?enhanced"
+				).then((m) => m.default),
 				alt: "Session Watchos screenshot 4 TODO: alt",
 			},
 			{
-				url: "/showcase/session-watchos/screenshot-5.webp",
+				src: await import(
+					"$showcase/session-watchos/screenshot-5.webp?enhanced"
+				).then((m) => m.default),
 				alt: "Session Watchos screenshot 5 TODO: alt",
 			},
 			{
-				url: "/showcase/session-watchos/screenshot-6.webp",
+				src: await import(
+					"$showcase/session-watchos/screenshot-6.webp?enhanced"
+				).then((m) => m.default),
 				alt: "Session Watchos screenshot 6 TODO: alt",
 			},
 		],

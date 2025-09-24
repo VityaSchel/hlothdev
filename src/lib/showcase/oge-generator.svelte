@@ -7,14 +7,20 @@
 		name: "OGE generator",
 		description,
 		shortDescription: "",
-		banner: "/showcase/oge-generator/banner.webp",
+		banner: await import("$showcase/oge-generator/banner.webp?enhanced").then(
+			(m) => m.default,
+		),
 		images: [
 			{
-				url: "/showcase/oge-generator/screenshot-1.webp",
+				src: await import(
+					"$showcase/oge-generator/screenshot-1.webp?enhanced"
+				).then((m) => m.default),
 				alt: "OGE generator website screenshot 1 TODO: alt",
 			},
 			{
-				url: "/showcase/oge-generator/screenshot-2.webp",
+				src: await import(
+					"$showcase/oge-generator/screenshot-2.webp?enhanced"
+				).then((m) => m.default),
 				alt: "OGE generator website screenshot 2 TODO: alt",
 			},
 		],

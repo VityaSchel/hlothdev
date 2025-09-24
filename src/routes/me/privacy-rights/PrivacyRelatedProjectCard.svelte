@@ -20,9 +20,9 @@
 		bg-white px-3 py-2 focus-sm-dark px1205:py-[11px] px1205:pr-6
 		px1205:pl-[21px]"
 >
-	<img
+	<enhanced:img
 		class="shrink-0 rounded-sm text-[8px]"
-		src={icon}
+		src="$lib/assets/showcase/{icon}"
 		alt="Icon of {name}"
 		width="28"
 		height="28"

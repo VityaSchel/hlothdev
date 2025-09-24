@@ -7,10 +7,14 @@
 		name: "PS4 Merger",
 		description,
 		shortDescription: "",
-		banner: "/showcase/ps4-merger/banner.webp",
+		banner: await import("$showcase/ps4-merger/banner.webp?enhanced").then(
+			(m) => m.default,
+		),
 		images: [
 			{
-				url: "/showcase/ps4-merger/screenshot.webp",
+				src: await import("$showcase/ps4-merger/screenshot.webp?enhanced").then(
+					(m) => m.default,
+				),
 				alt: "PS4 Merger screenshot TODO: alt",
 			},
 		],

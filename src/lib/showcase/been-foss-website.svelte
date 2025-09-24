@@ -7,10 +7,14 @@
 		name: "been-foss",
 		description,
 		shortDescription: "",
-		banner: "/showcase/been-foss/banner.webp",
+		banner: await import("$showcase/been-foss/banner.webp?enhanced").then(
+			(m) => m.default,
+		),
 		images: [
 			{
-				url: "/showcase/been-foss/screenshot.webp",
+				src: await import("$showcase/been-foss/screenshot.webp?enhanced").then(
+					(m) => m.default,
+				),
 				alt: "been-foss screenshot TODO: alt",
 			},
 		],

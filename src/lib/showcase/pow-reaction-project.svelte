@@ -7,10 +7,14 @@
 		name: "pow-reaction",
 		description,
 		shortDescription: "",
-		banner: "/showcase/pow-reaction/banner.webp",
+		banner: await import("$showcase/pow-reaction/banner.webp?enhanced").then(
+			(m) => m.default,
+		),
 		images: [
 			{
-				url: "/showcase/pow-reaction/screenshot.webp",
+				src: await import(
+					"$showcase/pow-reaction/screenshot.webp?enhanced"
+				).then((m) => m.default),
 				alt: "Pow-reaction demo website screenshot TODO: alt",
 			},
 		],

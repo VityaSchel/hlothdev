@@ -31,9 +31,9 @@ export type ShowcaseItem = {
 	description: import("svelte").Snippet;
 	/** Description for meta-tags under 160 characters */
 	shortDescription: string;
-	banner: string;
+	banner: import("vite-imagetools").Picture;
 	images: {
-		url: string;
+		src: import("vite-imagetools").Picture;
 		alt: string;
 		class?: string;
 	}[];

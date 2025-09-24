@@ -132,37 +132,37 @@
 			<div class="mb-2 flex shrink-0 flex-col items-center gap-2">
 				<div class="grid w-full shrink-0 grid-cols-1 gap-2 lg:grid-cols-2">
 					<PrivacyRelatedProjectCard
-						icon="/showcase/session-native/logo-square-xs.webp"
+						icon="./session-native/logo-square-xs.webp"
 						link="https://git.hloth.dev/hloth/session-native"
 						name="Session Native"
 						caption="Native Session macOS client written in Swift"
 					/>
 					<PrivacyRelatedProjectCard
-						icon="/showcase/session.js/logo-square-xs.webp"
+						icon="./session.js/logo-square-xs.webp"
 						link="https://sessionjs.github.io/docs/"
 						name="Session.js"
 						caption="The first bot framework for Session built with Bun"
 					/>
 					<PrivacyRelatedProjectCard
-						icon="/showcase/ons-registry/logo-square-xs.webp"
+						icon="./ons-registry/logo-square-xs.webp"
 						link="https://ons.session.community/"
 						name="ONS Registry"
 						caption="Blockchain data exploring tool & registry"
 					/>
 					<PrivacyRelatedProjectCard
-						icon="/showcase/session-web/logo-square-xs.webp"
+						icon="./session-web/logo-square-xs.webp"
 						link="https://git.hloth.dev/hloth/session-web"
 						name="Session Web"
 						caption="Session client running in a web browser"
 					/>
 					<PrivacyRelatedProjectCard
-						icon="/showcase/session-vanity-id-generator/logo-square-xs.webp"
+						icon="./session-vanity-id-generator/logo-square-xs.webp"
 						link="https://session-id.pages.dev/"
 						name="Vanity ID Generator"
 						caption="Client-side tool generating vanity Session account IDs"
 					/>
 					<PrivacyRelatedProjectCard
-						icon="/showcase/session-bots-directory/logo-square-xs.webp"
+						icon="./session-bots-directory/logo-square-xs.webp"
 						link="https://bots.session.community/"
 						name="Bots Directory"
 						caption="Directory of Session bots, built with Remix"

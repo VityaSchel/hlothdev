@@ -7,14 +7,20 @@
 		name: "Unddit",
 		description,
 		shortDescription: "",
-		banner: "/showcase/unddit/banner.webp",
+		banner: await import("$showcase/unddit/banner.webp?enhanced").then(
+			(m) => m.default,
+		),
 		images: [
 			{
-				url: "/showcase/unddit/screenshot-1.webp",
+				src: await import("$showcase/unddit/screenshot-1.webp?enhanced").then(
+					(m) => m.default,
+				),
 				alt: "Unddit website screenshot 1 TODO: alt",
 			},
 			{
-				url: "/showcase/unddit/screenshot-2.webp",
+				src: await import("$showcase/unddit/screenshot-2.webp?enhanced").then(
+					(m) => m.default,
+				),
 				alt: "Unddit website screenshot 2 TODO: alt",
 			},
 		],

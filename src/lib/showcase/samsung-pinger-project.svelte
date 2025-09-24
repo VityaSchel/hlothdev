@@ -7,10 +7,14 @@
 		name: "Samsung Pinger",
 		description,
 		shortDescription: "",
-		banner: "/showcase/samsung-pinger/banner.webp",
+		banner: await import("$showcase/samsung-pinger/banner.webp?enhanced").then(
+			(m) => m.default,
+		),
 		images: [
 			{
-				url: "/showcase/samsung-pinger/screenshot.webp",
+				src: await import(
+					"$showcase/samsung-pinger/screenshot.webp?enhanced"
+				).then((m) => m.default),
 				alt: "Samsung Pinger screenshot TODO: alt",
 			},
 		],

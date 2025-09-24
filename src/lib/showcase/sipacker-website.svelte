@@ -7,22 +7,32 @@
 		name: "SIPacker",
 		description,
 		shortDescription: "",
-		banner: "/showcase/sipacker/banner.webp",
+		banner: await import("$showcase/sipacker/banner.webp?enhanced").then(
+			(m) => m.default,
+		),
 		images: [
 			{
-				url: "/showcase/sipacker/screenshot-1.webp",
+				src: await import("$showcase/sipacker/screenshot-1.webp?enhanced").then(
+					(m) => m.default,
+				),
 				alt: "SIPacker website screenshot 1 TODO: alt",
 			},
 			{
-				url: "/showcase/sipacker/screenshot-2.webp",
+				src: await import("$showcase/sipacker/screenshot-2.webp?enhanced").then(
+					(m) => m.default,
+				),
 				alt: "SIPacker website screenshot 2 TODO: alt",
 			},
 			{
-				url: "/showcase/sipacker/screenshot-3.webp",
+				src: await import("$showcase/sipacker/screenshot-3.webp?enhanced").then(
+					(m) => m.default,
+				),
 				alt: "SIPacker website screenshot 3 TODO: alt",
 			},
 			{
-				url: "/showcase/sipacker/screenshot-4.webp",
+				src: await import("$showcase/sipacker/screenshot-4.webp?enhanced").then(
+					(m) => m.default,
+				),
 				alt: "SIPacker website screenshot 4 TODO: alt",
 			},
 		],

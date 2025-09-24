@@ -7,18 +7,26 @@
 		name: "Lufin",
 		description,
 		shortDescription: "",
-		banner: "/showcase/lufin/banner.webp",
+		banner: await import("$showcase/lufin/banner.webp?enhanced").then(
+			(m) => m.default,
+		),
 		images: [
 			{
-				url: "/showcase/lufin/screenshot-1.webp",
+				src: await import("$showcase/lufin/screenshot-1.webp?enhanced").then(
+					(m) => m.default,
+				),
 				alt: "Lufin frontend screenshot 1 TODO: alt",
 			},
 			{
-				url: "/showcase/lufin/screenshot-2.webp",
+				src: await import("$showcase/lufin/screenshot-2.webp?enhanced").then(
+					(m) => m.default,
+				),
 				alt: "Lufin frontend screenshot 2 TODO: alt",
 			},
 			{
-				url: "/showcase/lufin/lufin-screenshotter.webp",
+				src: await import(
+					"$showcase/lufin/lufin-screenshotter.webp?enhanced"
+				).then((m) => m.default),
 				alt: "Lufin screenshotter",
 			},
 		],

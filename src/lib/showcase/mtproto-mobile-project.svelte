@@ -7,10 +7,14 @@
 		name: "Mtproto Mobile",
 		description,
 		shortDescription: "",
-		banner: "/showcase/mtproto-mobile/banner.webp",
+		banner: await import("$showcase/mtproto-mobile/banner.webp?enhanced").then(
+			(m) => m.default,
+		),
 		images: [
 			{
-				url: "/showcase/mtproto-mobile/screenshots.webp",
+				src: await import(
+					"$showcase/mtproto-mobile/screenshots.webp?enhanced"
+				).then((m) => m.default),
 				alt: "Mtproto Mobile screenshots TODO: alt",
 			},
 		],

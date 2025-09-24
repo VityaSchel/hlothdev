@@ -8,10 +8,14 @@
 		description,
 		shortDescription:
 			"Moreof.me is a a personal web space, encouraging users to express their thoughts and hobbies, which I was hired to build as a sole full-stack developer in 2024.",
-		banner: "/showcase/moreofme/banner.webp",
+		banner: await import("$showcase/moreofme/banner.webp?enhanced").then(
+			(m) => m.default,
+		),
 		images: [
 			{
-				url: "/showcase/moreofme/image.webp",
+				src: await import("$showcase/moreofme/image.webp?enhanced").then(
+					(m) => m.default,
+				),
 				alt: "Moreof.me pages screenshots TODO: alt",
 			},
 		],

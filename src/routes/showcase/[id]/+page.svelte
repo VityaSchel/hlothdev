@@ -22,19 +22,8 @@
 			srTitle="Showcase project page: {project.name}"
 			backUrl="/"
 		>
-			<div
-				class="
-          flex flex-col gap-4 overflow-auto
-          md:flex-row
-          px870:gap-8
-        "
-			>
-				<div
-					class="
-            text-content flex flex-3/5 flex-col gap-4 p-2
-            lg:flex-1
-          "
-				>
+			<div class="flex flex-col gap-4 overflow-auto md:flex-row px870:gap-8">
+				<div class="text-content flex flex-3/5 flex-col gap-4 p-2 lg:flex-1">
 					<h1 class="text-2xl font-semibold">{project.name}</h1>
 					<article class="text-base leading-relaxed font-medium">
 						{@render project.description()}
@@ -59,24 +48,16 @@
 					{/if}
 				</div>
 				<div
-					class="
-            grid flex-2/5 grid-cols-1 gap-4
-            px600:grid-cols-2
-            md:flex md:flex-col
-            lg:flex-1
-          "
+					class=" grid flex-2/5 grid-cols-1 gap-4 px600:grid-cols-2 md:flex md:flex-col lg:flex-1"
 					role="list"
 					aria-label="Project images"
 				>
-					{#each project.images as { url, alt, class: className }, i (i)}
-						<img
-							src={url}
+					{#each project.images as { src, alt, class: className }, i (i)}
+						<enhanced:img
+							{src}
 							{alt}
 							class={[
-								`
-                  rounded-md bg-neutral-600 text-center outline-[0.5px]
-                  outline-offset-[-0.5px] outline-white/25
-                `,
+								"rounded-md bg-neutral-600 text-center outline-[0.5px] outline-offset-[-0.5px] outline-white/25",
 								className,
 							]}
 						/>
