@@ -7,24 +7,24 @@
 		id: "sipacker",
 		name: "SIPacker",
 		description,
-		shortDescription: "",
+		shortDescription: "PWA for creating playable SiGame custom packs",
 		banner: await getShowcasePicture("sipacker", "banner"),
 		images: [
 			{
 				...(await getShowcasePicture("sipacker", "screenshot-1")),
-				alt: "SIPacker website screenshot 1 TODO: alt",
+				alt: "SIPacker website screenshot with a list of questions in a pack",
 			},
 			{
 				...(await getShowcasePicture("sipacker", "screenshot-2")),
-				alt: "SIPacker website screenshot 2 TODO: alt",
+				alt: "SIPacker website screenshot with a question editor",
 			},
 			{
 				...(await getShowcasePicture("sipacker", "screenshot-3")),
-				alt: "SIPacker website screenshot 3 TODO: alt",
+				alt: "SIPacker website screenshot with file manager with compression options",
 			},
 			{
 				...(await getShowcasePicture("sipacker", "screenshot-4")),
-				alt: "SIPacker website screenshot 4 TODO: alt",
+				alt: "SIPacker website screenshot with file manager",
 			},
 		],
 		links: [
