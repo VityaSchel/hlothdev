@@ -15,16 +15,16 @@
 				alt: "SIPacker website screenshot with a list of questions in a pack",
 			},
 			{
+				...(await getShowcasePicture("sipacker", "siquester")),
+				alt: "The official SiQuester app running on Windows",
+			},
+			{
 				...(await getShowcasePicture("sipacker", "screenshot-2")),
 				alt: "SIPacker website screenshot with a question editor",
 			},
 			{
 				...(await getShowcasePicture("sipacker", "screenshot-3")),
 				alt: "SIPacker website screenshot with file manager with compression options",
-			},
-			{
-				...(await getShowcasePicture("sipacker", "screenshot-4")),
-				alt: "SIPacker website screenshot with file manager",
 			},
 		],
 		links: [
@@ -42,29 +42,51 @@
 
 {#snippet description()}
 	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-		non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		PWA for creating custom question packs for <a
+			href="https://vladimirkhil.com/si/game"
+			target="_blank"
+			rel="nofollow noreferrer noopener">SiGame</a
+		>, a popular open-source online quiz game app.
 	</p>
-	<h2>Heading</h2>
+	<h2>The problem</h2>
 	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-		non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		The official desktop installable <a
+			href="https://github.com/VladimirKhil/SI">SiQuester</a
+		> app is a great tool for creating custom question packs for SiGame. However,
+		it is only available on Windows and built with DotNet making it impossible to
+		use on Linux, MacOS, Android or iOS. Additionally, it has a complex user interface
+		that can confuse users, not familiar with pack editing process. The need for
+		a cross-platform and straightforward pack editor was expressed by the SiGame
+		community for many years.
 	</p>
-	<h2>Heading</h2>
+	<h2>The solution</h2>
 	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-		non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		As my 10th grade graduation project I decided to create SIPacker, a
+		web-based question pack editor. It is a Progressive Web App (PWA) that does
+		not require installation or downloading and works offline on any device with
+		a modern web browser, including mobile phones and tablets. It's built with
+		React, JavaScript and Material UI. It streamlines the pack creation process
+		by introducing the checklist that pack author has to follow in order to
+		create a valid pack. It allows users to create packs from scratch, edit
+		existing packs thanks to full compatibility with SiQuester and import packs
+		as files using URL or drag-and-drop.
+	</p>
+	<h2>File browser</h2>
+	<p>
+		To simplify the process of managing pack assets, SIPacker features a custom
+		file browser that stores blobs in IndexedDB. It introduced a built-in image
+		compressor to optimize embedded assets, an exclusive feature not available
+		in SIQuester. The file browser also supports importing assets using URL. The
+		file size limit is much higher than in SiQuester.
+	</p>
+	<h2>Reception</h2>
+	<p>
+		The app was launched in October 2021 and received a very positive feedback
+		from the SiGame community. It was <a
+			href="https://vk.com/wall-135725718_6971"
+			rel="nofollow noreferrer noopener"
+			target="_blank">featured</a
+		> in the official SiGame VKontakte group. The project became my second most starred
+		repository on GitHub with 30 stars as of September 2025.
 	</p>
 {/snippet}
