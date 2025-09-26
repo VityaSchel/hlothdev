@@ -91,6 +91,20 @@
 			pages
 		</li>
 	</ul>
+	<p>
+		The project was initially launched as part of the bigger platform for
+		business, tracking trends in russian division of darknet (Tor Onion Network)
+		made in 2023. The filesharing was one of the platform features allowing
+		anyone to share files securely and privately for free. My job was to create
+		a service similar to lufi but using client's design and integrating with the
+		platform's systems. In late 2024 I had to stop working for that freelance
+		client due to constant harassment, abuse and threats. Upon leaving, they had
+		owed me about 400€ but refused to pay the rest. One year later I rewrote the
+		filesharing backend, improved accessibility, added new features, more
+		database choices and published it as lufin. The project became my most
+		popular open source project with more than 150 stars on GitHub as of
+		September 2025.
+	</p>
 	<h2>Lufin screenshotter</h2>
 	<p>
 		Firefox-based browser extension for taking full-screen, partial, full-screen

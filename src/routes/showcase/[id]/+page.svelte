@@ -53,16 +53,15 @@
 					aria-label="Project images"
 				>
 					{#each project.images as { src, lqip, alt, class: className }, i (i)}
-						<enhanced:img
-							{src}
-							{alt}
-							class={[
-								"rounded-md bg-neutral-600 bg-cover text-center text-[0px] outline-[0.5px] outline-offset-[-0.5px] outline-white/25",
-								className,
-							]}
-							style="background-image: url({lqip.lqip}), linear-gradient(to bottom, var(--color-neutral-600), var(--color-neutral-600));"
-							loading={i === 0 ? "eager" : "lazy"}
-						/>
+						<div class={className}>
+							<enhanced:img
+								{src}
+								{alt}
+								class="rounded-md bg-neutral-600 bg-cover text-center text-[0px] outline-[0.5px] outline-offset-[-0.5px] outline-white/25"
+								style="background-image: url({lqip.lqip}), linear-gradient(to bottom, var(--color-neutral-600), var(--color-neutral-600));"
+								loading={i === 0 ? "eager" : "lazy"}
+							/>
+						</div>
 					{/each}
 				</div>
 			</div>
