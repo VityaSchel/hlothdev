@@ -7,7 +7,8 @@
 		id: "session-notifier",
 		name: "Session Notifier",
 		description,
-		shortDescription: "",
+		shortDescription:
+			"A REST API for sending Session messages programmatically",
 		banner: await getShowcasePicture("session-notifier", "banner"),
 		images: [
 			{

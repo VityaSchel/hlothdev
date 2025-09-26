@@ -7,36 +7,36 @@
 		id: "ryo-coin",
 		name: "RYO Coin",
 		description,
-		shortDescription: "",
+		shortDescription: "A website for RYO, a privacy-focused cryptocurrency",
 		banner: await getShowcasePicture("ryo-coin", "banner"),
 		images: [
 			{
 				...(await getShowcasePicture("ryo-coin", "v1-screenshot-1")),
-				alt: "RYO coin website v1 screenshot 1 TODO: alt",
+				alt: "RYO coin website v1 screenshot with text: PRIVACY FOR EVERYONE / Confidently Transact with the Highest Degree of Anonymity / [Button] Get Wallet App / [Button] Explore Blocks",
 			},
 			{
 				...(await getShowcasePicture("ryo-coin", "v1-screenshot-2")),
-				alt: "RYO coin website v1 screenshot 2 TODO: alt",
+				alt: "RYO coin website v1 screenshot with text: HASH RATE 1276,5 H/s; BLOCK TIME 240 Seconds — Difficulty adjusted every block; BLOCK REWARD 33.21 Ryo / Block + Fees — Adjusted every six months; Total supply 88,188,888; Dev Fund 8M; Then 263,000 coins each year for inflation; [Button] ALGORITHM; [Button] EMISSIONS",
 			},
 			{
 				...(await getShowcasePicture("ryo-coin", "v2-screenshot")),
-				alt: "RYO coin website v2 screenshot TODO: alt",
+				alt: "RYO coin website v2 screenshot with text: Wallet / Local: Previous Ryo desktop GUI Wallet and Ryo LITE Wallet have been merged into one GUI wallet. The development of a brand new wallet, built from scratch using modern Vue.js and Electron frameworks, resulted in the release of Ryo Wallet: Atom. [Button] READ MORE; [Button] DOWNLOAD FOR WINDOWS / [Button] DOWNLOAD FOR LINUX (APPIMAGE) / [Button] DOWNLOAD FOR LINUX (TAR ARCHIVE) / [Button] SOURCE CODE (GITHUB); Web: Ultra-fast WEB based wallet - Ryo Wallet Quasar. Quasar brings the user friendly interface of our desktop GUI wallet (Atom) to the web. [Button] READ MORE; [Button] OPEN WEB WALLET",
 			},
 			{
 				...(await getShowcasePicture("ryo-coin", "v3-screenshot")),
-				alt: "RYO coin website v3 screenshot TODO: alt",
+				alt: "RYO coin website v3 screenshot with text: Established April 2017; PRIVATE / Ryo was conceived with the highest levels of privacy in mind. Ring Confidential Transactions with minimum ringsize of 25 were implemented to conceal every transaction in Ryo network. Following migration to zk-proofs will make potential tracing of Ryo recipients even more impossible. Have piece of mind knowing that what you choose to do with your money is your business, not anyone else's.; UNTRACEABLE / As privacy is the core foundation of Ryo, sending and receiving addresses are encrypted and transaction amounts are obfuscated by default. Disposable ghost addresses conceal your real Ryo address from senders, allowing for truly anonymous and untraceable transactions. Our uniform payment ID system, makes transactions that use payment IDs untraceable and hides the very fact that you use IDs.",
 			},
 			{
 				...(await getShowcasePicture("ryo-coin", "v4-screenshot-1")),
-				alt: "RYO coin website v4 screenshot 1 TODO: alt",
+				alt: "RYO coin website v4 screenshot with text: WELCOME TO PLANET RYO / The Sovereign World of Privacy Cryptocurrency; Why RYO?; Business room; FAQ; Library Gallery",
 			},
 			{
 				...(await getShowcasePicture("ryo-coin", "v4-screenshot-2")),
-				alt: "RYO coin website v4 screenshot 2 TODO: alt",
+				alt: "RYO coin website v4 API reference screenshot with text: Daemon RPC API Reference; Introduction / This is a list of the ryo-daemon-rpc calls, their inputs and outputs, and examples of each. If you need wallet-rpc-calls refer to: Wallet RPC API Reference; JSON RPC Methods / get_block_count / Aliases: (getblockcount) / Look up how many blocks are in the longest chain known to the node. / Example request <...>",
 			},
 			{
 				...(await getShowcasePicture("ryo-coin", "v4-screenshot-3")),
-				alt: "RYO coin website v4 screenshot 3 TODO: alt",
+				alt: "RYO coin website v4 API reference screenshot with text: get_block / Aliases: (getblock) / Full block information can be retrieved by either block height or hash, like with the above block header calls. For full block information, both lookups use the same method, but with different input parameters.",
 			},
 		],
 		links: [
@@ -50,30 +50,86 @@
 
 {#snippet description()}
 	<p>
-		TODO: description
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-		non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		RYO Coin is a privacy-focused cryptocurrency that prioritizes user anonymity
+		and secure transactions. In early 2025, I was contacted by the RYO Coin team
+		to remake their website. The <a
+			href="https://web.archive.org/web/20250221041400/https://ryo-currency.com/"
+			rel="noopener noreferrer nofollow"
+			target="_blank">old version</a
+		> can be found in the Web Archive.
 	</p>
-	<h2>Heading</h2>
+	<h2>Workflow</h2>
 	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-		non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		The project workflow was a disaster. The RYO Coin team had no clear
+		requirements, no designer, and no project manager. I had to take on all
+		these roles myself. The team consisting of several people from different
+		countries and timezones had problems communicating and making decisions. The
+		task for me was to create a responsive frontend website using one screenshot
+		generated by Dalle in ChatGPT. Additionally, I had been tasked with editing
+		it to cut out visual assets for the website.
 	</p>
-	<h2>Heading</h2>
 	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-		non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		I had been forced to work with a third-party time tracking software
+		installed on my personal machine and rely on macOS security to protect my
+		privacy. The choice of software was made by the RYO Coin team leader with an
+		option to use the Upwork program instead if I pay 15% of its fee.
+	</p>
+	<h2>Payment Issues</h2>
+	<p>
+		After a week of work, the project manager by the name of Fireice-uk stated
+		that he is not OK with paying me the full amount and will only pay half of
+		it. Additionally, this "decision had to be repeated once again in the
+		future" lowering my pay to 25% of the original amount.
+	</p>
+	<p>
+		On top of that the general communication from Fireice was unprofessional and
+		highly unethical, for instance I had to <i
+			>"for the love of god, please punch out if I gotta take a fap break"</i
+		>. I have been warned twice about this. This was the first communication I
+		had with him without any prior context to this statement, practically after
+		we just greeted, so I just assume Fireice has some kind of kink of thinking
+		how his employees masturbate. I was also not allowed to "simulate work"
+		under the threat of instantly being "fired without pay".
+	</p>
+	<p>
+		The overall communication with Fireice was composed of me talking about work
+		and him sexualizing women, sending me unfunny memes made with AI and trying
+		to teach me basics of programming, such as how to use git. This was after I
+		sent him my 4-year-old GitHub profile with 150 projects. Sometimes he would
+		send me drunk messages and tell me about cryptocurrency market. He once sent
+		me a meme featuring Borat. Not that I mind Borat memes, but at this point I
+		assumed he would get that I prefer professional talk about work.
+	</p>
+	<p>
+		Every time I sent my time-entries sheet he took about 3 days to analyze it,
+		find how much time he wants to substract and tell me once again that I must
+		"punch out" if I went to drink some water even for one minute. Keep in mind
+		that this was on about half of my normal hourly rate.
+	</p>
+	<h2>Design</h2>
+	<p>
+		The team had been trying to settle on a design for several weeks, sending a
+		new one every time and asking me to make a new website. It started with a
+		cosmic theme, then ocean theme, then rainforest theme, then finally
+		something in between all of that combined together. At v4 it started to look
+		less like a serious project and more like a 10 years old child mashing cool
+		PNG pictures in MS Paint. A designer they hired had no experience working
+		with Figma at all and was trying to draw assets from GPT-generated
+		screenshots by hand, then just cutting them out and collaging together. I
+		had to make my own Figma file with responsive containers and correct
+		layouts.
+	</p>
+	<p>
+		Luckily, I was able to convince the team to not design API reference pages
+		and was able to ship a pretty decent, responsive and nice documentation with
+		code examples, snappy navigation and color palette inspired by OpenAI
+		website.
+	</p>
+	<h2>Reception</h2>
+	<p>
+		The v4 version of the website had been launched at ryo-currency.com in
+		mid-2025. After receiving my final payment, the team expressed their wish to
+		continue working with me for a lower pay rate to which I politely declined.
+		I have not been contacted by them since.
 	</p>
 {/snippet}

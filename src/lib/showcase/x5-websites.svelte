@@ -7,7 +7,8 @@
 		id: "x5-websites",
 		name: "X5.io Websites",
 		description,
-		shortDescription: "",
+		shortDescription:
+			"B2B SaaS websites for x5.io/bot.biz built with React & Next.js",
 		banner: await getShowcasePicture("x5-websites", "banner"),
 		images: [
 			{

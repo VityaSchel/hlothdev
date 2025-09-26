@@ -7,7 +7,8 @@
 		id: "lufin",
 		name: "Lufin",
 		description,
-		shortDescription: "",
+		shortDescription:
+			"A modern self-hosted file-sharing service and an alternative to lufi",
 		banner: await getShowcasePicture("lufin", "banner"),
 		images: [
 			{

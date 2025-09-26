@@ -7,7 +7,8 @@
 		id: "unddit",
 		name: "Unddit",
 		description,
-		shortDescription: "",
+		shortDescription:
+			"Frontend for Unddit powered by PullPush — view removed Reddit posts and comments",
 		banner: await getShowcasePicture("unddit", "banner"),
 		images: [
 			{
@@ -22,7 +23,7 @@
 		links: [
 			{
 				url: "https://unddit.netlify.app/",
-				label: "Visit Unddit",
+				label: "Visit Unddit (my version at unddit.netlify.app)",
 			},
 		],
 	};
@@ -54,5 +55,10 @@
 		modern frontend using Svelte and Tailwind CSS. My project still uses the
 		official PullPush API and only replaces the static frontend working
 		client-side.
+	</p>
+	<p>
+		In mid 2025 I had to stop working with this client who maintains PullPush
+		because of harassment, unethical behavior and significant underpayment. Read
+		more on <a href="/showcase/ryo-coin">RYO Coin page</a> in showcase.
 	</p>
 {/snippet}
