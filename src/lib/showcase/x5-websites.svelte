@@ -8,7 +8,7 @@
 		name: "X5.io Websites",
 		description,
 		shortDescription:
-			"B2B SaaS websites for x5.io/bot.biz built with React & Next.js",
+			"B2B SaaS websites for x5.io/bot.biz built with React & Next.js, made for freelance client in 2021-2023",
 		banner: await getShowcasePicture("x5-websites", "banner"),
 		images: [
 			{

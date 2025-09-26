@@ -7,7 +7,8 @@
 		id: "ryo-coin",
 		name: "RYO Coin",
 		description,
-		shortDescription: "A website for RYO, a privacy-focused cryptocurrency",
+		shortDescription:
+			"A website for RYO, a privacy-focused cryptocurrency, made for freelance client in 2025",
 		banner: await getShowcasePicture("ryo-coin", "banner"),
 		images: [
 			{
@@ -87,9 +88,11 @@
 			>"for the love of god, please punch out if I gotta take a fap break"</i
 		>. I have been warned twice about this. This was the first communication I
 		had with him without any prior context to this statement, practically after
-		we just greeted, so I just assume Fireice has some kind of kink of thinking
-		how his employees masturbate. I was also not allowed to "simulate work"
-		under the threat of instantly being "fired without pay".
+		we just greeted. This left me wondering if Fireice introduces all his
+		employees to this specific rule. I was also not allowed to make any breaks
+		or be distracted under the threat of instantly being "fired without pay".
+		The software we used also tracked my "activity" based on number of clicks
+		and mouse movements I make every 2 minutes.
 	</p>
 	<p>
 		The overall communication with Fireice was composed of me talking about work
@@ -103,8 +106,8 @@
 	<p>
 		Every time I sent my time-entries sheet he took about 3 days to analyze it,
 		find how much time he wants to substract and tell me once again that I must
-		"punch out" if I went to drink some water even for one minute. Keep in mind
-		that this was on about half of my normal hourly rate.
+		"punch out" if I went to drink some water or visit bathroom even for two
+		minutes. Keep in mind that this was on about half of my normal hourly rate.
 	</p>
 	<h2>Design</h2>
 	<p>

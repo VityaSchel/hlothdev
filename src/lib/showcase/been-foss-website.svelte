@@ -8,7 +8,7 @@
 		name: "been-foss",
 		description,
 		shortDescription:
-			'Free open source alternative to ad and trackers cluttered "been" app made with Svelte 5',
+			'A free open source alternative to ad and trackers cluttered "been" app made with Svelte 5',
 		banner: await getShowcasePicture("been-foss", "banner"),
 		images: [
 			{

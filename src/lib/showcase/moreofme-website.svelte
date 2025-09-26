@@ -8,7 +8,7 @@
 		name: "Moreof.me",
 		description,
 		shortDescription:
-			"Moreof.me is a a personal web space, encouraging users to express their thoughts and hobbies, which I was hired to build as a sole full-stack developer in 2024.",
+			"A personal web space, encouraging users to express their thoughts and hobbies, made for freelance client in 2024-2025",
 		banner: await getShowcasePicture("moreofme", "banner"),
 		images: [
 			{

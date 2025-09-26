@@ -8,7 +8,7 @@
 		name: "Batumi.bike",
 		description,
 		shortDescription:
-			"Map of safe roads for electric scooters in Batumi, Georgia based on OpenStreetMap data",
+			"A map of safe roads for electric scooters in Batumi, Georgia based on OpenStreetMap data",
 		banner: await getShowcasePicture("batumi-bike", "banner"),
 		images: [
 			{

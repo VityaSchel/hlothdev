@@ -8,7 +8,7 @@
 		name: "Mtproto Mobile",
 		description,
 		shortDescription:
-			"MTProto Mobile is an Android app allowing raw communication with Telegram API using Core API protocol.",
+			"An Android app allowing raw communication with Telegram API using Core API protocol.",
 		banner: await getShowcasePicture("mtproto-mobile", "banner"),
 		images: [
 			{

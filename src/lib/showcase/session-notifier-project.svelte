@@ -8,7 +8,7 @@
 		name: "Session Notifier",
 		description,
 		shortDescription:
-			"A REST API for sending Session messages programmatically",
+			"A REST API for sending Session messages programmatically, made for freelance client in 2024",
 		banner: await getShowcasePicture("session-notifier", "banner"),
 		images: [
 			{

@@ -8,7 +8,7 @@
 		name: "Samsung Pinger",
 		description,
 		shortDescription:
-			'MacOS widget with a "Ring my Samsung" button device, written in Swift',
+			'A macOS widget with a "Ring my Samsung" button device, written in Swift',
 		banner: await getShowcasePicture("samsung-pinger", "banner"),
 		images: [
 			{

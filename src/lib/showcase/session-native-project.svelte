@@ -7,7 +7,7 @@
 		id: "session-native",
 		name: "Session Native",
 		description,
-		shortDescription: "Unofficial native macOS client for Session messenger",
+		shortDescription: "An unofficial native macOS client for Session messenger",
 		banner: await getShowcasePicture("session-native", "banner"),
 		images: [
 			{

@@ -8,7 +8,7 @@
 		name: "ONS Registry",
 		description,
 		shortDescription:
-			"ONS Registry (Oxen Name System registry) is a website collecting decrypted ONS/LNS/SNS names and their history, price, owner, etc from the Session Token blockchain",
+			"A website collecting decrypted ONS/LNS/SNS names and their history, price, owner, etc from the Session Token blockchain",
 		banner: await getShowcasePicture("ons-registry", "banner"),
 		images: [
 			{

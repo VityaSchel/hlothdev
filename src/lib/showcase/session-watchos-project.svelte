@@ -8,7 +8,7 @@
 		name: "Session watchOS",
 		description,
 		shortDescription:
-			"Unofficial native Apple Watch watchOS client for Session Messenger",
+			"An unofficial native Apple Watch watchOS client for Session Messenger",
 		banner: await getShowcasePicture("session-watchos", "banner"),
 		images: [
 			{

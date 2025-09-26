@@ -8,7 +8,7 @@
 		name: "Session Web",
 		description,
 		shortDescription:
-			"Experimental project running Session messenger in a web browser online",
+			"An experimental project running Session messenger in a web browser online",
 		banner: await getShowcasePicture("session-web", "banner"),
 		images: [
 			{

@@ -8,7 +8,7 @@
 		name: "Unddit",
 		description,
 		shortDescription:
-			"Frontend for Unddit powered by PullPush — view removed Reddit posts and comments",
+			"A frontend for Unddit powered by PullPush — view removed Reddit posts and comments, made for freelance client in 2025",
 		banner: await getShowcasePicture("unddit", "banner"),
 		images: [
 			{

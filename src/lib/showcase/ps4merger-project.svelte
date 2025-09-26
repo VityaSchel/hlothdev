@@ -8,7 +8,7 @@
 		name: "PS4 Merger",
 		description,
 		shortDescription:
-			"PlayStation 4 developer tool allowing to merge .pkg files directly on the console",
+			"A PlayStation 4 developer tool allowing to merge .pkg files directly on the console",
 		banner: await getShowcasePicture("ps4-merger", "banner"),
 		images: [
 			{

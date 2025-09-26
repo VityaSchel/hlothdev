@@ -7,7 +7,7 @@
 		id: "sipacker",
 		name: "SIPacker",
 		description,
-		shortDescription: "PWA for creating playable SiGame custom packs",
+		shortDescription: "A PWA for creating playable SiGame custom packs",
 		banner: await getShowcasePicture("sipacker", "banner"),
 		images: [
 			{

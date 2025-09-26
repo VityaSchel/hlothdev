@@ -8,7 +8,7 @@
 		name: "OGE generator",
 		description,
 		shortDescription:
-			"Next-generation generator for the national informatics exam in Russia.",
+			"A next-generation generator for the national informatics exam in Russia",
 		banner: await getShowcasePicture("oge-generator", "banner"),
 		images: [
 			{

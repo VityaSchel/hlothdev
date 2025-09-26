@@ -8,7 +8,7 @@
 		name: "pow-reaction",
 		description,
 		shortDescription:
-			"proof-of-work reactions for your blogs 👍 ❤️ 👀 😮 🤔 🚀",
+			"A library for proof-of-work reactions built with Svelte 👍 ❤️ 👀 😮 🤔 🚀",
 		banner: await getShowcasePicture("pow-reaction", "banner"),
 		images: [
 			{
