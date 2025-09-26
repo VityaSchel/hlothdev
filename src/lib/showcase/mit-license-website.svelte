@@ -51,23 +51,19 @@
 		derivative works based on GPL-licensed projects.
 	</p>
 	<h2>Why MIT license?</h2>
+	<p>It reflects the way I want my work to be felt.</p>
+	<ol class="my-2 list-[decimal-leading-zero] ps-7">
+		<li>Simple: 154 words — straight to the point.</li>
+		<li>Driving: Adopt, remix, distribute — it drives innovation.</li>
+		<li>
+			Fair: Under one condition: attribution somewhere on the licenses page.
+		</li>
+	</ol>
 	<p>
-		It reflects the way I want my work to be felt.<br />1. Simple: 154 words —
-		straight to the point.<br />2. Driving: Adopt, remix, distribute — it drives
-		innovation.<br />3. Fair: Under one condition: attribution somewhere on the
-		licenses page.
-		<br />
-		MIT license has been the #1 most popular open source license since at least 2008.
-		It's used by successfull open-source projects you heard of: Node.js, Preact,
-		React, React Native, Next.js, Nest.js, Svelte & SvelteKit, Vue & Nuxt.js, Angular,
-		Gatsby, React-Router, jQuery, Electron, Tauri, nw.js, Express, Fastify, Elysia,
-		Bun, Webpack, Babel, Vite, Bootstrap, TailwindCSS, Mocha, Chai, Three.js, zod,
-		Axios, date-fns, Material UI, Shadcn UI, Chart.js, Redux, Ruby on Rails, ESLint,
-		Prettier, esbuild, Cypress, Jest, Gitea, Jekyll, Visual Studio Code, traefik,
-		GitLab, ohmyzsh, Rust, Godot, Zig, nvm, Bitcoin, and so, so many more! Even more
-		if we count all permissive licenses like Apache-2.0, BSD, ISC, etc. According
-		to GitHub there are 16.2M public repositories with MIT license as of September
-		2025!
+		MIT license has been the #1 most popular open source license since at least
+		2008. It's used by ton of successfull open-source projects you heard of.
+		According to GitHub there are 16.2M public repositories with MIT license as
+		of September 2025!
 	</p>
 	<h2>change.mit.hloth.dev</h2>
 	<p>
