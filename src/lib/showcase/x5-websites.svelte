@@ -1,6 +1,37 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import { getShowcasePicture } from "$lib/showcase/picture";
+	import banner from "$showcase/x5-websites/banner.webp?enhanced&quality=100";
+	import bannerLqip from "$showcase/x5-websites/banner.webp?lqip";
+	import ketoplan1 from "$showcase/x5-websites/ketoplan-1.webp?enhanced&quality=100";
+	import ketoplan1Lqip from "$showcase/x5-websites/ketoplan-1.webp?lqip";
+	import ketoplan2 from "$showcase/x5-websites/ketoplan-2.webp?enhanced&quality=100";
+	import ketoplan2Lqip from "$showcase/x5-websites/ketoplan-2.webp?lqip";
+	import ketoplan3 from "$showcase/x5-websites/ketoplan-3.webp?enhanced&quality=100";
+	import ketoplan3Lqip from "$showcase/x5-websites/ketoplan-3.webp?lqip";
+	import mentalHealth1 from "$showcase/x5-websites/mental-health-1.webp?enhanced&quality=100";
+	import mentalHealth1Lqip from "$showcase/x5-websites/mental-health-1.webp?lqip";
+	import mentalHealth2 from "$showcase/x5-websites/mental-health-2.webp?enhanced&quality=100";
+	import mentalHealth2Lqip from "$showcase/x5-websites/mental-health-2.webp?lqip";
+	import mentalHealth3 from "$showcase/x5-websites/mental-health-3.webp?enhanced&quality=100";
+	import mentalHealth3Lqip from "$showcase/x5-websites/mental-health-3.webp?lqip";
+	import botBizLanding from "$showcase/x5-websites/bot-biz-landing.webp?enhanced&quality=100";
+	import botBizLandingLqip from "$showcase/x5-websites/bot-biz-landing.webp?lqip";
+	import botBizFrontend from "$showcase/x5-websites/bot-biz-frontend.webp?enhanced&quality=100";
+	import botBizFrontendLqip from "$showcase/x5-websites/bot-biz-frontend.webp?lqip";
+	import botBizAdminDashboard1 from "$showcase/x5-websites/bot-biz-admin-dashboard-1.webp?enhanced&quality=100";
+	import botBizAdminDashboard1Lqip from "$showcase/x5-websites/bot-biz-admin-dashboard-1.webp?lqip";
+	import botBizAdminDashboard2 from "$showcase/x5-websites/bot-biz-admin-dashboard-2.webp?enhanced&quality=100";
+	import botBizAdminDashboard2Lqip from "$showcase/x5-websites/bot-biz-admin-dashboard-2.webp?lqip";
+	import lovebot from "$showcase/x5-websites/lovebot.webp?enhanced&quality=100";
+	import lovebotLqip from "$showcase/x5-websites/lovebot.webp?lqip";
+	import glassbot from "$showcase/x5-websites/glassbot.webp?enhanced&quality=100";
+	import glassbotLqip from "$showcase/x5-websites/glassbot.webp?lqip";
+	import prankbot from "$showcase/x5-websites/prankbot.webp?enhanced&quality=100";
+	import prankbotLqip from "$showcase/x5-websites/prankbot.webp?lqip";
+	import checkoutDialog from "$showcase/x5-websites/checkout-dialog.webp?enhanced&quality=100";
+	import checkoutDialogLqip from "$showcase/x5-websites/checkout-dialog.webp?lqip";
+	import flatUiKit from "$showcase/x5-websites/flat-ui-kit.webp?enhanced&quality=100";
+	import flatUiKitLqip from "$showcase/x5-websites/flat-ui-kit.webp?lqip";
 	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
 
 	export const x5Websites: ShowcaseItem = {
@@ -10,76 +41,88 @@
 		description,
 		shortDescription:
 			"B2B SaaS websites for x5.io/bot.biz built with React & Next.js, made for freelance client in 2021-2023",
-		banner: await getShowcasePicture("x5-websites", "banner"),
+		banner: {
+			src: banner,
+			lqip: bannerLqip,
+		},
 		images: [
 			{
-				...(await getShowcasePicture("x5-websites", "ketoplan-1")),
+				src: ketoplan1,
+				lqip: ketoplan1Lqip,
 				alt: 'Ketoplan website screenshot with a plate of food and a quiz question: "Select protein source"',
 			},
 			{
-				...(await getShowcasePicture("x5-websites", "ketoplan-2")),
+				src: ketoplan2,
+				lqip: ketoplan2Lqip,
 				alt: 'Ketoplan website screenshot with text: "Your keto-diet plan is ready"',
 			},
 			{
-				...(await getShowcasePicture("x5-websites", "ketoplan-3")),
+				src: ketoplan3,
+				lqip: ketoplan3Lqip,
 				alt: 'Ketoplan website screenshot with text: "Individual diet plan"',
 				class: "xl:hidden",
 			},
 			{
-				...(await getShowcasePicture("x5-websites", "mental-health-1")),
+				src: mentalHealth1,
+				lqip: mentalHealth1Lqip,
 				alt: 'Mental health website screenshot with text: "How do you rate your stress level in your everyday life?"',
 			},
 			{
-				...(await getShowcasePicture("x5-websites", "mental-health-2")),
+				src: mentalHealth2,
+				lqip: mentalHealth2Lqip,
 				alt: 'Mental health website screenshot with text: "How do you rate your work-life balance?"',
 				class: "xl:hidden",
 			},
 			{
-				...(await getShowcasePicture("x5-websites", "mental-health-3")),
+				src: mentalHealth3,
+				lqip: mentalHealth3Lqip,
 				alt: "Mental health website screenshot with questionnaire results",
 				class: "px1180:hidden",
 			},
 			{
-				...(await getShowcasePicture("x5-websites", "bot-biz-landing")),
+				src: botBizLanding,
+				lqip: botBizLandingLqip,
 				alt: "Bot.biz landing made in 2021",
 			},
 			{
-				...(await getShowcasePicture("x5-websites", "bot-biz-frontend")),
+				src: botBizFrontend,
+				lqip: botBizFrontendLqip,
 				alt: "Bot.biz dashboard frontend",
 			},
 			{
-				...(await getShowcasePicture(
-					"x5-websites",
-					"bot-biz-admin-dashboard-1",
-				)),
+				src: botBizAdminDashboard1,
+				lqip: botBizAdminDashboard1Lqip,
 				alt: "Bot.biz admin dashboard screenshot with charts",
 			},
 			{
-				...(await getShowcasePicture(
-					"x5-websites",
-					"bot-biz-admin-dashboard-2",
-				)),
+				src: botBizAdminDashboard2,
+				lqip: botBizAdminDashboard2Lqip,
 				alt: "Bot.biz admin dashboard screenshot with transactions list",
 				class: "px1100:hidden",
 			},
 			{
-				...(await getShowcasePicture("x5-websites", "lovebot")),
+				src: lovebot,
+				lqip: lovebotLqip,
 				alt: 'Lovebot screenshot with text: "Lovebot module: module allows users to search their secret admirers on VK page using page visit data and post reactions"',
 			},
 			{
-				...(await getShowcasePicture("x5-websites", "glassbot")),
+				src: glassbot,
+				lqip: glassbotLqip,
 				alt: "Glassbot screenshot with landing page for B2B sales",
 			},
 			{
-				...(await getShowcasePicture("x5-websites", "prankbot")),
+				src: prankbot,
+				lqip: prankbotLqip,
 				alt: 'Prankbot homepage screenshot with text: "Prank your friend with a phone call and get the recording audio"',
 			},
 			{
-				...(await getShowcasePicture("x5-websites", "checkout-dialog")),
+				src: checkoutDialog,
+				lqip: checkoutDialogLqip,
 				alt: 'Transaction checkout dialog with text "Purchase subscription" / 999 ₽ / Card number / Month and year / CVC / Email / [Checkbox] Foo bar / [Checkbox] Hello world / [Button] Pay 999 ₽',
 			},
 			{
-				...(await getShowcasePicture("x5-websites", "flat-ui-kit")),
+				src: flatUiKit,
+				lqip: flatUiKitLqip,
 				alt: "Flat UI kit demo with buttons, checkboxes, error messages and input fields",
 			},
 		],

@@ -18,7 +18,7 @@
 				class="flex aspect-square h-8 w-8 items-center justify-center
 					rounded-full bg-[#3B82F7] px470:h-12 px470:w-12 md:h-10 md:w-10
 					px870:h-12 px870:w-12 lg:h-16 lg:w-16"
-					aria-hidden="true"
+				aria-hidden="true"
 			>
 				<svg
 					class="h-5 px470:h-[30px] md:h-[28px] lg:h-[33px]"

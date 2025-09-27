@@ -1,7 +1,14 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import { getShowcasePicture } from "$lib/showcase/picture";
 	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
+	import banner from "$showcase/batumi-bike/banner.webp?enhanced&quality=100";
+	import bannerLqip from "$showcase/batumi-bike/banner.webp?lqip";
+	import screenshot1 from "$showcase/batumi-bike/screenshot-1.webp?enhanced&quality=100";
+	import screenshot1Lqip from "$showcase/batumi-bike/screenshot-1.webp?lqip";
+	import screenshot2 from "$showcase/batumi-bike/screenshot-2.webp?enhanced&quality=100";
+	import screenshot2Lqip from "$showcase/batumi-bike/screenshot-2.webp?lqip";
+	import screenshot3 from "$showcase/batumi-bike/screenshot-3.webp?enhanced&quality=100";
+	import screenshot3Lqip from "$showcase/batumi-bike/screenshot-3.webp?lqip";
 
 	export const batumiBikeWebsite: ShowcaseItem = {
 		type: "website",
@@ -10,18 +17,24 @@
 		description,
 		shortDescription:
 			"A map of safe roads for electric scooters in Batumi, Georgia based on OpenStreetMap data",
-		banner: await getShowcasePicture("batumi-bike", "banner"),
+		banner: {
+			src: banner,
+			lqip: bannerLqip,
+		},
 		images: [
 			{
-				...(await getShowcasePicture("batumi-bike", "screenshot-1")),
+				src: screenshot1,
+				lqip: screenshot1Lqip,
 				alt: "Batumi.bike website screenshot showing the map with green, yellow and red lines representing roads quality in Batumi, Georgia",
 			},
 			{
-				...(await getShowcasePicture("batumi-bike", "screenshot-2")),
+				src: screenshot2,
+				lqip: screenshot2Lqip,
 				alt: "Development screenshot with OpenStreetMap data imported and rendered as svg",
 			},
 			{
-				...(await getShowcasePicture("batumi-bike", "screenshot-3")),
+				src: screenshot3,
+				lqip: screenshot3Lqip,
 				alt: "Batumi.bike website screenshot with search results for points of interest",
 			},
 		],

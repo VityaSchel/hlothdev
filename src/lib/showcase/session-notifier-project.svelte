@@ -1,6 +1,9 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import { getShowcasePicture } from "$lib/showcase/picture";
+	import banner from "$showcase/session-notifier/banner.webp?enhanced&quality=100";
+	import bannerLqip from "$showcase/session-notifier/banner.webp?lqip";
+	import screenshot from "$showcase/session-notifier/screenshot.webp?enhanced&quality=100";
+	import screenshotLqip from "$showcase/session-notifier/screenshot.webp?lqip";
 
 	export const sessionNotifierProject: ShowcaseItem = {
 		type: "project",
@@ -9,10 +12,14 @@
 		description,
 		shortDescription:
 			"A REST API for sending Session messages programmatically, made for freelance client in 2024",
-		banner: await getShowcasePicture("session-notifier", "banner"),
+		banner: {
+			src: banner,
+			lqip: bannerLqip,
+		},
 		images: [
 			{
-				...(await getShowcasePicture("session-notifier", "screenshot")),
+				src: screenshot,
+				lqip: screenshotLqip,
 				alt: "Session.email website",
 			},
 		],

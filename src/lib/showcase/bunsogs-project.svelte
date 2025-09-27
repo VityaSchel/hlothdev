@@ -1,6 +1,15 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import { getShowcasePicture } from "$lib/showcase/picture";
+	import banner from "$showcase/bunsogs/banner.webp?enhanced&quality=100";
+	import bannerLqip from "$showcase/bunsogs/banner.webp?lqip";
+	import screenshot1 from "$showcase/bunsogs/screenshot-1.webp?enhanced&quality=100";
+	import screenshot1Lqip from "$showcase/bunsogs/screenshot-1.webp?lqip";
+	import screenshot2 from "$showcase/bunsogs/screenshot-2.webp?enhanced&quality=100";
+	import screenshot2Lqip from "$showcase/bunsogs/screenshot-2.webp?lqip";
+	import screenshot3 from "$showcase/bunsogs/screenshot-3.webp?enhanced&quality=100";
+	import screenshot3Lqip from "$showcase/bunsogs/screenshot-3.webp?lqip";
+	import screenshot4 from "$showcase/bunsogs/screenshot-4.webp?enhanced&quality=100";
+	import screenshot4Lqip from "$showcase/bunsogs/screenshot-4.webp?lqip";
 	import { getMainDomain } from "$lib/utils";
 
 	export const bunsogsProject: ShowcaseItem = {
@@ -10,22 +19,29 @@
 		description,
 		shortDescription:
 			"A better Session Open Group Server implementation in TypeScript with Bun",
-		banner: await getShowcasePicture("bunsogs", "banner"),
+		banner: {
+			src: banner,
+			lqip: bannerLqip,
+		},
 		images: [
 			{
-				...(await getShowcasePicture("bunsogs", "screenshot-1")),
+				src: screenshot1,
+				lqip: screenshot1Lqip,
 				alt: "Bunsogs main menu with options: Edit name, Edit description, Add avatar, General settings, Manage mods and admins, Ban/unban user(s), Manage users permissions, Delete room, Go back",
 			},
 			{
-				...(await getShowcasePicture("bunsogs", "screenshot-2")),
+				src: screenshot2,
+				lqip: screenshot2Lqip,
 				alt: "Bunsogs user permissions overrides: Accessible, Read, Write, Upload — values: True, False, Not specified",
 			},
 			{
-				...(await getShowcasePicture("bunsogs", "screenshot-3")),
+				src: screenshot3,
+				lqip: screenshot3Lqip,
 				alt: "Bunsogs rate limits settings: How many messages user can send in a time frame? Pass 0 to disable rate limits",
 			},
 			{
-				...(await getShowcasePicture("bunsogs", "screenshot-4")),
+				src: screenshot4,
+				lqip: screenshot4Lqip,
 				alt: "Bunsogs global admins/moderators settings: Add global admin, Add global moderator, Go back",
 			},
 		],

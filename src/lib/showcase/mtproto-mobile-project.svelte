@@ -1,6 +1,9 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import { getShowcasePicture } from "$lib/showcase/picture";
+	import banner from "$showcase/mtproto-mobile/banner.webp?enhanced&quality=100";
+	import bannerLqip from "$showcase/mtproto-mobile/banner.webp?lqip";
+	import screenshots from "$showcase/mtproto-mobile/screenshots.webp?enhanced&quality=100";
+	import screenshotsLqip from "$showcase/mtproto-mobile/screenshots.webp?lqip";
 	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
 
 	export const mtprotoMobileProject: ShowcaseItem = {
@@ -10,10 +13,14 @@
 		description,
 		shortDescription:
 			"An Android app allowing raw communication with Telegram API using Core API protocol.",
-		banner: await getShowcasePicture("mtproto-mobile", "banner"),
+		banner: {
+			src: banner,
+			lqip: bannerLqip,
+		},
 		images: [
 			{
-				...(await getShowcasePicture("mtproto-mobile", "screenshots")),
+				src: screenshots,
+				lqip: screenshotsLqip,
 				alt: "Mtproto Mobile screenshots. 1) Method execution request form 2) Response browser 3) Another method: auth.signIn",
 			},
 		],

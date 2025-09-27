@@ -1,6 +1,15 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import { getShowcasePicture } from "$lib/showcase/picture";
+	import banner from "$showcase/sipacker/banner.webp?enhanced&quality=100";
+	import bannerLqip from "$showcase/sipacker/banner.webp?lqip";
+	import screenshot1 from "$showcase/sipacker/screenshot-1.webp?enhanced&quality=100";
+	import screenshot1Lqip from "$showcase/sipacker/screenshot-1.webp?lqip";
+	import siquester from "$showcase/sipacker/siquester.webp?enhanced&quality=100";
+	import siquesterLqip from "$showcase/sipacker/siquester.webp?lqip";
+	import screenshot2 from "$showcase/sipacker/screenshot-2.webp?enhanced&quality=100";
+	import screenshot2Lqip from "$showcase/sipacker/screenshot-2.webp?lqip";
+	import screenshot3 from "$showcase/sipacker/screenshot-3.webp?enhanced&quality=100";
+	import screenshot3Lqip from "$showcase/sipacker/screenshot-3.webp?lqip";
 
 	export const sipackerWebsite: ShowcaseItem = {
 		type: "website",
@@ -8,22 +17,29 @@
 		name: "SIPacker",
 		description,
 		shortDescription: "A PWA for creating playable SiGame custom packs",
-		banner: await getShowcasePicture("sipacker", "banner"),
+		banner: {
+			src: banner,
+			lqip: bannerLqip,
+		},
 		images: [
 			{
-				...(await getShowcasePicture("sipacker", "screenshot-1")),
+				src: screenshot1,
+				lqip: screenshot1Lqip,
 				alt: "SIPacker website screenshot with a list of questions in a pack",
 			},
 			{
-				...(await getShowcasePicture("sipacker", "siquester")),
+				src: siquester,
+				lqip: siquesterLqip,
 				alt: "The official SiQuester app running on Windows",
 			},
 			{
-				...(await getShowcasePicture("sipacker", "screenshot-2")),
+				src: screenshot2,
+				lqip: screenshot2Lqip,
 				alt: "SIPacker website screenshot with a question editor",
 			},
 			{
-				...(await getShowcasePicture("sipacker", "screenshot-3")),
+				src: screenshot3,
+				lqip: screenshot3Lqip,
 				alt: "SIPacker website screenshot with file manager with compression options",
 			},
 		],

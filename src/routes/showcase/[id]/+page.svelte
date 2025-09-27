@@ -56,7 +56,7 @@
 					aria-label="Project images"
 				>
 					{#each project.images as { src, lqip, alt, class: className }, i (i)}
-						<div class={className}>
+						<div class={['flex justify-end', className]}>
 							<enhanced:img
 								{src}
 								{alt}

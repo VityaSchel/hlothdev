@@ -29,9 +29,9 @@
 	aria-hidden="true"
 >
 	<enhanced:img
-		class="absolute top-0 left-0 h-full w-full bg-cover object-cover text-[0px]"
+		class="absolute top-0 left-0 h-full w-full object-cover"
 		src="$lib/assets/sonoma-video-banner.webp?quality=100"
-		style="background-image: url('{bgLqip.lqip}'), linear-gradient(to bottom, #1c330c, #1c330c);"
+		style="background-image: url('{bgLqip.lqip}'), linear-gradient(to bottom, #1c330c, #1c330c); background-size: cover; font-size: 0px;"
 		width="3840"
 		height="2160"
 		alt="Background image"
@@ -43,9 +43,11 @@
 		muted
 		autoplay
 		playsinline
+		disablepictureinpicture
+		disableremoteplayback
 		class={[
 			`mask test s v a g a svaga i have it navalom absolute top-0 left-0 z-[1]
-		h-full w-full object-cover object-center motion-reduce:hidden`,
+h-full w-full object-cover object-center motion-reduce:hidden`,
 			{
 				hidden: saveData || page.url.host.endsWith(".onion"),
 			},

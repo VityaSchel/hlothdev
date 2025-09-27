@@ -1,6 +1,21 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import { getShowcasePicture } from "$lib/showcase/picture";
+	import bannerSrc from "$showcase/ryo-coin/banner.webp?enhanced&quality=100";
+	import bannerLqip from "$showcase/ryo-coin/banner.webp?lqip";
+	import v1Screenshot1Src from "$showcase/ryo-coin/v1-screenshot-1.webp?enhanced&quality=100";
+	import v1Screenshot1Lqip from "$showcase/ryo-coin/v1-screenshot-1.webp?lqip";
+	import v1Screenshot2Src from "$showcase/ryo-coin/v1-screenshot-2.webp?enhanced&quality=100";
+	import v1Screenshot2Lqip from "$showcase/ryo-coin/v1-screenshot-2.webp?lqip";
+	import v2ScreenshotSrc from "$showcase/ryo-coin/v2-screenshot.webp?enhanced&quality=100";
+	import v2ScreenshotLqip from "$showcase/ryo-coin/v2-screenshot.webp?lqip";
+	import v3ScreenshotSrc from "$showcase/ryo-coin/v3-screenshot.webp?enhanced&quality=100";
+	import v3ScreenshotLqip from "$showcase/ryo-coin/v3-screenshot.webp?lqip";
+	import v4Screenshot1Src from "$showcase/ryo-coin/v4-screenshot-1.webp?enhanced&quality=100";
+	import v4Screenshot1Lqip from "$showcase/ryo-coin/v4-screenshot-1.webp?lqip";
+	import v4Screenshot2Src from "$showcase/ryo-coin/v4-screenshot-2.webp?enhanced&quality=100";
+	import v4Screenshot2Lqip from "$showcase/ryo-coin/v4-screenshot-2.webp?lqip";
+	import v4Screenshot3Src from "$showcase/ryo-coin/v4-screenshot-3.webp?enhanced&quality=100";
+	import v4Screenshot3Lqip from "$showcase/ryo-coin/v4-screenshot-3.webp?lqip";
 
 	export const ryoCoinWebsite: ShowcaseItem = {
 		type: "website",
@@ -9,34 +24,41 @@
 		description,
 		shortDescription:
 			"A website for RYO, a privacy-focused cryptocurrency, made for freelance client in 2025",
-		banner: await getShowcasePicture("ryo-coin", "banner"),
+		banner: { src: bannerSrc, lqip: bannerLqip },
 		images: [
 			{
-				...(await getShowcasePicture("ryo-coin", "v1-screenshot-1")),
+				src: v1Screenshot1Src,
+				lqip: v1Screenshot1Lqip,
 				alt: "RYO coin website v1 screenshot with text: PRIVACY FOR EVERYONE / Confidently Transact with the Highest Degree of Anonymity / [Button] Get Wallet App / [Button] Explore Blocks",
 			},
 			{
-				...(await getShowcasePicture("ryo-coin", "v1-screenshot-2")),
+				src: v1Screenshot2Src,
+				lqip: v1Screenshot2Lqip,
 				alt: "RYO coin website v1 screenshot with text: HASH RATE 1276,5 H/s; BLOCK TIME 240 Seconds — Difficulty adjusted every block; BLOCK REWARD 33.21 Ryo / Block + Fees — Adjusted every six months; Total supply 88,188,888; Dev Fund 8M; Then 263,000 coins each year for inflation; [Button] ALGORITHM; [Button] EMISSIONS",
 			},
 			{
-				...(await getShowcasePicture("ryo-coin", "v2-screenshot")),
+				src: v2ScreenshotSrc,
+				lqip: v2ScreenshotLqip,
 				alt: "RYO coin website v2 screenshot with text: Wallet / Local: Previous Ryo desktop GUI Wallet and Ryo LITE Wallet have been merged into one GUI wallet. The development of a brand new wallet, built from scratch using modern Vue.js and Electron frameworks, resulted in the release of Ryo Wallet: Atom. [Button] READ MORE; [Button] DOWNLOAD FOR WINDOWS / [Button] DOWNLOAD FOR LINUX (APPIMAGE) / [Button] DOWNLOAD FOR LINUX (TAR ARCHIVE) / [Button] SOURCE CODE (GITHUB); Web: Ultra-fast WEB based wallet - Ryo Wallet Quasar. Quasar brings the user friendly interface of our desktop GUI wallet (Atom) to the web. [Button] READ MORE; [Button] OPEN WEB WALLET",
 			},
 			{
-				...(await getShowcasePicture("ryo-coin", "v3-screenshot")),
+				src: v3ScreenshotSrc,
+				lqip: v3ScreenshotLqip,
 				alt: "RYO coin website v3 screenshot with text: Established April 2017; PRIVATE / Ryo was conceived with the highest levels of privacy in mind. Ring Confidential Transactions with minimum ringsize of 25 were implemented to conceal every transaction in Ryo network. Following migration to zk-proofs will make potential tracing of Ryo recipients even more impossible. Have piece of mind knowing that what you choose to do with your money is your business, not anyone else's.; UNTRACEABLE / As privacy is the core foundation of Ryo, sending and receiving addresses are encrypted and transaction amounts are obfuscated by default. Disposable ghost addresses conceal your real Ryo address from senders, allowing for truly anonymous and untraceable transactions. Our uniform payment ID system, makes transactions that use payment IDs untraceable and hides the very fact that you use IDs.",
 			},
 			{
-				...(await getShowcasePicture("ryo-coin", "v4-screenshot-1")),
+				src: v4Screenshot1Src,
+				lqip: v4Screenshot1Lqip,
 				alt: "RYO coin website v4 screenshot with text: WELCOME TO PLANET RYO / The Sovereign World of Privacy Cryptocurrency; Why RYO?; Business room; FAQ; Library Gallery",
 			},
 			{
-				...(await getShowcasePicture("ryo-coin", "v4-screenshot-2")),
+				src: v4Screenshot2Src,
+				lqip: v4Screenshot2Lqip,
 				alt: "RYO coin website v4 API reference screenshot with text: Daemon RPC API Reference; Introduction / This is a list of the ryo-daemon-rpc calls, their inputs and outputs, and examples of each. If you need wallet-rpc-calls refer to: Wallet RPC API Reference; JSON RPC Methods / get_block_count / Aliases: (getblockcount) / Look up how many blocks are in the longest chain known to the node. / Example request <...>",
 			},
 			{
-				...(await getShowcasePicture("ryo-coin", "v4-screenshot-3")),
+				src: v4Screenshot3Src,
+				lqip: v4Screenshot3Lqip,
 				alt: "RYO coin website v4 API reference screenshot with text: get_block / Aliases: (getblock) / Full block information can be retrieved by either block height or hash, like with the above block header calls. For full block information, both lookups use the same method, but with different input parameters.",
 			},
 		],

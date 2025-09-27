@@ -1,7 +1,20 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import { getShowcasePicture } from "$lib/showcase/picture";
 	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
+	import bannerSrc from "$showcase/nock-trade/banner.webp?enhanced&quality=100";
+	import bannerLqip from "$showcase/nock-trade/banner.webp?lqip";
+	import screenshot1Src from "$showcase/nock-trade/screenshot-1.webp?enhanced&quality=100";
+	import screenshot1Lqip from "$showcase/nock-trade/screenshot-1.webp?lqip";
+	import screenshot2Src from "$showcase/nock-trade/screenshot-2.webp?enhanced&quality=100";
+	import screenshot2Lqip from "$showcase/nock-trade/screenshot-2.webp?lqip";
+	import screenshot3Src from "$showcase/nock-trade/screenshot-3.webp?enhanced&quality=100";
+	import screenshot3Lqip from "$showcase/nock-trade/screenshot-3.webp?lqip";
+	import screenshot4Src from "$showcase/nock-trade/screenshot-4.webp?enhanced&quality=100";
+	import screenshot4Lqip from "$showcase/nock-trade/screenshot-4.webp?lqip";
+	import screenshot5Src from "$showcase/nock-trade/screenshot-5.webp?enhanced&quality=100";
+	import screenshot5Lqip from "$showcase/nock-trade/screenshot-5.webp?lqip";
+	import screenshot6Src from "$showcase/nock-trade/screenshot-6.webp?enhanced&quality=100";
+	import screenshot6Lqip from "$showcase/nock-trade/screenshot-6.webp?lqip";
 
 	export const nockTradeWebsite: ShowcaseItem = {
 		type: "website",
@@ -10,30 +23,36 @@
 		description,
 		shortDescription:
 			"A trading platform that allows users to trade various assets seamlessly, made for freelance client in 2025",
-		banner: await getShowcasePicture("nock-trade", "banner"),
+		banner: { src: bannerSrc, lqip: bannerLqip },
 		images: [
 			{
-				...(await getShowcasePicture("nock-trade", "screenshot-1")),
+				src: screenshot1Src,
+				lqip: screenshot1Lqip,
 				alt: "Nock.trade home page screenshot with cards: Total funds deposited / Buy orders in this September / Sell orders in this September / Active users; Buy nock for BTC (2 WTS orders) / Sell nock for BTC (0 WTB orders)",
 			},
 			{
-				...(await getShowcasePicture("nock-trade", "screenshot-2")),
+				src: screenshot2Src,
+				lqip: screenshot2Lqip,
 				alt: "Nock.trade login page screenshot with text: Welcome back / Login to your Nock Trade account; Email / Password / Login",
 			},
 			{
-				...(await getShowcasePicture("nock-trade", "screenshot-3")),
+				src: screenshot3Src,
+				lqip: screenshot3Lqip,
 				alt: "Nock.trade order creation page screenshot with text: New order; Buy / Sell; Buy [input field] NOCK for [input field] USD each; Total … $0.00 USD / BTC; Your nock address – to receive funds / [input field]; Your BTC address – in case you cancel the order / [input field]; The exchange is performed between NOCK and BTC, and the USD price is only for your reference. 1 BTC = 112,883.80 USD; Fee: 0.5% +transaction costs / [button] Create order",
 			},
 			{
-				...(await getShowcasePicture("nock-trade", "screenshot-4")),
+				src: screenshot4Src,
+				lqip: screenshot4Lqip,
 				alt: "Nock.trade order fulfill page with text: You receive up to 90000 NOCK / They receive up to 0.01440000 BTC; N 50 Your receiving Nock address / max: N 90000; Your BTC address / [input field] To receive Nock; Your BTC address / [input field] To receive refund in case of failure; [button] Confirm purchase / Fee: 0.5% + transaction costs",
 			},
 			{
-				...(await getShowcasePicture("nock-trade", "screenshot-5")),
+				src: screenshot5Src,
+				lqip: screenshot5Lqip,
 				alt: "Nock.trade home page in dark theme",
 			},
 			{
-				...(await getShowcasePicture("nock-trade", "screenshot-6")),
+				src: screenshot6Src,
+				lqip: screenshot6Lqip,
 				alt: "Nock.trade account page in dark theme with text: Viktor / [button with a pencil]; nocktrade@hloth.dev; Change password / Delete account",
 			},
 		],

@@ -1,7 +1,10 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import { getShowcasePicture } from "$lib/showcase/picture";
 	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
+	import banner from "$showcase/been-foss/banner.webp?enhanced&quality=100";
+	import bannerLqip from "$showcase/been-foss/banner.webp?lqip";
+	import screenshot from "$showcase/been-foss/screenshot.webp?enhanced&quality=100";
+	import screenshotLqip from "$showcase/been-foss/screenshot.webp?lqip";
 
 	export const beenFossWebsite: ShowcaseItem = {
 		type: "website",
@@ -10,10 +13,14 @@
 		description,
 		shortDescription:
 			'A free open source alternative to ad and trackers cluttered "been" app made with Svelte 5',
-		banner: await getShowcasePicture("been-foss", "banner"),
+		banner: {
+			src: banner,
+			lqip: bannerLqip,
+		},
 		images: [
 			{
-				...(await getShowcasePicture("been-foss", "screenshot")),
+				src: screenshot,
+				lqip: screenshotLqip,
 				alt: "been-foss website main page screenshot with a world map",
 			},
 		],

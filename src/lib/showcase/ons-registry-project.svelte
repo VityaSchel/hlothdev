@@ -1,7 +1,10 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import { getShowcasePicture } from "$lib/showcase/picture";
 	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
+	import bannerSrc from "$showcase/ons-registry/banner.webp?enhanced&quality=100";
+	import bannerLqip from "$showcase/ons-registry/banner.webp?lqip";
+	import screenshotSrc from "$showcase/ons-registry/screenshot.webp?enhanced&quality=100";
+	import screenshotLqip from "$showcase/ons-registry/screenshot.webp?lqip";
 
 	export const onsRegistryProject: ShowcaseItem = {
 		type: "project",
@@ -10,10 +13,11 @@
 		description,
 		shortDescription:
 			"A website collecting decrypted ONS/LNS/SNS names and their history, price, owner, etc from the Session Token blockchain",
-		banner: await getShowcasePicture("ons-registry", "banner"),
+		banner: { src: bannerSrc, lqip: bannerLqip },
 		images: [
 			{
-				...(await getShowcasePicture("ons-registry", "screenshot")),
+				src: screenshotSrc,
+				lqip: screenshotLqip,
 				alt: "ONS Registry home page screenshot with text: Open OXEN Name System list, updated automatically from the blockchain. Easily lookup ONS names and get all authors usernames.",
 			},
 		],

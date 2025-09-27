@@ -1,6 +1,9 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import { getShowcasePicture } from "$lib/showcase/picture";
+	import banner from "$showcase/byom/banner.webp?enhanced&quality=100";
+	import bannerLqip from "$showcase/byom/banner.webp?lqip";
+	import screenshot from "$showcase/byom/screenshot.webp?enhanced&quality=100";
+	import screenshotLqip from "$showcase/byom/screenshot.webp?lqip";
 	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
 
 	export const byomProject: ShowcaseItem = {
@@ -10,10 +13,14 @@
 		description,
 		shortDescription:
 			"Build Your Own post-quantum self-hosted end-to-end encrypted Messenger",
-		banner: await getShowcasePicture("byom", "banner"),
+		banner: {
+			src: banner,
+			lqip: bannerLqip,
+		},
 		images: [
 			{
-				...(await getShowcasePicture("byom", "screenshot")),
+				src: screenshot,
+				lqip: screenshotLqip,
 				alt: "An example code demonstrating how byom library can be used for secure quantim-resistant communication",
 			},
 		],

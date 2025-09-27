@@ -3,7 +3,100 @@
 	import { transition } from "$lib/utils";
 	import { getSvgPath } from "figma-squircle";
 	import { onMount } from "svelte";
-	import { images } from "./favorite-things";
+	import favoriteThings from "$lib/assets/favorite-things/favorite-things.webp?enhanced&quality=100";
+	import favoriteThingsLqip from "$lib/assets/favorite-things/favorite-things.webp?lqip";
+	import games from "$lib/assets/favorite-things/games.webp?enhanced&quality=100";
+	import gamesLqip from "$lib/assets/favorite-things/games.webp?lqip";
+	import cinema from "$lib/assets/favorite-things/cinema.webp?enhanced&quality=100";
+	import cinemaLqip from "$lib/assets/favorite-things/cinema.webp?lqip";
+	import music from "$lib/assets/favorite-things/music.webp?enhanced&quality=100";
+	import musicLqip from "$lib/assets/favorite-things/music.webp?lqip";
+	import dish from "$lib/assets/favorite-things/dish.webp?enhanced&quality=100";
+	import dishLqip from "$lib/assets/favorite-things/dish.webp?lqip";
+	import influencer from "$lib/assets/favorite-things/influencer.webp?enhanced&quality=100";
+	import influencerLqip from "$lib/assets/favorite-things/influencer.webp?lqip";
+	import book from "$lib/assets/favorite-things/book.webp?enhanced&quality=100";
+	import bookLqip from "$lib/assets/favorite-things/book.webp?lqip";
+	import series from "$lib/assets/favorite-things/series.webp?enhanced&quality=100";
+	import seriesLqip from "$lib/assets/favorite-things/series.webp?lqip";
+	import quote from "$lib/assets/favorite-things/quote.webp?enhanced&quality=100";
+	import quoteLqip from "$lib/assets/favorite-things/quote.webp?lqip";
+	import love from "$lib/assets/favorite-things/love.webp?enhanced&quality=100";
+	import loveLqip from "$lib/assets/favorite-things/love.webp?lqip";
+
+	const images = [
+		{
+			img: {
+				src: favoriteThings,
+				lqip: favoriteThingsLqip,
+			},
+			alt: "Scroll to see my favorite things ➜",
+		},
+		{
+			img: {
+				src: games,
+				lqip: gamesLqip,
+			},
+			alt: "I love puzzle platformers, survival horrors and adventure sandboxes",
+		},
+		{
+			img: {
+				src: cinema,
+				lqip: cinemaLqip,
+			},
+			alt: "I love criminals, dramas and detectives",
+		},
+		{
+			img: {
+				src: music,
+				lqip: musicLqip,
+			},
+			alt: "Pop is always in my playlist",
+		},
+		{
+			img: {
+				src: dish,
+				lqip: dishLqip,
+			},
+			alt: "The best Tom Yum I tasted was in my  home city local bar",
+		},
+		{
+			img: {
+				src: influencer,
+				lqip: influencerLqip,
+			},
+			alt: "I admire Jerma985 unique personality and love watching his livestreams",
+		},
+		{
+			img: {
+				src: book,
+				lqip: bookLqip,
+			},
+			alt: "Steve Krug — Don’t make me think is a must-read for all web designers",
+		},
+		{
+			img: {
+				src: series,
+				lqip: seriesLqip,
+			},
+			alt: "Severance is my favorite TV series",
+		},
+		{
+			img: {
+				src: quote,
+				lqip: quoteLqip,
+			},
+			alt: "My favorite quote is one of my own",
+		},
+		{
+			img: {
+				src: love,
+				lqip: loveLqip,
+			},
+			alt: "But my most favorite thing in life is love",
+			href: "https://www.instagram.com/devio.10/",
+		},
+	];
 
 	let width = $state(0);
 	let height = $state(0);
@@ -126,32 +219,34 @@
 	.scrollbar-invisible {
 		scrollbar-width: none;
 	}
-	@supports (animation-timeline: view(x)) {
-		.animate-scroll {
-			animation-timeline: view(x);
-			view-timeline-name: --timeline_name;
-			view-timeline-axis: x;
-
-			img {
-				animation-timeline: --timeline_name;
+	:global {
+		@supports (animation-timeline: view(x)) {
+			.animate-scroll {
+				animation-timeline: view(x);
+				view-timeline-name: --timeline_name;
 				view-timeline-axis: x;
-				animation-name: appear;
-				animation-direction: alternate;
-				animation-fill-mode: both;
-				animation-duration: 1ms;
-			}
-		}
-		@keyframes appear {
-			0% {
-				transform: scale(0.85);
-			}
 
-			50% {
-				transform: scale(1);
+				img {
+					animation-timeline: --timeline_name;
+					view-timeline-axis: x;
+					animation-name: appear;
+					animation-direction: alternate;
+					animation-fill-mode: both;
+					animation-duration: 1ms;
+				}
 			}
+			@keyframes appear {
+				0% {
+					transform: scale(0.85);
+				}
 
-			100% {
-				transform: scale(0.85);
+				50% {
+					transform: scale(1);
+				}
+
+				100% {
+					transform: scale(0.85);
+				}
 			}
 		}
 	}

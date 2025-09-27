@@ -1,6 +1,4 @@
 <script lang="ts">
-	import type { PictureWithLqip } from "$lib/showcase/picture";
-
 	let {
 		id,
 		name,
@@ -8,7 +6,10 @@
 	}: {
 		id: string;
 		name: string;
-		banner: PictureWithLqip;
+		banner: {
+			src: import("vite-imagetools").Picture;
+			lqip: typeof import("*?lqip").default;
+		};
 	} = $props();
 </script>
 
@@ -20,10 +21,11 @@
 		focus-visible:outline-stone-600/50"
 	draggable="false"
 	style:view-transition-name="showcase-{id}"
+	data-sveltekit-preload-code="hover"
 >
 	<enhanced:img
-		class="banner aspect-[2/1] w-[230px] h-[115px] rounded-[5px] bg-cover object-cover
-			text-center text-[0px]"
+		class="banner aspect-[2/1] h-[115px] w-[230px] rounded-[5px] bg-cover
+			object-cover text-center text-[0px]"
 		style="background-image: url({banner.lqip
 			.lqip}), linear-gradient(to bottom, var(--color-neutral-600), var(--color-neutral-600));"
 		src={banner.src}

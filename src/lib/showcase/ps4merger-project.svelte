@@ -1,7 +1,10 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import { getShowcasePicture } from "$lib/showcase/picture";
 	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
+	import bannerSrc from "$showcase/ps4-merger/banner.webp?enhanced&quality=100";
+	import bannerLqip from "$showcase/ps4-merger/banner.webp?lqip";
+	import screenshotSrc from "$showcase/ps4-merger/screenshot.webp?enhanced&quality=100";
+	import screenshotLqip from "$showcase/ps4-merger/screenshot.webp?lqip";
 
 	export const ps4mergerProject: ShowcaseItem = {
 		type: "project",
@@ -10,10 +13,11 @@
 		description,
 		shortDescription:
 			"A PlayStation 4 developer tool allowing to merge .pkg files directly on the console",
-		banner: await getShowcasePicture("ps4-merger", "banner"),
+		banner: { src: bannerSrc, lqip: bannerLqip },
 		images: [
 			{
-				...(await getShowcasePicture("ps4-merger", "screenshot")),
+				src: screenshotSrc,
+				lqip: screenshotLqip,
 				alt: "PS4 Merger screenshot with text: Welcome! PKG Merger by hloth.dev \nSearching in /data/pkg_merger... \nFound 2 files: \bEP9000-CUSA<...>_001.pkgpart \nEP9000-CUSA<...>_002.pkgpart \n\nEstimated time: 29:18 \nApp will be frozen entire time, do not worry and look if .pkg file started appearing in /data/pkg directory via FTP \nAllow up to 3x of that estimated time \n\nPress any button on controller to START merging parts \n\nFiles successfully merged into /data/EP9000-CUSA<...>.pkg \nNow you can install it via goldhen installer! \nNow you can also delete .pkgpart files from /data/pkg_merger",
 			},
 		],

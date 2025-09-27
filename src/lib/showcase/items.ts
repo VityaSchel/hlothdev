@@ -23,7 +23,7 @@ import { jswitcherProject } from "./jswitcher-project.svelte";
 import { sessionWatchosProject } from "./session-watchos-project.svelte";
 import { ps4mergerProject } from "./ps4merger-project.svelte";
 import { mtprotoMobileProject } from "./mtproto-mobile-project.svelte";
-import type { PictureWithLqip } from "$lib/showcase/picture";
+
 import type { ProjectId } from "$lib/showcase";
 
 export type ShowcaseItem = {
@@ -33,11 +33,16 @@ export type ShowcaseItem = {
 	description: import("svelte").Snippet;
 	/** Description for meta-tags under 160 characters */
 	shortDescription: string;
-	banner: PictureWithLqip;
-	images: ({
+	banner: {
+		src: import("vite-imagetools").Picture;
+		lqip: typeof import("*?lqip").default;
+	};
+	images: {
 		alt: string;
 		class?: string;
-	} & PictureWithLqip)[];
+		src: import("vite-imagetools").Picture;
+		lqip: typeof import("*?lqip").default;
+	}[];
 	links?: {
 		url: string;
 		label: string;

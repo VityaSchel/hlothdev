@@ -116,6 +116,13 @@
 	});
 </script>
 
+<svelte:head>
+	<style>
+		html, body {
+			margin: 0;
+		}
+	</style>
+</svelte:head>
 <Background>
 	{@render children()}
 	<Nav />

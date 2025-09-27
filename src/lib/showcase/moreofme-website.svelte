@@ -1,6 +1,9 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import { getShowcasePicture } from "$lib/showcase/picture";
+	import banner from "$showcase/moreofme/banner.webp?enhanced&quality=100";
+	import bannerLqip from "$showcase/moreofme/banner.webp?lqip";
+	import image from "$showcase/moreofme/image.webp?enhanced&quality=100";
+	import imageLqip from "$showcase/moreofme/image.webp?lqip";
 	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
 
 	export const moreOfMeWebsite: ShowcaseItem = {
@@ -10,10 +13,14 @@
 		description,
 		shortDescription:
 			"A personal web space, encouraging users to express their thoughts and hobbies, made for freelance client in 2024-2025",
-		banner: await getShowcasePicture("moreofme", "banner"),
+		banner: {
+			src: banner,
+			lqip: bannerLqip,
+		},
 		images: [
 			{
-				...(await getShowcasePicture("moreofme", "image")),
+				src: image,
+				lqip: imageLqip,
 				alt: "Moreof.me pages screenshots collage: profile page with text: Viktor Shchelochkov / Twix fan / @hlothdev / Bio / Postboard / Weeklies. My interests: Sushi, Gym, Horror, Documentaries, Pop, Programming, Sense of adventure, Being family-oriented, LGBTQ+ rights, Voter rights. Currently: Listening Overworld Day Re-Logic / Watching Severance / Playing At Dead of Night / Reading Navalny / Podcast 81: With Jerma985; Post editor; Gradient color, color picker; Analytics page; New post page; Share your Moreofme; Share post",
 			},
 		],
