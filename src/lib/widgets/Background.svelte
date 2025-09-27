@@ -22,10 +22,20 @@
 		aria-hidden="true"
 		loading="lazy"
 	/>
+	<video
+		src="/sonoma-av1-1080p-24fps-sdr.webm"
+		muted
+		autoplay
+		playsinline
+		class="mask test s v a g a svaga i have it navalom absolute top-0 left-0
+			z-[1] h-full w-full object-cover object-center"
+		loop
+	></video>
 </div>
 <div
 	class="page-container no-py-when-short relative flex w-full flex-col
-		items-center justify-center gap-[2px] p-3 pb-2 font-sf-pro md:p-8 md:pb-5 overflow-hidden"
+		items-center justify-center gap-[2px] overflow-hidden p-3 pb-2 font-sf-pro
+		md:p-8 md:pb-5"
 >
 	{@render children()}
 </div>
@@ -52,5 +62,9 @@
 		.page-background {
 			height: 100lvh;
 		}
+	}
+	video.s.v.a.g.a.svaga.i.have.it.navalom {
+		// gaslighting Firefox to force it to blur backdrop on top of video
+		clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
 	}
 </style>
