@@ -1,5 +1,6 @@
 <script lang="ts">
-	import bgLqip from "$lib/assets/bg.webp?lqip";
+	import bg from "$lib/assets/sonoma-video-banner.webp";
+	import bgLqip from "$lib/assets/sonoma-video-banner.webp?lqip";
 
 	let {
 		children,
@@ -12,9 +13,9 @@
 	class="page-background fixed top-0 left-0 w-full select-none"
 	aria-hidden="true"
 >
-	<enhanced:img
+	<img
 		class="absolute top-0 left-0 h-full w-full bg-cover object-cover text-[0px]"
-		src="$lib/assets/bg.webp?quality=100"
+		src={bg}
 		style="background-image: url({bgLqip.lqip});"
 		width="1513"
 		height="845"
