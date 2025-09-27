@@ -2,7 +2,7 @@
 	import { page } from "$app/state";
 
 	const defaultDescription =
-		"Hi, I’m Viktor Shchelochkov — full-stack UI developer and open-source enthusiast. I build applications and websites in Svelte, React, Next.js, and Swift.";
+		"Hi, I’m Viktor Shchelochkov — full-stack web developer and open-source enthusiast. I build applications and websites in Svelte, React, Next.js, and Swift.";
 
 	let {
 		name,
