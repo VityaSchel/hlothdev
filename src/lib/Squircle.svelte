@@ -58,6 +58,7 @@
 		xmlns="http://www.w3.org/2000/svg"
 		style="overflow: visible;"
 		class="pointer-events-none absolute top-0 left-0 z-[100] h-full w-full"
+		aria-hidden="true"
 	>
 		<defs>
 			<clipPath id="clip-{uid}">
@@ -108,6 +109,7 @@
         px470:w-16
       "
 			style="border-radius: {cornerRadius}px;"
+			aria-hidden="true"
 		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"

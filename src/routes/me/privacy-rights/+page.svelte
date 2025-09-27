@@ -49,7 +49,10 @@
 						/>
 					</svg>
 				</a>
-				<span class="text-sm tracking-[-0.03px] text-[#4D4D4D] lg:text-base">
+				<span
+					class="text-sm tracking-[-0.03px] text-[#4D4D4D] lg:text-base"
+					aria-label="Photo attribution"
+				>
 					Photo by <a
 						href="https://unsplash.com/@srhhrbch"
 						class="font-medium"

@@ -29,6 +29,7 @@
 	data-nosnippet={inert ? "" : undefined}
 	{inert}
 	cornerRadius={expanded ? 55 : 0.1375}
+	aria-label="Introduction & greetings card"
 >
 	{#if expanded}
 		{@render children?.()}
@@ -64,29 +65,24 @@
 			>
 				Hi, I’m Viktor, and my life is a roller coaster!
 			</h1>
-			<a
-				class="flex w-full rounded-[7.71cqw] focus-xl"
-				href="/me/about"
-				draggable="false"
-			>
-				<Button tabindex={-1} class="h-[15cqh]">
-					<svg
-						class="h-[38cqh] w-[38cqh]"
-						viewBox="0 0 23 23"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<path
-							d="M2.16663 11.5H20.8333M20.8333 11.5L11.5 2.16666M20.8333 11.5L11.5 20.8333"
-							stroke="black"
-							stroke-width="2.66667"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-						/>
-					</svg>
-					Read more
-				</Button>
-			</a>
+			<Button element="a" containerClass="h-[15cqh]" class="rounded-[7.71cqw] focus-xl" href="/me/about" draggable="false">
+				<svg
+					class="h-[38cqh] w-[38cqh]"
+					viewBox="0 0 23 23"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+					aria-hidden="true"
+				>
+					<path
+						d="M2.16663 11.5H20.8333M20.8333 11.5L11.5 2.16666M20.8333 11.5L11.5 20.8333"
+						stroke="black"
+						stroke-width="2.66667"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					/>
+				</svg>
+				Read more
+			</Button>
 		</div>
 	{/if}
 </XlCard>

@@ -15,6 +15,7 @@ md:overflow-auto`,
 		},
 	]}
 	onscroll={(e) => (scrollY = (e.target as HTMLDivElement).scrollTop)}
+	aria-label="Showcase section with my projects"
 >
 	{@render children()}
 </div>

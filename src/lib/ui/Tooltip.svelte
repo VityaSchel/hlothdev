@@ -92,12 +92,11 @@
 					calc(100% - var(--arrow-height)),
 				/* arrow */ var(--arrow-width) var(--arrow-height);
 			mask-repeat: no-repeat;
-			background: rgba(50, 50, 50, 0.55);
+			// background: rgba(50, 50, 50, 0.55);
 			color: white;
 			font-weight: 400;
 			font-size: var(--font-size);
 			letter-spacing: -1.5%;
-			backdrop-filter: blur(25px);
 			padding: calc(0.15625 * var(--font-size)) var(--font-size)
 				calc(var(--arrow-height) + calc(0.25 * var(--font-size)))
 				var(--font-size);

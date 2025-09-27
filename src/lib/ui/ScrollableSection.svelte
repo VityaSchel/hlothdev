@@ -18,7 +18,11 @@
 	let scrollX = $state(0);
 </script>
 
-<section class="checkbox-content flex flex-col gap-4 px470:gap-[8px]" {id}>
+<section
+	class="checkbox-content flex flex-col gap-4 px470:gap-[8px]"
+	{id}
+	aria-label="Section {name} of showcase"
+>
 	<div class="flex items-end justify-between px-4 px470:px-8">
 		<h2
 			class="font-sf-pro-display text-base leading-[19px] font-semibold
@@ -39,15 +43,14 @@
 			id="checkbox-{name}"
 			role="switch"
 			aria-label="Toggle wrapping of {name} section"
+			onchange={() => {
+				scrollX = 0;
+			}}
 		/>
 		<label
 			for="checkbox-{name}"
 			class="font-sf-pro-display checkbox-label text-sm font-medium
 				tracking-[-0.2px] text-thin-typography select-none hover:underline"
-			onclick={() => {
-				scrollX = 0;
-			}}
-			aria-hidden="true"
 		>
 			<span class="show-less">Show Less</span>
 			<span class="show-all">
@@ -58,7 +61,7 @@
 	<div
 		class={[
 			` scrollbar-thin nowrap-flex wrap-styles gap-[10px] overflow-scroll px-4
-		pt-[0.5px] pb-3 focus-scrollable px470:px-8 `,
+			pt-[0.5px] pb-3 focus-scrollable px470:px-8 `,
 			{
 				"nowrap-fade-out-mask": scrollX === 0,
 			},

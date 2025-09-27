@@ -35,6 +35,7 @@ row-start-1 h-full w-full`]: expanded,
 	data-nosnippet={inert ? "" : undefined}
 	{inert}
 	cornerRadius={expanded ? 13 : 0.05118110236}
+	aria-label="Privacy Rights Support Card"
 >
 	<enhanced:img
 		src="$lib/assets/privacy-rights.webp"
@@ -57,12 +58,13 @@ row-start-1 h-full w-full`]: expanded,
 		>
 			<span
 				class="
-          mb-auto text-[3.54cqw] tracking-[-0.011cqw] text-[#5D5D5D] opacity-0
-          transition-opacity duration-300
-          group-hover:opacity-100
-          has-focus-within:opacity-100
-          no-hover:opacity-100
-        "
+					mb-auto text-[3.54cqw] tracking-[-0.011cqw] text-[#5D5D5D] opacity-0
+					transition-opacity duration-300
+					group-hover:opacity-100
+					has-focus-within:opacity-100
+					no-hover:opacity-100
+				"
+				aria-label="Photo attribution"
 			>
 				Photo by <a
 					href="https://unsplash.com/@srhhrbch"
@@ -89,15 +91,16 @@ row-start-1 h-full w-full`]: expanded,
 					>hlothdevzkti6suoksy7lcy7hmpxnr3msu5waokzaslsi2mnx5ouu4qd.onion</a
 				> domain.
 			</p>
-			<a
+			<Button
+				element="a"
+				containerClass="h-[10.68cqh]"
+				variant="md"
 				href="/me/privacy-rights"
 				class="flex w-full rounded-lg focus-xl"
 				draggable="false"
 			>
-				<Button class="h-[10.68cqh]" variant="md" tabindex={-1}
-					>Learn about my commitment</Button
-				>
-			</a>
+				Learn about my commitment
+			</Button>
 		</div>
 	{/if}
 </LgCard>

@@ -1,4 +1,4 @@
-<svg viewBox="0 0 68 69" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 68 69" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Monero XMR cryptocurrency logo">
 	<g clip-path="url(#clip0_53_309)">
 		<rect y="0.5" width="68" height="68" rx="34" fill="white" />
 		<path

@@ -44,7 +44,10 @@
 				{@render coins()}
 			</div>
 		</div>
-		<div class="max-h-full w-full shrink-0 flex-col gap-0 overflow-clip">
+		<div
+			class="max-h-full w-full shrink-0 flex-col gap-0 overflow-clip"
+			aria-label="Crypto wallet details"
+		>
 			{#if preferred}
 				<span
 					class="
@@ -62,6 +65,7 @@
 				<h2
 					class="h-full text-2xl font-bold text-white px680:text-[32px]
 						px870:text-3xl px1100:text-[35.5px]"
+					id="donate-crypto-wallet-{name}"
 				>
 					{name}
 				</h2>
@@ -81,18 +85,19 @@
 						: 'auto'}"
 					ontransitionstart={() => (collapseAddress = false)}
 					ontransitionend={() => (collapseAddress = true)}
+					aria-label="Donation crypto wallet address"
 				>
 					<span
 						class={{
 							[`not-group-hover:whitespace-nowrap
-				group-focus-within:whitespace-normal! focus:outline-0
-				focus-visible:bg-stone-500/50 focus-visible:outline-0
-				no-hover:whitespace-normal!`]: collapseAddress,
+			group-focus-within:whitespace-normal! focus:outline-0
+			focus-visible:bg-stone-500/50 focus-visible:outline-0
+			no-hover:whitespace-normal!`]: collapseAddress,
 						}}
 						role="textbox"
 						tabindex="0"
-						aria-label="Donation crypto wallet address"
 						aria-readonly="true"
+						aria-labelledby="donate-crypto-wallet-{name}"
 					>
 						{address}
 					</span>
@@ -136,6 +141,13 @@
                 "
 								target="_blank"
 								rel="noopener noreferrer"
+								aria-label={"Open " +
+									{
+										metamask: "MetaMask",
+										trustWallet: "Trust Wallet",
+										ledgerLive: "Ledger Live",
+										monero: "Monero",
+									}[name]}
 							>
 								{#if name === "metamask"}
 									<MetaMaskIcon />

@@ -19,6 +19,7 @@
 		transparency-reduce:backdrop-blur-none"
 	onpointerleave={() => (selectedNavItem = null)}
 	id="footer-nav"
+	aria-label="Dock-style navigation bar"
 >
 	{#if selectedNavItem !== null}
 		<Tooltip {selectedNavItem}>{selectedNavItem.name}</Tooltip>
@@ -29,7 +30,7 @@
 	>
 		<div class="flex items-center gap-[2px] px-[5px]">
 			{#each navItems as item (item.id)}
-				{#if 'separator' in item}
+				{#if "separator" in item}
 					<NavSeparator class={item.class} />
 				{:else}
 					<NavItem

@@ -1,7 +1,8 @@
 {
 	"name": "hloth.dev",
-	"private": true,
-	"version": "0.0.1",
+	"version": "1.0.0",
+	"license": "MIT",
+	"author": "Viktor Shchelochkov <hi@hloth.dev> (https://hloth.dev)",
 	"type": "module",
 	"scripts": {
 		"dev": "bun vite dev",

@@ -1,4 +1,9 @@
-<svg viewBox="0 0 444 501" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg
+	viewBox="0 0 444 501"
+	fill="none"
+	xmlns="http://www.w3.org/2000/svg"
+	aria-label="Trust Wallet cryptocurrency wallet app logo"
+>
 	<path
 		d="M0.710022 72.41L222.16 0.109985V500.63C63.98 433.89 0.710022 305.98 0.710022 233.69V72.41Z"
 		fill="#0500FF"

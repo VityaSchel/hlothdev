@@ -37,6 +37,7 @@
 		px1180:row-start-2 px1180:row-end-3"
 	bind:clientWidth={width}
 	bind:clientHeight={height}
+	aria-label="My favorite things card"
 >
 	<div
 		class="group relative h-full w-full overflow-clip rounded-[12.59cqw]
@@ -65,7 +66,7 @@
 			onscroll={() => (scroll = scrollContainer.scrollLeft)}
 			tabindex="0"
 			role="listbox"
-			aria-roledescription="My favorite things"
+			aria-label="A horizontally scrollable list of my favorite things"
 			style={clipPathStyle}
 		>
 			{#each images as { img: { src, lqip }, alt, href }, i (i)}
@@ -81,7 +82,7 @@
 					<enhanced:img
 						{src}
 						{alt}
-						class="h-[123px] w-[254px] shrink-0 rounded-[12.59cqw] bg-cover object-cover indent-[8cqw] text-[6.22cqw]"
+						class="h-full w-full shrink-0 rounded-[12.59cqw] bg-cover object-cover indent-[8cqw] text-[6.22cqw]"
 						style="background-image: url({lqip.lqip}), linear-gradient(to top, var(--color-neutral-600), var(--color-neutral-600)); {clipPathStyle}"
 						draggable="false"
 						width="508"

@@ -15,6 +15,7 @@
 		md:col-start-5 md:col-end-6 md:row-start-5 md:row-end-6 px1180:col-start-7
 		px1180:col-end-8 px1180:row-start-3 px1180:row-end-4
 		transparency-reduce:bg-[rgba(0,0,0,0.3)]"
+	aria-label="My local time card"
 >
 	<h3 class="sr-only">My timezone: {timezone}</h3>
 	<div

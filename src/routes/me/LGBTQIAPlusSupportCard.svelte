@@ -8,7 +8,7 @@
 	class="container-size col-start-2 col-end-4 row-start-4 row-end-5
 		px580:col-start-1 px580:col-end-4 px580:row-start-7 px580:row-end-8
 		md:col-start-1 md:col-end-4 md:row-start-4 md:row-end-5"
-	aria-label="Background image: photo of me and my boyfriend Dima celebrating our one-year anniversary in 2024, on this photo we are hugging and smiling, a part of the 6-color LGBT flag is visible in the background"
+	aria-label="LGTQIA+ support card / Background image: photo of me and my boyfriend Dima celebrating our one-year anniversary in 2024, on this photo we are hugging and smiling, a part of the 6-color LGBT flag is visible in the background"
 >
 	<div
 		class="group relative flex h-full w-full flex-col-reverse justify-between

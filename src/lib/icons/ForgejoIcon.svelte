@@ -1,4 +1,4 @@
-<svg viewBox="0 0 212 212" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 212 212" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
 	<g transform="translate(6,6)">
 		<path
 			d="M58 168 v-98 a50 50 0 0 1 50-50 h20"

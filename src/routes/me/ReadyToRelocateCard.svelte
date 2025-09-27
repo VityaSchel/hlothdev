@@ -12,6 +12,7 @@
 		px1180:col-end-11 px1180:row-start-1 px1180:row-end-2"
 	tabindex="0"
 	role="button"
+	aria-label="Ready to relocate card"
 >
 	<XsCard
 		class="relative flex h-full w-full rotate-y-0 flex-col-reverse

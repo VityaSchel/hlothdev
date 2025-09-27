@@ -25,7 +25,7 @@
 		<b class="font-semibold">Reduce transparency</b>
 		preference was detected in your OS settings.
 		<br />
-		All tranlucent background materials will be rendered as solid.
+		All translucent background materials will be rendered as solid.
 		<br />
 		If you have enabled it accidentally,
 		<a

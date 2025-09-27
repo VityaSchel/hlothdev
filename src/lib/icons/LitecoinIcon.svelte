@@ -1,4 +1,4 @@
-<svg viewBox="0 0 68 69" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 68 69" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Litecoin cryptocurrency logo">
 	<g clip-path="url(#clip0_53_369)">
 		<path
 			d="M68.0001 34.4998C68.0001 53.2776 52.7781 68.5 34.0005 68.5C15.2227 68.5 0.000488281 53.2776 0.000488281 34.4998C0.000488281 15.7222 15.2227 0.5 34.0005 0.5C52.7779 0.5 68.0001 15.7222 68.0001 34.4998Z"

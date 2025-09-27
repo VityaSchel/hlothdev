@@ -7,6 +7,7 @@
 		flex-col overflow-clip px580:col-start-2 px580:col-end-3 px580:row-start-8
 		px580:row-end-9 md:col-start-8 md:col-end-9 md:row-start-3 md:row-end-4
 		px1180:col-start-8 px1180:col-end-9 px1180:row-start-4 px1180:row-end-5"
+	aria-label="Fun fact about me card"
 >
 	<div
 		class="flex h-[26.05cqw] w-full shrink-0 items-center bg-gradient-to-b

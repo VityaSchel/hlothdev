@@ -1,4 +1,4 @@
-<svg viewBox="0 0 68 69" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 68 69" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Bitcoin cryptocurrency logo">
 	<g clip-path="url(#clip0_53_325)">
 		<path
 			d="M66.9795 42.7248C62.4384 60.9393 43.9891 72.0233 25.7726 67.4821C7.56449 62.941 -3.52057 44.4918 1.02162 26.2784C5.56062 8.06183 24.0088 -3.02429 42.2201 1.51684C60.4356 6.05796 71.5206 24.5093 66.9795 42.7248Z"

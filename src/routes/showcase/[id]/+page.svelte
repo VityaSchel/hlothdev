@@ -25,7 +25,10 @@
 			<div class="flex flex-col gap-4 overflow-auto md:flex-row px870:gap-8">
 				<div class="text-content flex flex-3/5 flex-col gap-4 p-2 lg:flex-1">
 					<h1 class="text-2xl font-semibold">{project.name}</h1>
-					<article class="text-base leading-relaxed font-medium">
+					<article
+						class="text-base leading-relaxed font-medium"
+						aria-label="Project description"
+					>
 						{@render project.description()}
 					</article>
 					{#if project.links}

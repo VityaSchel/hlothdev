@@ -39,6 +39,7 @@
 					"h-full w-full": isSubpage,
 				},
 			]}
+			aria-label={isSubpage ? "Subpage" : "Grid of cards"}
 		>
 			{@render children()}
 		</div>

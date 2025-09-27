@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 404 420.2">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 404 420.2" aria-label="MetaMask cryptocurrency wallet app logo">
 	<style>
 		.st0 {
 			fill: #e4761b;

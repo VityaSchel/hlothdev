@@ -14,6 +14,7 @@
 		px580:row-start-7 px580:row-end-9 md:col-start-7 md:col-end-9 md:row-start-4
 		md:row-end-6 px1180:col-start-9 px1180:col-end-11 px1180:row-start-3
 		px1180:row-end-5"
+	aria-label="Education card"
 >
 	<LgCard
 		--bg="url({bg.img
@@ -39,7 +40,11 @@
 				I’m self-taught talent who skipped university degree. I only have high
 				school diploma.
 			</p>
-			<Button variant="md" class="h-[10.68cqh]" tabindex={-1}>
+			<Button
+				element="span"
+				variant="md"
+				containerClass="h-[10.68cqh]"
+			>
 				Read an article about 10 y.o. me
 			</Button>
 		</div>
