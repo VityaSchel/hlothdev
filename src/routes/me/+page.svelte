@@ -14,6 +14,8 @@
 	import FavoriteThingsCard from "./FavoriteThingsCard.svelte";
 	import EducationCard from "./EducationCard.svelte";
 	import PageMetadata from "$lib/widgets/PageMetadata.svelte";
+
+	let { data } = $props();
 </script>
 
 <PageMetadata />
@@ -27,7 +29,7 @@
 <PrivacySupportCard />
 <LocalTimeCard />
 <HlothCharityCard />
-<GitRepositoriesCard />
+<GitRepositoriesCard repositories={data.gitRepositoriesCount} />
 <FunFactAboutMeCard />
 <OpenToWorkCard />
 <ReadyToRelocateCard />

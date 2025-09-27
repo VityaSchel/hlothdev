@@ -2,7 +2,11 @@
 	import ForgejoIcon from "$lib/icons/ForgejoIcon.svelte";
 	import XsCard from "$lib/widgets/grid-cards/XSCard.svelte";
 
-	let repositories = 185;
+	let {
+		repositories,
+	}: {
+		repositories: string;
+	} = $props();
 </script>
 
 <a

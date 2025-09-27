@@ -1,6 +1,36 @@
-<script>
+<script lang="ts">
 	import Squircle from "$lib/Squircle.svelte";
 	import meAvatarLqip from "$lib/assets/me-avatar.webp?lqip";
+	import { onMount } from "svelte";
+
+	const getAge = () => {
+		const samara = new Date(
+			Date.now() + (4 * 60 + new Date().getTimezoneOffset()) * 60 * 1000,
+		);
+		let years = samara.getFullYear() - 2005;
+		if (samara.getMonth() + 1 < 7 || samara.getDate() < 6) years--;
+		console.log("Updating age");
+		return years;
+	};
+
+	let age = $derived(getAge());
+
+	onMount(() => {
+		let interval: ReturnType<typeof setInterval> | undefined;
+		let timeout = setTimeout(
+			() => {
+				age = getAge();
+				interval = setInterval(() => {
+					age = getAge();
+				}, 60 * 1000);
+			},
+			(60 - new Date().getSeconds()) * 1000,
+		);
+		return () => {
+			clearTimeout(timeout);
+			if (interval !== undefined) clearInterval(interval);
+		};
+	});
 </script>
 
 <a
@@ -48,7 +78,7 @@
 							px1180:leading-7 px1180:text-thin-typography xl:text-2xl
 							px1420:text-[28px] px1420:leading-[33px]"
 					>
-						Senior fullstack web apps developer
+						Senior Full Stack Web Developer
 					</span>
 				</div>
 				<span
@@ -57,7 +87,7 @@
 						md:text-thin-typography px870:text-lg px1180:text-xl
 						px1180:text-[rgba(123,123,123,0.4)] xl:text-2xl"
 				>
-					19 y.o., Batumi, Georgia
+					{age} y.o., Barcelona, Spain
 				</span>
 			</div>
 		</div>

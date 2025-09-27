@@ -33,7 +33,7 @@
 			class="text-[5cqw] leading-[5.25cqw] font-semibold tracking-[-0.2cqw]
 				@px175:tracking-[-0.12cqw] @px188:tracking-[-0.2cqw]"
 		>
-			I’m on the Ukrainian side in the war with Russia.
+			I support Ukraine against Russian aggression.
 		</h3>
 	</div>
 </SmCard>

@@ -2,7 +2,7 @@
 	import XsCard from "$lib/widgets/grid-cards/XSCard.svelte";
 	import Clock from "$lib/widgets/Clock.svelte";
 
-	const utcOffsetHours: number = 4;
+	const utcOffsetHours: number = 2;
 	const utcOffsetMinutes: number = 0;
 	const timezone = `UTC${utcOffsetHours >= 0 ? "+" : ""}${utcOffsetHours}${
 		utcOffsetMinutes ? ":" + utcOffsetMinutes.toString().padStart(2, "0") : ""
