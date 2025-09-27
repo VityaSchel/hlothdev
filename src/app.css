@@ -113,7 +113,7 @@
 
 ::view-transition-old(privacy-rights),
 ::view-transition-new(privacy-rights) {
-	background-image: url(/privacy-rights.webp);
+	background-image: url("$lib/assets/privacy-rights.webp");
 	background-size: cover;
 	background-position: 30%;
 }

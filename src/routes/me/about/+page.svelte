@@ -1,6 +1,8 @@
 <script lang="ts">
 	import PageMetadata from "$lib/widgets/PageMetadata.svelte";
 	import GreetingsCard from "../GreetingsCard.svelte";
+	import meInPinkHat from "$lib/assets/me-in-pink-hat.webp?enhanced";
+	import meInPinkHatLqip from "$lib/assets/me-in-pink-hat.webp?lqip";
 </script>
 
 <PageMetadata />
@@ -93,7 +95,9 @@
 			<enhanced:img
 				class="absolute top-0 left-0 h-full w-full bg-neutral-200 object-cover
 					object-[52%_50%] text-center"
-				src="$lib/assets/me-in-pink-hat.webp"
+				src={meInPinkHat}
+				style="background: url({meInPinkHatLqip.lqip}) center / cover
+					no-repeat;"
 				alt="Me in a pink hat"
 				width="860"
 			/>
