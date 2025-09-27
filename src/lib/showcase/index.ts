@@ -9,7 +9,7 @@ import { ryoCoinWebsite } from "./ryo-coin-website.svelte";
 import { batumiBikeWebsite } from "./batumi-bike-website.svelte";
 import { sessionWebWebsite } from "./session-web-website.svelte";
 import { sipackerWebsite } from "./sipacker-website.svelte";
-import { ogeGeneratorWebsite } from "./oge-generator.svelte";
+import { ogeGeneratorWebsite } from "./oge-generator-website.svelte";
 
 import { lufinProject } from "./lufin-project.svelte";
 import { samsungPingerProject } from "./samsung-pinger-project.svelte";

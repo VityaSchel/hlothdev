@@ -8,7 +8,7 @@
 </script>
 
 <a
-	href="https://hloth.dev{page.url.pathname}"
+	href={page.url.href}
 	aria-label="Current page"
 	class={[
 		`flex w-0 cursor-default overflow-clip transition-[width] duration-300
