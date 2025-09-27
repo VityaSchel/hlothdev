@@ -1,5 +1,4 @@
 <script lang="ts">
-	import bg from "$lib/assets/sonoma-video-banner.webp";
 	import bgLqip from "$lib/assets/sonoma-video-banner.webp?lqip";
 
 	let {
@@ -13,12 +12,12 @@
 	class="page-background fixed top-0 left-0 w-full select-none"
 	aria-hidden="true"
 >
-	<img
+	<enhanced:img
 		class="absolute top-0 left-0 h-full w-full bg-cover object-cover text-[0px]"
-		src={bg}
+		src="$lib/assets/sonoma-video-banner.webp?quality=100"
 		style="background-image: url('{bgLqip.lqip}'), linear-gradient(to bottom, #1c330c, #1c330c);"
-		width="1513"
-		height="845"
+		width="3840"
+		height="2160"
 		alt="Background image"
 		aria-hidden="true"
 		loading="lazy"
