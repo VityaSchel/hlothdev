@@ -9,7 +9,6 @@
 		);
 		let years = samara.getFullYear() - 2005;
 		if (samara.getMonth() + 1 < 7 || samara.getDate() < 6) years--;
-		console.log("Updating age");
 		return years;
 	};
 

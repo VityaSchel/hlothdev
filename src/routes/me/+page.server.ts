@@ -5,7 +5,6 @@ export async function load() {
 		cache.gitRepositoriesCount &&
 		Date.now() - cache.gitRepositoriesCount.cachedAt.getTime() < 1000 * 60 * 5
 	) {
-		console.log("Using cached git repositories count");
 		return {
 			gitRepositoriesCount: cache.gitRepositoriesCount.value,
 		};
