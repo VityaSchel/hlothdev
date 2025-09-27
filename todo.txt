@@ -2,6 +2,3 @@
 - clip overflow elements on pages which have view transition when nested view transitions are released -> https://stackoverflow.com/questions/79059408/view-transition-api-overflow-is-ignored
 - detect tor network and replace links from *.hloth.dev to onion mirrors
 - accessibility audit
-- resize images to save bandwidth
-- standartize showcase banners size
-- tooltip arrow

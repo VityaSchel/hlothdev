@@ -16,11 +16,12 @@
 	<img
 		class="absolute top-0 left-0 h-full w-full bg-cover object-cover text-[0px]"
 		src={bg}
-		style="background-image: url({bgLqip.lqip});"
+		style="background-image: url('{bgLqip}'), linear-gradient(to bottom, #1c330c, #1c330c);"
 		width="1513"
 		height="845"
 		alt="Background image"
 		aria-hidden="true"
+		loading="lazy"
 	/>
 </div>
 <div
