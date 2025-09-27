@@ -46,15 +46,14 @@
 				class="hidden px350:block"
 				bind:selectedNavItem
 			/>
-			<!--  TODO: fix -->
-			<!-- <NavItem
+			<NavItem
 				name="My Git server (Forgejo)"
 				icon={forgejoIcon}
 				alt="Forgejo icon"
 				link="{getMainDomainProtocol()}://git.{getMainDomain()}/hloth"
 				highlight
 				bind:selectedNavItem
-			/> -->
+			/>
 			<NavItem
 				name="My LinkedIn"
 				icon={linkedinIcon}
@@ -96,15 +95,14 @@
 				link="mailto:hi@hloth.dev"
 				bind:selectedNavItem
 			/>
-			<!--  TODO: fix -->
-			<!-- <NavItem
+			<NavItem
 				name="Blog"
 				icon={blogIcon}
 				alt="My blog icon"
 				link={`https://blog.${getMainDomain()}/`}
 				class="hidden px450:block"
 				bind:selectedNavItem
-			/> -->
+			/>
 			<NavItem
 				name="Instagram"
 				icon={instagramIcon}

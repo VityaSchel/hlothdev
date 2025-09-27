@@ -15,6 +15,7 @@
 
 	let { children, data }: LayoutProps = $props();
 
+	// TODO: fix when nested view transitions are supported
 	// Couldn't find a way to fix z-indexes with CSS only,
 	// until we have :has() support for view transition API js is required
 	const sendTransitionToFront = (viewId: string) => {
@@ -98,22 +99,21 @@
 		!data.alertsDismissed.reducedTransparency,
 	);
 
-	// TODO: fix
-	// onMount(() => {
-	// 	if (!browser || window.location.hostname === "localhost") return;
-	// 	console.log(
-	// 		"%cHello? Hello, hello? Uhh, I wanted to record a message for you... 👀",
-	// 		"font-size: 30px; cursor: default; text-align: center; font-family: fantasy, sans-serif, emoji; background: #1f371a; border-radius: 999px; display: inline-block; color: white; padding: 32px 24px 24px 24px; width: 100%;",
-	// 	);
-	// 	console.log(
-	// 		`%cLooking for source code? Here you go:\n${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/hloth.dev`,
-	// 		"font-size: 16px; cursor: default; text-align: right; font-family: sans-serif; background: #3B82F7; border-radius: 999px; display: inline-block; color: white; padding: 32px; float: right",
-	// 	);
-	// 	console.log(
-	// 		`%cWhile you're still here, why don't you take a look at\n${getMainDomainProtocol()}://${getMainDomain()}/robots.txt?`,
-	// 		"font-size: 16px; cursor: default; text-align: left; font-family: sans-serif; background: #07c616; border-radius: 999px; display: inline-block; color: white; padding: 32px; float: left",
-	// 	);
-	// });
+	onMount(() => {
+		if (!browser || window.location.hostname === "localhost") return;
+		console.log(
+			"%cHello? Hello, hello? Uhh, I wanted to record a message for you... 👀",
+			"font-size: 30px; cursor: default; text-align: center; font-family: fantasy, sans-serif, emoji; background: #1f371a; border-radius: 999px; display: inline-block; color: white; padding: 32px 24px 24px 24px; width: 100%;",
+		);
+		console.log(
+			`%cLooking for source code? Here you go:\n${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/hloth.dev`,
+			"font-size: 16px; cursor: default; text-align: right; font-family: sans-serif; background: #3B82F7; border-radius: 999px; display: inline-block; color: white; padding: 32px; float: right",
+		);
+		console.log(
+			`%cWhile you're still here, why don't you take a look at\n${getMainDomainProtocol()}://${getMainDomain()}/robots.txt?`,
+			"font-size: 16px; cursor: default; text-align: left; font-family: sans-serif; background: #07c616; border-radius: 999px; display: inline-block; color: white; padding: 32px; float: left",
+		);
+	});
 </script>
 
 <Background>

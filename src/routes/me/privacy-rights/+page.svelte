@@ -141,8 +141,7 @@
 			)}
 			<div class="mb-2 flex shrink-0 flex-col items-center gap-2">
 				<div class="grid w-full shrink-0 grid-cols-1 gap-2 lg:grid-cols-2">
-					<!--  TODO: fix -->
-					<!-- <PrivacyRelatedProjectCard
+					<PrivacyRelatedProjectCard
 						icon={sessionNativeIcon}
 						link="{getMainDomainProtocol()}://git.{getMainDomain()}/hloth/session-native"
 						name="Session Native"
@@ -177,7 +176,7 @@
 						link="{getMainDomainProtocol()}://git.{getMainDomain()}/hloth/session-bots-directory"
 						name="Bots Directory"
 						caption="Directory of Session bots, built with Remix"
-					/> -->
+					/>
 				</div>
 				<a
 					href="https://session.community/"

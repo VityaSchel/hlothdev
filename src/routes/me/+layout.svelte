@@ -19,8 +19,7 @@
 		srTitle="About Me page"
 		backUrl="/"
 		button={{
-			// href: `${getMainDomainProtocol()}://cv.${getMainDomain()}`,
-			href: "#", // TODO: remove
+			href: `${getMainDomainProtocol()}://cv.${getMainDomain()}`,
 			external: true,
 			text: "Open Developer Resume",
 		}}

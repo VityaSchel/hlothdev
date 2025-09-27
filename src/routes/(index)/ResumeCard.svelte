@@ -3,10 +3,8 @@
 	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
 </script>
 
-<!-- href="{getMainDomainProtocol()}://cv.{getMainDomain()}" -->
- <!-- TODO: fix -->
 <a
-href="#"
+	href="{getMainDomainProtocol()}://cv.{getMainDomain()}"
 	rel="nofollow noreferrer noopener"
 	target="_blank"
 	class="drop-background-shadow relative max-w-full flex-1 shrink-0

@@ -10,10 +10,8 @@
 	} = $props();
 </script>
 
-<!--  TODO: fix -->
-<!-- href="{getMainDomainProtocol()}://git.{getMainDomain()}/hloth" -->
 <a
-href="#"
+	href="{getMainDomainProtocol()}://git.{getMainDomain()}/hloth"
 	rel="noopener noreferrer"
 	target="_blank"
 	class="container-size col-start-1 col-end-2 row-start-11 row-end-12

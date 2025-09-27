@@ -1,3 +1,4 @@
 - smaller scrollbars to fit with rounded corners
 - clip overflow elements on pages which have view transition when nested view transitions are released -> https://stackoverflow.com/questions/79059408/view-transition-api-overflow-is-ignored
 - respect high contrast user agent request
+- fix onion links rewriting when async ssr ships -> https://github.com/sveltejs/svelte/discussions/16784
