@@ -1,11 +1,26 @@
 <script lang="ts">
 	import bgLqip from "$lib/assets/sonoma-video-banner.webp?lqip";
+	import { onMount } from "svelte";
 
 	let {
 		children,
 	}: {
 		children: import("svelte").Snippet;
 	} = $props();
+
+	let saveData = $state(false);
+	onMount(() => {
+		if ("connection" in navigator && navigator.connection) {
+			const update = () => {
+				saveData = navigator.connection?.saveData ?? false;
+			};
+			update();
+			navigator.connection.addEventListener("change", update);
+			return () => {
+				navigator.connection?.removeEventListener("change", update);
+			};
+		}
+	});
 </script>
 
 <div
@@ -27,8 +42,13 @@
 		muted
 		autoplay
 		playsinline
-		class="mask test s v a g a svaga i have it navalom absolute top-0 left-0
-			z-[1] h-full w-full object-cover object-center"
+		class={[
+			`mask test s v a g a svaga i have it navalom absolute top-0 left-0 z-[1]
+	h-full w-full object-cover object-center motion-reduce:hidden`,
+			{
+				hidden: saveData,
+			},
+		]}
 		loop
 	></video>
 </div>
