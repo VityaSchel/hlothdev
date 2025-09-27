@@ -39,7 +39,6 @@
 		loading="lazy"
 	/>
 	<video
-		src="/sonoma-av1-1080p-24fps-sdr.webm"
 		muted
 		autoplay
 		playsinline
@@ -47,14 +46,24 @@
 		disableremoteplayback
 		class={[
 			`mask test s v a g a svaga i have it navalom absolute top-0 left-0 z-[1]
-h-full w-full object-cover object-center motion-reduce:hidden`,
+	h-full w-full object-cover object-center motion-reduce:hidden`,
 			{
 				hidden: saveData || page.url.host.endsWith(".onion"),
 			},
 		]}
 		loop
-	></video>
+	>
+		<source
+			src="/sonoma-hvc1-1080p-24fps-sdr-327kbps.mp4"
+			type="video/mp4; codecs=hvc1"
+		/>
+		<source
+			src="/sonoma-av1-1080p-24fps-sdr-444kbps.webm"
+			type="video/webm; codecs=av01.0.05M.08"
+		/>
+	</video>
 </div>
+
 <div
 	class="page-container no-py-when-short relative flex w-full flex-col
 		items-center justify-center gap-[2px] overflow-hidden p-3 pb-2 font-sf-pro

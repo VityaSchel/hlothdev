@@ -101,6 +101,9 @@
 
 	onMount(() => {
 		if (!browser || window.location.hostname === "localhost") return;
+		console.log()
+		console.log()
+		console.log()
 		console.log(
 			"%cHello? Hello, hello? Uhh, I wanted to record a message for you... 👀",
 			"font-size: 30px; cursor: default; text-align: center; font-family: fantasy, sans-serif, emoji; background: #1f371a; border-radius: 999px; display: inline-block; color: white; padding: 32px 24px 24px 24px; width: 100%;",
@@ -113,6 +116,9 @@
 			`%cWhile you're still here, why don't you take a look at\n${getMainDomainProtocol()}://${getMainDomain()}/robots.txt?`,
 			"font-size: 16px; cursor: default; text-align: left; font-family: sans-serif; background: #07c616; border-radius: 999px; display: inline-block; color: white; padding: 32px; float: left",
 		);
+		console.log()
+		console.log()
+		console.log()
 	});
 </script>
 
