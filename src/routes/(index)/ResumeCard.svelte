@@ -1,9 +1,12 @@
 <script>
 	import Squircle from "$lib/Squircle.svelte";
+	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
 </script>
 
+<!-- href="{getMainDomainProtocol()}://cv.{getMainDomain()}" -->
+ <!-- TODO: fix -->
 <a
-	href="https://cv.hloth.dev"
+href="#"
 	rel="nofollow noreferrer noopener"
 	target="_blank"
 	class="drop-background-shadow relative max-w-full flex-1 shrink-0

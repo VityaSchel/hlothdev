@@ -1,6 +1,7 @@
 <script lang="ts" module>
-	import type { ShowcaseItem } from "$lib/showcase";
+	import type { ShowcaseItem } from "$lib/showcase/items";
 	import { getShowcasePicture } from "$lib/showcase/picture";
+	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
 
 	export const byomProject: ShowcaseItem = {
 		type: "project",
@@ -18,7 +19,7 @@
 		],
 		links: [
 			{
-				url: "https://git.hloth.dev/hloth/byom",
+				url: `${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/byom`,
 				label: "Open byom source code",
 			},
 		],

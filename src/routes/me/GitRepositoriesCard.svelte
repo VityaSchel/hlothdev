@@ -1,5 +1,6 @@
 <script lang="ts">
 	import ForgejoIcon from "$lib/icons/ForgejoIcon.svelte";
+	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
 	import XsCard from "$lib/widgets/grid-cards/XSCard.svelte";
 
 	let {
@@ -9,8 +10,10 @@
 	} = $props();
 </script>
 
+<!--  TODO: fix -->
+<!-- href="{getMainDomainProtocol()}://git.{getMainDomain()}/hloth" -->
 <a
-	href="https://git.hloth.dev/hloth"
+href="#"
 	rel="noopener noreferrer"
 	target="_blank"
 	class="container-size col-start-1 col-end-2 row-start-11 row-end-12

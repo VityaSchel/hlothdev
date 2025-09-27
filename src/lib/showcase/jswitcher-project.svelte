@@ -1,6 +1,7 @@
 <script lang="ts" module>
-	import type { ShowcaseItem } from "$lib/showcase";
+	import type { ShowcaseItem } from "$lib/showcase/items";
 	import { getShowcasePicture } from "$lib/showcase/picture";
+	import { getMainDomain } from "$lib/utils";
 
 	export const jswitcherProject: ShowcaseItem = {
 		type: "project",
@@ -22,7 +23,7 @@
 		],
 		links: [
 			{
-				url: "https://git.hloth.dev/hloth/jswitcher",
+				url: `https://git.${getMainDomain()}/hloth/jswitcher`,
 				label: "Open JSwitcher source code",
 			},
 		],

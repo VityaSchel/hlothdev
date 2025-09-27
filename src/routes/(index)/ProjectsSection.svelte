@@ -1,5 +1,5 @@
 <script>
-	import { showcase } from "$lib/showcase";
+	import { showcase } from "$lib/showcase/items";
 	import ScrollableSection from "$lib/ui/ScrollableSection.svelte";
 	import ShowcaseCard from "$lib/widgets/ShowcaseCard.svelte";
 

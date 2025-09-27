@@ -1,6 +1,7 @@
 <script lang="ts" module>
-	import type { ShowcaseItem } from "$lib/showcase";
+	import type { ShowcaseItem } from "$lib/showcase/items";
 	import { getShowcasePicture } from "$lib/showcase/picture";
+	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
 
 	export const sessionWebWebsite: ShowcaseItem = {
 		type: "website",
@@ -18,7 +19,7 @@
 		],
 		links: [
 			{
-				url: "https://git.hloth.dev/hloth/session-web",
+				url: `${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/session-web`,
 				label: "Open Session Web source code",
 			},
 		],

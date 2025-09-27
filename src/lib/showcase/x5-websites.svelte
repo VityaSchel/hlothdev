@@ -1,6 +1,7 @@
 <script lang="ts" module>
-	import type { ShowcaseItem } from "$lib/showcase";
+	import type { ShowcaseItem } from "$lib/showcase/items";
 	import { getShowcasePicture } from "$lib/showcase/picture";
+	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
 
 	export const x5Websites: ShowcaseItem = {
 		type: "website",
@@ -166,7 +167,7 @@
 		The frontend was built entirely by me using React and Next.js in a couple of
 		days. The
 		<a
-			href="https://git.hloth.dev/hloth/ketoplan-diet/releases"
+			href={`${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/ketoplan-diet/releases`}
 			rel="noopener noreferrer nofollow"
 			target="_blank">backend</a
 		> was created by a third-party developer. One of the challenges was to optimize
@@ -180,7 +181,7 @@
 	)}
 	{@render link(
 		"Open Ketoplan Diet website source code",
-		"https://git.hloth.dev/hloth/ketoplan-diet",
+		`${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/ketoplan-diet`,
 	)}
 	{@render link(
 		"Open Ketoplan Diet website figma layout",
@@ -198,7 +199,7 @@
 	<p>
 		The frontend was built entirely by me using React and Next.js in about one
 		week. The <a
-			href="https://git.hloth.dev/hloth/mental-health-quiz/releases"
+			href={`${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/mental-health-quiz/releases`}
 			rel="noopener noreferrer nofollow"
 			target="_blank">backend</a
 		> was created by a third-party developer. The project uses a custom-built checkout
@@ -210,7 +211,7 @@
 	)}
 	{@render link(
 		"Open Mental Health Quiz website source code",
-		"https://git.hloth.dev/hloth/mental-health-quiz/",
+		`${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/mental-health-quiz/`,
 	)}
 	<h2>Bot.biz landing</h2>
 	<p>
@@ -224,7 +225,7 @@
 	{@render link("Visit Bot.biz landing", "https://botbiz-landing.netlify.app/")}
 	{@render link(
 		"Open Bot.biz landing source code",
-		"https://git.hloth.dev/hloth/bot-biz-landing",
+		`${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/bot-biz-landing`,
 	)}
 	{@render link(
 		"Open Bot.biz landing figma layout",
@@ -288,7 +289,7 @@
 	)}
 	{@render link(
 		"Open Bot.biz Admin Dashboard source code",
-		"https://git.hloth.dev/hloth/bot-biz-admin-panel/",
+		`${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/bot-biz-admin-panel/`,
 	)}
 	<h2>Lovebot Website</h2>
 	<p>
@@ -299,7 +300,7 @@
 	<p>
 		The frontend was built by me using React and Next.js in about one week. The
 		<a
-			href="https://git.hloth.dev/hloth/lovebot/releases"
+			href={`${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/lovebot/releases`}
 			rel="noopener noreferrer nofollow"
 			target="_blank">backend</a
 		> was created by a third-party developer.
@@ -310,7 +311,7 @@
 	)}
 	{@render link(
 		"Open Lovebot website source code",
-		"https://git.hloth.dev/hloth/lovebot",
+		`${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/lovebot`,
 	)}
 	<h2>Glassbot Website</h2>
 	<p>
@@ -323,7 +324,7 @@
 	<p>
 		The frontend was built by me using React and Next.js in about one week. The
 		<a
-			href="https://git.hloth.dev/hloth/glassbot/releases"
+			href={`${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/glassbot/releases`}
 			rel="noopener noreferrer nofollow"
 			target="_blank">backend</a
 		> was created by a third-party developer.
@@ -334,7 +335,7 @@
 	)}
 	{@render link(
 		"Open Glassbot website source code",
-		"https://git.hloth.dev/hloth/glassbot",
+		`${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/glassbot`,
 	)}
 	<h2>Prankbot</h2>
 	<p>
@@ -351,7 +352,7 @@
 	<p>
 		The frontend was built by me using React and Next.js in about four days. The
 		<a
-			href="https://git.hloth.dev/hloth/prankbot/releases"
+			href={`${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/prankbot/releases`}
 			rel="noopener noreferrer nofollow"
 			target="_blank">backend</a
 		> was created by a third-party developer.
@@ -362,7 +363,7 @@
 	)}
 	{@render link(
 		"Open Prankbot website source code",
-		"https://git.hloth.dev/hloth/prankbot",
+		`${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/prankbot`,
 	)}
 	{@render link(
 		"Open Prankbot website figma layout",
@@ -394,7 +395,7 @@
 	)}
 	{@render link(
 		"Open Checkout Dialog source code",
-		"https://git.hloth.dev/hloth/checkout-dialog",
+		`${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/checkout-dialog`,
 	)}
 	{@render link(
 		"Open Checkout Dialog figma layout",
@@ -409,6 +410,6 @@
 	</p>
 	{@render link(
 		"Open Flat UI kit source code",
-		"https://git.hloth.dev/hloth/x5io-flat-ui-kit",
+		`${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/x5io-flat-ui-kit`,
 	)}
 {/snippet}

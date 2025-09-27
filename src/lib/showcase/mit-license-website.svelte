@@ -1,6 +1,7 @@
 <script lang="ts" module>
-	import type { ShowcaseItem } from "$lib/showcase";
+	import type { ShowcaseItem } from "$lib/showcase/items";
 	import { getShowcasePicture } from "$lib/showcase/picture";
+	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
 
 	export const mitLicenseWebsite: ShowcaseItem = {
 		type: "website",
@@ -26,19 +27,19 @@
 		],
 		links: [
 			{
-				url: "https://mit.hloth.dev",
+				url: `${getMainDomainProtocol()}://mit.${getMainDomain()}`,
 				label: "Visit mit.hloth.dev",
 			},
 			{
-				url: "https://git.hloth.dev/hloth/mit.hloth.dev",
+				url: `${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/mit.hloth.dev`,
 				label: "Open mit.hloth.dev source code",
 			},
 			{
-				url: "https://change.mit.hloth.dev",
+				url: `${getMainDomainProtocol()}://change.${getMainDomain()}`,
 				label: "Visit change.mit.hloth.dev",
 			},
 			{
-				url: "https://git.hloth.dev/hloth/change.mit.hloth.dev",
+				url: `${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/change.mit.hloth.dev`,
 				label: "Open change.mit.hloth.dev source code",
 			},
 		],
@@ -70,9 +71,9 @@
 		A few of my projects were forced to be licensed under copyleft licenses.
 		Feel like you're missing out? Report your project being stolen and
 		relicensed by me using this stinky button → <a
-			href="https://change.mit.hloth.dev"
+			href="{getMainDomainProtocol()}://change.mit.{getMainDomain()}"
 			target="_blank"
-			rel="noopener noreferrer">change.mit.hloth.dev</a
+			rel="noopener noreferrer">change.mit.{getMainDomain()}</a
 		>
 	</p>
 {/snippet}

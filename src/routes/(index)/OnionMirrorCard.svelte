@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { page } from "$app/state";
 	import Squircle from "$lib/Squircle.svelte";
+	import { clearnetDomain, torDomain } from "$lib/utils";
 </script>
 
 {#snippet button(href: string, label: string, icon: "onion" | "web")}
@@ -69,13 +70,9 @@
 {/snippet}
 
 {#if page.url.host.endsWith(".onion")}
-	{@render button("https://hloth.dev", "Clearnet version", "web")}
+	{@render button("https://" + clearnetDomain, "Clearnet version", "web")}
 {:else}
-	{@render button(
-		"http://hlothdevzkti6suoksy7lcy7hmpxnr3msu5waokzaslsi2mnx5ouu4qd.onion/",
-		"Onion mirror",
-		"onion",
-	)}
+	{@render button("http://" + torDomain, "Onion mirror", "onion")}
 {/if}
 
 <style>

@@ -1,6 +1,7 @@
 <script lang="ts" module>
-	import type { ShowcaseItem } from "$lib/showcase";
+	import type { ShowcaseItem } from "$lib/showcase/items";
 	import { getShowcasePicture } from "$lib/showcase/picture";
+	import { getMainDomain } from "$lib/utils";
 
 	export const bunsogsProject: ShowcaseItem = {
 		type: "project",
@@ -30,11 +31,11 @@
 		],
 		links: [
 			{
-				url: "https://git.hloth.dev/hloth/bunsogs",
+				url: `https://git.${getMainDomain()}/hloth/bunsogs`,
 				label: "Open bunsogs source code",
 			},
 			{
-				url: "https://blog.hloth.dev/bunsogs-release",
+				url: `https://blog.${getMainDomain()}/bunsogs-release`,
 				label: "Read article about bunsogs in hloth blog",
 			},
 			{

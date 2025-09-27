@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { showcase } from "$lib/showcase";
+	import { showcase } from "$lib/showcase/items";
 	import PageWrapper from "$lib/widgets/PageWrapper.svelte";
 	import SubpageWrapper from "$lib/widgets/SubpageWrapper.svelte";
 	import { error } from "@sveltejs/kit";

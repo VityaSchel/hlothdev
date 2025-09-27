@@ -1,6 +1,7 @@
 <script lang="ts" module>
-	import type { ShowcaseItem } from "$lib/showcase";
+	import type { ShowcaseItem } from "$lib/showcase/items";
 	import { getShowcasePicture } from "$lib/showcase/picture";
+	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
 
 	export const sessionNativeProject: ShowcaseItem = {
 		type: "project",
@@ -17,7 +18,7 @@
 		],
 		links: [
 			{
-				url: "https://git.hloth.dev/hloth/session-native",
+				url: `${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/session-native`,
 				label: "Open Session Native source code",
 			},
 		],

@@ -1,6 +1,7 @@
 <script lang="ts" module>
-	import type { ShowcaseItem } from "$lib/showcase";
+	import type { ShowcaseItem } from "$lib/showcase/items";
 	import { getShowcasePicture } from "$lib/showcase/picture";
+	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
 
 	export const beenFossWebsite: ShowcaseItem = {
 		type: "website",
@@ -22,7 +23,7 @@
 				label: "Visit been-foss",
 			},
 			{
-				url: "https://git.hloth.dev/hloth/been-foss",
+				url: `${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/been-foss`,
 				label: "Open been-foss source code",
 			},
 		],

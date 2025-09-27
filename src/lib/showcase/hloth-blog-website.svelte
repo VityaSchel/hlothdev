@@ -1,6 +1,7 @@
 <script lang="ts" module>
-	import type { ShowcaseItem } from "$lib/showcase";
+	import type { ShowcaseItem } from "$lib/showcase/items";
 	import { getShowcasePicture } from "$lib/showcase/picture";
+	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
 
 	export const blogHlothDevWebsite: ShowcaseItem = {
 		type: "website",
@@ -18,11 +19,11 @@
 		],
 		links: [
 			{
-				url: "https://blog.hloth.dev",
+				url: `${getMainDomainProtocol()}://blog.${getMainDomain()}`,
 				label: "Visit hloth blog",
 			},
 			{
-				url: "https://git.hloth.dev/hloth/blog.hloth.dev",
+				url: `${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/blog.hloth.dev`,
 				label: "Open hloth blog source code",
 			},
 		],

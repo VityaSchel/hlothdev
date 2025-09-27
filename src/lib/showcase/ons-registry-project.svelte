@@ -1,6 +1,7 @@
 <script lang="ts" module>
-	import type { ShowcaseItem } from "$lib/showcase";
+	import type { ShowcaseItem } from "$lib/showcase/items";
 	import { getShowcasePicture } from "$lib/showcase/picture";
+	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
 
 	export const onsRegistryProject: ShowcaseItem = {
 		type: "project",
@@ -18,7 +19,7 @@
 		],
 		links: [
 			{
-				url: "https://git.hloth.dev/hloth/ons-registry",
+				url: `${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/ons-registry`,
 				label: "Open ONS registry source code",
 			},
 		],

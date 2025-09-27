@@ -4,7 +4,13 @@
 	import PrivacyRelatedProjectCard from "./PrivacyRelatedProjectCard.svelte";
 	import PrivateContactMethod from "./PrivateContactMethod.svelte";
 	import PageMetadata from "$lib/widgets/PageMetadata.svelte";
-	import { privacyRelatedProjects } from "./privacy-rights";
+	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
+	import sessionNativeIcon from "$showcase/session-native/logo-square-xs.webp?inline";
+	import sessionJsIcon from "$showcase/session.js/logo-square-xs.webp?inline";
+	import onsRegistryIcon from "$showcase/ons-registry/logo-square-xs.webp?inline";
+	import sessionWebIcon from "$showcase/session-web/logo-square-xs.webp?inline";
+	import vanityIdGeneratorIcon from "$showcase/session-vanity-id-generator/logo-square-xs.webp?inline";
+	import botsDirectoryIcon from "$showcase/session-bots-directory/logo-square-xs.webp?inline";
 </script>
 
 <PageMetadata
@@ -135,14 +141,43 @@
 			)}
 			<div class="mb-2 flex shrink-0 flex-col items-center gap-2">
 				<div class="grid w-full shrink-0 grid-cols-1 gap-2 lg:grid-cols-2">
-					{#each privacyRelatedProjects as project (project.icon)}
-						<PrivacyRelatedProjectCard
-							caption={project.caption}
-							icon={project.icon}
-							link={project.link}
-							name={project.name}
-						/>
-					{/each}
+					<!--  TODO: fix -->
+					<!-- <PrivacyRelatedProjectCard
+						icon={sessionNativeIcon}
+						link="{getMainDomainProtocol()}://git.{getMainDomain()}/hloth/session-native"
+						name="Session Native"
+						caption="Native Session macOS client written in Swift"
+					/>
+					<PrivacyRelatedProjectCard
+						icon={sessionJsIcon}
+						link="https://sessionjs.github.io/docs/"
+						name="Session.js"
+						caption="The first bot framework for Session built with Bun"
+					/>
+					<PrivacyRelatedProjectCard
+						icon={onsRegistryIcon}
+						link="{getMainDomainProtocol()}://git.{getMainDomain()}/hloth/ons-registry"
+						name="ONS Registry"
+						caption="Blockchain data exploring tool & registry"
+					/>
+					<PrivacyRelatedProjectCard
+						icon={sessionWebIcon}
+						link="{getMainDomainProtocol()}://git.{getMainDomain()}/hloth/session-web"
+						name="Session Web"
+						caption="Session client running in a web browser"
+					/>
+					<PrivacyRelatedProjectCard
+						icon={vanityIdGeneratorIcon}
+						link="https://session-id.pages.dev/"
+						name="Vanity ID Generator"
+						caption="Client-side tool generating vanity Session account IDs"
+					/>
+					<PrivacyRelatedProjectCard
+						icon={botsDirectoryIcon}
+						link="{getMainDomainProtocol()}://git.{getMainDomain()}/hloth/session-bots-directory"
+						name="Bots Directory"
+						caption="Directory of Session bots, built with Remix"
+					/> -->
 				</div>
 				<a
 					href="https://session.community/"
@@ -210,7 +245,10 @@
 						</svg>
 					{/snippet}
 				</PrivateContactMethod>
-				<PrivateContactMethod link="https://hloth.dev/pgp" name="My PGP key">
+				<PrivateContactMethod
+					link="{getMainDomainProtocol()}://{getMainDomain()}/pgp"
+					name="My PGP key"
+				>
 					{#snippet icon()}
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
 							<!-- Icon from Streamline by Streamline - https://creativecommons.org/licenses/by/4.0/ -->

@@ -12,7 +12,7 @@ export async function load() {
 	let gitRepositoriesCount = "git";
 	try {
 		const res = await fetch(
-			"https://git.hloth.dev/api/v1/users/hloth/repos?page=0&limit=1",
+			`https://git.hloth.dev/api/v1/users/hloth/repos?page=0&limit=1`,
 		).then((req) => req.headers.get("X-Total-Count"));
 		if (res) {
 			gitRepositoriesCount = res;

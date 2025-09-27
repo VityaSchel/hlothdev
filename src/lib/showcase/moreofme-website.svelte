@@ -1,6 +1,7 @@
 <script lang="ts" module>
-	import type { ShowcaseItem } from "$lib/showcase";
+	import type { ShowcaseItem } from "$lib/showcase/items";
 	import { getShowcasePicture } from "$lib/showcase/picture";
+	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
 
 	export const moreOfMeWebsite: ShowcaseItem = {
 		type: "website",
@@ -18,7 +19,7 @@
 		],
 		links: [
 			{
-				url: "https://blog.hloth.dev/blog/moreofme",
+				url: `${getMainDomainProtocol()}://blog.${getMainDomain()}/blog/moreofme`,
 				label: "Read my blog post about Moreof.me",
 			},
 		],

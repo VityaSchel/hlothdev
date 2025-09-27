@@ -1,6 +1,7 @@
 <script lang="ts" module>
-	import type { ShowcaseItem } from "$lib/showcase";
+	import type { ShowcaseItem } from "$lib/showcase/items";
 	import { getShowcasePicture } from "$lib/showcase/picture";
+	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
 
 	export const nockTradeWebsite: ShowcaseItem = {
 		type: "website",
@@ -101,7 +102,7 @@
 		(signet) for Bitcoin. I spent about 30 hours researching, experimenting with
 		deployment, modifying BTCPay Server, NBXPlorer, NBitcoin and wrote a
 		detailed guide on how to set it up in my blog: <a
-			href="https://blog.hloth.dev/nbxplorer-custom-signet"
+			href="{getMainDomainProtocol()}://blog.{getMainDomain()}/nbxplorer-custom-signet"
 			rel="noopener noreferrer nofollow"
 			target="_blank"
 			>How to add custom bitcoin signet to NBitcoin and NBXplorer</a

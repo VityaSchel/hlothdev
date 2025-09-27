@@ -1,6 +1,7 @@
 <script lang="ts" module>
-	import type { ShowcaseItem } from "$lib/showcase";
+	import type { ShowcaseItem } from "$lib/showcase/items";
 	import { getShowcasePicture } from "$lib/showcase/picture";
+	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
 
 	export const batumiBikeWebsite: ShowcaseItem = {
 		type: "website",
@@ -30,7 +31,7 @@
 				label: "Visit Batumi.bike (batumibike.netlify.app)",
 			},
 			{
-				url: "https://git.hloth.dev/hloth/batumi.bike",
+				url: `${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/batumi.bike`,
 				label: "Open Batumi.bike source code",
 			},
 		],

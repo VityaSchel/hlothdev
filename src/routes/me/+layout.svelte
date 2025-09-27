@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from "$app/state";
+	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
 	import PageWrapper from "$lib/widgets/PageWrapper.svelte";
 	import SubpageWrapper from "$lib/widgets/SubpageWrapper.svelte";
 
@@ -18,7 +19,8 @@
 		srTitle="About Me page"
 		backUrl="/"
 		button={{
-			href: "https://cv.hloth.dev",
+			// href: `${getMainDomainProtocol()}://cv.${getMainDomain()}`,
+			href: "#", // TODO: remove
 			external: true,
 			text: "Open Developer Resume",
 		}}

@@ -1,6 +1,7 @@
 <script lang="ts" module>
-	import type { ShowcaseItem } from "$lib/showcase";
+	import type { ShowcaseItem } from "$lib/showcase/items";
 	import { getShowcasePicture } from "$lib/showcase/picture";
+	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
 
 	export const powReactionProject: ShowcaseItem = {
 		type: "project",
@@ -22,7 +23,7 @@
 				label: "Open pow-reaction demo website",
 			},
 			{
-				url: "https://git.hloth.dev/hloth/pow-reaction",
+				url: `${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/pow-reaction`,
 				label: "Open pow-reaction source code",
 			},
 		],

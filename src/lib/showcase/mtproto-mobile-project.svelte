@@ -1,6 +1,7 @@
 <script lang="ts" module>
-	import type { ShowcaseItem } from "$lib/showcase";
+	import type { ShowcaseItem } from "$lib/showcase/items";
 	import { getShowcasePicture } from "$lib/showcase/picture";
+	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
 
 	export const mtprotoMobileProject: ShowcaseItem = {
 		type: "project",
@@ -18,7 +19,7 @@
 		],
 		links: [
 			{
-				url: "https://git.hloth.dev/hloth/mtproto-mobile",
+				url: `${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/mtproto-mobile`,
 				label: "Open Mtproto Mobile source code",
 			},
 		],

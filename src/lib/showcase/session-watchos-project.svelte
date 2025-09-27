@@ -1,6 +1,7 @@
 <script lang="ts" module>
-	import type { ShowcaseItem } from "$lib/showcase";
+	import type { ShowcaseItem } from "$lib/showcase/items";
 	import { getShowcasePicture } from "$lib/showcase/picture";
+	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
 
 	export const sessionWatchosProject: ShowcaseItem = {
 		type: "project",
@@ -38,11 +39,11 @@
 		],
 		links: [
 			{
-				url: "https://git.hloth.dev/hloth/session-watchos",
+				url: `${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/session-watchos`,
 				label: "Open Session Watchos source code",
 			},
 			{
-				url: "https://git.hloth.dev/hloth/session-watchos-website",
+				url: `${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/session-watchos-website`,
 				label: "Open Session Watchos linking website source code",
 			},
 		],

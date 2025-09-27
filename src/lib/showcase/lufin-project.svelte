@@ -1,6 +1,7 @@
 <script lang="ts" module>
-	import type { ShowcaseItem } from "$lib/showcase";
+	import type { ShowcaseItem } from "$lib/showcase/items";
 	import { getShowcasePicture } from "$lib/showcase/picture";
+	import { getMainDomain } from "$lib/utils";
 
 	export const lufinProject: ShowcaseItem = {
 		type: "project",
@@ -26,15 +27,15 @@
 		],
 		links: [
 			{
-				url: "https://lufin.hloth.dev",
+				url: `https://lufin.${getMainDomain()}`,
 				label: "Visit Lufin demo website",
 			},
 			{
-				url: "https://git.hloth.dev/hloth/lufin",
+				url: `https://git.${getMainDomain()}/hloth/lufin`,
 				label: "Open lufin source code",
 			},
 			{
-				url: "https://git.hloth.dev/hloth/lufin-screenshotter",
+				url: `https://git.${getMainDomain()}/hloth/lufin-screenshotter`,
 				label: "Open lufin screenshotter source code",
 			},
 		],

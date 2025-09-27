@@ -1,6 +1,7 @@
 <script lang="ts" module>
-	import type { ShowcaseItem } from "$lib/showcase";
+	import type { ShowcaseItem } from "$lib/showcase/items";
 	import { getShowcasePicture } from "$lib/showcase/picture";
+	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
 
 	export const ogeGeneratorWebsite: ShowcaseItem = {
 		type: "website",
@@ -22,7 +23,7 @@
 		],
 		links: [
 			{
-				url: "https://git.hloth.dev/hloth/informatics-oge-generator",
+				url: `${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/informatics-oge-generator`,
 				label: "Open OGE generator source code",
 			},
 		],
