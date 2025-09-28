@@ -1,6 +1,5 @@
 import adapter from "@sveltejs/adapter-node";
 import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
-import { clearnetDomain, torDomain } from "./src/lib/utils";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -12,7 +11,10 @@ const config = {
 			$showcase: "src/lib/assets/showcase",
 		},
 		csrf: {
-			trustedOrigins: ["https://" + clearnetDomain, "http://" + torDomain],
+			trustedOrigins: [
+				"https://hloth.dev",
+				"http://hlothdevzkti6suoksy7lcy7hmpxnr3msu5waokzaslsi2mnx5ouu4qd.onion",
+			],
 		},
 	},
 };
