@@ -43,7 +43,7 @@
 				icon={upworkIcon}
 				alt="Upwork icon"
 				link="https://www.upwork.com/freelancers/~01a1f59e7a4697be89"
-				class="hidden px350:block"
+				class="hidden px500:block"
 				bind:selectedNavItem
 			/>
 			<NavItem
