@@ -64,7 +64,7 @@
 	</a>
 {/snippet}
 
-{#if !page.url.host.endsWith(".onion")}
+{#if page.url.host.endsWith(".onion")}
 	{@render button("https://" + clearnetDomain, "Clearnet version", "web")}
 {:else}
 	{@render button("http://" + torDomain, "Onion mirror", "onion")}
