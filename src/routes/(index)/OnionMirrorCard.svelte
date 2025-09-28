@@ -43,12 +43,7 @@
 							/>
 						</svg>
 					{:else if icon === "web"}
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="32"
-							height="32"
-							viewBox="0 0 24 24"
-						>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="p-2">
 							<!-- Icon from Ultimate free icons by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
 							<path
 								fill="currentColor"
@@ -69,7 +64,7 @@
 	</a>
 {/snippet}
 
-{#if page.url.host.endsWith(".onion")}
+{#if !page.url.host.endsWith(".onion")}
 	{@render button("https://" + clearnetDomain, "Clearnet version", "web")}
 {:else}
 	{@render button("http://" + torDomain, "Onion mirror", "onion")}

@@ -2,7 +2,8 @@
 
 My personal website tells my story, outlines my achievements, contains resources to donate to me and provides ways to contact me.
 
-(insert banner here)
+<img alt="Screenshot with the homepage" src="./docs/hloth-dev-screenshot-1.webp" width="49%" />
+<img alt="Screenshot with the donate page" src="./docs/hloth-dev-screenshot-2.webp" width="49%" />
 
 Visit the website: [hloth.dev](https://hloth.dev) · Tor: [hlothdevzkti6suoksy7lcy7hmpxnr3msu5waokzaslsi2mnx5ouu4qd.onion](http://hlothdevzkti6suoksy7lcy7hmpxnr3msu5waokzaslsi2mnx5ouu4qd.onion)
 
