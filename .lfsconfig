@@ -1,3 +1,2 @@
 [lfs]
 	url = https://git.hloth.dev/hloth/hloth.dev.git/info/lfs
-	locksverify = false
