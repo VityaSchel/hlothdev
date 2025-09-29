@@ -30,14 +30,14 @@
 >
 	{@render children()}
 	{#if mono}
-		<span
+		<div
 			class={[
-				"mono top-0 left-0 z-[-1] h-full w-full",
+				"mono top-0 left-0 h-full w-full",
 				{
 					absolute: fallback === "overlay",
 				},
 			]}
-		></span>
+		></div>
 	{:else}
 		<img
 			src={url}
@@ -58,6 +58,8 @@
 	.svg-fallback-overlay :global(svg) {
 		width: 100%;
 		height: 100%;
+		position: relative;
+		z-index: 1;
 	}
 	.svg-fallback-squeeze :global(svg) {
 		flex-shrink: 0;
