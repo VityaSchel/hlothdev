@@ -15,13 +15,20 @@
 				px470:gap-4 px470:p-4 md:gap-3 md:py-2 px870:gap-[18px] px870:py-4"
 		>
 			<div
-				class="flex aspect-square h-8 w-8 items-center justify-center
+				class="relative flex aspect-square h-8 w-8 items-center justify-center
 					rounded-full bg-[#3B82F7] px470:h-12 px470:w-12 md:h-10 md:w-10
 					px870:h-12 px870:w-12 lg:h-16 lg:w-16"
 				aria-hidden="true"
 			>
+				<span
+					class="absolute top-1/2 left-1/2 -translate-1/2 text-lg
+						text-[#ffffffd9] px470:text-3xl"
+				>
+					$
+				</span>
 				<svg
-					class="h-5 px470:h-[30px] md:h-[28px] lg:h-[33px]"
+					class="relative z-[1] h-5 bg-[#3B82F7] px470:h-[30px] md:h-[28px]
+						lg:h-[33px]"
 					viewBox="0 0 39.8125 70.4688"
 				>
 					<path

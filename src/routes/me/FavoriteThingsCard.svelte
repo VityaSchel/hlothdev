@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { browser } from "$app/environment";
-	import { transition } from "$lib/utils";
-	import { getSvgPath } from "figma-squircle";
+	import { getSquirclePath, transition } from "$lib/utils";
 	import { onMount } from "svelte";
 	import favoriteThings from "$lib/assets/favorite-things/favorite-things.webp?enhanced&quality=100";
 	import favoriteThingsLqip from "$lib/assets/favorite-things/favorite-things.webp?lqip";
@@ -102,7 +101,7 @@
 	let height = $state(0);
 	let clipPath = $derived.by(() => {
 		if (!width || !height) return "";
-		return getSvgPath({
+		return getSquirclePath({
 			cornerSmoothing: 0.6,
 			cornerRadius: 0.125984252 * width,
 			width,
@@ -111,7 +110,7 @@
 	});
 
 	const clipPathStyle = $derived(
-		clipPath ? `clip-path: path('${clipPath}')` : undefined,
+		clipPath === null ? undefined : `clip-path: path('${clipPath}')`,
 	);
 
 	let scroll = $state(0);

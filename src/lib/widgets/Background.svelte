@@ -58,6 +58,10 @@
 			type="video/mp4; codecs=hvc1"
 		/>
 		<source
+			src="/sonoma-hvc1-1080p-24fps-sdr-327kbps.mp4"
+			type="video/mp4; codecs=hev1.1.6.L93.B0"
+		/>
+		<source
 			src="/sonoma-av1-1080p-24fps-sdr-444kbps.webm"
 			type="video/webm; codecs=av01.0.05M.08"
 		/>

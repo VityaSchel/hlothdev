@@ -19,11 +19,17 @@
 			<div
 				class="flex h-8 w-8 items-center justify-center rounded-full
 					bg-[#3B82F7] px400:h-12 px400:w-12 md:h-10 md:w-10 px870:h-12
-					px870:w-12 lg:h-16 lg:w-16"
+					px870:w-12 lg:h-16 lg:w-16 relative"
 				aria-hidden="true"
 			>
+				<span
+					class="absolute top-1/2 left-1/2 -translate-1/2 text-lg
+						px400:text-xl md:text-lg px870:text-2xl font-medium text-[#ffffffd9]"
+				>
+					Aa
+				</span>
 				<svg
-					class="w-4 px400:w-6 md:w-5 px870:w-7"
+					class="w-4 bg-[#3B82F7] px400:w-6 md:w-5 px870:w-7 relative z-[1]"
 					viewBox="0 0 57.7188 57.5312"
 				>
 					<g>

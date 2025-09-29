@@ -1,4 +1,9 @@
-<svg viewBox="0 0 68 69" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Tron TRX cryptocurrency logo">
+<svg
+	viewBox="0 0 68 69"
+	fill="none"
+	xmlns="http://www.w3.org/2000/svg"
+	aria-label="Tron TRX cryptocurrency logo"
+>
 	<g clip-path="url(#clip0_53_344)">
 		<path
 			d="M34 68.5C52.7777 68.5 68 53.2777 68 34.5C68 15.7223 52.7777 0.5 34 0.5C15.2223 0.5 0 15.7223 0 34.5C0 53.2777 15.2223 68.5 34 68.5Z"

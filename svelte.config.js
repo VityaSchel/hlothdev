@@ -1,11 +1,17 @@
 import adapter from "@sveltejs/adapter-node";
 import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
+import { execSync } from "child_process";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	preprocess: vitePreprocess(),
-
+	compilerOptions: {
+		discloseVersion: false,
+	},
 	kit: {
+		version: {
+			name: execSync("git rev-parse HEAD").toString().trim(),
+		},
 		adapter: adapter(),
 		alias: {
 			$showcase: "src/lib/assets/showcase",

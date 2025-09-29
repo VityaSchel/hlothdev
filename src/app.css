@@ -197,6 +197,6 @@
 }
 
 div.page-background.__ns__pop2top {
-  /* NoScript casually breaking my website :/ */
-  z-index: auto !important;
+	/* NoScript casually breaking my website :/ */
+	z-index: auto !important;
 }

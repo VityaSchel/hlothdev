@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { browser } from "$app/environment";
-	import { getSvgPath } from "figma-squircle";
+	import { browserSupportsSVG, getSquirclePath } from "$lib/utils";
 
 	let {
 		class: classes,
@@ -21,7 +21,7 @@
 	let height = $state(0);
 	const squircle = $derived(
 		width && height
-			? getSvgPath({
+			? getSquirclePath({
 					width,
 					height,
 					cornerRadius,
@@ -44,10 +44,10 @@
 			{
 				"backdrop-blur-[80px] transparency-reduce:backdrop-blur-none":
 					translucent,
-				"squircle-card": !browser,
+				"squircle-card": !browser || !browserSupportsSVG(),
 			},
 		]}
-		style={(squircle === undefined ? "" : `clip-path: path('${squircle}');`) +
+		style={(squircle === null ? "" : `clip-path: path('${squircle}');`) +
 			`border-radius: ${cornerRadius}px;`}
 		aria-hidden="true"
 	></div>

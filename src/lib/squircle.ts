@@ -1,5 +1,6 @@
 import type { Attachment } from "svelte/attachments";
 import { getSvgPath } from "figma-squircle";
+import { browserSupportsSVG } from "$lib/utils";
 
 export const squircle =
 	({
@@ -13,6 +14,7 @@ export const squircle =
 		if (!(element instanceof HTMLElement)) {
 			throw new Error("squircle attachment can only be used on HTMLElement");
 		}
+		if (!browserSupportsSVG()) return;
 		const onResize = () => {
 			const width = element.offsetWidth;
 			const height = element.offsetHeight;

@@ -15,18 +15,23 @@
 			<div
 				class="flex h-full items-center gap-3 rounded-2xl p-3 select-none
 				px470:gap-4 px470:p-4 md:justify-center md:gap-3 md:py-2 px870:gap-4
-				lg:flex-col lg:gap-2"
+				lg:flex-col lg:gap-1 px1100:gap-2"
 			>
 				<div
 					aria-hidden="true"
-					class="flex aspect-square h-8 w-8 shrink-0 items-center justify-center rounded-full
-					bg-[#3B82F7] px470:h-12 px470:w-12 md:h-10 md:w-10 xl:h-12 xl:w-12"
+					class="relative flex aspect-square h-8 w-8 shrink-0 items-center justify-center
+					overflow-clip rounded-full bg-[#3B82F7] px470:h-12 px470:w-12 md:h-10 md:w-10 xl:h-12 xl:w-12"
 				>
+					<span
+						class="absolute top-1/2 left-1/2 aspect-square h-4 w-4
+						-translate-1/2 rounded-full bg-[#ffffffd9]"
+					></span>
 					{#if icon === "onion"}
 						<svg
-							class=""
+							class="relative z-[1] bg-[#3B82F7]"
 							viewBox="0 0 52 52"
-							fill="none"
+							width="100%"
+							fill="#3B82F7"
 							xmlns="http://www.w3.org/2000/svg"
 						>
 							<path
@@ -43,19 +48,24 @@
 							/>
 						</svg>
 					{:else if icon === "web"}
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="p-2">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							class="relative h-6 z-[1] bg-[#3B82F7]"
+							width="100%"
+						>
 							<!-- Icon from Ultimate free icons by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
 							<path
 								fill="currentColor"
 								d="M9.76 11.25h4.48A15.4 15.4 0 0 0 12.45 5h-.9a15.4 15.4 0 0 0-1.79 6.25m-1.49 0a16.6 16.6 0 0 1 1.44-5.87A7 7 0 0 0 5 11.25Zm7.46 0H19a7 7 0 0 0-4.67-5.87a16.6 16.6 0 0 1 1.4 5.87m0 1.5a16.6 16.6 0 0 1-1.44 5.87A7 7 0 0 0 19 12.75Zm-7.46 0H5a7 7 0 0 0 4.67 5.87a16.6 16.6 0 0 1-1.4-5.87m5.97 0H9.76A15.5 15.5 0 0 0 11.55 19h.9a15.4 15.4 0 0 0 1.79-6.25M12 0a1.5 1.5 0 1 0 1.5 1.5A1.5 1.5 0 0 0 12 0m0 21a1.5 1.5 0 1 0 1.5 1.5A1.5 1.5 0 0 0 12 21m8.49-17.49a1.51 1.51 0 1 0 0 2.13a1.52 1.52 0 0 0 0-2.13M5.64 18.36a1.51 1.51 0 1 0 0 2.13a1.52 1.52 0 0 0 0-2.13M24 12a1.5 1.5 0 1 0-1.5 1.5A1.5 1.5 0 0 0 24 12M3 12a1.5 1.5 0 1 0-1.5 1.5A1.5 1.5 0 0 0 3 12m17.49 8.49a1.51 1.51 0 1 0-2.13 0a1.52 1.52 0 0 0 2.13 0M5.64 5.64a1.51 1.51 0 1 0-2.13 0a1.52 1.52 0 0 0 2.13 0"
-							/></svg
-						>
+							/>
+						</svg>
 					{/if}
 				</div>
 				<span
-					class="text-base leading-5 font-bold text-thick-typography px530:text-xl
-					px680:text-base px870:text-xl px870:leading-6 lg:text-base
-					lg:leading-[19px] lg:font-medium"
+					class="text-left lg:text-center text-base leading-5 font-bold text-thick-typography
+					px530:text-xl px680:text-base px870:text-xl px870:leading-6
+					lg:text-sm lg:leading-[16px] lg:font-medium xl:text-base"
 				>
 					{label}
 				</span>

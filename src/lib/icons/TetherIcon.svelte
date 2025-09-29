@@ -1,4 +1,9 @@
-<svg viewBox="0 0 68 69" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Tether USDT cryptocurrency logo">
+<svg
+	viewBox="0 0 68 69"
+	fill="none"
+	xmlns="http://www.w3.org/2000/svg"
+	aria-label="Tether USDT cryptocurrency logo"
+>
 	<g clip-path="url(#clip0_53_193)">
 		<path
 			d="M34 0.5C52.7756 0.5 68 15.7244 68 34.5C68 53.2756 52.7756 68.5 34 68.5C15.2244 68.5 0 53.285 0 34.5C0 15.715 15.2244 0.5 34 0.5Z"
