@@ -37,10 +37,10 @@
 	role="alert"
 	class={[
 		` animate-in alert-shadow relative max-w-full rounded-[10px]
-	bg-gradient-to-br from-[#b5acac] to-[#a3aca0] p-[10px] pr-3 text-right
-	leading-[19px] font-medium text-[#373737] transition-opacity
-	transparency-reduce:bg-[#b9b9b9] transparency-reduce:[background-image:none]
-	[&_br]:hidden sm:[&_br]:block `,
+		bg-gradient-to-br from-[#b5acac] to-[#a3aca0] p-[10px] pr-3 text-right
+		leading-[19px] font-medium text-[#373737] transition-opacity
+		transparency-reduce:bg-[#b9b9b9] transparency-reduce:[background-image:none]
+		[&_br]:hidden sm:[&_br]:block `,
 		{
 			"opacity-100": visible,
 			"animate-none! opacity-0": !visible,

@@ -43,8 +43,7 @@
 			src={url}
 			alt=""
 			class={[
-				`top-0 left-0 z-[-1] h-full w-full object-contain object-center
-	p-[0.5%] select-none`,
+				`top-0 left-0 z-[-1] h-full w-full object-contain object-center p-[0.5%] select-none`,
 				{
 					absolute: fallback === "overlay",
 				},

@@ -11,11 +11,14 @@ Visit the website: [hloth.dev](https://hloth.dev) · Tor: [hlothdevzkti6suoksy7l
 
 - Written with [Svelte](https://svelte.dev) framework
 - Works perfectly fine with JavaScript disabled
+- Works on "Safer" and "Safest" settings in Tor browser
+- Works with all permissions in NoScript revoked
+- Works even with SVG blocked
 - All transitions are made using CSS and View Transition API
 - Respects `prefers-reduced-motion`
 - Respects `prefers-reduced-transparency`
 - Fully accessible with `aria-label`s, screen reader enhancements and keyboard navigation
-- Entirely semantically correct markup, checked by svelte
+- Semantically correct markup, checked by Svelte
 - Designed entirely by me
 - Content of the website is separated from the technical resume
 - Takes full advantage of Retina screens by displaying all rasterized graphic elements in 2x size and applying subpixel outline/shadow effects

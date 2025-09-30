@@ -12,7 +12,7 @@
 	aria-label="Current page"
 	class={[
 		`flex w-0 cursor-default overflow-clip transition-[width] duration-300
-	group-hover:w-5 focus-visible:w-5`,
+		group-hover:w-5 focus-visible:w-5`,
 		{
 			"brightness-[48%]": pressed,
 		},
