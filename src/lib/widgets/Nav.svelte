@@ -99,7 +99,7 @@
 				name="Blog"
 				icon={blogIcon}
 				alt="My blog icon"
-				link={`https://blog.${getMainDomain()}/`}
+				link={`${getMainDomainProtocol()}://blog.${getMainDomain()}/`}
 				class="hidden px450:block"
 				bind:selectedNavItem
 			/>

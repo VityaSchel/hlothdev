@@ -6,7 +6,7 @@
 	import screenshot1Lqip from "$showcase/jswitcher/screenshot-1.webp?lqip";
 	import screenshot2 from "$showcase/jswitcher/screenshot-2.webp?enhanced&quality=100";
 	import screenshot2Lqip from "$showcase/jswitcher/screenshot-2.webp?lqip";
-	import { getMainDomain } from "$lib/utils";
+	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
 
 	export const jswitcherProject: ShowcaseItem = {
 		type: "project",
@@ -33,7 +33,7 @@
 		],
 		links: [
 			{
-				url: `https://git.${getMainDomain()}/hloth/jswitcher`,
+				url: `${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/jswitcher`,
 				label: "Open JSwitcher source code",
 			},
 		],

@@ -8,7 +8,7 @@
 	import screenshot2Lqip from "$showcase/lufin/screenshot-2.webp?lqip";
 	import screenshotter from "$showcase/lufin/lufin-screenshotter.webp?enhanced&quality=100";
 	import screenshotterLqip from "$showcase/lufin/lufin-screenshotter.webp?lqip";
-	import { getMainDomain } from "$lib/utils";
+	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
 
 	export const lufinProject: ShowcaseItem = {
 		type: "project",
@@ -40,15 +40,15 @@
 		],
 		links: [
 			{
-				url: `https://lufin.${getMainDomain()}`,
+				url: `${getMainDomainProtocol()}://lufin.${getMainDomain()}`,
 				label: "Visit Lufin demo website",
 			},
 			{
-				url: `https://git.${getMainDomain()}/hloth/lufin`,
+				url: `${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/lufin`,
 				label: "Open lufin source code",
 			},
 			{
-				url: `https://git.${getMainDomain()}/hloth/lufin-screenshotter`,
+				url: `${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/lufin-screenshotter`,
 				label: "Open lufin screenshotter source code",
 			},
 		],

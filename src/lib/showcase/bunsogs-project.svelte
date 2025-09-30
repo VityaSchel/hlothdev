@@ -10,7 +10,7 @@
 	import screenshot3Lqip from "$showcase/bunsogs/screenshot-3.webp?lqip";
 	import screenshot4 from "$showcase/bunsogs/screenshot-4.webp?enhanced&quality=100";
 	import screenshot4Lqip from "$showcase/bunsogs/screenshot-4.webp?lqip";
-	import { getMainDomain } from "$lib/utils";
+	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
 
 	export const bunsogsProject: ShowcaseItem = {
 		type: "project",
@@ -47,11 +47,11 @@
 		],
 		links: [
 			{
-				url: `https://git.${getMainDomain()}/hloth/bunsogs`,
+				url: `${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/bunsogs`,
 				label: "Open bunsogs source code",
 			},
 			{
-				url: `https://blog.${getMainDomain()}/bunsogs-release`,
+				url: `${getMainDomainProtocol()}://blog.${getMainDomain()}/bunsogs-release`,
 				label: "Read article about bunsogs in hloth blog",
 			},
 			{
