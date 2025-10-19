@@ -22,6 +22,10 @@
 	<meta name="description" content={description} />
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={description} />
-	<meta property="og:type" content="website" />
+	<meta property="og:type" content="profile" />
+	<meta property="profile:first_name" content="Viktor" />
+	<meta property="profile:last_name" content="Shchelochkov" />
+	<meta property="profile:username" content="hloth" />
+	<meta property="profile:gender" content="male" />
 	<meta property="og:url" content="{page.url.origin}{page.url.pathname}" />
 </svelte:head>
