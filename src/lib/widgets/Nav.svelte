@@ -107,7 +107,7 @@
 				name="Instagram"
 				icon={instagramIcon}
 				alt="Instagram icon"
-				link="https://instagram.com/vityaczech"
+				link="https://instagram.com/hlothdev"
 				bind:selectedNavItem
 			/>
 		</div>

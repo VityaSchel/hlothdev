@@ -45,8 +45,8 @@
 		disablepictureinpicture
 		disableremoteplayback
 		class={[
-			`mask test s v a g a svaga i have it navalom absolute top-0 left-0 z-[1]
-	h-full w-full object-cover object-center motion-reduce:hidden`,
+			`s v a g a svaga i have it navalom absolute top-0 left-0 z-[1] h-full
+			w-full object-cover object-center motion-reduce:hidden`,
 			{
 				hidden: saveData || page.url.host.endsWith(".onion"),
 			},

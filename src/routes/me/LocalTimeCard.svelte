@@ -1,8 +1,9 @@
 <script lang="ts">
 	import XsCard from "$lib/widgets/grid-cards/XSCard.svelte";
 	import Clock from "$lib/widgets/Clock.svelte";
+	import { getEuropeanTzOffset } from "$lib/cet-cest";
 
-	const utcOffsetHours: number = 2;
+	const utcOffsetHours: number = getEuropeanTzOffset();
 	const utcOffsetMinutes: number = 0;
 	const timezone = `UTC${utcOffsetHours >= 0 ? "+" : ""}${utcOffsetHours}${
 		utcOffsetMinutes ? ":" + utcOffsetMinutes.toString().padStart(2, "0") : ""
