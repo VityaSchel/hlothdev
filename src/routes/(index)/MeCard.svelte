@@ -8,7 +8,7 @@
 			Date.now() + (4 * 60 + new Date().getTimezoneOffset()) * 60 * 1000,
 		);
 		let years = samara.getFullYear() - 2005;
-		if (samara.getMonth() + 1 < 7 || samara.getDate() < 6) years--;
+		if (samara.getMonth() + 1 < 7 && samara.getDate() < 6) years--;
 		return years;
 	};
 

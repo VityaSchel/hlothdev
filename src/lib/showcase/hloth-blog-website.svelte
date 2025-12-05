@@ -60,7 +60,18 @@
 		project size in half while keeping all existing features and adding new
 		ones. I also migrated from MongoDB to PostgreSQL and Drizzle ORM. A few
 		weeks later I added reactions to posts that use proof-of-work algorithm to
-		prevent flooding. The pow-reaction library is a standalone open-source
-		project that can be used by anyone for free!
+		prevent flooding. The <a href="/showcase/pow-reaction">
+			pow-reaction library
+		</a> is a standalone open-source project that can be used by anyone for free!
+	</p>
+	<h2>Remake in Astro</h2>
+	<p>
+		Before I even finished the SvelteKit remake I found out about Astro and
+		decided to remake the whole website once again... Now my blog is powered by
+		Astro and loads in less than a second on any connection, has 97+/100/100/100
+		Lighthouse scores and progressive loading images. It was a NOT fun
+		experience getting back to JSX and Astro fully-static components generation,
+		but I loved the idea of storing blog posts in Markdown files and editing
+		them through Visual Studio Code.
 	</p>
 {/snippet}
