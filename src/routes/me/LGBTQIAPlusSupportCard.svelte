@@ -1,14 +1,14 @@
 <script lang="ts">
 	import MdCard from "$lib/widgets/grid-cards/MDCard.svelte";
-	import bg from "$lib/assets/me-with-dima-celebrating-one-year-anniversary-2024.webp?enhanced";
-	import bgLqip from "$lib/assets/me-with-dima-celebrating-one-year-anniversary-2024.webp?lqip";
+	import bg from "$lib/assets/mcdonalds-pride.webp?enhanced";
+	import bgLqip from "$lib/assets/mcdonalds-pride.webp?lqip";
 </script>
 
 <MdCard
 	class="container-size col-start-2 col-end-4 row-start-4 row-end-5
 		px580:col-start-1 px580:col-end-4 px580:row-start-7 px580:row-end-8
 		md:col-start-1 md:col-end-4 md:row-start-4 md:row-end-5"
-	aria-label="LGTQIA+ support card / Background image: photo of me and my boyfriend Dima celebrating our one-year anniversary in 2024, on this photo we are hugging and smiling, a part of the 6-color LGBT flag is visible in the background"
+	aria-label="LGTQIA+ support card / Background image: LGTQIA+ Pride-themed McDonalds in Madrid"
 >
 	<div
 		class="group relative flex h-full w-full flex-col-reverse justify-between

@@ -93,7 +93,7 @@
 				lqip: loveLqip,
 			},
 			alt: "But my most favorite thing in life is love",
-			href: "https://www.instagram.com/devio.10/",
+			href: "https://www.instagram.com/hlothdev/",
 		},
 	];
 
