@@ -6,9 +6,9 @@
 
 <div
 	class={[
-		`no-scroll-when-wide flex flex-1 flex-col justify-evenly gap-[3px]
-rounded-b-[32px] border border-x-0 border-b-0 pb-4 transition-colors
-md:overflow-auto`,
+		`no-scroll-when-wide flex max-h-[480px] flex-1 flex-col justify-evenly
+		gap-[3px] rounded-b-[32px] border border-x-0 border-b-0 pb-4
+		transition-colors md:overflow-auto`,
 		{
 			"border-transparent": scrollY === 0,
 			"border-white/10": scrollY > 0,

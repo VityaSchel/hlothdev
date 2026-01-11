@@ -14,10 +14,10 @@
 
 <main
 	class={[
-		` drop-background-shadow hide-when-short relative min-h-0 w-[1384px]
-		max-w-full flex-1 shrink-0 rounded-[32px] backdrop-blur-[48px]
-		md:max-h-[645px] transparency-reduce:bg-transparent
-		transparency-reduce:backdrop-blur-none `,
+		` drop-background-shadow hide-when-short relative max-h-[815px] min-h-0
+		w-[1384px] max-w-full flex-1 shrink-0 rounded-[32px] backdrop-blur-[48px]
+		md:max-h-[560px] px920:max-h-[600px] px1180:max-h-[645px]
+		transparency-reduce:bg-transparent transparency-reduce:backdrop-blur-none `,
 		className,
 	]}
 	style={viewId ? `view-transition-name: ${viewId};` : undefined}

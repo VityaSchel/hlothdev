@@ -59,10 +59,10 @@
 				icon={linkedinIcon}
 				alt="Linkedin icon"
 				link="https://www.linkedin.com/in/hloth"
-				class="hidden px350:block"
+				class="hidden px400:block"
 				bind:selectedNavItem
 			/>
-			<NavSeparator class="hidden px400:block" />
+			<NavSeparator class="hidden px600:block" />
 			<NavItem
 				name="Contact me via Matrix (preferred)"
 				icon={elementIcon}
@@ -76,7 +76,7 @@
 				icon={telegramIcon}
 				alt="Telegram icon"
 				link="https://t.me/hlothdev"
-				class="hidden px300:block"
+				class="hidden px350:block"
 				bind:selectedNavItem
 			/>
 			<NavItem
@@ -84,10 +84,10 @@
 				icon={discordIcon}
 				alt="Discord icon"
 				link="https://discord.com/users/329249421332316166"
-				class="hidden px600:block"
+				class="hidden px500:block"
 				bind:selectedNavItem
 			/>
-			<NavSeparator class="hidden px400:block" />
+			<NavSeparator class="hidden px600:block" />
 			<NavItem
 				name="Contact me via email"
 				icon={mailIcon}
@@ -100,7 +100,7 @@
 				icon={blogIcon}
 				alt="My blog icon"
 				link={`${getMainDomainProtocol()}://blog.${getMainDomain()}/`}
-				class="hidden px450:block"
+				class="hidden px300:block"
 				bind:selectedNavItem
 			/>
 			<NavItem
