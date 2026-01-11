@@ -4,11 +4,15 @@
 	import { onMount } from "svelte";
 
 	const getAge = () => {
-		const samara = new Date(
-			Date.now() + (4 * 60 + new Date().getTimezoneOffset()) * 60 * 1000,
+		const now = new Date();
+		const samaraTime = new Date(
+			now.getTime() + 4 * 60 * 60 * 1000 + now.getTimezoneOffset() * 60 * 1000,
 		);
-		let years = samara.getFullYear() - 2005;
-		if (samara.getMonth() + 1 < 7 && samara.getDate() < 6) years--;
+		let years = samaraTime.getFullYear() - 2005;
+		const month = samaraTime.getMonth() + 1;
+		const day = samaraTime.getDate();
+
+		if (month < 7 || (month === 7 && day < 6)) years--;
 		return years;
 	};
 
