@@ -17,19 +17,19 @@
 				px470:gap-4 px470:p-4 md:gap-3 md:py-0 px870:gap-[18px] xl:py-4"
 		>
 			<div
-				class="flex h-8 w-8 items-center justify-center rounded-full
+				class="relative flex h-8 w-8 items-center justify-center rounded-full
 					bg-[#3B82F7] px400:h-12 px400:w-12 md:h-10 md:w-10 px870:h-12
-					px870:w-12 lg:h-16 lg:w-16 relative"
+					px870:w-12 lg:h-16 lg:w-16"
 				aria-hidden="true"
 			>
 				<span
-					class="absolute top-1/2 left-1/2 -translate-1/2 text-lg
-						px400:text-xl md:text-lg px870:text-2xl font-medium text-[#ffffffd9]"
+					class="absolute top-1/2 left-1/2 -translate-1/2 text-lg font-medium
+						text-[#ffffffd9] px400:text-xl md:text-lg px870:text-2xl"
 				>
 					Aa
 				</span>
 				<svg
-					class="w-4 bg-[#3B82F7] px400:w-6 md:w-5 px870:w-7 relative z-[1]"
+					class="relative z-[1] w-4 bg-[#3B82F7] px400:w-6 md:w-5 px870:w-7"
 					viewBox="0 0 57.7188 57.5312"
 				>
 					<g>
@@ -53,7 +53,7 @@
 					class="hidden text-base leading-[19px] font-semibold
 						text-thin-alt-typography px620:block md:hidden lg:block"
 				>
-					Svelte, React, TypeScript, PostgreSQL, Drizzle, Python
+					Svelte, React, TypeScript, Swift, PostgreSQL, Drizzle
 				</span>
 			</div>
 		</div>
