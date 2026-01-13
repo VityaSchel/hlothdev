@@ -1,7 +1,7 @@
 <script lang="ts">
 	import GreetingsCard from "./GreetingsCard.svelte";
 	import LgbtqiaPlusSupportCard from "./LGBTQIAPlusSupportCard.svelte";
-	import UkraineSupportCard from "./UkraineSupportCard.svelte";
+	import StandWithPeaceCard from "./StandWithPeaceCard.svelte";
 	import TravelAndExploreCard from "./TravelAndExploreCard.svelte";
 	import SpeakingLanguagesCard from "./SpeakingLanguagesCard.svelte";
 	import PrivacySupportCard from "./PrivacyRightsCard.svelte";
@@ -22,7 +22,7 @@
 <GreetingsCard inert />
 <GreetingsCard />
 <LgbtqiaPlusSupportCard />
-<UkraineSupportCard />
+<StandWithPeaceCard />
 <TravelAndExploreCard />
 <SpeakingLanguagesCard />
 <PrivacySupportCard inert />
