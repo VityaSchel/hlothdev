@@ -21,10 +21,10 @@
 		px1180:row-end-4"
 	aria-label="Link to my profile on Forgejo, which has {repositories} git repositories"
 >
-	<XsCard class="h-full w-full bg-gradient-to-b from-[#232a33] to-[#171e26]">
+	<XsCard class="size-full bg-gradient-to-b from-[#232a33] to-[#171e26]">
 		<!-- prettier-ignore -->
 		<div class="
-      flex h-full w-full flex-col items-start justify-between p-[6.72cqw]
+      flex size-full flex-col items-start justify-between p-[6.72cqw]
     ">
     <span class="flex h-[36.97cqw] w-[36.97cqw]">
       <ForgejoIcon />

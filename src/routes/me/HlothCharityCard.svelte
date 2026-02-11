@@ -15,7 +15,7 @@
 	aria-label="Link to my charity log on X (formerly Twitter)"
 >
 	<XsCard
-		class="flex h-full w-full items-end bg-cover"
+		class="flex size-full items-end bg-cover"
 		bg
 		--bg="url({bg.img
 			.src}), url({bgLqip.lqip}), linear-gradient(to bottom, var(--color-neutral-600), var(--color-neutral-600))"

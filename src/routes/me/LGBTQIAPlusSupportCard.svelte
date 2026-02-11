@@ -11,7 +11,7 @@
 	aria-label="LGTQIA+ support card / Background image: LGTQIA+ Pride-themed McDonalds in Madrid"
 >
 	<div
-		class="group relative flex h-full w-full flex-col-reverse justify-between
+		class="group relative flex size-full flex-col-reverse justify-between
 			overflow-clip rounded-[8.22cqw] bg-cover p-[4.11cqw] text-[4.72cqw]
 			tracking-[-0.18cqw] focus-lg px580:text-[3.08cqw]
 			@px273:tracking-[-0.15cqw]"
@@ -39,7 +39,7 @@
 			standards and invest in equality training.
 		</span>
 		<div
-			class="absolute top-0 left-0 h-full w-full bg-black/50 opacity-0
+			class="absolute top-0 left-0 size-full bg-black/50 opacity-0
 				transition-opacity duration-300 group-focus-within:opacity-100
 				group-hover:opacity-100"
 		></div>

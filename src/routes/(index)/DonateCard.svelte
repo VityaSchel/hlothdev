@@ -4,7 +4,7 @@
 
 <a
 	href="/donate"
-	class="drop-background-shadow relative max-w-full flex-1 cursor-default
+	class="bg-shadow-card-btn relative max-w-full flex-1 cursor-default
 		rounded-[16px] focus-lg px680:flex-3/5 md:flex-1 lg:flex-[412]"
 	style:view-transition-name="donate"
 	aria-label="Open donate to me page"
@@ -57,9 +57,3 @@
 		</div>
 	</Squircle>
 </a>
-
-<style>
-	.drop-background-shadow {
-		box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.25);
-	}
-</style>

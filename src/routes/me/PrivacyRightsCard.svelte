@@ -25,10 +25,10 @@
 		"container-size group overflow-clip bg-cover",
 		{
 			[`absolute top-0 left-0 z-[1] col-span-full col-start-1 row-span-full
-row-start-1 h-full w-full`]: expanded,
+			row-start-1 size-full`]: expanded,
 			[`relative col-start-1 col-end-3 row-start-9 row-end-11 px580:col-start-4
-		px580:col-end-6 px580:row-start-2 px580:row-end-4 md:col-start-7
-		md:col-end-9 md:row-start-1 md:row-end-3`]: !expanded,
+			px580:col-end-6 px580:row-start-2 px580:row-end-4 md:col-start-7
+			md:col-end-9 md:row-start-1 md:row-end-3`]: !expanded,
 		},
 	]}
 	viewId={inert ? undefined : "privacy-rights"}
@@ -39,8 +39,8 @@ row-start-1 h-full w-full`]: expanded,
 >
 	<enhanced:img
 		src="$lib/assets/privacy-rights.webp"
-		class="absolute top-0 left-0 h-full w-full bg-neutral-200 bg-cover
-			object-cover object-[30%] text-[0px] select-none"
+		class="absolute top-0 left-0 size-full bg-neutral-200 bg-cover object-cover
+			object-[30%] text-[0px] select-none"
 		alt="Background: a surveillance camera mounted on a wall"
 		width="2400"
 		height="1138"

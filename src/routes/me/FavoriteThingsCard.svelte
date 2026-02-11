@@ -132,7 +132,7 @@
 	aria-label="My favorite things card"
 >
 	<div
-		class="group relative h-full w-full overflow-clip rounded-[12.59cqw]
+		class="group relative size-full overflow-clip rounded-[12.59cqw]
 			has-focus-visible:outline-3 has-focus-visible:outline-offset-6
 			has-focus-visible:outline-stone-200/40"
 		ontouchstartcapture={() => {
@@ -152,7 +152,7 @@
 		}}
 	>
 		<div
-			class="scrollbar-invisible absolute top-0 left-0 flex h-full w-full snap-x
+			class="scrollbar-invisible absolute top-0 left-0 flex size-full snap-x
 				snap-mandatory gap-px overflow-auto"
 			bind:this={scrollContainer}
 			onscroll={() => (scroll = scrollContainer.scrollLeft)}
@@ -166,7 +166,7 @@
 					this={href ? "a" : "div"}
 					rel={href ? "noopener noreferrer" : undefined}
 					target={href ? "_blank" : undefined}
-					class="animate-scroll h-full w-full shrink-0 cursor-default snap-center overflow-clip rounded-[12.59cqw]"
+					class="animate-scroll size-full shrink-0 cursor-default snap-center overflow-clip rounded-[12.59cqw]"
 					style={clipPathStyle}
 					role="listitem"
 					{href}
@@ -174,7 +174,7 @@
 					<enhanced:img
 						{src}
 						{alt}
-						class="h-full w-full shrink-0 rounded-[12.59cqw] bg-cover object-cover indent-[8cqw] text-[6.22cqw]"
+						class="size-full shrink-0 rounded-[12.59cqw] bg-cover object-cover indent-[8cqw] text-[6.22cqw]"
 						style="background-image: url({lqip.lqip}), linear-gradient(to top, var(--color-neutral-600), var(--color-neutral-600)); {clipPathStyle}"
 						draggable="false"
 						width="508"

@@ -13,15 +13,12 @@
 		px1180:row-start-1 px1180:row-end-2"
 	aria-label="Link to my LinkedIn profile"
 >
-	<XsCard
-		class="h-full w-full overflow-clip bg-cover"
-		aria-label="Open to work"
-	>
+	<XsCard class="size-full overflow-clip bg-cover" aria-label="Open to work">
 		<enhanced:img
 			src="$lib/assets/open-to-work.webp"
 			style="background-image: url({bgLqip.lqip}), linear-gradient(to bottom, var(--color-neutral-600), var(--color-neutral-600))"
 			alt="Me with a sign saying 'Open to work'"
-			class="h-full w-full bg-cover object-cover text-[0px] leading-[12cqw]"
+			class="size-full bg-cover object-cover text-[0px] leading-[12cqw]"
 			width="238"
 			height="238"
 		/>

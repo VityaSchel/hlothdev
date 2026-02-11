@@ -17,10 +17,10 @@
 
 <XlCard
 	class={[
-		"container-size h-full w-full overflow-clip text-black",
+		"container-size size-full overflow-clip text-black",
 		{
 			[`absolute top-0 left-0 z-[1] col-span-full col-start-1 row-span-full
-	row-start-1 h-full w-full`]: expanded,
+			row-start-1 size-full`]: expanded,
 			"col-start-1 col-end-4 row-start-1 row-end-4": !expanded,
 		},
 	]}
@@ -36,7 +36,7 @@
 	{:else}
 		<div
 			class="
-        flex h-full w-full flex-col justify-between px-[8.22cqw] py-[8.74cqw]
+        flex size-full flex-col justify-between px-[8.22cqw] py-[8.74cqw]
         text-black
       "
 			style:view-transition-name={inert ? undefined : "about-me-content"}
@@ -49,7 +49,7 @@
 			>
 				<span
 					class="
-            animate-rotate flex h-full w-full items-center justify-center
+            animate-rotate flex size-full items-center justify-center
             text-[4.13cqw]
             [&_svg]:w-full
           "
@@ -65,7 +65,13 @@
 			>
 				Hi, I’m Viktor, and my life is a roller coaster!
 			</h1>
-			<Button element="a" containerClass="h-[15cqh]" class="rounded-[7.71cqw] focus-xl" href="/me/about" draggable="false">
+			<Button
+				element="a"
+				containerClass="h-[15cqh]"
+				class="rounded-[7.71cqw] focus-xl"
+				href="/me/about"
+				draggable="false"
+			>
 				<svg
 					class="h-[38cqh] w-[38cqh]"
 					viewBox="0 0 23 23"

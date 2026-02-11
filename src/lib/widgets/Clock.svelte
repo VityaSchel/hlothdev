@@ -27,10 +27,10 @@
 </script>
 
 <div
-	class="container-size h-full w-full cursor-default rounded-full bg-white
-		p-[2.1%] text-[#1c1c1e] select-none"
+	class="container-size size-full cursor-default rounded-full bg-white p-[2.1%]
+		text-[#1c1c1e] select-none"
 >
-	<div class="relative h-full w-full">
+	<div class="relative size-full">
 		{#snippet tick(rotation: number)}
 			<div
 				class="border-aligned-element tick select-none"
@@ -73,7 +73,7 @@
 				select-none"
 			style="--initial-rotation: {secondRotation * time.seconds}deg;"
 		>
-			<span class="bottom-0 h-full w-full"></span>
+			<span class="bottom-0 size-full"></span>
 			<span class="top-full h-[14%] w-full"></span>
 		</div>
 		{#each { length: hours }, i}

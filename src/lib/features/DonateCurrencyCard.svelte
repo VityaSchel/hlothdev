@@ -45,7 +45,7 @@
 			</div>
 		</div>
 		<div
-			class="max-h-full w-full shrink-0 flex-col gap-0 overflow-clip"
+			class="max-size-full shrink-0 flex-col gap-0 overflow-clip"
 			aria-label="Crypto wallet details"
 		>
 			{#if preferred}
@@ -90,9 +90,9 @@
 					<span
 						class={{
 							[`not-group-hover:whitespace-nowrap
-			group-focus-within:whitespace-normal! focus:outline-0
-			focus-visible:bg-stone-500/50 focus-visible:outline-0
-			no-hover:whitespace-normal!`]: collapseAddress,
+							group-focus-within:whitespace-normal! focus:outline-0
+							focus-visible:bg-stone-500/50 focus-visible:outline-0
+							no-hover:whitespace-normal!`]: collapseAddress,
 						}}
 						role="textbox"
 						tabindex="0"

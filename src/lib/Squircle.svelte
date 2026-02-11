@@ -36,14 +36,14 @@
 </script>
 
 <div
-	class="squircle-container relative h-full w-full"
+	class="squircle-container relative size-full"
 	bind:offsetWidth={width}
 	bind:offsetHeight={height}
 	style="border-radius: {cornerRadius}px;"
 >
 	<div
 		class={[
-			"absolute top-0 left-0 z-[0] h-full w-full",
+			"absolute top-0 left-0 z-[0] size-full",
 			classes,
 			{
 				"backdrop-blur-[48px] transparency-reduce:backdrop-blur-none":
@@ -57,7 +57,7 @@
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
 		style="overflow: visible;"
-		class="pointer-events-none absolute top-0 left-0 z-[100] h-full w-full"
+		class="pointer-events-none absolute top-0 left-0 z-[100] size-full"
 		aria-hidden="true"
 	>
 		<defs>
@@ -92,7 +92,7 @@
 	</svg>
 	<div
 		class={[
-			"relative top-0 left-0 z-[2] h-full w-full",
+			"relative top-0 left-0 z-[2] size-full",
 			{
 				"squircle-content-maskable": arrow,
 			},

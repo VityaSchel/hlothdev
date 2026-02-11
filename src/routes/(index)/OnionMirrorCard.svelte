@@ -7,7 +7,7 @@
 {#snippet button(href: string, label: string, icon: "onion" | "web")}
 	<a
 		{href}
-		class="drop-background-shadow relative max-w-full flex-1 cursor-default
+		class="bg-shadow-card-btn relative max-w-full flex-1 cursor-default
 		rounded-[16px] focus-lg px680:flex-2/5 md:flex-1 lg:flex-[171]"
 		aria-label="Open onion mirror of this website"
 	>
@@ -51,7 +51,7 @@
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 24 24"
-							class="relative h-6 z-[1] bg-[#3B82F7]"
+							class="relative z-[1] h-6 bg-[#3B82F7]"
 							width="100%"
 						>
 							<!-- Icon from Ultimate free icons by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
@@ -63,8 +63,8 @@
 					{/if}
 				</div>
 				<span
-					class="text-left lg:text-center text-base leading-5 font-bold text-thick-typography
-					px530:text-xl px680:text-base px870:text-xl px870:leading-6
+					class="text-left text-base leading-5 font-bold text-thick-typography px530:text-xl
+					px680:text-base px870:text-xl px870:leading-6 lg:text-center
 					lg:text-sm lg:leading-[16px] lg:font-medium xl:text-base"
 				>
 					{label}
@@ -79,9 +79,3 @@
 {:else}
 	{@render button("http://" + torDomain, "Onion mirror", "onion")}
 {/if}
-
-<style>
-	.drop-background-shadow {
-		box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.25);
-	}
-</style>

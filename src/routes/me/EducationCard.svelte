@@ -19,11 +19,11 @@
 	<LgCard
 		--bg="url({bg.img
 			.src}), url({bgLqip.lqip}), linear-gradient(to bottom, var(--color-neutral-600), var(--color-neutral-600))"
-		class="h-full w-full bg-cover text-white"
+		class="size-full bg-cover text-white"
 		aria-label="Background image: photo of me at 10 years old, sitting in front of my old laptop typing code, screen displays three colorful interface buttons from one of my programs"
 	>
 		<div
-			class="flex h-full w-full flex-col justify-end gap-[0.39cqw] px-[5.90cqw]
+			class="flex size-full flex-col justify-end gap-[0.39cqw] px-[5.90cqw]
 				py-[5.11cqw]"
 		>
 			<h3
@@ -40,11 +40,7 @@
 				I’m self-taught talent who skipped university degree. I only have high
 				school diploma.
 			</p>
-			<Button
-				element="span"
-				variant="md"
-				containerClass="h-[10.68cqh]"
-			>
+			<Button element="span" variant="md" containerClass="h-[10.68cqh]">
 				Read an article about 10 y.o. me
 			</Button>
 		</div>

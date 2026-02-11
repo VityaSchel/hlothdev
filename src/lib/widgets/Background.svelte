@@ -29,7 +29,7 @@
 	aria-hidden="true"
 >
 	<enhanced:img
-		class="absolute top-0 left-0 h-full w-full object-cover"
+		class="absolute top-0 left-0 size-full object-cover"
 		src="$lib/assets/sonoma-video-banner.webp?quality=100"
 		style="background-image: url('{bgLqip.lqip}'), linear-gradient(to bottom, #1c330c, #1c330c); background-size: cover; font-size: 0px;"
 		width="3840"

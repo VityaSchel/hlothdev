@@ -10,7 +10,7 @@
 	aria-label="Peace support card / Background image: green leaves overhang a tranquil river with a rock"
 >
 	<div
-		class="group flex h-full w-full flex-col justify-between overflow-clip
+		class="group flex size-full flex-col justify-between overflow-clip
 			rounded-[12.5984252cqw] bg-cover p-[6.29cqw]"
 		style="background-image: url({bg.img
 			.src}), url({bgLqip.lqip}), linear-gradient(to bottom, var(--color-neutral-600), var(--color-neutral-600));"

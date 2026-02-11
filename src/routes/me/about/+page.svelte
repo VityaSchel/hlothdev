@@ -93,7 +93,7 @@
 				md:flex-1 px980:flex-2/5 px1100:flex-[32]"
 		>
 			<enhanced:img
-				class="absolute top-0 left-0 h-full w-full bg-neutral-200 object-cover
+				class="absolute top-0 left-0 size-full bg-neutral-200 object-cover
 					object-[52%_50%] text-center"
 				src={meInPinkHat}
 				style="background: url({meInPinkHatLqip.lqip}) center / cover

@@ -32,7 +32,7 @@
 	{#if mono}
 		<div
 			class={[
-				"mono top-0 left-0 h-full w-full",
+				"mono top-0 left-0 size-full",
 				{
 					absolute: fallback === "overlay",
 				},
@@ -43,7 +43,7 @@
 			src={url}
 			alt=""
 			class={[
-				`top-0 left-0 z-[-1] h-full w-full object-contain object-center p-[0.5%] select-none`,
+				`top-0 left-0 z-[-1] size-full object-contain object-center p-[0.5%] select-none`,
 				{
 					absolute: fallback === "overlay",
 				},

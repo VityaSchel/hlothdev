@@ -200,3 +200,7 @@ div.page-background.__ns__pop2top {
 	/* NoScript casually breaking my website :/ */
 	z-index: auto !important;
 }
+
+.bg-shadow-card-btn {
+	box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.25);
+}

@@ -7,8 +7,8 @@
 	href="{getMainDomainProtocol()}://cv.{getMainDomain()}"
 	rel="nofollow noreferrer noopener"
 	target="_blank"
-	class="drop-background-shadow relative max-w-full flex-1 shrink-0
-		cursor-default rounded-[16px] focus-lg xl:shrink"
+	class="bg-shadow-card-btn relative max-w-full flex-1 shrink-0 cursor-default
+		rounded-[16px] focus-lg xl:shrink"
 	aria-label="Open my developer resume website"
 >
 	<Squircle class="bg-black/10" cornerRadius={16} arrow>
@@ -59,9 +59,3 @@
 		</div>
 	</Squircle>
 </a>
-
-<style>
-	.drop-background-shadow {
-		box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.25);
-	}
-</style>

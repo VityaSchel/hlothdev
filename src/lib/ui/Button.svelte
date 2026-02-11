@@ -27,8 +27,8 @@
 	<svelte:element
 		this={element}
 		class={[
-			`flex h-full w-full cursor-default items-center justify-center bg-white
-select-none`,
+			`flex size-full cursor-default items-center justify-center bg-white
+			select-none`,
 			{
 				"gap-[40cqh] rounded-full text-[31.6cqh] font-bold tracking-[-0.2px]":
 					variant === "xl",

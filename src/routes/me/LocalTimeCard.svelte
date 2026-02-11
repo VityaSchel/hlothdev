@@ -25,7 +25,7 @@
 		aria-hidden="true"
 	>
 		<div
-			class="flex aspect-square h-auto max-h-full w-full items-center
+			class="max-size-full flex aspect-square h-auto items-center
 				justify-center"
 		>
 			<Clock {utcOffsetHours} {utcOffsetMinutes} {timezone} />

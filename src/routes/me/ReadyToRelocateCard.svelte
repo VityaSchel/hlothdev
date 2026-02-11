@@ -15,10 +15,9 @@
 	aria-label="Ready to relocate card"
 >
 	<XsCard
-		class="relative flex h-full w-full rotate-y-0 flex-col-reverse
-			justify-between bg-cover px-[5.88cqw] py-[5.04cqw] transition-transform
-			duration-300 ease-out backface-hidden
-			motion-safe:group-focus-within:rotate-y-180
+		class="relative flex size-full rotate-y-0 flex-col-reverse justify-between
+			bg-cover px-[5.88cqw] py-[5.04cqw] transition-transform duration-300
+			ease-out backface-hidden motion-safe:group-focus-within:rotate-y-180
 			motion-safe:group-hover:rotate-y-180"
 		aria-label="Background image: photo of me from my back standing in front of a chinese temple titled 三洞講法堂 (rougly translates to Hall of Preaching the Teachings of the Three Caverns), part of City God Temple of Shanghai, located in the city of Shanghai, China"
 		--bg="url({bg.img
@@ -43,7 +42,7 @@
 		</span>
 	</XsCard>
 	<XsCard
-		class="absolute top-0 left-0 h-full w-full overflow-auto bg-black/70
+		class="absolute top-0 left-0 size-full overflow-auto bg-black/70
 			transition-transform duration-300 ease-out backface-hidden
 			motion-safe:-rotate-y-180 motion-safe:group-focus-within:rotate-y-0
 			motion-safe:group-hover:rotate-y-0 motion-reduce:opacity-0

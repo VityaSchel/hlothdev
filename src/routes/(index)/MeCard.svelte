@@ -2,29 +2,17 @@
 	import Squircle from "$lib/Squircle.svelte";
 	import meAvatarLqip from "$lib/assets/me-avatar.webp?lqip";
 	import { onMount } from "svelte";
+	import { getMyAge } from "./my-age";
 
-	const getAge = () => {
-		const now = new Date();
-		const samaraTime = new Date(
-			now.getTime() + 4 * 60 * 60 * 1000 + now.getTimezoneOffset() * 60 * 1000,
-		);
-		let years = samaraTime.getFullYear() - 2005;
-		const month = samaraTime.getMonth() + 1;
-		const day = samaraTime.getDate();
-
-		if (month < 7 || (month === 7 && day < 6)) years--;
-		return years;
-	};
-
-	let age = $derived(getAge());
+	let age = $state(getMyAge());
 
 	onMount(() => {
 		let interval: ReturnType<typeof setInterval> | undefined;
 		let timeout = setTimeout(
 			() => {
-				age = getAge();
+				age = getMyAge();
 				interval = setInterval(() => {
-					age = getAge();
+					age = getMyAge();
 				}, 60 * 1000);
 			},
 			(60 - new Date().getSeconds()) * 1000,
@@ -38,17 +26,15 @@
 
 <a
 	href="/me"
-	class="drop-background-shadow relative max-w-full cursor-default
-		rounded-[16px] focus-lg px420:flex-1 px1380:flex-[743]"
+	class="bg-shadow-card-btn relative max-w-full cursor-default rounded-[16px]
+		focus-lg px420:flex-1 px1380:flex-[743]"
 	style="view-transition-name: me;"
 	aria-label="Go to About me page"
 >
 	<Squircle class="bg-black/10" cornerRadius={16} arrow>
 		<div
-			class="flex h-full flex-col items-center gap-3 rounded-[16px] px-4 py-4
-				text-center select-none px470:flex-row px470:text-left px530:gap-5
-				px600:py-9 px620:gap-8 px620:px-8 md:gap-3 md:px-4 md:py-4 px870:gap-4
-				px920:gap-6 px1180:gap-8 px1180:px-8 px1180:py-9"
+			class="me-card-container flex h-full flex-col items-center rounded-[16px]
+				text-center select-none"
 		>
 			<enhanced:img
 				class="aspect-square h-auto w-[100px] rounded-full bg-cover text-[0px]
@@ -98,8 +84,34 @@
 	</Squircle>
 </a>
 
-<style>
-	.drop-background-shadow {
-		box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.25);
+<style lang="postcss">
+	@reference "tailwindcss";
+	.me-card-container {
+		@apply gap-3 px-4 py-4;
+
+		@media (min-width: 470px) {
+			@apply flex-row text-left;
+		}
+		@media (min-width: 530px) {
+			@apply gap-5;
+		}
+		@media (min-width: 600px) {
+			@apply py-9;
+		}
+		@media (min-width: 620px) {
+			@apply gap-8 px-8;
+		}
+		@media (min-width: 768px) {
+			@apply gap-3 px-4 py-4;
+		}
+		@media (min-width: 870px) {
+			@apply gap-4;
+		}
+		@media (min-width: 920px) {
+			@apply gap-6;
+		}
+		@media (min-width: 1180px) {
+			@apply gap-8 px-8 py-9;
+		}
 	}
 </style>

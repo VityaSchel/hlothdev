@@ -22,7 +22,7 @@
 	} = $props();
 </script>
 
-<div class="flex h-full w-full flex-col">
+<div class="flex size-full flex-col">
 	<header
 		class="border-px flex h-[52px] w-full shrink-0 items-center justify-between
 			gap-2 border border-x-0 border-t-0 border-white/25 px-[15px] pl-0"
