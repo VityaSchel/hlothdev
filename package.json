@@ -1,46 +1,64 @@
 {
 	"name": "hloth.dev",
 	"version": "1.0.0",
-	"type": "module",
+	"description": "The personal website of Viktor Shchelochkov aka hloth.",
+	"homepage": "https://git.hloth.dev/hloth/hloth.dev",
+	"bugs": {
+		"url": "https://git.hloth.dev/hloth/hloth.dev/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://git.hloth.dev/hloth/hloth.dev.git"
+	},
+	"funding": "https://hloth.dev/donate",
 	"license": "MIT",
 	"author": "Viktor Shchelochkov <hi@hloth.dev> (https://hloth.dev)",
+	"type": "module",
+	"scripts": {
+		"build": "bun vite build",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"dev": "bun vite dev",
+		"format": "prettier --write .",
+		"lint": "prettier --check . && eslint .",
+		"prepare": "husky",
+		"preview": "bun vite preview"
+	},
 	"lint-staged": {
 		"*.{js,ts,svelte}": [
 			"eslint --cache --fix",
 			"prettier --write"
 		]
 	},
-	"scripts": {
-		"dev": "bun vite dev",
-		"build": "bun vite build",
-		"preview": "bun vite preview",
-		"prepare": "husky",
-		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"format": "prettier --write .",
-		"lint": "prettier --check . && eslint ."
+	"dependencies": {
+		"@fontsource-variable/inter": "^5.2.8",
+		"@fontsource-variable/sofia-sans-condensed": "^5.2.8",
+		"@fontsource-variable/sofia-sans-extra-condensed": "^5.2.8",
+		"figma-squircle": "^1.1.0",
+		"svelte-portal": "^2.2.1",
+		"zod": "^4.3.6"
 	},
 	"devDependencies": {
-		"@eslint/compat": "^1.3.2",
-		"@eslint/js": "^9.36.0",
+		"@eslint/compat": "^2.0.2",
+		"@eslint/js": "^10.0.0",
 		"@sveltejs/adapter-node": "^5.3.2",
-		"@sveltejs/enhanced-img": "^0.8.1",
+		"@sveltejs/enhanced-img": "^0.10.0",
 		"@sveltejs/kit": "^2.42.2",
 		"@sveltejs/vite-plugin-svelte": "^6.2.0",
 		"@tailwindcss/vite": "^4.1.13",
-		"@types/node": "^24.5.2",
+		"@types/node": "^25.2.0",
 		"eslint": "^9.36.0",
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-plugin-svelte": "^3.12.4",
-		"globals": "^16.4.0",
+		"globals": "^17.3.0",
 		"husky": "^9.1.7",
 		"lint-staged": "^16.2.3",
 		"network-information-types": "^0.1.1",
 		"prettier": "^3.6.2",
 		"prettier-plugin-classnames": "^0.9.0",
-		"prettier-plugin-merge": "^0.8.0",
+		"prettier-plugin-merge": "^0.9.0",
 		"prettier-plugin-svelte": "^3.4.0",
-		"prettier-plugin-tailwindcss": "^0.6.14",
+		"prettier-plugin-tailwindcss": "^0.7.2",
 		"sass-embedded": "^1.93.0",
 		"sharp": "^0.34.4",
 		"super-sitemap": "^1.0.5",
@@ -51,13 +69,5 @@
 		"typescript-eslint": "^8.44.0",
 		"vite": "^7.1.7",
 		"vite-plugin-lqip": "^0.0.5"
-	},
-	"dependencies": {
-		"@fontsource-variable/inter": "^5.2.8",
-		"@fontsource-variable/sofia-sans-condensed": "^5.2.8",
-		"@fontsource-variable/sofia-sans-extra-condensed": "^5.2.8",
-		"figma-squircle": "^1.1.0",
-		"svelte-portal": "^2.2.1",
-		"zod": "^4.1.11"
 	}
 }

@@ -128,10 +128,6 @@
 	scrollbar-width: thin;
 }
 
-.container-size {
-	container-type: size;
-}
-
 @keyframes fade-in {
 	from {
 		opacity: 0;

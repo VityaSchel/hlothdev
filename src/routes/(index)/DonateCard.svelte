@@ -1,10 +1,11 @@
 <script lang="ts">
+	import CardIcon from "$lib/entities/CardIcon.svelte";
 	import Squircle from "$lib/Squircle.svelte";
 </script>
 
 <a
 	href="/donate"
-	class="bg-shadow-card-btn relative max-w-full flex-1 cursor-default
+	class="bg-shadow-card-btn @container relative max-w-full flex-1 cursor-default
 		rounded-[16px] focus-lg px680:flex-3/5 md:flex-1 lg:flex-[412]"
 	style:view-transition-name="donate"
 	aria-label="Open donate to me page"
@@ -14,21 +15,9 @@
 			class="flex h-full items-center gap-3 rounded-[16px] p-3 select-none
 				px470:gap-4 px470:p-4 md:gap-3 md:py-2 px870:gap-[18px] px870:py-4"
 		>
-			<div
-				class="relative flex aspect-square h-8 w-8 items-center justify-center
-					rounded-full bg-[#3B82F7] px470:h-12 px470:w-12 md:h-10 md:w-10
-					px870:h-12 px870:w-12 lg:h-16 lg:w-16"
-				aria-hidden="true"
-			>
-				<span
-					class="absolute top-1/2 left-1/2 -translate-1/2 text-lg
-						text-[#ffffffd9] px470:text-3xl"
-				>
-					$
-				</span>
+			<CardIcon fallback="$" lg>
 				<svg
-					class="relative z-[1] h-5 bg-[#3B82F7] px470:h-[30px] md:h-[28px]
-						lg:h-[33px]"
+					class="relative z-[1] size-[35cqi] h-5 bg-[#3B82F7] lg:h-[33px]"
 					viewBox="0 0 39.8125 70.4688"
 				>
 					<path
@@ -37,19 +26,18 @@
 						fill-opacity="0.85"
 					/>
 				</svg>
-			</div>
-			<div class="flex flex-1 flex-col gap-0 xl:gap-[6px]">
+			</CardIcon>
+			<div class="flex flex-1 flex-col">
 				<span
-					class="text-base font-bold tracking-[-0.1px] text-thick-typography
-						px530:text-xl px680:text-base px870:text-xl lg:text-2xl
-						xl:text-[32px] xl:leading-[38px]"
+					class="text-[11cqi] leading-[9cqi] font-bold tracking-[-0.1px]
+						text-thick-typography lg:text-[7.5cqi]"
 				>
 					Donate
 				</span>
 				<span
-					class="hidden text-sm leading-[19px] font-semibold tracking-[-0.1px]
-						text-thin-alt-typography px680:block md:hidden md:text-base
-						lg:block"
+					class="hidden text-[4cqi] leading-[4.5cqi] font-semibold
+						tracking-[-0.1px] text-thin-alt-typography px680:block
+						md:max-lg:hidden"
 				>
 					Support open source development
 				</span>
