@@ -8,12 +8,13 @@
 	} = $props();
 </script>
 
-<div
-	class={[
-		`@container-[size] flex h-full items-center gap-5 rounded-2xl p-3
-		select-none px470:p-4 md:justify-center`,
-		className,
-	]}
->
-	{@render children()}
+<div class="@container-[size] h-full rounded-2xl select-none">
+	<div
+		class={[
+			"flex h-full w-full items-center gap-[20cqb] px-[20cqb] md:justify-center",
+			className,
+		]}
+	>
+		{@render children()}
+	</div>
 </div>

@@ -34,7 +34,7 @@
 			</h3>
 			<p
 				class="pb-[3.54cqw] text-[4.33cqw] leading-[5.11cqw] font-bold
-					tracking-[-0.4cqw] hyphens-auto @px165:tracking-[-0.3cqw]
+					tracking-[-0.4cqw] hyphens-auto @px165:tracking-[-0.35cqw]
 					@px198:tracking-[-0.27cqw] @px239:tracking-[-0.23cqw]"
 			>
 				I’m self-taught talent who skipped university degree. I only have high

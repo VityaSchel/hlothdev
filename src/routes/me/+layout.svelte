@@ -13,7 +13,7 @@
 	let isSubpage = $derived(page.route.id !== "/me");
 </script>
 
-<PageWrapper viewId="me">
+<PageWrapper viewId="me" class={{ "max-md:h-full": isSubpage }}>
 	<SubpageWrapper
 		title="me.svelte"
 		srTitle="About Me page"
@@ -27,29 +27,27 @@
 	>
 		<div
 			class={[
-				"relative m-auto",
+				"@container-[size] relative m-auto",
 				{
 					[`aspect-[389/1799] h-auto w-full max-w-[470px]
 					px580:aspect-[659/1096] px580:max-w-none md:aspect-[1064/682]
 					md:h-full md:w-auto px957:h-auto px957:w-full px1180:aspect-[1334/540]
 					px1180:h-[540px] px1180:max-h-full px1180:w-auto`]: !isSubpage,
-					"size-full": isSubpage,
+					"h-full w-full md:min-h-[495px] px1180:min-h-[540px]": isSubpage,
 				},
 			]}
 			aria-label={isSubpage ? "Subpage" : "Grid of cards"}
 		>
-			<div class="@container-[size] h-full w-full">
-				<div
-					class={[
-						`grid max-h-full min-h-0 grid-flow-col grid-cols-3 grid-rows-13
-						gap-[3.404cqw] px580:grid-cols-5 px580:grid-rows-8
-						px580:gap-[2.3121cqw] md:grid-cols-8 md:grid-rows-5
-						md:gap-[2.6981450253cqh] px1180:min-h-0 px1180:grid-cols-10
-						px1180:grid-rows-4`,
-					]}
-				>
-					{@render children()}
-				</div>
+			<div
+				class={[
+					`grid max-h-full min-h-0 grid-flow-col grid-cols-3 grid-rows-13
+					gap-[3.404cqw] px580:grid-cols-5 px580:grid-rows-8
+					px580:gap-[2.3121cqw] md:grid-cols-8 md:grid-rows-5
+					md:gap-[2.6981450253cqh] px1180:min-h-0 px1180:grid-cols-10
+					px1180:grid-rows-4`,
+				]}
+			>
+				{@render children()}
 			</div>
 		</div>
 	</SubpageWrapper>

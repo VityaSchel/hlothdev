@@ -29,7 +29,7 @@
 		</span>
 		<p
 			class="leading-[9.24cqw] tracking-[-0.08em] text-white/50
-				@px84:tracking-[-0.07em] @px95:tracking-[-0.065em]"
+				@px84:tracking-[-0.08em] @px95:tracking-[-0.065em]"
 		>
 			I was coding in Pascal in 2011, then learned Python, then PHP and finally
 			web in 2020

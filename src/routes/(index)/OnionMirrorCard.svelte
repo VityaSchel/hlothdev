@@ -9,16 +9,16 @@
 {#snippet button(href: string, label: string, icon: "onion" | "web")}
 	<a
 		{href}
-		class="bg-shadow-card-btn relative max-w-full flex-1
-		cursor-default rounded-[16px] focus-lg px680:flex-2/5 md:flex-1 lg:flex-[171]"
+		class="bg-shadow-card-btn relative max-w-full flex-1 cursor-default
+		rounded-[16px] focus-lg max-px420:aspect-[344/56] px680:flex-2/5 md:flex-1 lg:flex-[171]"
 		aria-label="Open onion mirror of this website"
 	>
 		<Squircle class="bg-black/10" cornerRadius={16}>
-			<CardButton class="gap-2! lg:flex-col">
+			<CardButton class="lg:flex-col lg:gap-2!">
 				<CardIcon fallbackClass="size-[4cqi] rounded-full bg-white/85">
 					{#if icon === "onion"}
 						<svg
-							class="relative z-[1] bg-[#3B82F7]"
+							class="size-full!"
 							viewBox="0 0 52 52"
 							width="100%"
 							fill="#3B82F7"
@@ -41,7 +41,7 @@
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 24 24"
-							class="relative z-[1] h-6 bg-[#3B82F7]"
+							class="h-6"
 							width="100%"
 						>
 							<!-- Icon from Ultimate free icons by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
@@ -53,8 +53,7 @@
 					{/if}
 				</CardIcon>
 				<span
-					class="text-left text-[12cqi] leading-[10cqi] font-bold text-thick-typography lg:text-center
-					lg:font-medium"
+					class="text-left text-[40cqb] leading-[12cqi] font-bold text-thick-typography px420:text-[10cqi] px470:text-[11cqi] lg:text-center lg:text-[10cqi] lg:font-medium"
 				>
 					{label}
 				</span>

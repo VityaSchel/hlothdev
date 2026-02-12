@@ -9,17 +9,15 @@
 	href="{getMainDomainProtocol()}://cv.{getMainDomain()}"
 	rel="nofollow noreferrer noopener"
 	target="_blank"
-	class="bg-shadow-card-btn relative max-w-full flex-1 shrink cursor-default
-		rounded-[16px] focus-lg"
+	class="bg-shadow-card-btn relative max-w-full shrink cursor-default
+		rounded-[16px] focus-lg max-px470:aspect-[402/72] max-px420:aspect-[344/56]
+		px470:flex-1"
 	aria-label="Open my developer resume website"
 >
 	<Squircle class="bg-black/10" cornerRadius={16} arrow>
 		<CardButton>
 			<CardIcon fallback="Aa" lg>
-				<svg
-					class="relative z-[1] h-[40cqb] bg-[#3B82F7]"
-					viewBox="0 0 57.7188 57.5312"
-				>
+				<svg viewBox="0 0 57.7188 57.5312">
 					<g>
 						<rect height="57.5312" opacity="0" width="57.7188" x="0" y="0" />
 						<path
@@ -32,8 +30,8 @@
 			</CardIcon>
 			<div class="flex flex-1 flex-col">
 				<span
-					class="text-[5.5cqi] leading-[7cqi] font-bold tracking-[-0.1px]
-						text-thick-typography"
+					class="text-[40cqb] leading-[7cqi] font-bold tracking-[-0.1px]
+						text-thick-typography px420:text-[6.5cqi] lg:text-[5.5cqi]"
 				>
 					Jump to resume & CV
 				</span>

@@ -28,7 +28,7 @@
 		this={element}
 		class={[
 			`flex size-full cursor-default items-center justify-center bg-white
-			select-none`,
+			select-none active:bg-neutral-100/80`,
 			{
 				"gap-[40cqh] rounded-full text-[31.6cqh] font-bold tracking-[-0.2px]":
 					variant === "xl",
