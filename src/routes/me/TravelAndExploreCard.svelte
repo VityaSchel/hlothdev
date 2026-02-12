@@ -7,7 +7,7 @@
 <XlCard
 	bg="url({bg.img
 		.src}), url({bgLqip.lqip}), linear-gradient(to bottom, var(--color-neutral-600), var(--color-neutral-600))"
-	class="container-size one-storey-a col-start-1 col-end-4 row-start-5 row-end-8
+	class="one-storey-a @container col-start-1 col-end-4 row-start-5 row-end-8
 		bg-cover px580:col-start-3 px580:col-end-6 px580:row-start-4 px580:row-end-7
 		md:col-start-4 md:col-end-7 md:row-start-2 md:row-end-5"
 	aria-label="Travel and explore card"

@@ -26,15 +26,20 @@
 
 <a
 	href="/me"
-	class="bg-shadow-card-btn relative max-w-full cursor-default rounded-[16px]
-		focus-lg px420:flex-1 px1380:flex-[743]"
+	class="bg-shadow-card-btn relative max-w-full flex-1 cursor-default
+		rounded-[16px] focus-lg md:flex-[743]"
 	style="view-transition-name: me;"
 	aria-label="Go to About me page"
 >
-	<Squircle class="bg-black/10" cornerRadius={16} arrow>
+	<Squircle
+		class="bg-black/10"
+		containerClass="@container-[size]"
+		cornerRadius={16}
+		arrow
+	>
 		<div
-			class="me-card-container @container flex h-full flex-col items-center
-				rounded-[16px] text-center select-none"
+			class="@container flex h-full flex-col items-center gap-8 rounded-[16px]
+				px-8 py-[2cqi] select-none max-lg:text-center lg:flex-row"
 		>
 			<enhanced:img
 				class="aspect-square h-auto w-[25cqi] rounded-full bg-cover"
@@ -68,35 +73,3 @@
 		</div>
 	</Squircle>
 </a>
-
-<style lang="postcss">
-	@reference "tailwindcss";
-	.me-card-container {
-		@apply gap-3 px-4 py-4;
-
-		@media (min-width: 470px) {
-			@apply flex-row text-left;
-		}
-		@media (min-width: 530px) {
-			@apply gap-5;
-		}
-		@media (min-width: 600px) {
-			@apply py-9;
-		}
-		@media (min-width: 620px) {
-			@apply gap-8 px-8;
-		}
-		@media (min-width: 768px) {
-			@apply gap-3 px-4 py-4;
-		}
-		@media (min-width: 870px) {
-			@apply gap-4;
-		}
-		@media (min-width: 920px) {
-			@apply gap-6;
-		}
-		@media (min-width: 1180px) {
-			@apply gap-8 px-8 py-9;
-		}
-	}
-</style>

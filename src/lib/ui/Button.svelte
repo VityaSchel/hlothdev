@@ -16,7 +16,7 @@
 
 <div
 	class={[
-		"container-size w-full",
+		"@container-[size] w-full",
 		{
 			"h-15": variant === "xl",
 			"h-7": variant === "md",

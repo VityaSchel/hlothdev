@@ -2,23 +2,22 @@
 	import CardIcon from "$lib/entities/CardIcon.svelte";
 	import Squircle from "$lib/Squircle.svelte";
 	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
+	import CardButton from "./CardButton.svelte";
 </script>
 
 <a
 	href="{getMainDomainProtocol()}://cv.{getMainDomain()}"
 	rel="nofollow noreferrer noopener"
 	target="_blank"
-	class="bg-shadow-card-btn @container relative max-w-full flex-1 shrink-0
-		cursor-default rounded-[16px] focus-lg xl:shrink"
+	class="bg-shadow-card-btn relative max-w-full flex-1 shrink cursor-default
+		rounded-[16px] focus-lg"
 	aria-label="Open my developer resume website"
 >
 	<Squircle class="bg-black/10" cornerRadius={16} arrow>
-		<div
-			class="flex h-full items-center gap-[3cqi] rounded-[16px] p-4 select-none"
-		>
+		<CardButton>
 			<CardIcon fallback="Aa" lg>
 				<svg
-					class="relative z-[1] size-[50cqi] bg-[#3B82F7]"
+					class="relative z-[1] h-[40cqb] bg-[#3B82F7]"
 					viewBox="0 0 57.7188 57.5312"
 				>
 					<g>
@@ -45,6 +44,6 @@
 					Svelte, React, TypeScript, Swift, PostgreSQL, Drizzle
 				</span>
 			</div>
-		</div>
+		</CardButton>
 	</Squircle>
 </a>

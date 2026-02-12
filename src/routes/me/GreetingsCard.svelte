@@ -17,7 +17,7 @@
 
 <XlCard
 	class={[
-		"container-size size-full overflow-clip text-black",
+		"@container-[size] size-full overflow-clip text-black",
 		{
 			[`absolute top-0 left-0 z-[1] col-span-full col-start-1 row-span-full
 			row-start-1 size-full`]: expanded,

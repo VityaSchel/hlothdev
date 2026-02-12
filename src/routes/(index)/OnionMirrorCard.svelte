@@ -3,21 +3,18 @@
 	import CardIcon from "$lib/entities/CardIcon.svelte";
 	import Squircle from "$lib/Squircle.svelte";
 	import { clearnetDomain, torDomain } from "$lib/utils";
+	import CardButton from "./CardButton.svelte";
 </script>
 
 {#snippet button(href: string, label: string, icon: "onion" | "web")}
 	<a
 		{href}
-		class="bg-shadow-card-btn @container relative max-w-full flex-1
+		class="bg-shadow-card-btn relative max-w-full flex-1
 		cursor-default rounded-[16px] focus-lg px680:flex-2/5 md:flex-1 lg:flex-[171]"
 		aria-label="Open onion mirror of this website"
 	>
 		<Squircle class="bg-black/10" cornerRadius={16}>
-			<div
-				class="flex h-full items-center gap-3 rounded-2xl p-3 select-none
-				px470:gap-4 px470:p-4 md:justify-center md:gap-3 md:py-2 px870:gap-4
-				lg:flex-col lg:gap-1 px1100:gap-2"
-			>
+			<CardButton class="gap-2! lg:flex-col">
 				<CardIcon fallbackClass="size-[4cqi] rounded-full bg-white/85">
 					{#if icon === "onion"}
 						<svg
@@ -56,12 +53,12 @@
 					{/if}
 				</CardIcon>
 				<span
-					class="text-left text-base text-[9cqi] leading-5 font-bold text-thick-typography px870:leading-6 lg:text-center
-					lg:text-sm lg:leading-[16px] lg:font-medium xl:text-base"
+					class="text-left text-[12cqi] leading-[10cqi] font-bold text-thick-typography lg:text-center
+					lg:font-medium"
 				>
 					{label}
 				</span>
-			</div>
+			</CardButton>
 		</Squircle>
 	</a>
 {/snippet}

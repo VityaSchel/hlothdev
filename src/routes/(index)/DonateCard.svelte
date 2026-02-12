@@ -1,23 +1,21 @@
 <script lang="ts">
 	import CardIcon from "$lib/entities/CardIcon.svelte";
 	import Squircle from "$lib/Squircle.svelte";
+	import CardButton from "./CardButton.svelte";
 </script>
 
 <a
 	href="/donate"
-	class="bg-shadow-card-btn @container relative max-w-full flex-1 cursor-default
+	class="bg-shadow-card-btn relative max-w-full flex-1 cursor-default
 		rounded-[16px] focus-lg px680:flex-3/5 md:flex-1 lg:flex-[412]"
 	style:view-transition-name="donate"
 	aria-label="Open donate to me page"
 >
 	<Squircle class="bg-black/10" cornerRadius={16} arrow>
-		<div
-			class="flex h-full items-center gap-3 rounded-[16px] p-3 select-none
-				px470:gap-4 px470:p-4 md:gap-3 md:py-2 px870:gap-[18px] px870:py-4"
-		>
+		<CardButton>
 			<CardIcon fallback="$" lg>
 				<svg
-					class="relative z-[1] size-[35cqi] h-5 bg-[#3B82F7] lg:h-[33px]"
+					class="relative z-[1] h-[40cqb] bg-[#3B82F7]"
 					viewBox="0 0 39.8125 70.4688"
 				>
 					<path
@@ -29,19 +27,19 @@
 			</CardIcon>
 			<div class="flex flex-1 flex-col">
 				<span
-					class="text-[11cqi] leading-[9cqi] font-bold tracking-[-0.1px]
+					class="text-[11cqi] leading-[10cqi] font-bold tracking-[-0.1px]
 						text-thick-typography lg:text-[7.5cqi]"
 				>
 					Donate
 				</span>
 				<span
-					class="hidden text-[4cqi] leading-[4.5cqi] font-semibold
+					class="hidden text-[4cqi] leading-[6cqi] font-semibold
 						tracking-[-0.1px] text-thin-alt-typography px680:block
-						md:max-lg:hidden"
+						md:max-lg:hidden @max-[295px]:text-[3.75cqi]"
 				>
 					Support open source development
 				</span>
 			</div>
-		</div>
+		</CardButton>
 	</Squircle>
 </a>

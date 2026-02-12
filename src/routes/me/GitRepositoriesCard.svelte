@@ -14,8 +14,8 @@
 	href="{getMainDomainProtocol()}://git.{getMainDomain()}/hloth"
 	rel="noopener noreferrer"
 	target="_blank"
-	class="container-size col-start-1 col-end-2 row-start-11 row-end-12
-		cursor-default rounded-[11.76%] focus-lg px580:col-start-2 px580:col-end-3
+	class="@container col-start-1 col-end-2 row-start-11 row-end-12 cursor-default
+		rounded-[11.76%] focus-lg px580:col-start-2 px580:col-end-3
 		px580:row-start-5 px580:row-end-6 md:col-start-6 md:col-end-7 md:row-start-5
 		md:row-end-6 px1180:col-start-8 px1180:col-end-9 px1180:row-start-3
 		px1180:row-end-4"

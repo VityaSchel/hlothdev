@@ -5,7 +5,7 @@
 </script>
 
 <MdCard
-	class="container-size col-start-2 col-end-4 row-start-4 row-end-5
+	class="@container col-start-2 col-end-4 row-start-4 row-end-5
 		px580:col-start-1 px580:col-end-4 px580:row-start-7 px580:row-end-8
 		md:col-start-1 md:col-end-4 md:row-start-4 md:row-end-5"
 	aria-label="LGTQIA+ support card / Background image: LGTQIA+ Pride-themed McDonalds in Madrid"

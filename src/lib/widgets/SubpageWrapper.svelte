@@ -82,7 +82,7 @@
 		Skip to footer navigation
 	</KeyboardNavigationSkipLink>
 	<div
-		class={[" max-h-[calc(100%-52px)] flex-1 p-4 px470:p-[25px] ", className]}
+		class={["max-h-[calc(100%-52px)] flex-1 p-4 px470:p-[25px]", className]}
 		role="main"
 	>
 		{@render children?.()}

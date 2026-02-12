@@ -4,6 +4,7 @@
 
 	let {
 		class: classes,
+		containerClass,
 		children,
 		cornerRadius = 32,
 		cornerSmoothing = 0.6,
@@ -12,6 +13,7 @@
 		arrow,
 	}: {
 		class?: import("svelte/elements").SvelteHTMLElements["div"]["class"];
+		containerClass?: import("svelte/elements").SvelteHTMLElements["div"]["class"];
 		children: import("svelte").Snippet;
 		cornerRadius?: number;
 		cornerSmoothing?: number;
@@ -36,7 +38,7 @@
 </script>
 
 <div
-	class="squircle-container relative size-full"
+	class={["squircle-container relative size-full"]}
 	bind:offsetWidth={width}
 	bind:offsetHeight={height}
 	style="border-radius: {cornerRadius}px;"
@@ -96,6 +98,7 @@
 			{
 				"squircle-content-maskable": arrow,
 			},
+			containerClass,
 		]}
 		style="border-radius: {cornerRadius}px;"
 	>

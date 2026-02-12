@@ -5,7 +5,7 @@
 </script>
 
 <SmCard
-	class="container-size col-start-2 col-end-4 row-start-8 row-end-9
+	class="@container col-start-2 col-end-4 row-start-8 row-end-9
 		px580:col-start-4 px580:col-end-6 px580:row-start-1 px580:row-end-2"
 	aria-label="Peace support card / Background image: green leaves overhang a tranquil river with a rock"
 >

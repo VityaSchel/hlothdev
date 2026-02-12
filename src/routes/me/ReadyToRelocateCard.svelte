@@ -5,11 +5,11 @@
 </script>
 
 <div
-	class="container-size group relative col-start-3 col-end-4 row-start-10
-		row-end-11 rounded-[11.76%] perspective-near px580:col-start-2
-		px580:col-end-3 px580:row-start-4 px580:row-end-5 md:col-start-2
-		md:col-end-3 md:row-start-5 md:row-end-6 px1180:col-start-10
-		px1180:col-end-11 px1180:row-start-1 px1180:row-end-2"
+	class="group @container relative col-start-3 col-end-4 row-start-10 row-end-11
+		rounded-[11.76%] perspective-near px580:col-start-2 px580:col-end-3
+		px580:row-start-4 px580:row-end-5 md:col-start-2 md:col-end-3 md:row-start-5
+		md:row-end-6 px1180:col-start-10 px1180:col-end-11 px1180:row-start-1
+		px1180:row-end-2"
 	tabindex="0"
 	role="button"
 	aria-label="Ready to relocate card"

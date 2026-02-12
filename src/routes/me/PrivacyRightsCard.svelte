@@ -22,7 +22,7 @@
 
 <LgCard
 	class={[
-		"container-size group overflow-clip bg-cover",
+		"group @container-[size] overflow-clip bg-cover",
 		{
 			[`absolute top-0 left-0 z-[1] col-span-full col-start-1 row-span-full
 			row-start-1 size-full`]: expanded,
