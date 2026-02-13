@@ -1,11 +1,11 @@
 export const websitesPages = [
+	"bes",
 	"nock-trade",
 	"moreofme",
 	"hloth-blog",
 	"been-foss",
 	"unddit",
 	"x5-websites",
-	"mit-hloth-dev",
 	"ryo-coin",
 	"batumi-bike",
 	"session-web",

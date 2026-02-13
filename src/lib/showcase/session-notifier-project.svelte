@@ -8,7 +8,7 @@
 	export const sessionNotifierProject: ShowcaseItem = {
 		type: "project",
 		id: "session-notifier",
-		name: "Session Notifier",
+		name: "Session Notifier Serverless Platform",
 		description,
 		shortDescription:
 			"A REST API for sending Session messages programmatically, made for freelance client in 2024",

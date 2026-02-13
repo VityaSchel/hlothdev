@@ -1,8 +1,8 @@
 <script>
 	import PageWrapper from "$lib/widgets/PageWrapper.svelte";
 	import SubpageWrapper from "$lib/widgets/SubpageWrapper.svelte";
-	import { page } from "$app/state";
 	import PageMetadata from "$lib/widgets/PageMetadata.svelte";
+	import { page } from "$app/state";
 </script>
 
 <PageMetadata

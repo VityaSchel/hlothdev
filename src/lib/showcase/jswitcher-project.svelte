@@ -11,7 +11,7 @@
 	export const jswitcherProject: ShowcaseItem = {
 		type: "project",
 		id: "jswitcher",
-		name: "JSwitcher",
+		name: "JSwitcher Figma plugin",
 		description,
 		shortDescription:
 			"A Figma plugin for seamless component and font conversion",

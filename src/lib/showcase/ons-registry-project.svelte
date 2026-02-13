@@ -9,7 +9,7 @@
 	export const onsRegistryProject: ShowcaseItem = {
 		type: "project",
 		id: "ons-registry",
-		name: "ONS Registry",
+		name: "ONS Registry e-commerce",
 		description,
 		shortDescription:
 			"A website collecting decrypted ONS/LNS/SNS names and their history, price, owner, etc from the Session Token blockchain",

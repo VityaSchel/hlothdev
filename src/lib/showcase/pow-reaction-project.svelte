@@ -9,7 +9,7 @@
 	export const powReactionProject: ShowcaseItem = {
 		type: "project",
 		id: "pow-reaction",
-		name: "pow-reaction",
+		name: "pow-reaction JS library",
 		description,
 		shortDescription:
 			"A library for proof-of-work reactions built with Svelte 👍 ❤️ 👀 😮 🤔 🚀",

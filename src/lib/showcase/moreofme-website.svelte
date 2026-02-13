@@ -9,7 +9,7 @@
 	export const moreOfMeWebsite: ShowcaseItem = {
 		type: "website",
 		id: "moreofme",
-		name: "Moreof.me",
+		name: "Moreof.me Social",
 		description,
 		shortDescription:
 			"A personal web space, encouraging users to express their thoughts and hobbies, made for freelance client in 2024-2025",

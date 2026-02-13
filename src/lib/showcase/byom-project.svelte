@@ -9,7 +9,7 @@
 	export const byomProject: ShowcaseItem = {
 		type: "project",
 		id: "byom",
-		name: "byom",
+		name: "Build Your Own Messenger",
 		description,
 		shortDescription:
 			"Build Your Own post-quantum self-hosted end-to-end encrypted Messenger",

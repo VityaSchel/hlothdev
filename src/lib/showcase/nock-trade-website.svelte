@@ -19,7 +19,7 @@
 	export const nockTradeWebsite: ShowcaseItem = {
 		type: "website",
 		id: "nock-trade",
-		name: "Nock Trade",
+		name: "Nock Trade Crypto Exchange",
 		description,
 		shortDescription:
 			"A trading platform that allows users to trade various assets seamlessly, made for freelance client in 2025",

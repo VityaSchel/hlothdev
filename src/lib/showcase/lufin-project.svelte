@@ -13,7 +13,7 @@
 	export const lufinProject: ShowcaseItem = {
 		type: "project",
 		id: "lufin",
-		name: "Lufin",
+		name: "Lufin E2EE File Sharing",
 		description,
 		shortDescription:
 			"A modern self-hosted file-sharing service and an alternative to lufi",

@@ -35,7 +35,9 @@
 		height="230"
 		sizes="460px"
 	/>
-	<span class="font-sf-pro text-xs font-medium tracking-[-0.1px]">{name}</span>
+	<span class="text-center font-sf-pro text-xs font-medium tracking-[-0.1px]"
+		>{name}</span
+	>
 </a>
 
 <style>
