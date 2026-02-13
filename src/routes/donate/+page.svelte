@@ -14,7 +14,7 @@
 	name="Donate"
 	description="I create open-source apps, developer tools and fun projects. If you want to support me and my creativity, donate to one of my crypto wallets."
 />
-<PageWrapper viewId="donate">
+<PageWrapper viewId="donate" class="h-full max-h-[645px]">
 	<SubpageWrapper
 		title="donate.svelte"
 		srTitle="Donate with cryptocurrencies"
