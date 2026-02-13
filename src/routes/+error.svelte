@@ -8,7 +8,7 @@
 <PageMetadata
 	name={page.status === 404 ? "Page Not Found" : `Error ${page.status}`}
 />
-<PageWrapper viewId="error" class="h-full max-h-[645px]">
+<PageWrapper viewId="error" class="h-full md:max-h-[645px]">
 	<SubpageWrapper
 		class="@container-[size] flex overflow-auto"
 		title="+error.svelte"
