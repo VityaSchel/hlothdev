@@ -53,7 +53,7 @@
 					{/if}
 				</CardIcon>
 				<span
-					class="text-left text-[40cqb] leading-[12cqi] font-bold text-thick-typography px420:text-[10cqi] px470:text-[11cqi] lg:text-center lg:text-[10cqi] lg:font-medium"
+					class="text-left text-[40cqb] leading-[12cqi] font-bold text-thick-typography px420:text-[10cqi] px470:text-[11cqi] px620:max-md:text-[25cqb] lg:text-center lg:text-[10cqi] lg:font-medium"
 				>
 					{label}
 				</span>

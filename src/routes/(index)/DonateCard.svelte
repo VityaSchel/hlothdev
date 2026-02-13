@@ -27,7 +27,7 @@
 				<span
 					class="text-[40cqb] leading-[10cqi] font-bold tracking-[-0.1px]
 						text-thick-typography px420:text-[10cqi] px470:text-[13cqi]
-						lg:text-[7.5cqi]"
+						px620:max-md:text-[35cqb] lg:text-[7.5cqi]"
 				>
 					Donate
 				</span>

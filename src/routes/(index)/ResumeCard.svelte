@@ -31,13 +31,15 @@
 			<div class="flex flex-1 flex-col">
 				<span
 					class="text-[40cqb] leading-[7cqi] font-bold tracking-[-0.1px]
-						text-thick-typography px420:text-[6.5cqi] lg:text-[5.5cqi]"
+						text-thick-typography px420:text-[6.5cqi] px620:max-md:text-[35cqb]
+						lg:text-[5.5cqi]"
 				>
 					Jump to resume & CV
 				</span>
 				<span
 					class="hidden text-[2.75cqi] leading-[4cqi] font-semibold
-						text-thin-alt-typography px620:block md:hidden lg:block"
+						text-thin-alt-typography px620:block px620:max-md:text-[15cqb]
+						px620:max-md:leading-[25cqb] md:hidden lg:block"
 				>
 					Svelte, React, TypeScript, Swift, PostgreSQL, Drizzle
 				</span>
