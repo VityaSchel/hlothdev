@@ -4,8 +4,7 @@ type Network = {
 	ledgerLiveName: string;
 };
 
-export const moneroAddress =
-	"43MTCc7BsyZip4YUpRSqGahUPf8NefifvW6KXEXttTXicTbMfAehtny26HuU84pzQNQmodxzWoTaPAL5aqPjAUo4DtkvXBV";
+export const iban = "ES3101829003990206087791";
 
 export const networks = {
 	eth: {
@@ -79,7 +78,6 @@ export type ClickToPay = {
 	trustWallet?: string;
 	metamask?: string;
 	ledgerLive?: string;
-	monero?: string;
 };
 
 export const clickToPayToken = (token: Token) => {
