@@ -73,7 +73,7 @@
 						text-thick-alt-typography px420:text-[3.5cqi]
 						md:text-thin-typography px1180:text-[rgba(123,123,123,0.4)]"
 				>
-					{age} y.o., Barcelona & Zaragoza, Spain
+					{age} y.o., Madrid, Spain
 				</h3>
 			</div>
 		</div>
