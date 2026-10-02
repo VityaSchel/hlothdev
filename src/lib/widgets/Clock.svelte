@@ -15,15 +15,16 @@
 		timezone: string;
 	} = $props();
 
-	const utcHours = new Date().getUTCHours() + utcOffsetHours;
-	const utcMinutes = new Date().getUTCMinutes() + utcOffsetMinutes;
-	const utcSeconds = new Date().getUTCSeconds();
-	const utcMilliseconds = new Date().getUTCMilliseconds();
-	const time = {
-		hours: utcHours + utcMinutes / 60,
-		minutes: utcMinutes + utcSeconds / 60,
-		seconds: utcSeconds + utcMilliseconds / 1000,
-	};
+	const now = new Date();
+	const time = $derived.by(() => {
+		const minutes = now.getUTCMinutes() + utcOffsetMinutes;
+		const seconds = now.getUTCSeconds();
+		return {
+			hours: now.getUTCHours() + utcOffsetHours + minutes / 60,
+			minutes: minutes + seconds / 60,
+			seconds: seconds + now.getUTCMilliseconds() / 1000,
+		};
+	});
 </script>
 
 <div
@@ -31,59 +32,48 @@
 		text-[#1c1c1e] select-none"
 >
 	<div class="relative size-full">
-		{#snippet tick(rotation: number)}
+		{#each { length: hours }, i}
 			<div
-				class="border-aligned-element tick select-none"
-				style="--rotate: {rotation}deg;"
+				class="border-aligned-element hour"
+				style="--rotate: {(i + 1) * hourRotation}deg;"
 			>
-				<span></span>
-			</div>
-		{/snippet}
-		{#snippet hour(rotation: number, hour: string)}
-			<div
-				class="border-aligned-element hour select-none"
-				style="--rotate: {rotation}deg;"
-			>
-				<span style="transform: rotate({360 - rotation}deg);">
-					{hour}
+				<span style="transform: rotate({-(i + 1) * hourRotation}deg);">
+					{i + 1}
 				</span>
 			</div>
-		{/snippet}
-		{#each { length: hours }, i}
-			{@render hour(i * hourRotation + hourRotation, String(i + 1))}
 		{/each}
 		<div
-			class="center-aligned-element arrow rotate-86400sec h-[27.73%] w-[4.2%]
-				select-none"
+			class="center-aligned-element arrow rotate-43200sec h-[27.73%] w-[4.2%]"
 			style="--initial-rotation: {hourRotation * (time.hours % 12)}deg;"
 		>
 			<span class="bottom-[24%] h-[78%] w-full"></span>
 			<span class="bottom-0 h-[36.36%] w-[40%]"></span>
 		</div>
 		<div
-			class="center-aligned-element arrow rotate-3600sec h-[46.21%] w-[4.2%]
-				select-none"
+			class="center-aligned-element arrow rotate-3600sec h-[46.21%] w-[4.2%]"
 			style="--initial-rotation: {minuteRotation * time.minutes}deg;"
 		>
 			<span class="bottom-[14.54%] h-[90%] w-full"></span>
 			<span class="bottom-0 h-[21.81%] w-[40%]"></span>
 		</div>
 		<div
-			class="center-aligned-element arrow seconds rotate-60sec h-[49%] w-[1%]
-				select-none"
+			class="center-aligned-element arrow seconds rotate-60sec h-[49%] w-[1%]"
 			style="--initial-rotation: {secondRotation * time.seconds}deg;"
 		>
 			<span class="bottom-0 size-full"></span>
 			<span class="top-full h-[14%] w-full"></span>
 		</div>
-		{#each { length: hours }, i}
-			{#each { length: minutesBlock }, j}
-				{@render tick(minuteRotation * (i * minutesBlock + j))}
-			{/each}
+		{#each { length: hours * minutesBlock }, i}
+			<div
+				class="border-aligned-element tick"
+				style="--rotate: {i * minuteRotation}deg;"
+			>
+				<span></span>
+			</div>
 		{/each}
-		<div class="dot h-[5.88%] w-[5.88%] bg-[#1c1c1e] select-none"></div>
-		<div class="dot h-[3.36%] w-[3.36%] bg-[#ff9500] select-none"></div>
-		<div class="dot top h-[1.68%] w-[1.68%] bg-white select-none"></div>
+		<div class="dot size-[5.88%] bg-[#1c1c1e]"></div>
+		<div class="dot size-[3.36%] bg-[#ff9500]"></div>
+		<div class="dot top size-[1.68%] bg-white"></div>
 		<span
 			class="text-outline absolute top-2/3 left-1/2 z-[10] -translate-x-1/2
 				-translate-y-1/2 cursor-auto text-[8.8cqw] font-semibold text-white
@@ -119,7 +109,6 @@
 		transform: translateX(-50%) rotate(var(--rotate));
 		align-items: flex-start;
 		justify-content: center;
-		flex-shrink: 0;
 	}
 
 	.arrow {
@@ -137,8 +126,6 @@
 
 		span {
 			background-color: #ff9500;
-			left: 50%;
-			transform: translateX(-50%);
 		}
 	}
 
@@ -162,13 +149,11 @@
 		padding-top: math.div(4px, 114px) * 100%;
 
 		span {
-			border-radius: calc(infinity * 1px);
 			text-align: center;
 			font-size: 13.5px;
 			font-size: 11.7cqw;
 			font-weight: bold;
 			letter-spacing: -0.05em;
-			user-select: none;
 		}
 	}
 
@@ -191,7 +176,7 @@
 
 	.rotate-60sec,
 	.rotate-3600sec,
-	.rotate-86400sec {
+	.rotate-43200sec {
 		animation: rotate-360deg linear infinite;
 	}
 
@@ -201,8 +186,8 @@
 	.rotate-3600sec {
 		animation-duration: 60s * 60;
 	}
-	.rotate-86400sec {
-		animation-duration: 60s * 60 * 24;
+	.rotate-43200sec {
+		animation-duration: 60s * 60 * 12;
 	}
 
 	@keyframes rotate-360deg {
