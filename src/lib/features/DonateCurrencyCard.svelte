@@ -56,9 +56,9 @@
 		<div class="shrink-0 overflow-clip" aria-label="Crypto wallet details">
 			{#if preferred}
 				<span
-					class="980px:text-lg 980px:leading-8 text-[23px] leading-7 font-medium
-						tracking-[-0.5px] text-white/30 uppercase px870:text-sm
-						px870:leading-4 px1100:text-[23px] px1100:leading-7"
+					class="text-[23px] leading-7 font-medium tracking-[-0.5px]
+						text-white/30 uppercase px870:text-sm px870:leading-4 px980:text-lg
+						px980:leading-8 px1100:text-[23px] px1100:leading-7"
 				>
 					Preferred
 				</span>
