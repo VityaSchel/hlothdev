@@ -1,12 +1,9 @@
-import * as sitemap from "super-sitemap";
+import { response } from "super-sitemap/sveltekit";
 import type { RequestHandler } from "@sveltejs/kit";
 import { showcasePages } from "$lib/showcase";
 
-export const GET: RequestHandler = async ({ url }) => {
-	return await sitemap.response({
+export const GET: RequestHandler = ({ url }) =>
+	response({
 		origin: url.origin,
-		paramValues: {
-			"/showcase/[id]": showcasePages.map((id) => [id]),
-		},
+		paramValues: { "/showcase/[id]": [...showcasePages] },
 	});
-};
