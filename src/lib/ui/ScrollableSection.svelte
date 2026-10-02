@@ -25,7 +25,7 @@
 >
 	<div class="flex items-end justify-between px-4 px470:px-8">
 		<h2
-			class="font-sf-pro-display text-base leading-[19px] font-semibold
+			class="font-display text-base leading-[19px] font-semibold
 				tracking-[-0.2px] select-none"
 		>
 			{name}
@@ -49,8 +49,8 @@
 		/>
 		<label
 			for="checkbox-{name}"
-			class="font-sf-pro-display checkbox-label text-sm font-medium
-				tracking-[-0.2px] text-thin-typography select-none hover:underline"
+			class="checkbox-label font-display text-sm font-medium tracking-[-0.2px]
+				text-thin-typography select-none hover:underline"
 		>
 			<span class="show-less">Show Less</span>
 			<span class="show-all">

@@ -31,8 +31,8 @@
 		aria-labelledby="tooltip-title-{uid}"
 	>
 		<div
-			class="font-sf-pro-display tooltip relative flex items-center
-				justify-center bg-tooltip text-sm whitespace-nowrap backdrop-blur-2xl
+			class="tooltip relative flex items-center justify-center bg-tooltip
+				font-display text-sm whitespace-nowrap backdrop-blur-2xl
 				transparency-reduce:bg-[#323232] transparency-reduce:backdrop-blur-none"
 			id="tooltip-title-{uid}"
 		>
