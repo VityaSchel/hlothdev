@@ -34,6 +34,47 @@
 	import flatUiKitLqip from "$showcase/x5-websites/flat-ui-kit.webp?lqip";
 	import { subdomainUrl } from "$lib/utils";
 
+	const featuredLinks = {
+		ketoplan: {
+			label: "Visit Ketoplan Diet website demo",
+			url: "https://x5io-ketoplan.netlify.app/",
+		},
+		mentalHealth: {
+			label: "Visit Mental Health Quiz website demo",
+			url: "https://x5io-mental-health.netlify.app/quiz/1",
+		},
+		adminDashboard: {
+			label: "Visit Bot.biz Admin Dashboard demo",
+			url: "https://x5io-admin-panel.netlify.app/",
+		},
+		oldAdminDashboard: {
+			label: "Visit old Bot.biz Admin Dashboard demo",
+			url: "https://main--x5io-admin-panel.netlify.app/",
+		},
+		lovebot: {
+			label: "Visit Lovebot website demo",
+			url: "https://x5io-lovebot.netlify.app/",
+		},
+		glassbot: {
+			label: "Visit Glassbot website demo",
+			url: "https://x5io-glassbot.netlify.app/",
+		},
+		prankbot: {
+			label: "Visit Prankbot website demo",
+			url: "https://x5io-prankbot.netlify.app/",
+		},
+		checkoutDialog: {
+			label: "Visit Checkout Dialog demo",
+			url: "https://vityaschel.github.io/checkout-dialog",
+		},
+		flatUiKit: {
+			label: "Open Flat UI kit source code",
+			get url() {
+				return subdomainUrl("git", "/hloth/x5io-flat-ui-kit");
+			},
+		},
+	};
+
 	export const x5Websites: ShowcaseItem = {
 		type: "website",
 		id: "x5-websites",
@@ -126,44 +167,7 @@
 				alt: "Flat UI kit demo with buttons, checkboxes, error messages and input fields",
 			},
 		],
-		links: [
-			{
-				label: "Visit Ketoplan Diet website demo",
-				url: "https://x5io-ketoplan.netlify.app/",
-			},
-			{
-				label: "Visit Mental Health Quiz website demo",
-				url: "https://x5io-mental-health.netlify.app/",
-			},
-			{
-				label: "Visit Bot.biz Admin Dashboard demo",
-				url: "https://x5io-admin-panel.netlify.app/",
-			},
-			{
-				label: "Visit old Bot.biz Admin Dashboard demo",
-				url: "https://main--x5io-admin-panel.netlify.app/",
-			},
-			{
-				label: "Visit Lovebot website demo",
-				url: "https://x5io-lovebot.netlify.app/",
-			},
-			{
-				label: "Visit Glassbot website demo",
-				url: "https://x5io-glassbot.netlify.app/",
-			},
-			{
-				label: "Visit Prankbot website demo",
-				url: "https://x5io-prankbot.netlify.app/",
-			},
-			{
-				label: "Visit Checkout Dialog demo",
-				url: "https://x5io-coupone.netlify.app/",
-			},
-			{
-				label: "Open Flat UI kit source code",
-				url: "https://vityaschel.github.io/checkout-dialog/",
-			},
-		],
+		links: Object.values(featuredLinks),
 	};
 </script>
 
@@ -218,10 +222,7 @@
 		this by using Low Quality Image Placeholders and preloading assets for the next
 		quiz step in the background before user reaches it.
 	</p>
-	{@render link(
-		"Visit Ketoplan Diet website demo",
-		"https://x5io-ketoplan.netlify.app/",
-	)}
+	{@render link(featuredLinks.ketoplan.label, featuredLinks.ketoplan.url)}
 	{@render link(
 		"Open Ketoplan Diet website source code",
 		subdomainUrl("git", "/hloth/ketoplan-diet"),
@@ -249,8 +250,8 @@
 		dialog component mentioned below for payments.
 	</p>
 	{@render link(
-		"Visit Mental Health Quiz website demo",
-		"https://x5io-mental-health.netlify.app/quiz/1",
+		featuredLinks.mentalHealth.label,
+		featuredLinks.mentalHealth.url,
 	)}
 	{@render link(
 		"Open Mental Health Quiz website source code",
@@ -323,12 +324,12 @@
 		and filters, transaction history.
 	</p>
 	{@render link(
-		"Visit Bot.biz Admin Dashboard demo",
-		"https://x5io-admin-panel.netlify.app/",
+		featuredLinks.adminDashboard.label,
+		featuredLinks.adminDashboard.url,
 	)}
 	{@render link(
-		"Visit old Bot.biz Admin Dashboard demo",
-		"https://main--x5io-admin-panel.netlify.app/",
+		featuredLinks.oldAdminDashboard.label,
+		featuredLinks.oldAdminDashboard.url,
 	)}
 	{@render link(
 		"Open Bot.biz Admin Dashboard source code",
@@ -348,10 +349,7 @@
 			target="_blank">backend</a
 		> was created by a third-party developer.
 	</p>
-	{@render link(
-		"Visit Lovebot website demo",
-		"https://x5io-lovebot.netlify.app/",
-	)}
+	{@render link(featuredLinks.lovebot.label, featuredLinks.lovebot.url)}
 	{@render link(
 		"Open Lovebot website source code",
 		subdomainUrl("git", "/hloth/lovebot"),
@@ -372,10 +370,7 @@
 			target="_blank">backend</a
 		> was created by a third-party developer.
 	</p>
-	{@render link(
-		"Visit Glassbot website demo",
-		"https://x5io-glassbot.netlify.app/",
-	)}
+	{@render link(featuredLinks.glassbot.label, featuredLinks.glassbot.url)}
 	{@render link(
 		"Open Glassbot website source code",
 		subdomainUrl("git", "/hloth/glassbot"),
@@ -400,10 +395,7 @@
 			target="_blank">backend</a
 		> was created by a third-party developer.
 	</p>
-	{@render link(
-		"Visit Prankbot website demo",
-		"https://x5io-prankbot.netlify.app/",
-	)}
+	{@render link(featuredLinks.prankbot.label, featuredLinks.prankbot.url)}
 	{@render link(
 		"Open Prankbot website source code",
 		subdomainUrl("git", "/hloth/prankbot"),
@@ -433,8 +425,8 @@
 		initialization, and handle success and failure callbacks.
 	</p>
 	{@render link(
-		"Visit Checkout Dialog demo",
-		"https://vityaschel.github.io/checkout-dialog",
+		featuredLinks.checkoutDialog.label,
+		featuredLinks.checkoutDialog.url,
 	)}
 	{@render link(
 		"Open Checkout Dialog source code",
@@ -451,8 +443,5 @@
 		projects for bot.biz without copy-pasting and maintaining multiple versions
 		of the same code.
 	</p>
-	{@render link(
-		"Open Flat UI kit source code",
-		subdomainUrl("git", "/hloth/x5io-flat-ui-kit"),
-	)}
+	{@render link(featuredLinks.flatUiKit.label, featuredLinks.flatUiKit.url)}
 {/snippet}
