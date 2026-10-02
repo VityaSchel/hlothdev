@@ -67,7 +67,7 @@ PGP-signed list of my crypto wallets: [hloth.dev/donate-pgp-signed.txt](https://
 
 - Design inspired by pre-liquid-glass era of macOS by Apple.
 - [Svelte & SvelteKit](https://svelte.dev/) ❤️
-- Thank you to all authors of these projects used in my website: [TailwindCSS](https://tailwindcss.com/), [ESLint](https://eslint.org), [Prettier](https://prettier.io), [Fontsource](https://fontsource.org/), [sharp](https://sharp.pixelplumbing.com/), [super-sitemap](https://github.com/jasongitmail/super-sitemap/), [SASS](https://sass-lang.com), [figma-squircle](https://github.com/phamfoo/figma-squircle) and [zod](https://zod.dev/).
+- Thank you to all authors of these projects used in my website: [TailwindCSS](https://tailwindcss.com/), [ESLint](https://eslint.org), [Prettier](https://prettier.io), [Fontsource](https://fontsource.org/), [sharp](https://sharp.pixelplumbing.com/), [super-sitemap](https://github.com/jasongitmail/super-sitemap/), [SASS](https://sass-lang.com) and [figma-squircle](https://github.com/phamfoo/figma-squircle).
 
 ## License
 

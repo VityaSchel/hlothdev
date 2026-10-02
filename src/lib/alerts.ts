@@ -5,3 +5,6 @@ export const alertIds = [
 ] as const;
 
 export type AlertId = (typeof alertIds)[number];
+
+export const isAlertId = (value: unknown): value is AlertId =>
+	alertIds.includes(value as AlertId);
