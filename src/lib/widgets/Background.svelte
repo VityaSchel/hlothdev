@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { page } from "$app/state";
 	import bgLqip from "$lib/assets/sonoma-video-banner.webp?lqip";
 	import { isOnion } from "$lib/utils";
 	import { onMount } from "svelte";
@@ -10,16 +11,18 @@
 		children: import("svelte").Snippet;
 	} = $props();
 
-	let saveData = $state(false);
+	let connectionSaveData = $state(false);
 	onMount(() => {
 		const { connection } = navigator;
 		if (!connection) return;
 		const update = () => {
-			saveData = connection.saveData ?? false;
+			connectionSaveData = connection.saveData ?? false;
 		};
 		update();
 		return on(connection, "change", update);
 	});
+
+	const saveData = $derived(page.data.saveData || connectionSaveData);
 </script>
 
 <div
@@ -37,34 +40,31 @@
 		aria-hidden="true"
 		loading="lazy"
 	/>
-	<video
-		muted
-		autoplay
-		playsinline
-		disablepictureinpicture
-		disableremoteplayback
-		class={[
-			`s v a g a svaga i have it navalom absolute top-0 left-0 z-[1] h-full
-			w-full object-cover object-center motion-reduce:hidden`,
-			{
-				hidden: saveData || isOnion(),
-			},
-		]}
-		loop
-	>
-		<source
-			src="/sonoma-hvc1-1080p-24fps-sdr-327kbps.mp4"
-			type="video/mp4; codecs=hvc1"
-		/>
-		<source
-			src="/sonoma-hvc1-1080p-24fps-sdr-327kbps.mp4"
-			type="video/mp4; codecs=hev1.1.6.L93.B0"
-		/>
-		<source
-			src="/sonoma-av1-1080p-24fps-sdr-444kbps.webm"
-			type="video/webm; codecs=av01.0.05M.08"
-		/>
-	</video>
+	{#if !saveData && !isOnion()}
+		<video
+			muted
+			autoplay
+			playsinline
+			disablepictureinpicture
+			disableremoteplayback
+			class="s v a g a svaga i have it navalom absolute top-0 left-0 z-[1]
+				h-full w-full object-cover object-center motion-reduce:hidden"
+			loop
+		>
+			<source
+				src="/sonoma-hvc1-1080p-24fps-sdr-327kbps.mp4"
+				type="video/mp4; codecs=hvc1"
+			/>
+			<source
+				src="/sonoma-hvc1-1080p-24fps-sdr-327kbps.mp4"
+				type="video/mp4; codecs=hev1.1.6.L93.B0"
+			/>
+			<source
+				src="/sonoma-av1-1080p-24fps-sdr-444kbps.webm"
+				type="video/webm; codecs=av01.0.05M.08"
+			/>
+		</video>
+	{/if}
 </div>
 
 <div
