@@ -129,15 +129,10 @@
 	<Nav />
 	<div
 		class={[
-			` fixed right-0 bottom-0 z-[2000] max-w-full flex-col items-end gap-4 px-4
-			pt-5 pb-15 md:pr-10 `,
+			` pointer-events-none fixed right-0 bottom-0 z-[2000] max-w-full flex-col
+			items-end gap-4 px-4 pt-5 pb-15 *:pointer-events-auto md:pr-10 `,
+			browser || !jsDisabledAlertVisible ? "hidden" : "flex",
 			{
-				hidden:
-					browser &&
-					!jsDisabledAlertVisible &&
-					!reducedMotionAlertVisible &&
-					!reducedTransparencyAlertVisible,
-				flex: !browser,
 				"motion-reduce:flex": reducedMotionAlertVisible,
 				"transparency-reduce:flex": reducedTransparencyAlertVisible,
 			},
