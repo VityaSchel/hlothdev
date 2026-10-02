@@ -3,6 +3,7 @@
 	import MetaMaskIcon from "$lib/icons/MetaMaskIcon.svelte";
 	import TrustWalletIcon from "$lib/icons/TrustWalletIcon.svelte";
 	import SquircleThick from "$lib/SquircleThick.svelte";
+	import SvgFallback from "$lib/entities/SvgFallback.svelte";
 	import type { ClickToPay } from "../../routes/donate/consts";
 
 	const wallets: {
@@ -24,7 +25,7 @@
 		subtitle,
 	}: {
 		preferred?: boolean;
-		coins: import("svelte").Snippet;
+		coins: { Icon: import("svelte").Component; rendered: SvgRenderResult }[];
 		name: string;
 		address: string;
 		clickToPay?: ClickToPay;
@@ -50,7 +51,13 @@
 			class="coins min-h-0 flex-1 overflow-clip select-none no-hover:flex-none!"
 		>
 			<div class="flex h-17 select-none">
-				{@render coins()}
+				{#each coins as { Icon, rendered } (Icon)}
+					<div class="h-full w-[52px] overflow-visible select-none">
+						<SvgFallback {...rendered}>
+							<Icon />
+						</SvgFallback>
+					</div>
+				{/each}
 			</div>
 		</div>
 		<div class="shrink-0 overflow-clip" aria-label="Crypto wallet details">
