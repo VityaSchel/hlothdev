@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from "$app/state";
-	import XlCard from "$lib/widgets/grid-cards/XLCard.svelte";
+	import GridCard from "$lib/widgets/grid-cards/GridCard.svelte";
 	import WavingHandIcon from "$lib/icons/WavingHandIcon.svelte";
 	import Button from "$lib/ui/Button.svelte";
 
@@ -15,7 +15,8 @@
 	let expanded = $derived(page.route.id === "/me/about" && !inert);
 </script>
 
-<XlCard
+<GridCard
+	size="xl"
 	class={[
 		"@container-size size-full overflow-clip text-black",
 		expanded
@@ -80,7 +81,7 @@
 			</Button>
 		</div>
 	{/if}
-</XlCard>
+</GridCard>
 
 <style>
 	.animate-rotate {

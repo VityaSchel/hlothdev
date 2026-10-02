@@ -1,7 +1,7 @@
 <script lang="ts">
 	import ForgejoIcon from "$lib/icons/ForgejoIcon.svelte";
 	import { subdomainUrl } from "$lib/utils";
-	import XsCard from "$lib/widgets/grid-cards/XSCard.svelte";
+	import GridCard from "$lib/widgets/grid-cards/GridCard.svelte";
 
 	let {
 		repositories,
@@ -21,7 +21,10 @@
 		px1180:row-end-4"
 	aria-label="Link to my profile on Forgejo, which has {repositories} git repositories"
 >
-	<XsCard class="size-full bg-linear-to-b from-[#232a33] to-[#171e26]">
+	<GridCard
+		size="xs"
+		class="size-full bg-linear-to-b from-[#232a33] to-[#171e26]"
+	>
 		<div
 			class="flex size-full flex-col items-start justify-between p-[6.72cqw]"
 		>
@@ -43,5 +46,5 @@
 				</span>
 			</div>
 		</div>
-	</XsCard>
+	</GridCard>
 </a>

@@ -1,11 +1,12 @@
 <script lang="ts">
-	import XsCard from "$lib/widgets/grid-cards/XSCard.svelte";
+	import GridCard from "$lib/widgets/grid-cards/GridCard.svelte";
 	import americanEnglishIcon from "$lib/assets/languages-icons/american-english.webp?inline";
 	import russianIcon from "$lib/assets/languages-icons/russian.webp?inline";
 	import spanishIcon from "$lib/assets/languages-icons/spanish.webp?inline";
 </script>
 
-<XsCard
+<GridCard
+	size="xs"
 	class="@container col-start-1 col-end-2 row-start-8 row-end-9 bg-[#2E2E2E]
 		text-white px580:row-start-5 px580:row-end-6 md:col-start-6 md:col-end-7
 		md:row-start-1 md:row-end-2"
@@ -54,4 +55,4 @@
 			{@render lang(spanishIcon, "Spanish — A1")}
 		</div>
 	</div>
-</XsCard>
+</GridCard>

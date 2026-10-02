@@ -1,10 +1,11 @@
 <script lang="ts">
-	import MdCard from "$lib/widgets/grid-cards/MDCard.svelte";
+	import GridCard from "$lib/widgets/grid-cards/GridCard.svelte";
 	import bg from "$lib/assets/mcdonalds-pride.webp";
 	import bgLqip from "$lib/assets/mcdonalds-pride.webp?lqip";
 </script>
 
-<MdCard
+<GridCard
+	size="md"
 	class="@container col-start-2 col-end-4 row-start-4 row-end-5
 		px580:col-start-1 px580:col-end-4 px580:row-start-7 px580:row-end-8
 		md:col-start-1 md:col-end-4 md:row-start-4 md:row-end-5"
@@ -53,4 +54,4 @@
 			Tap to reveal more information
 		</span>
 	</div>
-</MdCard>
+</GridCard>

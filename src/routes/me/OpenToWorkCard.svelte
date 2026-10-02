@@ -1,5 +1,5 @@
 <script lang="ts">
-	import XsCard from "$lib/widgets/grid-cards/XSCard.svelte";
+	import GridCard from "$lib/widgets/grid-cards/GridCard.svelte";
 	import bgLqip from "$lib/assets/open-to-work.webp?lqip";
 </script>
 
@@ -13,7 +13,7 @@
 		px1180:row-end-2"
 	aria-label="Link to my LinkedIn profile"
 >
-	<XsCard class="size-full overflow-clip" aria-label="Open to work">
+	<GridCard size="xs" class="size-full overflow-clip" aria-label="Open to work">
 		<enhanced:img
 			src="$lib/assets/open-to-work.webp"
 			style="background-image: url({bgLqip.lqip})"
@@ -23,5 +23,5 @@
 			width="238"
 			height="238"
 		/>
-	</XsCard>
+	</GridCard>
 </a>

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import LgCard from "$lib/widgets/grid-cards/LGCard.svelte";
+	import GridCard from "$lib/widgets/grid-cards/GridCard.svelte";
 	import Button from "$lib/ui/Button.svelte";
 	import bg from "$lib/assets/education.webp";
 	import bgLqip from "$lib/assets/education.webp?lqip";
@@ -16,8 +16,9 @@
 		px1180:row-end-5"
 	aria-label="Education card"
 >
-	<LgCard
-		--bg="url({bg}), url({bgLqip.lqip})"
+	<GridCard
+		size="lg"
+		bg="url({bg}), url({bgLqip.lqip})"
 		class="size-full bg-neutral-600 bg-cover text-white"
 		aria-label="Background image: photo of me at 10 years old, sitting in front of my old laptop typing code, screen displays three colorful interface buttons from one of my programs"
 	>
@@ -43,5 +44,5 @@
 				Read an article about 10 y.o. me
 			</Button>
 		</div>
-	</LgCard>
+	</GridCard>
 </a>

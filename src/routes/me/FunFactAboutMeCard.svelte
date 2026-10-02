@@ -1,8 +1,9 @@
 <script lang="ts">
-	import XsCard from "$lib/widgets/grid-cards/XSCard.svelte";
+	import GridCard from "$lib/widgets/grid-cards/GridCard.svelte";
 </script>
 
-<XsCard
+<GridCard
+	size="xs"
 	class="@container col-start-3 col-end-4 row-start-13 row-end-14 flex flex-col
 		overflow-clip px580:col-start-2 px580:col-end-3 px580:row-start-8
 		px580:row-end-9 md:col-start-8 md:col-end-9 md:row-start-3 md:row-end-4
@@ -35,4 +36,4 @@
 			web in 2020
 		</p>
 	</div>
-</XsCard>
+</GridCard>

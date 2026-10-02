@@ -1,5 +1,5 @@
 <script lang="ts">
-	import XsCard from "$lib/widgets/grid-cards/XSCard.svelte";
+	import GridCard from "$lib/widgets/grid-cards/GridCard.svelte";
 	import bg from "$lib/assets/ready-to-relocate.webp";
 	import bgLqip from "$lib/assets/ready-to-relocate.webp?lqip";
 </script>
@@ -14,15 +14,15 @@
 	role="button"
 	aria-label="Ready to relocate card"
 >
-	<XsCard
+	<GridCard
+		size="xs"
 		class="relative flex size-full rotate-y-0 flex-col-reverse justify-between
 			bg-neutral-600 bg-cover px-[5.88cqw] py-[5.04cqw] transition-transform
 			duration-300 ease-out backface-hidden
 			motion-safe:group-focus-within:rotate-y-180
 			motion-safe:group-hover:rotate-y-180"
 		aria-label="Background image: photo of me from my back standing in front of a chinese temple titled 三洞講法堂 (roughly translates to Hall of Preaching the Teachings of the Three Caverns), part of City God Temple of Shanghai, located in the city of Shanghai, China"
-		--bg="url({bg}), url({bgLqip.lqip})"
-		bg
+		bg="url({bg}), url({bgLqip.lqip})"
 	>
 		<h4
 			class="text-[9.3cqw] font-semibold tracking-[-0.075em]
@@ -40,8 +40,9 @@
 		>
 			Tap to reveal
 		</span>
-	</XsCard>
-	<XsCard
+	</GridCard>
+	<GridCard
+		size="xs"
 		class="absolute inset-0 overflow-auto bg-black/70 transition-transform
 			duration-300 ease-out backface-hidden motion-safe:-rotate-y-180
 			motion-safe:group-focus-within:rotate-y-0
@@ -99,5 +100,5 @@
 				India
 			</span>
 		</p>
-	</XsCard>
+	</GridCard>
 </div>

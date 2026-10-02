@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from "$app/state";
 	import "@fontsource-variable/sofia-sans-extra-condensed";
-	import LgCard from "$lib/widgets/grid-cards/LGCard.svelte";
+	import GridCard from "$lib/widgets/grid-cards/GridCard.svelte";
 	import Button from "$lib/ui/Button.svelte";
 	import bgLqip from "$lib/assets/privacy-rights.webp?lqip";
 	import { torDomain } from "$lib/utils";
@@ -17,7 +17,8 @@
 	let expanded = $derived(page.route.id === "/me/privacy-rights" && !inert);
 </script>
 
-<LgCard
+<GridCard
+	size="lg"
 	class={[
 		"group @container-size overflow-clip",
 		expanded
@@ -98,4 +99,4 @@
 			</Button>
 		</div>
 	{/if}
-</LgCard>
+</GridCard>

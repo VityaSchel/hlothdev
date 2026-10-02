@@ -1,5 +1,5 @@
 <script lang="ts">
-	import XsCard from "$lib/widgets/grid-cards/XSCard.svelte";
+	import GridCard from "$lib/widgets/grid-cards/GridCard.svelte";
 	import bg from "$lib/assets/hloth-charity.webp";
 	import bgLqip from "$lib/assets/hloth-charity.webp?lqip";
 </script>
@@ -14,10 +14,10 @@
 		px1180:row-start-4 px1180:row-end-5"
 	aria-label="Link to my charity log on X (formerly Twitter)"
 >
-	<XsCard
+	<GridCard
+		size="xs"
 		class="flex size-full items-end bg-neutral-600 bg-cover"
-		bg
-		--bg="url({bg}), url({bgLqip.lqip})"
+		bg="url({bg}), url({bgLqip.lqip})"
 	>
 		<span
 			class="one-storey-a p-[6.72cqw] text-[16.8cqw] leading-[20.16cqw]
@@ -27,5 +27,5 @@
 			<br />
 			charity
 		</span>
-	</XsCard>
+	</GridCard>
 </a>

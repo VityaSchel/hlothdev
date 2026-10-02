@@ -1,5 +1,5 @@
 <script lang="ts">
-	import XsCard from "$lib/widgets/grid-cards/XSCard.svelte";
+	import GridCard from "$lib/widgets/grid-cards/GridCard.svelte";
 	import Clock from "$lib/widgets/Clock.svelte";
 	import { getEuropeanTzOffset } from "$lib/cet-cest";
 
@@ -10,7 +10,8 @@
 	}`;
 </script>
 
-<XsCard
+<GridCard
+	size="xs"
 	class="col-start-3 col-end-4 row-start-9 row-end-10 flex items-center
 		justify-center bg-black/30 p-1 px580:row-start-8 px580:row-end-9
 		md:col-start-5 md:col-end-6 md:row-start-5 md:row-end-6 px1180:col-start-7
@@ -30,4 +31,4 @@
 			<Clock {utcOffsetHours} {utcOffsetMinutes} {timezone} />
 		</div>
 	</div>
-</XsCard>
+</GridCard>

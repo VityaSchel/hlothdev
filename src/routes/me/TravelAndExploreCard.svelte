@@ -1,10 +1,11 @@
 <script lang="ts">
-	import XlCard from "$lib/widgets/grid-cards/XLCard.svelte";
+	import GridCard from "$lib/widgets/grid-cards/GridCard.svelte";
 	import bg from "$lib/assets/me-in-front-of-zeda-makhuntseti-waterfall-2024.webp";
 	import bgLqip from "$lib/assets/me-in-front-of-zeda-makhuntseti-waterfall-2024.webp?lqip";
 </script>
 
-<XlCard
+<GridCard
+	size="xl"
 	bg="url({bg}), url({bgLqip.lqip}), linear-gradient(to bottom, var(--color-neutral-600), var(--color-neutral-600))"
 	class="one-storey-a @container col-start-1 col-end-4 row-start-5 row-end-8
 		bg-cover px580:col-start-3 px580:col-end-6 px580:row-start-4 px580:row-end-7
@@ -26,4 +27,4 @@
 			and try to keep up with trends
 		</p>
 	</div>
-</XlCard>
+</GridCard>
