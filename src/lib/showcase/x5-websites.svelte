@@ -1,38 +1,38 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import banner from "$showcase/x5-websites/banner.webp?enhanced&quality=100";
+	import banner from "$showcase/x5-websites/banner.webp?enhanced&w=230;460;690&quality=80";
 	import bannerLqip from "$showcase/x5-websites/banner.webp?lqip";
-	import ketoplan1 from "$showcase/x5-websites/ketoplan-1.webp?enhanced&quality=100";
+	import ketoplan1 from "$showcase/x5-websites/ketoplan-1.webp?enhanced&quality=80";
 	import ketoplan1Lqip from "$showcase/x5-websites/ketoplan-1.webp?lqip";
-	import ketoplan2 from "$showcase/x5-websites/ketoplan-2.webp?enhanced&quality=100";
+	import ketoplan2 from "$showcase/x5-websites/ketoplan-2.webp?enhanced&quality=80";
 	import ketoplan2Lqip from "$showcase/x5-websites/ketoplan-2.webp?lqip";
-	import ketoplan3 from "$showcase/x5-websites/ketoplan-3.webp?enhanced&quality=100";
+	import ketoplan3 from "$showcase/x5-websites/ketoplan-3.webp?enhanced&quality=80";
 	import ketoplan3Lqip from "$showcase/x5-websites/ketoplan-3.webp?lqip";
-	import mentalHealth1 from "$showcase/x5-websites/mental-health-1.webp?enhanced&quality=100";
+	import mentalHealth1 from "$showcase/x5-websites/mental-health-1.webp?enhanced&quality=80";
 	import mentalHealth1Lqip from "$showcase/x5-websites/mental-health-1.webp?lqip";
-	import mentalHealth2 from "$showcase/x5-websites/mental-health-2.webp?enhanced&quality=100";
+	import mentalHealth2 from "$showcase/x5-websites/mental-health-2.webp?enhanced&quality=80";
 	import mentalHealth2Lqip from "$showcase/x5-websites/mental-health-2.webp?lqip";
-	import mentalHealth3 from "$showcase/x5-websites/mental-health-3.webp?enhanced&quality=100";
+	import mentalHealth3 from "$showcase/x5-websites/mental-health-3.webp?enhanced&quality=80";
 	import mentalHealth3Lqip from "$showcase/x5-websites/mental-health-3.webp?lqip";
-	import botBizLanding from "$showcase/x5-websites/bot-biz-landing.webp?enhanced&quality=100";
+	import botBizLanding from "$showcase/x5-websites/bot-biz-landing.webp?enhanced&quality=80";
 	import botBizLandingLqip from "$showcase/x5-websites/bot-biz-landing.webp?lqip";
-	import botBizFrontend from "$showcase/x5-websites/bot-biz-frontend.webp?enhanced&quality=100";
+	import botBizFrontend from "$showcase/x5-websites/bot-biz-frontend.webp?enhanced&quality=80";
 	import botBizFrontendLqip from "$showcase/x5-websites/bot-biz-frontend.webp?lqip";
-	import botBizAdminDashboard1 from "$showcase/x5-websites/bot-biz-admin-dashboard-1.webp?enhanced&quality=100";
+	import botBizAdminDashboard1 from "$showcase/x5-websites/bot-biz-admin-dashboard-1.webp?enhanced&quality=80";
 	import botBizAdminDashboard1Lqip from "$showcase/x5-websites/bot-biz-admin-dashboard-1.webp?lqip";
-	import botBizAdminDashboard2 from "$showcase/x5-websites/bot-biz-admin-dashboard-2.webp?enhanced&quality=100";
+	import botBizAdminDashboard2 from "$showcase/x5-websites/bot-biz-admin-dashboard-2.webp?enhanced&quality=80";
 	import botBizAdminDashboard2Lqip from "$showcase/x5-websites/bot-biz-admin-dashboard-2.webp?lqip";
-	import lovebot from "$showcase/x5-websites/lovebot.webp?enhanced&quality=100";
+	import lovebot from "$showcase/x5-websites/lovebot.webp?enhanced&quality=80";
 	import lovebotLqip from "$showcase/x5-websites/lovebot.webp?lqip";
-	import glassbot from "$showcase/x5-websites/glassbot.webp?enhanced&quality=100";
+	import glassbot from "$showcase/x5-websites/glassbot.webp?enhanced&quality=80";
 	import glassbotLqip from "$showcase/x5-websites/glassbot.webp?lqip";
-	import prankbot from "$showcase/x5-websites/prankbot.webp?enhanced&quality=100";
+	import prankbot from "$showcase/x5-websites/prankbot.webp?enhanced&quality=80";
 	import prankbotLqip from "$showcase/x5-websites/prankbot.webp?lqip";
-	import checkoutDialog from "$showcase/x5-websites/checkout-dialog.webp?enhanced&quality=100";
+	import checkoutDialog from "$showcase/x5-websites/checkout-dialog.webp?enhanced&quality=80";
 	import checkoutDialogLqip from "$showcase/x5-websites/checkout-dialog.webp?lqip";
-	import flatUiKit from "$showcase/x5-websites/flat-ui-kit.webp?enhanced&quality=100";
+	import flatUiKit from "$showcase/x5-websites/flat-ui-kit.webp?enhanced&quality=80";
 	import flatUiKitLqip from "$showcase/x5-websites/flat-ui-kit.webp?lqip";
-	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
+	import { subdomainUrl } from "$lib/utils";
 
 	export const x5Websites: ShowcaseItem = {
 		type: "website",
@@ -202,15 +202,15 @@
 			target="_blank">Ketogenic diet</a
 		>
 		is a low-carb, high-fat diet that offers health benefits. The Ketoplan Diet Website
-		was a questionnaire designed to create personalized paid keto diet plans for
-		users based on their preferences and goals. It consists of a series of questions
-		determining the user's dietary needs, followed by a tailored meal plan and recipes.
+		was a questionnaire designed to create personalized paid keto diet plans for users
+		based on their preferences and goals. It consists of a series of questions determining
+		the user's dietary needs, followed by a tailored meal plan and recipes.
 	</p>
 	<p>
 		The frontend was built entirely by me using React and Next.js in a couple of
 		days. The
 		<a
-			href={`${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/ketoplan-diet/releases`}
+			href={subdomainUrl("git", "/hloth/ketoplan-diet/releases")}
 			rel="noopener noreferrer nofollow"
 			target="_blank">backend</a
 		> was created by a third-party developer. One of the challenges was to optimize
@@ -224,7 +224,7 @@
 	)}
 	{@render link(
 		"Open Ketoplan Diet website source code",
-		`${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/ketoplan-diet`,
+		subdomainUrl("git", "/hloth/ketoplan-diet"),
 	)}
 	{@render link(
 		"Open Ketoplan Diet website figma layout",
@@ -242,7 +242,7 @@
 	<p>
 		The frontend was built entirely by me using React and Next.js in about one
 		week. The <a
-			href={`${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/mental-health-quiz/releases`}
+			href={subdomainUrl("git", "/hloth/mental-health-quiz/releases")}
 			rel="noopener noreferrer nofollow"
 			target="_blank">backend</a
 		> was created by a third-party developer. The project uses a custom-built checkout
@@ -254,7 +254,7 @@
 	)}
 	{@render link(
 		"Open Mental Health Quiz website source code",
-		`${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/mental-health-quiz/`,
+		subdomainUrl("git", "/hloth/mental-health-quiz/"),
 	)}
 	<h2>Bot.biz landing</h2>
 	<p>
@@ -268,7 +268,7 @@
 	{@render link("Visit Bot.biz landing", "https://botbiz-landing.netlify.app/")}
 	{@render link(
 		"Open Bot.biz landing source code",
-		`${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/bot-biz-landing`,
+		subdomainUrl("git", "/hloth/bot-biz-landing"),
 	)}
 	{@render link(
 		"Open Bot.biz landing figma layout",
@@ -332,7 +332,7 @@
 	)}
 	{@render link(
 		"Open Bot.biz Admin Dashboard source code",
-		`${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/bot-biz-admin-panel/`,
+		subdomainUrl("git", "/hloth/bot-biz-admin-panel/"),
 	)}
 	<h2>Lovebot Website</h2>
 	<p>
@@ -343,7 +343,7 @@
 	<p>
 		The frontend was built by me using React and Next.js in about one week. The
 		<a
-			href={`${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/lovebot/releases`}
+			href={subdomainUrl("git", "/hloth/lovebot/releases")}
 			rel="noopener noreferrer nofollow"
 			target="_blank">backend</a
 		> was created by a third-party developer.
@@ -354,7 +354,7 @@
 	)}
 	{@render link(
 		"Open Lovebot website source code",
-		`${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/lovebot`,
+		subdomainUrl("git", "/hloth/lovebot"),
 	)}
 	<h2>Glassbot Website</h2>
 	<p>
@@ -367,7 +367,7 @@
 	<p>
 		The frontend was built by me using React and Next.js in about one week. The
 		<a
-			href={`${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/glassbot/releases`}
+			href={subdomainUrl("git", "/hloth/glassbot/releases")}
 			rel="noopener noreferrer nofollow"
 			target="_blank">backend</a
 		> was created by a third-party developer.
@@ -378,7 +378,7 @@
 	)}
 	{@render link(
 		"Open Glassbot website source code",
-		`${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/glassbot`,
+		subdomainUrl("git", "/hloth/glassbot"),
 	)}
 	<h2>Prankbot</h2>
 	<p>
@@ -395,7 +395,7 @@
 	<p>
 		The frontend was built by me using React and Next.js in about four days. The
 		<a
-			href={`${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/prankbot/releases`}
+			href={subdomainUrl("git", "/hloth/prankbot/releases")}
 			rel="noopener noreferrer nofollow"
 			target="_blank">backend</a
 		> was created by a third-party developer.
@@ -406,7 +406,7 @@
 	)}
 	{@render link(
 		"Open Prankbot website source code",
-		`${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/prankbot`,
+		subdomainUrl("git", "/hloth/prankbot"),
 	)}
 	{@render link(
 		"Open Prankbot website figma layout",
@@ -438,7 +438,7 @@
 	)}
 	{@render link(
 		"Open Checkout Dialog source code",
-		`${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/checkout-dialog`,
+		subdomainUrl("git", "/hloth/checkout-dialog"),
 	)}
 	{@render link(
 		"Open Checkout Dialog figma layout",
@@ -453,6 +453,6 @@
 	</p>
 	{@render link(
 		"Open Flat UI kit source code",
-		`${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/x5io-flat-ui-kit`,
+		subdomainUrl("git", "/hloth/x5io-flat-ui-kit"),
 	)}
 {/snippet}

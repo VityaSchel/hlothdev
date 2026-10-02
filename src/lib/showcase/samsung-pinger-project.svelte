@@ -1,9 +1,9 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
-	import bannerSrc from "$showcase/samsung-pinger/banner.webp?enhanced&quality=100";
+	import { subdomainUrl } from "$lib/utils";
+	import bannerSrc from "$showcase/samsung-pinger/banner.webp?enhanced&w=230;460;690&quality=80";
 	import bannerLqip from "$showcase/samsung-pinger/banner.webp?lqip";
-	import screenshotSrc from "$showcase/samsung-pinger/screenshot.webp?enhanced&quality=100";
+	import screenshotSrc from "$showcase/samsung-pinger/screenshot.webp?enhanced&quality=80";
 	import screenshotLqip from "$showcase/samsung-pinger/screenshot.webp?lqip";
 
 	export const samsungPingerProject: ShowcaseItem = {
@@ -23,7 +23,7 @@
 		],
 		links: [
 			{
-				url: `${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/samsung-pinger`,
+				url: subdomainUrl("git", "/hloth/samsung-pinger"),
 				label: "Open Samsung Pinger source code",
 			},
 		],

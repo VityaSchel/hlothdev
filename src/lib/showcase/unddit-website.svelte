@@ -1,10 +1,10 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import banner from "$showcase/unddit/banner.webp?enhanced&quality=100";
+	import banner from "$showcase/unddit/banner.webp?enhanced&w=230;460;690&quality=80";
 	import bannerLqip from "$showcase/unddit/banner.webp?lqip";
-	import screenshot1 from "$showcase/unddit/screenshot-1.webp?enhanced&quality=100";
+	import screenshot1 from "$showcase/unddit/screenshot-1.webp?enhanced&quality=80";
 	import screenshot1Lqip from "$showcase/unddit/screenshot-1.webp?lqip";
-	import screenshot2 from "$showcase/unddit/screenshot-2.webp?enhanced&quality=100";
+	import screenshot2 from "$showcase/unddit/screenshot-2.webp?enhanced&quality=80";
 	import screenshot2Lqip from "$showcase/unddit/screenshot-2.webp?lqip";
 
 	export const undditWebsite: ShowcaseItem = {

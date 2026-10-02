@@ -11,7 +11,7 @@ export const websitesPages = [
 	"session-web",
 	"sipacker",
 	"oge-generator",
-];
+] as const;
 
 export const projectsPages = [
 	"lufin",
@@ -26,8 +26,11 @@ export const projectsPages = [
 	"session-watchos",
 	"ps4-merger",
 	"mtproto-mobile",
-];
+] as const;
 
 export const showcasePages = [...websitesPages, ...projectsPages] as const;
 
 export type ProjectId = (typeof showcasePages)[number];
+
+export const isShowcaseId = (id: string): id is ProjectId =>
+	(showcasePages as readonly string[]).includes(id);

@@ -1,9 +1,7 @@
-<script>
-	import { showcase } from "$lib/showcase/items";
+<script lang="ts">
+	import { projects } from "$lib/showcase/items";
 	import ScrollableSection from "$lib/ui/ScrollableSection.svelte";
 	import ShowcaseCard from "$lib/widgets/ShowcaseCard.svelte";
-
-	let projects = $derived(showcase.filter((p) => p.type === "project"));
 </script>
 
 <ScrollableSection
@@ -12,7 +10,7 @@
 	childrenCount={projects.length}
 	skip={{ label: "Skip to footer navigation", id: "footer-nav" }}
 >
-	{#each projects as project (project.id)}
-		<ShowcaseCard id={project.id} name={project.name} banner={project.banner} />
+	{#each projects as { id, name, banner } (id)}
+		<ShowcaseCard {id} {name} {banner} />
 	{/each}
 </ScrollableSection>

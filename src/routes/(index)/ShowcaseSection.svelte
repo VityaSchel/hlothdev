@@ -1,20 +1,18 @@
 <script lang="ts">
-	let { children }: { children: import("svelte").Snippet } = $props();
+	import type { Snippet } from "svelte";
 
-	let scrollY = $state(0);
+	let { children }: { children: Snippet } = $props();
+
+	let scrolled = $state(false);
 </script>
 
 <div
 	class={[
 		`no-scroll-when-wide flex max-h-[480px] flex-1 flex-col justify-evenly
-		gap-[3px] rounded-b-[32px] border border-x-0 border-b-0 pb-4
-		transition-colors md:overflow-auto`,
-		{
-			"border-transparent": scrollY === 0,
-			"border-white/10": scrollY > 0,
-		},
+		gap-[3px] rounded-b-[32px] border-t pb-4 transition-colors md:overflow-auto`,
+		scrolled ? "border-white/10" : "border-transparent",
 	]}
-	onscroll={(e) => (scrollY = (e.target as HTMLDivElement).scrollTop)}
+	onscroll={(e) => (scrolled = e.currentTarget.scrollTop > 0)}
 	aria-label="Showcase section with my projects"
 >
 	{@render children()}

@@ -1,14 +1,14 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import banner from "$showcase/lufin/banner.webp?enhanced&quality=100";
+	import banner from "$showcase/lufin/banner.webp?enhanced&w=230;460;690&quality=80";
 	import bannerLqip from "$showcase/lufin/banner.webp?lqip";
-	import screenshot1 from "$showcase/lufin/screenshot-1.webp?enhanced&quality=100";
+	import screenshot1 from "$showcase/lufin/screenshot-1.webp?enhanced&quality=80";
 	import screenshot1Lqip from "$showcase/lufin/screenshot-1.webp?lqip";
-	import screenshot2 from "$showcase/lufin/screenshot-2.webp?enhanced&quality=100";
+	import screenshot2 from "$showcase/lufin/screenshot-2.webp?enhanced&quality=80";
 	import screenshot2Lqip from "$showcase/lufin/screenshot-2.webp?lqip";
-	import screenshotter from "$showcase/lufin/lufin-screenshotter.webp?enhanced&quality=100";
+	import screenshotter from "$showcase/lufin/lufin-screenshotter.webp?enhanced&quality=80";
 	import screenshotterLqip from "$showcase/lufin/lufin-screenshotter.webp?lqip";
-	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
+	import { subdomainUrl } from "$lib/utils";
 
 	export const lufinProject: ShowcaseItem = {
 		type: "project",
@@ -40,15 +40,15 @@
 		],
 		links: [
 			{
-				url: `${getMainDomainProtocol()}://lufin.${getMainDomain()}`,
+				url: subdomainUrl("lufin"),
 				label: "Visit Lufin demo website",
 			},
 			{
-				url: `${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/lufin`,
+				url: subdomainUrl("git", "/hloth/lufin"),
 				label: "Open lufin source code",
 			},
 			{
-				url: `${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/lufin-screenshotter`,
+				url: subdomainUrl("git", "/hloth/lufin-screenshotter"),
 				label: "Open lufin screenshotter source code",
 			},
 		],

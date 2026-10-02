@@ -1,10 +1,10 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import banner from "$showcase/mtproto-mobile/banner.webp?enhanced&quality=100";
+	import banner from "$showcase/mtproto-mobile/banner.webp?enhanced&w=230;460;690&quality=80";
 	import bannerLqip from "$showcase/mtproto-mobile/banner.webp?lqip";
-	import screenshots from "$showcase/mtproto-mobile/screenshots.webp?enhanced&quality=100";
+	import screenshots from "$showcase/mtproto-mobile/screenshots.webp?enhanced&quality=80";
 	import screenshotsLqip from "$showcase/mtproto-mobile/screenshots.webp?lqip";
-	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
+	import { subdomainUrl } from "$lib/utils";
 
 	export const mtprotoMobileProject: ShowcaseItem = {
 		type: "project",
@@ -26,7 +26,7 @@
 		],
 		links: [
 			{
-				url: `${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/mtproto-mobile`,
+				url: subdomainUrl("git", "/hloth/mtproto-mobile"),
 				label: "Open Mtproto Mobile source code",
 			},
 		],

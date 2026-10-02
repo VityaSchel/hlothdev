@@ -1,20 +1,20 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import banner from "$showcase/session-watchos/banner.webp?enhanced&quality=100";
+	import banner from "$showcase/session-watchos/banner.webp?enhanced&w=230;460;690&quality=80";
 	import bannerLqip from "$showcase/session-watchos/banner.webp?lqip";
-	import screenshot1 from "$showcase/session-watchos/screenshot-1.webp?enhanced&quality=100";
+	import screenshot1 from "$showcase/session-watchos/screenshot-1.webp?enhanced&quality=80";
 	import screenshot1Lqip from "$showcase/session-watchos/screenshot-1.webp?lqip";
-	import screenshot2 from "$showcase/session-watchos/screenshot-2.webp?enhanced&quality=100";
+	import screenshot2 from "$showcase/session-watchos/screenshot-2.webp?enhanced&quality=80";
 	import screenshot2Lqip from "$showcase/session-watchos/screenshot-2.webp?lqip";
-	import screenshot3 from "$showcase/session-watchos/screenshot-3.webp?enhanced&quality=100";
+	import screenshot3 from "$showcase/session-watchos/screenshot-3.webp?enhanced&quality=80";
 	import screenshot3Lqip from "$showcase/session-watchos/screenshot-3.webp?lqip";
-	import screenshot4 from "$showcase/session-watchos/screenshot-4.webp?enhanced&quality=100";
+	import screenshot4 from "$showcase/session-watchos/screenshot-4.webp?enhanced&quality=80";
 	import screenshot4Lqip from "$showcase/session-watchos/screenshot-4.webp?lqip";
-	import screenshot5 from "$showcase/session-watchos/screenshot-5.webp?enhanced&quality=100";
+	import screenshot5 from "$showcase/session-watchos/screenshot-5.webp?enhanced&quality=80";
 	import screenshot5Lqip from "$showcase/session-watchos/screenshot-5.webp?lqip";
-	import screenshot6 from "$showcase/session-watchos/screenshot-6.webp?enhanced&quality=100";
+	import screenshot6 from "$showcase/session-watchos/screenshot-6.webp?enhanced&quality=80";
 	import screenshot6Lqip from "$showcase/session-watchos/screenshot-6.webp?lqip";
-	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
+	import { subdomainUrl } from "$lib/utils";
 
 	export const sessionWatchosProject: ShowcaseItem = {
 		type: "project",
@@ -61,11 +61,11 @@
 		],
 		links: [
 			{
-				url: `${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/session-watchos`,
+				url: subdomainUrl("git", "/hloth/session-watchos"),
 				label: "Open Session Watchos source code",
 			},
 			{
-				url: `${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/session-watchos-website`,
+				url: subdomainUrl("git", "/hloth/session-watchos-website"),
 				label: "Open Session Watchos linking website source code",
 			},
 		],

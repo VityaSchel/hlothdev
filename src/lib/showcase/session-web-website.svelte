@@ -1,9 +1,9 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
-	import bannerSrc from "$showcase/session-web/banner.webp?enhanced&quality=100";
+	import { subdomainUrl } from "$lib/utils";
+	import bannerSrc from "$showcase/session-web/banner.webp?enhanced&w=230;460;690&quality=80";
 	import bannerLqip from "$showcase/session-web/banner.webp?lqip";
-	import screenshotSrc from "$showcase/session-web/screenshot.webp?enhanced&quality=100";
+	import screenshotSrc from "$showcase/session-web/screenshot.webp?enhanced&quality=80";
 	import screenshotLqip from "$showcase/session-web/screenshot.webp?lqip";
 
 	export const sessionWebWebsite: ShowcaseItem = {
@@ -23,7 +23,7 @@
 		],
 		links: [
 			{
-				url: `${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/session-web`,
+				url: subdomainUrl("git", "/hloth/session-web"),
 				label: "Open Session Web source code",
 			},
 		],

@@ -1,13 +1,13 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
-	import banner from "$showcase/batumi-bike/banner.webp?enhanced&quality=100";
+	import { subdomainUrl } from "$lib/utils";
+	import banner from "$showcase/batumi-bike/banner.webp?enhanced&w=230;460;690&quality=80";
 	import bannerLqip from "$showcase/batumi-bike/banner.webp?lqip";
-	import screenshot1 from "$showcase/batumi-bike/screenshot-1.webp?enhanced&quality=100";
+	import screenshot1 from "$showcase/batumi-bike/screenshot-1.webp?enhanced&quality=80";
 	import screenshot1Lqip from "$showcase/batumi-bike/screenshot-1.webp?lqip";
-	import screenshot2 from "$showcase/batumi-bike/screenshot-2.webp?enhanced&quality=100";
+	import screenshot2 from "$showcase/batumi-bike/screenshot-2.webp?enhanced&quality=80";
 	import screenshot2Lqip from "$showcase/batumi-bike/screenshot-2.webp?lqip";
-	import screenshot3 from "$showcase/batumi-bike/screenshot-3.webp?enhanced&quality=100";
+	import screenshot3 from "$showcase/batumi-bike/screenshot-3.webp?enhanced&quality=80";
 	import screenshot3Lqip from "$showcase/batumi-bike/screenshot-3.webp?lqip";
 
 	export const batumiBikeWebsite: ShowcaseItem = {
@@ -44,7 +44,7 @@
 				label: "Visit Batumi.bike (batumibike.netlify.app)",
 			},
 			{
-				url: `${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/batumi.bike`,
+				url: subdomainUrl("git", "/hloth/batumi.bike"),
 				label: "Open Batumi.bike source code",
 			},
 		],

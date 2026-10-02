@@ -1,11 +1,11 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
-	import bannerSrc from "$showcase/oge-generator/banner.webp?enhanced&quality=100";
+	import { subdomainUrl } from "$lib/utils";
+	import bannerSrc from "$showcase/oge-generator/banner.webp?enhanced&w=230;460;690&quality=80";
 	import bannerLqip from "$showcase/oge-generator/banner.webp?lqip";
-	import screenshot1Src from "$showcase/oge-generator/screenshot-1.webp?enhanced&quality=100";
+	import screenshot1Src from "$showcase/oge-generator/screenshot-1.webp?enhanced&quality=80";
 	import screenshot1Lqip from "$showcase/oge-generator/screenshot-1.webp?lqip";
-	import screenshot2Src from "$showcase/oge-generator/screenshot-2.webp?enhanced&quality=100";
+	import screenshot2Src from "$showcase/oge-generator/screenshot-2.webp?enhanced&quality=80";
 	import screenshot2Lqip from "$showcase/oge-generator/screenshot-2.webp?lqip";
 
 	export const ogeGeneratorWebsite: ShowcaseItem = {
@@ -30,7 +30,7 @@
 		],
 		links: [
 			{
-				url: `${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/informatics-oge-generator`,
+				url: subdomainUrl("git", "/hloth/informatics-oge-generator"),
 				label: "Open OGE generator source code",
 			},
 		],

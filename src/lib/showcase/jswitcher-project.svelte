@@ -1,12 +1,12 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import banner from "$showcase/jswitcher/banner.webp?enhanced&quality=100";
+	import banner from "$showcase/jswitcher/banner.webp?enhanced&w=230;460;690&quality=80";
 	import bannerLqip from "$showcase/jswitcher/banner.webp?lqip";
-	import screenshot1 from "$showcase/jswitcher/screenshot-1.webp?enhanced&quality=100";
+	import screenshot1 from "$showcase/jswitcher/screenshot-1.webp?enhanced&quality=80";
 	import screenshot1Lqip from "$showcase/jswitcher/screenshot-1.webp?lqip";
-	import screenshot2 from "$showcase/jswitcher/screenshot-2.webp?enhanced&quality=100";
+	import screenshot2 from "$showcase/jswitcher/screenshot-2.webp?enhanced&quality=80";
 	import screenshot2Lqip from "$showcase/jswitcher/screenshot-2.webp?lqip";
-	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
+	import { subdomainUrl } from "$lib/utils";
 
 	export const jswitcherProject: ShowcaseItem = {
 		type: "project",
@@ -33,7 +33,7 @@
 		],
 		links: [
 			{
-				url: `${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/jswitcher`,
+				url: subdomainUrl("git", "/hloth/jswitcher"),
 				label: "Open JSwitcher source code",
 			},
 		],

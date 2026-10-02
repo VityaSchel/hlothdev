@@ -1,12 +1,12 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import banner from "$showcase/business-estate-solutions/banner.webp?enhanced&quality=100";
+	import banner from "$showcase/business-estate-solutions/banner.webp?enhanced&w=230;460;690&quality=80";
 	import bannerLqip from "$showcase/business-estate-solutions/banner.webp?lqip";
-	import screenshot1 from "$showcase/business-estate-solutions/screenshot-1.webp?enhanced&quality=100";
+	import screenshot1 from "$showcase/business-estate-solutions/screenshot-1.webp?enhanced&quality=80";
 	import screenshot1Lqip from "$showcase/business-estate-solutions/screenshot-1.webp?lqip";
-	import screenshot2 from "$showcase/business-estate-solutions/screenshot-2.webp?enhanced&quality=100";
+	import screenshot2 from "$showcase/business-estate-solutions/screenshot-2.webp?enhanced&quality=80";
 	import screenshot2Lqip from "$showcase/business-estate-solutions/screenshot-2.webp?lqip";
-	import screenshot3 from "$showcase/business-estate-solutions/screenshot-3.webp?enhanced&quality=100";
+	import screenshot3 from "$showcase/business-estate-solutions/screenshot-3.webp?enhanced&quality=80";
 	import screenshot3Lqip from "$showcase/business-estate-solutions/screenshot-3.webp?lqip";
 
 	export const besWebsite: ShowcaseItem = {

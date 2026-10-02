@@ -1,9 +1,9 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
-	import bannerSrc from "$showcase/ps4-merger/banner.webp?enhanced&quality=100";
+	import { subdomainUrl } from "$lib/utils";
+	import bannerSrc from "$showcase/ps4-merger/banner.webp?enhanced&w=230;460;690&quality=80";
 	import bannerLqip from "$showcase/ps4-merger/banner.webp?lqip";
-	import screenshotSrc from "$showcase/ps4-merger/screenshot.webp?enhanced&quality=100";
+	import screenshotSrc from "$showcase/ps4-merger/screenshot.webp?enhanced&quality=80";
 	import screenshotLqip from "$showcase/ps4-merger/screenshot.webp?lqip";
 
 	export const ps4mergerProject: ShowcaseItem = {
@@ -18,12 +18,12 @@
 			{
 				src: screenshotSrc,
 				lqip: screenshotLqip,
-				alt: "PS4 Merger screenshot with text: Welcome! PKG Merger by hloth.dev \nSearching in /data/pkg_merger... \nFound 2 files: \bEP9000-CUSA<...>_001.pkgpart \nEP9000-CUSA<...>_002.pkgpart \n\nEstimated time: 29:18 \nApp will be frozen entire time, do not worry and look if .pkg file started appearing in /data/pkg directory via FTP \nAllow up to 3x of that estimated time \n\nPress any button on controller to START merging parts \n\nFiles successfully merged into /data/EP9000-CUSA<...>.pkg \nNow you can install it via goldhen installer! \nNow you can also delete .pkgpart files from /data/pkg_merger",
+				alt: "PS4 Merger screenshot with text: Welcome! PKG Merger by hloth.dev \nSearching in /data/pkg_merger... \nFound 2 files: \nEP9000-CUSA<...>_001.pkgpart \nEP9000-CUSA<...>_002.pkgpart \n\nEstimated time: 29:18 \nApp will be frozen entire time, do not worry and look if .pkg file started appearing in /data/pkg directory via FTP \nAllow up to 3x of that estimated time \n\nPress any button on controller to START merging parts \n\nFiles successfully merged into /data/EP9000-CUSA<...>.pkg \nNow you can install it via goldhen installer! \nNow you can also delete .pkgpart files from /data/pkg_merger",
 			},
 		],
 		links: [
 			{
-				url: `${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/ps4-app-merge-pkgs`,
+				url: subdomainUrl("git", "/hloth/ps4-app-merge-pkgs"),
 				label: "Open PS4 merger source code",
 			},
 		],

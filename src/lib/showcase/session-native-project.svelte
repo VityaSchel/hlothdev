@@ -1,10 +1,10 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import banner from "$showcase/session-native/banner.webp?enhanced&quality=100";
+	import banner from "$showcase/session-native/banner.webp?enhanced&w=230;460;690&quality=80";
 	import bannerLqip from "$showcase/session-native/banner.webp?lqip";
-	import screenshot from "$showcase/session-native/screenshot.webp?enhanced&quality=100";
+	import screenshot from "$showcase/session-native/screenshot.webp?enhanced&quality=80";
 	import screenshotLqip from "$showcase/session-native/screenshot.webp?lqip";
-	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
+	import { subdomainUrl } from "$lib/utils";
 
 	export const sessionNativeProject: ShowcaseItem = {
 		type: "project",
@@ -25,7 +25,7 @@
 		],
 		links: [
 			{
-				url: `${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/session-native`,
+				url: subdomainUrl("git", "/hloth/session-native"),
 				label: "Open Session Native source code",
 			},
 		],

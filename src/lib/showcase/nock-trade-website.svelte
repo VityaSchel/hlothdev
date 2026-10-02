@@ -1,19 +1,19 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
-	import bannerSrc from "$showcase/nock-trade/banner.webp?enhanced&quality=100";
+	import { subdomainUrl } from "$lib/utils";
+	import bannerSrc from "$showcase/nock-trade/banner.webp?enhanced&w=230;460;690&quality=80";
 	import bannerLqip from "$showcase/nock-trade/banner.webp?lqip";
-	import screenshot1Src from "$showcase/nock-trade/screenshot-1.webp?enhanced&quality=100";
+	import screenshot1Src from "$showcase/nock-trade/screenshot-1.webp?enhanced&quality=80";
 	import screenshot1Lqip from "$showcase/nock-trade/screenshot-1.webp?lqip";
-	import screenshot2Src from "$showcase/nock-trade/screenshot-2.webp?enhanced&quality=100";
+	import screenshot2Src from "$showcase/nock-trade/screenshot-2.webp?enhanced&quality=80";
 	import screenshot2Lqip from "$showcase/nock-trade/screenshot-2.webp?lqip";
-	import screenshot3Src from "$showcase/nock-trade/screenshot-3.webp?enhanced&quality=100";
+	import screenshot3Src from "$showcase/nock-trade/screenshot-3.webp?enhanced&quality=80";
 	import screenshot3Lqip from "$showcase/nock-trade/screenshot-3.webp?lqip";
-	import screenshot4Src from "$showcase/nock-trade/screenshot-4.webp?enhanced&quality=100";
+	import screenshot4Src from "$showcase/nock-trade/screenshot-4.webp?enhanced&quality=80";
 	import screenshot4Lqip from "$showcase/nock-trade/screenshot-4.webp?lqip";
-	import screenshot5Src from "$showcase/nock-trade/screenshot-5.webp?enhanced&quality=100";
+	import screenshot5Src from "$showcase/nock-trade/screenshot-5.webp?enhanced&quality=80";
 	import screenshot5Lqip from "$showcase/nock-trade/screenshot-5.webp?lqip";
-	import screenshot6Src from "$showcase/nock-trade/screenshot-6.webp?enhanced&quality=100";
+	import screenshot6Src from "$showcase/nock-trade/screenshot-6.webp?enhanced&quality=80";
 	import screenshot6Lqip from "$showcase/nock-trade/screenshot-6.webp?lqip";
 
 	export const nockTradeWebsite: ShowcaseItem = {
@@ -121,7 +121,7 @@
 		(signet) for Bitcoin. I spent about 30 hours researching, experimenting with
 		deployment, modifying BTCPay Server, NBXPlorer, NBitcoin and wrote a
 		detailed guide on how to set it up in my blog: <a
-			href="{getMainDomainProtocol()}://blog.{getMainDomain()}/nbxplorer-custom-signet"
+			href={subdomainUrl("blog", "/nbxplorer-custom-signet")}
 			rel="noopener noreferrer nofollow"
 			target="_blank"
 			>How to add custom bitcoin signet to NBitcoin and NBXplorer</a

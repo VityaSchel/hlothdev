@@ -1,10 +1,10 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import banner from "$showcase/moreofme/banner.webp?enhanced&quality=100";
+	import banner from "$showcase/moreofme/banner.webp?enhanced&w=230;460;690&quality=80";
 	import bannerLqip from "$showcase/moreofme/banner.webp?lqip";
-	import image from "$showcase/moreofme/image.webp?enhanced&quality=100";
+	import image from "$showcase/moreofme/image.webp?enhanced&quality=80";
 	import imageLqip from "$showcase/moreofme/image.webp?lqip";
-	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
+	import { subdomainUrl } from "$lib/utils";
 
 	export const moreOfMeWebsite: ShowcaseItem = {
 		type: "website",
@@ -26,7 +26,7 @@
 		],
 		links: [
 			{
-				url: `${getMainDomainProtocol()}://blog.${getMainDomain()}/blog/moreofme`,
+				url: subdomainUrl("blog", "/blog/moreofme"),
 				label: "Read my blog post about Moreof.me",
 			},
 		],

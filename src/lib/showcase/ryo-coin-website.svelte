@@ -1,20 +1,20 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import bannerSrc from "$showcase/ryo-coin/banner.webp?enhanced&quality=100";
+	import bannerSrc from "$showcase/ryo-coin/banner.webp?enhanced&w=230;460;690&quality=80";
 	import bannerLqip from "$showcase/ryo-coin/banner.webp?lqip";
-	import v1Screenshot1Src from "$showcase/ryo-coin/v1-screenshot-1.webp?enhanced&quality=100";
+	import v1Screenshot1Src from "$showcase/ryo-coin/v1-screenshot-1.webp?enhanced&quality=80";
 	import v1Screenshot1Lqip from "$showcase/ryo-coin/v1-screenshot-1.webp?lqip";
-	import v1Screenshot2Src from "$showcase/ryo-coin/v1-screenshot-2.webp?enhanced&quality=100";
+	import v1Screenshot2Src from "$showcase/ryo-coin/v1-screenshot-2.webp?enhanced&quality=80";
 	import v1Screenshot2Lqip from "$showcase/ryo-coin/v1-screenshot-2.webp?lqip";
-	import v2ScreenshotSrc from "$showcase/ryo-coin/v2-screenshot.webp?enhanced&quality=100";
+	import v2ScreenshotSrc from "$showcase/ryo-coin/v2-screenshot.webp?enhanced&quality=80";
 	import v2ScreenshotLqip from "$showcase/ryo-coin/v2-screenshot.webp?lqip";
-	import v3ScreenshotSrc from "$showcase/ryo-coin/v3-screenshot.webp?enhanced&quality=100";
+	import v3ScreenshotSrc from "$showcase/ryo-coin/v3-screenshot.webp?enhanced&quality=80";
 	import v3ScreenshotLqip from "$showcase/ryo-coin/v3-screenshot.webp?lqip";
-	import v4Screenshot1Src from "$showcase/ryo-coin/v4-screenshot-1.webp?enhanced&quality=100";
+	import v4Screenshot1Src from "$showcase/ryo-coin/v4-screenshot-1.webp?enhanced&quality=80";
 	import v4Screenshot1Lqip from "$showcase/ryo-coin/v4-screenshot-1.webp?lqip";
-	import v4Screenshot2Src from "$showcase/ryo-coin/v4-screenshot-2.webp?enhanced&quality=100";
+	import v4Screenshot2Src from "$showcase/ryo-coin/v4-screenshot-2.webp?enhanced&quality=80";
 	import v4Screenshot2Lqip from "$showcase/ryo-coin/v4-screenshot-2.webp?lqip";
-	import v4Screenshot3Src from "$showcase/ryo-coin/v4-screenshot-3.webp?enhanced&quality=100";
+	import v4Screenshot3Src from "$showcase/ryo-coin/v4-screenshot-3.webp?enhanced&quality=80";
 	import v4Screenshot3Lqip from "$showcase/ryo-coin/v4-screenshot-3.webp?lqip";
 
 	export const ryoCoinWebsite: ShowcaseItem = {

@@ -1,10 +1,10 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import banner from "$showcase/pow-reaction/banner.webp?enhanced&quality=100";
+	import banner from "$showcase/pow-reaction/banner.webp?enhanced&w=230;460;690&quality=80";
 	import bannerLqip from "$showcase/pow-reaction/banner.webp?lqip";
-	import screenshot from "$showcase/pow-reaction/screenshot.webp?enhanced&quality=100";
+	import screenshot from "$showcase/pow-reaction/screenshot.webp?enhanced&quality=80";
 	import screenshotLqip from "$showcase/pow-reaction/screenshot.webp?lqip";
-	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
+	import { subdomainUrl } from "$lib/utils";
 
 	export const powReactionProject: ShowcaseItem = {
 		type: "project",
@@ -30,7 +30,7 @@
 				label: "Open pow-reaction demo website",
 			},
 			{
-				url: `${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/pow-reaction`,
+				url: subdomainUrl("git", "/hloth/pow-reaction"),
 				label: "Open pow-reaction source code",
 			},
 		],

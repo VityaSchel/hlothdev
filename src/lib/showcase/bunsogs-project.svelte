@@ -1,16 +1,16 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import banner from "$showcase/bunsogs/banner.webp?enhanced&quality=100";
+	import banner from "$showcase/bunsogs/banner.webp?enhanced&w=230;460;690&quality=80";
 	import bannerLqip from "$showcase/bunsogs/banner.webp?lqip";
-	import screenshot1 from "$showcase/bunsogs/screenshot-1.webp?enhanced&quality=100";
+	import screenshot1 from "$showcase/bunsogs/screenshot-1.webp?enhanced&quality=80";
 	import screenshot1Lqip from "$showcase/bunsogs/screenshot-1.webp?lqip";
-	import screenshot2 from "$showcase/bunsogs/screenshot-2.webp?enhanced&quality=100";
+	import screenshot2 from "$showcase/bunsogs/screenshot-2.webp?enhanced&quality=80";
 	import screenshot2Lqip from "$showcase/bunsogs/screenshot-2.webp?lqip";
-	import screenshot3 from "$showcase/bunsogs/screenshot-3.webp?enhanced&quality=100";
+	import screenshot3 from "$showcase/bunsogs/screenshot-3.webp?enhanced&quality=80";
 	import screenshot3Lqip from "$showcase/bunsogs/screenshot-3.webp?lqip";
-	import screenshot4 from "$showcase/bunsogs/screenshot-4.webp?enhanced&quality=100";
+	import screenshot4 from "$showcase/bunsogs/screenshot-4.webp?enhanced&quality=80";
 	import screenshot4Lqip from "$showcase/bunsogs/screenshot-4.webp?lqip";
-	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
+	import { subdomainUrl } from "$lib/utils";
 
 	export const bunsogsProject: ShowcaseItem = {
 		type: "project",
@@ -47,11 +47,11 @@
 		],
 		links: [
 			{
-				url: `${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/bunsogs`,
+				url: subdomainUrl("git", "/hloth/bunsogs"),
 				label: "Open bunsogs source code",
 			},
 			{
-				url: `${getMainDomainProtocol()}://blog.${getMainDomain()}/bunsogs-release`,
+				url: subdomainUrl("blog", "/bunsogs-release"),
 				label: "Read article about bunsogs in hloth blog",
 			},
 			{

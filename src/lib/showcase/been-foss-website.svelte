@@ -1,9 +1,9 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
-	import banner from "$showcase/been-foss/banner.webp?enhanced&quality=100";
+	import { subdomainUrl } from "$lib/utils";
+	import banner from "$showcase/been-foss/banner.webp?enhanced&w=230;460;690&quality=80";
 	import bannerLqip from "$showcase/been-foss/banner.webp?lqip";
-	import screenshot from "$showcase/been-foss/screenshot.webp?enhanced&quality=100";
+	import screenshot from "$showcase/been-foss/screenshot.webp?enhanced&quality=80";
 	import screenshotLqip from "$showcase/been-foss/screenshot.webp?lqip";
 
 	export const beenFossWebsite: ShowcaseItem = {
@@ -30,7 +30,7 @@
 				label: "Visit been-foss",
 			},
 			{
-				url: `${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/been-foss`,
+				url: subdomainUrl("git", "/hloth/been-foss"),
 				label: "Open been-foss source code",
 			},
 		],

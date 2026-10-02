@@ -1,14 +1,14 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import banner from "$showcase/sipacker/banner.webp?enhanced&quality=100";
+	import banner from "$showcase/sipacker/banner.webp?enhanced&w=230;460;690&quality=80";
 	import bannerLqip from "$showcase/sipacker/banner.webp?lqip";
-	import screenshot1 from "$showcase/sipacker/screenshot-1.webp?enhanced&quality=100";
+	import screenshot1 from "$showcase/sipacker/screenshot-1.webp?enhanced&quality=80";
 	import screenshot1Lqip from "$showcase/sipacker/screenshot-1.webp?lqip";
-	import siquester from "$showcase/sipacker/siquester.webp?enhanced&quality=100";
+	import siquester from "$showcase/sipacker/siquester.webp?enhanced&quality=80";
 	import siquesterLqip from "$showcase/sipacker/siquester.webp?lqip";
-	import screenshot2 from "$showcase/sipacker/screenshot-2.webp?enhanced&quality=100";
+	import screenshot2 from "$showcase/sipacker/screenshot-2.webp?enhanced&quality=80";
 	import screenshot2Lqip from "$showcase/sipacker/screenshot-2.webp?lqip";
-	import screenshot3 from "$showcase/sipacker/screenshot-3.webp?enhanced&quality=100";
+	import screenshot3 from "$showcase/sipacker/screenshot-3.webp?enhanced&quality=80";
 	import screenshot3Lqip from "$showcase/sipacker/screenshot-3.webp?lqip";
 
 	export const sipackerWebsite: ShowcaseItem = {
@@ -71,9 +71,9 @@
 		> app is a great tool for creating custom question packs for SiGame. However,
 		it is only available on Windows and built with DotNet making it impossible to
 		use on Linux, MacOS, Android or iOS. Additionally, it has a complex user interface
-		that can confuse users, not familiar with pack editing process. The need for
-		a cross-platform and straightforward pack editor was expressed by the SiGame
-		community for many years.
+		that can confuse users, not familiar with pack editing process. The need for a
+		cross-platform and straightforward pack editor was expressed by the SiGame community
+		for many years.
 	</p>
 	<h2>The solution</h2>
 	<p>

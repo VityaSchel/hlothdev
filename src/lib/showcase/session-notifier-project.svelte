@@ -1,8 +1,8 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import banner from "$showcase/session-notifier/banner.webp?enhanced&quality=100";
+	import banner from "$showcase/session-notifier/banner.webp?enhanced&w=230;460;690&quality=80";
 	import bannerLqip from "$showcase/session-notifier/banner.webp?lqip";
-	import screenshot from "$showcase/session-notifier/screenshot.webp?enhanced&quality=100";
+	import screenshot from "$showcase/session-notifier/screenshot.webp?enhanced&quality=80";
 	import screenshotLqip from "$showcase/session-notifier/screenshot.webp?lqip";
 
 	export const sessionNotifierProject: ShowcaseItem = {

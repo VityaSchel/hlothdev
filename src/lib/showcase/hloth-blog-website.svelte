@@ -1,10 +1,10 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import banner from "$showcase/hloth-blog/banner.webp?enhanced&quality=100";
+	import banner from "$showcase/hloth-blog/banner.webp?enhanced&w=230;460;690&quality=80";
 	import bannerLqip from "$showcase/hloth-blog/banner.webp?lqip";
-	import screenshot from "$showcase/hloth-blog/screenshot.webp?enhanced&quality=100";
+	import screenshot from "$showcase/hloth-blog/screenshot.webp?enhanced&quality=80";
 	import screenshotLqip from "$showcase/hloth-blog/screenshot.webp?lqip";
-	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
+	import { subdomainUrl } from "$lib/utils";
 
 	export const blogHlothDevWebsite: ShowcaseItem = {
 		type: "website",
@@ -26,11 +26,11 @@
 		],
 		links: [
 			{
-				url: `${getMainDomainProtocol()}://blog.${getMainDomain()}`,
+				url: subdomainUrl("blog"),
 				label: "Visit hloth blog",
 			},
 			{
-				url: `${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/blog.hloth.dev`,
+				url: subdomainUrl("git", "/hloth/blog.hloth.dev"),
 				label: "Open hloth blog source code",
 			},
 		],
