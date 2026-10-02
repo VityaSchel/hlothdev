@@ -60,14 +60,14 @@
 	</div>
 	<div
 		class={[
-			` scrollbar-thin nowrap-flex wrap-styles gap-[10px] overflow-scroll px-4
+			` nowrap-flex wrap-styles scrollbar-thin gap-[10px] overflow-scroll px-4
 			pt-[0.5px] pb-3 focus-scrollable px470:px-8 `,
 			{
 				"nowrap-fade-out-mask": scrollX === 0,
 			},
 		]}
 		aria-label="Section {name} of showcase, containing {childrenCount} items"
-		onscroll={(e) => (scrollX = (e.target as HTMLDivElement).scrollLeft)}
+		onscroll={(e) => (scrollX = e.currentTarget.scrollLeft)}
 	>
 		{@render children()}
 	</div>
@@ -80,9 +80,6 @@
 	.checkbox-content:has(.checkbox:not(:checked)) {
 		.show-less {
 			display: none;
-		}
-		.show-all {
-			display: inline;
 		}
 		.nowrap-fade-out-mask {
 			mask: linear-gradient(to right, black 0%, black 90%, transparent 100%);
@@ -105,9 +102,6 @@
 		color: #fff;
 	}
 	.checkbox-content:has(.checkbox:checked) {
-		.show-less {
-			display: inline;
-		}
 		.show-all {
 			display: none;
 		}

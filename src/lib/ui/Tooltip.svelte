@@ -1,55 +1,57 @@
 <script lang="ts">
-	import Portal from "svelte-portal";
+	import type { Attachment } from "svelte/attachments";
 
 	let {
 		children,
-		selectedNavItem,
+		x,
+		y,
 	}: {
 		children: import("svelte").Snippet;
-		selectedNavItem: {
-			x: number;
-			y: number;
-		};
+		x: number;
+		y: number;
 	} = $props();
 	let uid = $props.id();
+
+	const portal: Attachment = (node) => {
+		document.body.append(node);
+		return () => node.remove();
+	};
 </script>
 
-<Portal>
+<div
+	class="pointer-events-none fixed top-0 left-0 z-5 size-full select-none"
+	{@attach portal}
+>
 	<div
-		class="pointer-events-none fixed top-0 left-0 z-[5] size-full select-none"
+		class="tooltip-container pointer-events-none absolute z-5 flex
+			-translate-x-1/2 -translate-y-1/2 flex-col items-center"
+		style:left="{x}px"
+		style:top="{y - 8}px"
+		role="tooltip"
+		aria-labelledby="tooltip-title-{uid}"
 	>
 		<div
-			class="tooltip-container pointer-events-none absolute z-[5] flex
-				-translate-x-1/2 -translate-y-1/2 flex-col items-center"
-			style="left: {selectedNavItem.x}px; top: {selectedNavItem.y - 8}px"
-			role="tooltip"
-			aria-labelledby="tooltip-title-{uid}"
+			class="font-sf-pro-display tooltip relative flex items-center
+				justify-center bg-tooltip text-sm whitespace-nowrap backdrop-blur-2xl
+				transparency-reduce:bg-[#323232] transparency-reduce:backdrop-blur-none"
+			id="tooltip-title-{uid}"
 		>
-			<div
-				class="font-sf-pro-display tooltip relative flex items-center
-					justify-center bg-tooltip text-sm text-[16px] font-light
-					whitespace-nowrap text-white backdrop-blur-2xl
-					transparency-reduce:bg-[#323232]
-					transparency-reduce:backdrop-blur-none"
-				id="tooltip-title-{uid}"
-			>
-				{@render children()}
-			</div>
-			<span
-				class="tooltip-border absolute top-0 left-0 box-border border
-					border-white/20"
-			></span>
-			<span
-				class="tooltip-arrow-border tooltip-arrow-border-black absolute
-					box-border"
-			></span>
-			<span
-				class="tooltip-arrow-border tooltip-arrow-border-white absolute
-					box-border"
-			></span>
+			{@render children()}
 		</div>
+		<span
+			class="tooltip-border absolute top-0 left-0 box-border border
+				border-white/20"
+		></span>
+		<span
+			class="tooltip-arrow-border tooltip-arrow-border-black absolute
+				box-border"
+		></span>
+		<span
+			class="tooltip-arrow-border tooltip-arrow-border-white absolute
+				box-border"
+		></span>
 	</div>
-</Portal>
+</div>
 
 <style lang="scss">
 	// here goes about 10 hours of my life

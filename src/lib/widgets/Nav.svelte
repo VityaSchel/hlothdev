@@ -1,9 +1,9 @@
 <script lang="ts">
 	import Squircle from "$lib/Squircle.svelte";
-	import NavItem from "$lib/entities/NavItem.svelte";
+	import NavItem, { type SelectedNavItem } from "$lib/entities/NavItem.svelte";
 	import NavSeparator from "$lib/entities/NavSeparator.svelte";
 	import Tooltip from "$lib/ui/Tooltip.svelte";
-	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
+	import { subdomainUrl } from "$lib/utils";
 	import upworkIcon from "$lib/assets/dock-icons/upwork.webp?inline";
 	import forgejoIcon from "$lib/assets/dock-icons/forgejo.webp?inline";
 	import linkedinIcon from "$lib/assets/dock-icons/linkedin.webp?inline";
@@ -14,24 +14,20 @@
 	import blogIcon from "$lib/assets/dock-icons/blog.webp?inline";
 	import instagramIcon from "$lib/assets/dock-icons/instagram.webp?inline";
 
-	let selectedNavItem: {
-		element: HTMLElement;
-		name: string;
-		x: number;
-		y: number;
-	} | null = $state(null);
+	let selectedNavItem: SelectedNavItem | null = $state(null);
 </script>
 
 <nav
 	class="nav-fake-view-transition relative h-[65px] shrink-0 rounded-[16px]
-		backdrop-blur-[48px] select-none transparency-reduce:bg-transparent
-		transparency-reduce:backdrop-blur-none"
+		backdrop-blur-[48px] select-none transparency-reduce:backdrop-blur-none"
 	onpointerleave={() => (selectedNavItem = null)}
 	id="footer-nav"
 	aria-label="Dock-style navigation bar"
 >
 	{#if selectedNavItem !== null}
-		<Tooltip {selectedNavItem}>{selectedNavItem.name}</Tooltip>
+		<Tooltip x={selectedNavItem.x} y={selectedNavItem.y}>
+			{selectedNavItem.name}
+		</Tooltip>
 	{/if}
 	<Squircle
 		class="bg-thick transparency-reduce:bg-opaque-row"
@@ -50,7 +46,7 @@
 				name="My Git server (Forgejo)"
 				icon={forgejoIcon}
 				alt="Forgejo icon"
-				link="{getMainDomainProtocol()}://git.{getMainDomain()}/hloth"
+				link={subdomainUrl("git", "/hloth")}
 				highlight
 				bind:selectedNavItem
 			/>
@@ -99,7 +95,7 @@
 				name="Blog"
 				icon={blogIcon}
 				alt="My blog icon"
-				link={`${getMainDomainProtocol()}://blog.${getMainDomain()}/`}
+				link={subdomainUrl("blog", "/")}
 				class="hidden px300:block"
 				bind:selectedNavItem
 			/>

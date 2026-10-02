@@ -14,7 +14,7 @@
 
 <div
 	class={[
-		`center @container-[size] relative flex size-[60cqb] shrink-0 items-center
+		`@container-size relative flex size-[60cqb] shrink-0 items-center
 		justify-center overflow-clip rounded-full bg-[#3B82F7]`,
 		{
 			"lg:size-[40cqb]": !lg,
@@ -31,12 +31,14 @@
 	>
 		{fallback}
 	</span>
-	{@render children?.()}
+	{@render children()}
 </div>
 
-<style lang="postcss">
-	@reference "tailwindcss";
+<style>
 	div :global(svg) {
-		@apply relative z-[1] h-[41cqb] bg-[#3B82F7];
+		position: relative;
+		z-index: 1;
+		height: 41cqb;
+		background-color: #3b82f7;
 	}
 </style>

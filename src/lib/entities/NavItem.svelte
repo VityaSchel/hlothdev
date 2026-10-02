@@ -1,3 +1,12 @@
+<script lang="ts" module>
+	export type SelectedNavItem = {
+		element: HTMLElement;
+		name: string;
+		x: number;
+		y: number;
+	};
+</script>
+
 <script lang="ts">
 	import { browser } from "$app/environment";
 
@@ -16,12 +25,7 @@
 		link: string;
 		alt: string;
 		class?: import("svelte/elements").ClassValue;
-		selectedNavItem: {
-			element: HTMLElement;
-			name: string;
-			x: number;
-			y: number;
-		} | null;
+		selectedNavItem: SelectedNavItem | null;
 	} = $props();
 
 	// JS ONLY:
@@ -42,20 +46,11 @@
 	};
 
 	let dragging = $state(false);
-	$effect(() => {
-		if (selectedNavItem !== null && selectedNavItem.element === a) {
-			const resize = () => {
-				if (selectedNavItem !== null && selectedNavItem.element === a) {
-					setTooltip();
-				}
-			};
-			document.addEventListener("resize", resize);
-			return () => {
-				document.removeEventListener("resize", resize);
-			};
-		}
-	});
 </script>
+
+<svelte:window
+	onresize={() => selectedNavItem?.element === a && setTooltip()}
+/>
 
 <a
 	href={link}
@@ -117,6 +112,6 @@
 		]}
 	/>
 	{#if highlight && showHighlight}
-		<span class="h-1 w-1 rounded-full bg-[#7C7C7C]"></span>
+		<span class="size-1 rounded-full bg-[#7C7C7C]"></span>
 	{/if}
 </a>

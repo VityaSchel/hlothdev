@@ -3,22 +3,20 @@
 	import { browserSupportsSVG, getSquirclePath } from "$lib/utils";
 
 	let {
-		class: classes,
+		class: className,
 		containerClass,
 		children,
 		cornerRadius = 32,
 		cornerSmoothing = 0.6,
 		innerStrokeWidth = 1,
-		translucent,
 		arrow,
 	}: {
-		class?: import("svelte/elements").SvelteHTMLElements["div"]["class"];
-		containerClass?: import("svelte/elements").SvelteHTMLElements["div"]["class"];
+		class?: import("svelte/elements").ClassValue;
+		containerClass?: import("svelte/elements").ClassValue;
 		children: import("svelte").Snippet;
 		cornerRadius?: number;
 		cornerSmoothing?: number;
 		innerStrokeWidth?: number;
-		translucent?: boolean;
 		arrow?: boolean;
 	} = $props();
 
@@ -38,28 +36,27 @@
 </script>
 
 <div
-	class={["squircle-container relative size-full"]}
+	class="squircle-container relative size-full"
 	bind:offsetWidth={width}
 	bind:offsetHeight={height}
-	style="border-radius: {cornerRadius}px;"
+	style:border-radius="{cornerRadius}px"
 >
 	<div
 		class={[
-			"absolute top-0 left-0 z-[0] size-full",
-			classes,
+			"absolute top-0 left-0 z-0 size-full",
+			className,
 			{
-				"backdrop-blur-[48px] transparency-reduce:backdrop-blur-none":
-					translucent,
 				"squircle-card": !browser || !browserSupportsSVG(),
 			},
 		]}
-		style={(squircle === null ? "" : `clip-path: path('${squircle}');`) +
-			`border-radius: ${cornerRadius}px; --inner-stroke-width: ${innerStrokeWidth / 2}px;`}
+		style:clip-path={squircle && `path('${squircle}')`}
+		style:border-radius="{cornerRadius}px"
+		style:--inner-stroke-width="{innerStrokeWidth / 2}px"
 	></div>
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
 		style="overflow: visible;"
-		class="pointer-events-none absolute top-0 left-0 z-[100] size-full"
+		class="pointer-events-none absolute top-0 left-0 z-100 size-full"
 		aria-hidden="true"
 	>
 		<defs>
@@ -94,32 +91,26 @@
 	</svg>
 	<div
 		class={[
-			"relative top-0 left-0 z-[2] size-full",
+			"relative top-0 left-0 z-2 size-full",
 			{
 				"squircle-content-maskable": arrow,
 			},
 			containerClass,
 		]}
-		style="border-radius: {cornerRadius}px;"
+		style:border-radius="{cornerRadius}px"
 	>
 		{@render children()}
 	</div>
 	{#if arrow}
 		<div
-			class="
-        squircle-arrow pointer-events-auto absolute top-0 right-0 z-[3] flex
-        h-full w-8 items-center justify-center
-        px470:w-16
-      "
-			style="border-radius: {cornerRadius}px;"
+			class="squircle-arrow pointer-events-auto absolute top-0 right-0 z-3 flex
+				h-full w-8 items-center justify-center px470:w-16"
+			style:border-radius="{cornerRadius}px"
 			aria-hidden="true"
 		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
-				class="
-          h-6 w-6
-          px470:h-9 px470:w-9
-        "
+				class="size-6 px470:size-9"
 				viewBox="0 0 24 24"
 			>
 				<path
@@ -147,8 +138,5 @@
 	}
 	.squircle-container:not(:hover) > .squircle-arrow {
 		opacity: 0;
-	}
-	.squircle-container:hover > .squircle-arrow {
-		opacity: 100;
 	}
 </style>

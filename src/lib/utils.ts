@@ -18,9 +18,15 @@ export const isOnion = () => {
 	}
 };
 
-export const getMainDomain = () => (isOnion() ? torDomain : clearnetDomain);
+const getOrigin = (hostPrefix = "") =>
+	isOnion()
+		? `http://${hostPrefix}${torDomain}`
+		: `https://${hostPrefix}${clearnetDomain}`;
 
-export const getMainDomainProtocol = () => (isOnion() ? "http" : "https");
+export const siteUrl = (path = "") => getOrigin() + path;
+
+export const subdomainUrl = (subdomain: string, path = "") =>
+	getOrigin(`${subdomain}.`) + path;
 
 export function browserSupportsSVG() {
 	return (
