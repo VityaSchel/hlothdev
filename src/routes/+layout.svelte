@@ -11,7 +11,7 @@
 	import type { LayoutProps } from "./$types";
 	import { browser } from "$app/environment";
 	import { onMount } from "svelte";
-	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
+	import { siteUrl, subdomainUrl } from "$lib/utils";
 
 	let { children, data }: LayoutProps = $props();
 
@@ -21,7 +21,7 @@
 	const sendTransitionToFront = (viewId: string) => {
 		const style = document.createElement("style");
 		style.innerHTML = `
-      ::view-transition-group(${viewId}) {
+      ::view-transition-group(${CSS.escape(viewId)}) {
         z-index: 1000;
       }
     `;
@@ -70,7 +70,7 @@
 			) {
 				const projectId = (navigation.from?.params?.id ||
 					navigation.to?.params?.id) as string;
-				viewId = `project-${projectId}`;
+				viewId = `showcase-${projectId}`;
 			} else {
 				viewId = Object.entries(viewIds).find(([, value]) =>
 					value.some(
@@ -93,49 +93,44 @@
 		});
 	});
 
-	let jsDisabledAlertVisible = $derived(!data.alertsDismissed.jsDisabled);
-	let reducedMotionAlertVisible = $derived(!data.alertsDismissed.reducedMotion);
-	let reducedTransparencyAlertVisible = $derived(
+	const jsDisabledAlertVisible = $derived(!data.alertsDismissed.jsDisabled);
+	const reducedMotionAlertVisible = $derived(
+		!data.alertsDismissed.reducedMotion,
+	);
+	const reducedTransparencyAlertVisible = $derived(
 		!data.alertsDismissed.reducedTransparency,
 	);
 
 	onMount(() => {
-		if (!browser || window.location.hostname === "localhost") return;
-		console.log()
-		console.log()
-		console.log()
+		if (window.location.hostname === "localhost") return;
+		console.log();
+		console.log();
+		console.log();
 		console.log(
 			"%cHello? Hello, hello? Uhh, I wanted to record a message for you... 👀",
 			"font-size: 30px; cursor: default; text-align: center; font-family: fantasy, sans-serif, emoji; background: #1f371a; border-radius: 999px; display: inline-block; color: white; padding: 32px 24px 24px 24px; width: 100%;",
 		);
 		console.log(
-			`%cLooking for source code? Here you go:\n${getMainDomainProtocol()}://git.${getMainDomain()}/hloth/hloth.dev`,
+			`%cLooking for source code? Here you go:\n${subdomainUrl("git", "/hloth/hloth.dev")}`,
 			"font-size: 16px; cursor: default; text-align: right; font-family: sans-serif; background: #3B82F7; border-radius: 999px; display: inline-block; color: white; padding: 32px; float: right",
 		);
 		console.log(
-			`%cWhile you're still here, why don't you take a look at\n${getMainDomainProtocol()}://${getMainDomain()}/robots.txt?`,
+			`%cWhile you're still here, why don't you take a look at\n${siteUrl("/robots.txt")}?`,
 			"font-size: 16px; cursor: default; text-align: left; font-family: sans-serif; background: #07c616; border-radius: 999px; display: inline-block; color: white; padding: 32px; float: left",
 		);
-		console.log()
-		console.log()
-		console.log()
+		console.log();
+		console.log();
+		console.log();
 	});
 </script>
 
-<svelte:head>
-	<style>
-		html, body {
-			margin: 0;
-		}
-	</style>
-</svelte:head>
 <Background>
 	{@render children()}
 	<Nav />
 	<div
 		class={[
 			` fixed right-0 bottom-0 z-[2000] max-w-full flex-col items-end gap-4 px-4
-	pt-5 pb-15 md:pr-10 `,
+			pt-5 pb-15 md:pr-10 `,
 			{
 				hidden:
 					browser &&
@@ -148,22 +143,8 @@
 			},
 		]}
 	>
-		<ReducedTransparencyMessage
-			bind:visible={reducedTransparencyAlertVisible}
-		/>
-		<ReducedMotionMessage bind:visible={reducedMotionAlertVisible} />
-		<JavascriptDisabledMessage bind:visible={jsDisabledAlertVisible} />
-		<!-- <div
-      class="
-        bg-dark-spot pointer-events-none absolute top-0 left-0 z-[-1] h-full
-        w-full mask-t-from-80% mask-x-from-80% mask-b-from-60%
-      "
-    ></div> -->
+		<ReducedTransparencyMessage visible={reducedTransparencyAlertVisible} />
+		<ReducedMotionMessage visible={reducedMotionAlertVisible} />
+		<JavascriptDisabledMessage visible={jsDisabledAlertVisible} />
 	</div>
 </Background>
-<!-- 
-<style>
-  .bg-dark-spot {
-    background-color: rgba(27, 27, 27, 0.7);
-  }
-</style> -->

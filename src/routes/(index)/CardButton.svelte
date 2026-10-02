@@ -8,7 +8,7 @@
 	} = $props();
 </script>
 
-<div class="@container-[size] h-full rounded-2xl select-none">
+<div class="@container-size h-full rounded-2xl select-none">
 	<div
 		class={[
 			"flex h-full w-full items-center gap-[20cqb] px-[20cqb] md:justify-center",

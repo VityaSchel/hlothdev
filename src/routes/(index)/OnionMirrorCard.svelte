@@ -1,17 +1,22 @@
 <script lang="ts">
-	import { page } from "$app/state";
 	import CardIcon from "$lib/entities/CardIcon.svelte";
 	import Squircle from "$lib/Squircle.svelte";
-	import { clearnetDomain, torDomain } from "$lib/utils";
+	import { clearnetDomain, isOnion, torDomain } from "$lib/utils";
 	import CardButton from "./CardButton.svelte";
 </script>
 
-{#snippet button(href: string, label: string, icon: "onion" | "web")}
+{#snippet button(
+	href: string,
+	label: string,
+	ariaLabel: string,
+	icon: "onion" | "web",
+)}
 	<a
 		{href}
 		class="bg-shadow-card-btn relative max-w-full flex-1 cursor-default
-		rounded-[16px] focus-lg max-px420:aspect-[344/56] px680:flex-2/5 md:flex-1 lg:flex-[171]"
-		aria-label="Open onion mirror of this website"
+			rounded-[16px] focus-lg max-px420:aspect-[344/56] px680:flex-2/5 md:flex-1
+			lg:flex-[171]"
+		aria-label={ariaLabel}
 	>
 		<Squircle class="bg-black/10" cornerRadius={16}>
 			<CardButton class="lg:flex-col lg:gap-2!">
@@ -53,7 +58,10 @@
 					{/if}
 				</CardIcon>
 				<span
-					class="text-left text-[40cqb] leading-[12cqi] font-bold text-thick-typography px420:text-[10cqi] px470:text-[11cqi] px620:max-md:text-[25cqb] lg:text-center lg:text-[10cqi] lg:font-medium"
+					class="text-left text-[40cqb] leading-[12cqi] font-bold
+						text-thick-typography px420:text-[10cqi] px470:text-[11cqi]
+						px620:max-md:text-[25cqb] lg:text-center lg:text-[10cqi]
+						lg:font-medium"
 				>
 					{label}
 				</span>
@@ -62,8 +70,18 @@
 	</a>
 {/snippet}
 
-{#if page.url.host.endsWith(".onion")}
-	{@render button("https://" + clearnetDomain, "Clearnet version", "web")}
+{#if isOnion()}
+	{@render button(
+		`https://${clearnetDomain}`,
+		"Clearnet version",
+		"Open clearnet version of this website",
+		"web",
+	)}
 {:else}
-	{@render button("http://" + torDomain, "Onion mirror", "onion")}
+	{@render button(
+		`http://${torDomain}`,
+		"Onion mirror",
+		"Open onion mirror of this website",
+		"onion",
+	)}
 {/if}

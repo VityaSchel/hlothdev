@@ -1,7 +1,8 @@
 <script lang="ts">
-	import { page } from "$app/state";
 	import bgLqip from "$lib/assets/sonoma-video-banner.webp?lqip";
+	import { isOnion } from "$lib/utils";
 	import { onMount } from "svelte";
+	import { on } from "svelte/events";
 
 	let {
 		children,
@@ -11,16 +12,13 @@
 
 	let saveData = $state(false);
 	onMount(() => {
-		if ("connection" in navigator && navigator.connection) {
-			const update = () => {
-				saveData = navigator.connection?.saveData ?? false;
-			};
-			update();
-			navigator.connection.addEventListener("change", update);
-			return () => {
-				navigator.connection?.removeEventListener("change", update);
-			};
-		}
+		const { connection } = navigator;
+		if (!connection) return;
+		const update = () => {
+			saveData = connection.saveData ?? false;
+		};
+		update();
+		return on(connection, "change", update);
 	});
 </script>
 
@@ -29,11 +27,12 @@
 	aria-hidden="true"
 >
 	<enhanced:img
-		class="absolute top-0 left-0 size-full object-cover"
-		src="$lib/assets/sonoma-video-banner.webp?quality=100"
-		style="background-image: url('{bgLqip.lqip}'), linear-gradient(to bottom, #1c330c, #1c330c); background-size: cover; font-size: 0px;"
+		class="absolute top-0 left-0 size-full bg-[#1c330c] object-cover"
+		src="$lib/assets/sonoma-video-banner.webp?quality=50"
+		style="background-image: url('{bgLqip.lqip}'); background-size: cover; font-size: 0px;"
 		width="3840"
 		height="2160"
+		sizes="max(100vw, 177.77vh)"
 		alt="Background image"
 		aria-hidden="true"
 		loading="lazy"
@@ -48,7 +47,7 @@
 			`s v a g a svaga i have it navalom absolute top-0 left-0 z-[1] h-full
 			w-full object-cover object-center motion-reduce:hidden`,
 			{
-				hidden: saveData || page.url.host.endsWith(".onion"),
+				hidden: saveData || isOnion(),
 			},
 		]}
 		loop

@@ -29,7 +29,6 @@
 	{...props}
 	{@attach squircle({ cornerRadius, cornerSmoothing: 0.6 })}
 >
-	<!-- bg-neutral-200 -->
 	{@render children?.()}
 </svelte:element>
 

@@ -26,14 +26,14 @@
 
 <a
 	href="/me"
-	class="bg-shadow-card-btn @container-[size] relative max-w-full flex-1
+	class="bg-shadow-card-btn @container-size relative max-w-full flex-1
 		cursor-default rounded-[16px] focus-lg md:flex-[743]"
-	style="view-transition-name: me;"
+	style:view-transition-name="me"
 	aria-label="Go to About me page"
 >
 	<Squircle
 		class="bg-black/10"
-		containerClass="@container-[size]"
+		containerClass="@container-size"
 		cornerRadius={16}
 		arrow
 	>
@@ -43,13 +43,13 @@
 				max-px470:text-center px470:flex-row px470:gap-[12cqb]"
 		>
 			<enhanced:img
-				class="aspect-square h-auto w-[35cqi] rounded-full bg-cover
-					px420:w-[25cqi]"
+				class="aspect-square h-auto w-[35cqi] rounded-full bg-neutral-600
+					bg-cover px420:w-[25cqi]"
 				sizes="35cqi, (max-width: 470px) 25cqi"
-				src="$lib/assets/me-avatar.webp?quality=100"
+				src="$lib/assets/me-avatar.webp?quality=80"
 				alt="Me in a suit"
 				draggable="false"
-				style="background-image: url({meAvatarLqip.lqip}), linear-gradient(to top, var(--color-neutral-600), var(--color-neutral-600));"
+				style="background-image: url({meAvatarLqip.lqip})"
 			/>
 			<div
 				class="flex flex-col gap-[3.5cqi] px420:gap-[2.5cqi] px470:flex-1

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import PageWrapper from "$lib/widgets/PageWrapper.svelte";
 	import MeCard from "./MeCard.svelte";
 	import ResumeCard from "./ResumeCard.svelte";
@@ -14,7 +14,7 @@
 <PageWrapper class="max-md:h-full">
 	<h1 class="sr-only">Main page</h1>
 	<div
-		class="scrollbar-thin scroll-when-wide flex h-full flex-col gap-4
+		class="scroll-when-wide flex h-full scrollbar-thin flex-col gap-4
 			overflow-auto rounded-4xl pt-4 focus-scrollable md:overflow-visible"
 	>
 		<div
@@ -43,7 +43,7 @@
 </PageWrapper>
 
 <style>
-	@media ((min-width: 1380px) and (max-height: 530px)) or ((min-width: 1180px) and (max-height: 490px)) or ((min-width: 1024px) and (max-height: 450px)) or ((min-width: 920px) and (max-height: 425px)) or ((min-width: 870px) and (max-height: 400px)) or ((min-width: 870px) and (max-height: 400px)) or ((min-width: 768px) and (max-height: 380px)) {
+	@media ((min-width: 1380px) and (max-height: 530px)) or ((min-width: 1180px) and (max-height: 490px)) or ((min-width: 1024px) and (max-height: 450px)) or ((min-width: 920px) and (max-height: 425px)) or ((min-width: 870px) and (max-height: 400px)) or ((min-width: 768px) and (max-height: 380px)) {
 		.scroll-when-wide {
 			overflow: auto;
 		}

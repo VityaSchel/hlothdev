@@ -24,9 +24,8 @@
 
 <div class="flex size-full flex-col">
 	<header
-		class="border-px flex h-[52px] w-full shrink-0 items-center justify-between
-			gap-2 border border-x-0 border-t-0 border-white/25 px-[15px] pl-0"
-		aria-label="Page header with title and navigation"
+		class="flex h-[52px] w-full shrink-0 items-center justify-between gap-2
+			border-b border-white/25 pr-[15px]"
 	>
 		<div class="flex h-full flex-row items-center">
 			<a
@@ -59,17 +58,14 @@
 				href={button.href}
 				rel={button.external ? "noreferrer noopener" : undefined}
 				target={button.external ? "_blank" : undefined}
-				class="
-					flex h-[22px] min-w-0 cursor-default items-center justify-center
+				class="flex h-[22px] min-w-0 cursor-default items-center justify-center
 					rounded-md border border-[#b6a68e]/40 px-[7px] text-[13px]
-					text-[#ede1cf]/90 focus-sm select-none
-					hover:border-transparent hover:bg-[#b6a68e]/50
-					active:border-transparent active:bg-[#b6a68e]/80 active:text-[#f7efe2]
-					transparency-reduce:border-white/7
+					text-[#ede1cf]/90 focus-sm select-none hover:border-transparent
+					hover:bg-[#b6a68e]/50 active:border-transparent active:bg-[#b6a68e]/80
+					active:text-[#f7efe2] transparency-reduce:border-white/7
 					transparency-reduce:text-zinc-400 transparency-reduce:hover:bg-white/7
 					active:transparency-reduce:bg-white/20
-					transparency-reduce:active:text-zinc-200
-					"
+					transparency-reduce:active:text-zinc-200"
 				draggable="false"
 			>
 				<span class="max-w-full min-w-0 truncate">
@@ -81,10 +77,7 @@
 	<KeyboardNavigationSkipLink class="top-15 left-2" id="footer-nav">
 		Skip to footer navigation
 	</KeyboardNavigationSkipLink>
-	<div
-		class={["max-h-[calc(100%-52px)] flex-1 p-4 px470:p-[25px]", className]}
-		role="main"
-	>
+	<div class={["max-h-[calc(100%-52px)] flex-1 p-4 px470:p-[25px]", className]}>
 		{@render children?.()}
 	</div>
 </div>

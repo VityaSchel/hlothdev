@@ -1,12 +1,9 @@
-export function getMyAge() {
-	const now = new Date();
-	const samaraTime = new Date(
-		now.getTime() + 4 * 60 * 60 * 1000 + now.getTimezoneOffset() * 60 * 1000,
-	);
-	let years = samaraTime.getFullYear() - 2005;
-	const month = samaraTime.getMonth() + 1;
-	const day = samaraTime.getDate();
+const samaraUtcOffset = 4 * 60 * 60 * 1000;
 
-	if (month < 7 || (month === 7 && day < 6)) years--;
-	return years;
+export function getMyAge() {
+	const samaraTime = new Date(Date.now() + samaraUtcOffset);
+	const month = samaraTime.getUTCMonth() + 1;
+	const hadBirthday =
+		month > 7 || (month === 7 && samaraTime.getUTCDate() >= 6);
+	return samaraTime.getUTCFullYear() - 2005 - (hadBirthday ? 0 : 1);
 }

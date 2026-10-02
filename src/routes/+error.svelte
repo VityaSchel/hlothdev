@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import PageWrapper from "$lib/widgets/PageWrapper.svelte";
 	import SubpageWrapper from "$lib/widgets/SubpageWrapper.svelte";
 	import PageMetadata from "$lib/widgets/PageMetadata.svelte";
@@ -10,7 +10,7 @@
 />
 <PageWrapper viewId="error" class="h-full md:max-h-[645px]">
 	<SubpageWrapper
-		class="@container-[size] flex overflow-auto"
+		class="@container-size flex overflow-auto"
 		title="+error.svelte"
 		srTitle="Error page"
 		backUrl="/"

@@ -1,12 +1,12 @@
-<script>
+<script lang="ts">
 	import CardIcon from "$lib/entities/CardIcon.svelte";
 	import Squircle from "$lib/Squircle.svelte";
-	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
+	import { subdomainUrl } from "$lib/utils";
 	import CardButton from "./CardButton.svelte";
 </script>
 
 <a
-	href="{getMainDomainProtocol()}://cv.{getMainDomain()}"
+	href={subdomainUrl("cv")}
 	rel="nofollow noreferrer noopener"
 	target="_blank"
 	class="bg-shadow-card-btn relative max-w-full shrink cursor-default
