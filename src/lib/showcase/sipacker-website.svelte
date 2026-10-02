@@ -1,5 +1,6 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
+	import { subdomainUrl } from "$lib/utils";
 	import banner from "$showcase/sipacker/banner.webp?enhanced&w=230;460;690&quality=80";
 	import bannerLqip from "$showcase/sipacker/banner.webp?lqip";
 	import screenshot1 from "$showcase/sipacker/screenshot-1.webp?enhanced&quality=80";
@@ -43,13 +44,13 @@
 				alt: "SIPacker website screenshot with file manager with compression options",
 			},
 		],
-		links: [
+		links: () => [
 			{
 				url: "https://sipacker.netlify.app/",
 				label: "Visit SIPacker",
 			},
 			{
-				url: "https://git.hloth.dev/hloth/sipacker",
+				url: subdomainUrl("git", "/hloth/sipacker"),
 				label: "Open SIPacker source code",
 			},
 		],

@@ -24,7 +24,7 @@
 				alt: "Mtproto Mobile screenshots. 1) Method execution request form 2) Response browser 3) Another method: auth.signIn",
 			},
 		],
-		links: [
+		links: () => [
 			{
 				url: subdomainUrl("git", "/hloth/mtproto-mobile"),
 				label: "Open Mtproto Mobile source code",

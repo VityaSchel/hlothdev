@@ -23,7 +23,7 @@
 				alt: "Session.email website",
 			},
 		],
-		links: [
+		links: () => [
 			{
 				url: "https://web.archive.org/web/20241004205239/https://session.email/",
 				label: "Visit session.email archived snapshot",

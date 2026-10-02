@@ -42,10 +42,7 @@ export type ShowcaseItem = {
 	shortDescription: string;
 	banner: ShowcaseImage;
 	images: (ShowcaseImage & { alt: string; class?: string })[];
-	links?: {
-		url: string;
-		label: string;
-	}[];
+	links?: () => { url: string; label: string }[];
 };
 
 export const showcase = {

@@ -167,7 +167,7 @@
 				alt: "Flat UI kit demo with buttons, checkboxes, error messages and input fields",
 			},
 		],
-		links: Object.values(featuredLinks),
+		links: () => Object.values(featuredLinks),
 	};
 </script>
 

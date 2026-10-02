@@ -28,7 +28,7 @@
 				alt: "OGE generator website screenshot with ZIP file download dialog for one of the exam tasks",
 			},
 		],
-		links: [
+		links: () => [
 			{
 				url: subdomainUrl("git", "/hloth/informatics-oge-generator"),
 				label: "Open OGE generator source code",

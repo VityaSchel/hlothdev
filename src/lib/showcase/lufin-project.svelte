@@ -38,7 +38,7 @@
 				alt: "Lufin screenshotter image editor with text: wow new design thanks apple now I have to remake my website which is not even finished yet / look I can do blur too! with this editor tools",
 			},
 		],
-		links: [
+		links: () => [
 			{
 				url: subdomainUrl("lufin"),
 				label: "Visit Lufin demo website",

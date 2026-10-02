@@ -32,7 +32,7 @@
 						role="list"
 						aria-label="Project links"
 					>
-						{#each project.links as { url, label }, i (i)}
+						{#each project.links() as { url, label }, i (i)}
 							<a
 								href={url}
 								draggable="false"

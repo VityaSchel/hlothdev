@@ -45,7 +45,7 @@
 				alt: "Bunsogs global admins/moderators settings: Add global admin, Add global moderator, Go back",
 			},
 		],
-		links: [
+		links: () => [
 			{
 				url: subdomainUrl("git", "/hloth/bunsogs"),
 				label: "Open bunsogs source code",

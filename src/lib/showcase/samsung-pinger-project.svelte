@@ -21,7 +21,7 @@
 				alt: 'Samsung Pinger screenshot demonstrating the "Ring my Samsung" macOS widget in English and Russian languages',
 			},
 		],
-		links: [
+		links: () => [
 			{
 				url: subdomainUrl("git", "/hloth/samsung-pinger"),
 				label: "Open Samsung Pinger source code",

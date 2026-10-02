@@ -56,7 +56,7 @@
 				alt: "Nock.trade account page in dark theme with text: Viktor / [button with a pencil]; nocktrade@hloth.dev; Change password / Delete account",
 			},
 		],
-		links: [
+		links: () => [
 			{
 				url: "https://nock.trade",
 				label: "Visit Nock Trade",

@@ -38,7 +38,7 @@
 				alt: "Batumi.bike website screenshot with search results for points of interest",
 			},
 		],
-		links: [
+		links: () => [
 			{
 				url: "https://batumibike.netlify.app",
 				label: "Visit Batumi.bike (batumibike.netlify.app)",

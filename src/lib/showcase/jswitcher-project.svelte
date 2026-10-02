@@ -31,7 +31,7 @@
 				alt: "JSwitcher fonts mapping settings",
 			},
 		],
-		links: [
+		links: () => [
 			{
 				url: subdomainUrl("git", "/hloth/jswitcher"),
 				label: "Open JSwitcher source code",

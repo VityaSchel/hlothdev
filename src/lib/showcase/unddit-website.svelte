@@ -30,7 +30,7 @@
 				alt: "Unddit website screenshot with removed comments: Please don't. This isn't phishing and when you report it as phishing, it just makes some person's job harder because they have to filter this shit out. Fighting lies with more lies isn't a good look. / But the damage is becoming like a phishing scam, some kid opened a \"bitcoin\" wallet with that chump's site. Then went to a bitcoin ATM to get some coins and send it to his wallet. The coins are officially lost because he was trying to send Bitcoin to Bitcoin Cash wallet. / You can call it a lie. You can call it misleading. You can call it bootleg. But its not phishing. That's like walking by a place called McDowells and getting their fake big Mac and then reporting them for phishing. Also phishing is meant to steal information or scam people of money. If I fuck up and buy bcash instead of bitcoin I can just trade it in at the fair market rate and get my money back. Point is you're wasting someone's time by trying to report to Google. / There are actually plenty of people confusing this for Bitcoin. So it's like mcdowells making their building LOOK like a McDonald's so that anyone who isn't Mcdonalds savy wouldn't be able to tell the difference. Then they sell you a fake Big Mac and you only realize after you bite into it that you were tricked the whole time.",
 			},
 		],
-		links: [
+		links: () => [
 			{
 				url: "https://unddit.netlify.app/",
 				label: "Visit Unddit (my version at unddit.netlify.app)",

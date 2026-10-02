@@ -24,7 +24,7 @@
 				alt: "been-foss website main page screenshot with a world map",
 			},
 		],
-		links: [
+		links: () => [
 			{
 				url: "https://beenfoss.netlify.app/",
 				label: "Visit been-foss",

@@ -23,7 +23,7 @@
 				alt: "Session Native screenshot with a bunch of chats, archive tab, a conversation with media files attached",
 			},
 		],
-		links: [
+		links: () => [
 			{
 				url: subdomainUrl("git", "/hloth/session-native"),
 				label: "Open Session Native source code",

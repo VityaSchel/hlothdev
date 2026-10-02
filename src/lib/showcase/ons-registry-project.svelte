@@ -21,7 +21,7 @@
 				alt: "ONS Registry home page screenshot with text: Open OXEN Name System list, updated automatically from the blockchain. Easily lookup ONS names and get all authors usernames.",
 			},
 		],
-		links: [
+		links: () => [
 			{
 				url: subdomainUrl("git", "/hloth/ons-registry"),
 				label: "Open ONS registry source code",

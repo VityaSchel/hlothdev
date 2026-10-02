@@ -24,7 +24,7 @@
 				alt: "An example code demonstrating how byom library can be used for secure quantim-resistant communication",
 			},
 		],
-		links: [
+		links: () => [
 			{
 				url: subdomainUrl("git", "/hloth/byom"),
 				label: "Open byom source code",

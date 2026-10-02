@@ -8,15 +8,7 @@ export const clearnetDomain = "hloth.dev";
 export const torDomain =
 	"hlothdevzkti6suoksy7lcy7hmpxnr3msu5waokzaslsi2mnx5ouu4qd.onion";
 
-export const isOnion = () => {
-	try {
-		return page.url.host.endsWith(".onion");
-	} catch {
-		// TODO: fix when Svelte ships async ssr
-		// see https://github.com/sveltejs/svelte/discussions/16784
-		return false;
-	}
-};
+export const isOnion = () => page.url.host.endsWith(".onion");
 
 const getOrigin = (hostPrefix = "") =>
 	isOnion()

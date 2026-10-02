@@ -62,7 +62,7 @@
 				alt: "RYO coin website v4 API reference screenshot with text: get_block / Aliases: (getblock) / Full block information can be retrieved by either block height or hash, like with the above block header calls. For full block information, both lookups use the same method, but with different input parameters.",
 			},
 		],
-		links: [
+		links: () => [
 			{
 				url: "https://ryocoin.netlify.app/",
 				label: "Visit RYO Coin v1 demo website",

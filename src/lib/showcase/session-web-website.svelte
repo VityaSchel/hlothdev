@@ -21,7 +21,7 @@
 				alt: "Session Web website screenshot with a conversation open.",
 			},
 		],
-		links: [
+		links: () => [
 			{
 				url: subdomainUrl("git", "/hloth/session-web"),
 				label: "Open Session Web source code",

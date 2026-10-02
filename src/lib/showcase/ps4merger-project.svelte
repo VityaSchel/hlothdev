@@ -21,7 +21,7 @@
 				alt: "PS4 Merger screenshot with text: Welcome! PKG Merger by hloth.dev \nSearching in /data/pkg_merger... \nFound 2 files: \nEP9000-CUSA<...>_001.pkgpart \nEP9000-CUSA<...>_002.pkgpart \n\nEstimated time: 29:18 \nApp will be frozen entire time, do not worry and look if .pkg file started appearing in /data/pkg directory via FTP \nAllow up to 3x of that estimated time \n\nPress any button on controller to START merging parts \n\nFiles successfully merged into /data/EP9000-CUSA<...>.pkg \nNow you can install it via goldhen installer! \nNow you can also delete .pkgpart files from /data/pkg_merger",
 			},
 		],
-		links: [
+		links: () => [
 			{
 				url: subdomainUrl("git", "/hloth/ps4-app-merge-pkgs"),
 				label: "Open PS4 merger source code",

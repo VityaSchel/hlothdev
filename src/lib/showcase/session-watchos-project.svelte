@@ -59,7 +59,7 @@
 				alt: "Session Watchos screenshot with conversation settings view",
 			},
 		],
-		links: [
+		links: () => [
 			{
 				url: subdomainUrl("git", "/hloth/session-watchos"),
 				label: "Open Session Watchos source code",

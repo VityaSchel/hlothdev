@@ -24,7 +24,7 @@
 				alt: "Moreof.me pages screenshots collage: profile page with text: Viktor Shchelochkov / Twix fan / @hlothdev / Bio / Postboard / Weeklies. My interests: Sushi, Gym, Horror, Documentaries, Pop, Programming, Sense of adventure, Being family-oriented, LGBTQ+ rights, Voter rights. Currently: Listening Overworld Day Re-Logic / Watching Severance / Playing At Dead of Night / Reading Navalny / Podcast 81: With Jerma985; Post editor; Gradient color, color picker; Analytics page; New post page; Share your Moreofme; Share post",
 			},
 		],
-		links: [
+		links: () => [
 			{
 				url: subdomainUrl("blog", "/blog/moreofme"),
 				label: "Read my blog post about Moreof.me",

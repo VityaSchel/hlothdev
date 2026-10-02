@@ -24,7 +24,7 @@
 				alt: "Screenshot of the homepage of blog.hloth.dev with the following posts: Migrating 200 projects from GitHub to self-hosted Forgejo; macOS 26 Tahoe Day, Morning, Evening, and Night based on clock; How to add custom bitcoin signet to NBitcoin and NBXplorer",
 			},
 		],
-		links: [
+		links: () => [
 			{
 				url: subdomainUrl("blog"),
 				label: "Visit hloth blog",

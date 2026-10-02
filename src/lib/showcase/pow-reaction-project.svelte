@@ -24,7 +24,7 @@
 				alt: "Pow-reaction demo website screenshot with several emoji buttons with a click number counter, some are highlighted with a circular pizza-style indicator representing progress for the reaction submission. The text says: try clicking on any 10-15 times; source by hloth",
 			},
 		],
-		links: [
+		links: () => [
 			{
 				url: "https://pow-reaction.pages.dev/",
 				label: "Open pow-reaction demo website",
