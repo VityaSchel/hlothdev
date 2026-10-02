@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { enhance } from "$app/forms";
-	import { invalidate } from "$app/navigation";
 	import { page } from "$app/state";
+	import type { AlertId } from "$lib/alerts";
 	import CloseIcon from "$lib/icons/CloseIcon.svelte";
 	import CloseIconRendered from "$lib/icons/CloseIcon.svelte?render";
 	import SvgFallback from "$lib/entities/SvgFallback.svelte";
@@ -11,34 +11,22 @@
 		srName,
 		class: className,
 		children,
-		visible = $bindable(false),
+		visible = false,
 	}: {
-		id: string;
+		id: AlertId;
 		srName: string;
 		class?: import("svelte/elements").ClassValue;
 		children: import("svelte").Snippet;
 		visible?: boolean;
 	} = $props();
-
-	// This was supposed to be a serverless alert without js
-	// but browsers don't save checkbox state across page navigations
 </script>
 
-<!-- <input
-  type="checkbox"
-  {id}
-  checked={visible}
-  class="peer hidden"
-  tabindex={-1}
-  aria-hidden="true"
-  autocomplete=""
-/> -->
 <aside
 	role="alert"
 	class={[
-		` animate-in alert-shadow relative max-w-full rounded-[10px]
-		bg-gradient-to-br from-[#b5acac] to-[#a3aca0] p-[10px] pr-3 text-right
-		leading-[19px] font-medium text-[#373737] transition-opacity
+		` animate-in alert-shadow relative max-w-full rounded-[10px] bg-linear-to-br
+		from-[#b5acac] to-[#a3aca0] p-[10px] pr-3 text-right leading-[19px]
+		font-medium text-[#373737] transition-opacity
 		transparency-reduce:bg-[#b9b9b9] transparency-reduce:[background-image:none]
 		[&_br]:hidden sm:[&_br]:block `,
 		{
@@ -56,18 +44,15 @@
 		use:enhance={() => {
 			visible = false;
 			return ({ update, result }) => {
-				if (result.type === "success" || result.type === "redirect") {
-					invalidate("app:alerts-dismissed");
-				} else {
+				if (result.type !== "success" && result.type !== "redirect") {
 					visible = true;
 				}
-				update();
+				return update();
 			};
 		}}
 	>
 		<input type="hidden" name="redirect" value={page.url.pathname} />
 		<input type="hidden" name="alert" value={id} />
-		<!-- <label for={id} /> -->
 		<button
 			class="flex h-full items-center justify-center pr-2 pl-0.5 text-black/50
 				[--svg-mask-color:#00000080] active:text-black/70

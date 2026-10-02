@@ -1,11 +1,7 @@
 <script lang="ts">
 	import Alert from "$lib/ui/Alert.svelte";
 
-	let {
-		visible = $bindable(),
-	}: {
-		visible: boolean;
-	} = $props();
+	let { visible }: { visible: boolean } = $props();
 </script>
 
 <div

@@ -1,8 +1,3 @@
-import { getAlertsDismissedProps } from "$lib/dismiss-alerts.server.js";
+import { getAlertsDismissedProps } from "$lib/dismiss-alerts.server";
 
-export const load = async ({ cookies, depends }) => {
-	depends("app:alerts-dismissed");
-	return {
-		...getAlertsDismissedProps(cookies),
-	};
-};
+export const load = ({ cookies }) => getAlertsDismissedProps(cookies);
