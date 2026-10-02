@@ -16,8 +16,8 @@
 	"type": "module",
 	"scripts": {
 		"build": "bun vite build",
-		"check": "svelte-kit sync && svelte-check --tsgo",
-		"check:watch": "svelte-kit sync && svelte-check --tsgo --watch",
+		"check": "svelte-kit sync && rm -rf .svelte-kit/.svelte-check && svelte-check --tsgo",
+		"check:watch": "svelte-kit sync && rm -rf .svelte-kit/.svelte-check && svelte-check --tsgo --watch",
 		"dev": "bun vite dev",
 		"format": "prettier --write .",
 		"lint": "prettier --check . && eslint .",
