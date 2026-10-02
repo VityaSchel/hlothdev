@@ -1,6 +1,6 @@
 <script lang="ts">
 	import XsCard from "$lib/widgets/grid-cards/XSCard.svelte";
-	import bg from "$lib/assets/hloth-charity.webp?enhanced";
+	import bg from "$lib/assets/hloth-charity.webp";
 	import bgLqip from "$lib/assets/hloth-charity.webp?lqip";
 </script>
 
@@ -15,10 +15,9 @@
 	aria-label="Link to my charity log on X (formerly Twitter)"
 >
 	<XsCard
-		class="flex size-full items-end bg-cover"
+		class="flex size-full items-end bg-neutral-600 bg-cover"
 		bg
-		--bg="url({bg.img
-			.src}), url({bgLqip.lqip}), linear-gradient(to bottom, var(--color-neutral-600), var(--color-neutral-600))"
+		--bg="url({bg}), url({bgLqip.lqip})"
 	>
 		<span
 			class="one-storey-a p-[6.72cqw] text-[16.8cqw] leading-[20.16cqw]

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import PageMetadata from "$lib/widgets/PageMetadata.svelte";
 	import GreetingsCard from "../GreetingsCard.svelte";
-	import meInPinkHat from "$lib/assets/me-in-pink-hat.webp?enhanced";
+	import CloseSubpageLink from "../CloseSubpageLink.svelte";
 	import meInPinkHatLqip from "$lib/assets/me-in-pink-hat.webp?lqip";
 </script>
 
@@ -15,34 +15,10 @@
 				px1100:flex-[62]"
 		>
 			<nav
-				class="absolute top-6 left-6 z-[1] shrink-0 px600:sticky px600:top-0
+				class="absolute top-6 left-6 z-1 shrink-0 px600:sticky px600:top-0
 					px600:left-0"
 			>
-				<a
-					href="/me"
-					aria-label="Go back to the /me page"
-					class="flex w-fit cursor-default overflow-clip rounded-full
-						text-white/60 focus-lg-dark active:text-neutral-300/80"
-					draggable="false"
-				>
-					<svg
-						width="36"
-						height="37"
-						viewBox="0 0 36 37"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<rect y="0.5" width="36" height="36" rx="18" fill="currentColor" />
-						<path
-							d="M24.25 12.25L11.75 24.75M11.75 12.25L24.25 24.75"
-							stroke="#161616"
-							stroke-opacity="0.8"
-							stroke-width="3"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-						/>
-					</svg>
-				</a>
+				<CloseSubpageLink />
 			</nav>
 			<div
 				class="mt-16 overflow-auto mask-t-from-95% p-7 pt-4 px600:mt-0
@@ -95,11 +71,11 @@
 			<enhanced:img
 				class="absolute top-0 left-0 size-full bg-neutral-200 object-cover
 					object-[52%_50%] text-center"
-				src={meInPinkHat}
+				src="$lib/assets/me-in-pink-hat.webp"
 				style="background: url({meInPinkHatLqip.lqip}) center / cover
 					no-repeat;"
 				alt="Me in a pink hat"
-				width="860"
+				width="904"
 			/>
 		</div>
 	</div>

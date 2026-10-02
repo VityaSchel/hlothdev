@@ -1,6 +1,6 @@
 <script lang="ts">
 	import SmCard from "$lib/widgets/grid-cards/SMCard.svelte";
-	import bg from "$lib/assets/peaceful-nature.webp?enhanced";
+	import bg from "$lib/assets/peaceful-nature.webp";
 	import bgLqip from "$lib/assets/peaceful-nature.webp?lqip";
 </script>
 
@@ -11,9 +11,8 @@
 >
 	<div
 		class="group flex size-full flex-col justify-between overflow-clip
-			rounded-[12.5984252cqw] bg-cover p-[6.29cqw]"
-		style="background-image: url({bg.img
-			.src}), url({bgLqip.lqip}), linear-gradient(to bottom, var(--color-neutral-600), var(--color-neutral-600));"
+			rounded-[12.5984252cqw] bg-neutral-600 bg-cover p-[6.29cqw]"
+		style="background-image: url({bg}), url({bgLqip.lqip});"
 	>
 		<span
 			class="text-[3.54cqw] font-normal tracking-[-0.118cqw] opacity-0

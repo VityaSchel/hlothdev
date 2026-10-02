@@ -17,14 +17,13 @@
 
 <XlCard
 	class={[
-		"@container-[size] size-full overflow-clip text-black",
-		{
-			[`absolute top-0 left-0 z-[1] col-span-full col-start-1 row-span-full
-			row-start-1 size-full`]: expanded,
-			"col-start-1 col-end-4 row-start-1 row-end-4": !expanded,
-		},
+		"@container-size size-full overflow-clip text-black",
+		expanded
+			? `absolute top-0 left-0 z-1 col-span-full col-start-1 row-span-full
+				row-start-1`
+			: "col-start-1 col-end-4 row-start-1 row-end-4",
 	]}
-	bg="radial-gradient(circle farthest-side at 89% 63%,rgb(204, 123, 241),rgb(208, 138, 240) 12.019%,rgb(228, 208, 233) 34.615%,rgb(225, 212, 231) 51.923%,rgb(226, 206, 236) 59.135%,rgb(226, 206, 236) 77.885%,rgb(232, 232, 232) 100%);"
+	bg="radial-gradient(circle farthest-side at 89% 63%,rgb(204, 123, 241),rgb(208, 138, 240) 12.019%,rgb(228, 208, 233) 34.615%,rgb(225, 212, 231) 51.923%,rgb(226, 206, 236) 59.135%,rgb(226, 206, 236) 77.885%,rgb(232, 232, 232) 100%)"
 	viewId={inert ? undefined : "about-me"}
 	data-nosnippet={inert ? "" : undefined}
 	{inert}
@@ -35,33 +34,23 @@
 		{@render children?.()}
 	{:else}
 		<div
-			class="
-        flex size-full flex-col justify-between px-[8.22cqw] py-[8.74cqw]
-        text-black
-      "
+			class="flex size-full flex-col justify-between px-[8.22cqw] py-[8.74cqw]"
 			style:view-transition-name={inert ? undefined : "about-me-content"}
 		>
 			<span
-				class="
-          h-[11.05cqw] w-[11.05cqw] shrink-0 rounded-full bg-black p-[2.05cqw]
-        "
+				class="size-[11.05cqw] shrink-0 rounded-full bg-black p-[2.05cqw]"
 				aria-hidden="true"
 			>
 				<span
-					class="
-            animate-rotate flex size-full items-center justify-center
-            text-[4.13cqw]
-            [&_svg]:w-full
-          "
+					class="animate-rotate flex size-full items-center justify-center
+						text-[4.13cqw] [&_svg]:w-full"
 				>
 					<WavingHandIcon />
 				</span>
 			</span>
 			<h1
-				class="
-          one-storey-a text-[10cqw] leading-[10cqw] font-bold
-          tracking-[0.089cqw]
-        "
+				class="one-storey-a text-[10cqw] leading-[10cqw] font-bold
+					tracking-[0.089cqw]"
 			>
 				Hi, I’m Viktor, and my life is a roller coaster!
 			</h1>
@@ -73,7 +62,7 @@
 				draggable="false"
 			>
 				<svg
-					class="h-[38cqh] w-[38cqh]"
+					class="size-[38cqh]"
 					viewBox="0 0 23 23"
 					fill="none"
 					xmlns="http://www.w3.org/2000/svg"

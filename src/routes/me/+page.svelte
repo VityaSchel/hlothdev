@@ -1,10 +1,10 @@
 <script lang="ts">
 	import GreetingsCard from "./GreetingsCard.svelte";
-	import LgbtqiaPlusSupportCard from "./LGBTQIAPlusSupportCard.svelte";
+	import LGBTQIAPlusSupportCard from "./LGBTQIAPlusSupportCard.svelte";
 	import StandWithPeaceCard from "./StandWithPeaceCard.svelte";
 	import TravelAndExploreCard from "./TravelAndExploreCard.svelte";
 	import SpeakingLanguagesCard from "./SpeakingLanguagesCard.svelte";
-	import PrivacySupportCard from "./PrivacyRightsCard.svelte";
+	import PrivacyRightsCard from "./PrivacyRightsCard.svelte";
 	import LocalTimeCard from "./LocalTimeCard.svelte";
 	import HlothCharityCard from "./HlothCharityCard.svelte";
 	import GitRepositoriesCard from "./GitRepositoriesCard.svelte";
@@ -21,12 +21,12 @@
 <PageMetadata />
 <GreetingsCard inert />
 <GreetingsCard />
-<LgbtqiaPlusSupportCard />
+<LGBTQIAPlusSupportCard />
 <StandWithPeaceCard />
 <TravelAndExploreCard />
 <SpeakingLanguagesCard />
-<PrivacySupportCard inert />
-<PrivacySupportCard />
+<PrivacyRightsCard inert />
+<PrivacyRightsCard />
 <LocalTimeCard />
 <HlothCharityCard />
 <GitRepositoriesCard repositories={data.gitRepositoriesCount} />

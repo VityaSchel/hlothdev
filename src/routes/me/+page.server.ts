@@ -1,30 +1,27 @@
-import { cache } from "./store.svelte.server";
+import { cache } from "./cache.server";
+
+const cacheLifetime = 5 * 60 * 1000;
+
+async function fetchRepositoriesCount() {
+	const response = await fetch(
+		"https://git.hloth.dev/api/v1/users/hloth/repos?limit=1",
+	);
+	return response.headers.get("X-Total-Count");
+}
 
 export async function load() {
 	if (
-		cache.gitRepositoriesCount &&
-		Date.now() - cache.gitRepositoriesCount.cachedAt.getTime() < 1000 * 60 * 5
+		!cache.gitRepositoriesCount ||
+		Date.now() >= cache.gitRepositoriesCount.expiresAt
 	) {
-		return {
-			gitRepositoriesCount: cache.gitRepositoriesCount.value,
+		const count = await fetchRepositoriesCount().catch((error) => {
+			console.error(error);
+			return null;
+		});
+		cache.gitRepositoriesCount = {
+			value: count || "git",
+			expiresAt: Date.now() + cacheLifetime,
 		};
 	}
-	let gitRepositoriesCount = "git";
-	try {
-		const res = await fetch(
-			`https://git.hloth.dev/api/v1/users/hloth/repos?page=0&limit=1`,
-		).then((req) => req.headers.get("X-Total-Count"));
-		if (res) {
-			gitRepositoriesCount = res;
-		}
-	} catch (e) {
-		console.error(e);
-	}
-	cache.gitRepositoriesCount = {
-		value: gitRepositoriesCount,
-		cachedAt: new Date(),
-	};
-	return {
-		gitRepositoriesCount,
-	};
+	return { gitRepositoriesCount: cache.gitRepositoriesCount.value };
 }

@@ -2,96 +2,76 @@
 	import { browser } from "$app/environment";
 	import { getSquirclePath, transition } from "$lib/utils";
 	import { onMount } from "svelte";
-	import favoriteThings from "$lib/assets/favorite-things/favorite-things.webp?enhanced&quality=100";
+	import favoriteThings from "$lib/assets/favorite-things/favorite-things.webp?enhanced&quality=80";
 	import favoriteThingsLqip from "$lib/assets/favorite-things/favorite-things.webp?lqip";
-	import games from "$lib/assets/favorite-things/games.webp?enhanced&quality=100";
+	import games from "$lib/assets/favorite-things/games.webp?enhanced&quality=80";
 	import gamesLqip from "$lib/assets/favorite-things/games.webp?lqip";
-	import cinema from "$lib/assets/favorite-things/cinema.webp?enhanced&quality=100";
+	import cinema from "$lib/assets/favorite-things/cinema.webp?enhanced&quality=80";
 	import cinemaLqip from "$lib/assets/favorite-things/cinema.webp?lqip";
-	import music from "$lib/assets/favorite-things/music.webp?enhanced&quality=100";
+	import music from "$lib/assets/favorite-things/music.webp?enhanced&quality=80";
 	import musicLqip from "$lib/assets/favorite-things/music.webp?lqip";
-	import dish from "$lib/assets/favorite-things/dish.webp?enhanced&quality=100";
+	import dish from "$lib/assets/favorite-things/dish.webp?enhanced&quality=80";
 	import dishLqip from "$lib/assets/favorite-things/dish.webp?lqip";
-	import influencer from "$lib/assets/favorite-things/influencer.webp?enhanced&quality=100";
+	import influencer from "$lib/assets/favorite-things/influencer.webp?enhanced&quality=80";
 	import influencerLqip from "$lib/assets/favorite-things/influencer.webp?lqip";
-	import book from "$lib/assets/favorite-things/book.webp?enhanced&quality=100";
+	import book from "$lib/assets/favorite-things/book.webp?enhanced&quality=80";
 	import bookLqip from "$lib/assets/favorite-things/book.webp?lqip";
-	import series from "$lib/assets/favorite-things/series.webp?enhanced&quality=100";
+	import series from "$lib/assets/favorite-things/series.webp?enhanced&quality=80";
 	import seriesLqip from "$lib/assets/favorite-things/series.webp?lqip";
-	import quote from "$lib/assets/favorite-things/quote.webp?enhanced&quality=100";
+	import quote from "$lib/assets/favorite-things/quote.webp?enhanced&quality=80";
 	import quoteLqip from "$lib/assets/favorite-things/quote.webp?lqip";
-	import love from "$lib/assets/favorite-things/love.webp?enhanced&quality=100";
+	import love from "$lib/assets/favorite-things/love.webp?enhanced&quality=80";
 	import loveLqip from "$lib/assets/favorite-things/love.webp?lqip";
 
 	const images = [
 		{
-			img: {
-				src: favoriteThings,
-				lqip: favoriteThingsLqip,
-			},
+			src: favoriteThings,
+			lqip: favoriteThingsLqip.lqip,
 			alt: "Scroll to see my favorite things ➜",
 		},
 		{
-			img: {
-				src: games,
-				lqip: gamesLqip,
-			},
+			src: games,
+			lqip: gamesLqip.lqip,
 			alt: "I love puzzle platformers, survival horrors and adventure sandboxes",
 		},
 		{
-			img: {
-				src: cinema,
-				lqip: cinemaLqip,
-			},
+			src: cinema,
+			lqip: cinemaLqip.lqip,
 			alt: "I love criminals, dramas and detectives",
 		},
 		{
-			img: {
-				src: music,
-				lqip: musicLqip,
-			},
+			src: music,
+			lqip: musicLqip.lqip,
 			alt: "Pop is always in my playlist",
 		},
 		{
-			img: {
-				src: dish,
-				lqip: dishLqip,
-			},
+			src: dish,
+			lqip: dishLqip.lqip,
 			alt: "The best Tom Yum I tasted was in my  home city local bar",
 		},
 		{
-			img: {
-				src: influencer,
-				lqip: influencerLqip,
-			},
+			src: influencer,
+			lqip: influencerLqip.lqip,
 			alt: "I admire Jerma985 unique personality and love watching his livestreams",
 		},
 		{
-			img: {
-				src: book,
-				lqip: bookLqip,
-			},
+			src: book,
+			lqip: bookLqip.lqip,
 			alt: "Steve Krug — Don’t make me think is a must-read for all web designers",
 		},
 		{
-			img: {
-				src: series,
-				lqip: seriesLqip,
-			},
+			src: series,
+			lqip: seriesLqip.lqip,
 			alt: "Severance is my favorite TV series",
 		},
 		{
-			img: {
-				src: quote,
-				lqip: quoteLqip,
-			},
+			src: quote,
+			lqip: quoteLqip.lqip,
 			alt: "My favorite quote is one of my own",
 		},
 		{
-			img: {
-				src: love,
-				lqip: loveLqip,
-			},
+			src: love,
+			lqip: loveLqip.lqip,
 			alt: "But my most favorite thing in life is love",
 			href: "https://www.instagram.com/hlothdev/",
 		},
@@ -123,7 +103,7 @@
 </script>
 
 <div
-	class="@container-[size] col-start-1 col-end-3 row-start-13 row-end-14
+	class="@container-size col-start-1 col-end-3 row-start-13 row-end-14
 		text-white select-none px580:row-start-6 px580:row-end-7 md:col-start-3
 		md:col-end-5 md:row-start-5 md:row-end-6 px1180:col-start-9
 		px1180:col-end-11 px1180:row-start-2 px1180:row-end-3"
@@ -152,8 +132,8 @@
 		}}
 	>
 		<div
-			class="scrollbar-invisible absolute top-0 left-0 flex size-full snap-x
-				snap-mandatory gap-px overflow-auto"
+			class="scrollbar-invisible absolute inset-0 flex snap-x snap-mandatory
+				gap-px overflow-auto"
 			bind:this={scrollContainer}
 			onscroll={() => (scroll = scrollContainer.scrollLeft)}
 			tabindex="0"
@@ -161,12 +141,13 @@
 			aria-label="A horizontally scrollable list of my favorite things"
 			style={clipPathStyle}
 		>
-			{#each images as { img: { src, lqip }, alt, href }, i (i)}
+			{#each images as { src, lqip, alt, href }, i (i)}
 				<svelte:element
 					this={href ? "a" : "div"}
 					rel={href ? "noopener noreferrer" : undefined}
 					target={href ? "_blank" : undefined}
-					class="animate-scroll size-full shrink-0 cursor-default snap-center overflow-clip rounded-[12.59cqw]"
+					class="animate-scroll size-full shrink-0 cursor-default snap-center
+						overflow-clip rounded-[12.59cqw]"
 					style={clipPathStyle}
 					role="listitem"
 					{href}
@@ -174,8 +155,9 @@
 					<enhanced:img
 						{src}
 						{alt}
-						class="size-full shrink-0 rounded-[12.59cqw] bg-cover object-cover indent-[8cqw] text-[6.22cqw]"
-						style="background-image: url({lqip.lqip}), linear-gradient(to top, var(--color-neutral-600), var(--color-neutral-600)); {clipPathStyle}"
+						class="size-full shrink-0 rounded-[12.59cqw] bg-neutral-600 bg-cover
+							object-cover indent-[8cqw] text-[6.22cqw]"
+						style="background-image: url({lqip}); {clipPathStyle}"
 						draggable="false"
 						width="508"
 						height="246"
@@ -186,13 +168,10 @@
 		{#if browser}
 			<div
 				class={[
-					`
-            pointer-events-none absolute bottom-[1.96cqw] z-[1] flex h-[0.78cqw]
-            w-full items-center justify-center gap-[0.78cqw] transition-opacity
-            duration-300
-            group-hover:opacity-100
-            group-has-focus-visible:opacity-100
-          `,
+					`pointer-events-none absolute bottom-[1.96cqw] z-1 flex h-[0.78cqw]
+					w-full items-center justify-center gap-[0.78cqw] transition-opacity
+					duration-300 group-hover:opacity-100
+					group-has-focus-visible:opacity-100`,
 					{
 						"opacity-0": !touch,
 						"opacity-100": touch,
@@ -201,7 +180,7 @@
 			>
 				{#each images, i}
 					<span
-						class="h-[0.78cqw] w-[0.78cqw] rounded-full backdrop-blur-3xl"
+						class="size-[0.78cqw] rounded-full backdrop-blur-3xl"
 						style="background-color: rgba(246, 246, 246, {transition(
 							0.3,
 							0.72,

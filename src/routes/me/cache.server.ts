@@ -1,8 +1,8 @@
 export const cache: {
 	gitRepositoriesCount: {
 		value: string;
-		cachedAt: Date;
+		expiresAt: number;
 	} | null;
-} = $state({
+} = {
 	gitRepositoriesCount: null,
-});
+};

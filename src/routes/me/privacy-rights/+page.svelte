@@ -1,10 +1,11 @@
 <script lang="ts">
 	import "@fontsource-variable/sofia-sans-condensed";
 	import PrivacyRightsCard from "../PrivacyRightsCard.svelte";
+	import CloseSubpageLink from "../CloseSubpageLink.svelte";
 	import PrivacyRelatedProjectCard from "./PrivacyRelatedProjectCard.svelte";
 	import PrivateContactMethod from "./PrivateContactMethod.svelte";
 	import PageMetadata from "$lib/widgets/PageMetadata.svelte";
-	import { getMainDomain, getMainDomainProtocol } from "$lib/utils";
+	import { siteUrl, subdomainUrl, torDomain } from "$lib/utils";
 	import sessionNativeIcon from "$showcase/session-native/logo-square-xs.webp?inline";
 	import sessionJsIcon from "$showcase/session.js/logo-square-xs.webp?inline";
 	import onsRegistryIcon from "$showcase/ons-registry/logo-square-xs.webp?inline";
@@ -19,7 +20,7 @@
 />
 <PrivacyRightsCard>
 	<div
-		class="content-container relative z-[1] h-full gap-8 overflow-auto
+		class="content-container relative z-1 h-full gap-8 overflow-auto
 			rounded-[13px] p-8 px680:flex px680:gap-4 lg:gap-8"
 		style="view-transition-name: privacy-rights-content;"
 	>
@@ -28,33 +29,9 @@
 				lg:w-auto lg:min-w-auto lg:flex-auto"
 		>
 			<nav
-				class="top-0 left-0 z-[1] flex shrink-0 items-center gap-8 px680:sticky"
+				class="top-0 left-0 z-1 flex shrink-0 items-center gap-8 px680:sticky"
 			>
-				<a
-					href="/me"
-					aria-label="Go back to the /me page"
-					class="flex w-fit cursor-default overflow-clip rounded-full
-						text-white/60 focus-lg-dark active:text-neutral-300/80"
-					draggable="false"
-				>
-					<svg
-						width="36"
-						height="37"
-						viewBox="0 0 36 37"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<rect y="0.5" width="36" height="36" rx="18" fill="currentColor" />
-						<path
-							d="M24.25 12.25L11.75 24.75M11.75 12.25L24.25 24.75"
-							stroke="#161616"
-							stroke-opacity="0.8"
-							stroke-width="3"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-						/>
-					</svg>
-				</a>
+				<CloseSubpageLink />
 				<span
 					class="text-sm tracking-[-0.03px] text-[#4D4D4D] lg:text-base"
 					aria-label="Photo attribution"
@@ -105,10 +82,9 @@
 						mindset shapes my approach to web: I make websites that respect
 						visitors decision to enable JavaScript, design them with privacy in
 						mind and host some of them in the Tor onion network under the <a
-							href="http://hlothdevzkti6suoksy7lcy7hmpxnr3msu5waokzaslsi2mnx5ouu4qd.onion/me"
+							href="http://{torDomain}/me"
 							rel="nofollow noreferrer noopener"
-							class="font-semibold break-all"
-							>hlothdevzkti6suoksy7lcy7hmpxnr3msu5waokzaslsi2mnx5ouu4qd.onion</a
+							class="font-semibold break-all">{torDomain}</a
 						> domain.
 					</p>
 					<p>
@@ -128,10 +104,8 @@
 		>
 			{#snippet heading(text: string)}
 				<h2
-					class="
-            text-center text-lg leading-5 font-semibold tracking-[-0.0075em]
-            px1300:text-xl
-          "
+					class="text-center text-lg leading-5 font-semibold
+						tracking-[-0.0075em] px1300:text-xl"
 				>
 					{text}
 				</h2>
@@ -143,7 +117,7 @@
 				<div class="grid w-full shrink-0 grid-cols-1 gap-2 lg:grid-cols-2">
 					<PrivacyRelatedProjectCard
 						icon={sessionNativeIcon}
-						link="{getMainDomainProtocol()}://git.{getMainDomain()}/hloth/session-native"
+						link={subdomainUrl("git", "/hloth/session-native")}
 						name="Session Native"
 						caption="Native Session macOS client written in Swift"
 					/>
@@ -155,13 +129,13 @@
 					/>
 					<PrivacyRelatedProjectCard
 						icon={onsRegistryIcon}
-						link="{getMainDomainProtocol()}://git.{getMainDomain()}/hloth/ons-registry"
+						link={subdomainUrl("git", "/hloth/ons-registry")}
 						name="ONS Registry"
 						caption="Blockchain data exploring tool & registry"
 					/>
 					<PrivacyRelatedProjectCard
 						icon={sessionWebIcon}
-						link="{getMainDomainProtocol()}://git.{getMainDomain()}/hloth/session-web"
+						link={subdomainUrl("git", "/hloth/session-web")}
 						name="Session Web"
 						caption="Session client running in a web browser"
 					/>
@@ -173,7 +147,7 @@
 					/>
 					<PrivacyRelatedProjectCard
 						icon={botsDirectoryIcon}
-						link="{getMainDomainProtocol()}://git.{getMainDomain()}/hloth/session-bots-directory"
+						link={subdomainUrl("git", "/hloth/session-bots-directory")}
 						name="Bots Directory"
 						caption="Directory of Session bots, built with Remix"
 					/>
@@ -244,10 +218,7 @@
 						</svg>
 					{/snippet}
 				</PrivateContactMethod>
-				<PrivateContactMethod
-					link="{getMainDomainProtocol()}://{getMainDomain()}/pgp"
-					name="My PGP key"
-				>
+				<PrivateContactMethod link={siteUrl("/pgp")} name="My PGP key">
 					{#snippet icon()}
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
 							<!-- Icon from Streamline by Streamline - https://creativecommons.org/licenses/by/4.0/ -->

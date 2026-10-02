@@ -10,7 +10,7 @@
 	aria-label="Fun fact about me card"
 >
 	<div
-		class="flex h-[26.05cqw] w-full shrink-0 items-center bg-gradient-to-b
+		class="flex h-[26.05cqw] w-full shrink-0 items-center bg-linear-to-b
 			from-[#FED700] to-[#E6A600] px-[6.72cqw]"
 	>
 		<h4
@@ -29,7 +29,7 @@
 		</span>
 		<p
 			class="leading-[9.24cqw] tracking-[-0.08em] text-white/50
-				@px84:tracking-[-0.08em] @px95:tracking-[-0.065em]"
+				@px95:tracking-[-0.065em]"
 		>
 			I was coding in Pascal in 2011, then learned Python, then PHP and finally
 			web in 2020

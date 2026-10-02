@@ -1,7 +1,7 @@
 <script lang="ts">
 	import LgCard from "$lib/widgets/grid-cards/LGCard.svelte";
 	import Button from "$lib/ui/Button.svelte";
-	import bg from "$lib/assets/education.webp?enhanced";
+	import bg from "$lib/assets/education.webp";
 	import bgLqip from "$lib/assets/education.webp?lqip";
 </script>
 
@@ -9,7 +9,7 @@
 	href="https://web.archive.org/web/20170312123940/http://drugoigorod.ru/vitya-indigo/"
 	rel="nofollow noopener noreferrer"
 	target="_blank"
-	class="@container-[size] col-start-2 col-end-4 row-start-11 row-end-13
+	class="@container-size col-start-2 col-end-4 row-start-11 row-end-13
 		cursor-default rounded-[5.11%] focus-lg px580:col-start-4 px580:col-end-6
 		px580:row-start-7 px580:row-end-9 md:col-start-7 md:col-end-9 md:row-start-4
 		md:row-end-6 px1180:col-start-9 px1180:col-end-11 px1180:row-start-3
@@ -17,9 +17,8 @@
 	aria-label="Education card"
 >
 	<LgCard
-		--bg="url({bg.img
-			.src}), url({bgLqip.lqip}), linear-gradient(to bottom, var(--color-neutral-600), var(--color-neutral-600))"
-		class="size-full bg-cover text-white"
+		--bg="url({bg}), url({bgLqip.lqip})"
+		class="size-full bg-neutral-600 bg-cover text-white"
 		aria-label="Background image: photo of me at 10 years old, sitting in front of my old laptop typing code, screen displays three colorful interface buttons from one of my programs"
 	>
 		<div
