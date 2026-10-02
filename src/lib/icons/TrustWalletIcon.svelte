@@ -1,3 +1,7 @@
+<script lang="ts">
+	const uid = $props.id();
+</script>
+
 <svg
 	viewBox="0 0 444 501"
 	fill="none"
@@ -10,11 +14,11 @@
 	/>
 	<path
 		d="M443.62 72.41L222.17 0.109985V500.63C380.35 433.89 443.62 305.98 443.62 233.69V72.41Z"
-		fill="url(#paint0_linear_1_11)"
+		fill="url(#trust-wallet-gradient-{uid})"
 	/>
 	<defs>
 		<linearGradient
-			id="paint0_linear_1_11"
+			id="trust-wallet-gradient-{uid}"
 			x1="385.26"
 			y1="-34.78"
 			x2="216.61"

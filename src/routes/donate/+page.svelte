@@ -1,11 +1,11 @@
-<script>
+<script lang="ts">
 	import PageWrapper from "$lib/widgets/PageWrapper.svelte";
 	import SubpageWrapper from "$lib/widgets/SubpageWrapper.svelte";
 	import UsdtTrc20 from "./UsdtTrc20.svelte";
 	import UsdtErc20 from "./UsdtErc20.svelte";
 	import Iban from "./Iban.svelte";
 	import Bitcoin from "./Bitcoin.svelte";
-	import Etherium from "./Etherium.svelte";
+	import Ethereum from "./Ethereum.svelte";
 	import Litecoin from "./Litecoin.svelte";
 	import PageMetadata from "$lib/widgets/PageMetadata.svelte";
 </script>
@@ -34,7 +34,7 @@
 			<UsdtErc20 />
 			<Iban />
 			<Bitcoin />
-			<Etherium />
+			<Ethereum />
 			<Litecoin />
 		</div>
 	</SubpageWrapper>

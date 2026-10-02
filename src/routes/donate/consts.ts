@@ -2,6 +2,7 @@ type Network = {
 	address: string;
 	trustWalletId: number;
 	ledgerLiveName: string;
+	metaMask?: true;
 };
 
 export const iban = "ES3101829003990206087791";
@@ -11,6 +12,7 @@ export const networks = {
 		address: "0xE3e548ae4f1f74195857084ED335EF89C29Ce43c",
 		trustWalletId: 60,
 		ledgerLiveName: "ethereum",
+		metaMask: true,
 	},
 	tron: {
 		address: "THgEkWLWJsLFJ5FfQFCasF1zbwJNLHyrkF",
@@ -31,7 +33,7 @@ export const networks = {
 
 type NetworkName = keyof typeof networks;
 
-export const tokens = {
+const tokens = {
 	usdtErc20: {
 		network: "eth",
 		contract: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
@@ -42,74 +44,26 @@ export const tokens = {
 	},
 } as const satisfies Record<string, { network: NetworkName; contract: string }>;
 
-type Token = keyof typeof tokens;
+export type ClickToPay = Partial<
+	Record<"trustWallet" | "metaMask" | "ledgerLive", string>
+>;
 
-export const trustWalletToken = (token: Token) => {
-	const { contract, network } = tokens[token];
-	const coin = networks[network];
-	return `https://link.trustwallet.com/send?asset=c${coin.trustWalletId}_t${contract}&address=${coin.address}`;
+export const clickToPayCoin = (
+	networkName: NetworkName,
+	contract?: string,
+): ClickToPay => {
+	const { address, trustWalletId, ledgerLiveName, metaMask }: Network =
+		networks[networkName];
+	return {
+		trustWallet: `https://link.trustwallet.com/send?asset=c${trustWalletId}${contract ? `_t${contract}` : ""}&address=${address}`,
+		...(metaMask && {
+			metaMask: contract
+				? `https://metamask.app.link/send/${contract}/transfer?address=${address}`
+				: `https://metamask.app.link/send/${address}`,
+		}),
+		ledgerLive: `ledgerlive://send?currency=${ledgerLiveName}&recipient=${address}`,
+	};
 };
 
-export const metaMaskToken = (token: Token) => {
-	const { contract, network } = tokens[token];
-	const coin = networks[network];
-	return `https://metamask.app.link/send/${contract}/transfer?address=${coin.address}`;
-};
-
-export const trustWalletCoin = (coin: Network) => {
-	return `https://link.trustwallet.com/send?asset=c${coin.trustWalletId}&address=${coin.address}`;
-};
-
-export const metaMaskCoin = (coin: "eth") => {
-	return `https://metamask.app.link/send/${networks[coin].address}`;
-};
-
-export const ledgerLive = (coin: Network) => {
-	return `ledgerlive://send?currency=${coin.ledgerLiveName}&recipient=${coin.address}`;
-};
-
-const walletNetworks: Record<string, NetworkName[]> = {
-	trustWallet: ["eth", "tron", "btc", "ltc"],
-	metamask: ["eth"],
-	ledgerLive: ["eth", "tron", "btc", "ltc"],
-};
-
-export type ClickToPay = {
-	trustWallet?: string;
-	metamask?: string;
-	ledgerLive?: string;
-};
-
-export const clickToPayToken = (token: Token) => {
-	const links: ClickToPay = {};
-
-	const networkName = tokens[token].network;
-	if (walletNetworks.trustWallet.includes(networkName)) {
-		links.trustWallet = trustWalletToken(token);
-	}
-	if (walletNetworks.metamask.includes(networkName)) {
-		links.metamask = metaMaskToken(token);
-	}
-	if (walletNetworks.ledgerLive.includes(networkName)) {
-		links.ledgerLive = ledgerLive(networks[networkName]);
-	}
-
-	return links;
-};
-
-export const clickToPayCoin = (networkName: NetworkName) => {
-	const links: ClickToPay = {};
-
-	const coin = networks[networkName];
-	if (walletNetworks.trustWallet.includes(networkName)) {
-		links.trustWallet = trustWalletCoin(coin);
-	}
-	if (networkName === "eth") {
-		links.metamask = metaMaskCoin("eth");
-	}
-	if (walletNetworks.ledgerLive.includes(networkName)) {
-		links.ledgerLive = ledgerLive(coin);
-	}
-
-	return links;
-};
+export const clickToPayToken = (token: keyof typeof tokens) =>
+	clickToPayCoin(tokens[token].network, tokens[token].contract);

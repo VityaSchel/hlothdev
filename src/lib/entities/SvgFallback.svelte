@@ -6,12 +6,9 @@
 		mono,
 		fallback = "overlay",
 		children,
-	}: {
-		url: string;
-		width: number;
-		height: number;
+	}: SvgRenderResult & {
 		mono?: boolean;
-		fallback: "overlay" | "squeeze";
+		fallback?: "overlay" | "squeeze";
 		children: import("svelte").Snippet;
 	} = $props();
 </script>
@@ -43,7 +40,8 @@
 			src={url}
 			alt=""
 			class={[
-				`top-0 left-0 z-[-1] size-full object-contain object-center p-[0.5%] select-none`,
+				`top-0 left-0 z-[-1] size-full object-contain object-center p-[0.5%]
+				select-none`,
 				{
 					absolute: fallback === "overlay",
 				},

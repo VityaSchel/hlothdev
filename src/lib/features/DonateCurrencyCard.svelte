@@ -1,10 +1,19 @@
 <script lang="ts">
 	import LedgerLiveIcon from "$lib/icons/LedgerLiveIcon.svelte";
 	import MetaMaskIcon from "$lib/icons/MetaMaskIcon.svelte";
-	import MoneroIcon from "$lib/icons/IbanIcon.svelte";
 	import TrustWalletIcon from "$lib/icons/TrustWalletIcon.svelte";
 	import SquircleThick from "$lib/SquircleThick.svelte";
 	import type { ClickToPay } from "../../routes/donate/consts";
+
+	const wallets: {
+		key: keyof ClickToPay;
+		label: string;
+		Icon: import("svelte").Component;
+	}[] = [
+		{ key: "trustWallet", label: "Trust Wallet", Icon: TrustWalletIcon },
+		{ key: "metaMask", label: "MetaMask", Icon: MetaMaskIcon },
+		{ key: "ledgerLive", label: "Ledger Live", Icon: LedgerLiveIcon },
+	];
 
 	let {
 		preferred,
@@ -22,8 +31,7 @@
 		subtitle?: string;
 	} = $props();
 
-	// I thought about using interpolate-size but 1) it’s only implemented in Chrome/Edge
-	// and 2) it does not work with text-overflow: ellipsis
+	const uid = $props.id();
 
 	let addressHeight: number = $state(0);
 	let collapseAddress = $state(true);
@@ -45,19 +53,12 @@
 				{@render coins()}
 			</div>
 		</div>
-		<div
-			class="max-size-full shrink-0 flex-col gap-0 overflow-clip"
-			aria-label="Crypto wallet details"
-		>
+		<div class="shrink-0 overflow-clip" aria-label="Crypto wallet details">
 			{#if preferred}
 				<span
-					class="
-						980px:text-lg 980px:leading-8
-						text-[23px] leading-7 font-medium tracking-[-0.5px] text-white/30
-						uppercase
-						px870:text-sm px870:leading-4
-						px1100:text-[23px] px1100:leading-7
-					"
+					class="980px:text-lg 980px:leading-8 text-[23px] leading-7 font-medium
+						tracking-[-0.5px] text-white/30 uppercase px870:text-sm
+						px870:leading-4 px1100:text-[23px] px1100:leading-7"
 				>
 					Preferred
 				</span>
@@ -66,24 +67,22 @@
 				<h2
 					class="h-full text-2xl font-bold text-white px680:text-[32px]
 						px870:text-3xl px1100:text-[35.5px]"
-					id="donate-crypto-wallet-{name}"
+					id="wallet-name-{uid}"
 				>
 					{name}
 				</h2>
 			</div>
 			<div class="flex w-full items-end pt-1.5">
 				<div
-					class="interpolate-size relative h-5.25 w-full overflow-hidden
-						font-mono text-sm leading-5 font-semibold tracking-[-0.2px]
-						break-all text-ellipsis text-white/60 transition-[height]
-						duration-300 group-focus-within:h-(--address-height)
+					class="relative h-5.25 w-full overflow-hidden font-mono text-sm
+						leading-5 font-semibold tracking-[-0.2px] break-all text-ellipsis
+						text-white/60 transition-[height] duration-300
+						group-focus-within:h-(--address-height)
 						group-hover:h-(--address-height) focus:outline-0
 						motion-reduce:duration-0 px420:text-[17px] px420:leading-6
 						px870:text-sm px870:leading-5 px1100:text-[17px] px1380:leading-6
 						no-hover:h-(--address-height)"
-					style="--address-height: {addressHeight
-						? `${addressHeight}px`
-						: 'auto'}"
+					style:--address-height={addressHeight ? `${addressHeight}px` : "auto"}
 					ontransitionstart={() => (collapseAddress = false)}
 					ontransitionend={() => (collapseAddress = true)}
 					aria-label="Donation crypto wallet address"
@@ -98,7 +97,7 @@
 						role="textbox"
 						tabindex="0"
 						aria-readonly="true"
-						aria-labelledby="donate-crypto-wallet-{name}"
+						aria-labelledby="wallet-name-{uid}"
 					>
 						{address}
 					</span>
@@ -116,61 +115,41 @@
 			{#if clickToPay || subtitle}
 				<div
 					class={[
-						`
-						h-0 shrink-0 overflow-clip duration-300
-						group-focus-within:h-(--open-height)
-						group-hover:h-(--open-height)
-						motion-safe:transition-[height]
-						motion-reduce:duration-0
-						px980:group-focus-within:h-(--open-height-sm) px980:group-hover:h-(--open-height-sm)
-						no-hover:h-(--open-height)
-						px980:no-hover:h-(--open-height-sm)
-					`,
+						` h-0 shrink-0 overflow-clip duration-300
+						group-focus-within:h-(--open-height) group-hover:h-(--open-height)
+						motion-safe:transition-[height] motion-reduce:duration-0
+						px980:group-focus-within:h-(--open-height-sm)
+						px980:group-hover:h-(--open-height-sm) no-hover:h-(--open-height)
+						px980:no-hover:h-(--open-height-sm) `,
 						{
 							"hidden px320:block": clickToPay && !subtitle,
 						},
 					]}
-					style="--open-height: {clickToPay
-						? 47
-						: 20}px; --open-height-sm: {clickToPay ? 58 : 20}px"
+					style:--open-height="{clickToPay ? 47 : 20}px"
+					style:--open-height-sm="{clickToPay ? 58 : 20}px"
 				>
 					{#if clickToPay}
 						<div class="flex shrink-0 items-center pt-4">
-							{#each Object.entries(clickToPay) as [key, value] (key)}
-								{@const name = key as keyof ClickToPay}
-								<a
-									href={value}
-									class="
-										safari-fix-svgs-please flex h-7.25 w-auto px-2
-										focus:bg-stone-500/50 focus:outline-0
-										px980:h-10
-									"
-									target="_blank"
-									rel="noopener noreferrer"
-									aria-label={"Open " +
-										{
-											metamask: "MetaMask",
-											trustWallet: "Trust Wallet",
-											ledgerLive: "Ledger Live",
-											monero: "Monero",
-										}[name]}
-								>
-									{#if name === "metamask"}
-										<MetaMaskIcon />
-									{:else if name === "trustWallet"}
-										<TrustWalletIcon />
-									{:else if name === "ledgerLive"}
-										<LedgerLiveIcon />
-									{:else if name === "monero"}
-										<MoneroIcon />
-									{/if}
-								</a>
+							{#each wallets as { key, label, Icon } (key)}
+								{#if clickToPay[key]}
+									<a
+										href={clickToPay[key]}
+										class="safari-fix-svgs-please flex h-7.25 w-auto px-2
+											focus:bg-stone-500/50 focus:outline-0 px980:h-10"
+										target="_blank"
+										rel="noopener noreferrer"
+										aria-label="Open {label}"
+									>
+										<Icon />
+									</a>
+								{/if}
 							{/each}
 						</div>
 					{/if}
 					{#if subtitle}
 						<div
-							class="mt-1 text-sm leading-5 font-medium text-white/60 px980:text-[17px] px980:leading-6"
+							class="mt-1 text-sm leading-5 font-medium text-white/60
+								px980:text-[17px] px980:leading-6"
 						>
 							{subtitle}
 						</div>

@@ -1,9 +1,8 @@
 <svg
-	width="68"
-	height="69"
 	viewBox="0 0 68 69"
 	fill="none"
 	xmlns="http://www.w3.org/2000/svg"
+	aria-label="IBAN bank transfer logo"
 >
 	<g clip-path="url(#clip0_47_2)">
 		<rect x="5" y="6" width="58" height="58" rx="29" fill="#FFCD00" />
