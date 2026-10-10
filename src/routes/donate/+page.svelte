@@ -41,7 +41,7 @@
 			coins: [coins.tether, coins.ethereum],
 		},
 		{
-			name: "Iban",
+			name: "IBAN",
 			address: iban,
 			subtitle: "Swift/BIC code: BBVAESMM",
 			coins: [coins.iban],
