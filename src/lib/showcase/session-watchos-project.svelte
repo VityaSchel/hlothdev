@@ -1,20 +1,9 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import banner from "$showcase/session-watchos/banner.webp?enhanced&w=230;460;690&quality=80";
-	import bannerLqip from "$showcase/session-watchos/banner.webp?lqip";
-	import screenshot1 from "$showcase/session-watchos/screenshot-1.webp?enhanced&quality=80";
-	import screenshot1Lqip from "$showcase/session-watchos/screenshot-1.webp?lqip";
-	import screenshot2 from "$showcase/session-watchos/screenshot-2.webp?enhanced&quality=80";
-	import screenshot2Lqip from "$showcase/session-watchos/screenshot-2.webp?lqip";
-	import screenshot3 from "$showcase/session-watchos/screenshot-3.webp?enhanced&quality=80";
-	import screenshot3Lqip from "$showcase/session-watchos/screenshot-3.webp?lqip";
-	import screenshot4 from "$showcase/session-watchos/screenshot-4.webp?enhanced&quality=80";
-	import screenshot4Lqip from "$showcase/session-watchos/screenshot-4.webp?lqip";
-	import screenshot5 from "$showcase/session-watchos/screenshot-5.webp?enhanced&quality=80";
-	import screenshot5Lqip from "$showcase/session-watchos/screenshot-5.webp?lqip";
-	import screenshot6 from "$showcase/session-watchos/screenshot-6.webp?enhanced&quality=80";
-	import screenshot6Lqip from "$showcase/session-watchos/screenshot-6.webp?lqip";
+	import { showcaseImages } from "$lib/showcase/images";
 	import { subdomainUrl } from "$lib/utils";
+
+	const { banner, image } = showcaseImages("session-watchos");
 
 	export const sessionWatchosProject: ShowcaseItem = {
 		type: "project",
@@ -23,39 +12,30 @@
 		description,
 		shortDescription:
 			"An unofficial native Apple Watch watchOS client for Session Messenger",
-		banner: {
-			src: banner,
-			lqip: bannerLqip,
-		},
+		banner,
 		images: [
 			{
-				src: screenshot1,
-				lqip: screenshot1Lqip,
+				...image("screenshot-1"),
 				alt: "Session Watchos linking website home page screenshot with text: Open Session on your Apple Watch. First Session messenger client that runs on WatchOS. Send and receive messages like in movies. No companion app required, everything runs inside of your watches. Button: Download, Open sources.",
 			},
 			{
-				src: screenshot2,
-				lqip: screenshot2Lqip,
+				...image("screenshot-2"),
 				alt: "Session Watchos linking website login page screenshot with text: Log in with existing account. [Input with placeholder: Mnemonic phrase]. \"Continue\" button. — Am I just sending you my mnemonic phrase? Is this secure? — See that tiny # character in your address bar? It's called URL fragment and what follows it - is a decryption key, which was generated along with qr code on your device. When you press Continue, this key is used to encrypt your mnemonic phrase and this gibberish is sent back to your watches where the same key is used to decrypt it. Basically, your browser sends encrypted mnemonic so we can't read it, then your watches turn it back. It's that simple and works on AES-256 symmetric encryption. Your mnemonic phrase never leaves your devices unencrypted.",
 			},
 			{
-				src: screenshot3,
-				lqip: screenshot3Lqip,
+				...image("screenshot-3"),
 				alt: "Session Watchos screenshot with main menu",
 			},
 			{
-				src: screenshot4,
-				lqip: screenshot4Lqip,
+				...image("screenshot-4"),
 				alt: "Session Watchos screenshot with chats list",
 			},
 			{
-				src: screenshot5,
-				lqip: screenshot5Lqip,
+				...image("screenshot-5"),
 				alt: "Session Watchos screenshot with conversation view",
 			},
 			{
-				src: screenshot6,
-				lqip: screenshot6Lqip,
+				...image("screenshot-6"),
 				alt: "Session Watchos screenshot with conversation settings view",
 			},
 		],

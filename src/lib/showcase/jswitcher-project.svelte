@@ -1,12 +1,9 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import banner from "$showcase/jswitcher/banner.webp?enhanced&w=230;460;690&quality=80";
-	import bannerLqip from "$showcase/jswitcher/banner.webp?lqip";
-	import screenshot1 from "$showcase/jswitcher/screenshot-1.webp?enhanced&quality=80";
-	import screenshot1Lqip from "$showcase/jswitcher/screenshot-1.webp?lqip";
-	import screenshot2 from "$showcase/jswitcher/screenshot-2.webp?enhanced&quality=80";
-	import screenshot2Lqip from "$showcase/jswitcher/screenshot-2.webp?lqip";
+	import { showcaseImages } from "$lib/showcase/images";
 	import { subdomainUrl } from "$lib/utils";
+
+	const { banner, image } = showcaseImages("jswitcher");
 
 	export const jswitcherProject: ShowcaseItem = {
 		type: "project",
@@ -15,19 +12,14 @@
 		description,
 		shortDescription:
 			"A Figma plugin for seamless component and font conversion",
-		banner: {
-			src: banner,
-			lqip: bannerLqip,
-		},
+		banner,
 		images: [
 			{
-				src: screenshot1,
-				lqip: screenshot1Lqip,
+				...image("screenshot-1"),
 				alt: "JSwitcher auth form screenshot requesting OAuth code from user",
 			},
 			{
-				src: screenshot2,
-				lqip: screenshot2Lqip,
+				...image("screenshot-2"),
 				alt: "JSwitcher fonts mapping settings",
 			},
 		],

@@ -1,10 +1,9 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import banner from "$showcase/session-native/banner.webp?enhanced&w=230;460;690&quality=80";
-	import bannerLqip from "$showcase/session-native/banner.webp?lqip";
-	import screenshot from "$showcase/session-native/screenshot.webp?enhanced&quality=80";
-	import screenshotLqip from "$showcase/session-native/screenshot.webp?lqip";
+	import { showcaseImages } from "$lib/showcase/images";
 	import { subdomainUrl } from "$lib/utils";
+
+	const { banner, image } = showcaseImages("session-native");
 
 	export const sessionNativeProject: ShowcaseItem = {
 		type: "project",
@@ -12,14 +11,10 @@
 		name: "Session Native",
 		description,
 		shortDescription: "An unofficial native macOS client for Session messenger",
-		banner: {
-			src: banner,
-			lqip: bannerLqip,
-		},
+		banner,
 		images: [
 			{
-				src: screenshot,
-				lqip: screenshotLqip,
+				...image("screenshot"),
 				alt: "Session Native screenshot with a bunch of chats, archive tab, a conversation with media files attached",
 			},
 		],

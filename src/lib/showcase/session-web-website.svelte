@@ -1,10 +1,9 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
+	import { showcaseImages } from "$lib/showcase/images";
 	import { subdomainUrl } from "$lib/utils";
-	import bannerSrc from "$showcase/session-web/banner.webp?enhanced&w=230;460;690&quality=80";
-	import bannerLqip from "$showcase/session-web/banner.webp?lqip";
-	import screenshotSrc from "$showcase/session-web/screenshot.webp?enhanced&quality=80";
-	import screenshotLqip from "$showcase/session-web/screenshot.webp?lqip";
+
+	const { banner, image } = showcaseImages("session-web");
 
 	export const sessionWebWebsite: ShowcaseItem = {
 		type: "website",
@@ -13,11 +12,10 @@
 		description,
 		shortDescription:
 			"An experimental project running Session messenger in a web browser online",
-		banner: { src: bannerSrc, lqip: bannerLqip },
+		banner,
 		images: [
 			{
-				src: screenshotSrc,
-				lqip: screenshotLqip,
+				...image("screenshot"),
 				alt: "Session Web website screenshot with a conversation open.",
 			},
 		],

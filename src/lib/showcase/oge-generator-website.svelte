@@ -1,12 +1,9 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
+	import { showcaseImages } from "$lib/showcase/images";
 	import { subdomainUrl } from "$lib/utils";
-	import bannerSrc from "$showcase/oge-generator/banner.webp?enhanced&w=230;460;690&quality=80";
-	import bannerLqip from "$showcase/oge-generator/banner.webp?lqip";
-	import screenshot1Src from "$showcase/oge-generator/screenshot-1.webp?enhanced&quality=80";
-	import screenshot1Lqip from "$showcase/oge-generator/screenshot-1.webp?lqip";
-	import screenshot2Src from "$showcase/oge-generator/screenshot-2.webp?enhanced&quality=80";
-	import screenshot2Lqip from "$showcase/oge-generator/screenshot-2.webp?lqip";
+
+	const { banner, image } = showcaseImages("oge-generator");
 
 	export const ogeGeneratorWebsite: ShowcaseItem = {
 		type: "website",
@@ -15,16 +12,14 @@
 		description,
 		shortDescription:
 			"A next-generation generator for the national informatics exam in Russia",
-		banner: { src: bannerSrc, lqip: bannerLqip },
+		banner,
 		images: [
 			{
-				src: screenshot1Src,
-				lqip: screenshot1Lqip,
+				...image("screenshot-1"),
 				alt: "OGE generator website screenshot with code editor for one of the exam tasks",
 			},
 			{
-				src: screenshot2Src,
-				lqip: screenshot2Lqip,
+				...image("screenshot-2"),
 				alt: "OGE generator website screenshot with ZIP file download dialog for one of the exam tasks",
 			},
 		],

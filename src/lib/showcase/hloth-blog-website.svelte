@@ -1,10 +1,9 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import banner from "$showcase/hloth-blog/banner.webp?enhanced&w=230;460;690&quality=80";
-	import bannerLqip from "$showcase/hloth-blog/banner.webp?lqip";
-	import screenshot from "$showcase/hloth-blog/screenshot.webp?enhanced&quality=80";
-	import screenshotLqip from "$showcase/hloth-blog/screenshot.webp?lqip";
+	import { showcaseImages } from "$lib/showcase/images";
 	import { subdomainUrl } from "$lib/utils";
+
+	const { banner, image } = showcaseImages("hloth-blog");
 
 	export const blogHlothDevWebsite: ShowcaseItem = {
 		type: "website",
@@ -13,14 +12,10 @@
 		description,
 		shortDescription:
 			"My personal blog about web development and personal projects",
-		banner: {
-			src: banner,
-			lqip: bannerLqip,
-		},
+		banner,
 		images: [
 			{
-				src: screenshot,
-				lqip: screenshotLqip,
+				...image("screenshot"),
 				alt: "Screenshot of the homepage of blog.hloth.dev with the following posts: Migrating 200 projects from GitHub to self-hosted Forgejo; macOS 26 Tahoe Day, Morning, Evening, and Night based on clock; How to add custom bitcoin signet to NBitcoin and NBXplorer",
 			},
 		],

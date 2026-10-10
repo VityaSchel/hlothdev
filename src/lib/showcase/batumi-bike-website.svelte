@@ -1,14 +1,9 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
+	import { showcaseImages } from "$lib/showcase/images";
 	import { subdomainUrl } from "$lib/utils";
-	import banner from "$showcase/batumi-bike/banner.webp?enhanced&w=230;460;690&quality=80";
-	import bannerLqip from "$showcase/batumi-bike/banner.webp?lqip";
-	import screenshot1 from "$showcase/batumi-bike/screenshot-1.webp?enhanced&quality=80";
-	import screenshot1Lqip from "$showcase/batumi-bike/screenshot-1.webp?lqip";
-	import screenshot2 from "$showcase/batumi-bike/screenshot-2.webp?enhanced&quality=80";
-	import screenshot2Lqip from "$showcase/batumi-bike/screenshot-2.webp?lqip";
-	import screenshot3 from "$showcase/batumi-bike/screenshot-3.webp?enhanced&quality=80";
-	import screenshot3Lqip from "$showcase/batumi-bike/screenshot-3.webp?lqip";
+
+	const { banner, image } = showcaseImages("batumi-bike");
 
 	export const batumiBikeWebsite: ShowcaseItem = {
 		type: "website",
@@ -17,24 +12,18 @@
 		description,
 		shortDescription:
 			"A map of safe roads for electric scooters in Batumi, Georgia based on OpenStreetMap data",
-		banner: {
-			src: banner,
-			lqip: bannerLqip,
-		},
+		banner,
 		images: [
 			{
-				src: screenshot1,
-				lqip: screenshot1Lqip,
+				...image("screenshot-1"),
 				alt: "Batumi.bike website screenshot showing the map with green, yellow and red lines representing roads quality in Batumi, Georgia",
 			},
 			{
-				src: screenshot2,
-				lqip: screenshot2Lqip,
+				...image("screenshot-2"),
 				alt: "Development screenshot with OpenStreetMap data imported and rendered as svg",
 			},
 			{
-				src: screenshot3,
-				lqip: screenshot3Lqip,
+				...image("screenshot-3"),
 				alt: "Batumi.bike website screenshot with search results for points of interest",
 			},
 		],

@@ -1,14 +1,9 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import banner from "$showcase/lufin/banner.webp?enhanced&w=230;460;690&quality=80";
-	import bannerLqip from "$showcase/lufin/banner.webp?lqip";
-	import screenshot1 from "$showcase/lufin/screenshot-1.webp?enhanced&quality=80";
-	import screenshot1Lqip from "$showcase/lufin/screenshot-1.webp?lqip";
-	import screenshot2 from "$showcase/lufin/screenshot-2.webp?enhanced&quality=80";
-	import screenshot2Lqip from "$showcase/lufin/screenshot-2.webp?lqip";
-	import screenshotter from "$showcase/lufin/lufin-screenshotter.webp?enhanced&quality=80";
-	import screenshotterLqip from "$showcase/lufin/lufin-screenshotter.webp?lqip";
+	import { showcaseImages } from "$lib/showcase/images";
 	import { subdomainUrl } from "$lib/utils";
+
+	const { banner, image } = showcaseImages("lufin");
 
 	export const lufinProject: ShowcaseItem = {
 		type: "project",
@@ -17,24 +12,18 @@
 		description,
 		shortDescription:
 			"A modern self-hosted file-sharing service and an alternative to lufi",
-		banner: {
-			src: banner,
-			lqip: bannerLqip,
-		},
+		banner,
 		images: [
 			{
-				src: screenshot1,
-				lqip: screenshot1Lqip,
+				...image("screenshot-1"),
 				alt: "Lufin frontend screenshot with text: Drag and drop files here or [Add the files] button / Finish upload / Set a password / [Checkbox] Delete on first download / [Checkbox] Make a zip archive before downloading / [Checkbox] Encrypt with end-to-end encryption (Disable encryption so that a direct link to the uploaded file works (e.g. for embedding images)) / Upload as folder — 2 files / Data retention periods and other conditions of use",
 			},
 			{
-				src: screenshot2,
-				lqip: screenshot2Lqip,
+				...image("screenshot-2"),
 				alt: "Lufin frontend screenshot with text: Uploads history / Only files sent through this browser will be shown here. The list is in localStorage: if you clear the data in localStorage, <...> deleted. Dark lines mean that the files have been been expired and are no longer available. Русский / Українська / Беларуская / English / Български / Čeština / Dansk / Nederlands / Eesti / Suomi / Français / Deutsch / Ελληνικά / Magyar / Italiano / Latviski / Lietuvių / Norsk / Polski / Português / Română / Slovenčina",
 			},
 			{
-				src: screenshotter,
-				lqip: screenshotterLqip,
+				...image("lufin-screenshotter"),
 				alt: "Lufin screenshotter image editor with text: wow new design thanks apple now I have to remake my website which is not even finished yet / look I can do blur too! with this editor tools",
 			},
 		],

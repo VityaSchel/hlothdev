@@ -1,10 +1,9 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
+	import { showcaseImages } from "$lib/showcase/images";
 	import { subdomainUrl } from "$lib/utils";
-	import bannerSrc from "$showcase/samsung-pinger/banner.webp?enhanced&w=230;460;690&quality=80";
-	import bannerLqip from "$showcase/samsung-pinger/banner.webp?lqip";
-	import screenshotSrc from "$showcase/samsung-pinger/screenshot.webp?enhanced&quality=80";
-	import screenshotLqip from "$showcase/samsung-pinger/screenshot.webp?lqip";
+
+	const { banner, image } = showcaseImages("samsung-pinger");
 
 	export const samsungPingerProject: ShowcaseItem = {
 		type: "project",
@@ -13,11 +12,10 @@
 		description,
 		shortDescription:
 			'A macOS widget with a "Ring my Samsung" button device, written in Swift',
-		banner: { src: bannerSrc, lqip: bannerLqip },
+		banner,
 		images: [
 			{
-				src: screenshotSrc,
-				lqip: screenshotLqip,
+				...image("screenshot"),
 				alt: 'Samsung Pinger screenshot demonstrating the "Ring my Samsung" macOS widget in English and Russian languages',
 			},
 		],

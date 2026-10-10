@@ -1,16 +1,9 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
+	import { showcaseImages } from "$lib/showcase/images";
 	import { subdomainUrl } from "$lib/utils";
-	import banner from "$showcase/sipacker/banner.webp?enhanced&w=230;460;690&quality=80";
-	import bannerLqip from "$showcase/sipacker/banner.webp?lqip";
-	import screenshot1 from "$showcase/sipacker/screenshot-1.webp?enhanced&quality=80";
-	import screenshot1Lqip from "$showcase/sipacker/screenshot-1.webp?lqip";
-	import siquester from "$showcase/sipacker/siquester.webp?enhanced&quality=80";
-	import siquesterLqip from "$showcase/sipacker/siquester.webp?lqip";
-	import screenshot2 from "$showcase/sipacker/screenshot-2.webp?enhanced&quality=80";
-	import screenshot2Lqip from "$showcase/sipacker/screenshot-2.webp?lqip";
-	import screenshot3 from "$showcase/sipacker/screenshot-3.webp?enhanced&quality=80";
-	import screenshot3Lqip from "$showcase/sipacker/screenshot-3.webp?lqip";
+
+	const { banner, image } = showcaseImages("sipacker");
 
 	export const sipackerWebsite: ShowcaseItem = {
 		type: "website",
@@ -18,29 +11,22 @@
 		name: "SIPacker",
 		description,
 		shortDescription: "A PWA for creating playable SiGame custom packs",
-		banner: {
-			src: banner,
-			lqip: bannerLqip,
-		},
+		banner,
 		images: [
 			{
-				src: screenshot1,
-				lqip: screenshot1Lqip,
+				...image("screenshot-1"),
 				alt: "SIPacker website screenshot with a list of questions in a pack",
 			},
 			{
-				src: siquester,
-				lqip: siquesterLqip,
+				...image("siquester"),
 				alt: "The official SiQuester app running on Windows",
 			},
 			{
-				src: screenshot2,
-				lqip: screenshot2Lqip,
+				...image("screenshot-2"),
 				alt: "SIPacker website screenshot with a question editor",
 			},
 			{
-				src: screenshot3,
-				lqip: screenshot3Lqip,
+				...image("screenshot-3"),
 				alt: "SIPacker website screenshot with file manager with compression options",
 			},
 		],

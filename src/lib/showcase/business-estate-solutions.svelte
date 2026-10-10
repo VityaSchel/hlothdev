@@ -1,13 +1,8 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import banner from "$showcase/business-estate-solutions/banner.webp?enhanced&w=230;460;690&quality=80";
-	import bannerLqip from "$showcase/business-estate-solutions/banner.webp?lqip";
-	import screenshot1 from "$showcase/business-estate-solutions/screenshot-1.webp?enhanced&quality=80";
-	import screenshot1Lqip from "$showcase/business-estate-solutions/screenshot-1.webp?lqip";
-	import screenshot2 from "$showcase/business-estate-solutions/screenshot-2.webp?enhanced&quality=80";
-	import screenshot2Lqip from "$showcase/business-estate-solutions/screenshot-2.webp?lqip";
-	import screenshot3 from "$showcase/business-estate-solutions/screenshot-3.webp?enhanced&quality=80";
-	import screenshot3Lqip from "$showcase/business-estate-solutions/screenshot-3.webp?lqip";
+	import { showcaseImages } from "$lib/showcase/images";
+
+	const { banner, image } = showcaseImages("business-estate-solutions");
 
 	export const besWebsite: ShowcaseItem = {
 		type: "website",
@@ -15,24 +10,18 @@
 		name: "Business Estate Solutions CRM",
 		description,
 		shortDescription: "A CRM system for a real estate agency",
-		banner: {
-			src: banner,
-			lqip: bannerLqip,
-		},
+		banner,
 		images: [
 			{
-				src: screenshot1,
-				lqip: screenshot1Lqip,
+				...image("screenshot-1"),
 				alt: "",
 			},
 			{
-				src: screenshot2,
-				lqip: screenshot2Lqip,
+				...image("screenshot-2"),
 				alt: "",
 			},
 			{
-				src: screenshot3,
-				lqip: screenshot3Lqip,
+				...image("screenshot-3"),
 				alt: "",
 			},
 		],

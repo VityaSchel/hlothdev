@@ -1,10 +1,9 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import banner from "$showcase/pow-reaction/banner.webp?enhanced&w=230;460;690&quality=80";
-	import bannerLqip from "$showcase/pow-reaction/banner.webp?lqip";
-	import screenshot from "$showcase/pow-reaction/screenshot.webp?enhanced&quality=80";
-	import screenshotLqip from "$showcase/pow-reaction/screenshot.webp?lqip";
+	import { showcaseImages } from "$lib/showcase/images";
 	import { subdomainUrl } from "$lib/utils";
+
+	const { banner, image } = showcaseImages("pow-reaction");
 
 	export const powReactionProject: ShowcaseItem = {
 		type: "project",
@@ -13,14 +12,10 @@
 		description,
 		shortDescription:
 			"A library for proof-of-work reactions built with Svelte 👍 ❤️ 👀 😮 🤔 🚀",
-		banner: {
-			src: banner,
-			lqip: bannerLqip,
-		},
+		banner,
 		images: [
 			{
-				src: screenshot,
-				lqip: screenshotLqip,
+				...image("screenshot"),
 				alt: "Pow-reaction demo website screenshot with several emoji buttons with a click number counter, some are highlighted with a circular pizza-style indicator representing progress for the reaction submission. The text says: try clicking on any 10-15 times; source by hloth",
 			},
 		],

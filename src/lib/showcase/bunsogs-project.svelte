@@ -1,16 +1,9 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import banner from "$showcase/bunsogs/banner.webp?enhanced&w=230;460;690&quality=80";
-	import bannerLqip from "$showcase/bunsogs/banner.webp?lqip";
-	import screenshot1 from "$showcase/bunsogs/screenshot-1.webp?enhanced&quality=80";
-	import screenshot1Lqip from "$showcase/bunsogs/screenshot-1.webp?lqip";
-	import screenshot2 from "$showcase/bunsogs/screenshot-2.webp?enhanced&quality=80";
-	import screenshot2Lqip from "$showcase/bunsogs/screenshot-2.webp?lqip";
-	import screenshot3 from "$showcase/bunsogs/screenshot-3.webp?enhanced&quality=80";
-	import screenshot3Lqip from "$showcase/bunsogs/screenshot-3.webp?lqip";
-	import screenshot4 from "$showcase/bunsogs/screenshot-4.webp?enhanced&quality=80";
-	import screenshot4Lqip from "$showcase/bunsogs/screenshot-4.webp?lqip";
+	import { showcaseImages } from "$lib/showcase/images";
 	import { subdomainUrl } from "$lib/utils";
+
+	const { banner, image } = showcaseImages("bunsogs");
 
 	export const bunsogsProject: ShowcaseItem = {
 		type: "project",
@@ -19,29 +12,22 @@
 		description,
 		shortDescription:
 			"A better Session Open Group Server implementation in TypeScript with Bun",
-		banner: {
-			src: banner,
-			lqip: bannerLqip,
-		},
+		banner,
 		images: [
 			{
-				src: screenshot1,
-				lqip: screenshot1Lqip,
+				...image("screenshot-1"),
 				alt: "Bunsogs main menu with options: Edit name, Edit description, Add avatar, General settings, Manage mods and admins, Ban/unban user(s), Manage users permissions, Delete room, Go back",
 			},
 			{
-				src: screenshot2,
-				lqip: screenshot2Lqip,
+				...image("screenshot-2"),
 				alt: "Bunsogs user permissions overrides: Accessible, Read, Write, Upload — values: True, False, Not specified",
 			},
 			{
-				src: screenshot3,
-				lqip: screenshot3Lqip,
+				...image("screenshot-3"),
 				alt: "Bunsogs rate limits settings: How many messages user can send in a time frame? Pass 0 to disable rate limits",
 			},
 			{
-				src: screenshot4,
-				lqip: screenshot4Lqip,
+				...image("screenshot-4"),
 				alt: "Bunsogs global admins/moderators settings: Add global admin, Add global moderator, Go back",
 			},
 		],

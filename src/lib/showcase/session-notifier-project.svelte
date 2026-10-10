@@ -1,9 +1,8 @@
 <script lang="ts" module>
 	import type { ShowcaseItem } from "$lib/showcase/items";
-	import banner from "$showcase/session-notifier/banner.webp?enhanced&w=230;460;690&quality=80";
-	import bannerLqip from "$showcase/session-notifier/banner.webp?lqip";
-	import screenshot from "$showcase/session-notifier/screenshot.webp?enhanced&quality=80";
-	import screenshotLqip from "$showcase/session-notifier/screenshot.webp?lqip";
+	import { showcaseImages } from "$lib/showcase/images";
+
+	const { banner, image } = showcaseImages("session-notifier");
 
 	export const sessionNotifierProject: ShowcaseItem = {
 		type: "project",
@@ -12,14 +11,10 @@
 		description,
 		shortDescription:
 			"A REST API for sending Session messages programmatically, made for freelance client in 2024",
-		banner: {
-			src: banner,
-			lqip: bannerLqip,
-		},
+		banner,
 		images: [
 			{
-				src: screenshot,
-				lqip: screenshotLqip,
+				...image("screenshot"),
 				alt: "Session.email website",
 			},
 		],
