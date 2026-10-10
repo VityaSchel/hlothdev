@@ -73,7 +73,7 @@
 	</div>
 </section>
 
-<style lang="scss">
+<style>
 	.checkbox-content :global(.banner) {
 		height: 115px;
 	}
@@ -106,7 +106,7 @@
 			display: none;
 		}
 		.wrap-styles {
-			// grid grid-cols-1 px450:grid-cols-2 px600:grid-cols-3 md:flex md:flex-wrap
+			/* grid grid-cols-1 px450:grid-cols-2 px600:grid-cols-3 md:flex md:flex-wrap */
 			display: grid;
 			grid-template-columns: repeat(1, minmax(0, 1fr));
 

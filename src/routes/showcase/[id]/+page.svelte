@@ -68,7 +68,7 @@
 	</SubpageWrapper>
 </PageWrapper>
 
-<style lang="scss">
+<style>
 	article :global(h2) {
 		font-size: 1.25rem;
 		font-weight: 600;

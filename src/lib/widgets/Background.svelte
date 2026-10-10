@@ -75,7 +75,7 @@
 	{@render children()}
 </div>
 
-<style lang="scss">
+<style>
 	.page-container {
 		height: 100vh;
 	}
@@ -99,7 +99,7 @@
 		}
 	}
 	video.s.v.a.g.a.svaga.i.have.it.navalom {
-		// gaslighting Firefox to force it to blur backdrop on top of video
+		/* gaslighting Firefox to force it to blur backdrop on top of video */
 		clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
 	}
 </style>

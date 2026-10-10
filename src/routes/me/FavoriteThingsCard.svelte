@@ -193,12 +193,12 @@
 	</div>
 </div>
 
-<style lang="scss">
+<style>
 	.scrollbar-invisible {
 		scrollbar-width: none;
 	}
-	:global {
-		@supports (animation-timeline: view(x)) {
+	@supports (animation-timeline: view(x)) {
+		:global {
 			.animate-scroll {
 				animation-timeline: view(x);
 				view-timeline-name: --timeline_name;
@@ -213,18 +213,18 @@
 					animation-duration: 1ms;
 				}
 			}
-			@keyframes appear {
-				0% {
-					transform: scale(0.85);
-				}
+		}
+		@keyframes appear {
+			0% {
+				transform: scale(0.85);
+			}
 
-				50% {
-					transform: scale(1);
-				}
+			50% {
+				transform: scale(1);
+			}
 
-				100% {
-					transform: scale(0.85);
-				}
+			100% {
+				transform: scale(0.85);
 			}
 		}
 	}

@@ -241,9 +241,7 @@
 	</div>
 </PrivacyRightsCard>
 
-<style lang="scss">
-	@use "sass:math";
-
+<style>
 	.content-container {
 		background-image: linear-gradient(
 			to bottom,
@@ -262,12 +260,11 @@
 		}
 
 		@media (min-width: 1024px) {
-			$radius: 610px + 32px;
 			background-image: radial-gradient(
 				circle farthest-side at bottom left,
 				rgba(255, 255, 255, 1),
-				rgba(255, 255, 255, 0.5) calc($radius * 0.66),
-				rgba(255, 255, 255, 0) $radius
+				rgba(255, 255, 255, 0.5) calc((610px + 32px) * 0.66),
+				rgba(255, 255, 255, 0) calc(610px + 32px)
 			);
 		}
 

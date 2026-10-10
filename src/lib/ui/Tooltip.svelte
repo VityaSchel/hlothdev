@@ -53,8 +53,8 @@
 	</div>
 </div>
 
-<style lang="scss">
-	// here goes about 10 hours of my life
+<style>
+	/* here goes about 10 hours of my life */
 
 	.tooltip-container {
 		--radius: 4px;
@@ -93,7 +93,7 @@
 					calc(100% - var(--arrow-height)),
 				/* arrow */ var(--arrow-width) var(--arrow-height);
 			mask-repeat: no-repeat;
-			// background: rgba(50, 50, 50, 0.55);
+			/* background: rgba(50, 50, 50, 0.55); */
 			color: white;
 			font-weight: 400;
 			font-size: var(--font-size);
@@ -109,20 +109,20 @@
 			border-radius: calc(var(--radius) + 0.5px);
 			box-shadow: 0 0 0 1px black;
 			--offset: 2px;
-			$top: calc(0% - var(--offset));
-			$left: calc(0% - var(--offset));
-			$bottom: calc(100% + var(--offset));
-			$right: calc(100% + var(--offset));
-			$half-arrow: calc(var(--arrow-width) / 2 - 3.5px);
+			--top: calc(0% - var(--offset));
+			--left: calc(0% - var(--offset));
+			--bottom: calc(100% + var(--offset));
+			--right: calc(100% + var(--offset));
+			--half-arrow: calc(var(--arrow-width) / 2 - 3.5px);
 			clip-path: polygon(
-				$left $top,
-				$right $top,
-				$right $bottom,
-				calc(50% + $half-arrow + 1px) $bottom,
-				calc(50% + $half-arrow + 1px) calc($bottom - 3px),
-				calc(50% - $half-arrow + 0.5px) calc($bottom - 3px),
-				calc(50% - $half-arrow + 0.5px) $bottom,
-				$left $bottom
+				var(--left) var(--top),
+				var(--right) var(--top),
+				var(--right) var(--bottom),
+				calc(50% + var(--half-arrow) + 1px) var(--bottom),
+				calc(50% + var(--half-arrow) + 1px) calc(var(--bottom) - 3px),
+				calc(50% - var(--half-arrow) + 0.5px) calc(var(--bottom) - 3px),
+				calc(50% - var(--half-arrow) + 0.5px) var(--bottom),
+				var(--left) var(--bottom)
 			);
 		}
 

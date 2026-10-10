@@ -57,7 +57,6 @@
 		"prettier-plugin-merge": "^0.10.1",
 		"prettier-plugin-svelte": "^4.1.1",
 		"prettier-plugin-tailwindcss": "^0.8.1",
-		"sass-embedded": "^1.105.0",
 		"sharp": "^0.35.4",
 		"super-sitemap": "^2.0.6",
 		"svelte": "^5.57.1",

@@ -84,9 +84,7 @@
 	</div>
 </div>
 
-<style lang="scss">
-	@use "sass:math";
-
+<style>
 	.center-aligned-element {
 		position: absolute;
 		bottom: 50%;
@@ -130,10 +128,10 @@
 	}
 
 	.tick {
-		width: math.div(1.5px, 114px) * 100%;
+		width: calc(1.5 / 114 * 100%);
 
 		span {
-			height: math.div(4.5px, math.div(114px, 2)) * 100%;
+			height: calc(4.5 / (114 / 2) * 100%);
 			width: 100%;
 			border-radius: calc(infinity * 1px);
 			background: #b0b0b0;
@@ -146,7 +144,7 @@
 
 	.hour {
 		width: 0px;
-		padding-top: math.div(4px, 114px) * 100%;
+		padding-top: calc(4 / 114 * 100%);
 
 		span {
 			text-align: center;
@@ -184,10 +182,10 @@
 		animation-duration: 60s;
 	}
 	.rotate-3600sec {
-		animation-duration: 60s * 60;
+		animation-duration: calc(60s * 60);
 	}
 	.rotate-43200sec {
-		animation-duration: 60s * 60 * 12;
+		animation-duration: calc(60s * 60 * 12);
 	}
 
 	@keyframes rotate-360deg {

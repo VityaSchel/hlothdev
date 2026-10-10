@@ -48,19 +48,15 @@
 	</SubpageWrapper>
 </PageWrapper>
 
-<style lang="scss">
+<style>
 	.bg {
-		$gradient: linear-gradient(
-			to bottom,
-			rgba(255, 255, 255, 0.17),
-			rgba(0, 0, 0, 0)
-		);
-		$foreground: rgba(10, 130, 255, 0.75);
-		background-image: $gradient, linear-gradient($foreground, $foreground);
+		--foreground: rgba(10, 130, 255, 0.75);
+		background-image:
+			linear-gradient(to bottom, rgba(255, 255, 255, 0.17), rgba(0, 0, 0, 0)),
+			linear-gradient(var(--foreground), var(--foreground));
 
 		&:active {
-			$foreground: rgba(10, 132, 255, 1);
-			background-image: $gradient, linear-gradient($foreground, $foreground);
+			--foreground: rgba(10, 132, 255, 1);
 		}
 	}
 	.inset-shadow-top {
