@@ -1,6 +1,6 @@
 <script lang="ts">
-	import CardIcon from "$lib/entities/CardIcon.svelte";
-	import Squircle from "$lib/Squircle.svelte";
+	import CardIcon from "#lib/entities/CardIcon.svelte";
+	import Squircle from "#lib/Squircle.svelte";
 	import CardButton from "./CardButton.svelte";
 </script>
 

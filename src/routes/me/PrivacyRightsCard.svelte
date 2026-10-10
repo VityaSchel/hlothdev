@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { page } from "$app/state";
 	import "@fontsource-variable/sofia-sans-extra-condensed";
-	import GridCard from "$lib/widgets/grid-cards/GridCard.svelte";
-	import Button from "$lib/ui/Button.svelte";
-	import bgLqip from "$lib/assets/privacy-rights.webp?lqip";
-	import { torDomain } from "$lib/utils";
+	import GridCard from "#lib/widgets/grid-cards/GridCard.svelte";
+	import Button from "#lib/ui/Button.svelte";
+	import bgLqip from "#lib/assets/privacy-rights.webp?lqip";
+	import { torDomain } from "#lib/utils.ts";
 
 	let {
 		inert,
@@ -35,7 +35,7 @@
 	aria-label="Privacy Rights Support Card"
 >
 	<enhanced:img
-		src="$lib/assets/privacy-rights.webp"
+		src="#lib/assets/privacy-rights.webp"
 		class="absolute top-0 left-0 size-full bg-neutral-200 bg-cover object-cover
 			object-[30%] text-[0px] select-none"
 		alt="Background: a surveillance camera mounted on a wall"

@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { enhance } from "$app/forms";
 	import { page } from "$app/state";
-	import type { AlertId } from "$lib/alerts";
-	import CloseIcon from "$lib/icons/CloseIcon.svelte";
-	import CloseIconRendered from "$lib/icons/CloseIcon.svelte?render";
-	import SvgFallback from "$lib/entities/SvgFallback.svelte";
+	import type { AlertId } from "#lib/alerts.ts";
+	import CloseIcon from "#lib/icons/CloseIcon.svelte";
+	import CloseIconRendered from "#lib/icons/CloseIcon.svelte?render";
+	import SvgFallback from "#lib/entities/SvgFallback.svelte";
 
 	let {
 		id,

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import PageWrapper from "$lib/widgets/PageWrapper.svelte";
+	import PageWrapper from "#lib/widgets/PageWrapper.svelte";
 	import MeCard from "./MeCard.svelte";
 	import ResumeCard from "./ResumeCard.svelte";
 	import DonateCard from "./DonateCard.svelte";
@@ -7,7 +7,7 @@
 	import WebsitesSection from "./WebsitesSection.svelte";
 	import ProjectsSection from "./ProjectsSection.svelte";
 	import ShowcaseSection from "./ShowcaseSection.svelte";
-	import PageMetadata from "$lib/widgets/PageMetadata.svelte";
+	import PageMetadata from "#lib/widgets/PageMetadata.svelte";
 </script>
 
 <PageMetadata />

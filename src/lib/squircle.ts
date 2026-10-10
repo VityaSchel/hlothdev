@@ -1,6 +1,6 @@
 import type { Attachment } from "svelte/attachments";
 import { getSvgPath } from "figma-squircle";
-import { browserSupportsSVG } from "$lib/utils";
+import { browserSupportsSVG } from "#lib/utils.ts";
 
 export const squircle =
 	({

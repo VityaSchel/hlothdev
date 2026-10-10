@@ -1,7 +1,7 @@
 <script lang="ts">
-	import ForgejoIcon from "$lib/icons/ForgejoIcon.svelte";
-	import { subdomainUrl } from "$lib/utils";
-	import GridCard from "$lib/widgets/grid-cards/GridCard.svelte";
+	import ForgejoIcon from "#lib/icons/ForgejoIcon.svelte";
+	import { subdomainUrl } from "#lib/utils.ts";
+	import GridCard from "#lib/widgets/grid-cards/GridCard.svelte";
 
 	let {
 		repositories,

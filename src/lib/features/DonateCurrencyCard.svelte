@@ -1,9 +1,9 @@
 <script lang="ts">
-	import LedgerLiveIcon from "$lib/icons/LedgerLiveIcon.svelte";
-	import MetaMaskIcon from "$lib/icons/MetaMaskIcon.svelte";
-	import TrustWalletIcon from "$lib/icons/TrustWalletIcon.svelte";
-	import SquircleThick from "$lib/SquircleThick.svelte";
-	import SvgFallback from "$lib/entities/SvgFallback.svelte";
+	import LedgerLiveIcon from "#lib/icons/LedgerLiveIcon.svelte";
+	import MetaMaskIcon from "#lib/icons/MetaMaskIcon.svelte";
+	import TrustWalletIcon from "#lib/icons/TrustWalletIcon.svelte";
+	import SquircleThick from "#lib/SquircleThick.svelte";
+	import SvgFallback from "#lib/entities/SvgFallback.svelte";
 	import type { ClickToPay } from "../../routes/donate/consts";
 
 	const wallets: {

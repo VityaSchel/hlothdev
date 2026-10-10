@@ -1,7 +1,7 @@
 <script lang="ts">
-	import GridCard from "$lib/widgets/grid-cards/GridCard.svelte";
-	import bg from "$lib/assets/me-in-front-of-zeda-makhuntseti-waterfall-2024.webp";
-	import bgLqip from "$lib/assets/me-in-front-of-zeda-makhuntseti-waterfall-2024.webp?lqip";
+	import GridCard from "#lib/widgets/grid-cards/GridCard.svelte";
+	import bg from "#lib/assets/me-in-front-of-zeda-makhuntseti-waterfall-2024.webp";
+	import bgLqip from "#lib/assets/me-in-front-of-zeda-makhuntseti-waterfall-2024.webp?lqip";
 </script>
 
 <GridCard

@@ -1,7 +1,7 @@
 <script lang="ts">
-	import PageWrapper from "$lib/widgets/PageWrapper.svelte";
-	import SubpageWrapper from "$lib/widgets/SubpageWrapper.svelte";
-	import PageMetadata from "$lib/widgets/PageMetadata.svelte";
+	import PageWrapper from "#lib/widgets/PageWrapper.svelte";
+	import SubpageWrapper from "#lib/widgets/SubpageWrapper.svelte";
+	import PageMetadata from "#lib/widgets/PageMetadata.svelte";
 	import { page } from "$app/state";
 </script>
 
@@ -22,7 +22,7 @@
 					pt-5 text-center"
 			>
 				<enhanced:img
-					src="$lib/assets/error.webp?enhanced"
+					src="#lib/assets/error.webp?enhanced"
 					alt="Cartoon warthog head with its top blown off, revealing an exploding brain like a mushroom cloud"
 					class="text-center text-[0px]"
 					width="128"

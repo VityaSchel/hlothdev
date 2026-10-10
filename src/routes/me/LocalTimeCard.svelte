@@ -1,7 +1,7 @@
 <script lang="ts">
-	import GridCard from "$lib/widgets/grid-cards/GridCard.svelte";
-	import Clock from "$lib/widgets/Clock.svelte";
-	import { getEuropeanTzOffset } from "$lib/cet-cest";
+	import GridCard from "#lib/widgets/grid-cards/GridCard.svelte";
+	import Clock from "#lib/widgets/Clock.svelte";
+	import { getEuropeanTzOffset } from "#lib/cet-cest.ts";
 
 	const utcOffsetHours: number = getEuropeanTzOffset();
 	const utcOffsetMinutes: number = 0;

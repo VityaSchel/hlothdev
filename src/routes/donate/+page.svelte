@@ -1,20 +1,20 @@
 <script lang="ts">
-	import PageWrapper from "$lib/widgets/PageWrapper.svelte";
-	import SubpageWrapper from "$lib/widgets/SubpageWrapper.svelte";
-	import PageMetadata from "$lib/widgets/PageMetadata.svelte";
-	import DonateCurrencyCard from "$lib/features/DonateCurrencyCard.svelte";
-	import TetherIcon from "$lib/icons/TetherIcon.svelte";
-	import TetherIconRendered from "$lib/icons/TetherIcon.svelte?render";
-	import TronIcon from "$lib/icons/TronIcon.svelte";
-	import TronIconRendered from "$lib/icons/TronIcon.svelte?render";
-	import EthereumIcon from "$lib/icons/EthereumIcon.svelte";
-	import EthereumIconRendered from "$lib/icons/EthereumIcon.svelte?render";
-	import IbanIcon from "$lib/icons/IbanIcon.svelte";
-	import IbanIconRendered from "$lib/icons/IbanIcon.svelte?render";
-	import BitcoinIcon from "$lib/icons/BitcoinIcon.svelte";
-	import BitcoinIconRendered from "$lib/icons/BitcoinIcon.svelte?render";
-	import LitecoinIcon from "$lib/icons/LitecoinIcon.svelte";
-	import LitecoinIconRendered from "$lib/icons/LitecoinIcon.svelte?render";
+	import PageWrapper from "#lib/widgets/PageWrapper.svelte";
+	import SubpageWrapper from "#lib/widgets/SubpageWrapper.svelte";
+	import PageMetadata from "#lib/widgets/PageMetadata.svelte";
+	import DonateCurrencyCard from "#lib/features/DonateCurrencyCard.svelte";
+	import TetherIcon from "#lib/icons/TetherIcon.svelte";
+	import TetherIconRendered from "#lib/icons/TetherIcon.svelte?render";
+	import TronIcon from "#lib/icons/TronIcon.svelte";
+	import TronIconRendered from "#lib/icons/TronIcon.svelte?render";
+	import EthereumIcon from "#lib/icons/EthereumIcon.svelte";
+	import EthereumIconRendered from "#lib/icons/EthereumIcon.svelte?render";
+	import IbanIcon from "#lib/icons/IbanIcon.svelte";
+	import IbanIconRendered from "#lib/icons/IbanIcon.svelte?render";
+	import BitcoinIcon from "#lib/icons/BitcoinIcon.svelte";
+	import BitcoinIconRendered from "#lib/icons/BitcoinIcon.svelte?render";
+	import LitecoinIcon from "#lib/icons/LitecoinIcon.svelte";
+	import LitecoinIconRendered from "#lib/icons/LitecoinIcon.svelte?render";
 	import { clickToPayCoin, clickToPayToken, iban, networks } from "./consts";
 
 	const coins = {

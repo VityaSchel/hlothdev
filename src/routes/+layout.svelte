@@ -2,16 +2,16 @@
 	import "../app.css";
 	import "../tailwind.css";
 	import "@fontsource-variable/inter";
-	import Background from "$lib/widgets/Background.svelte";
-	import Nav from "$lib/widgets/Nav.svelte";
+	import Background from "#lib/widgets/Background.svelte";
+	import Nav from "#lib/widgets/Nav.svelte";
 	import { onNavigate } from "$app/navigation";
-	import JavascriptDisabledMessage from "$lib/widgets/JavascriptDisabledMessage.svelte";
-	import ReducedMotionMessage from "$lib/widgets/ReducedMotionMessage.svelte";
-	import ReducedTransparencyMessage from "$lib/widgets/ReducedTransparencyMessage.svelte";
+	import JavascriptDisabledMessage from "#lib/widgets/JavascriptDisabledMessage.svelte";
+	import ReducedMotionMessage from "#lib/widgets/ReducedMotionMessage.svelte";
+	import ReducedTransparencyMessage from "#lib/widgets/ReducedTransparencyMessage.svelte";
 	import type { LayoutProps } from "./$types";
-	import { browser } from "$app/environment";
+	import { browser } from "$app/env";
 	import { onMount } from "svelte";
-	import { siteUrl, subdomainUrl } from "$lib/utils";
+	import { siteUrl, subdomainUrl } from "#lib/utils.ts";
 
 	let { children, data }: LayoutProps = $props();
 

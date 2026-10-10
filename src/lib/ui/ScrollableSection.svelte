@@ -1,5 +1,5 @@
 <script lang="ts">
-	import KeyboardNavigationSkipLink from "$lib/features/KeyboardNavigationSkipLink.svelte";
+	import KeyboardNavigationSkipLink from "#lib/features/KeyboardNavigationSkipLink.svelte";
 
 	let {
 		id,

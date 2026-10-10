@@ -1,8 +1,8 @@
 <script lang="ts">
-	import GridCard from "$lib/widgets/grid-cards/GridCard.svelte";
-	import americanEnglishIcon from "$lib/assets/languages-icons/american-english.webp?inline";
-	import russianIcon from "$lib/assets/languages-icons/russian.webp?inline";
-	import spanishIcon from "$lib/assets/languages-icons/spanish.webp?inline";
+	import GridCard from "#lib/widgets/grid-cards/GridCard.svelte";
+	import americanEnglishIcon from "#lib/assets/languages-icons/american-english.webp?inline";
+	import russianIcon from "#lib/assets/languages-icons/russian.webp?inline";
+	import spanishIcon from "#lib/assets/languages-icons/spanish.webp?inline";
 </script>
 
 <GridCard

@@ -1,9 +1,9 @@
 <script lang="ts">
-	import KeyboardNavigationSkipLink from "$lib/features/KeyboardNavigationSkipLink.svelte";
-	import Proxy from "$lib/entities/Proxy.svelte";
-	import SvgFallback from "$lib/entities/SvgFallback.svelte";
-	import CloseIcon from "$lib/icons/CloseIcon.svelte";
-	import CloseIconRendered from "$lib/icons/CloseIcon.svelte?render";
+	import KeyboardNavigationSkipLink from "#lib/features/KeyboardNavigationSkipLink.svelte";
+	import Proxy from "#lib/entities/Proxy.svelte";
+	import SvgFallback from "#lib/entities/SvgFallback.svelte";
+	import CloseIcon from "#lib/icons/CloseIcon.svelte";
+	import CloseIconRendered from "#lib/icons/CloseIcon.svelte?render";
 
 	let {
 		button,

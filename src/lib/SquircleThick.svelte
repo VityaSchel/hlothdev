@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { browser } from "$app/environment";
-	import { browserSupportsSVG, getSquirclePath } from "$lib/utils";
+	import { browser } from "$app/env";
+	import { browserSupportsSVG, getSquirclePath } from "#lib/utils.ts";
 
 	let {
 		class: className,

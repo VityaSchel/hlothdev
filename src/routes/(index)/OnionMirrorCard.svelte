@@ -1,7 +1,7 @@
 <script lang="ts">
-	import CardIcon from "$lib/entities/CardIcon.svelte";
-	import Squircle from "$lib/Squircle.svelte";
-	import { clearnetDomain, isOnion, torDomain } from "$lib/utils";
+	import CardIcon from "#lib/entities/CardIcon.svelte";
+	import Squircle from "#lib/Squircle.svelte";
+	import { clearnetDomain, isOnion, torDomain } from "#lib/utils.ts";
 	import CardButton from "./CardButton.svelte";
 </script>
 

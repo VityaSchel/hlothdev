@@ -1,27 +1,27 @@
 <script lang="ts">
-	import { browser } from "$app/environment";
-	import { getSquirclePath, transition } from "$lib/utils";
+	import { browser } from "$app/env";
+	import { getSquirclePath, transition } from "#lib/utils.ts";
 	import { onMount } from "svelte";
-	import favoriteThings from "$lib/assets/favorite-things/favorite-things.webp?enhanced&quality=80";
-	import favoriteThingsLqip from "$lib/assets/favorite-things/favorite-things.webp?lqip";
-	import games from "$lib/assets/favorite-things/games.webp?enhanced&quality=80";
-	import gamesLqip from "$lib/assets/favorite-things/games.webp?lqip";
-	import cinema from "$lib/assets/favorite-things/cinema.webp?enhanced&quality=80";
-	import cinemaLqip from "$lib/assets/favorite-things/cinema.webp?lqip";
-	import music from "$lib/assets/favorite-things/music.webp?enhanced&quality=80";
-	import musicLqip from "$lib/assets/favorite-things/music.webp?lqip";
-	import dish from "$lib/assets/favorite-things/dish.webp?enhanced&quality=80";
-	import dishLqip from "$lib/assets/favorite-things/dish.webp?lqip";
-	import influencer from "$lib/assets/favorite-things/influencer.webp?enhanced&quality=80";
-	import influencerLqip from "$lib/assets/favorite-things/influencer.webp?lqip";
-	import book from "$lib/assets/favorite-things/book.webp?enhanced&quality=80";
-	import bookLqip from "$lib/assets/favorite-things/book.webp?lqip";
-	import series from "$lib/assets/favorite-things/series.webp?enhanced&quality=80";
-	import seriesLqip from "$lib/assets/favorite-things/series.webp?lqip";
-	import quote from "$lib/assets/favorite-things/quote.webp?enhanced&quality=80";
-	import quoteLqip from "$lib/assets/favorite-things/quote.webp?lqip";
-	import love from "$lib/assets/favorite-things/love.webp?enhanced&quality=80";
-	import loveLqip from "$lib/assets/favorite-things/love.webp?lqip";
+	import favoriteThings from "#lib/assets/favorite-things/favorite-things.webp?enhanced&quality=80";
+	import favoriteThingsLqip from "#lib/assets/favorite-things/favorite-things.webp?lqip";
+	import games from "#lib/assets/favorite-things/games.webp?enhanced&quality=80";
+	import gamesLqip from "#lib/assets/favorite-things/games.webp?lqip";
+	import cinema from "#lib/assets/favorite-things/cinema.webp?enhanced&quality=80";
+	import cinemaLqip from "#lib/assets/favorite-things/cinema.webp?lqip";
+	import music from "#lib/assets/favorite-things/music.webp?enhanced&quality=80";
+	import musicLqip from "#lib/assets/favorite-things/music.webp?lqip";
+	import dish from "#lib/assets/favorite-things/dish.webp?enhanced&quality=80";
+	import dishLqip from "#lib/assets/favorite-things/dish.webp?lqip";
+	import influencer from "#lib/assets/favorite-things/influencer.webp?enhanced&quality=80";
+	import influencerLqip from "#lib/assets/favorite-things/influencer.webp?lqip";
+	import book from "#lib/assets/favorite-things/book.webp?enhanced&quality=80";
+	import bookLqip from "#lib/assets/favorite-things/book.webp?lqip";
+	import series from "#lib/assets/favorite-things/series.webp?enhanced&quality=80";
+	import seriesLqip from "#lib/assets/favorite-things/series.webp?lqip";
+	import quote from "#lib/assets/favorite-things/quote.webp?enhanced&quality=80";
+	import quoteLqip from "#lib/assets/favorite-things/quote.webp?lqip";
+	import love from "#lib/assets/favorite-things/love.webp?enhanced&quality=80";
+	import loveLqip from "#lib/assets/favorite-things/love.webp?lqip";
 
 	const images = [
 		{

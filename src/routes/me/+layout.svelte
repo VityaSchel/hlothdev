@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { page } from "$app/state";
-	import { subdomainUrl } from "$lib/utils";
-	import PageWrapper from "$lib/widgets/PageWrapper.svelte";
-	import SubpageWrapper from "$lib/widgets/SubpageWrapper.svelte";
+	import { subdomainUrl } from "#lib/utils.ts";
+	import PageWrapper from "#lib/widgets/PageWrapper.svelte";
+	import SubpageWrapper from "#lib/widgets/SubpageWrapper.svelte";
 
 	let {
 		children,

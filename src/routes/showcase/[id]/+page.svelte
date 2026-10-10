@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { showcase } from "$lib/showcase/items";
-	import PageWrapper from "$lib/widgets/PageWrapper.svelte";
-	import SubpageWrapper from "$lib/widgets/SubpageWrapper.svelte";
+	import { showcase } from "#lib/showcase/items.ts";
+	import PageWrapper from "#lib/widgets/PageWrapper.svelte";
+	import SubpageWrapper from "#lib/widgets/SubpageWrapper.svelte";
 	import type { PageProps } from "./$types";
-	import PageMetadata from "$lib/widgets/PageMetadata.svelte";
+	import PageMetadata from "#lib/widgets/PageMetadata.svelte";
 
 	let { data }: PageProps = $props();
 	const project = $derived(showcase[data.id]);

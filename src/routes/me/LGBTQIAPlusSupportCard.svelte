@@ -1,7 +1,7 @@
 <script lang="ts">
-	import GridCard from "$lib/widgets/grid-cards/GridCard.svelte";
-	import bg from "$lib/assets/mcdonalds-pride.webp";
-	import bgLqip from "$lib/assets/mcdonalds-pride.webp?lqip";
+	import GridCard from "#lib/widgets/grid-cards/GridCard.svelte";
+	import bg from "#lib/assets/mcdonalds-pride.webp";
+	import bgLqip from "#lib/assets/mcdonalds-pride.webp?lqip";
 </script>
 
 <GridCard

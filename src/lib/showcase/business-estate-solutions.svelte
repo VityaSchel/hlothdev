@@ -1,6 +1,6 @@
 <script lang="ts" module>
-	import type { ShowcaseItem } from "$lib/showcase/items";
-	import { showcaseImages } from "$lib/showcase/images";
+	import type { ShowcaseItem } from "#lib/showcase/items.ts";
+	import { showcaseImages } from "#lib/showcase/images.ts";
 
 	const { banner, image } = showcaseImages("business-estate-solutions");
 

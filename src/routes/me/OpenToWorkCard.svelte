@@ -1,6 +1,6 @@
 <script lang="ts">
-	import GridCard from "$lib/widgets/grid-cards/GridCard.svelte";
-	import bgLqip from "$lib/assets/open-to-work.webp?lqip";
+	import GridCard from "#lib/widgets/grid-cards/GridCard.svelte";
+	import bgLqip from "#lib/assets/open-to-work.webp?lqip";
 </script>
 
 <a
@@ -15,7 +15,7 @@
 >
 	<GridCard size="xs" class="size-full overflow-clip" aria-label="Open to work">
 		<enhanced:img
-			src="$lib/assets/open-to-work.webp"
+			src="#lib/assets/open-to-work.webp"
 			style="background-image: url({bgLqip.lqip})"
 			alt="Me with a sign saying 'Open to work'"
 			class="size-full bg-neutral-600 bg-cover object-cover text-[0px]

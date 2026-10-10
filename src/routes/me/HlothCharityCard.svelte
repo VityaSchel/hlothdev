@@ -1,7 +1,7 @@
 <script lang="ts">
-	import GridCard from "$lib/widgets/grid-cards/GridCard.svelte";
-	import bg from "$lib/assets/hloth-charity.webp";
-	import bgLqip from "$lib/assets/hloth-charity.webp?lqip";
+	import GridCard from "#lib/widgets/grid-cards/GridCard.svelte";
+	import bg from "#lib/assets/hloth-charity.webp";
+	import bgLqip from "#lib/assets/hloth-charity.webp?lqip";
 </script>
 
 <a

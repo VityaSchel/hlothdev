@@ -1,4 +1,4 @@
-import { getAlertsDismissedProps } from "$lib/dismiss-alerts.server";
+import { getAlertsDismissedProps } from "#lib/dismiss-alerts.server.ts";
 
 export const load = ({ cookies, request, setHeaders }) => {
 	setHeaders({ vary: "Save-Data" });

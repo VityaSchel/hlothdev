@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Alert from "$lib/ui/Alert.svelte";
+	import Alert from "#lib/ui/Alert.svelte";
 
 	let { visible }: { visible: boolean } = $props();
 </script>

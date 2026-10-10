@@ -13,7 +13,7 @@
 	import ReadyToRelocateCard from "./ReadyToRelocateCard.svelte";
 	import FavoriteThingsCard from "./FavoriteThingsCard.svelte";
 	import EducationCard from "./EducationCard.svelte";
-	import PageMetadata from "$lib/widgets/PageMetadata.svelte";
+	import PageMetadata from "#lib/widgets/PageMetadata.svelte";
 
 	let { data } = $props();
 </script>

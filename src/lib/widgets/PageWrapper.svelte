@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Squircle from "$lib/Squircle.svelte";
+	import Squircle from "#lib/Squircle.svelte";
 
 	let {
 		children,

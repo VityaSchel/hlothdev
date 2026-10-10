@@ -1,8 +1,8 @@
 <script lang="ts">
-	import GridCard from "$lib/widgets/grid-cards/GridCard.svelte";
-	import Button from "$lib/ui/Button.svelte";
-	import bg from "$lib/assets/education.webp";
-	import bgLqip from "$lib/assets/education.webp?lqip";
+	import GridCard from "#lib/widgets/grid-cards/GridCard.svelte";
+	import Button from "#lib/ui/Button.svelte";
+	import bg from "#lib/assets/education.webp";
+	import bgLqip from "#lib/assets/education.webp?lqip";
 </script>
 
 <a

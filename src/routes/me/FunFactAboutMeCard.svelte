@@ -1,5 +1,5 @@
 <script lang="ts">
-	import GridCard from "$lib/widgets/grid-cards/GridCard.svelte";
+	import GridCard from "#lib/widgets/grid-cards/GridCard.svelte";
 </script>
 
 <GridCard

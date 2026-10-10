@@ -1,7 +1,7 @@
 <script lang="ts">
-	import GridCard from "$lib/widgets/grid-cards/GridCard.svelte";
-	import bg from "$lib/assets/peaceful-nature.webp";
-	import bgLqip from "$lib/assets/peaceful-nature.webp?lqip";
+	import GridCard from "#lib/widgets/grid-cards/GridCard.svelte";
+	import bg from "#lib/assets/peaceful-nature.webp";
+	import bgLqip from "#lib/assets/peaceful-nature.webp?lqip";
 </script>
 
 <GridCard

@@ -1,4 +1,4 @@
-import type { ShowcaseImage } from "$lib/showcase/items";
+import type { ShowcaseImage } from "#lib/showcase/items.ts";
 import type { Picture } from "@sveltejs/enhanced-img";
 
 type Placeholder = ShowcaseImage["lqip"];

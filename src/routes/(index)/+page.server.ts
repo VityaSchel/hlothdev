@@ -1,7 +1,7 @@
 import type { Actions } from "./$types";
 import { redirect } from "@sveltejs/kit";
-import { isAlertId } from "$lib/alerts";
-import { alertDismissCookies } from "$lib/dismiss-alerts.server";
+import { isAlertId } from "#lib/alerts.ts";
+import { alertDismissCookies } from "#lib/dismiss-alerts.server.ts";
 
 const redirectablePathnames = [
 	"/",

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from "$app/state";
-	import bgLqip from "$lib/assets/sonoma-video-banner.webp?lqip";
-	import { isOnion } from "$lib/utils";
+	import bgLqip from "#lib/assets/sonoma-video-banner.webp?lqip";
+	import { isOnion } from "#lib/utils.ts";
 	import { onMount } from "svelte";
 	import { on } from "svelte/events";
 
@@ -31,7 +31,7 @@
 >
 	<enhanced:img
 		class="absolute top-0 left-0 size-full bg-[#1c330c] object-cover"
-		src="$lib/assets/sonoma-video-banner.webp?quality=50"
+		src="#lib/assets/sonoma-video-banner.webp?quality=50"
 		style="background-image: url('{bgLqip.lqip}'); background-size: cover; font-size: 0px;"
 		width="3840"
 		height="2160"

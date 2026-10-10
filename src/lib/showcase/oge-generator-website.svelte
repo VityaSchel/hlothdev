@@ -1,7 +1,7 @@
 <script lang="ts" module>
-	import type { ShowcaseItem } from "$lib/showcase/items";
-	import { showcaseImages } from "$lib/showcase/images";
-	import { subdomainUrl } from "$lib/utils";
+	import type { ShowcaseItem } from "#lib/showcase/items.ts";
+	import { showcaseImages } from "#lib/showcase/images.ts";
+	import { subdomainUrl } from "#lib/utils.ts";
 
 	const { banner, image } = showcaseImages("oge-generator");
 

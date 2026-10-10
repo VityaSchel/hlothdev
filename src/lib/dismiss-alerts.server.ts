@@ -1,5 +1,5 @@
 import type { Cookies } from "@sveltejs/kit";
-import type { AlertId } from "$lib/alerts";
+import type { AlertId } from "#lib/alerts.ts";
 
 export const alertDismissCookies = {
 	"javascript-disabled": "hloth-dev_js-disabled-alert-dismissed",

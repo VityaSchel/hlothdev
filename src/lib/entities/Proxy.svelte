@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from "$app/state";
-	import fileIcon from "$lib/assets/file-icon.webp?inline";
+	import fileIcon from "#lib/assets/file-icon.webp?inline";
 
 	// JS ONLY:
 	// There is no way to differentiate between a pressed state and drag in CSS with :active pseudoclass

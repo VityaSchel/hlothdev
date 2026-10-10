@@ -24,7 +24,7 @@ import { sessionWatchosProject } from "./session-watchos-project.svelte";
 import { ps4mergerProject } from "./ps4merger-project.svelte";
 import { mtprotoMobileProject } from "./mtproto-mobile-project.svelte";
 
-import type { ProjectId } from "$lib/showcase";
+import type { ProjectId } from "#lib/showcase/index.ts";
 import type { Picture } from "@sveltejs/enhanced-img";
 import type { Snippet } from "svelte";
 

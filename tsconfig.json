@@ -1,10 +1,12 @@
 {
-	"extends": "./.svelte-kit/tsconfig.json",
+	"extends": "$app/tsconfig",
 	"compilerOptions": {
-		"allowImportingTsExtensions": true,
-		"checkJs": true,
-		"skipLibCheck": true,
 		"strict": true,
-		"types": ["network-information-types"]
-	}
+		"types": ["$app/types", "network-information-types"],
+		"paths": {
+			"#lib/*": ["./src/lib/*"],
+			"#showcase/*": ["./src/lib/assets/showcase/*"]
+		}
+	},
+	"include": ["src", "*.ts", "*.js"]
 }

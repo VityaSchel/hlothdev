@@ -1,18 +1,18 @@
 <script lang="ts">
-	import Squircle from "$lib/Squircle.svelte";
-	import NavItem, { type SelectedNavItem } from "$lib/entities/NavItem.svelte";
-	import NavSeparator from "$lib/entities/NavSeparator.svelte";
-	import Tooltip from "$lib/ui/Tooltip.svelte";
-	import { subdomainUrl } from "$lib/utils";
-	import upworkIcon from "$lib/assets/dock-icons/upwork.webp?inline";
-	import forgejoIcon from "$lib/assets/dock-icons/forgejo.webp?inline";
-	import linkedinIcon from "$lib/assets/dock-icons/linkedin.webp?inline";
-	import elementIcon from "$lib/assets/dock-icons/element.webp?inline";
-	import telegramIcon from "$lib/assets/dock-icons/telegram.webp?inline";
-	import discordIcon from "$lib/assets/dock-icons/discord.webp?inline";
-	import mailIcon from "$lib/assets/dock-icons/mail.webp?inline";
-	import blogIcon from "$lib/assets/dock-icons/blog.webp?inline";
-	import instagramIcon from "$lib/assets/dock-icons/instagram.webp?inline";
+	import Squircle from "#lib/Squircle.svelte";
+	import NavItem, { type SelectedNavItem } from "#lib/entities/NavItem.svelte";
+	import NavSeparator from "#lib/entities/NavSeparator.svelte";
+	import Tooltip from "#lib/ui/Tooltip.svelte";
+	import { subdomainUrl } from "#lib/utils.ts";
+	import upworkIcon from "#lib/assets/dock-icons/upwork.webp?inline";
+	import forgejoIcon from "#lib/assets/dock-icons/forgejo.webp?inline";
+	import linkedinIcon from "#lib/assets/dock-icons/linkedin.webp?inline";
+	import elementIcon from "#lib/assets/dock-icons/element.webp?inline";
+	import telegramIcon from "#lib/assets/dock-icons/telegram.webp?inline";
+	import discordIcon from "#lib/assets/dock-icons/discord.webp?inline";
+	import mailIcon from "#lib/assets/dock-icons/mail.webp?inline";
+	import blogIcon from "#lib/assets/dock-icons/blog.webp?inline";
+	import instagramIcon from "#lib/assets/dock-icons/instagram.webp?inline";
 
 	let selectedNavItem: SelectedNavItem | null = $state(null);
 </script>

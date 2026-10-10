@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Squircle from "$lib/Squircle.svelte";
-	import meAvatarLqip from "$lib/assets/me-avatar.webp?lqip";
+	import Squircle from "#lib/Squircle.svelte";
+	import meAvatarLqip from "#lib/assets/me-avatar.webp?lqip";
 	import { onMount } from "svelte";
 	import { getMyAge } from "./my-age";
 
@@ -46,7 +46,7 @@
 				class="aspect-square h-auto w-[35cqi] rounded-full bg-neutral-600
 					bg-cover px420:w-[25cqi]"
 				sizes="35cqi, (max-width: 470px) 25cqi"
-				src="$lib/assets/me-avatar.webp?quality=80"
+				src="#lib/assets/me-avatar.webp?quality=80"
 				alt="Me in a suit"
 				draggable="false"
 				style="background-image: url({meAvatarLqip.lqip})"

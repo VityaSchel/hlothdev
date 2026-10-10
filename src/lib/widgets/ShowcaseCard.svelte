@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { ShowcaseItem } from "$lib/showcase/items";
+	import type { ShowcaseItem } from "#lib/showcase/items.ts";
 
 	let { id, name, banner }: Pick<ShowcaseItem, "id" | "name" | "banner"> =
 		$props();

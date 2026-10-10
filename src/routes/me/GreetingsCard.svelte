@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { page } from "$app/state";
-	import GridCard from "$lib/widgets/grid-cards/GridCard.svelte";
-	import WavingHandIcon from "$lib/icons/WavingHandIcon.svelte";
-	import Button from "$lib/ui/Button.svelte";
+	import GridCard from "#lib/widgets/grid-cards/GridCard.svelte";
+	import WavingHandIcon from "#lib/icons/WavingHandIcon.svelte";
+	import Button from "#lib/ui/Button.svelte";
 
 	let {
 		inert,
