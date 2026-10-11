@@ -28,6 +28,8 @@
 				await navigation.complete;
 				revealSource(navigation);
 			});
+			transition.ready.catch(() => {});
+			transition.updateCallbackDone.catch(() => {});
 			transition.finished.then(endMorph, endMorph);
 		});
 	});
