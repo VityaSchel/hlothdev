@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { page } from "$app/state";
 	import bgLqip from "#lib/assets/sonoma-video-banner.webp?lqip";
+	import hevcVideo from "#lib/assets/video/sonoma-hvc1-1080p-24fps-sdr-327kbps.mp4";
+	import av1Video from "#lib/assets/video/sonoma-av1-1080p-24fps-sdr-444kbps.webm";
 	import { isOnion } from "#lib/utils.ts";
 	import { onMount } from "svelte";
 	import { on } from "svelte/events";
@@ -51,18 +53,9 @@
 				h-full w-full object-cover object-center motion-reduce:hidden"
 			loop
 		>
-			<source
-				src="/sonoma-hvc1-1080p-24fps-sdr-327kbps.mp4"
-				type="video/mp4; codecs=hvc1"
-			/>
-			<source
-				src="/sonoma-hvc1-1080p-24fps-sdr-327kbps.mp4"
-				type="video/mp4; codecs=hev1.1.6.L93.B0"
-			/>
-			<source
-				src="/sonoma-av1-1080p-24fps-sdr-444kbps.webm"
-				type="video/webm; codecs=av01.0.05M.08"
-			/>
+			<source src={hevcVideo} type="video/mp4; codecs=hvc1" />
+			<source src={hevcVideo} type="video/mp4; codecs=hev1.1.6.L93.B0" />
+			<source src={av1Video} type="video/webm; codecs=av01.0.05M.08" />
 		</video>
 	{/if}
 </div>
