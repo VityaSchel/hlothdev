@@ -12,6 +12,10 @@
 	body *:not(.nav-fake-view-transition) {
 		view-transition-name: none !important;
 	}
+
+	::view-transition-group(nav-fake-view-transition) {
+		animation-name: none;
+	}
 }
 
 ::view-transition-group(root) {
