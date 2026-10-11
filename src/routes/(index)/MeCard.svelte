@@ -65,15 +65,13 @@
 				</h2>
 				<h3
 					class="text-[5cqi] leading-[4.5cqi] font-bold tracking-[-0.2px]
-						text-thin-alt-typography px420:text-[4cqi]
-						px1180:text-thin-typography"
+						text-thin-alt-typography px420:text-[4cqi]"
 				>
 					Senior Full Stack Web Developer
 				</h3>
 				<h3
 					class="text-[4cqi] leading-[3.5cqi] font-semibold
-						text-thick-alt-typography px420:text-[3.5cqi]
-						md:text-thin-typography px1180:text-[rgba(123,123,123,0.4)]"
+						text-thin-alt-typography px420:text-[3.5cqi]"
 				>
 					{age} y.o., Madrid, Spain
 				</h3>
