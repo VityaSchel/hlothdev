@@ -18,7 +18,7 @@
 		px1180:col-end-8 px1180:row-start-3 px1180:row-end-4"
 	aria-label="My local time card"
 >
-	<h3 class="sr-only">My timezone: {timezone}</h3>
+	<h2 class="sr-only">My timezone: {timezone}</h2>
 	<div
 		class="flex aspect-square h-full w-auto max-w-full items-center
 			justify-center"

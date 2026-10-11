@@ -93,12 +93,12 @@
 					Siarhei Horbach
 				</a>
 			</span>
-			<h3
+			<h2
 				class="font-extra-condensed text-[7.87cqw] leading-5 font-extrabold
 					tracking-[-0.236cqw] uppercase"
 			>
 				Privacy Rights
-			</h3>
+			</h2>
 			<p
 				class="pb-[3.54cqw] text-[4.33cqw] leading-[5.11cqw] font-medium
 					tracking-[-0.3cqw] break-words @px170:tracking-[-0.25cqw]

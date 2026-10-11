@@ -14,12 +14,12 @@
 		class="flex h-[26.05cqw] w-full shrink-0 items-center bg-linear-to-b
 			from-[#FED700] to-[#E6A600] px-[6.72cqw]"
 	>
-		<h4
+		<h2
 			class="block w-full text-center text-[9.24cqw] font-bold tracking-tight
 				text-black"
 		>
 			Fun fact about me
-		</h4>
+		</h2>
 	</div>
 	<div
 		class="flex flex-1 flex-col gap-[2.52cqw] bg-[#1E1E1E] px-[9.24cqw]

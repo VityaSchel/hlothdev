@@ -26,12 +26,12 @@
 			class="flex size-full flex-col justify-end gap-[0.39cqw] px-[5.90cqw]
 				py-[5.11cqw]"
 		>
-			<h3
+			<h2
 				class="mb-[2.36cqw] font-extra-condensed text-[7.87cqw]
 					leading-[7.87cqw] font-extrabold tracking-[-0.23cqw] uppercase"
 			>
 				Education
-			</h3>
+			</h2>
 			<p
 				class="pb-[3.54cqw] text-[4.33cqw] leading-[5.11cqw] font-bold
 					tracking-[-0.4cqw] hyphens-auto @px165:tracking-[-0.35cqw]

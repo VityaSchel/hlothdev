@@ -31,11 +31,11 @@
 				Trevor
 			</a>
 		</span>
-		<h3
+		<h2
 			class="text-[5cqw] leading-[5.25cqw] font-semibold tracking-[-0.375cqw]
 				@px188:tracking-[-0.31cqw] @px239:tracking-[-0.25cqw]"
 		>
 			I stand with peace and against violence
-		</h3>
+		</h2>
 	</div>
 </GridCard>
