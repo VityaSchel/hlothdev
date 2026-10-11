@@ -29,3 +29,24 @@ export const startMorph = (navigation: OnNavigate) => {
 		if (morphNames === names) morphNames = [];
 	};
 };
+
+const sourceHrefOf = ({ from, to }: OnNavigate) => {
+	if (!from) return;
+	if (to?.route.id === "/me") return from.url.pathname;
+	if (to?.route.id !== "/(index)") return;
+	return from.route.id?.startsWith("/me/") ? "/me" : from.url.pathname;
+};
+
+export const revealSource = (navigation: OnNavigate) => {
+	const href = sourceHrefOf(navigation);
+	if (!href) return;
+	[...document.querySelectorAll("main a")]
+		.find(
+			(link) => link.getAttribute("href") === href && !link.closest("[inert]"),
+		)
+		?.scrollIntoView({
+			block: "center",
+			inline: "nearest",
+			behavior: "instant",
+		});
+};

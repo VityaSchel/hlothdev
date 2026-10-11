@@ -11,7 +11,7 @@
 	import type { LayoutProps } from "./$types";
 	import { browser } from "$app/env";
 	import { flushSync, onMount } from "svelte";
-	import { startMorph } from "#lib/view-transition.svelte.ts";
+	import { revealSource, startMorph } from "#lib/view-transition.svelte.ts";
 	import { siteUrl, subdomainUrl } from "#lib/utils.ts";
 
 	let { children, data }: LayoutProps = $props();
@@ -26,6 +26,7 @@
 			const transition = document.startViewTransition(async () => {
 				resolve();
 				await navigation.complete;
+				revealSource(navigation);
 			});
 			transition.finished.then(endMorph, endMorph);
 		});
