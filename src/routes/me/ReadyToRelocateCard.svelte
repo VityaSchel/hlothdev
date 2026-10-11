@@ -2,6 +2,8 @@
 	import GridCard from "#lib/widgets/grid-cards/GridCard.svelte";
 	import bg from "#lib/assets/ready-to-relocate.webp";
 	import bgLqip from "#lib/assets/ready-to-relocate.webp?lqip";
+
+	const uid = $props.id();
 </script>
 
 <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
@@ -13,7 +15,7 @@
 		px1180:row-end-2"
 	tabindex="0"
 	role="group"
-	aria-label="Ready to relocate card"
+	aria-labelledby="heading-{uid}"
 >
 	<GridCard
 		size="xs"
@@ -26,6 +28,7 @@
 		bg="url({bg}), url({bgLqip.lqip})"
 	>
 		<h2
+			id="heading-{uid}"
 			class="text-[9.3cqw] font-semibold tracking-[-0.075em]
 				@px105:text-[10.08cqw]"
 		>
