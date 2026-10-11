@@ -79,8 +79,10 @@
 		window.addEventListener("touchend", onPointerUp, { once: true });
 		window.addEventListener("touchcancel", onPointerUp, { once: true });
 	}}
+	onfocus={setTooltip}
 	onblur={() => {
 		pressed = false;
+		if (selectedNavItem?.element === a) selectedNavItem = null;
 	}}
 	ondragstart={() => {
 		dragging = true;
