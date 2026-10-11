@@ -37,7 +37,7 @@
 		style="background-image: url('{bgLqip.lqip}'); background-size: cover;"
 		width="3840"
 		height="2160"
-		sizes="max(100vw, 177.77vh)"
+		sizes="(max-width: 767px) and (orientation: portrait) 850px, max(100vw, 177.77vh)"
 		alt="Background image"
 		aria-hidden="true"
 		loading="lazy"
