@@ -12,11 +12,26 @@ const cardNameOf = (target: NavigationTarget | null) => {
 	if (routeId === "/me" || routeId?.startsWith("/me/")) return "me";
 };
 
+const subpageNames: Record<string, string[]> = {
+	"/me/about": ["about-me", "about-me-content"],
+	"/me/privacy-rights": [
+		"privacy-rights",
+		"privacy-rights-content",
+		"privacy-rights-content-ignore",
+	],
+};
+
 const getMorphNames = ({ from, to }: OnNavigate) => {
+	const fromRoute = from?.route.id;
+	const toRoute = to?.route.id;
+	const subpage =
+		fromRoute === "/me" ? toRoute : toRoute === "/me" ? fromRoute : undefined;
+	const subpageMorph = subpage && subpageNames[subpage];
+	if (subpageMorph) return subpageMorph;
 	const name =
-		from?.route.id === "/(index)"
+		fromRoute === "/(index)"
 			? cardNameOf(to)
-			: to?.route.id === "/(index)"
+			: toRoute === "/(index)"
 				? cardNameOf(from)
 				: undefined;
 	return name ? [name] : [];

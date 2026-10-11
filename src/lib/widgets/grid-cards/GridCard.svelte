@@ -46,6 +46,7 @@
 <script lang="ts">
 	import type { HTMLAttributes } from "svelte/elements";
 	import { squircle } from "#lib/squircle.ts";
+	import { morphName } from "#lib/view-transition.svelte.ts";
 
 	let {
 		size,
@@ -75,7 +76,8 @@
 	class={[preset.class, className, { bg }]}
 	style:border-radius={borderRadius}
 	style:--bg={bg}
-	style:view-transition-name={viewId}
+	style:--morph-name={viewId}
+	style:view-transition-name={viewId && morphName(viewId)}
 	{@attach squircle({ cornerRadius, cornerSmoothing: preset.cornerSmoothing })}
 >
 	{@render children?.()}

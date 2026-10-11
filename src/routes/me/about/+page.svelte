@@ -3,11 +3,16 @@
 	import GreetingsCard from "../GreetingsCard.svelte";
 	import CloseSubpageLink from "../CloseSubpageLink.svelte";
 	import meInPinkHatLqip from "#lib/assets/me-in-pink-hat.webp?lqip";
+	import { morphName } from "#lib/view-transition.svelte.ts";
 </script>
 
 <PageMetadata />
 <GreetingsCard>
-	<div class="flex h-full" style="view-transition-name: about-me-content;">
+	<div
+		class="flex h-full"
+		style:--morph-name="about-me-content"
+		style:view-transition-name={morphName("about-me-content")}
+	>
 		<div
 			class="relative flex min-w-0 flex-4/5 flex-col items-start gap-6
 				overflow-auto rounded-l-[55px] focus-scrollable px500:flex-2/3

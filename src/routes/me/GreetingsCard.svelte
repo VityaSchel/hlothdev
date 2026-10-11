@@ -3,6 +3,7 @@
 	import GridCard from "#lib/widgets/grid-cards/GridCard.svelte";
 	import WavingHandIcon from "#lib/icons/WavingHandIcon.svelte";
 	import Button from "#lib/ui/Button.svelte";
+	import { morphName } from "#lib/view-transition.svelte.ts";
 
 	let {
 		inert,
@@ -36,7 +37,10 @@
 	{:else}
 		<div
 			class="flex size-full flex-col justify-between px-[8.22cqw] py-[8.74cqw]"
-			style:view-transition-name={inert ? undefined : "about-me-content"}
+			style:--morph-name={inert ? undefined : "about-me-content"}
+			style:view-transition-name={inert
+				? undefined
+				: morphName("about-me-content")}
 		>
 			<span
 				class="size-[11.05cqw] shrink-0 rounded-full bg-black p-[2.05cqw]"

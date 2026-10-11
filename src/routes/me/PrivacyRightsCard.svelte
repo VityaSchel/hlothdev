@@ -5,6 +5,7 @@
 	import Button from "#lib/ui/Button.svelte";
 	import bgLqip from "#lib/assets/privacy-rights.webp?lqip";
 	import { torDomain } from "#lib/utils.ts";
+	import { morphName } from "#lib/view-transition.svelte.ts";
 
 	let {
 		inert,
@@ -42,9 +43,10 @@
 		width="2400"
 		height="1138"
 		style:background-image="url({bgLqip.lqip})"
+		style:--morph-name={inert ? undefined : "privacy-rights-content-ignore"}
 		style:view-transition-name={inert
 			? undefined
-			: "privacy-rights-content-ignore"}
+			: morphName("privacy-rights-content-ignore")}
 	/>
 	{#if expanded}
 		{@render children?.()}
@@ -52,7 +54,10 @@
 		<div
 			class="relative z-1 flex h-full flex-col justify-end gap-[2.36cqw]
 				px-[5.90cqw] py-[5.11cqw]"
-			style:view-transition-name={inert ? undefined : "privacy-rights-content"}
+			style:--morph-name={inert ? undefined : "privacy-rights-content"}
+			style:view-transition-name={inert
+				? undefined
+				: morphName("privacy-rights-content")}
 		>
 			<span
 				class="mb-auto text-[3.54cqw] tracking-[-0.011cqw] text-[#5D5D5D]

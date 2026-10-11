@@ -6,6 +6,7 @@
 	import PrivateContactMethod from "./PrivateContactMethod.svelte";
 	import PageMetadata from "#lib/widgets/PageMetadata.svelte";
 	import { siteUrl, subdomainUrl, torDomain } from "#lib/utils.ts";
+	import { morphName } from "#lib/view-transition.svelte.ts";
 	import sessionNativeIcon from "#showcase/session-native/logo-square-xs.webp?inline";
 	import sessionJsIcon from "#showcase/session.js/logo-square-xs.webp?inline";
 	import onsRegistryIcon from "#showcase/ons-registry/logo-square-xs.webp?inline";
@@ -22,7 +23,8 @@
 	<div
 		class="content-container relative z-1 h-full gap-8 overflow-auto
 			rounded-[13px] p-8 px680:flex px680:gap-4 lg:gap-8"
-		style="view-transition-name: privacy-rights-content;"
+		style:--morph-name="privacy-rights-content"
+		style:view-transition-name={morphName("privacy-rights-content")}
 	>
 		<div
 			class="mb-8 flex min-w-0 flex-1 flex-col justify-between gap-2 px680:mb-0
