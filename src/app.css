@@ -35,6 +35,16 @@
 	animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+::view-transition-old(me),
+::view-transition-new(me),
+::view-transition-old(donate),
+::view-transition-new(donate),
+::view-transition-old(.showcase-view-transition),
+::view-transition-new(.showcase-view-transition) {
+	height: 100%;
+	object-fit: cover;
+}
+
 ::view-transition-group(about-me),
 ::view-transition-group(about-me-content) {
 	border-radius: 55px;

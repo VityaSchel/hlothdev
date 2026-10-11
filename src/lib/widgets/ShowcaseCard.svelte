@@ -8,18 +8,17 @@
 
 <a
 	href="/showcase/{id}"
-	class="showcase-view-transition flex shrink-0 cursor-default flex-col
-		items-center gap-[6px] select-none focus:outline-0
-		focus-visible:bg-stone-600/50 focus-visible:outline-[8px]
-		focus-visible:outline-stone-600/50"
+	class="flex shrink-0 cursor-default flex-col items-center gap-[6px]
+		select-none focus:outline-0 focus-visible:bg-stone-600/50
+		focus-visible:outline-[8px] focus-visible:outline-stone-600/50"
 	draggable="false"
-	style:--morph-name="showcase-{id}"
-	style:view-transition-name={morphName(`showcase-${id}`)}
 >
 	<enhanced:img
-		class="banner aspect-2/1 h-[115px] w-[230px] rounded-[5px] bg-neutral-600
-			bg-cover object-cover text-center text-[0px]"
+		class="banner showcase-view-transition aspect-2/1 h-[115px] w-[230px]
+			rounded-[5px] bg-neutral-600 bg-cover object-cover text-center text-[0px]"
 		style="background-image: url({banner.lqip.lqip})"
+		style:--morph-name="showcase-{id}"
+		style:view-transition-name={morphName(`showcase-${id}`)}
 		src={banner.src}
 		alt="{name} banner"
 		draggable="false"
