@@ -7,12 +7,12 @@
 	import PageMetadata from "#lib/widgets/PageMetadata.svelte";
 	import { siteUrl, subdomainUrl, torDomain } from "#lib/utils.ts";
 	import { morphName } from "#lib/view-transition.svelte.ts";
-	import sessionNativeIcon from "#showcase/session-native/logo-square-xs.webp?inline";
-	import sessionJsIcon from "#showcase/session.js/logo-square-xs.webp?inline";
-	import onsRegistryIcon from "#showcase/ons-registry/logo-square-xs.webp?inline";
-	import sessionWebIcon from "#showcase/session-web/logo-square-xs.webp?inline";
-	import vanityIdGeneratorIcon from "#showcase/session-vanity-id-generator/logo-square-xs.webp?inline";
-	import botsDirectoryIcon from "#showcase/session-bots-directory/logo-square-xs.webp?inline";
+	import sessionNativeIcon from "#showcase/session-native/logo-square-xs.webp?no-inline";
+	import sessionJsIcon from "#showcase/session.js/logo-square-xs.webp?no-inline";
+	import onsRegistryIcon from "#showcase/ons-registry/logo-square-xs.webp?no-inline";
+	import sessionWebIcon from "#showcase/session-web/logo-square-xs.webp?no-inline";
+	import vanityIdGeneratorIcon from "#showcase/session-vanity-id-generator/logo-square-xs.webp?no-inline";
+	import botsDirectoryIcon from "#showcase/session-bots-directory/logo-square-xs.webp?no-inline";
 </script>
 
 <PageMetadata
