@@ -9,31 +9,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-	::view-transition-group(donate),
-	::view-transition-new(donate),
-	::view-transition-group(me),
-	::view-transition-new(me),
-	::view-transition-group(about-me),
-	::view-transition-new(about-me),
-	::view-transition-group(about-me-content),
-	::view-transition-new(about-me-content),
-	::view-transition-group(privacy-rights),
-	::view-transition-new(privacy-rights),
-	::view-transition-group(privacy-rights-content),
-	::view-transition-new(privacy-rights-content),
-	::view-transition-group(.showcase-view-transition),
-	::view-transition-new(.showcase-view-transition) {
-		animation-name: fade-in;
-	}
-
-	::view-transition-old(donate),
-	::view-transition-old(me),
-	::view-transition-old(about-me),
-	::view-transition-old(about-me-content),
-	::view-transition-old(privacy-rights),
-	::view-transition-old(privacy-rights-content),
-	::view-transition-old(.showcase-view-transition) {
-		animation-name: fade-out;
+	body *:not(.nav-fake-view-transition) {
+		view-transition-name: none !important;
 	}
 }
 
@@ -118,24 +95,6 @@
 ::view-transition-group(nav-fake-view-transition) {
 	z-index: 1001;
 	border-radius: 16px;
-}
-
-@keyframes fade-in {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
-
-@keyframes fade-out {
-	from {
-		opacity: 1;
-	}
-	to {
-		opacity: 0;
-	}
 }
 
 .showcase-view-transition {
