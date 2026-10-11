@@ -46,6 +46,7 @@ html {
 	--font-compact-display:
 		"SF Compact Display", SF-Compact-Display, "SF Compact", SF-Compact,
 		var(--default-fonts);
+	--breakpoint-px1448: 1448px;
 	--breakpoint-px1380: 1380px;
 	--breakpoint-xl: 1280px;
 	--breakpoint-px1300: 1300px;

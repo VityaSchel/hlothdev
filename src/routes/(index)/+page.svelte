@@ -11,7 +11,7 @@
 </script>
 
 <PageMetadata />
-<PageWrapper class="max-md:h-full">
+<PageWrapper class="max-md:h-full px1448:h-161.25">
 	<h1 class="sr-only">Main page</h1>
 	<div
 		class="scroll-when-wide flex h-full scrollbar-thin flex-col gap-4
