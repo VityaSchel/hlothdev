@@ -12,7 +12,7 @@
 		rounded-[11.76%] focus-lg px580:row-start-8 px580:row-end-9 md:col-start-7
 		md:col-end-8 md:row-start-3 md:row-end-4 px1180:col-start-7 px1180:col-end-8
 		px1180:row-start-4 px1180:row-end-5"
-	aria-label="Link to my charity log on X (formerly Twitter)"
+	aria-label="hloth charity – my charity log on X (formerly Twitter)"
 >
 	<GridCard
 		size="xs"

@@ -19,7 +19,7 @@
 		px580:row-start-5 px580:row-end-6 md:col-start-6 md:col-end-7 md:row-start-5
 		md:row-end-6 px1180:col-start-8 px1180:col-end-9 px1180:row-start-3
 		px1180:row-end-4"
-	aria-label="Link to my profile on Forgejo, which has {repositories} git repositories"
+	aria-label="{repositories} repositories on my Forgejo git server"
 >
 	<GridCard
 		size="xs"

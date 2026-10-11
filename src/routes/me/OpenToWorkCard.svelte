@@ -11,7 +11,7 @@
 		rounded-[11.76%] focus-lg md:col-start-1 md:col-end-2 md:row-start-5
 		md:row-end-6 px1180:col-start-9 px1180:col-end-10 px1180:row-start-1
 		px1180:row-end-2"
-	aria-label="Link to my LinkedIn profile"
+	aria-label="Open to work – my LinkedIn profile"
 >
 	<GridCard size="xs" class="size-full overflow-clip" aria-label="Open to work">
 		<enhanced:img

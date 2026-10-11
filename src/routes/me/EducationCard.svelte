@@ -14,7 +14,7 @@
 		px580:row-start-7 px580:row-end-9 md:col-start-7 md:col-end-9 md:row-start-4
 		md:row-end-6 px1180:col-start-9 px1180:col-end-11 px1180:row-start-3
 		px1180:row-end-5"
-	aria-label="Education card"
+	aria-label="Education – read an article about 10 y.o. me"
 >
 	<GridCard
 		size="lg"
