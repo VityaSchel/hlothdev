@@ -32,7 +32,7 @@
 	<enhanced:img
 		class="absolute top-0 left-0 size-full bg-[#1c330c] object-cover"
 		src="#lib/assets/sonoma-video-banner.webp?quality=50"
-		style="background-image: url('{bgLqip.lqip}'); background-size: cover; font-size: 0px;"
+		style="background-image: url('{bgLqip.lqip}'); background-size: cover;"
 		width="3840"
 		height="2160"
 		sizes="max(100vw, 177.77vh)"

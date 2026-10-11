@@ -11,6 +11,12 @@ html {
 	color: #ffffff;
 }
 
+@layer base {
+	img {
+		color: transparent;
+	}
+}
+
 @theme {
 	--color-thick-typography: #e5e5e5;
 	--color-thin-typography: #7c7c7c;

@@ -52,7 +52,7 @@
 	<enhanced:img
 		src="#lib/assets/privacy-rights.webp"
 		class="absolute top-0 left-0 size-full bg-neutral-200 bg-cover object-cover
-			object-[30%] text-[0px] select-none"
+			object-[30%] select-none"
 		alt="Background: a surveillance camera mounted on a wall"
 		width="2400"
 		height="1138"

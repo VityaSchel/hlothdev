@@ -104,12 +104,7 @@
 		{alt}
 		width="50"
 		height="50"
-		class={[
-			"text-center text-[0px]",
-			{
-				"brightness-[48%]": pressed,
-			},
-		]}
+		class={{ "brightness-[48%]": pressed }}
 	/>
 	{#if highlight && showHighlight}
 		<span class="size-1 rounded-full bg-[#7C7C7C]"></span>

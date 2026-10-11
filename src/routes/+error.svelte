@@ -24,7 +24,6 @@
 				<enhanced:img
 					src="#lib/assets/error.webp?enhanced"
 					alt="Cartoon warthog head with its top blown off, revealing an exploding brain like a mushroom cloud"
-					class="text-center text-[0px]"
 					width="128"
 					height="128"
 					style="width: 64px; height: 64px"

@@ -75,7 +75,7 @@
 		>
 			<enhanced:img
 				class="absolute top-0 left-0 size-full bg-neutral-200 object-cover
-					object-[52%_50%] text-center"
+					object-[52%_50%]"
 				src="#lib/assets/me-in-pink-hat.webp"
 				style="background: url({meInPinkHatLqip.lqip}) center / cover
 					no-repeat;"

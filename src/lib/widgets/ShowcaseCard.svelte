@@ -15,7 +15,7 @@
 >
 	<enhanced:img
 		class="banner showcase-view-transition aspect-2/1 h-[115px] w-[230px]
-			rounded-[5px] bg-neutral-600 bg-cover object-cover text-center text-[0px]"
+			rounded-[5px] bg-neutral-600 bg-cover object-cover"
 		style="background-image: url({banner.lqip.lqip})"
 		style:--morph-name="showcase-{id}"
 		style:view-transition-name={morphName(`showcase-${id}`)}

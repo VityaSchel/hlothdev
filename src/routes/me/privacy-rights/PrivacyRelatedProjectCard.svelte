@@ -21,7 +21,7 @@
 		px1205:pl-[21px]"
 >
 	<img
-		class="shrink-0 rounded-sm text-[8px]"
+		class="shrink-0 rounded-sm"
 		src={icon}
 		alt="Icon of {name}"
 		width="28"

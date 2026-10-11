@@ -57,8 +57,8 @@
 							<enhanced:img
 								{src}
 								{alt}
-								class="rounded-md bg-neutral-600 bg-cover text-center text-[0px]
-									outline-[0.5px] outline-offset-[-0.5px] outline-white/25"
+								class="rounded-md bg-neutral-600 bg-cover outline-[0.5px]
+									outline-offset-[-0.5px] outline-white/25"
 								style="background-image: url({lqip.lqip})"
 								loading={i === 0 ? "eager" : "lazy"}
 							/>

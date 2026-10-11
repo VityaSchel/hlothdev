@@ -24,7 +24,6 @@
 				<div class="flex items-center gap-[5.04cqw]" aria-label={label}>
 					<img
 						src={icon}
-						class="text-[3px]"
 						alt="{label} icon"
 						width="12"
 						height="12"

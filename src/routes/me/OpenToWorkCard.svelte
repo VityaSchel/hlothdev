@@ -18,8 +18,7 @@
 			src="#lib/assets/open-to-work.webp"
 			style="background-image: url({bgLqip.lqip})"
 			alt="Me with a sign saying 'Open to work'"
-			class="size-full bg-neutral-600 bg-cover object-cover text-[0px]
-				leading-[12cqw]"
+			class="size-full bg-neutral-600 bg-cover object-cover"
 			width="238"
 			height="238"
 		/>
