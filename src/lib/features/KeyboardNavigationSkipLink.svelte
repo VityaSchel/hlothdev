@@ -20,12 +20,13 @@
 	]}
 	onclick={(e) => {
 		e.preventDefault();
-		document
-			.getElementById(id)
-			?.querySelector<HTMLElement>(
-				'input, button, a, [tabindex]:not([tabindex="-1"])',
-			)
-			?.focus();
+		const candidates =
+			document
+				.getElementById(id)
+				?.querySelectorAll<HTMLElement>(
+					'input, button, a[href], [tabindex]:not([tabindex="-1"])',
+				) ?? [];
+		[...candidates].find((el) => el.getClientRects().length > 0)?.focus();
 	}}
 >
 	{@render children()}
