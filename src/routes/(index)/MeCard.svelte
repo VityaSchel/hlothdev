@@ -3,6 +3,7 @@
 	import meAvatarLqip from "#lib/assets/me-avatar.webp?lqip";
 	import { onMount } from "svelte";
 	import { getMyAge } from "./my-age";
+	import { morphName } from "#lib/view-transition.svelte.ts";
 
 	let age = $state(getMyAge());
 
@@ -28,7 +29,8 @@
 	href="/me"
 	class="bg-shadow-card-btn @container-size relative max-w-full flex-1
 		cursor-default rounded-[16px] focus-lg md:flex-[743]"
-	style:view-transition-name="me"
+	style:--morph-name="me"
+	style:view-transition-name={morphName("me")}
 	aria-label="Go to About me page"
 >
 	<Squircle

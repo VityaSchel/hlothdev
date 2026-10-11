@@ -2,6 +2,12 @@
 	navigation: auto;
 }
 
+@media (scripting: none) {
+	[style*="--morph-name"] {
+		view-transition-name: var(--morph-name);
+	}
+}
+
 @media (prefers-reduced-motion: reduce) {
 	::view-transition-group(donate),
 	::view-transition-new(donate),

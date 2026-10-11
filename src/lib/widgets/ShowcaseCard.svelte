@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { ShowcaseItem } from "#lib/showcase/items.ts";
+	import { morphName } from "#lib/view-transition.svelte.ts";
 
 	let { id, name, banner }: Pick<ShowcaseItem, "id" | "name" | "banner"> =
 		$props();
@@ -12,7 +13,8 @@
 		focus-visible:bg-stone-600/50 focus-visible:outline-[8px]
 		focus-visible:outline-stone-600/50"
 	draggable="false"
-	style:view-transition-name="showcase-{id}"
+	style:--morph-name="showcase-{id}"
+	style:view-transition-name={morphName(`showcase-${id}`)}
 >
 	<enhanced:img
 		class="banner aspect-2/1 h-[115px] w-[230px] rounded-[5px] bg-neutral-600

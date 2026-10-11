@@ -10,86 +10,24 @@
 	import ReducedTransparencyMessage from "#lib/widgets/ReducedTransparencyMessage.svelte";
 	import type { LayoutProps } from "./$types";
 	import { browser } from "$app/env";
-	import { onMount } from "svelte";
+	import { flushSync, onMount } from "svelte";
+	import { startMorph } from "#lib/view-transition.svelte.ts";
 	import { siteUrl, subdomainUrl } from "#lib/utils.ts";
 
 	let { children, data }: LayoutProps = $props();
 
-	// TODO: fix when nested view transitions are supported
-	// Couldn't find a way to fix z-indexes with CSS only,
-	// until we have :has() support for view transition API js is required
-	const sendTransitionToFront = (viewId: string) => {
-		const style = document.createElement("style");
-		style.innerHTML = `
-      ::view-transition-group(${CSS.escape(viewId)}) {
-        z-index: 1000;
-      }
-    `;
-		style.setAttribute("data-send-transition-to-front", viewId);
-		document.head.appendChild(style);
-		return () => {
-			document.head.removeChild(style);
-		};
-	};
-
-	const viewIds = {
-		me: [
-			["/(index)", "/me"],
-			["/me", "/(index)"],
-		],
-		donate: [
-			["/(index)", "/donate"],
-			["/donate", "/(index)"],
-		],
-	};
-
-	let sendTransitionToFrontTimer: ReturnType<typeof setTimeout> | undefined =
-		$state();
-
-	const unsend = () => {
-		document
-			.querySelectorAll("style[data-send-transition-to-front]")
-			.forEach((style) => {
-				style.remove();
-			});
-	};
-
 	onNavigate((navigation) => {
 		if (!document.startViewTransition) return;
 
+		const endMorph = startMorph(navigation);
+		flushSync();
+
 		return new Promise((resolve) => {
-			if (sendTransitionToFrontTimer) {
-				unsend();
-				clearTimeout(sendTransitionToFrontTimer);
-			}
-			let viewId: string | undefined;
-			if (
-				[navigation.from?.route.id, navigation.to?.route.id].includes(
-					"/showcase/[id]",
-				)
-			) {
-				const projectId = (navigation.from?.params?.id ||
-					navigation.to?.params?.id) as string;
-				viewId = `showcase-${projectId}`;
-			} else {
-				viewId = Object.entries(viewIds).find(([, value]) =>
-					value.some(
-						([from, to]) =>
-							from === navigation.from?.route.id &&
-							to === navigation.to?.route.id,
-					),
-				)?.[0];
-			}
-			if (viewId) {
-				sendTransitionToFront(viewId);
-				sendTransitionToFrontTimer = setTimeout(() => {
-					unsend();
-				}, 500);
-			}
-			document.startViewTransition(async () => {
+			const transition = document.startViewTransition(async () => {
 				resolve();
 				await navigation.complete;
 			});
+			transition.finished.then(endMorph, endMorph);
 		});
 	});
 

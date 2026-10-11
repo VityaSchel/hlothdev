@@ -2,6 +2,7 @@
 	import CardIcon from "#lib/entities/CardIcon.svelte";
 	import Squircle from "#lib/Squircle.svelte";
 	import CardButton from "./CardButton.svelte";
+	import { morphName } from "#lib/view-transition.svelte.ts";
 </script>
 
 <a
@@ -9,7 +10,8 @@
 	class="bg-shadow-card-btn relative max-w-full cursor-default rounded-[16px]
 		focus-lg max-px420:aspect-[344/56] px420:flex-1 px680:flex-3/5 md:flex-1
 		lg:flex-[412]"
-	style:view-transition-name="donate"
+	style:--morph-name="donate"
+	style:view-transition-name={morphName("donate")}
 	aria-label="Open donate to me page"
 >
 	<Squircle class="bg-black/10" cornerRadius={16} arrow>
