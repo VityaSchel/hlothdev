@@ -47,21 +47,49 @@ export const startMorph = (navigation: OnNavigate) => {
 
 const sourceHrefOf = ({ from, to }: OnNavigate) => {
 	if (!from) return;
-	if (to?.route.id === "/me") return from.url.pathname;
+	const fromSubpage = from.route.id?.startsWith("/me/");
+	if (to?.route.id === "/me")
+		return fromSubpage ? from.url.pathname : undefined;
 	if (to?.route.id !== "/(index)") return;
-	return from.route.id?.startsWith("/me/") ? "/me" : from.url.pathname;
+	if (fromSubpage) return "/me";
+	return from.route.id === "/showcase/[id]"
+		? `/showcase/${from.params?.id}`
+		: from.url.pathname;
+};
+
+const isRevealed = (element: Element) => {
+	const rect = element.getBoundingClientRect();
+	const outside = (
+		bounds: Pick<DOMRect, "top" | "left" | "bottom" | "right">,
+	) =>
+		rect.top < bounds.top ||
+		rect.left < bounds.left ||
+		rect.bottom > bounds.bottom ||
+		rect.right > bounds.right;
+	if (outside({ top: 0, left: 0, bottom: innerHeight, right: innerWidth }))
+		return false;
+	for (
+		let parent = element.parentElement;
+		parent;
+		parent = parent.parentElement
+	) {
+		const { overflowX, overflowY } = getComputedStyle(parent);
+		if (overflowX === "visible" && overflowY === "visible") continue;
+		if (outside(parent.getBoundingClientRect())) return false;
+	}
+	return true;
 };
 
 export const revealSource = (navigation: OnNavigate) => {
 	const href = sourceHrefOf(navigation);
 	if (!href) return;
-	[...document.querySelectorAll("main a")]
-		.find(
-			(link) => link.getAttribute("href") === href && !link.closest("[inert]"),
-		)
-		?.scrollIntoView({
-			block: "center",
-			inline: "nearest",
-			behavior: "instant",
-		});
+	const link = [...document.querySelectorAll("main a")].find(
+		(link) => link.getAttribute("href") === href && !link.closest("[inert]"),
+	);
+	if (!link || isRevealed(link)) return;
+	link.scrollIntoView({
+		block: "center",
+		inline: "nearest",
+		behavior: "instant",
+	});
 };
