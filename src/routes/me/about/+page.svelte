@@ -6,7 +6,7 @@
 	import { morphName } from "#lib/view-transition.svelte.ts";
 </script>
 
-<PageMetadata />
+<PageMetadata name="Think different – About me" />
 <GreetingsCard>
 	<div
 		class="flex h-full"

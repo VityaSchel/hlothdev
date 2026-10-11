@@ -18,7 +18,7 @@
 	let { data } = $props();
 </script>
 
-<PageMetadata />
+<PageMetadata name="About me" />
 <GreetingsCard inert />
 <GreetingsCard />
 <LGBTQIAPlusSupportCard />
