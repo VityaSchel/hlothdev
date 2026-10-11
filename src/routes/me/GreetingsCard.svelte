@@ -75,7 +75,7 @@
 				>
 					<path
 						d="M2.16663 11.5H20.8333M20.8333 11.5L11.5 2.16666M20.8333 11.5L11.5 20.8333"
-						stroke="black"
+						stroke="currentColor"
 						stroke-width="2.66667"
 						stroke-linecap="round"
 						stroke-linejoin="round"
