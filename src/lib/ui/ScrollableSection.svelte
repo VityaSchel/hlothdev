@@ -15,6 +15,7 @@
 		skip?: { label: string; id: string };
 	} = $props();
 
+	const uid = $props.id();
 	let scrollX = $state(0);
 </script>
 
@@ -25,6 +26,7 @@
 >
 	<div class="flex items-end justify-between px-4 px470:px-8">
 		<h2
+			id="section-heading-{uid}"
 			class="font-display text-base leading-[19px] font-semibold
 				tracking-[-0.2px] select-none"
 		>
@@ -40,15 +42,15 @@
 			class="checkbox pointer-events-none absolute opacity-0"
 			tabindex="0"
 			autocomplete="off"
-			id="checkbox-{name}"
-			role="switch"
-			aria-label="Toggle wrapping of {name} section"
+			id="checkbox-{uid}"
+			aria-labelledby="toggle-label-{uid} section-heading-{uid}"
 			onchange={() => {
 				scrollX = 0;
 			}}
 		/>
 		<label
-			for="checkbox-{name}"
+			id="toggle-label-{uid}"
+			for="checkbox-{uid}"
 			class="checkbox-label font-display text-sm font-medium tracking-[-0.2px]
 				text-thin-typography select-none hover:underline"
 		>
