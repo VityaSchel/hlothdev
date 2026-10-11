@@ -1,9 +1,13 @@
 <script lang="ts">
+	import { MediaQuery } from "svelte/reactivity";
 	import PageMetadata from "#lib/widgets/PageMetadata.svelte";
 	import GreetingsCard from "../GreetingsCard.svelte";
 	import CloseSubpageLink from "../CloseSubpageLink.svelte";
 	import meInPinkHatLqip from "#lib/assets/me-in-pink-hat.webp?lqip";
 	import { morphName } from "#lib/view-transition.svelte.ts";
+
+	const uid = $props.id();
+	const wide = new MediaQuery("min-width: 600px", false);
 </script>
 
 <PageMetadata name="Think different – About me" />
@@ -25,15 +29,20 @@
 			>
 				<CloseSubpageLink />
 			</nav>
+			<!-- svelte-ignore a11y_no_noninteractive_tabindex -->
 			<div
-				class="mt-16 overflow-auto mask-t-from-95% p-7 pt-4 px600:mt-0
-					px600:overflow-visible px600:mask-none px600:p-0"
+				class="mt-16 overflow-auto mask-t-from-95% p-7 pt-4 focus-scrollable
+					px600:mt-0 px600:overflow-visible px600:mask-none px600:p-0"
+				tabindex={wide.current ? undefined : 0}
+				role="region"
+				aria-labelledby="heading-{uid}"
 			>
 				<div
 					class="flex flex-1 flex-col text-base leading-relaxed font-medium
 						px600:text-lg px980:text-xl px980:leading-[35px]"
 				>
 					<h1
+						id="heading-{uid}"
 						class="indent-hanging mb-4 text-3xl font-bold px980:mb-7
 							px980:text-[39px] px980:leading-[37px]"
 					>
