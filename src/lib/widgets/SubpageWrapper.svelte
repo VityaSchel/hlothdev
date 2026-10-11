@@ -34,9 +34,9 @@
 				class="flex h-full cursor-default items-center justify-center
 					rounded-tl-[32px] pr-2 pl-[18px] text-white/55
 					[--svg-mask-color:#ffffff8c] focus:outline-0
-					focus-visible:outline-stone-200/60 active:text-[#EAEAEA]
-					active:[--svg-mask-color:#eaeaea] focus-visible:[&_svg]:outline-3
-					focus-visible:[&_svg]:outline-offset-3"
+					focus-visible:*:rounded-full focus-visible:*:outline-3
+					focus-visible:*:outline-offset-3 focus-visible:*:outline-stone-200/60
+					active:text-[#EAEAEA] active:[--svg-mask-color:#eaeaea]"
 				draggable="false"
 			>
 				<SvgFallback {...CloseIconRendered} mono fallback="squeeze">
