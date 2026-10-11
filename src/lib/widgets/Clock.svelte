@@ -29,7 +29,7 @@
 
 <div
 	class="@container size-full cursor-default rounded-full bg-white p-[2.1%]
-		text-[#1c1c1e] select-none"
+		text-[#1c1c1e] forced-color-adjust-none select-none"
 >
 	<div class="relative size-full">
 		{#each { length: hours }, i}
