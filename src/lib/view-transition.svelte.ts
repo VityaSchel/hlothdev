@@ -59,6 +59,29 @@ export const startMorph = (navigation: OnNavigate) => {
 	};
 };
 
+const steadyFrameMs = 40;
+const maxHoldMs = 250;
+
+export const playWhenSmooth = () => {
+	const animations = document
+		.getAnimations()
+		.filter(
+			(animation) =>
+				animation.effect instanceof KeyframeEffect &&
+				animation.effect.pseudoElement?.startsWith("::view-transition"),
+		);
+	animations.forEach((animation) => animation.pause());
+	const start = performance.now();
+	let previous: number | undefined;
+	const wait = (now: number) => {
+		if ((previous && now - previous < steadyFrameMs) || now - start > maxHoldMs)
+			return animations.forEach((animation) => animation.play());
+		previous = now;
+		requestAnimationFrame(wait);
+	};
+	requestAnimationFrame(wait);
+};
+
 const sourceHrefOf = ({ from, to }: OnNavigate) => {
 	if (!from) return;
 	const fromSubpage = from.route.id?.startsWith("/me/");

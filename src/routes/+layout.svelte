@@ -11,7 +11,11 @@
 	import type { LayoutProps } from "./$types";
 	import { browser } from "$app/env";
 	import { flushSync, onMount } from "svelte";
-	import { revealSource, startMorph } from "#lib/view-transition.svelte.ts";
+	import {
+		playWhenSmooth,
+		revealSource,
+		startMorph,
+	} from "#lib/view-transition.svelte.ts";
 	import { siteUrl, subdomainUrl } from "#lib/utils.ts";
 
 	let { children, data }: LayoutProps = $props();
@@ -30,7 +34,7 @@
 				flushSync();
 				revealSource(navigation);
 			});
-			transition.ready.catch(() => {});
+			transition.ready.then(playWhenSmooth, () => {});
 			transition.updateCallbackDone.catch(() => {});
 			transition.finished.then(morph.end, morph.end);
 		});
