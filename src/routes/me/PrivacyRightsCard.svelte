@@ -6,6 +6,8 @@
 	import bgLqip from "#lib/assets/privacy-rights.webp?lqip";
 	import { torDomain } from "#lib/utils.ts";
 	import { morphName } from "#lib/view-transition.svelte.ts";
+	import type { Attachment } from "svelte/attachments";
+	import { on } from "svelte/events";
 
 	let {
 		inert,
@@ -16,6 +18,18 @@
 	} = $props();
 
 	let expanded = $derived(page.route.id === "/me/privacy-rights" && !inert);
+
+	const exposePhoto: Attachment<HTMLImageElement> = (img) => {
+		const expose = () => {
+			if (!img.currentSrc) return;
+			document.documentElement.style.setProperty(
+				"--privacy-rights-photo",
+				`url("${img.currentSrc}")`,
+			);
+		};
+		expose();
+		return on(img, "load", expose);
+	};
 </script>
 
 <GridCard
@@ -47,6 +61,7 @@
 		style:view-transition-name={inert
 			? undefined
 			: morphName("privacy-rights-content-ignore")}
+		{@attach exposePhoto}
 	/>
 	{#if expanded}
 		{@render children?.()}
