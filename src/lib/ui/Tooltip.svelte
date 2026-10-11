@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { Attachment } from "svelte/attachments";
+	import { innerWidth } from "svelte/reactivity/window";
 
 	let {
 		children,
@@ -11,6 +12,24 @@
 		y: number;
 	} = $props();
 	let uid = $props.id();
+	let width = $state(0);
+
+	const viewportMargin = 8;
+	const arrowInset = 16;
+	const clamp = (value: number, min: number, max: number) =>
+		Math.min(Math.max(value, min), max);
+
+	const arrowShift = $derived.by(() => {
+		const viewport = innerWidth.current;
+		if (!width || !viewport) return 0;
+		const half = width / 2;
+		const center = clamp(
+			x,
+			viewportMargin + half,
+			viewport - viewportMargin - half,
+		);
+		return clamp(x - center, arrowInset - half, half - arrowInset);
+	});
 
 	const portal: Attachment = (node) => {
 		document.body.append(node);
@@ -25,8 +44,10 @@
 	<div
 		class="tooltip-container pointer-events-none absolute z-5 flex
 			-translate-x-1/2 -translate-y-1/2 flex-col items-center"
-		style:left="{x}px"
+		style:left="{x - arrowShift}px"
 		style:top="{y - 8}px"
+		style:--arrow-shift="{arrowShift}px"
+		bind:offsetWidth={width}
 		role="tooltip"
 		aria-labelledby="tooltip-title-{uid}"
 	>
@@ -59,6 +80,7 @@
 	.tooltip-container {
 		--radius: 4px;
 		--arrow-height: 10px;
+		--arrow-shift: 0px;
 		--font-size: 14px;
 
 		--arrow-aspect-ratio: calc(38 / 16);
@@ -80,7 +102,7 @@
 				/* bottom right */ 100% calc(100% - var(--arrow-height)),
 				/* horizontal */ 0 var(--radius),
 				/* vertical */ var(--radius) 0,
-				/* arrow */ calc(50% + 0.5px) 100%;
+				/* arrow */ calc(50% + 0.5px + var(--arrow-shift)) 100%;
 			mask-size:
 				/* top left */
 				calc(var(--radius) * 2) calc(var(--radius) * 2),
@@ -118,10 +140,12 @@
 				var(--left) var(--top),
 				var(--right) var(--top),
 				var(--right) var(--bottom),
-				calc(50% + var(--half-arrow) + 1px) var(--bottom),
-				calc(50% + var(--half-arrow) + 1px) calc(var(--bottom) - 3px),
-				calc(50% - var(--half-arrow) + 0.5px) calc(var(--bottom) - 3px),
-				calc(50% - var(--half-arrow) + 0.5px) var(--bottom),
+				calc(50% + var(--arrow-shift) + var(--half-arrow) + 1px) var(--bottom),
+				calc(50% + var(--arrow-shift) + var(--half-arrow) + 1px)
+					calc(var(--bottom) - 3px),
+				calc(50% + var(--arrow-shift) - var(--half-arrow) + 0.5px)
+					calc(var(--bottom) - 3px),
+				calc(50% + var(--arrow-shift) - var(--half-arrow) + 0.5px) var(--bottom),
 				var(--left) var(--bottom)
 			);
 		}
@@ -145,7 +169,7 @@
 			background-position: center bottom;
 			width: calc(var(--arrow-width) + 0.25px);
 			height: calc(var(--arrow-height) + 0.15px);
-			left: calc(50% - (var(--arrow-width) / 2));
+			left: calc(50% - (var(--arrow-width) / 2) + var(--arrow-shift));
 			transform: translateY(0.5px);
 		}
 	}
