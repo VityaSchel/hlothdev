@@ -21,7 +21,7 @@
 
 	const exposePhoto: Attachment<HTMLImageElement> = (img) => {
 		const expose = () => {
-			if (!img.currentSrc) return;
+			if (!img.complete || !img.naturalWidth) return;
 			document.documentElement.style.setProperty(
 				"--privacy-rights-photo",
 				`url("${img.currentSrc}")`,
@@ -50,13 +50,17 @@
 	aria-label="Privacy Rights Support Card"
 >
 	<enhanced:img
-		src="#lib/assets/privacy-rights.webp"
+		src="#lib/assets/privacy-rights.webp?w=768;1080;1536;1920;2400"
+		sizes={expanded
+			? "max(100vw, 211vh)"
+			: "(min-width: 1280px) 555px, (min-width: 768px) 47vw, (min-width: 580px) 75vw, 125vw"}
 		class="absolute top-0 left-0 size-full bg-neutral-200 bg-cover object-cover
 			object-[30%] select-none"
 		alt="Background: a surveillance camera mounted on a wall"
 		width="2400"
 		height="1138"
-		style:background-image="url({bgLqip.lqip})"
+		style:background-image="var(--privacy-rights-photo, none), url({bgLqip.lqip})"
+		style:background-position="30%"
 		style:--morph-name={inert ? undefined : "privacy-rights-content-ignore"}
 		style:view-transition-name={inert
 			? undefined

@@ -57,6 +57,7 @@
 							<enhanced:img
 								{src}
 								{alt}
+								sizes="(min-width: 1440px) 640px, (min-width: 1024px) 44vw, (min-width: 768px) 34vw, (min-width: 600px) 43vw, 87vw"
 								class="rounded-md bg-neutral-600 bg-cover outline-[0.5px]
 									outline-offset-[-0.5px] outline-white/25"
 								style="background-image: url({lqip.lqip})"

@@ -14,7 +14,11 @@ const thumbnails = import.meta.glob<Picture>(
 
 const pictures = import.meta.glob<Picture>(
 	["../assets/showcase/*/*.webp", "!**/banner.webp", "!**/logo-square-xs.webp"],
-	{ eager: true, import: "default", query: "?enhanced&quality=80" },
+	{
+		eager: true,
+		import: "default",
+		query: "?enhanced&w=640;960;1280;1920;2560&quality=80",
+	},
 );
 
 const placeholders = import.meta.glob<Placeholder>(
