@@ -3,16 +3,13 @@
 	import { showcaseImages } from "#lib/showcase/images.ts";
 	import { subdomainUrl } from "#lib/utils.ts";
 
-	const { banner, image } = showcaseImages("byom");
+	const { image } = showcaseImages("byom");
 
 	export const byomProject: ShowcaseItem = {
-		type: "project",
 		id: "byom",
-		name: "Build Your Own Messenger",
 		description,
 		shortDescription:
 			"Build Your Own post-quantum self-hosted end-to-end encrypted Messenger",
-		banner,
 		images: [
 			{
 				...image("screenshot"),

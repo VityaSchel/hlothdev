@@ -3,16 +3,13 @@
 	import { showcaseImages } from "#lib/showcase/images.ts";
 	import { subdomainUrl } from "#lib/utils.ts";
 
-	const { banner, image } = showcaseImages("samsung-pinger");
+	const { image } = showcaseImages("samsung-pinger");
 
 	export const samsungPingerProject: ShowcaseItem = {
-		type: "project",
 		id: "samsung-pinger",
-		name: "Samsung Pinger",
 		description,
 		shortDescription:
 			'A macOS widget with a "Ring my Samsung" button device, written in Swift',
-		banner,
 		images: [
 			{
 				...image("screenshot"),

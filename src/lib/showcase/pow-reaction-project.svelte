@@ -3,16 +3,13 @@
 	import { showcaseImages } from "#lib/showcase/images.ts";
 	import { subdomainUrl } from "#lib/utils.ts";
 
-	const { banner, image } = showcaseImages("pow-reaction");
+	const { image } = showcaseImages("pow-reaction");
 
 	export const powReactionProject: ShowcaseItem = {
-		type: "project",
 		id: "pow-reaction",
-		name: "pow-reaction JS library",
 		description,
 		shortDescription:
 			"A library for proof-of-work reactions built with Svelte 👍 ❤️ 👀 😮 🤔 🚀",
-		banner,
 		images: [
 			{
 				...image("screenshot"),

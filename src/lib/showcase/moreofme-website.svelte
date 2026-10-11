@@ -3,16 +3,13 @@
 	import { showcaseImages } from "#lib/showcase/images.ts";
 	import { subdomainUrl } from "#lib/utils.ts";
 
-	const { banner, image } = showcaseImages("moreofme");
+	const { image } = showcaseImages("moreofme");
 
 	export const moreOfMeWebsite: ShowcaseItem = {
-		type: "website",
 		id: "moreofme",
-		name: "Moreof.me Social",
 		description,
 		shortDescription:
 			"A personal web space, encouraging users to express their thoughts and hobbies, made for freelance client in 2024-2025",
-		banner,
 		images: [
 			{
 				...image("image"),

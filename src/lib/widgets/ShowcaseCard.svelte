@@ -1,9 +1,8 @@
 <script lang="ts">
-	import type { ShowcaseItem } from "#lib/showcase/items.ts";
+	import type { ShowcaseCardData } from "#lib/showcase/cards.ts";
 	import { morphName } from "#lib/view-transition.svelte.ts";
 
-	let { id, name, banner }: Pick<ShowcaseItem, "id" | "name" | "banner"> =
-		$props();
+	let { id, name, banner }: ShowcaseCardData = $props();
 </script>
 
 <a

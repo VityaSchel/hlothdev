@@ -3,16 +3,13 @@
 	import { showcaseImages } from "#lib/showcase/images.ts";
 	import { subdomainUrl } from "#lib/utils.ts";
 
-	const { banner, image } = showcaseImages("oge-generator");
+	const { image } = showcaseImages("oge-generator");
 
 	export const ogeGeneratorWebsite: ShowcaseItem = {
-		type: "website",
 		id: "oge-generator",
-		name: "OGE generator",
 		description,
 		shortDescription:
 			"A next-generation generator for the national informatics exam in Russia",
-		banner,
 		images: [
 			{
 				...image("screenshot-1"),

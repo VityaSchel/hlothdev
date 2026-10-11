@@ -3,16 +3,13 @@
 	import { showcaseImages } from "#lib/showcase/images.ts";
 	import { subdomainUrl } from "#lib/utils.ts";
 
-	const { banner, image } = showcaseImages("ps4-merger");
+	const { image } = showcaseImages("ps4-merger");
 
 	export const ps4mergerProject: ShowcaseItem = {
-		type: "project",
 		id: "ps4-merger",
-		name: "PS4 Merger",
 		description,
 		shortDescription:
 			"A PlayStation 4 developer tool allowing to merge .pkg files directly on the console",
-		banner,
 		images: [
 			{
 				...image("screenshot"),

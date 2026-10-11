@@ -3,16 +3,13 @@
 	import { showcaseImages } from "#lib/showcase/images.ts";
 	import { subdomainUrl } from "#lib/utils.ts";
 
-	const { banner, image } = showcaseImages("batumi-bike");
+	const { image } = showcaseImages("batumi-bike");
 
 	export const batumiBikeWebsite: ShowcaseItem = {
-		type: "website",
 		id: "batumi-bike",
-		name: "Batumi.bike",
 		description,
 		shortDescription:
 			"A map of safe roads for electric scooters in Batumi, Georgia based on OpenStreetMap data",
-		banner,
 		images: [
 			{
 				...image("screenshot-1"),

@@ -3,16 +3,13 @@
 	import { showcaseImages } from "#lib/showcase/images.ts";
 	import { subdomainUrl } from "#lib/utils.ts";
 
-	const { banner, image } = showcaseImages("session-web");
+	const { image } = showcaseImages("session-web");
 
 	export const sessionWebWebsite: ShowcaseItem = {
-		type: "website",
 		id: "session-web",
-		name: "Session Web",
 		description,
 		shortDescription:
 			"An experimental project running Session messenger in a web browser online",
-		banner,
 		images: [
 			{
 				...image("screenshot"),

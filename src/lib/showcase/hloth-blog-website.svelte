@@ -3,16 +3,13 @@
 	import { showcaseImages } from "#lib/showcase/images.ts";
 	import { subdomainUrl } from "#lib/utils.ts";
 
-	const { banner, image } = showcaseImages("hloth-blog");
+	const { image } = showcaseImages("hloth-blog");
 
 	export const blogHlothDevWebsite: ShowcaseItem = {
-		type: "website",
 		id: "hloth-blog",
-		name: "hloth blog",
 		description,
 		shortDescription:
 			"My personal blog about web development and personal projects",
-		banner,
 		images: [
 			{
 				...image("screenshot"),

@@ -3,16 +3,13 @@
 	import { showcaseImages } from "#lib/showcase/images.ts";
 	import { subdomainUrl } from "#lib/utils.ts";
 
-	const { banner, image } = showcaseImages("bunsogs");
+	const { image } = showcaseImages("bunsogs");
 
 	export const bunsogsProject: ShowcaseItem = {
-		type: "project",
 		id: "bunsogs",
-		name: "Bunsogs",
 		description,
 		shortDescription:
 			"A better Session Open Group Server implementation in TypeScript with Bun",
-		banner,
 		images: [
 			{
 				...image("screenshot-1"),

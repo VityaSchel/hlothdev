@@ -2,15 +2,12 @@
 	import type { ShowcaseItem } from "#lib/showcase/items.ts";
 	import { showcaseImages } from "#lib/showcase/images.ts";
 
-	const { banner, image } = showcaseImages("business-estate-solutions");
+	const { image } = showcaseImages("business-estate-solutions");
 
 	export const besWebsite: ShowcaseItem = {
-		type: "website",
 		id: "bes",
-		name: "Business Estate Solutions CRM",
 		description,
 		shortDescription: "A CRM system for a real estate agency",
-		banner,
 		images: [
 			{
 				...image("screenshot-1"),

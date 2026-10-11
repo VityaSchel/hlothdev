@@ -3,15 +3,12 @@
 	import { showcaseImages } from "#lib/showcase/images.ts";
 	import { subdomainUrl } from "#lib/utils.ts";
 
-	const { banner, image } = showcaseImages("session-native");
+	const { image } = showcaseImages("session-native");
 
 	export const sessionNativeProject: ShowcaseItem = {
-		type: "project",
 		id: "session-native",
-		name: "Session Native",
 		description,
 		shortDescription: "An unofficial native macOS client for Session messenger",
-		banner,
 		images: [
 			{
 				...image("screenshot"),

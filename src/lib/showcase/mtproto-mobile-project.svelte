@@ -3,16 +3,13 @@
 	import { showcaseImages } from "#lib/showcase/images.ts";
 	import { subdomainUrl } from "#lib/utils.ts";
 
-	const { banner, image } = showcaseImages("mtproto-mobile");
+	const { image } = showcaseImages("mtproto-mobile");
 
 	export const mtprotoMobileProject: ShowcaseItem = {
-		type: "project",
 		id: "mtproto-mobile",
-		name: "Mtproto Mobile",
 		description,
 		shortDescription:
 			"An Android app allowing raw communication with Telegram API using Core API protocol.",
-		banner,
 		images: [
 			{
 				...image("screenshots"),

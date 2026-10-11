@@ -3,7 +3,7 @@
 	import { showcaseImages } from "#lib/showcase/images.ts";
 	import { subdomainUrl } from "#lib/utils.ts";
 
-	const { banner, image } = showcaseImages("x5-websites");
+	const { image } = showcaseImages("x5-websites");
 
 	const featuredLinks = {
 		ketoplan: {
@@ -47,13 +47,10 @@
 	};
 
 	export const x5Websites: ShowcaseItem = {
-		type: "website",
 		id: "x5-websites",
-		name: "X5.io Websites",
 		description,
 		shortDescription:
 			"B2B SaaS websites for x5.io/bot.biz built with React & Next.js, made for freelance client in 2021-2023",
-		banner,
 		images: [
 			{
 				...image("ketoplan-1"),

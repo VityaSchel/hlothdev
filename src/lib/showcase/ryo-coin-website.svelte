@@ -2,16 +2,13 @@
 	import type { ShowcaseItem } from "#lib/showcase/items.ts";
 	import { showcaseImages } from "#lib/showcase/images.ts";
 
-	const { banner, image } = showcaseImages("ryo-coin");
+	const { image } = showcaseImages("ryo-coin");
 
 	export const ryoCoinWebsite: ShowcaseItem = {
-		type: "website",
 		id: "ryo-coin",
-		name: "RYO Coin",
 		description,
 		shortDescription:
 			"A website for RYO, a privacy-focused cryptocurrency, made for freelance client in 2025",
-		banner,
 		images: [
 			{
 				...image("v1-screenshot-1"),

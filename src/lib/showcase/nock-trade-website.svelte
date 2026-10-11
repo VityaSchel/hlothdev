@@ -3,16 +3,13 @@
 	import { showcaseImages } from "#lib/showcase/images.ts";
 	import { subdomainUrl } from "#lib/utils.ts";
 
-	const { banner, image } = showcaseImages("nock-trade");
+	const { image } = showcaseImages("nock-trade");
 
 	export const nockTradeWebsite: ShowcaseItem = {
-		type: "website",
 		id: "nock-trade",
-		name: "Nock Trade Crypto Exchange",
 		description,
 		shortDescription:
 			"A trading platform that allows users to trade various assets seamlessly, made for freelance client in 2025",
-		banner,
 		images: [
 			{
 				...image("screenshot-1"),

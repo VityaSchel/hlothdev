@@ -34,13 +34,10 @@ export type ShowcaseImage = {
 };
 
 export type ShowcaseItem = {
-	type: "website" | "project";
 	id: ProjectId;
-	name: string;
 	description: Snippet;
 	/** Description for meta-tags under 160 characters */
 	shortDescription: string;
-	banner: ShowcaseImage;
 	images: (ShowcaseImage & { alt: string; class?: string })[];
 	links?: () => { url: string; label: string }[];
 };
@@ -72,8 +69,3 @@ export const showcase = {
 	"ps4-merger": ps4mergerProject,
 	"mtproto-mobile": mtprotoMobileProject,
 } satisfies Record<ProjectId, ShowcaseItem>;
-
-const items: ShowcaseItem[] = Object.values(showcase);
-
-export const websites = items.filter((item) => item.type === "website");
-export const projects = items.filter((item) => item.type === "project");

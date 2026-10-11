@@ -3,15 +3,12 @@
 	import { showcaseImages } from "#lib/showcase/images.ts";
 	import { subdomainUrl } from "#lib/utils.ts";
 
-	const { banner, image } = showcaseImages("sipacker");
+	const { image } = showcaseImages("sipacker");
 
 	export const sipackerWebsite: ShowcaseItem = {
-		type: "website",
 		id: "sipacker",
-		name: "SIPacker",
 		description,
 		shortDescription: "A PWA for creating playable SiGame custom packs",
-		banner,
 		images: [
 			{
 				...image("screenshot-1"),

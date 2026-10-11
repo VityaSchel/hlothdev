@@ -3,16 +3,13 @@
 	import { showcaseImages } from "#lib/showcase/images.ts";
 	import { subdomainUrl } from "#lib/utils.ts";
 
-	const { banner, image } = showcaseImages("ons-registry");
+	const { image } = showcaseImages("ons-registry");
 
 	export const onsRegistryProject: ShowcaseItem = {
-		type: "project",
 		id: "ons-registry",
-		name: "ONS Registry e-commerce",
 		description,
 		shortDescription:
 			"A website collecting decrypted ONS/LNS/SNS names and their history, price, owner, etc from the Session Token blockchain",
-		banner,
 		images: [
 			{
 				...image("screenshot"),

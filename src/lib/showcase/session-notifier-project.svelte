@@ -2,16 +2,13 @@
 	import type { ShowcaseItem } from "#lib/showcase/items.ts";
 	import { showcaseImages } from "#lib/showcase/images.ts";
 
-	const { banner, image } = showcaseImages("session-notifier");
+	const { image } = showcaseImages("session-notifier");
 
 	export const sessionNotifierProject: ShowcaseItem = {
-		type: "project",
 		id: "session-notifier",
-		name: "Session Notifier Serverless Platform",
 		description,
 		shortDescription:
 			"A REST API for sending Session messages programmatically, made for freelance client in 2024",
-		banner,
 		images: [
 			{
 				...image("screenshot"),

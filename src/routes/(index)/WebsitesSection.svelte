@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { websites } from "#lib/showcase/items.ts";
+	import { websites } from "#lib/showcase/cards.ts";
 	import ScrollableSection from "#lib/ui/ScrollableSection.svelte";
 	import ShowcaseCard from "#lib/widgets/ShowcaseCard.svelte";
 </script>

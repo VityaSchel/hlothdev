@@ -3,16 +3,13 @@
 	import { showcaseImages } from "#lib/showcase/images.ts";
 	import { subdomainUrl } from "#lib/utils.ts";
 
-	const { banner, image } = showcaseImages("been-foss");
+	const { image } = showcaseImages("been-foss");
 
 	export const beenFossWebsite: ShowcaseItem = {
-		type: "website",
 		id: "been-foss",
-		name: "been-foss",
 		description,
 		shortDescription:
 			'A free open source alternative to ad and trackers cluttered "been" app made with Svelte 5',
-		banner,
 		images: [
 			{
 				...image("screenshot"),

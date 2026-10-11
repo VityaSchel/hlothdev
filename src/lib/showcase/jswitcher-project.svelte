@@ -3,16 +3,13 @@
 	import { showcaseImages } from "#lib/showcase/images.ts";
 	import { subdomainUrl } from "#lib/utils.ts";
 
-	const { banner, image } = showcaseImages("jswitcher");
+	const { image } = showcaseImages("jswitcher");
 
 	export const jswitcherProject: ShowcaseItem = {
-		type: "project",
 		id: "jswitcher",
-		name: "JSwitcher Figma plugin",
 		description,
 		shortDescription:
 			"A Figma plugin for seamless component and font conversion",
-		banner,
 		images: [
 			{
 				...image("screenshot-1"),

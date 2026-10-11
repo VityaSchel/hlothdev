@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { showcaseNames } from "#lib/showcase/index.ts";
 	import { showcase } from "#lib/showcase/items.ts";
 	import PageWrapper from "#lib/widgets/PageWrapper.svelte";
 	import SubpageWrapper from "#lib/widgets/SubpageWrapper.svelte";
@@ -7,20 +8,21 @@
 
 	let { data }: PageProps = $props();
 	const project = $derived(showcase[data.id]);
+	const name = $derived(showcaseNames[data.id]);
 </script>
 
-<PageMetadata name={project.name} description={project.shortDescription} />
+<PageMetadata {name} description={project.shortDescription} />
 {#key project.id}
 	<PageWrapper viewId="showcase-{project.id}" class="showcase-view-transition">
 		<SubpageWrapper
 			class="overflow-auto rounded-b-[32px] focus-scrollable"
 			title="{project.id}.svelte"
-			srTitle="Showcase project page: {project.name}"
+			srTitle="Showcase project page: {name}"
 			backUrl="/"
 		>
 			<div class="flex flex-col gap-4 overflow-auto md:flex-row px870:gap-8">
 				<div class="text-content flex flex-3/5 flex-col gap-4 p-2 lg:flex-1">
-					<h1 class="text-2xl font-semibold">{project.name}</h1>
+					<h1 class="text-2xl font-semibold">{name}</h1>
 					<article
 						class="text-base leading-relaxed font-medium"
 						aria-label="Project description"

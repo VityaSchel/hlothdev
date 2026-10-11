@@ -3,16 +3,13 @@
 	import { showcaseImages } from "#lib/showcase/images.ts";
 	import { subdomainUrl } from "#lib/utils.ts";
 
-	const { banner, image } = showcaseImages("session-watchos");
+	const { image } = showcaseImages("session-watchos");
 
 	export const sessionWatchosProject: ShowcaseItem = {
-		type: "project",
 		id: "session-watchos",
-		name: "Session watchOS",
 		description,
 		shortDescription:
 			"An unofficial native Apple Watch watchOS client for Session Messenger",
-		banner,
 		images: [
 			{
 				...image("screenshot-1"),

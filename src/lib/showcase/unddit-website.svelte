@@ -2,16 +2,13 @@
 	import type { ShowcaseItem } from "#lib/showcase/items.ts";
 	import { showcaseImages } from "#lib/showcase/images.ts";
 
-	const { banner, image } = showcaseImages("unddit");
+	const { image } = showcaseImages("unddit");
 
 	export const undditWebsite: ShowcaseItem = {
-		type: "website",
 		id: "unddit",
-		name: "Unddit",
 		description,
 		shortDescription:
 			"A frontend for Unddit powered by PullPush — view removed Reddit posts and comments, made for freelance client in 2025",
-		banner,
 		images: [
 			{
 				...image("screenshot-1"),

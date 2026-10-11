@@ -3,15 +3,6 @@ import type { Picture } from "@sveltejs/enhanced-img";
 
 type Placeholder = ShowcaseImage["lqip"];
 
-const thumbnails = import.meta.glob<Picture>(
-	"../assets/showcase/*/banner.webp",
-	{
-		eager: true,
-		import: "default",
-		query: "?enhanced&w=230;460;690&quality=80",
-	},
-);
-
 const pictures = import.meta.glob<Picture>(
 	["../assets/showcase/*/*.webp", "!**/banner.webp", "!**/logo-square-xs.webp"],
 	{
@@ -22,7 +13,7 @@ const pictures = import.meta.glob<Picture>(
 );
 
 const placeholders = import.meta.glob<Placeholder>(
-	["../assets/showcase/*/*.webp", "!**/logo-square-xs.webp"],
+	["../assets/showcase/*/*.webp", "!**/banner.webp", "!**/logo-square-xs.webp"],
 	{ eager: true, import: "default", query: "?lqip" },
 );
 
@@ -41,6 +32,5 @@ const toImage = (
 });
 
 export const showcaseImages = (directory: string) => ({
-	banner: toImage(thumbnails, `${directory}/banner`),
 	image: (name: string) => toImage(pictures, `${directory}/${name}`),
 });
