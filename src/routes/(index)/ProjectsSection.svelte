@@ -10,7 +10,7 @@
 	childrenCount={projects.length}
 	skip={{ label: "Skip to footer navigation", id: "footer-nav" }}
 >
-	{#each projects as { id, name, banner } (id)}
-		<ShowcaseCard {id} {name} {banner} />
+	{#each projects as { id, name, banner }, i (id)}
+		<ShowcaseCard {id} {name} {banner} lazy={i >= 6} />
 	{/each}
 </ScrollableSection>

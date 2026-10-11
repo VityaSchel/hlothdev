@@ -9,7 +9,7 @@
 	childrenCount={websites.length}
 	skip={{ label: "Skip to projects section of showcase", id: "projects" }}
 >
-	{#each websites as { id, name, banner } (id)}
-		<ShowcaseCard {id} {name} {banner} />
+	{#each websites as { id, name, banner }, i (id)}
+		<ShowcaseCard {id} {name} {banner} lazy={i >= 6} />
 	{/each}
 </ScrollableSection>

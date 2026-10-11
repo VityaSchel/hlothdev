@@ -1,8 +1,27 @@
 <script lang="ts">
 	import type { ShowcaseCardData } from "#lib/showcase/cards.ts";
 	import { morphName } from "#lib/view-transition.svelte.ts";
+	import type { Attachment } from "svelte/attachments";
 
-	let { id, name, banner }: ShowcaseCardData = $props();
+	let {
+		id,
+		name,
+		banner,
+		lazy = false,
+	}: ShowcaseCardData & { lazy?: boolean } = $props();
+
+	const loadAhead: Attachment<HTMLImageElement> = (img) => {
+		const observer = new IntersectionObserver(
+			([entry]) => {
+				if (!entry.isIntersecting) return;
+				img.loading = "eager";
+				observer.disconnect();
+			},
+			{ root: img.closest("a")?.parentElement, rootMargin: "0px 720px" },
+		);
+		observer.observe(img);
+		return () => observer.disconnect();
+	};
 </script>
 
 <a
@@ -24,6 +43,8 @@
 		width="460"
 		height="230"
 		sizes="230px"
+		loading={lazy ? "lazy" : "eager"}
+		{@attach lazy && loadAhead}
 	/>
 	<span class="text-center font-sf-pro text-xs font-medium tracking-[-0.1px]"
 		>{name}</span
