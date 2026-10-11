@@ -13,28 +13,20 @@
 	aria-label="Languages I speak card"
 >
 	<div class="flex size-full flex-col gap-[3.36cqw] px-[9.24cqw] py-[6.72cqw]">
-		<h4
+		<h2
 			class="text-[8.40cqw] font-bold tracking-[-0.504cqw] text-[#FF9500]"
 			aria-label="Languages I speak"
 		>
 			Languages
-		</h4>
+		</h2>
 		<div class="flex flex-1 flex-col justify-between pb-[3.36cqw]">
 			{#snippet lang(icon: string, label: string)}
-				<div class="flex items-center gap-[5.04cqw]" aria-label={label}>
-					<img
-						src={icon}
-						alt="{label} icon"
-						width="12"
-						height="12"
-						draggable="false"
-						aria-hidden="true"
-					/>
+				<div class="flex items-center gap-[5.04cqw]">
+					<img src={icon} alt="" width="12" height="12" draggable="false" />
 					<span
 						class="text-[8.40cqw] font-medium tracking-[-1cqw]
 							@px77:tracking-[-0.8cqw] @px84:tracking-[-0.7cqw]
 							@px99:tracking-[-0.5cqw] @px114:tracking-[-0.336cqw]"
-						aria-hidden="true"
 					>
 						{label}
 					</span>
