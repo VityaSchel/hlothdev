@@ -21,8 +21,8 @@
 	} = $props();
 </script>
 
-<aside
-	role="alert"
+<div
+	role="status"
 	class={[
 		` animate-in alert-shadow relative max-w-full rounded-[10px] bg-linear-to-br
 		from-[#b5acac] to-[#a3aca0] p-[10px] pr-3 text-right leading-[19px]
@@ -67,7 +67,7 @@
 		</button>
 	</form>
 	{@render children()}
-</aside>
+</div>
 
 <style>
 	.animate-in {
