@@ -131,38 +131,40 @@
 			window.addEventListener("touchcancel", onTouchEnd, { once: true });
 		}}
 	>
+		<!-- svelte-ignore a11y_no_noninteractive_tabindex -->
 		<div
 			class="scrollbar-invisible absolute inset-0 flex snap-x snap-mandatory
 				gap-px overflow-auto"
 			bind:this={scrollContainer}
 			onscroll={() => (scroll = scrollContainer.scrollLeft)}
 			tabindex="0"
-			role="listbox"
+			role="list"
 			aria-label="A horizontally scrollable list of my favorite things"
 			style={clipPathStyle}
 		>
 			{#each images as { src, lqip, alt, href }, i (i)}
-				<svelte:element
-					this={href ? "a" : "div"}
-					rel={href ? "noopener noreferrer" : undefined}
-					target={href ? "_blank" : undefined}
-					class="animate-scroll size-full shrink-0 cursor-default snap-center
-						overflow-clip rounded-[12.59cqw]"
-					style={clipPathStyle}
-					role="listitem"
-					{href}
-				>
-					<enhanced:img
-						{src}
-						{alt}
-						class="size-full shrink-0 rounded-[12.59cqw] bg-neutral-600 bg-cover
-							object-cover indent-[8cqw] text-[6.22cqw] text-inherit"
-						style="background-image: url({lqip}); {clipPathStyle}"
-						draggable="false"
-						width="508"
-						height="246"
-					/>
-				</svelte:element>
+				<div class="size-full shrink-0 snap-center" role="listitem">
+					<svelte:element
+						this={href ? "a" : "div"}
+						rel={href ? "noopener noreferrer" : undefined}
+						target={href ? "_blank" : undefined}
+						class="animate-scroll block size-full cursor-default overflow-clip
+							rounded-[12.59cqw]"
+						style={clipPathStyle}
+						{href}
+					>
+						<enhanced:img
+							{src}
+							{alt}
+							class="size-full shrink-0 rounded-[12.59cqw] bg-neutral-600
+								bg-cover object-cover indent-[8cqw] text-[6.22cqw] text-inherit"
+							style="background-image: url({lqip}); {clipPathStyle}"
+							draggable="false"
+							width="508"
+							height="246"
+						/>
+					</svelte:element>
+				</div>
 			{/each}
 		</div>
 		{#if browser}
