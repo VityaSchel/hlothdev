@@ -156,7 +156,7 @@
 						{src}
 						{alt}
 						class="size-full shrink-0 rounded-[12.59cqw] bg-neutral-600 bg-cover
-							object-cover"
+							object-cover indent-[8cqw] text-[6.22cqw] text-inherit"
 						style="background-image: url({lqip}); {clipPathStyle}"
 						draggable="false"
 						width="508"
