@@ -4,6 +4,7 @@
 	import bgLqip from "#lib/assets/ready-to-relocate.webp?lqip";
 </script>
 
+<!-- svelte-ignore a11y_no_noninteractive_tabindex -->
 <div
 	class="group @container relative col-start-3 col-end-4 row-start-10 row-end-11
 		rounded-[11.76%] perspective-near px580:col-start-2 px580:col-end-3
@@ -11,7 +12,7 @@
 		md:row-end-6 px1180:col-start-10 px1180:col-end-11 px1180:row-start-1
 		px1180:row-end-2"
 	tabindex="0"
-	role="button"
+	role="group"
 	aria-label="Ready to relocate card"
 >
 	<GridCard
@@ -24,12 +25,12 @@
 		aria-label="Background image: photo of me from my back standing in front of a chinese temple titled 三洞講法堂 (roughly translates to Hall of Preaching the Teachings of the Three Caverns), part of City God Temple of Shanghai, located in the city of Shanghai, China"
 		bg="url({bg}), url({bgLqip.lqip})"
 	>
-		<h4
+		<h2
 			class="text-[9.3cqw] font-semibold tracking-[-0.075em]
 				@px105:text-[10.08cqw]"
 		>
 			I’m ready to relocate
-		</h4>
+		</h2>
 		<span
 			class="small-caps text-shadow-reveal pointer-events-none absolute
 				top-[7cqw] right-[10cqw] z-1 hidden w-[65cqw] text-right text-[12cqw]

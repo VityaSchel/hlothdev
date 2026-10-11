@@ -2,6 +2,8 @@
 	import GridCard from "#lib/widgets/grid-cards/GridCard.svelte";
 	import bg from "#lib/assets/mcdonalds-pride.webp";
 	import bgLqip from "#lib/assets/mcdonalds-pride.webp?lqip";
+
+	const uid = $props.id();
 </script>
 
 <GridCard
@@ -11,6 +13,7 @@
 		md:col-start-1 md:col-end-4 md:row-start-4 md:row-end-5"
 	aria-label="LGBTQIA+ support card / Background image: LGBTQIA+ Pride-themed McDonalds in Madrid"
 >
+	<!-- svelte-ignore a11y_no_noninteractive_tabindex -->
 	<div
 		class="group relative flex size-full flex-col-reverse justify-between
 			overflow-clip rounded-[8.22cqw] bg-neutral-600 bg-cover p-[4.11cqw]
@@ -18,9 +21,12 @@
 			@px273:tracking-[-0.15cqw]"
 		style="background-image: url({bg}), url({bgLqip.lqip});"
 		tabindex="0"
-		role="button"
+		role="group"
+		aria-labelledby="heading-{uid}"
+		aria-describedby="details-{uid}"
 	>
-		<h3
+		<h2
+			id="heading-{uid}"
 			class="relative z-1 leading-[5.5cqw] opacity-100 transition-opacity
 				duration-300 group-focus-within:opacity-50 group-hover:opacity-50
 				px580:leading-[3.08cqw]"
@@ -30,8 +36,9 @@
 			for LGBTQIA+ rights
 			<br class="inline px580:hidden" />
 			and representation
-		</h3>
+		</h2>
 		<span
+			id="details-{uid}"
 			class="relative z-1 opacity-0 transition-opacity duration-300
 				group-focus-within:opacity-100 group-hover:opacity-100"
 		>
