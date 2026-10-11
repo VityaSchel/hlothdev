@@ -12,7 +12,7 @@
 		lg:flex-[412]"
 	style:--morph-name="donate"
 	style:view-transition-name={morphName("donate")}
-	aria-label="Open donate to me page"
+	aria-label="Donate – support open source development"
 >
 	<Squircle class="bg-black/10" cornerRadius={16} arrow>
 		<CardButton>

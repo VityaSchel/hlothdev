@@ -12,7 +12,7 @@
 	class="bg-shadow-card-btn relative max-w-full shrink cursor-default
 		rounded-[16px] focus-lg max-px470:aspect-[402/72] max-px420:aspect-[344/56]
 		px470:flex-1"
-	aria-label="Open my developer resume website"
+	aria-label="Jump to resume & CV – my developer resume website"
 >
 	<Squircle class="bg-black/10" cornerRadius={16} arrow>
 		<CardButton>

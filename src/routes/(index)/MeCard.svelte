@@ -31,7 +31,7 @@
 		cursor-default rounded-[16px] focus-lg md:flex-[743]"
 	style:--morph-name="me"
 	style:view-transition-name={morphName("me")}
-	aria-label="Go to About me page"
+	aria-label="Viktor Shchelochkov – about me"
 >
 	<Squircle
 		class="bg-black/10"

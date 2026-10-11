@@ -74,14 +74,14 @@
 	{@render button(
 		`https://${clearnetDomain}`,
 		"Clearnet version",
-		"Open clearnet version of this website",
+		"Clearnet version of this website",
 		"web",
 	)}
 {:else}
 	{@render button(
 		`http://${torDomain}`,
 		"Onion mirror",
-		"Open onion mirror of this website",
+		"Onion mirror of this website",
 		"onion",
 	)}
 {/if}
