@@ -27,7 +27,7 @@ const getMorphNames = ({ from, to }: OnNavigate) => {
 	const subpage =
 		fromRoute === "/me" ? toRoute : toRoute === "/me" ? fromRoute : undefined;
 	const subpageMorph = subpage && subpageNames[subpage];
-	if (subpageMorph) return subpageMorph;
+	if (subpageMorph) return ["me", ...subpageMorph];
 	const name =
 		fromRoute === "/(index)"
 			? cardNameOf(to)

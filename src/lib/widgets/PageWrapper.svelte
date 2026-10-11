@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Squircle from "#lib/Squircle.svelte";
+	import { morphName } from "#lib/view-transition.svelte.ts";
 
 	let {
 		children,
@@ -18,7 +19,8 @@
 		transparency-reduce:backdrop-blur-none`,
 		className,
 	]}
-	style:view-transition-name={viewId}
+	style:--morph-name={viewId}
+	style:view-transition-name={viewId && morphName(viewId)}
 >
 	<Squircle
 		class="bg-thick transparency-reduce:bg-opaque-sheet"
