@@ -68,6 +68,10 @@
 		]}
 		aria-label="Section {name} of showcase, containing {childrenCount} items"
 		onscroll={(e) => (scrollX = e.currentTarget.scrollLeft)}
+		onfocusin={({ target }) => {
+			if (target instanceof HTMLElement && target.matches(":focus-visible"))
+				target.scrollIntoView({ block: "nearest", inline: "nearest" });
+		}}
 	>
 		{@render children()}
 	</div>
@@ -86,10 +90,11 @@
 			mask-size: 200% 100%;
 			transition: mask-position 0.5s ease-in-out;
 
-			&:not(:hover) {
+			&:not(:hover, :focus-within) {
 				mask-position: 100% 0%;
 			}
-			&:hover {
+			&:hover,
+			&:focus-within {
 				mask-position: 20% 0%;
 			}
 		}
