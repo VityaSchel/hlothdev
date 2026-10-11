@@ -103,6 +103,7 @@
 						}}
 						role="textbox"
 						tabindex="0"
+						onfocus={(e) => getSelection()?.selectAllChildren(e.currentTarget)}
 						aria-readonly="true"
 						aria-labelledby="wallet-name-{uid}"
 					>
