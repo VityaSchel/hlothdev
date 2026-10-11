@@ -36,14 +36,16 @@
 							aria-label="Project links"
 						>
 							{#each project.links() as { url, label }, i (i)}
-								<a
-									href={url}
-									draggable="false"
-									target="_blank"
-									rel="noopener noreferrer nofollow"
-								>
-									{label}
-								</a>
+								<div class="flex" role="listitem">
+									<a
+										href={url}
+										draggable="false"
+										target="_blank"
+										rel="noopener noreferrer nofollow"
+									>
+										{label}
+									</a>
+								</div>
 							{/each}
 						</div>
 					{/if}
@@ -55,7 +57,7 @@
 					aria-label="Project images"
 				>
 					{#each project.images as { src, lqip, alt, class: className }, i (i)}
-						<div class={["flex justify-end", className]}>
+						<div class={["flex justify-end", className]} role="listitem">
 							<enhanced:img
 								{src}
 								{alt}
