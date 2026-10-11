@@ -15,9 +15,7 @@ export const squircle =
 			throw new Error("squircle attachment can only be used on HTMLElement");
 		}
 		if (!browserSupportsSVG()) return;
-		const onResize = () => {
-			const width = element.offsetWidth;
-			const height = element.offsetHeight;
+		const applyClipPath = (width: number, height: number) => {
 			const cornerRadiusPx =
 				cornerRadius < 1 ? cornerRadius * width : cornerRadius;
 			const svgPath = getSvgPath({
@@ -28,8 +26,10 @@ export const squircle =
 			});
 			element.style.clipPath = `path('${svgPath}')`;
 		};
-		onResize();
-		const resizeObserver = new ResizeObserver(onResize);
+		const resizeObserver = new ResizeObserver(([entry]) => {
+			const [box] = entry.borderBoxSize;
+			applyClipPath(box.inlineSize, box.blockSize);
+		});
 		resizeObserver.observe(element);
 		return () => resizeObserver.disconnect();
 	};
