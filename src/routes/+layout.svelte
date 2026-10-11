@@ -19,18 +19,20 @@
 	onNavigate((navigation) => {
 		if (!document.startViewTransition) return;
 
-		const endMorph = startMorph(navigation);
+		const morph = startMorph(navigation);
 		flushSync();
 
 		return new Promise((resolve) => {
 			const transition = document.startViewTransition(async () => {
 				resolve();
 				await navigation.complete;
+				morph.enter();
+				flushSync();
 				revealSource(navigation);
 			});
 			transition.ready.catch(() => {});
 			transition.updateCallbackDone.catch(() => {});
-			transition.finished.then(endMorph, endMorph);
+			transition.finished.then(morph.end, morph.end);
 		});
 	});
 

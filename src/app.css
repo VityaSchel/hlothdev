@@ -2,20 +2,48 @@
 	navigation: auto;
 }
 
-@media (scripting: none) {
+@media (scripting: none) and (prefers-reduced-motion: no-preference) {
 	[style*="--morph-name"] {
 		view-transition-name: var(--morph-name);
 	}
 }
 
 @media (prefers-reduced-motion: reduce) {
-	body *:not(.nav-fake-view-transition) {
-		view-transition-name: none !important;
-	}
-
 	::view-transition-group(nav-fake-view-transition) {
 		animation-name: none;
 	}
+}
+
+@keyframes window-out {
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes window-in {
+	from {
+		opacity: 0;
+	}
+}
+
+::view-transition-group(page),
+::view-transition-group(page-out),
+::view-transition-group(page-in) {
+	border-radius: 32px;
+	animation-duration: 500ms;
+}
+
+::view-transition-group(page-out) {
+	animation-name: window-out;
+}
+
+::view-transition-group(page-in) {
+	animation-name: window-in;
+}
+
+::view-transition-old(page-out),
+::view-transition-new(page-in) {
+	animation-name: none;
 }
 
 ::view-transition-group(root) {
@@ -35,6 +63,7 @@
 ::view-transition-group(privacy-rights),
 ::view-transition-group(privacy-rights-content),
 ::view-transition-group(.showcase-view-transition) {
+	z-index: 1;
 	animation-duration: 500ms;
 	animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 }

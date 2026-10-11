@@ -1,9 +1,13 @@
 import type { NavigationTarget, OnNavigate } from "$app/navigation";
 
 let morphNames = $state.raw<string[]>([]);
+let pageName = $state.raw<string>();
 
 export const morphName = (name: string) =>
 	morphNames.includes(name) ? name : undefined;
+
+export const windowName = (viewId?: string) =>
+	(viewId && morphName(viewId)) || pageName;
 
 const cardNameOf = (target: NavigationTarget | null) => {
 	const routeId = target?.route.id;
@@ -38,10 +42,20 @@ const getMorphNames = ({ from, to }: OnNavigate) => {
 };
 
 export const startMorph = (navigation: OnNavigate) => {
-	const names = getMorphNames(navigation);
+	const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+	const names = reducedMotion ? [] : getMorphNames(navigation);
+	const crossfade = !reducedMotion && !names.length;
 	morphNames = names;
-	return () => {
-		if (morphNames === names) morphNames = [];
+	pageName = crossfade ? "page" : "page-out";
+	return {
+		enter: () => {
+			if (morphNames === names) pageName = crossfade ? "page" : "page-in";
+		},
+		end: () => {
+			if (morphNames !== names) return;
+			morphNames = [];
+			pageName = undefined;
+		},
 	};
 };
 
