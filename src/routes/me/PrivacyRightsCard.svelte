@@ -81,7 +81,8 @@
 			<span
 				class="mb-auto text-[3.54cqw] tracking-[-0.011cqw] text-[#5D5D5D]
 					opacity-0 transition-opacity duration-300 group-hover:opacity-100
-					has-focus-within:opacity-100 no-hover:opacity-100"
+					has-focus-within:opacity-100 contrast-more:text-neutral-800
+					no-hover:opacity-100"
 				aria-label="Photo attribution"
 			>
 				Photo by <a
