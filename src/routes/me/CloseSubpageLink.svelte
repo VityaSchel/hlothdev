@@ -20,6 +20,7 @@
 			stroke-width="3"
 			stroke-linecap="round"
 			stroke-linejoin="round"
+			class="forced-colors:stroke-[Canvas] forced-colors:[stroke-opacity:1]"
 		/>
 	</svg>
 </a>
