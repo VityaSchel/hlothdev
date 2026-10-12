@@ -31,7 +31,7 @@
 		<span
 			class="shadow-badge absolute top-0 left-0 z-1 h-[18px] w-[60px]
 				-translate-x-1/4 -translate-y-2/3 rounded-full bg-[#FF3B30] text-[10px]
-				leading-[18px] font-medium text-white"
+				leading-[18px] font-medium text-white contrast-more:bg-[#D70015]"
 		>
 			Preferred
 		</span>
