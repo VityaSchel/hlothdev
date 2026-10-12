@@ -34,7 +34,7 @@
 	aria-label="Viktor Shchelochkov – about me"
 >
 	<Squircle
-		class="bg-black/10"
+		class="bg-black/10 contrast-more:bg-black/55"
 		containerClass="@container-size"
 		cornerRadius={16}
 		arrow
@@ -65,13 +65,16 @@
 				</h2>
 				<h3
 					class="text-[5cqi] leading-[4.5cqi] font-bold tracking-[-0.2px]
-						text-thin-alt-typography px420:text-[4cqi]"
+						text-thin-alt-typography contrast-more:text-thin-alt-typography!
+						px420:text-[4cqi] px1180:text-thin-typography"
 				>
 					Senior Full Stack Web Developer
 				</h3>
 				<h3
 					class="text-[4cqi] leading-[3.5cqi] font-semibold
-						text-thin-alt-typography px420:text-[3.5cqi]"
+						text-thick-alt-typography contrast-more:text-thin-alt-typography!
+						px420:text-[3.5cqi] md:text-thin-typography
+						px1180:text-[rgba(123,123,123,0.4)]"
 				>
 					{age} y.o., Madrid, Spain
 				</h3>
