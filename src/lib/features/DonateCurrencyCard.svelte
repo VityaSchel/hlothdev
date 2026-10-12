@@ -64,8 +64,9 @@
 			{#if preferred}
 				<span
 					class="text-[23px] leading-7 font-medium tracking-[-0.5px]
-						text-white/60 uppercase px870:text-sm px870:leading-4 px980:text-lg
-						px980:leading-8 px1100:text-[23px] px1100:leading-7"
+						text-white/30 uppercase contrast-more:text-white/60 px870:text-sm
+						px870:leading-4 px980:text-lg px980:leading-8 px1100:text-[23px]
+						px1100:leading-7"
 				>
 					Preferred
 				</span>
