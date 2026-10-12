@@ -25,7 +25,8 @@
 <div class="flex size-full flex-col">
 	<header
 		class="flex h-[52px] w-full shrink-0 items-center justify-between gap-2
-			border-b border-white/25 pr-[15px]"
+			border-b border-white/25 pr-[15px] contrast-more:rounded-t-[32px]
+			contrast-more:border-white/40 contrast-more:bg-black/25"
 	>
 		<div class="flex h-full flex-row items-center">
 			<a
@@ -62,8 +63,10 @@
 					rounded-md border border-[#b6a68e]/40 px-[7px] text-[13px]
 					text-[#ede1cf]/90 focus-sm select-none hover:border-transparent
 					hover:bg-[#b6a68e]/50 active:border-transparent active:bg-[#b6a68e]/80
-					active:text-[#f7efe2] transparency-reduce:border-white/7
-					transparency-reduce:text-zinc-400 transparency-reduce:hover:bg-white/7
+					active:text-[#f7efe2] contrast-more:bg-black/30
+					contrast-more:hover:bg-black/50 contrast-more:active:bg-black/70
+					transparency-reduce:border-white/7 transparency-reduce:text-zinc-400
+					transparency-reduce:hover:bg-white/7
 					active:transparency-reduce:bg-white/20
 					transparency-reduce:active:text-zinc-200"
 				draggable="false"
