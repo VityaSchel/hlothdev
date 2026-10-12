@@ -12,7 +12,9 @@
 >
 	<div
 		class="flex h-[26.05cqw] w-full shrink-0 items-center bg-linear-to-b
-			from-[#FED700] to-[#E6A600] px-[6.72cqw]"
+			from-[#FED700] to-[#E6A600] px-[6.72cqw] forced-colors:border-b
+			forced-colors:border-[CanvasText] forced-colors:bg-[Canvas]
+			forced-colors:pt-px"
 	>
 		<h2
 			class="block w-full text-center text-[9.24cqw] font-bold tracking-tight
