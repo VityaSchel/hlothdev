@@ -12,7 +12,11 @@
 >
 	<div
 		class="group flex size-full flex-col justify-between overflow-clip
-			rounded-[12.5984252cqw] bg-neutral-600 bg-cover p-[6.29cqw]"
+			rounded-[12.5984252cqw] bg-neutral-600 bg-cover p-[6.29cqw]
+			contrast-more:relative contrast-more:isolate contrast-more:before:absolute
+			contrast-more:before:inset-0 contrast-more:before:-z-1
+			contrast-more:before:bg-linear-to-b contrast-more:before:from-black/60
+			contrast-more:before:via-black/40 contrast-more:before:to-black/55"
 		style="background-image: url({bg}), url({bgLqip.lqip});"
 	>
 		<span
