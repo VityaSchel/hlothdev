@@ -26,9 +26,12 @@
 	class={[
 		` animate-in alert-shadow relative max-w-full rounded-[10px] bg-linear-to-br
 		from-[#b5acac] to-[#a3aca0] p-[10px] pr-3 text-right leading-[19px]
-		font-medium text-[#373737] transition-opacity
-		transparency-reduce:bg-[#b9b9b9] transparency-reduce:[background-image:none]
-		[&_br]:hidden sm:[&_br]:block `,
+		font-medium text-[#373737] transition-opacity forced-colors:border
+		forced-colors:border-[CanvasText] forced-colors:bg-[Canvas]
+		forced-colors:p-[9px] forced-colors:pr-[11px]
+		forced-colors:text-[CanvasText] transparency-reduce:bg-[#b9b9b9]
+		transparency-reduce:[background-image:none]
+		forced-colors:[&_a]:text-[LinkText] [&_br]:hidden sm:[&_br]:block `,
 		{
 			"opacity-100": visible,
 			"animate-none! opacity-0": !visible,
