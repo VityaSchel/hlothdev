@@ -17,7 +17,10 @@
 	<div
 		class="group relative flex size-full flex-col-reverse justify-between
 			overflow-clip rounded-[8.22cqw] bg-neutral-600 bg-cover p-[4.11cqw]
-			text-[4.72cqw] tracking-[-0.18cqw] focus-lg px580:text-[3.08cqw]
+			text-[4.72cqw] tracking-[-0.18cqw] focus-lg contrast-more:before:absolute
+			contrast-more:before:inset-0 contrast-more:before:bg-linear-to-b
+			contrast-more:before:from-black/60 contrast-more:before:via-black/40
+			contrast-more:before:to-black/55 px580:text-[3.08cqw]
 			@px273:tracking-[-0.15cqw]"
 		style="background-image: url({bg}), url({bgLqip.lqip});"
 		tabindex="0"
@@ -29,7 +32,8 @@
 			id="heading-{uid}"
 			class="relative z-1 leading-[5.5cqw] opacity-100 transition-opacity
 				duration-300 group-focus-within:opacity-50 group-hover:opacity-50
-				px580:leading-[3.08cqw]"
+				contrast-more:group-focus-within:opacity-60
+				contrast-more:group-hover:opacity-60 px580:leading-[3.08cqw]"
 		>
 			I’m openly gay and fight
 			<br class="inline px580:hidden" />
@@ -54,8 +58,8 @@
 				z-1 hidden w-[60cqw] text-right text-[6cqw] leading-[6cqw] font-bold
 				text-stone-200/80 uppercase opacity-100 transition-opacity duration-300
 				select-none text-shadow-md group-focus-within:opacity-0
-				group-hover:opacity-0 px580:w-[30cqw] px580:text-[3.07cqw]
-				px580:leading-[3.5cqw] no-hover:block"
+				group-hover:opacity-0 contrast-more:text-stone-200 px580:w-[30cqw]
+				px580:text-[3.07cqw] px580:leading-[3.5cqw] no-hover:block"
 			aria-hidden="true"
 		>
 			Tap to reveal more information
