@@ -24,7 +24,8 @@
 	>
 		<div
 			class="flex size-full flex-col justify-end gap-[0.39cqw] px-[5.90cqw]
-				py-[5.11cqw]"
+				py-[5.11cqw] contrast-more:rounded-[inherit]
+				contrast-more:bg-linear-to-t contrast-more:from-black/50"
 		>
 			<h2
 				class="mb-[2.36cqw] font-extra-condensed text-[7.87cqw]
