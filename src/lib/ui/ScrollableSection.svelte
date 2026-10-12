@@ -52,7 +52,8 @@
 			id="toggle-label-{uid}"
 			for="checkbox-{uid}"
 			class="checkbox-label font-display text-sm font-medium tracking-[-0.2px]
-				text-thin-alt-typography select-none hover:underline"
+				text-thin-typography select-none hover:underline
+				contrast-more:text-thin-alt-typography"
 		>
 			<span class="show-less">Show Less</span>
 			<span class="show-all">
