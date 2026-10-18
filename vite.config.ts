@@ -17,7 +17,9 @@ export default defineConfig({
 				discloseVersion: false,
 			},
 			version: {
-				name: execSync("git rev-parse HEAD").toString().trim(),
+				name:
+					process.env.HLOTH_BUILD_COMMIT ??
+					execSync("git rev-parse HEAD").toString().trim(),
 			},
 			adapter: adapter(),
 			csrf: {
