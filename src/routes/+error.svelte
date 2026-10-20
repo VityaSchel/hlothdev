@@ -19,8 +19,7 @@
 			<div
 				class="shadow-container mb-[20cqb] flex w-[260px] max-w-full flex-col
 					items-center justify-center gap-4 rounded-[10px] bg-[#282828]/50 p-4
-					pt-5 text-center forced-colors:outline forced-colors:-outline-offset-1
-					forced-colors:outline-[CanvasText]"
+					pt-5 text-center forced-colors-edge"
 			>
 				<enhanced:img
 					src="#lib/assets/error.webp?enhanced"

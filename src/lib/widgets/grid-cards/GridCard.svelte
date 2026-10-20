@@ -75,8 +75,7 @@
 	{...props}
 	class={[
 		preset.class,
-		`forced-colors:outline forced-colors:-outline-offset-1
-		forced-colors:outline-[CanvasText]
+		`forced-colors-edge
 		forced-colors:[&[style*='--squircle-radius']]:rounded-(--squircle-radius)!`,
 		className,
 		{ bg },

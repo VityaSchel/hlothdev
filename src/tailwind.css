@@ -128,6 +128,19 @@ html {
 	}
 }
 
+@utility forced-colors-edge {
+	@variant forced-colors {
+		@apply outline -outline-offset-1 outline-[CanvasText];
+	}
+}
+
+@utility contrast-more-scrim {
+	@variant contrast-more {
+		@apply before:absolute before:inset-0 before:bg-linear-to-b
+			before:from-black/60 before:via-black/40 before:to-black/55;
+	}
+}
+
 @custom-variant no-hover (@media not (hover: hover));
 
 @custom-variant transparency-reduce {

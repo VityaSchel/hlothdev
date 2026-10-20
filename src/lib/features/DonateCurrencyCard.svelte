@@ -54,9 +54,7 @@
 				{#each coins as { Icon, rendered } (Icon)}
 					<div
 						class="h-full w-[52px] overflow-visible select-none
-							forced-colors:[&_svg]:rounded-full forced-colors:[&_svg]:outline
-							forced-colors:[&_svg]:-outline-offset-1
-							forced-colors:[&_svg]:outline-[CanvasText]"
+							[&_svg]:forced-colors-edge forced-colors:[&_svg]:rounded-full"
 					>
 						<SvgFallback {...rendered}>
 							<Icon />
