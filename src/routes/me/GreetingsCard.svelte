@@ -43,7 +43,8 @@
 				: morphName("about-me-content")}
 		>
 			<span
-				class="size-[11.05cqw] shrink-0 rounded-full bg-black p-[2.05cqw]"
+				class="size-[11.05cqw] shrink-0 rounded-full bg-black p-[2.05cqw]
+					forced-colors:forced-color-adjust-none"
 				aria-hidden="true"
 			>
 				<span
