@@ -23,7 +23,14 @@
 			bg-neutral-600 bg-cover px-[5.88cqw] py-[5.04cqw] transition-transform
 			duration-300 ease-out backface-hidden
 			motion-safe:group-focus-within:rotate-y-180
-			motion-safe:group-hover:rotate-y-180"
+			motion-safe:group-hover:rotate-y-180
+			contrast-more:no-hover:before:absolute
+			contrast-more:no-hover:before:inset-0
+			contrast-more:no-hover:before:rounded-[inherit]
+			contrast-more:no-hover:before:bg-linear-to-b
+			contrast-more:no-hover:before:from-black/65
+			contrast-more:no-hover:before:to-transparent
+			contrast-more:no-hover:before:to-60%"
 		aria-label="Background image: photo of me from my back standing in front of a chinese temple titled 三洞講法堂 (roughly translates to Hall of Preaching the Teachings of the Three Caverns), part of City God Temple of Shanghai, located in the city of Shanghai, China"
 		bg="url({bg}), url({bgLqip.lqip})"
 	>
