@@ -23,7 +23,8 @@
 >
 	<GridCard
 		size="xs"
-		class="size-full bg-linear-to-b from-[#232a33] to-[#171e26]"
+		class="size-full bg-linear-to-b from-[#232a33] to-[#171e26]
+			forced-colors:bg-[Canvas]"
 	>
 		<div
 			class="flex size-full flex-col items-start justify-between p-[6.72cqw]"
