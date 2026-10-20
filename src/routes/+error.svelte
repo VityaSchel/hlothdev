@@ -57,6 +57,14 @@
 		&:active {
 			--foreground: rgba(10, 132, 255, 1);
 		}
+
+		@media (prefers-contrast: more) {
+			--foreground: rgb(0, 86, 200);
+
+			&:active {
+				--foreground: rgb(0, 70, 170);
+			}
+		}
 	}
 	.inset-shadow-top {
 		box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.35);
