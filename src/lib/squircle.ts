@@ -25,6 +25,7 @@ export const squircle =
 				height,
 			});
 			element.style.clipPath = `path('${svgPath}')`;
+			element.style.setProperty("--squircle-radius", `${cornerRadiusPx}px`);
 		};
 		const resizeObserver = new ResizeObserver(([entry]) => {
 			const [box] = entry.borderBoxSize;

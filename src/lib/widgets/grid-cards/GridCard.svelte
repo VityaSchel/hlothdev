@@ -73,7 +73,14 @@
 
 <div
 	{...props}
-	class={[preset.class, className, { bg }]}
+	class={[
+		preset.class,
+		`forced-colors:outline forced-colors:-outline-offset-1
+		forced-colors:outline-[CanvasText]
+		forced-colors:[&[style*='--squircle-radius']]:rounded-(--squircle-radius)!`,
+		className,
+		{ bg },
+	]}
 	style:border-radius={borderRadius}
 	style:--bg={bg}
 	style:--morph-name={viewId}
