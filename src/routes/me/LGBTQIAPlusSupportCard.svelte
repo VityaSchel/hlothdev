@@ -21,7 +21,8 @@
 			contrast-more:before:inset-0 contrast-more:before:bg-linear-to-b
 			contrast-more:before:from-black/60 contrast-more:before:via-black/40
 			contrast-more:before:to-black/55 px580:text-[3.08cqw]
-			@px273:tracking-[-0.15cqw]"
+			@px273:tracking-[-0.15cqw] forced-colors:outline
+			forced-colors:-outline-offset-1 forced-colors:outline-[CanvasText]"
 		style="background-image: url({bg}), url({bgLqip.lqip});"
 		tabindex="0"
 		role="group"

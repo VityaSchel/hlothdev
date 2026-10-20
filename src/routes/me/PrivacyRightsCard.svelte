@@ -55,7 +55,9 @@
 			? "max(100vw, 211vh)"
 			: "(min-width: 1280px) 555px, (min-width: 768px) 47vw, (min-width: 580px) 75vw, 125vw"}
 		class="absolute top-0 left-0 size-full bg-neutral-200 bg-cover object-cover
-			object-[30%] select-none"
+			object-[30%] select-none forced-colors:rounded-[inherit]
+			forced-colors:outline forced-colors:-outline-offset-1
+			forced-colors:outline-[CanvasText]"
 		alt="Background: a surveillance camera mounted on a wall"
 		width="2400"
 		height="1138"

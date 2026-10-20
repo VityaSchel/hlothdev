@@ -16,7 +16,9 @@
 			contrast-more:relative contrast-more:isolate contrast-more:before:absolute
 			contrast-more:before:inset-0 contrast-more:before:-z-1
 			contrast-more:before:bg-linear-to-b contrast-more:before:from-black/60
-			contrast-more:before:via-black/40 contrast-more:before:to-black/55"
+			contrast-more:before:via-black/40 contrast-more:before:to-black/55
+			forced-colors:outline forced-colors:-outline-offset-1
+			forced-colors:outline-[CanvasText]"
 		style="background-image: url({bg}), url({bgLqip.lqip});"
 	>
 		<span
