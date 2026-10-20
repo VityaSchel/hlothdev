@@ -19,7 +19,8 @@
 			<div
 				class="shadow-container mb-[20cqb] flex w-[260px] max-w-full flex-col
 					items-center justify-center gap-4 rounded-[10px] bg-[#282828]/50 p-4
-					pt-5 text-center"
+					pt-5 text-center forced-colors:outline forced-colors:-outline-offset-1
+					forced-colors:outline-[CanvasText]"
 			>
 				<enhanced:img
 					src="#lib/assets/error.webp?enhanced"
@@ -37,7 +38,9 @@
 				<a
 					href="/"
 					class="bg inset-shadow-top min-h-[28px] w-full rounded-[5px] px-2
-						py-[6px] text-[13px] leading-4 select-none"
+						py-[6px] text-[13px] leading-4 select-none forced-colors:border
+						forced-colors:bg-[Canvas] forced-colors:px-[7px]
+						forced-colors:py-[5px]"
 					draggable="false"
 				>
 					Return to Home Page
