@@ -63,7 +63,13 @@
 				<feComposite operator="out" in2="SourceGraphic" />
 			</filter>
 		</defs>
-		<path d={squircle} fill="black" filter="url(#shadow-{uid})" />
+		<path
+			d={squircle}
+			fill="black"
+			filter="url(#shadow-{uid})"
+			class="forced-colors:fill-none forced-colors:stroke-[CanvasText]
+				forced-colors:filter-none"
+		/>
 	</svg>
 	<div
 		class="relative top-0 left-0 z-2 size-full"

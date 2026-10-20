@@ -80,6 +80,7 @@
 			stroke="rgba(255, 255, 255, 0.2)"
 			stroke-width="{innerStrokeWidth}px"
 			clip-path="url(#clip-{uid})"
+			class="forced-colors:stroke-[CanvasText] forced-colors:stroke-2"
 		/>
 		<path
 			d={squircle}
@@ -87,6 +88,7 @@
 			stroke="black"
 			stroke-width="1px"
 			mask="url(#mask-inverted-{uid})"
+			class="forced-colors:stroke-[Canvas] forced-colors:stroke-2"
 		/>
 	</svg>
 	<div
