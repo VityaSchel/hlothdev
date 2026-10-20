@@ -130,4 +130,18 @@ html {
 
 @custom-variant no-hover (@media not (hover: hover));
 
-@custom-variant transparency-reduce (@media (prefers-reduced-transparency: reduce));
+@custom-variant transparency-reduce {
+	@media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
+		@slot;
+	}
+}
+
+@custom-variant transparency-reduce-only {
+	@media (prefers-reduced-transparency: reduce) {
+		@media not (prefers-contrast: more) {
+			@slot;
+		}
+	}
+}
+
+@custom-variant transparency-reduce-preferred (@media (prefers-reduced-transparency: reduce));

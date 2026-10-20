@@ -81,7 +81,7 @@
 			browser || !jsDisabledAlertVisible ? "hidden" : "flex",
 			{
 				"motion-reduce:flex": reducedMotionAlertVisible,
-				"transparency-reduce:flex": reducedTransparencyAlertVisible,
+				"transparency-reduce-preferred:flex": reducedTransparencyAlertVisible,
 			},
 		]}
 	>

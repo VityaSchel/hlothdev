@@ -8,7 +8,7 @@
 	class={[
 		"hidden max-w-full",
 		{
-			"transparency-reduce:block": visible,
+			"transparency-reduce-preferred:block": visible,
 		},
 	]}
 >
