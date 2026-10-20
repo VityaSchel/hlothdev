@@ -109,6 +109,7 @@
 		class={{ "brightness-[48%]": pressed }}
 	/>
 	{#if highlight && showHighlight}
-		<span class="size-1 rounded-full bg-[#7C7C7C]"></span>
+		<span class="size-1 rounded-full bg-[#7C7C7C] forced-colors:bg-[CanvasText]"
+		></span>
 	{/if}
 </a>

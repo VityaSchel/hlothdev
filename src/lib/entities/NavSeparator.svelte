@@ -18,4 +18,9 @@
 		border-radius: 1px;
 		flex-shrink: 0;
 	}
+	@media (forced-colors: active) {
+		hr {
+			background-color: CanvasText;
+		}
+	}
 </style>
