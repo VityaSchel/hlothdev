@@ -1,9 +1,11 @@
-const samaraUtcOffset = 4 * 60 * 60 * 1000;
+import { profile } from "#lib/profile.ts";
 
 export function getMyAge() {
-	const samaraTime = new Date(Date.now() + samaraUtcOffset);
-	const month = samaraTime.getUTCMonth() + 1;
+	const { year, month, day, utcOffsetHours } = profile.birthday;
+	const birthdayTime = new Date(Date.now() + utcOffsetHours * 60 * 60 * 1000);
+	const currentMonth = birthdayTime.getUTCMonth() + 1;
 	const hadBirthday =
-		month > 7 || (month === 7 && samaraTime.getUTCDate() >= 6);
-	return samaraTime.getUTCFullYear() - 2005 - (hadBirthday ? 0 : 1);
+		currentMonth > month ||
+		(currentMonth === month && birthdayTime.getUTCDate() >= day);
+	return birthdayTime.getUTCFullYear() - year - (hadBirthday ? 0 : 1);
 }

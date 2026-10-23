@@ -5,6 +5,7 @@
 	import CloseSubpageLink from "../CloseSubpageLink.svelte";
 	import meInPinkHatLqip from "#lib/assets/me-in-pink-hat.webp?lqip";
 	import { morphName } from "#lib/view-transition.svelte.ts";
+	import { profile } from "#lib/profile.ts";
 
 	const uid = $props.id();
 	const wide = new MediaQuery("min-width: 600px", false);
@@ -46,35 +47,19 @@
 						class="indent-hanging mb-4 text-3xl font-bold px980:mb-7
 							px980:text-[39px] px980:leading-[37px]"
 					>
-						„Think different“
+						{profile.about.title}
 						<br />
 						<span class="text-2xl font-semibold px980:text-[29px]">
-							is my life slogan
+							{profile.about.subtitle}
 						</span>
 					</h1>
-					<p>
-						Thinking different was a choice I made early in life. As a kid, I
-						often felt two steps ahead of my classmates — and out of place
-						because of it. While others followed the curriculum, I was tinkering
-						with computers, building my first website at 9 and discovering my
-						first security vulnerability in my school’s IT system by 15. Instead
-						of curiosity, I was met with suspicion.
-					</p>
-					<p class="mt-3">
-						At school IT competitions, most participants showcased recycled
-						ideas — generic research, overused robots, or well-known solutions
-						for unneeded problems. I think different, so I always focused on
-						creativity, innovation, and real-world usefulness, surprising juries
-						with modern technologies outstanding from what they're used to.
-					</p>
-					<p class="mt-3">
-						At home, it wasn’t much different. My parents didn’t see value in my
-						path and pressured me to study. By 17, I moved into my own apartment
-						to create space for the future I believed in. People, whose whole
-						goal in life is to serve the country and have two kids, think that a
-						progressive young boy announcing he’s moving to Europe with his
-						boyfriend is crazy. But I think different.
-					</p>
+					{#each profile.about.paragraphs as paragraph, i (i)}
+						{#if i === 0}
+							<p>{paragraph}</p>
+						{:else}
+							<p class="mt-3">{paragraph}</p>
+						{/if}
+					{/each}
 				</div>
 			</div>
 		</div>

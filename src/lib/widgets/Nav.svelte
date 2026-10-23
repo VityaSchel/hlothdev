@@ -4,6 +4,7 @@
 	import NavSeparator from "#lib/entities/NavSeparator.svelte";
 	import Tooltip from "#lib/ui/Tooltip.svelte";
 	import { subdomainUrl } from "#lib/utils.ts";
+	import { profile, resolveHref, type ProfileLink } from "#lib/profile.ts";
 	import upworkIcon from "#lib/assets/dock-icons/upwork.webp?no-inline";
 	import forgejoIcon from "#lib/assets/dock-icons/forgejo.webp?no-inline";
 	import linkedinIcon from "#lib/assets/dock-icons/linkedin.webp?no-inline";
@@ -15,6 +16,15 @@
 	import instagramIcon from "#lib/assets/dock-icons/instagram.webp?no-inline";
 
 	let selectedNavItem: SelectedNavItem | null = $state(null);
+
+	const dock = (id: keyof typeof profile.links) => {
+		const item: ProfileLink = profile.links[id];
+		return {
+			name: item.title,
+			link: resolveHref(item.href, subdomainUrl),
+			highlight: item.highlight,
+		};
+	};
 </script>
 
 <nav
@@ -35,75 +45,64 @@
 	>
 		<div class="flex items-center gap-[2px] px-[5px]">
 			<NavItem
-				name="My Upwork"
+				{...dock("upwork")}
 				icon={upworkIcon}
 				alt="Upwork icon"
-				link="https://www.upwork.com/freelancers/~01a1f59e7a4697be89"
 				class="hidden px500:block"
 				bind:selectedNavItem
 			/>
 			<NavItem
-				name="My Git server (Forgejo)"
+				{...dock("forgejo")}
 				icon={forgejoIcon}
 				alt="Forgejo icon"
-				link={subdomainUrl("git", "/hloth")}
-				highlight
 				bind:selectedNavItem
 			/>
 			<NavItem
-				name="My LinkedIn"
+				{...dock("linkedin")}
 				icon={linkedinIcon}
 				alt="Linkedin icon"
-				link="https://www.linkedin.com/in/hloth"
 				class="hidden px400:block"
 				bind:selectedNavItem
 			/>
 			<NavSeparator class="hidden px600:block" />
 			<NavItem
-				name="Contact me via Matrix (preferred)"
+				{...dock("matrix")}
 				icon={elementIcon}
 				alt="Element icon"
-				link="https://matrix.to/#/@hloth:hloth.dev"
-				highlight
 				bind:selectedNavItem
 			/>
 			<NavItem
-				name="Contact me via Telegram"
+				{...dock("telegram")}
 				icon={telegramIcon}
 				alt="Telegram icon"
-				link="https://t.me/hlothdev"
 				class="hidden px350:block"
 				bind:selectedNavItem
 			/>
 			<NavItem
-				name="Contact me via Discord"
+				{...dock("discord")}
 				icon={discordIcon}
 				alt="Discord icon"
-				link="https://discord.com/users/329249421332316166"
 				class="hidden px500:block"
 				bind:selectedNavItem
 			/>
 			<NavSeparator class="hidden px600:block" />
 			<NavItem
-				name="Contact me via email"
+				{...dock("email")}
 				icon={mailIcon}
 				alt="Email icon"
-				link="mailto:hi@hloth.dev"
 				bind:selectedNavItem
 			/>
 			<NavItem
-				name="Blog"
+				{...dock("blog")}
 				icon={blogIcon}
 				alt="My blog icon"
-				link={subdomainUrl("blog", "/")}
 				class="hidden px300:block"
 				bind:selectedNavItem
 			/>
 			<NavItem
-				name="Instagram"
+				{...dock("instagram")}
 				icon={instagramIcon}
 				alt="Instagram icon"
-				link="https://instagram.com/hlothdev"
 				bind:selectedNavItem
 			/>
 		</div>

@@ -1,12 +1,10 @@
 <script lang="ts">
 	import { page } from "$app/state";
-
-	const defaultDescription =
-		"Hi, I’m Viktor Shchelochkov — Full Stack Web Developer and open-source enthusiast. I build applications and websites in Svelte, React, Next.js, and Swift.";
+	import { profile } from "#lib/profile.ts";
 
 	let {
 		name,
-		description = defaultDescription,
+		description = profile.summary,
 	}: {
 		name?: string;
 		description?: string;

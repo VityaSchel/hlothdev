@@ -3,6 +3,7 @@
 	import meAvatarLqip from "#lib/assets/me-avatar.webp?lqip";
 	import { onMount } from "svelte";
 	import { getMyAge } from "./my-age";
+	import { profile } from "#lib/profile.ts";
 	import { morphName } from "#lib/view-transition.svelte.ts";
 
 	let age = $state(getMyAge());
@@ -31,7 +32,7 @@
 		cursor-default rounded-[16px] focus-lg md:flex-[743]"
 	style:--morph-name="me"
 	style:view-transition-name={morphName("me")}
-	aria-label="Viktor Shchelochkov – about me"
+	aria-label="{profile.name} – about me"
 >
 	<Squircle
 		class="bg-black/10 contrast-more:bg-black/55"
@@ -61,14 +62,14 @@
 					class="text-[8cqi] leading-[6cqi] font-bold tracking-[-0.1px]
 						text-thick-typography px420:text-[7cqi]"
 				>
-					Viktor Shchelochkov
+					{profile.name}
 				</h2>
 				<h3
 					class="text-[5cqi] leading-[4.5cqi] font-bold tracking-[-0.2px]
 						text-thin-alt-typography contrast-more:text-thin-alt-typography!
 						px420:text-[4cqi] px1180:text-thin-typography"
 				>
-					Senior Full Stack Web Developer
+					{profile.role}
 				</h3>
 				<h3
 					class="text-[4cqi] leading-[3.5cqi] font-semibold
@@ -76,7 +77,7 @@
 						px420:text-[3.5cqi] md:text-thin-typography
 						px1180:text-[rgba(123,123,123,0.4)]"
 				>
-					{age} y.o., Madrid, Spain
+					{age} y.o., {profile.location}
 				</h3>
 			</div>
 		</div>
