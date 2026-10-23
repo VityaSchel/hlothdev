@@ -10,10 +10,12 @@ export const torDomain =
 
 export const isOnion = () => page.url.host.endsWith(".onion");
 
-const getOrigin = (hostPrefix = "") =>
-	isOnion()
+export const originFor = (onion: boolean, hostPrefix = "") =>
+	onion
 		? `http://${hostPrefix}${torDomain}`
 		: `https://${hostPrefix}${clearnetDomain}`;
+
+const getOrigin = (hostPrefix = "") => originFor(isOnion(), hostPrefix);
 
 export const siteUrl = (path = "") => getOrigin() + path;
 
